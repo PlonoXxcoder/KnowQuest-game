@@ -4586,6 +4586,21 @@ function enregistrerReponse(donneesPartie) {
 initOnboard();
 if(loadData()&&P.name){startApp();}else{document.getElementById('scrOnboard').classList.add('active');}
 </script>
+<!-- CHARGEZ LE LOADER APRÈS -->
 <script src="scripts/data_loader.js"></script>
+
+<!-- ET AJOUTEZ LE DÉCLENCHEUR DE SÉCURITÉ -->
+<script>
+  window.addEventListener('kq:data-loaded', () => {
+    console.log("Données prêtes ! Lancement du jeu...");
+    if(P.name) {
+        startApp();
+    } else {
+        // On est déjà dans le cas où l'onboard est actif, 
+        // mais on s'assure que tout est bien initialisé
+        startApp();
+    }
+  });
+</script>
 </body>
 </html>

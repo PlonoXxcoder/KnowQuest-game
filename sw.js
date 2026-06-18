@@ -6,8 +6,8 @@ const FILES_TO_CACHE = [
   'manifest.json',
   'sw.js',
   'scripts/data_loader.js',
-  'licon-512.png',
-  'icon-192.png'
+  'icon-192.png',
+  'icon-512.png'
 ];
 
 self.addEventListener('install', event => {

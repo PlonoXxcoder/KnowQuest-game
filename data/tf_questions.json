@@ -1,0 +1,1226 @@
+{
+  "geo": [
+    {
+      "id": "tf_geo_djibouti_q1",
+      "cat": "geo",
+      "question": "La ville de Djibouti est la capitale la plus basse du monde en termes d'altitude.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La ville de Djibouti est située à une altitude de 10 mètres au-dessus du niveau de la mer, mais ce n'est pas la capitale la plus basse du monde. Celle-ci est Baku, en Azerbaïdjan, qui est située à -28 mètres.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Djibouti_(ville)",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_mauritanie_q2",
+      "cat": "geo",
+      "question": "La Mauritanie est le pays avec la plus grande proportion de désert par rapport à sa superficie totale.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Mauritanie est effectivement le pays avec la plus grande proportion de désert, avec environ 90% de son territoire désertique. Le désert du Sahara couvre la majeure partie de son territoire.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mauritanie",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_namibie_q3",
+      "cat": "geo",
+      "question": "Le désert de Namib est plus grand que le désert du Kalahari.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le désert du Kalahari est en réalité plus grand que le désert de Namib. Le désert du Kalahari couvre une superficie d'environ 520 000 km², tandis que le désert de Namib couvre une superficie d'environ 81 000 km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9sert_de_Namib",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_guinee_q4",
+      "cat": "geo",
+      "question": "La Guinée équatoriale est le pays avec la plus grande densité de forêts tropicales en Afrique subsaharienne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Guinée équatoriale abrite en effet une grande partie de la forêt tropicale du bassin du Congo, qui est l'une des plus grandes forêts tropicales du monde. Le pays a une densité de forêts tropicales très élevée, avec plus de 60% de son territoire couvert de forêts.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e_%C3%A9quatoriale",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_senegal_q5",
+      "cat": "geo",
+      "question": "Le Sénégal est le pays avec la plus grande côte en Afrique de l'Ouest.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Sénégal a une côte de environ 531 km, mais ce n'est pas le pays avec la plus grande côte en Afrique de l'Ouest. Ce titre revient à la Guinée, qui a une côte de environ 622 km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/S%C3%A9n%C3%A9gal",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_mali_q6",
+      "cat": "geo",
+      "question": "Le Mali est le pays avec la plus grande superficie de désert dans le monde.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Mali est un pays avec une grande partie de désert, mais ce n'est pas le pays avec la plus grande superficie de désert dans le monde. Ce titre revient à l'Australie, qui a une grande partie de son territoire désertique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mali",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_tchad_q7",
+      "cat": "geo",
+      "question": "Le lac Tchad est le plus grand lac d'Afrique subsaharienne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le lac Tchad est un grand lac, mais ce n'est pas le plus grand lac d'Afrique subsaharienne. Ce titre revient au lac Tanganyika, qui est le plus grand lac d'Afrique par volume et le deuxième plus grand lac par superficie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Tchad",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_burkina_faso_q8",
+      "cat": "geo",
+      "question": "Le Burkina Faso est le pays avec la plus grande densité de population en Afrique de l'Ouest.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Burkina Faso a effectivement une densité de population très élevée, avec plus de 64 habitants par kilomètre carré. Cela est dû à la croissance démographique rapide et à la urbanisation.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Burkina_Faso",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_niger_q9",
+      "cat": "geo",
+      "question": "Le Niger est le pays avec la plus grande superficie de désert de sable en Afrique subsaharienne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Niger a une grande partie de désert de sable, mais ce n'est pas le pays avec la plus grande superficie de désert de sable en Afrique subsaharienne. Ce titre revient à la Libye, qui a une grande partie de son territoire désertique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Niger",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_gabon_q10",
+      "cat": "geo",
+      "question": "Le Gabon est le pays avec la plus grande superficie de forêt tropicale en Afrique subsaharienne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Gabon abrite effectivement une grande partie de la forêt tropicale du bassin du Congo, qui est l'une des plus grandes forêts tropicales du monde. Le pays a une superficie de forêt tropicale très élevée, avec plus de 85% de son territoire couvert de forêts.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gabon",
+      "atlasId": "geo_monde"
+    }
+  ],
+  "hist": [
+    {
+      "id": "tf_hist_croisade_q1",
+      "cat": "hist",
+      "question": "Les Templiers ont été les premiers à établir une banque moderne en Europe pendant les Croisades.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Templiers ont créé un système de banque et de prêt qui a permis aux pèlerins de déposer leurs biens et de les récupérer en Terre sainte, ce qui a contribué à l'établissement d'un système financier moderne. Ils ont également développé un système de lettres de change qui a facilité les transactions commerciales.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_du_Temple",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_rev_am_q2",
+      "cat": "hist",
+      "question": "La Révolution américaine a été influencée par les idées des philosophes français de l'École des Lumières.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que les idées des Lumières aient eu une influence sur la Révolution américaine, ce sont les idées des philosophes anglais tels que John Locke et Thomas Paine qui ont eu une influence plus directe sur les révolutionnaires américains. Les idées de Locke sur les droits naturels et la souveraineté populaire ont eu un impact significatif sur la Déclaration d'indépendance.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_am%C3%A9ricaine",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_croisade_q3",
+      "cat": "hist",
+      "question": "La première croisade a été déclenchée par l'appel du pape Urbain II en 1095 pour reconquérir la Terre sainte des musulmans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le pape Urbain II a lancé un appel à la croisade en 1095 pour reconquérir la Terre sainte des musulmans, qui avait été conquise par les armées musulmanes en 638. Cette croisade a duré de 1095 à 1099 et a abouti à la prise de Jérusalem par les croisés.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Premi%C3%A8re_croisade",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_rev_fr_q4",
+      "cat": "hist",
+      "question": "La Révolution française a été causée principalement par la faim et la misère économique du peuple français.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que la faim et la misère économique aient été des facteurs contributifs à la Révolution française, ce sont les facteurs politiques et sociaux tels que l'absolutisme royal, la monarchie absolue et les inégalités sociales qui ont joué un rôle plus important dans le déclenchement de la révolution. Les idées des Lumières et la montée du nationalisme ont également joué un rôle significatif.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_croisade_q5",
+      "cat": "hist",
+      "question": "Les Hospitaliers ont été fondés pour soigner les pèlerins chrétiens en Terre sainte pendant les Croisades.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Hospitaliers ont été fondés en 1099 pour soigner les pèlerins chrétiens en Terre sainte. Ils ont également développé une organisation militaire pour protéger les pèlerins et les chrétiens en Terre sainte.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_de_Saint-Jean_de_J%C3%A9rusalem",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_rev_am_q6",
+      "cat": "hist",
+      "question": "La Révolution américaine a été déclenchée par la taxation sans représentation imposée par la Grande-Bretagne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que la taxation sans représentation ait été un facteur contributif à la Révolution américaine, ce sont les facteurs tels que les restrictions commerciales, les différences culturelles et les aspirations à l'indépendance qui ont joué un rôle plus important dans le déclenchement de la révolution. Les Américains ont également été influencés par les idées des Lumières et le modèle de la constitution britannique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_am%C3%A9ricaine",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_croisade_q7",
+      "cat": "hist",
+      "question": "La quatrième croisade a abouti à la prise de Constantinople par les croisés en 1204.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La quatrième croisade a abouti à la prise de Constantinople par les croisés en 1204, ce qui a marqué la fin de l'Empire byzantin. Les croisés ont établi un empire latin en Constantinople, qui a duré jusqu'en 1261.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Quatri%C3%A8me_croisade",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_rev_fr_q8",
+      "cat": "hist",
+      "question": "La Révolution française a été influencée par les idées des philosophes allemands de l'École des Lumières.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que les idées des Lumières aient eu une influence sur la Révolution française, ce sont les idées des philosophes français tels que Voltaire, Rousseau et Montesquieu qui ont eu une influence plus directe sur les révolutionnaires français. Les idées des philosophes allemands tels que Kant et Hegel ont eu une influence plus tardive sur la pensée française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_croisade_q9",
+      "cat": "hist",
+      "question": "Les Templiers ont été accusés d'hérésie et de blasphème par le roi Philippe IV de France en 1307.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Templiers ont été accusés d'hérésie et de blasphème par le roi Philippe IV de France en 1307, ce qui a abouti à leur arrestation et à leur exécution. Les accusations portaient sur des rituels secrets et des pratiques hérétiques, mais les historiens considèrent que ces accusations étaient probablement infondées et motivées par des raisons politiques et financières.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_du_Temple",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_rev_am_q10",
+      "cat": "hist",
+      "question": "La Révolution américaine a été déclenchée par la publication de la Déclaration d'indépendance en 1776.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que la Déclaration d'indépendance ait été un document important dans la Révolution américaine, ce sont les facteurs tels que les restrictions commerciales, les différences culturelles et les aspirations à l'indépendance qui ont joué un rôle plus important dans le déclenchement de la révolution. La Déclaration d'indépendance a été adoptée en 1776, mais les hostilités avaient déjà commencé en 1775.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_am%C3%A9ricaine",
+      "atlasId": "hist_fr"
+    }
+  ],
+  "sci": [
+    {
+      "id": "tf_sci_quantique_q1",
+      "cat": "sci",
+      "question": "La mécanique quantique prévoit que les particules peuvent être dans deux états à la fois.",
+      "r": true,
+      "xp": 10,
+      "explanation": "En effet, la mécanique quantique décrit les particules comme des systemes probabilistes, pouvant exister dans plusieurs états simultanément, ce qui est connu sous le nom de superposition. Cela a été démontré à travers de nombreuses expériences, notamment l'expérience de la double fente.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9canique_quantique",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_exoplanetes_q2",
+      "cat": "sci",
+      "question": "Toutes les exoplanètes découvertes sont des géantes gazeuses comme Jupiter.",
+      "r": false,
+      "explanation": "Bien que de nombreuses exoplanètes découvertes soient effectivement des géantes gazeuses, d'autres types de planètes, comme les planètes telluriques ou les planètes de type Neptune, ont également été détectés. Les méthodes de détection varient et permettent de découvrir une grande variété de types de planètes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_trous_noirs_q3",
+      "cat": "sci",
+      "question": "Les trous noirs sont des portails vers d'autres univers.",
+      "r": false,
+      "explanation": "Cette idée est une théorie spéculative et non confirmée. Les trous noirs sont des régions de l'espace où la gravité est si forte qu'aucune lumière ou matière ne peut s'échapper, mais il n'y a aucune preuve scientifique que'ils soient des portails vers d'autres univers. Les trous noirs sont plutôt des objets stellaires extrêmement denses.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Trou_noir",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_astrophysique_q4",
+      "cat": "sci",
+      "question": "Les étoiles à neutrons peuvent avoir une vitesse de rotation supérieure à 1 000 tours par seconde.",
+      "r": true,
+      "explanation": "En effet, les étoiles à neutrons sont des objets extrêmement denses et peuvent avoir des vitesses de rotation très élevées. Certaines étoiles à neutrons ont été observées avec des vitesses de rotation supérieures à 1 000 tours par seconde, ce qui est due à la conservation du moment angulaire lors de l'effondrement de l'étoile progenitrice.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89toile_%C3%A0_neutrons",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_quantique_q5",
+      "cat": "sci",
+      "question": "La mécanique quantique est une théorie déterministe.",
+      "r": false,
+      "explanation": "La mécanique quantique est en réalité une théorie probabiliste, car elle décrit les phénomènes physiques en termes de probabilités et non de certitudes. Cela signifie que les résultats des mesures ne peuvent être prédits qu'en termes de probabilités et non avec certitude.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9canique_quantique",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_exoplanetes_q6",
+      "cat": "sci",
+      "question": "Les exoplanètes sont toutes situées dans la Voie lactée.",
+      "r": false,
+      "explanation": "Les exoplanètes ont été détectées dans de nombreuses galaxies, y compris la Voie lactée, mais aussi dans d'autres galaxies comme Andromède ou des galaxies lointaines. Les méthodes de détection actuelles permettent de découvrir des exoplanètes dans une large gamme de distances et de galaxies.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_trous_noirs_q7",
+      "cat": "sci",
+      "question": "Les trous noirs sont des objets stellaires qui émettent une grande quantité de lumière.",
+      "r": false,
+      "explanation": "Les trous noirs sont en réalité des objets extrêmement sombres, car leur gravité est si forte qu'aucune lumière ne peut s'échapper. Cependant, les disques d'accrétion qui les entourent peuvent émettre des quantités importantes de lumière et de rayonnement.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Trou_noir",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_astrophysique_q8",
+      "cat": "sci",
+      "question": "Les supernovae sont des éclatements d'étoiles qui se produisent lorsque l'étoile atteint la fin de sa vie.",
+      "r": true,
+      "explanation": "En effet, les supernovae sont des explosions cataclysmiques d'étoiles massives qui se produisent lorsque l'étoile a épuisé son carburant nucléaire et s'effondre sous son propre poids. Cela peut se produire à la fin de la vie d'une étoile massive ou lors d'une collision entre deux étoiles.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Supernova",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_quantique_q9",
+      "cat": "sci",
+      "question": "La mécanique quantique est une théorie qui ne s'applique qu'aux particules élémentaires.",
+      "r": false,
+      "explanation": "La mécanique quantique est en réalité une théorie qui s'applique à toutes les échelles, des particules élémentaires aux systèmes macroscopiques. Les principes quantiques ont été observés et exploités dans de nombreux systèmes, y compris les solides, les liquides et les gaz.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9canique_quantique",
+      "atlasId": "sci_univers",
+      "xp": 10
+    },
+    {
+      "id": "tf_sci_exoplanetes_q10",
+      "cat": "sci",
+      "question": "Les exoplanètes sont toutes en orbite autour d'étoiles similaires au Soleil.",
+      "r": false,
+      "explanation": "Les exoplanètes ont été détectées en orbite autour de toutes sortes d'étoiles, y compris des étoiles similaires au Soleil, mais aussi des étoiles plus petites et plus froides, comme les naines rouges, ou des étoiles plus massives et plus chaudes, comme les géantes bleues.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
+      "atlasId": "sci_univers",
+      "xp": 10
+    }
+  ],
+  "art": [
+    {
+      "id": "tf_litt_proust_q1",
+      "cat": "art",
+      "question": "Marcel Proust a écrit 'À la recherche du temps perdu' en moins de cinq ans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Marcel Proust a écrit 'À la recherche du temps perdu' en quatorze ans, de 1909 à 1922. Ce roman est considéré comme l'un des plus grands romans du XXe siècle et est connu pour sa complexité et sa profondeur.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/À_la_recherche_du_temps_perdu",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_monet_q2",
+      "cat": "art",
+      "question": "Claude Monet a peint 'Impression, soleil levant' en 1872.",
+      "r": true,
+      "explanation": "Claude Monet a peint 'Impression, soleil levant' en 1872, ce qui a donné son nom au mouvement impressionniste. Ce tableau est considéré comme l'un des plus importants de l'histoire de l'art.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Impression,_soleil_levant",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_joyce_q3",
+      "cat": "art",
+      "question": "James Joyce a écrit 'Ulysse' en anglais et en français simultanément.",
+      "r": false,
+      "explanation": "James Joyce a écrit 'Ulysse' en anglais, mais il a travaillé avec des traducteurs pour traduire le roman en français. Le processus de traduction a été complexe et a nécessité plusieurs années.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ulysse_(roman)",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_art_van_gogh_q4",
+      "cat": "art",
+      "question": "Vincent van Gogh a vendu plus de dix tableaux de son vivant.",
+      "r": false,
+      "explanation": "Vincent van Gogh a vendu seulement un tableau de son vivant, 'La vigne rouge', pour 400 francs. Il a peint plus de 900 tableaux, mais la plupart n'ont été reconnus qu'après sa mort.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vincent_van_Gogh",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_wilde_q5",
+      "cat": "art",
+      "question": "Oscar Wilde a écrit 'Le Portrait de Dorian Gray' en six mois.",
+      "r": false,
+      "explanation": "Oscar Wilde a écrit 'Le Portrait de Dorian Gray' en plusieurs années, de 1889 à 1890. Le roman a été publié en serialisation dans une revue littéraire avant d'être publié en livre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Portrait_de_Dorian_Gray",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_art_gauguin_q6",
+      "cat": "art",
+      "question": "Paul Gauguin a peint 'Où vas-tu ?' en 1891.",
+      "r": false,
+      "explanation": "Paul Gauguin a peint 'Où vas-tu ?' en 1892, pendant son séjour à Tahiti. Le tableau est considéré comme l'un des plus importants de la période post-impressionniste.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Paul_Gauguin",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_mann_q7",
+      "cat": "art",
+      "question": "Thomas Mann a écrit 'La Montagne magique' en moins de cinq ans.",
+      "r": false,
+      "explanation": "Thomas Mann a écrit 'La Montagne magique' en plusieurs années, de 1913 à 1924. Le roman est considéré comme l'un des plus importants du XXe siècle et a nécessité une recherche approfondie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Montagne_magique",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_art_seurat_q8",
+      "cat": "art",
+      "question": "Georges Seurat a peint 'Un dimanche après-midi à l'Île de la Grande Jatte' en moins de deux ans.",
+      "r": true,
+      "explanation": "Georges Seurat a peint 'Un dimanche après-midi à l'Île de la Grande Jatte' en deux ans, de 1884 à 1886. Le tableau est considéré comme l'un des plus importants de la période post-impressionniste et a été créé en utilisant la technique du pointillisme.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Un_dimanche_après-midi_à_l%27Île_de_la_Grande_Jatte",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_kafka_q9",
+      "cat": "art",
+      "question": "Franz Kafka a écrit 'Le Procès' en moins de six mois.",
+      "r": false,
+      "explanation": "Franz Kafka a écrit 'Le Procès' en plusieurs années, de 1914 à 1915. Le roman a été publié à titre posthume et est considéré comme l'un des plus importants du XXe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Procès",
+      "atlasId": "art_joconde",
+      "xp": 10
+    },
+    {
+      "id": "tf_art_toulouse_q10",
+      "cat": "art",
+      "question": "Henri de Toulouse-Lautrec a peint 'La Revue blanche' en 1895.",
+      "r": true,
+      "explanation": "Henri de Toulouse-Lautrec a peint 'La Revue blanche' en 1895, ce qui est considéré comme l'un des plus importants tableaux de la période post-impressionniste. Le tableau est une représentation de la vie nocturne à Paris.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec",
+      "atlasId": "art_joconde",
+      "xp": 10
+    }
+  ],
+  "cinema": [
+    {
+      "id": "tf_cinema_nouvelle_vague_q1",
+      "cat": "cinema",
+      "question": "Le film 'Les Quatre Cents Coups' de François Truffaut a été tourné en couleur.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le film 'Les Quatre Cents Coups' de François Truffaut a été tourné en noir et blanc, ce qui était courant pour les films de la Nouvelle Vague à l'époque. Le choix du noir et blanc était souvent dû à des contraintes budgétaires, mais également pour créer une ambiance spécifique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Les_Quatre_Cents_Coups",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_culte_q2",
+      "cat": "cinema",
+      "question": "Le film 'Eraserhead' de David Lynch a été tourné avec un budget important.",
+      "r": false,
+      "explanation": "Le film 'Eraserhead' de David Lynch a été tourné avec un budget très faible, estimé à environ 20 000 dollars. Le film a été réalisé sur plusieurs années, avec des périodes de tournage intermittentes, en raison des contraintes financières.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Eraserhead",
+      "atlasId": "cin_oscar",
+      "xp": 10
+    },
+    {
+      "id": "tf_cinema_godard_q3",
+      "cat": "cinema",
+      "question": "Jean-Luc Godard a réalisé plus de 50 films au cours de sa carrière.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Jean-Luc Godard a réalisé plus de 50 films au cours de sa carrière, ce qui en fait l'un des réalisateurs les plus prolifiques de l'histoire du cinéma. Son œuvre est caractérisée par une grande diversité de styles et de genres.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jean-Luc_Godard",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_varda_q4",
+      "cat": "cinema",
+      "question": "Agnès Varda a réalisé son premier film à l'âge de 25 ans.",
+      "r": false,
+      "explanation": "Agnès Varda a réalisé son premier film, 'La Pointe Courte', à l'âge de 26 ans. Ce film a été tourné en 1954 et est considéré comme l'un des premiers films de la Nouvelle Vague.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Agn%C3%A8s_Varda",
+      "atlasId": "cin_oscar",
+      "xp": 10
+    },
+    {
+      "id": "tf_cinema_truffaut_q5",
+      "cat": "cinema",
+      "question": "François Truffaut a écrit un livre sur la vie et l'œuvre de Jean-Luc Godard.",
+      "r": false,
+      "explanation": "François Truffaut n'a jamais écrit un livre sur la vie et l'œuvre de Jean-Luc Godard. Cependant, les deux réalisateurs ont été amis et ont eu une grande influence l'un sur l'autre dans leur travail.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Truffaut",
+      "atlasId": "cin_oscar",
+      "xp": 10
+    },
+    {
+      "id": "tf_cinema_culte_q6",
+      "cat": "cinema",
+      "question": "Le film 'The Texas Chain Saw Massacre' a été interdit dans de nombreux pays en raison de sa violence.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le film 'The Texas Chain Saw Massacre' a été interdit dans de nombreux pays en raison de sa violence et de ses scènes de gore. Le film a été réalisé en 1974 et est considéré comme l'un des premiers films d'horreur à avoir eu un impact significatif sur la culture populaire.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/The_Texas_Chain_Saw_Massacre",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_nouvelle_vague_q7",
+      "cat": "cinema",
+      "question": "La Nouvelle Vague française a été caractérisée par une grande utilisation de la technologie cinématographique.",
+      "r": false,
+      "explanation": "La Nouvelle Vague française a été caractérisée par une utilisation minimale de la technologie cinématographique, avec souvent des budgets faibles et des équipements de tournage simples. Les réalisateurs de la Nouvelle Vague ont préféré se concentrer sur l'histoire, les personnages et la mise en scène plutôt que sur les effets spéciaux et la technologie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar",
+      "xp": 10
+    },
+    {
+      "id": "tf_cinema_godard_q8",
+      "cat": "cinema",
+      "question": "Jean-Luc Godard a réalisé son premier film aux États-Unis.",
+      "r": false,
+      "explanation": "Jean-Luc Godard a réalisé son premier film, 'À bout de souffle', en France en 1960. Le film a été tourné à Paris et a lancé la carrière de Godard en tant que réalisateur.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jean-Luc_Godard",
+      "atlasId": "cin_oscar",
+      "xp": 10
+    },
+    {
+      "id": "tf_cinema_varda_q9",
+      "cat": "cinema",
+      "question": "Agnès Varda a réalisé un film sur la vie des sans-abri à Paris.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Agnès Varda a réalisé un film intitulé 'Les Glaneuses et moi' en 2000, qui explore la vie des sans-abri à Paris. Le film est un documentaire qui suit la vie de plusieurs personnes sans abri et explore les questions de pauvreté et d'exclusion sociale.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Agn%C3%A8s_Varda",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_truffaut_q10",
+      "cat": "cinema",
+      "question": "François Truffaut a réalisé un film sur la vie d'un enfant dans un camp de concentration.",
+      "r": false,
+      "explanation": "François Truffaut n'a jamais réalisé un film sur la vie d'un enfant dans un camp de concentration. Cependant, il a réalisé un film intitulé 'L'Enfant sauvage' en 1970, qui explore la vie d'un enfant sauvage qui a grandi en isolation.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Truffaut",
+      "atlasId": "cin_oscar",
+      "xp": 10
+    }
+  ],
+  "sport": [
+    {
+      "id": "tf_sport_cyclisme_q1",
+      "cat": "sport",
+      "question": "Le Tour de France est la course cycliste la plus longue du monde en termes de distance totale parcourue.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Giro d'Italia et la Vuelta d'Espagne sont souvent plus longs que le Tour de France. Le record de distance totale est détenu par le Tour d'Italie 1999 avec 3 977 km. Le Tour de France est cependant l'un des plus prestigieux et des plus difficiles.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France",
+      "atlasId": "spt_cyclisme"
+    },
+    {
+      "id": "tf_sport_natation_q2",
+      "cat": "sport",
+      "question": "Le record du monde de natation du 100 mètres nage libre hommes a été battu plus de 10 fois depuis l'an 2000.",
+      "r": true,
+      "explanation": "La natation a connu une révolution technologique et méthodologique ces dernières années, avec des avancées en matière de matériel et d'entraînement. Les records du monde chutent régulièrement, notamment grâce aux progrès de la science du sport et aux nouvelles générations de nageurs.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Championnats_du_monde_de_natation",
+      "atlasId": "spt_natation",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_cyclisme_q3",
+      "cat": "sport",
+      "question": "Le vainqueur du Tour de France doit gagner toutes les étapes pour remporter le titre.",
+      "r": false,
+      "explanation": "Le vainqueur du Tour de France est déterminé par le cumul des temps réalisés sur chaque étape, et non par le nombre d'étapes gagnées. Il est possible de remporter le Tour de France sans gagner une seule étape, si l'on termine suffisamment souvent dans les premiers.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France",
+      "atlasId": "spt_cyclisme",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_natation_q4",
+      "cat": "sport",
+      "question": "La nageuse américaine Katie Ledecky a remporté plus de médailles d'or olympiques en natation que tout autre nageur dans l'histoire.",
+      "r": true,
+      "explanation": "Katie Ledecky est l'une des nageuses les plus décorées de l'histoire, avec de multiples titres olympiques et mondiaux. Elle détient actuellement le record de médailles d'or olympiques en natation, devançant des légendes comme Michael Phelps.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Katie_Ledecky",
+      "atlasId": "spt_natation",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_cyclisme_q5",
+      "cat": "sport",
+      "question": "Le Giro d'Italie a été créé avant le Tour de France.",
+      "r": false,
+      "explanation": "Le Tour de France a été créé en 1903, tandis que le Giro d'Italie a été créé en 1909. Le Tour de France est donc la course cycliste la plus ancienne des trois grands tours.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Giro_d%27Italia",
+      "atlasId": "spt_cyclisme",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_natation_q6",
+      "cat": "sport",
+      "question": "La natation est le sport le plus pratiqué dans le monde en termes de nombre de pratiquants.",
+      "r": false,
+      "explanation": "La natation est un sport très populaire, mais elle ne détient pas le record de nombre de pratiquants. Selon certaines estimations, le football (ou soccer) est le sport le plus pratiqué dans le monde, suivi par des sports comme le basket-ball ou le tennis.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Natation",
+      "atlasId": "spt_natation",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_cyclisme_q7",
+      "cat": "sport",
+      "question": "Le Vuelta d'Espagne est la course cycliste la plus difficile des trois grands tours en termes de dénivelé.",
+      "r": true,
+      "explanation": "Le Vuelta d'Espagne est souvent considéré comme la course cycliste la plus difficile en termes de dénivelé, en raison de sa géographie particulière avec de nombreuses côtes et montagnes. Les étapes du Vuelta sont souvent plus escarpées que celles du Tour de France ou du Giro d'Italie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_d%27Espagne",
+      "atlasId": "spt_cyclisme",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_natation_q8",
+      "cat": "sport",
+      "question": "Le record du monde de natation du 400 mètres nage libre hommes a été battu plus de 20 fois depuis l'an 2000.",
+      "r": false,
+      "explanation": "Même si les records de natation ont évolué ces dernières années, le record du monde du 400 mètres nage libre hommes n'a pas été battu plus de 20 fois depuis l'an 2000. Les progrès sont réguliers mais pas à ce point.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Championnats_du_monde_de_natation",
+      "atlasId": "spt_natation",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_cyclisme_q9",
+      "cat": "sport",
+      "question": "Le Tour de France a été annulé plus de 5 fois pour des raisons non liées à la guerre.",
+      "r": false,
+      "explanation": "Le Tour de France a été annulé à plusieurs reprises pour des raisons liées à la guerre, notamment pendant les deux guerres mondiales. Cependant, les annulations pour des raisons non liées à la guerre sont rares et ne dépassent pas 5.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France",
+      "atlasId": "spt_cyclisme",
+      "xp": 10
+    },
+    {
+      "id": "tf_sport_natation_q10",
+      "cat": "sport",
+      "question": "La natation synchronisée est un sport olympique depuis les jeux olympiques de 1984.",
+      "r": false,
+      "explanation": "La natation synchronisée a été introduite aux Jeux olympiques en 1984 comme sport de démonstration, mais elle n'est devenue un sport olympique à part entière qu'à partir des Jeux olympiques de 1996 à Atlanta. Elle a été supprimée du programme olympique après les Jeux de 1996.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Natation_synchronis%C3%A9e",
+      "atlasId": "spt_natation",
+      "xp": 10
+    }
+  ],
+  "gastro": [
+    {
+      "id": "tf_gastro_piment_q1",
+      "cat": "gastro",
+      "question": "Le piment est originaire d'Asie et a été introduit en Europe par les Romains.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le piment est originaire d'Amérique du Sud et a été introduit en Europe par les conquistadors espagnols. Les Romains, quant à eux, connaissaient déjà le poivre, qui était importé d'Asie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Piment",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_cacao_q2",
+      "cat": "gastro",
+      "question": "Le cacao contient un élément chimique qui stimule la production de sérotonine dans le cerveau.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le cacao contient de la phényléthylamine, un élément chimique qui stimule la production de sérotonine dans le cerveau, ce qui peut avoir un effet anti-dépresseur. C'est pourquoi le chocolat est souvent associé à des émotions positives.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cacao",
+      "atlasId": "gst_chocolat"
+    },
+    {
+      "id": "tf_gastro_curcuma_q3",
+      "cat": "gastro",
+      "question": "Le curcuma est une épice qui ne peut être cultivée qu'en Inde.",
+      "r": false,
+      "explanation": "Le curcuma est une épice qui peut être cultivée dans de nombreux pays tropicaux, notamment en Inde, mais aussi en Chine, en Indonésie et au Japon. Il est également possible de la cultiver en Europe dans des serres.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Curcuma",
+      "atlasId": "gst_epices",
+      "xp": 10
+    },
+    {
+      "id": "tf_gastro_gingembre_q4",
+      "cat": "gastro",
+      "question": "Le gingembre a des propriétés anti-inflammatoires qui peuvent aider à soulager les douleurs articulaires.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le gingembre contient des composés qui ont des propriétés anti-inflammatoires, ce qui peut aider à soulager les douleurs articulaires et les problèmes de digestion. Il est souvent utilisé en médecine traditionnelle pour traiter ces problèmes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gingembre",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_poisson_q5",
+      "cat": "gastro",
+      "question": "Le poisson est une excellente source de vitamine C.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le poisson est une excellente source de protéines et d'oméga-3, mais il est relativement pauvre en vitamine C. Les meilleures sources de vitamine C sont les fruits et les légumes, tels que les agrumes, les kiwis et les feuilles de chou.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Poisson",
+      "atlasId": "gst_poisson"
+    },
+    {
+      "id": "tf_gastro_cannelle_q6",
+      "cat": "gastro",
+      "question": "La cannelle est une épice qui peut aider à réguler le taux de sucre dans le sang.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La cannelle contient des composés qui peuvent aider à réguler le taux de sucre dans le sang en améliorant la sensibilité à l'insuline. Elle est souvent utilisée en médecine traditionnelle pour traiter les problèmes de glycémie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cannelle",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_noix_q7",
+      "cat": "gastro",
+      "question": "Les noix sont une excellente source de protéines végétales.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les noix sont une excellente source de protéines végétales, de graisses saines et de fibres. Elles sont également riches en antioxydants et en minéraux tels que le magnésium et le potassium.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Noix",
+      "atlasId": "gst_fruitssecs"
+    },
+    {
+      "id": "tf_gastro_clou_girofle_q8",
+      "cat": "gastro",
+      "question": "Le clou de girofle est une épice qui peut aider à soulager les douleurs dentaires.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le clou de girofle contient des composés qui ont des propriétés analgésiques et anti-inflammatoires, ce qui peut aider à soulager les douleurs dentaires. Il est souvent utilisé en médecine traditionnelle pour traiter ces problèmes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Clou_de_girofle",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_anis_q9",
+      "cat": "gastro",
+      "question": "L'anis est une plante qui peut aider à soulager les problèmes de digestion.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'anis contient des composés qui ont des propriétés carminatives et anti-inflammatoires, ce qui peut aider à soulager les problèmes de digestion tels que les ballonnements et les crampes abdominales.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Anis",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_cardamome_q10",
+      "cat": "gastro",
+      "question": "La cardamome est une épice qui peut aider à freshir l'haleine.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La cardamome contient des composés qui ont des propriétés antibactériennes et anti-inflammatoires, ce qui peut aider à freshir l'haleine en éliminant les bactéries qui causent les problèmes de haleine.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cardamome",
+      "atlasId": "gst_epices"
+    }
+  ],
+  "mytho": [
+    {
+      "id": "tf_mytho_minotaure_q1",
+      "cat": "mytho",
+      "question": "Le Minotaure de la mythologie grecque était un demi-dieu, fils de Zeus.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Minotaure était en réalité le fils de Pasiphaé, la femme du roi Minos, et d'un taureau. Il était considéré comme un monstre et non comme un demi-dieu. La mythologie grecque est riche en créatures mythologiques complexes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Minotaure",
+      "atlasId": "mytho_minotaure"
+    },
+    {
+      "id": "tf_mytho_chimere_q2",
+      "cat": "mytho",
+      "question": "La Chimère de la mythologie grecque était une créature avec la tête d'un lion, le corps d'une chèvre et la queue d'un serpent.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Chimère était effectivement décrite comme une créature hybride avec la tête d'un lion, le corps d'une chèvre et la queue d'un serpent. Elle était censée cracher du feu et était considérée comme un monstre redoutable.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chim%C3%A8re_(mythologie)",
+      "atlasId": "mytho_chimere"
+    },
+    {
+      "id": "tf_mytho_meduse_q3",
+      "cat": "mytho",
+      "question": "Méduse de la mythologie grecque était une déesse de la beauté avant d'être transformée en monstre.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Méduse était en réalité une des trois Gorgones, des créatures mythologiques connues pour leur capacité à pétrifier les hommes. Elle n'était pas une déesse de la beauté, mais plutôt une créature terrifiante avec des serpents pour cheveux.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9duse",
+      "atlasId": "mytho_meduse"
+    },
+    {
+      "id": "tf_mytho_dragons_q4",
+      "cat": "mytho",
+      "question": "Les dragons de la mythologie européenne étaient toujours dépeints comme des créatures malignes.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les dragons de la mythologie européenne étaient souvent dépeints comme des créatures puissantes et terrifiantes, mais pas toujours malignes. Certains dragons étaient considérés comme des créatures bénéfiques, apportant la chance et la prospérité.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dragon",
+      "atlasId": "mytho_dragon"
+    },
+    {
+      "id": "tf_mytho_griffon_q5",
+      "cat": "mytho",
+      "question": "Le Griffon de la mythologie grecque était une créature avec le corps d'un lion et la tête d'un aigle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Griffon était effectivement décrit comme une créature hybride avec le corps d'un lion et la tête d'un aigle. Il était souvent associé à la protection des trésors et des tombes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Griffon",
+      "atlasId": "mytho_griffon"
+    },
+    {
+      "id": "tf_mytho_sphinx_q6",
+      "cat": "mytho",
+      "question": "Le Sphinx de la mythologie égyptienne était une créature avec la tête d'un homme et le corps d'un lion.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Sphinx était effectivement décrit comme une créature hybride avec la tête d'un homme et le corps d'un lion. Il était souvent associé à la sagesse et à la connaissance.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sphinx",
+      "atlasId": "mytho_sphinx"
+    },
+    {
+      "id": "tf_mytho_harpyes_q7",
+      "cat": "mytho",
+      "question": "Les Harpies de la mythologie grecque étaient des créatures avec le corps d'un oiseau et la tête d'un homme.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les Harpies étaient en réalité des créatures avec le corps d'un oiseau et la tête d'une femme. Elles étaient souvent associées aux vents et à la tempête.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Harpye",
+      "atlasId": "mytho_harpye"
+    },
+    {
+      "id": "tf_mytho_centaures_q8",
+      "cat": "mytho",
+      "question": "Les Centaures de la mythologie grecque étaient des créatures avec le corps d'un cheval et la tête d'un homme.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Centaures étaient effectivement décrits comme des créatures hybrides avec le corps d'un cheval et la tête d'un homme. Ils étaient souvent associés à la sagesse et à la connaissance.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Centaur",
+      "atlasId": "mytho_centaur"
+    },
+    {
+      "id": "tf_mytho_basilic_q9",
+      "cat": "mytho",
+      "question": "Le Basilic de la mythologie européenne était une créature qui pouvait tuer avec un seul regard.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Basilic était effectivement décrit comme une créature capable de tuer avec un seul regard. Il était souvent associé à la mort et à la destruction.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Basilic_(mythologie)",
+      "atlasId": "mytho_basilic"
+    },
+    {
+      "id": "tf_mytho_manticore_q10",
+      "cat": "mytho",
+      "question": "La Manticore de la mythologie persane était une créature avec le corps d'un lion et la tête d'un homme.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Manticore était en réalité décrite comme une créature avec le corps d'un lion, la tête d'un homme et des ailes d'un aigle. Elle était souvent associée à la chasse et à la destruction.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Manticore",
+      "atlasId": "mytho_manticore"
+    }
+  ],
+  "chateaux": [
+    {
+      "id": "tf_chateaux_renaissance_q1",
+      "cat": "chateaux",
+      "question": "Le style architectural de la Renaissance en Île-de-France a été influencé par les constructions italiennes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les architectes français de la Renaissance, comme Philibert de l'Orme, ont voyagé en Italie et ont été inspirés par les œuvres de maîtres tels que Bramante et Michel-Ange. Cela se reflète dans les proportions, les ornements et les détails de leurs constructions. Le Château d'Anet, par exemple, montre une influence italienne marquée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Renaissance_fran%C3%A7aise",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_jardins_francais_q2",
+      "cat": "chateaux",
+      "question": "Les jardins à la française sont caractérisés par des lignes courbes et des formes organiques.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les jardins à la française sont en fait connus pour leurs lignes droites, leurs perspectives géométriques et leurs formes régulières, contrairement aux jardins à l'anglaise qui privilégient les courbes et les formes naturelles. Le Jardin des Tuileries à Paris est un exemple classique de jardin à la française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_%C3%A0_la_fran%C3%A7aise",
+      "atlasId": "jardins_france"
+    },
+    {
+      "id": "tf_chateaux_ile_de_france_q3",
+      "cat": "chateaux",
+      "question": "Le Château de Vaux-le-Vicomte en Île-de-France a été construit pour un roi de France.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Château de Vaux-le-Vicomte a été construit pour Nicolas Fouquet, le Surintendant des Finances de Louis XIV, et non pour un roi de France. Il est considéré comme l'un des premiers exemples de l'architecture classique française et a inspiré la construction du Château de Versailles.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vaux-le-Vicomte",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_jardins_anglais_q4",
+      "cat": "chateaux",
+      "question": "Les jardins à l'anglaise sont conçus pour être fonctionnels et productifs.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les jardins à l'anglaise, également appelés jardins paysagers, sont conçus pour créer un environnement esthétique et pittoresque, avec des éléments tels que des lacs, des collines et des bois. Ils ne sont pas principalement destinés à la production de fruits ou de légumes, mais plutôt à offrir un espace de détente et de contemplation.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_paysager",
+      "atlasId": "jardins_angleterre"
+    },
+    {
+      "id": "tf_chateaux_renaissance_q5",
+      "cat": "chateaux",
+      "question": "La Renaissance en France a vu l'émergence de châteaux-forts médiévaux.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Renaissance en France a marqué une rupture avec l'architecture militaire médiévale. Les châteaux de la Renaissance, tels que Chambord ou Chenonceau, sont caractérisés par une architecture plus légère, des fenêtres plus grandes et une décoration plus raffinée, reflétant les goûts esthétiques de l'époque.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Renaissance",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_jardins_francais_q6",
+      "cat": "chateaux",
+      "question": "Les jardins à la française nécessitent peu d'entretien.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les jardins à la française, avec leurs parterres de broderie, leurs statues et leurs fontaines, nécessitent en réalité un entretien régulier et méticuleux pour maintenir leur apparence géométrique et leur propreté. Cela inclut la taille des buis, la tonte des pelouses et le nettoyage des bassins.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_%C3%A0_la_fran%C3%A7aise",
+      "atlasId": "jardins_france"
+    },
+    {
+      "id": "tf_chateaux_ile_de_france_q7",
+      "cat": "chateaux",
+      "question": "Le Château de Fontainebleau en Île-de-France a été construit sur les ruines d'un ancien château fort.",
+      "r": true,
+      "explanation": "Le Château de Fontainebleau a effectivement été construit sur le site d'un ancien château fort médiéval. Les rois de France, à partir de François Ier, ont transformé et agrandi ce château pour en faire un palais royal, incorporant des éléments de l'architecture Renaissance italienne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Fontainebleau",
+      "atlasId": "chateaux_france",
+      "xp": 10
+    },
+    {
+      "id": "tf_jardins_anglais_q8",
+      "cat": "chateaux",
+      "question": "Les jardins à l'anglaise sont toujours entourés de murs.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les jardins à l'anglaise, ou jardins paysagers, sont souvent conçus pour créer une impression de liberté et de continuité avec la campagne environnante. Ils peuvent donc ne pas être entourés de murs, mais plutôt s'intégrer au paysage naturel, avec des haies, des bosquets et des éléments d'eau qui créent des limites plus douces.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_paysager",
+      "atlasId": "jardins_angleterre"
+    },
+    {
+      "id": "tf_chateaux_renaissance_q9",
+      "cat": "chateaux",
+      "question": "La plupart des châteaux de la Renaissance en France ont été construits pour des rois.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que certains châteaux de la Renaissance aient été construits pour des rois de France, comme le Château de Chambord, beaucoup d'autres ont été commandés par des nobles et des riches bourgeois qui voulaient afficher leur richesse et leur goût esthétique. Le Château d'Anet, par exemple, a été construit pour Diane de Poitiers.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Renaissance",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_jardins_francais_q10",
+      "cat": "chateaux",
+      "question": "Les jardins à la française ont influencé le design des jardins en Asie.",
+      "r": true,
+      "explanation": "Les jardins à la française, avec leur esthétique formelle et géométrique, ont eu un impact sur le design des jardins dans d'autres parties du monde, y compris en Asie. Par exemple, les jardins du Palais impérial de Pékin en Chine montrent des influences des jardins à la française dans leur utilisation de l'eau, des statues et des parterres de fleurs.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_%C3%A0_la_fran%C3%A7aise",
+      "atlasId": "jardins_france",
+      "xp": 10
+    }
+  ],
+  "extended": [
+    {
+      "id": "tf_linguistique_famille_ouralo_altaique",
+      "cat": "extended",
+      "question": "La famille de langues ouralo-altaïques inclut le finnois, l'estonien et le hongrois.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La famille de langues ouralo-altaïques est une grande famille linguistique qui comprend des langues telles que le finnois, l'estonien et le hongrois. Ces langues sont parlées principalement en Europe du Nord et en Asie. La famille ouralo-altaïque est distincte des familles indo-européennes et slaves.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Langues_ouralo-alta%C3%AFques",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_intelligence_artificielle_transparence",
+      "cat": "extended",
+      "question": "Les systèmes d'intelligence artificielle sont toujours transparents dans leurs processus de décision.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les systèmes d'intelligence artificielle, en particulier ceux utilisant des réseaux neuronaux profonds, peuvent être opaques dans leurs processus de décision. Cela signifie que les raisons derrière les décisions prises par ces systèmes ne sont pas toujours claires ou compréhensibles pour les humains.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_linguistique_langues_menacees",
+      "cat": "extended",
+      "question": "Il existe moins de 100 langues menacées dans le monde.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Selon l'UNESCO, il existe plus de 2 400 langues menacées dans le monde, ce qui représente environ 30% des langues parlées dans le monde. Ces langues sont en danger debido à la mondialisation, à l'urbanisation et à la perte de la diversité culturelle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Langue_en_voie_de_disparition",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_intelligence_artificielle_regulation",
+      "cat": "extended",
+      "question": "L'intelligence artificielle est réglementée de la même manière que les produits chimiques toxiques.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'intelligence artificielle n'est pas réglementée de la même manière que les produits chimiques toxiques. Bien que certains pays aient mis en place des règlements pour l'utilisation de l'intelligence artificielle, il n'existe pas de cadre réglementaire global pour cette technologie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9glementation_de_l%27intelligence_artificielle",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_linguistique_famille_indo_europenne",
+      "cat": "extended",
+      "question": "La famille de langues indo-européennes inclut le chinois et le japonais.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La famille de langues indo-européennes comprend des langues telles que le français, l'espagnol, l'allemand, le russe, etc. Le chinois et le japonais appartiennent à des familles de langues différentes : la famille sino-tibétaine pour le chinois et la famille japonaise pour le japonais.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Langues_indo-europ%C3%A9ennes",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_intelligence_artificielle_ethique",
+      "cat": "extended",
+      "question": "L'intelligence artificielle a toujours des implications éthiques positives.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'intelligence artificielle peut avoir des implications éthiques négatives, telles que la discrimination, la surveillance et la perte d'emplois. Il est important de considérer ces implications lors de la conception et de la mise en œuvre de systèmes d'intelligence artificielle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle_%C3%A9thique",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_linguistique_langue_signes",
+      "cat": "extended",
+      "question": "La langue des signes est la même dans tous les pays.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La langue des signes varie d'un pays à l'autre, même si certaines langues des signes partagent des similarités. Chaque pays a sa propre langue des signes, qui est spécifique à sa culture et à sa communauté des sourds.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Langue_des_signes",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_intelligence_artificielle_intelligence_humaine",
+      "cat": "extended",
+      "question": "L'intelligence artificielle est capable de surpasser l'intelligence humaine dans tous les domaines.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'intelligence artificielle peut surpasser l'intelligence humaine dans certains domaines spécifiques, tels que les calculs mathématiques ou les jeux de stratégie, mais elle ne peut pas surpasser l'intelligence humaine dans tous les domaines, notamment dans les domaines qui nécessitent de la créativité, de l'empathie et de la compréhension humaine.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_linguistique_famille_afro_asiatique",
+      "cat": "extended",
+      "question": "La famille de langues afro-asiatiques comprend le swahili et l'amharique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La famille de langues afro-asiatiques comprend des langues telles que le swahili, l'amharique, l'arabe, l'hébreu, etc. Cette famille de langues est parlée principalement en Afrique et au Moyen-Orient.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Langues_afro-asiatiques",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_intelligence_artificielle_sensibilite",
+      "cat": "extended",
+      "question": "Les systèmes d'intelligence artificielle sont sensibles aux émotions humaines.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les systèmes d'intelligence artificielle ne sont pas sensibles aux émotions humaines de la même manière que les humains. Bien que certains systèmes d'intelligence artificielle puissent être conçus pour simuler des émotions ou reconnaître les émotions humaines, ils ne possèdent pas de véritable conscience émotionnelle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle_%C3%A9motionnelle",
+      "atlasId": "ext_philo"
+    }
+  ],
+  "litt": [
+    {
+      "id": "tf_litt_russe_q1",
+      "cat": "litt",
+      "question": "Léon Tolstoï a écrit 'La Guerre et la Paix' en moins de 5 ans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Léon Tolstoï a écrit 'La Guerre et la Paix' en près de 6 ans, de 1863 à 1869. Ce roman est considéré comme l'un des plus grands romans de la littérature russe et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Guerre_et_la_paix",
+      "atlasId": "litt_tolstoi"
+    },
+    {
+      "id": "tf_litt_francais_q2",
+      "cat": "litt",
+      "question": "Victor Hugo a écrit 'Les Misérables' en exil à Guernesey.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Victor Hugo a écrit 'Les Misérables' pendant son exil à Guernesey, où il s'était installé en 1855. Le roman a été publié en 1862 et est considéré comme l'un des plus grands romans de la littérature française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Les_Mis%C3%A9rables",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "tf_litt_russe_q3",
+      "cat": "litt",
+      "question": "Fiodor Dostoïevski a écrit 'Crime et Châtiment' sous l'influence de la littérature française.",
+      "r": false,
+      "explanation": "Fiodor Dostoïevski a écrit 'Crime et Châtiment' sous l'influence de la littérature russe et des idées philosophiques de son époque, mais pas spécifiquement sous l'influence de la littérature française. Cependant, il a été influencé par les idées de penseurs français tels que Jean-Jacques Rousseau.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Crime_et_ch%C3%A2timent",
+      "atlasId": "litt_dostoievski",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_francais_q4",
+      "cat": "litt",
+      "question": "Gustave Flaubert a écrit 'Madame Bovary' en moins de 2 ans.",
+      "r": false,
+      "explanation": "Gustave Flaubert a écrit 'Madame Bovary' en plus de 5 ans, de 1851 à 1856. Ce roman est considéré comme l'un des plus grands romans de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Madame_Bovary",
+      "atlasId": "litt_flaubert",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_russe_q5",
+      "cat": "litt",
+      "question": "Anton Tchekhov a écrit 'La Dame au petit chien' en 1899.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Anton Tchekhov a écrit 'La Dame au petit chien' en 1899, peu de temps avant sa mort. Cette nouvelle est considérée comme l'une des meilleures œuvres de Tchekhov et a été publiée pour la première fois dans la revue russe 'Russkaïa Mysl' en décembre 1899.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Dame_au_petit_chien",
+      "atlasId": "litt_tchekhov"
+    },
+    {
+      "id": "tf_litt_francais_q6",
+      "cat": "litt",
+      "question": "Émile Zola a écrit 'Germinal' en moins de 1 an.",
+      "r": false,
+      "explanation": "Émile Zola a écrit 'Germinal' en plus de 2 ans, de 1884 à 1885. Ce roman est considéré comme l'un des plus grands romans de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Germinal_(roman)",
+      "atlasId": "litt_zola",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_russe_q7",
+      "cat": "litt",
+      "question": "Nicolas Gogol a écrit 'Les Âmes mortes' en moins de 10 ans.",
+      "r": false,
+      "explanation": "Nicolas Gogol a écrit 'Les Âmes mortes' en plus de 10 ans, de 1836 à 1852. Ce roman est considéré comme l'un des plus grands romans de la littérature russe et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Les_%C3%82mes_mortes",
+      "atlasId": "litt_gogol",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_francais_q8",
+      "cat": "litt",
+      "question": "Honoré de Balzac a écrit 'La Comédie humaine' en moins de 20 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Honoré de Balzac a écrit 'La Comédie humaine' en moins de 20 ans, de 1832 à 1850. Ce cycle de romans est considéré comme l'un des plus grands travaux de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Com%C3%A9die_humaine",
+      "atlasId": "litt_balzac"
+    },
+    {
+      "id": "tf_litt_russe_q9",
+      "cat": "litt",
+      "question": "Léon Tolstoï a écrit 'Anna Karénine' en moins de 4 ans.",
+      "r": false,
+      "explanation": "Léon Tolstoï a écrit 'Anna Karénine' en plus de 4 ans, de 1873 à 1877. Ce roman est considéré comme l'un des plus grands romans de la littérature russe et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Anna_Kar%C3%A9nine",
+      "atlasId": "litt_tolstoi",
+      "xp": 10
+    },
+    {
+      "id": "tf_litt_francais_q10",
+      "cat": "litt",
+      "question": "Gustave Flaubert a écrit 'Salammbô' en moins de 5 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Gustave Flaubert a écrit 'Salammbô' en moins de 5 ans, de 1857 à 1862. Ce roman est considéré comme l'un des plus grands romans de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Salammb%C3%B4",
+      "atlasId": "litt_flaubert"
+    }
+  ],
+  "mixed": [
+    {
+      "id": "tf_mixed_phenomene_q1",
+      "cat": "mixed",
+      "question": "Les ouragans se forment uniquement dans l'hémisphère nord.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les ouragans peuvent se former dans les deux hémisphères, mais ils sont plus fréquents dans l'hémisphère nord en raison de la présence de plus d'océans chauds. Les tempêtes tropicales dans l'hémisphère sud sont généralement appelées cyclones ou tempêtes tropicales.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ouragan",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_record_q2",
+      "cat": "mixed",
+      "question": "Le lac Baïkal est le plus grand lac d'eau douce du monde en termes de superficie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le lac Baïkal est le plus grand lac d'eau douce du monde en termes de volume, mais le lac Supérieur est le plus grand lac d'eau douce en termes de superficie. Le lac Baïkal est situé en Russie et est connu pour sa profondeur et sa biodiversité.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Ba%C3%AFkal",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_phenomene_q3",
+      "cat": "mixed",
+      "question": "Les éclairs peuvent chauffer l'air à des températures supérieures à 30 000 degrés Celsius.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les éclairs peuvent chauffer l'air à des températures extrêmement élevées, souvent supérieures à 30 000 degrés Celsius, ce qui est plus chaud que la surface du soleil. Cette chaleur est causée par la résistance de l'air à la décharge électrique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89clair",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_record_q4",
+      "cat": "mixed",
+      "question": "Le mont Everest est le point le plus éloigné du centre de la Terre.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le mont Everest est le point le plus élevé de la Terre, mais ce n'est pas le point le plus éloigné du centre de la Terre. Le Chimborazo, un volcan en Équateur, est le point le plus éloigné du centre de la Terre en raison de la forme elliptique de la Terre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Everest",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_phenomene_q5",
+      "cat": "mixed",
+      "question": "Les tornades se forment généralement dans les régions proches des océans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les tornades se forment généralement dans les régions continentales, loin des océans. Les États-Unis, par exemple, sont touchés par de nombreuses tornades chaque année, en particulier dans la région connue sous le nom de Tornado Alley.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tornade",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_record_q6",
+      "cat": "mixed",
+      "question": "Le Grand Canyon est le plus grand canyon du monde en termes de longueur.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Grand Canyon est l'un des plus grands canyons du monde, mais il n'est pas le plus long. Le canyon du Yarlung Tsangpo, en Chine, est considéré comme le plus long canyon du monde, avec une longueur d'environ 496 km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Canyon",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_phenomene_q7",
+      "cat": "mixed",
+      "question": "Les ouragans peuvent se former sur les océans froids.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les ouragans se forment généralement sur les océans chauds, où la température de l'eau est supérieure à 26,5 degrés Celsius. Les ouragans ne peuvent pas se former sur les océans froids, car ils nécessitent une grande quantité de chaleur pour se développer.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ouragan",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_record_q8",
+      "cat": "mixed",
+      "question": "Le lac Vostok est le plus grand lac sous-glaciaire du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le lac Vostok est effectivement le plus grand lac sous-glaciaire du monde, situé sous la calotte glaciaire de l'Antarctique. Il est estimé qu'il contient environ 14 000 km³ d'eau, ce qui en fait l'un des plus grands lacs d'eau douce du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Vostok",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_phenomene_q9",
+      "cat": "mixed",
+      "question": "Les éclairs peuvent frapper le même endroit deux fois.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les éclairs peuvent frapper le même endroit deux fois, voire plusieurs fois. En fait, la statue de la Liberté à New York est frappée par la foudre environ 25 fois par an.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89clair",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "tf_mixed_record_q10",
+      "cat": "mixed",
+      "question": "Le désert du Sahara est le plus grand désert du monde.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le désert du Sahara est le plus grand désert chaud du monde, mais il n'est pas le plus grand désert du monde. Le désert de l'Antarctique est considéré comme le plus grand désert du monde, couvrant environ 14 millions de km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9sert_du_Sahara",
+      "atlasId": "ext_philo"
+    }
+  ]
+}

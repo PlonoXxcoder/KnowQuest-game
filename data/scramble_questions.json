@@ -1,0 +1,2336 @@
+{
+  "geo": [
+    {
+      "id": "sc_geo_afrique_q1",
+      "cat": "geo",
+      "question": "Classe ces capitales d'Afrique subsaharienne par ordre de population, du plus petit au plus grand :",
+      "pool": [
+        "Lomé",
+        "Kigali",
+        "Bamako",
+        "Kinshasa"
+      ],
+      "correct": [
+        "Lomé",
+        "Kigali",
+        "Bamako",
+        "Kinshasa"
+      ],
+      "explanation": "Lomé (~837 437 habitants), Kigali (~1 135 428 habitants), Bamako (~2 513 747 habitants), Kinshasa (~12 711 000 habitants)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lom%C3%A9",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q2",
+      "cat": "geo",
+      "question": "Classe ces villes d'Afrique subsaharienne par ordre de superficie, du plus petit au plus grand :",
+      "pool": [
+        "Gaborone",
+        "Lubumbashi",
+        "Brazzaville",
+        "Dar es Salaam"
+      ],
+      "correct": [
+        "Gaborone",
+        "Lubumbashi",
+        "Brazzaville",
+        "Dar es Salaam"
+      ],
+      "explanation": "Gaborone (~169 km²), Lubumbashi (~747 km²), Brazzaville (~1 000 km²), Dar es Salaam (~1 393 km²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gaborone",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q3",
+      "cat": "geo",
+      "question": "Classe ces régions minières d'Afrique subsaharienne par ordre de production d'or, du plus faible au plus élevé :",
+      "pool": [
+        "Ghana",
+        "Mali",
+        "Zambie",
+        "Afrique du Sud"
+      ],
+      "correct": [
+        "Zambie",
+        "Mali",
+        "Ghana",
+        "Afrique du Sud"
+      ],
+      "explanation": "Zambie (~4,4 tonnes), Mali (~45,3 tonnes), Ghana (~106,1 tonnes), Afrique du Sud (~139,9 tonnes) en 2020",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Industrie_min%C3%A8re_en_Afrique_du_Sud",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q4",
+      "cat": "geo",
+      "question": "Classe ces pays d'Afrique subsaharienne par ordre de superficie, du plus petit au plus grand :",
+      "pool": [
+        "Guinée-Bissau",
+        "Guinée",
+        "Sénégal",
+        "Mali"
+      ],
+      "correct": [
+        "Guinée-Bissau",
+        "Sénégal",
+        "Guinée",
+        "Mali"
+      ],
+      "explanation": "Guinée-Bissau (~36 127 km²), Sénégal (~196 722 km²), Guinée (~245 857 km²), Mali (~1 240 192 km²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e-Bissau",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q5",
+      "cat": "geo",
+      "question": "Classe ces lacs d'Afrique subsaharienne par ordre de superficie, du plus petit au plus grand :",
+      "pool": [
+        "Lac Volta",
+        "Lac Tanganyika",
+        "Lac Victoria",
+        "Lac Nubia"
+      ],
+      "correct": [
+        "Lac Volta",
+        "Lac Nubia",
+        "Lac Tanganyika",
+        "Lac Victoria"
+      ],
+      "explanation": "Lac Volta (~8 502 km²), Lac Nubia (~22 000 km²), Lac Tanganyika (~32 900 km²), Lac Victoria (~69 485 km²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Volta",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q6",
+      "cat": "geo",
+      "question": "Classe ces montagnes d'Afrique subsaharienne par ordre d'altitude, du plus bas au plus haut :",
+      "pool": [
+        "Monts de Cristal",
+        "Monts du Mandara",
+        "Monts Drakensberg",
+        "Mont Kenya"
+      ],
+      "correct": [
+        "Monts de Cristal",
+        "Monts du Mandara",
+        "Monts Drakensberg",
+        "Mont Kenya"
+      ],
+      "explanation": "Monts de Cristal (~1 000 m), Monts du Mandara (~1 400 m), Monts Drakensberg (~3 482 m), Mont Kenya (~5 199 m)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Monts_de_Cristal",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q7",
+      "cat": "geo",
+      "question": "Classe ces fleuves d'Afrique subsaharienne par ordre de longueur, du plus court au plus long :",
+      "pool": [
+        "Fleuve Orange",
+        "Fleuve Limpopo",
+        "Fleuve Okavango",
+        "Fleuve Congo"
+      ],
+      "correct": [
+        "Fleuve Okavango",
+        "Fleuve Limpopo",
+        "Fleuve Orange",
+        "Fleuve Congo"
+      ],
+      "explanation": "Fleuve Okavango (~1 800 km), Fleuve Limpopo (~1 800 km), Fleuve Orange (~2 340 km), Fleuve Congo (~4 700 km)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Orange",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q8",
+      "cat": "geo",
+      "question": "Classe ces régions agricoles d'Afrique subsaharienne par ordre de production de coton, du plus faible au plus élevé :",
+      "pool": [
+        "Mali",
+        "Burkina Faso",
+        "Côte d'Ivoire",
+        "Ghana"
+      ],
+      "correct": [
+        "Ghana",
+        "Mali",
+        "Burkina Faso",
+        "Côte d'Ivoire"
+      ],
+      "explanation": "Ghana (~35 000 tonnes), Mali (~50 000 tonnes), Burkina Faso (~60 000 tonnes), Côte d'Ivoire (~140 000 tonnes) en 2020",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Coton_en_Afrique",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q9",
+      "cat": "geo",
+      "question": "Classe ces pays d'Afrique subsaharienne par ordre de population, du plus petit au plus grand :",
+      "pool": [
+        "Guinée-Bissau",
+        "Guinée",
+        "Sénégal",
+        "Nigeria"
+      ],
+      "correct": [
+        "Guinée-Bissau",
+        "Guinée",
+        "Sénégal",
+        "Nigeria"
+      ],
+      "explanation": "Guinée-Bissau (~1,9 million), Guinée (~13,1 million), Sénégal (~16,7 million), Nigeria (~202 million)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e-Bissau",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_afrique_q10",
+      "cat": "geo",
+      "question": "Classe ces régions pétrolières d'Afrique subsaharienne par ordre de production de pétrole, du plus faible au plus élevé :",
+      "pool": [
+        "Ghana",
+        "Côte d'Ivoire",
+        "Angola",
+        "Nigeria"
+      ],
+      "correct": [
+        "Ghana",
+        "Côte d'Ivoire",
+        "Angola",
+        "Nigeria"
+      ],
+      "explanation": "Ghana (~100 000 barils/jour), Côte d'Ivoire (~35 000 barils/jour), Angola (~1,8 million barils/jour), Nigeria (~2,5 million barils/jour) en 2020",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Industrie_p%C3%A9troli%C3%A8re_en_Angola",
+      "atlasId": "geo_monde"
+    }
+  ],
+  "sci": [
+    {
+      "id": "sc_sci_chrono_q1",
+      "cat": "sci",
+      "question": "Remets dans l'ordre chronologique ces découvertes scientifiques majeures en relativité générale :",
+      "pool": [
+        "Théorie de la gravitation de Newton",
+        "Principe d'équivalence d'Einstein",
+        "Expérience de Michelson-Morley",
+        "Prédiction des ondes gravitationnelles"
+      ],
+      "correct": [
+        "Théorie de la gravitation de Newton",
+        "Expérience de Michelson-Morley",
+        "Principe d'équivalence d'Einstein",
+        "Prédiction des ondes gravitationnelles"
+      ],
+      "explanation": "1687 (théorie de la gravitation de Newton), 1887 (expérience de Michelson-Morley), 1907 (principe d'équivalence d'Einstein), 1915 (prédiction des ondes gravitationnelles)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Relativit%C3%A9_g%C3%A9n%C3%A9rale",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q2",
+      "cat": "sci",
+      "question": "Classe ces théories scientifiques en électromagnétisme par ordre chronologique :",
+      "pool": [
+        "Équations de Maxwell",
+        "Loi de Coulomb",
+        "Théorie des champs électromagnétiques de Faraday",
+        "Théorie de l'électromagnétisme de Lorentz"
+      ],
+      "correct": [
+        "Loi de Coulomb",
+        "Théorie des champs électromagnétiques de Faraday",
+        "Équations de Maxwell",
+        "Théorie de l'électromagnétisme de Lorentz"
+      ],
+      "explanation": "1785 (loi de Coulomb), 1831 (théorie des champs électromagnétiques de Faraday), 1864 (équations de Maxwell), 1895 (théorie de l'électromagnétisme de Lorentz)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Électromagnétisme",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q3",
+      "cat": "sci",
+      "question": "Remets dans l'ordre chronologique ces découvertes scientifiques majeures en cosmologie :",
+      "pool": [
+        "Théorie du Big Bang",
+        "Découverte de la radiation cosmique",
+        "Observation des supernovae",
+        "Mesure de la constante de Hubble"
+      ],
+      "correct": [
+        "Mesure de la constante de Hubble",
+        "Théorie du Big Bang",
+        "Découverte de la radiation cosmique",
+        "Observation des supernovae"
+      ],
+      "explanation": "1929 (mesure de la constante de Hubble), 1948 (théorie du Big Bang), 1964 (découverte de la radiation cosmique), 1998 (observation des supernovae)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cosmologie",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q4",
+      "cat": "sci",
+      "question": "Classe ces phénomènes optiques par ordre croissant de longueur d'onde :",
+      "pool": [
+        "Lumière visible",
+        "Rayons X",
+        "Ultraviolet",
+        "Infrarouge"
+      ],
+      "correct": [
+        "Rayons X",
+        "Ultraviolet",
+        "Lumière visible",
+        "Infrarouge"
+      ],
+      "explanation": "0,01-10 nm (rayons X), 10-400 nm (ultraviolet), 400-700 nm (lumière visible), 700-1000000 nm (infrarouge)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Optique",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q5",
+      "cat": "sci",
+      "question": "Remets dans l'ordre chronologique ces découvertes scientifiques majeures en relativité restreinte :",
+      "pool": [
+        "Expérience de Michelson-Morley",
+        "Théorie de la relativité restreinte d'Einstein",
+        "Prédiction de la dilatation du temps",
+        "Expérience de la vitesse de la lumière"
+      ],
+      "correct": [
+        "Expérience de la vitesse de la lumière",
+        "Expérience de Michelson-Morley",
+        "Théorie de la relativité restreinte d'Einstein",
+        "Prédiction de la dilatation du temps"
+      ],
+      "explanation": "1630 (expérience de la vitesse de la lumière), 1887 (expérience de Michelson-Morley), 1905 (théorie de la relativité restreinte d'Einstein), 1905 (prédiction de la dilatation du temps)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Relativit%C3%A9_restreinte",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q6",
+      "cat": "sci",
+      "question": "Classe ces théories scientifiques en cosmologie par ordre chronologique :",
+      "pool": [
+        "Théorie de la création de l'univers",
+        "Théorie de l'état stationnaire",
+        "Théorie du Big Bang",
+        "Théorie de l'inflation"
+      ],
+      "correct": [
+        "Théorie de la création de l'univers",
+        "Théorie de l'état stationnaire",
+        "Théorie du Big Bang",
+        "Théorie de l'inflation"
+      ],
+      "explanation": "300 av. J.-C. (théorie de la création de l'univers), 1948 (théorie de l'état stationnaire), 1948 (théorie du Big Bang), 1980 (théorie de l'inflation)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cosmologie",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q7",
+      "cat": "sci",
+      "question": "Remets dans l'ordre chronologique ces découvertes scientifiques majeures en électromagnétisme :",
+      "pool": [
+        "Loi de Coulomb",
+        "Théorie des champs électromagnétiques de Faraday",
+        "Équations de Maxwell",
+        "Découverte de l'effet photoélectrique"
+      ],
+      "correct": [
+        "Loi de Coulomb",
+        "Théorie des champs électromagnétiques de Faraday",
+        "Découverte de l'effet photoélectrique",
+        "Équations de Maxwell"
+      ],
+      "explanation": "1785 (loi de Coulomb), 1831 (théorie des champs électromagnétiques de Faraday), 1887 (découverte de l'effet photoélectrique), 1864 (équations de Maxwell)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Électromagnétisme",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_chrono_q8",
+      "cat": "sci",
+      "question": "Classe ces phénomènes optiques par ordre décroissant de fréquence :",
+      "pool": [
+        "Lumière visible",
+        "Ultraviolet",
+        "Rayons X",
+        "Infrarouge"
+      ],
+      "correct": [
+        "Infrarouge",
+        "Lumière visible",
+        "Ultraviolet",
+        "Rayons X"
+      ],
+      "explanation": "10^12-10^14 Hz (infrarouge), 10^14-10^15 Hz (lumière visible), 10^15-10^17 Hz (ultraviolet), 10^17-10^19 Hz (rayons X)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Optique",
+      "atlasId": "sci_univers"
+    }
+  ],
+  "hist": [
+    {
+      "id": "sc_hist_guerre_froide_q1",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces crises de la Guerre froide :",
+      "pool": [
+        "Crise de Berlin",
+        "Crise des missiles de Cuba",
+        "Invasion de la Tchécoslovaquie",
+        "Construction du Mur de Berlin"
+      ],
+      "correct": [
+        "Construction du Mur de Berlin",
+        "Crise de Berlin",
+        "Invasion de la Tchécoslovaquie",
+        "Crise des missiles de Cuba"
+      ],
+      "explanation": "1961 (Mur de Berlin), 1948-1949 (Crise de Berlin), 1968 (Invasion de la Tchécoslovaquie), 1962 (Crise des missiles de Cuba)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_croisades_q2",
+      "cat": "hist",
+      "question": "Classe ces ordres militaires médiévaux par ordre de création :",
+      "pool": [
+        "Templiers",
+        "Hospitaliers",
+        "Teutoniques",
+        "Cordeliers"
+      ],
+      "correct": [
+        "Hospitaliers",
+        "Templiers",
+        "Teutoniques",
+        "Cordeliers"
+      ],
+      "explanation": "1113 (Hospitaliers), 1118 (Templiers), 1190 (Teutoniques), 1215 (Cordeliers)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_militaire",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_guerre_froide_q3",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces événements de la Guerre froide en Asie :",
+      "pool": [
+        "Guerre de Corée",
+        "Guerre du Viêt Nam",
+        "Invasion soviétique de l'Afghanistan",
+        "Révolution chinoise"
+      ],
+      "correct": [
+        "Révolution chinoise",
+        "Guerre de Corée",
+        "Guerre du Viêt Nam",
+        "Invasion soviétique de l'Afghanistan"
+      ],
+      "explanation": "1949 (Révolution chinoise), 1950-1953 (Guerre de Corée), 1955-1975 (Guerre du Viêt Nam), 1979-1989 (Invasion soviétique de l'Afghanistan)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_croisades_q4",
+      "cat": "hist",
+      "question": "Classe ces batailles des Croisades par ordre chronologique :",
+      "pool": [
+        "Bataille d'Antioche",
+        "Bataille de Jérusalem",
+        "Bataille de Hattin",
+        "Bataille de Nicopolis"
+      ],
+      "correct": [
+        "Bataille d'Antioche",
+        "Bataille de Jérusalem",
+        "Bataille de Hattin",
+        "Bataille de Nicopolis"
+      ],
+      "explanation": "1097 (Bataille d'Antioche), 1099 (Bataille de Jérusalem), 1187 (Bataille de Hattin), 1396 (Bataille de Nicopolis)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Croisades",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_guerre_froide_q5",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces traités de la Guerre froide :",
+      "pool": [
+        "Traité de Yalta",
+        "Traité de Potsdam",
+        "Traité de Varsovie",
+        "Traité de Helsinki"
+      ],
+      "correct": [
+        "Traité de Yalta",
+        "Traité de Potsdam",
+        "Traité de Varsovie",
+        "Traité de Helsinki"
+      ],
+      "explanation": "1945 (Traité de Yalta), 1945 (Traité de Potsdam), 1955 (Traité de Varsovie), 1975 (Traité de Helsinki)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_croisades_q6",
+      "cat": "hist",
+      "question": "Classe ces ordres religieux médiévaux par ordre de création :",
+      "pool": [
+        "Cisterciens",
+        "Bénédictins",
+        "Franciscains",
+        "Dominicains"
+      ],
+      "correct": [
+        "Bénédictins",
+        "Cisterciens",
+        "Franciscains",
+        "Dominicains"
+      ],
+      "explanation": "529 (Bénédictins), 1098 (Cisterciens), 1209 (Franciscains), 1216 (Dominicains)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_religieux",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_guerre_froide_q7",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces événements de la Guerre froide en Europe :",
+      "pool": [
+        "Crise de Berlin",
+        "Construction du Mur de Berlin",
+        "Invasion de la Tchécoslovaquie",
+        "Révolution hongroise"
+      ],
+      "correct": [
+        "Révolution hongroise",
+        "Crise de Berlin",
+        "Construction du Mur de Berlin",
+        "Invasion de la Tchécoslovaquie"
+      ],
+      "explanation": "1956 (Révolution hongroise), 1948-1949 (Crise de Berlin), 1961 (Construction du Mur de Berlin), 1968 (Invasion de la Tchécoslovaquie)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_croisades_q8",
+      "cat": "hist",
+      "question": "Classe ces royaumes croisés par ordre de création :",
+      "pool": [
+        "Royaume de Jérusalem",
+        "Comté de Tripoli",
+        "Principauté d'Antioche",
+        "Comté d'Édesse"
+      ],
+      "correct": [
+        "Comté d'Édesse",
+        "Royaume de Jérusalem",
+        "Principauté d'Antioche",
+        "Comté de Tripoli"
+      ],
+      "explanation": "1098 (Comté d'Édesse), 1099 (Royaume de Jérusalem), 1098 (Principauté d'Antioche), 1104 (Comté de Tripoli)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Croisades",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_guerre_froide_q9",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces événements de la Guerre froide en Amérique :",
+      "pool": [
+        "Révolution cubaine",
+        "Invasion de la baie des Cochons",
+        "Crise des missiles de Cuba",
+        "Guerre du Viêt Nam"
+      ],
+      "correct": [
+        "Révolution cubaine",
+        "Invasion de la baie des Cochons",
+        "Crise des missiles de Cuba",
+        "Guerre du Viêt Nam"
+      ],
+      "explanation": "1953-1959 (Révolution cubaine), 1961 (Invasion de la baie des Cochons), 1962 (Crise des missiles de Cuba), 1955-1975 (Guerre du Viêt Nam)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_croisades_q10",
+      "cat": "hist",
+      "question": "Classe ces batailles navales des Croisades par ordre chronologique :",
+      "pool": [
+        "Bataille de Lépante",
+        "Bataille de Damiette",
+        "Bataille de Saint-Jean-d'Acre",
+        "Bataille de Chypre"
+      ],
+      "correct": [
+        "Bataille de Damiette",
+        "Bataille de Saint-Jean-d'Acre",
+        "Bataille de Lépante",
+        "Bataille de Chypre"
+      ],
+      "explanation": "1218 (Bataille de Damiette), 1191 (Bataille de Saint-Jean-d'Acre), 1571 (Bataille de Lépante), 1191 (Bataille de Chypre)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Croisades",
+      "atlasId": "hist_fr"
+    }
+  ],
+  "art": [
+    {
+      "id": "sc_art_imp_q1",
+      "cat": "art",
+      "question": "Classe ces peintres post-impressionnistes par ordre de naissance :",
+      "pool": [
+        "Paul Cézanne",
+        "Georges Seurat",
+        "Vincent van Gogh",
+        "Paul Gauguin"
+      ],
+      "correct": [
+        "Paul Cézanne",
+        "Georges Seurat",
+        "Vincent van Gogh",
+        "Paul Gauguin"
+      ],
+      "explanation": "Cézanne (1839), Seurat (1859), Van Gogh (1859), Gauguin (1848), donc l'ordre correct est : Cézanne, Gauguin, Seurat, Van Gogh",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Postimpressionnisme",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_theatre_elis_q2",
+      "cat": "art",
+      "question": "Remets dans l'ordre chronologique ces pièces de théâtre de Shakespeare :",
+      "pool": [
+        "Roméo et Juliette",
+        "Hamlet",
+        "Macbeth",
+        "Othello"
+      ],
+      "correct": [
+        "Roméo et Juliette",
+        "Hamlet",
+        "Othello",
+        "Macbeth"
+      ],
+      "explanation": "Roméo et Juliette (1595-1596), Hamlet (1599-1602), Othello (1603-1604), Macbeth (1605-1606)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/William_Shakespeare",
+      "atlasId": "theatre_shakespeare"
+    },
+    {
+      "id": "sc_art_imp_q3",
+      "cat": "art",
+      "question": "Classe ces mouvements artistiques par ordre de durée :",
+      "pool": [
+        "Impressionnisme",
+        "Post-impressionnisme",
+        "Fauvisme",
+        "Cubisme"
+      ],
+      "correct": [
+        "Fauvisme",
+        "Cubisme",
+        "Impressionnisme",
+        "Post-impressionnisme"
+      ],
+      "explanation": "Fauvisme (1905-1908, 3 ans), Cubisme (1907-1914, 7 ans), Impressionnisme (1870-1900, 30 ans), Post-impressionnisme (1880-1920, 40 ans)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Impressionnisme",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_theatre_ant_q4",
+      "cat": "art",
+      "question": "Remets dans l'ordre géographique ces théâtres antiques de la Grèce :",
+      "pool": [
+        "Théâtre d'Épidaure",
+        "Théâtre de Dionysos",
+        "Théâtre d'Athènes",
+        "Théâtre de Délos"
+      ],
+      "correct": [
+        "Théâtre de Délos",
+        "Théâtre d'Épidaure",
+        "Théâtre de Dionysos",
+        "Théâtre d'Athènes"
+      ],
+      "explanation": "Délos (sud-est), Épidaure (sud), Dionysos (centre), Athènes (centre)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Théâtre_grec_antique",
+      "atlasId": "theatre_grec"
+    },
+    {
+      "id": "sc_art_imp_q5",
+      "cat": "art",
+      "question": "Classe ces peintres impressionnistes par ordre de popularité :",
+      "pool": [
+        "Claude Monet",
+        "Pierre-Auguste Renoir",
+        "Mary Cassatt",
+        "Edgar Degas"
+      ],
+      "correct": [
+        "Claude Monet",
+        "Pierre-Auguste Renoir",
+        "Edgar Degas",
+        "Mary Cassatt"
+      ],
+      "explanation": "Monet (plus de 2 500 peintures), Renoir (plus de 2 000), Degas (plus de 1 500), Cassatt (environ 400)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Impressionnisme",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_theatre_elis_q6",
+      "cat": "art",
+      "question": "Remets dans l'ordre chronologique ces pièces de théâtre de Molière :",
+      "pool": [
+        "Tartuffe",
+        "L'École des femmes",
+        "Le Malade imaginaire",
+        "Les Précieuses ridicules"
+      ],
+      "correct": [
+        "Les Précieuses ridicules",
+        "L'École des femmes",
+        "Tartuffe",
+        "Le Malade imaginaire"
+      ],
+      "explanation": "Les Précieuses ridicules (1659), L'École des femmes (1662), Tartuffe (1664), Le Malade imaginaire (1673)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Molière",
+      "atlasId": "theatre_moliere"
+    },
+    {
+      "id": "sc_art_imp_q7",
+      "cat": "art",
+      "question": "Classe ces musées par ordre de superficie :",
+      "pool": [
+        "Musée d'Orsay",
+        "Musée du Louvre",
+        "Musée Rodin",
+        "Musée Marmottan"
+      ],
+      "correct": [
+        "Musée Marmottan",
+        "Musée Rodin",
+        "Musée d'Orsay",
+        "Musée du Louvre"
+      ],
+      "explanation": "Marmottan (environ 2 000 m²), Rodin (environ 18 000 m²), Orsay (environ 57 000 m²), Louvre (environ 72 000 m²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Musée_d%27Orsay",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_theatre_ant_q8",
+      "cat": "art",
+      "question": "Remets dans l'ordre géographique ces sites théâtraux antiques de la Grèce :",
+      "pool": [
+        "Théâtre de Delphes",
+        "Théâtre d'Épidaure",
+        "Théâtre de Corinthe",
+        "Théâtre de Thasos"
+      ],
+      "correct": [
+        "Théâtre de Thasos",
+        "Théâtre de Delphes",
+        "Théâtre de Corinthe",
+        "Théâtre d'Épidaure"
+      ],
+      "explanation": "Thasos (nord-est), Delphes (centre), Corinthe (sud), Épidaure (sud)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Théâtre_grec_antique",
+      "atlasId": "theatre_grec"
+    },
+    {
+      "id": "sc_art_imp_q9",
+      "cat": "art",
+      "question": "Classe ces écoles d'art par ordre de fondation :",
+      "pool": [
+        "École des Beaux-Arts",
+        "Académie Julian",
+        "École de Barbizon",
+        "École de Paris"
+      ],
+      "correct": [
+        "École des Beaux-Arts",
+        "École de Barbizon",
+        "Académie Julian",
+        "École de Paris"
+      ],
+      "explanation": "École des Beaux-Arts (1648), École de Barbizon (1830), Académie Julian (1868), École de Paris (fin XIXe siècle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/École_des_Beaux-Arts",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_theatre_elis_q10",
+      "cat": "art",
+      "question": "Remets dans l'ordre chronologique ces dramaturges élisabéthains :",
+      "pool": [
+        "Christopher Marlowe",
+        "William Shakespeare",
+        "Ben Jonson",
+        "John Webster"
+      ],
+      "correct": [
+        "Christopher Marlowe",
+        "William Shakespeare",
+        "Ben Jonson",
+        "John Webster"
+      ],
+      "explanation": "Marlowe (1564-1593), Shakespeare (1564-1616), Jonson (1572-1637), Webster (1580-1625)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Théâtre_élisabéthain",
+      "atlasId": "theatre_elisabéthain"
+    }
+  ],
+  "cinema": [
+    {
+      "id": "sc_cinema_nv_chrono_q1",
+      "cat": "cinema",
+      "question": "Remets dans l'ordre chronologique ces réalisateurs de la Nouvelle Vague française et leur premier film :",
+      "pool": [
+        "Jean-Luc Godard (À bout de souffle)",
+        "François Truffaut (Les Quatre Cents Coups)",
+        "Éric Rohmer (Le Signe du lion)",
+        "Claude Chabrol (Le Beau Serge)"
+      ],
+      "correct": [
+        "Claude Chabrol (Le Beau Serge)",
+        "François Truffaut (Les Quatre Cents Coups)",
+        "Éric Rohmer (Le Signe du lion)",
+        "Jean-Luc Godard (À bout de souffle)"
+      ],
+      "explanation": "1958 (Le Beau Serge), 1959 (Les Quatre Cents Coups), 1959 (Le Signe du lion), 1960 (À bout de souffle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_anime_techno_q2",
+      "cat": "cinema",
+      "question": "Classe ces films d'animation par leur processus de création (technologie utilisée) :",
+      "pool": [
+        "Toy Story (image de synthèse)",
+        "Akira (dessin traditionnel)",
+        "Spirited Away (mélange de traditionnel et d'informatique)",
+        "Les Minions (captation de mouvement)"
+      ],
+      "correct": [
+        "Akira (dessin traditionnel)",
+        "Spirited Away (mélange de traditionnel et d'informatique)",
+        "Toy Story (image de synthèse)",
+        "Les Minions (captation de mouvement)"
+      ],
+      "explanation": "Dessin traditionnel (1988), mélange de techniques (2001), image de synthèse (1995), captation de mouvement (2015)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Film_d%27animation",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_nv_geo_q3",
+      "cat": "cinema",
+      "question": "Classe ces villes de tournage de la Nouvelle Vague française par leur latitude :",
+      "pool": [
+        "Paris",
+        "Lyon",
+        "Marseille",
+        "Bordeaux"
+      ],
+      "correct": [
+        "Bordeaux",
+        "Lyon",
+        "Paris",
+        "Marseille"
+      ],
+      "explanation": "Bordeaux (44,8° N), Lyon (45,8° N), Paris (48,8° N), Marseille (43,3° N)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_anime_duree_q4",
+      "cat": "cinema",
+      "question": "Classe ces films d'animation par leur durée :",
+      "pool": [
+        "Spirited Away (125 minutes)",
+        "Toy Story (81 minutes)",
+        "Akira (124 minutes)",
+        "Les Minions (91 minutes)"
+      ],
+      "correct": [
+        "Toy Story (81 minutes)",
+        "Les Minions (91 minutes)",
+        "Akira (124 minutes)",
+        "Spirited Away (125 minutes)"
+      ],
+      "explanation": "81 minutes (Toy Story), 91 minutes (Les Minions), 124 minutes (Akira), 125 minutes (Spirited Away)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Film_d%27animation",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_nv_real_q5",
+      "cat": "cinema",
+      "question": "Remets dans l'ordre chronologique ces réalisateurs de la Nouvelle Vague française et leur date de naissance :",
+      "pool": [
+        "Jean-Luc Godard (1930)",
+        "François Truffaut (1932)",
+        "Éric Rohmer (1920)",
+        "Claude Chabrol (1930)"
+      ],
+      "correct": [
+        "Éric Rohmer (1920)",
+        "Claude Chabrol (1930)",
+        "Jean-Luc Godard (1930)",
+        "François Truffaut (1932)"
+      ],
+      "explanation": "1920 (Rohmer), 1930 (Chabrol et Godard), 1932 (Truffaut)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_nv_scen_q7",
+      "cat": "cinema",
+      "question": "Remets dans l'ordre chronologique ces scénaristes de la Nouvelle Vague française et leur premier scénario :",
+      "pool": [
+        "Jean-Luc Godard (À bout de souffle)",
+        "François Truffaut (Les Quatre Cents Coups)",
+        "Éric Rohmer (Le Signe du lion)",
+        "Claude Chabrol (Le Beau Serge)"
+      ],
+      "correct": [
+        "Claude Chabrol (Le Beau Serge)",
+        "François Truffaut (Les Quatre Cents Coups)",
+        "Éric Rohmer (Le Signe du lion)",
+        "Jean-Luc Godard (À bout de souffle)"
+      ],
+      "explanation": "1958 (Le Beau Serge), 1959 (Les Quatre Cents Coups), 1959 (Le Signe du lion), 1960 (À bout de souffle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_nv_act_q9",
+      "cat": "cinema",
+      "question": "Remets dans l'ordre chronologique ces acteurs de la Nouvelle Vague française et leur premier film :",
+      "pool": [
+        "Jean-Paul Belmondo (À bout de souffle)",
+        "Jean-Pierre Léaud (Les Quatre Cents Coups)",
+        "Gérard Blain (Le Beau Serge)",
+        "Bernard Blier (Les Quatre Cents Coups)"
+      ],
+      "correct": [
+        "Gérard Blain (Le Beau Serge)",
+        "Jean-Pierre Léaud (Les Quatre Cents Coups)",
+        "Bernard Blier (Les Quatre Cents Coups)",
+        "Jean-Paul Belmondo (À bout de souffle)"
+      ],
+      "explanation": "1958 (Le Beau Serge), 1959 (Les Quatre Cents Coups), 1960 (À bout de souffle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar"
+    }
+  ],
+  "sport": [
+    {
+      "id": "sc_nba_chrono_q1",
+      "cat": "sport",
+      "question": "Classe ces équipes NBA par le nombre de titres gagnés dans l'ordre croissant :",
+      "pool": [
+        "Lakers de Los Angeles",
+        "Celtics de Boston",
+        "Bulls de Chicago",
+        "Warriors de Golden State"
+      ],
+      "correct": [
+        "Warriors de Golden State",
+        "Bulls de Chicago",
+        "Lakers de Los Angeles",
+        "Celtics de Boston"
+      ],
+      "explanation": "Warriors de Golden State (7 titres), Bulls de Chicago (8 titres), Lakers de Los Angeles (17 titres), Celtics de Boston (17 titres)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/National_Basketball_Association",
+      "atlasId": "spt_basketball"
+    },
+    {
+      "id": "sc_dopage_chrono_q2",
+      "cat": "sport",
+      "question": "Remets dans l'ordre chronologique ces scandales de dopage célèbres :",
+      "pool": [
+        "Affaire BALCO",
+        "Scandale du Tour de France 1998",
+        "Affaire Festina",
+        "Scandale de dopage de Ben Johnson"
+      ],
+      "correct": [
+        "Scandale de dopage de Ben Johnson",
+        "Affaire Festina",
+        "Scandale du Tour de France 1998",
+        "Affaire BALCO"
+      ],
+      "explanation": "1988 (Ben Johnson), 1998 (Tour de France et Festina), 2003 (BALCO)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
+      "atlasId": "spt_dopage"
+    },
+    {
+      "id": "sc_nba_records_q3",
+      "cat": "sport",
+      "question": "Classe ces joueurs NBA par leur nombre de trophées MVP dans l'ordre croissant :",
+      "pool": [
+        "LeBron James",
+        "Kevin Durant",
+        "Kareem Abdul-Jabbar",
+        "Bill Russell"
+      ],
+      "correct": [
+        "Kevin Durant",
+        "LeBron James",
+        "Bill Russell",
+        "Kareem Abdul-Jabbar"
+      ],
+      "explanation": "Kevin Durant (2 titres), LeBron James (4 titres), Bill Russell (5 titres), Kareem Abdul-Jabbar (6 titres)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/NBA_Most_Valuable_Player",
+      "atlasId": "spt_basketball"
+    },
+    {
+      "id": "sc_dopage_geographie_q4",
+      "cat": "sport",
+      "question": "Classe ces organisations anti-dopage par leur année de fondation dans l'ordre croissant :",
+      "pool": [
+        "Agence mondiale antidopage",
+        "Union cycliste internationale",
+        "Fédération internationale de football association",
+        "Comité international olympique"
+      ],
+      "correct": [
+        "Comité international olympique",
+        "Fédération internationale de football association",
+        "Union cycliste internationale",
+        "Agence mondiale antidopage"
+      ],
+      "explanation": "1894 (Comité international olympique), 1904 (Fédération internationale de football association), 1900 (Union cycliste internationale), 1999 (Agence mondiale antidopage)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Agence_mondiale_antidopage",
+      "atlasId": "spt_dopage"
+    },
+    {
+      "id": "sc_nba_franchises_q5",
+      "cat": "sport",
+      "question": "Classe ces franchises NBA par leur année de création dans l'ordre croissant :",
+      "pool": [
+        "Lakers de Los Angeles",
+        "Celtics de Boston",
+        "Bulls de Chicago",
+        "Hawks d'Atlanta"
+      ],
+      "correct": [
+        "Celtics de Boston",
+        "Lakers de Los Angeles",
+        "Hawks d'Atlanta",
+        "Bulls de Chicago"
+      ],
+      "explanation": "1946 (Celtics de Boston), 1947 (Lakers de Los Angeles), 1949 (Hawks d'Atlanta), 1966 (Bulls de Chicago)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/National_Basketball_Association",
+      "atlasId": "spt_basketball"
+    },
+    {
+      "id": "sc_dopage_sanctions_q6",
+      "cat": "sport",
+      "question": "Classe ces sanctions pour dopage par leur sévérité dans l'ordre croissant :",
+      "pool": [
+        "Avertissement",
+        "Suspension temporaire",
+        "Perte de titres",
+        "Interdiction à vie"
+      ],
+      "correct": [
+        "Avertissement",
+        "Suspension temporaire",
+        "Perte de titres",
+        "Interdiction à vie"
+      ],
+      "explanation": "Avertissement (minimum), suspension temporaire (moyen), perte de titres (sévère), interdiction à vie (maximum)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
+      "atlasId": "spt_dopage"
+    },
+    {
+      "id": "sc_nba_coaches_q7",
+      "cat": "sport",
+      "question": "Classe ces entraîneurs NBA par leur nombre de titres gagnés dans l'ordre croissant :",
+      "pool": [
+        "Phil Jackson",
+        "Red Auerbach",
+        "Pat Riley",
+        "Gregg Popovich"
+      ],
+      "correct": [
+        "Gregg Popovich",
+        "Pat Riley",
+        "Red Auerbach",
+        "Phil Jackson"
+      ],
+      "explanation": "Gregg Popovich (5 titres), Pat Riley (5 titres), Red Auerbach (9 titres), Phil Jackson (11 titres)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/National_Basketball_Association",
+      "atlasId": "spt_basketball"
+    },
+    {
+      "id": "sc_dopage_substances_q8",
+      "cat": "sport",
+      "question": "Classe ces substances dopantes par leur année d'interdiction dans l'ordre croissant :",
+      "pool": [
+        "Stéroïdes anabolisants",
+        "EPO",
+        "Cannabinoïdes",
+        "Cocaïne"
+      ],
+      "correct": [
+        "Stéroïdes anabolisants",
+        "Cocaïne",
+        "Cannabinoïdes",
+        "EPO"
+      ],
+      "explanation": "1976 (stéroïdes anabolisants), 1976 (cocaïne), 1998 (cannabinoïdes), 2000 (EPO)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
+      "atlasId": "spt_dopage"
+    },
+    {
+      "id": "sc_nba_joueurs_q9",
+      "cat": "sport",
+      "question": "Classe ces joueurs NBA par leur nombre de titres de MVP des Finales dans l'ordre croissant :",
+      "pool": [
+        "Michael Jordan",
+        "Kareem Abdul-Jabbar",
+        "LeBron James",
+        "Magic Johnson"
+      ],
+      "correct": [
+        "Magic Johnson",
+        "LeBron James",
+        "Michael Jordan",
+        "Kareem Abdul-Jabbar"
+      ],
+      "explanation": "Magic Johnson (3 titres), LeBron James (4 titres), Michael Jordan (6 titres), Kareem Abdul-Jabbar (6 titres)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/NBA_Finals_MVP",
+      "atlasId": "spt_basketball"
+    },
+    {
+      "id": "sc_dopage_cas_q10",
+      "cat": "sport",
+      "question": "Classe ces cas de dopage célèbres par leur année de révélation dans l'ordre croissant :",
+      "pool": [
+        "Ben Johnson",
+        "Marion Jones",
+        "Lance Armstrong",
+        "Floyd Landis"
+      ],
+      "correct": [
+        "Ben Johnson",
+        "Marion Jones",
+        "Floyd Landis",
+        "Lance Armstrong"
+      ],
+      "explanation": "1988 (Ben Johnson), 2007 (Marion Jones), 2006 (Floyd Landis), 2012 (Lance Armstrong)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
+      "atlasId": "spt_dopage"
+    }
+  ],
+  "gastro": [
+    {
+      "id": "sc_gastro_classement_q1",
+      "cat": "gastro",
+      "question": "Classe ces épices par ordre de leur teneur en antioxydants, du plus faible au plus élevé :",
+      "pool": [
+        "Cumin",
+        "Paprika",
+        "Curcuma",
+        "Gingembre"
+      ],
+      "correct": [
+        "Paprika",
+        "Cumin",
+        "Gingembre",
+        "Curcuma"
+      ],
+      "explanation": "Paprika : 10 000 à 20 000 μmol TE/100g, Cumin : 20 000 à 30 000 μmol TE/100g, Gingembre : 30 000 à 40 000 μmol TE/100g, Curcuma : 40 000 à 50 000 μmol TE/100g",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Épice",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "sc_gastro_origine_q2",
+      "cat": "gastro",
+      "question": "Classe ces aromates par leur région d'origine, du nord au sud :",
+      "pool": [
+        "Thym",
+        "Romarin",
+        "Laurier",
+        "Sarımsak"
+      ],
+      "correct": [
+        "Thym",
+        "Romarin",
+        "Laurier",
+        "Sarımsak"
+      ],
+      "explanation": "Thym : originaire d'Europe du Nord, Romarin : originaire du bassin méditerranéen, Laurier : originaire de la région méditerranéenne, Sarımsak : originaire de la Turquie",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Thym",
+      "atlasId": "gst_aromates"
+    },
+    {
+      "id": "sc_gastro_chrono_q3",
+      "cat": "gastro",
+      "question": "Remets dans l'ordre chronologique les dates de découverte de ces aliments :",
+      "pool": [
+        "Pomme de terre",
+        "Tomate",
+        "Maïs",
+        "Haricot"
+      ],
+      "correct": [
+        "Maïs",
+        "Haricot",
+        "Pomme de terre",
+        "Tomate"
+      ],
+      "explanation": "Maïs : domestiqué il y a environ 9 000 ans, Haricot : domestiqué il y a environ 8 000 ans, Pomme de terre : découverte par les Incas il y a environ 7 000 ans, Tomate : découverte par les Aztèques il y a environ 2 000 ans",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pomme_de_terre",
+      "atlasId": "gst_aliments"
+    },
+    {
+      "id": "sc_gastro_classement_q4",
+      "cat": "gastro",
+      "question": "Classe ces huiles végétales par leur teneur en oméga-3, du plus faible au plus élevé :",
+      "pool": [
+        "Huile d'olive",
+        "Huile de noix",
+        "Huile de colza",
+        "Huile de lin"
+      ],
+      "correct": [
+        "Huile d'olive",
+        "Huile de noix",
+        "Huile de colza",
+        "Huile de lin"
+      ],
+      "explanation": "Huile d'olive : 0,7 à 1,5% d'oméga-3, Huile de noix : 2 à 3% d'oméga-3, Huile de colza : 8 à 10% d'oméga-3, Huile de lin : 50 à 60% d'oméga-3",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Huile_végétale",
+      "atlasId": "gst_huiles"
+    },
+    {
+      "id": "sc_gastro_origine_q5",
+      "cat": "gastro",
+      "question": "Classe ces fruits par leur région d'origine, de l'est à l'ouest :",
+      "pool": [
+        "Mangue",
+        "Ananas",
+        "Pamplemousse",
+        "Orange"
+      ],
+      "correct": [
+        "Mangue",
+        "Ananas",
+        "Pamplemousse",
+        "Orange"
+      ],
+      "explanation": "Mangue : originaire d'Asie du Sud-Est, Ananas : originaire d'Amérique du Sud, Pamplemousse : originaire d'Amérique du Nord, Orange : originaire de Chine",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mangue",
+      "atlasId": "gst_fruits"
+    },
+    {
+      "id": "sc_gastro_chrono_q6",
+      "cat": "gastro",
+      "question": "Remets dans l'ordre chronologique les dates de création de ces desserts :",
+      "pool": [
+        "Tarte Tatin",
+        "Crème brûlée",
+        "Mille-feuille",
+        "Éclair"
+      ],
+      "correct": [
+        "Crème brûlée",
+        "Mille-feuille",
+        "Tarte Tatin",
+        "Éclair"
+      ],
+      "explanation": "Crème brûlée : créée au XVIIe siècle, Mille-feuille : créée au XVIIIe siècle, Tarte Tatin : créée au XIXe siècle, Éclair : créé au XIXe siècle",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tarte_Tatin",
+      "atlasId": "gst_desserts"
+    },
+    {
+      "id": "sc_gastro_classement_q7",
+      "cat": "gastro",
+      "question": "Classe ces fromages par leur taux de matière grasse, du plus faible au plus élevé :",
+      "pool": [
+        "Fromage blanc",
+        "Cottage",
+        "Feta",
+        "Brie"
+      ],
+      "correct": [
+        "Fromage blanc",
+        "Cottage",
+        "Feta",
+        "Brie"
+      ],
+      "explanation": "Fromage blanc : 0 à 10% de matière grasse, Cottage : 10 à 20% de matière grasse, Feta : 20 à 30% de matière grasse, Brie : 30 à 40% de matière grasse",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fromage_blanc",
+      "atlasId": "gst_fromages"
+    },
+    {
+      "id": "sc_gastro_origine_q8",
+      "cat": "gastro",
+      "question": "Classe ces boissons par leur région d'origine, du nord au sud :",
+      "pool": [
+        "Whisky",
+        "Vodka",
+        "Rakı",
+        "Pastis"
+      ],
+      "correct": [
+        "Whisky",
+        "Vodka",
+        "Rakı",
+        "Pastis"
+      ],
+      "explanation": "Whisky : originaire d'Écosse, Vodka : originaire de Russie, Rakı : originaire de Turquie, Pastis : originaire de France",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Whisky",
+      "atlasId": "gst_boissons"
+    },
+    {
+      "id": "sc_gastro_chrono_q9",
+      "cat": "gastro",
+      "question": "Remets dans l'ordre chronologique les dates de découverte de ces légumes :",
+      "pool": [
+        "Poivron",
+        "Aubergine",
+        "Courgette",
+        "Carotte"
+      ],
+      "correct": [
+        "Carotte",
+        "Poivron",
+        "Aubergine",
+        "Courgette"
+      ],
+      "explanation": "Carotte : domestiquée il y a environ 1 000 ans, Poivron : domestiqué il y a environ 500 ans, Aubergine : introduite en Europe il y a environ 400 ans, Courgette : introduite en Europe il y a environ 200 ans",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Poivron",
+      "atlasId": "gst_legumes"
+    },
+    {
+      "id": "sc_gastro_classement_q10",
+      "cat": "gastro",
+      "question": "Classe ces céréales par leur teneur en fibres, du plus faible au plus élevé :",
+      "pool": [
+        "Riz",
+        "Blé",
+        "Orge",
+        "Avoine"
+      ],
+      "correct": [
+        "Riz",
+        "Blé",
+        "Orge",
+        "Avoine"
+      ],
+      "explanation": "Riz : 0,5 à 1,5% de fibres, Blé : 2 à 3% de fibres, Orge : 4 à 5% de fibres, Avoine : 8 à 10% de fibres",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Riz",
+      "atlasId": "gst_cereales"
+    }
+  ],
+  "mytho": [
+    {
+      "id": "sc_mytho_chrono_q1",
+      "cat": "mytho",
+      "question": "Remets dans l'ordre chronologique les travaux d'Héraclès :",
+      "pool": [
+        "Nettoyage des écuries d'Augias",
+        "Capturer Cerbère",
+        "Tuer l'Hydre de Lerne",
+        "Capturer les cerfs d'Artémis"
+      ],
+      "correct": [
+        "Capturer les cerfs d'Artémis",
+        "Nettoyage des écuries d'Augias",
+        "Tuer l'Hydre de Lerne",
+        "Capturer Cerbère"
+      ],
+      "explanation": "L'ordre exact est débattu, mais généralement accepté comme suit : 1er travail (cerfs), 5e (écuries), 2e (Hydre), 12e (Cerbère).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Travaux_d%27Hercule",
+      "atlasId": "mytho_hercule"
+    },
+    {
+      "id": "sc_mytho_geo_q2",
+      "cat": "mytho",
+      "question": "Classe les monts de la mythologie grecque du nord au sud :",
+      "pool": [
+        "Mont Olympe",
+        "Mont Ida",
+        "Mont Olympus en Grèce",
+        "Mont Cythère"
+      ],
+      "correct": [
+        "Mont Olympe",
+        "Mont Ida",
+        "Mont Olympus en Grèce",
+        "Mont Cythère"
+      ],
+      "explanation": "Les coordonnées géographiques permettent de les classer ainsi : Olympe (nord), Ida (nord-ouest), Olympus (centre), Cythère (sud).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Olympe",
+      "atlasId": "mytho_olympus"
+    },
+    {
+      "id": "sc_mytho_hier_q3",
+      "cat": "mytho",
+      "question": "Ordre hiérarchique des dieux grecs :",
+      "pool": [
+        "Zeus",
+        "Hadès",
+        "Poséidon",
+        "Héra"
+      ],
+      "correct": [
+        "Zeus",
+        "Poséidon",
+        "Hadès",
+        "Héra"
+      ],
+      "explanation": "Zeus (roi), Poséidon (frère et dieu de la mer), Hadès (frère et dieu des enfers), Héra (sœur et épouse de Zeus).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Panth%C3%A9on_de_la_mythologie_grecque",
+      "atlasId": "mytho_zeus"
+    },
+    {
+      "id": "sc_mythochrono_q4",
+      "cat": "mytho",
+      "question": "Classe les événements de la fondation de Rome :",
+      "pool": [
+        "Nausée de Rhea Silvia",
+        "Enlèvement des Sabines",
+        "Fondation de Rome",
+        "Départ d'Énée de Troie"
+      ],
+      "correct": [
+        "Départ d'Énée de Troie",
+        "Nausée de Rhea Silvia",
+        "Fondation de Rome",
+        "Enlèvement des Sabines"
+      ],
+      "explanation": "Énée quitte Troie en 1200 av. J.-C., naissance de Romulus et Rémus en 771 av. J.-C., fondation de Rome en 753 av. J.-C., enlèvement des Sabines peu après.",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fondation_de_Rome",
+      "atlasId": "mytho_rome"
+    },
+    {
+      "id": "sc_mytho_dur_q5",
+      "cat": "mytho",
+      "question": "Classe les règnes des premiers rois de Rome de la plus courte à la plus longue durée :",
+      "pool": [
+        "Romulus",
+        "Numa Pompilius",
+        "Tullus Hostilius",
+        "Tarquin l'Ancien"
+      ],
+      "correct": [
+        "Tullus Hostilius",
+        "Romulus",
+        "Numa Pompilius",
+        "Tarquin l'Ancien"
+      ],
+      "explanation": "Tullus Hostilius (31 ans), Romulus (40 ans), Numa Pompilius (43 ans), Tarquin l'Ancien (44 ans selon certaines sources).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rois_de_Rome",
+      "atlasId": "mytho_rois"
+    },
+    {
+      "id": "sc_mytho_long_q6",
+      "cat": "mytho",
+      "question": "Classe les fleuves de la mythologie grecque par leur longueur :",
+      "pool": [
+        "Fleuve Achéloos",
+        "Fleuve Alphée",
+        "Fleuve Scamandre",
+        "Fleuve Événos"
+      ],
+      "correct": [
+        "Fleuve Scamandre",
+        "Fleuve Événos",
+        "Fleuve Alphée",
+        "Fleuve Achéloos"
+      ],
+      "explanation": "Scamandre (~100 km), Événos (~160 km), Alphée (~240 km), Achéloos (~330 km).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Ach%C3%A9loos",
+      "atlasId": "mytho_fleuves"
+    },
+    {
+      "id": "sc_mytho_pop_q7",
+      "cat": "mytho",
+      "question": "Classe les villes de la mythologie grecque par leur population (à leur apogée) :",
+      "pool": [
+        "Athènes",
+        "Sparte",
+        "Corinthe",
+        "Délos"
+      ],
+      "correct": [
+        "Délos",
+        "Sparte",
+        "Corinthe",
+        "Athènes"
+      ],
+      "explanation": "Délos (quelques milliers), Sparte (~10 000), Corinthe (~50 000), Athènes (~150 000 à son apogée).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ath%C3%A8nes",
+      "atlasId": "mytho_villes"
+    },
+    {
+      "id": "sc_mytho_mont_q8",
+      "cat": "mytho",
+      "question": "Classe les monts de la mythologie grecque par leur altitude :",
+      "pool": [
+        "Mont Olympe",
+        "Mont Ida",
+        "Mont Cythère",
+        "Mont Parnasse"
+      ],
+      "correct": [
+        "Mont Cythère",
+        "Mont Parnasse",
+        "Mont Ida",
+        "Mont Olympe"
+      ],
+      "explanation": "Cythère (~740 m), Parnasse (~1 245 m), Ida (~1 770 m), Olympe (~2 917 m).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Olympe",
+      "atlasId": "mytho_monts"
+    },
+    {
+      "id": "sc_mytho_trav_q9",
+      "cat": "mytho",
+      "question": "Classe les travaux d'Héraclès par ordre de difficulté (selon la mythologie) :",
+      "pool": [
+        "Nettoyage des écuries d'Augias",
+        "Capturer Cerbère",
+        "Tuer l'Hydre de Lerne",
+        "Capturer les cerfs d'Artémis"
+      ],
+      "correct": [
+        "Capturer les cerfs d'Artémis",
+        "Nettoyage des écuries d'Augias",
+        "Tuer l'Hydre de Lerne",
+        "Capturer Cerbère"
+      ],
+      "explanation": "L'ordre de difficulté est subjectif mais souvent considéré comme suit : cerfs (premier et facile), écuries (sale mais pas mortel), Hydre (mortelle et cachée), Cerbère (garde des enfers).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Travaux_d%27Hercule",
+      "atlasId": "mytho_hercule"
+    },
+    {
+      "id": "sc_mytho_gene_q10",
+      "cat": "mytho",
+      "question": "Classe les dieux grecs par génération :",
+      "pool": [
+        "Ouranos",
+        "Cronos",
+        "Zeus",
+        "Hadès"
+      ],
+      "correct": [
+        "Ouranos",
+        "Cronos",
+        "Zeus",
+        "Hadès"
+      ],
+      "explanation": "Ouranos (première génération), Cronos (fils d'Ouranos), Zeus (fils de Cronos), Hadès (fils de Cronos, frère de Zeus).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Panth%C3%A9on_de_la_mythologie_grecque",
+      "atlasId": "mytho_zeus"
+    }
+  ],
+  "chateaux": [
+    {
+      "id": "sc_chateaux_chrono_q1",
+      "cat": "chateaux",
+      "question": "Remets dans l'ordre chronologique les dates de construction des châteaux suivants :",
+      "pool": [
+        "Château de Chenonceau",
+        "Château d'Amboise",
+        "Château de Blois",
+        "Château de Chambord"
+      ],
+      "correct": [
+        "Château d'Amboise",
+        "Château de Blois",
+        "Château de Chenonceau",
+        "Château de Chambord"
+      ],
+      "explanation": "Château d'Amboise (XIe siècle), Château de Blois (XIIIe siècle), Château de Chenonceau (XVe siècle), Château de Chambord (XVIe siècle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Amboise",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_palais_europe_q2",
+      "cat": "chateaux",
+      "question": "Classe les palais européens suivants par ordre de superficie décroissante :",
+      "pool": [
+        "Palais de Buckingham",
+        "Palais de Versailles",
+        "Palais du Quirinal",
+        "Palais de l'Alcázar de Madrid"
+      ],
+      "correct": [
+        "Palais de Versailles",
+        "Palais de l'Alcázar de Madrid",
+        "Palais de Buckingham",
+        "Palais du Quirinal"
+      ],
+      "explanation": "Palais de Versailles (~800 000 m²), Palais de l'Alcázar de Madrid (~150 000 m²), Palais de Buckingham (~77 000 m²), Palais du Quirinal (~110 000 m²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_chateaux_france_q3",
+      "cat": "chateaux",
+      "question": "Remets dans l'ordre géographique (du nord au sud) les châteaux suivants :",
+      "pool": [
+        "Château de Pierrefonds",
+        "Château de Chambord",
+        "Château de Chenonceau",
+        "Château de Villandry"
+      ],
+      "correct": [
+        "Château de Pierrefonds",
+        "Château de Chambord",
+        "Château de Chenonceau",
+        "Château de Villandry"
+      ],
+      "explanation": "Château de Pierrefonds (49,3°N), Château de Chambord (47,6°N), Château de Chenonceau (47,3°N), Château de Villandry (47,1°N)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Pierrefonds",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_palais_royaux_q4",
+      "cat": "chateaux",
+      "question": "Classe les résidences royales européennes suivantes par ordre d'ancienneté :",
+      "pool": [
+        "Palais de Buckingham",
+        "Palais de Versailles",
+        "Palais du Quirinal",
+        "Château de Windsor"
+      ],
+      "correct": [
+        "Château de Windsor",
+        "Palais de Versailles",
+        "Palais du Quirinal",
+        "Palais de Buckingham"
+      ],
+      "explanation": "Château de Windsor (XIe siècle), Palais de Versailles (XVIIe siècle), Palais du Quirinal (XVIe siècle), Palais de Buckingham (XVIIIe siècle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Windsor",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_chateaux_loire_q5",
+      "cat": "chateaux",
+      "question": "Remets dans l'ordre chronologique les dates de construction des châteaux de la Loire suivants :",
+      "pool": [
+        "Château d'Amboise",
+        "Château de Blois",
+        "Château de Chambord",
+        "Château de Chaumont-sur-Loire"
+      ],
+      "correct": [
+        "Château d'Amboise",
+        "Château de Blois",
+        "Château de Chaumont-sur-Loire",
+        "Château de Chambord"
+      ],
+      "explanation": "Château d'Amboise (XIe siècle), Château de Blois (XIIIe siècle), Château de Chaumont-sur-Loire (XVe siècle), Château de Chambord (XVIe siècle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Amboise",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_palais_europe_q6",
+      "cat": "chateaux",
+      "question": "Classe les palais européens suivants par ordre de hauteur décroissante :",
+      "pool": [
+        "Palais de Buckingham",
+        "Palais de Versailles",
+        "Palais du Quirinal",
+        "Palais de l'Alcázar de Madrid"
+      ],
+      "correct": [
+        "Palais de l'Alcázar de Madrid",
+        "Palais de Versailles",
+        "Palais du Quirinal",
+        "Palais de Buckingham"
+      ],
+      "explanation": "Palais de l'Alcázar de Madrid (~100 m), Palais de Versailles (~60 m), Palais du Quirinal (~50 m), Palais de Buckingham (~40 m)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_chateaux_france_q7",
+      "cat": "chateaux",
+      "question": "Remets dans l'ordre géographique (de l'ouest à l'est) les châteaux suivants :",
+      "pool": [
+        "Château de Villandry",
+        "Château de Chenonceau",
+        "Château de Chambord",
+        "Château de Pierrefonds"
+      ],
+      "correct": [
+        "Château de Villandry",
+        "Château de Chenonceau",
+        "Château de Chambord",
+        "Château de Pierrefonds"
+      ],
+      "explanation": "Château de Villandry (0,3°E), Château de Chenonceau (1,3°E), Château de Chambord (1,5°E), Château de Pierrefonds (3,0°E)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Villandry",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "sc_palais_royaux_q8",
+      "cat": "chateaux",
+      "question": "Classe les résidences royales européennes suivantes par ordre de capacité d'accueil :",
+      "pool": [
+        "Palais de Buckingham",
+        "Palais de Versailles",
+        "Palais du Quirinal",
+        "Château de Windsor"
+      ],
+      "correct": [
+        "Palais de Versailles",
+        "Château de Windsor",
+        "Palais de Buckingham",
+        "Palais du Quirinal"
+      ],
+      "explanation": "Palais de Versailles (~1000 personnes), Château de Windsor (~500 personnes), Palais de Buckingham (~400 personnes), Palais du Quirinal (~200 personnes)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
+      "atlasId": "chateaux_france"
+    }
+  ],
+  "extended": [
+    {
+      "id": "space_mission_order",
+      "cat": "extended",
+      "question": "Classe ces missions spatiales dans l'ordre chronologique de leur lancement :",
+      "pool": [
+        "Apollo 11",
+        "Vostok 1",
+        "Voyager 1",
+        "International Space Station"
+      ],
+      "correct": [
+        "Vostok 1",
+        "Apollo 11",
+        "Voyager 1",
+        "International Space Station"
+      ],
+      "explanation": "Vostok 1 (1961), Apollo 11 (1969), Voyager 1 (1977), International Space Station (1998)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Programme_Apollo",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "le_corbusier_buildings",
+      "cat": "extended",
+      "question": "Classe ces bâtiments de Le Corbusier par ordre de construction :",
+      "pool": [
+        "Villa Savoye",
+        "Chapelle de Notre-Dame du Haut",
+        "Unité d'Habitation",
+        "Cabanon de Le Corbusier"
+      ],
+      "correct": [
+        "Villa Savoye",
+        "Unité d'Habitation",
+        "Chapelle de Notre-Dame du Haut",
+        "Cabanon de Le Corbusier"
+      ],
+      "explanation": "Villa Savoye (1928), Unité d'Habitation (1952), Chapelle de Notre-Dame du Haut (1955), Cabanon de Le Corbusier (1952)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "zaha_hadid_buildings",
+      "cat": "extended",
+      "question": "Classe ces bâtiments de Zaha Hadid par ordre de construction :",
+      "pool": [
+        "Heydar Aliyev Center",
+        "London Aquatics Centre",
+        "Guangzhou Opera House",
+        "Wangjing SOHO"
+      ],
+      "correct": [
+        "Guangzhou Opera House",
+        "London Aquatics Centre",
+        "Heydar Aliyev Center",
+        "Wangjing SOHO"
+      ],
+      "explanation": "Guangzhou Opera House (2010), London Aquatics Centre (2012), Heydar Aliyev Center (2012), Wangjing SOHO (2014)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Zaha_Hadid",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "space_agency_foundations",
+      "cat": "extended",
+      "question": "Classe ces agences spatiales par ordre de leur fondation :",
+      "pool": [
+        "NASA",
+        "Roscosmos",
+        "ESA",
+        "CNSA"
+      ],
+      "correct": [
+        "NASA",
+        "ESA",
+        "Roscosmos",
+        "CNSA"
+      ],
+      "explanation": "NASA (1958), ESA (1975), Roscosmos (1992), CNSA (1993)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/NASA",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "le_corbusier_styles",
+      "cat": "extended",
+      "question": "Classe ces styles architecturaux de Le Corbusier par ordre chronologique :",
+      "pool": [
+        "Purisme",
+        "Brutalisme",
+        "International Style",
+        "Expressionnisme"
+      ],
+      "correct": [
+        "Purisme",
+        "International Style",
+        "Brutalisme",
+        "Expressionnisme"
+      ],
+      "explanation": "Purisme (1910), International Style (1920), Brutalisme (1950), Expressionnisme (1960)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "space_mission_durations",
+      "cat": "extended",
+      "question": "Classe ces missions spatiales par durée de vol :",
+      "pool": [
+        "Apollo 11",
+        "Voyager 1",
+        "International Space Station",
+        "New Horizons"
+      ],
+      "correct": [
+        "Apollo 11",
+        "New Horizons",
+        "Voyager 1",
+        "International Space Station"
+      ],
+      "explanation": "Apollo 11 (8 jours), New Horizons (9 ans), Voyager 1 (44 ans), International Space Station (environ 20 ans de présence continue)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Programme_Apollo",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "zaha_hadid_awards",
+      "cat": "extended",
+      "question": "Classe ces prix remportés par Zaha Hadid par ordre chronologique :",
+      "pool": [
+        "Pritzker Architecture Prize",
+        "Stirling Prize",
+        "RIBA Royal Gold Medal",
+        "Jane Drew Prize"
+      ],
+      "correct": [
+        "Stirling Prize",
+        "RIBA Royal Gold Medal",
+        "Pritzker Architecture Prize",
+        "Jane Drew Prize"
+      ],
+      "explanation": "Stirling Prize (2010), RIBA Royal Gold Medal (2015), Pritzker Architecture Prize (2004), Jane Drew Prize (2012)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Zaha_Hadid",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "le_corbusier_books",
+      "cat": "extended",
+      "question": "Classe ces livres écrits par Le Corbusier par ordre de publication :",
+      "pool": [
+        "Vers une architecture",
+        "Urbanisme",
+        "La Ville radieuse",
+        "L'Art décoratif d'aujourd'hui"
+      ],
+      "correct": [
+        "L'Art décoratif d'aujourd'hui",
+        "Vers une architecture",
+        "Urbanisme",
+        "La Ville radieuse"
+      ],
+      "explanation": "L'Art décoratif d'aujourd'hui (1925), Vers une architecture (1923), Urbanisme (1929), La Ville radieuse (1935)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "space_agency_budgets",
+      "cat": "extended",
+      "question": "Classe ces agences spatiales par budget annuel :",
+      "pool": [
+        "NASA",
+        "Roscosmos",
+        "ESA",
+        "CNSA"
+      ],
+      "correct": [
+        "CNSA",
+        "Roscosmos",
+        "ESA",
+        "NASA"
+      ],
+      "explanation": "CNSA (environ 11 milliards de dollars), Roscosmos (environ 20 milliards de dollars), ESA (environ 22 milliards de dollars), NASA (environ 23 milliards de dollars)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/NASA",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "le_corbusierprojects_costs",
+      "cat": "extended",
+      "question": "Classe ces projets de Le Corbusier par coût de construction :",
+      "pool": [
+        "Villa Savoye",
+        "Unité d'Habitation",
+        "Chapelle de Notre-Dame du Haut",
+        "Cabanon de Le Corbusier"
+      ],
+      "correct": [
+        "Cabanon de Le Corbusier",
+        "Villa Savoye",
+        "Chapelle de Notre-Dame du Haut",
+        "Unité d'Habitation"
+      ],
+      "explanation": "Cabanon de Le Corbusier (environ 100 000 dollars), Villa Savoye (environ 150 000 dollars), Chapelle de Notre-Dame du Haut (environ 200 000 dollars), Unité d'Habitation (environ 1 million de dollars)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
+      "atlasId": "ext_philo"
+    }
+  ],
+  "litt": [
+    {
+      "id": "sc_litt_afro_q1",
+      "cat": "litt",
+      "question": "Classe ces écrivains africains francophones par ordre de publication de leur premier roman du plus ancien au plus récent :",
+      "pool": [
+        "Léopold Sédar Senghor",
+        "Mongo Beti",
+        "Ahmadou Kourouma",
+        "Henri Lopès"
+      ],
+      "correct": [
+        "Léopold Sédar Senghor",
+        "Mongo Beti",
+        "Henri Lopès",
+        "Ahmadou Kourouma"
+      ],
+      "explanation": "1945 (Senghor), 1954 (Beti), 1971 (Lopès), 1972 (Kourouma)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_africaine",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_lati_q2",
+      "cat": "litt",
+      "question": "Remets dans l'ordre chronologique les dates de publication des romans de García Márquez :",
+      "pool": [
+        "Cent ans de solitude",
+        "L'amour aux temps du choléra",
+        "Chronique d'une mort annoncée",
+        "L'automne du patriarche"
+      ],
+      "correct": [
+        "L'automne du patriarche",
+        "Cent ans de solitude",
+        "Chronique d'une mort annoncée",
+        "L'amour aux temps du choléra"
+      ],
+      "explanation": "1975 (L'automne), 1967 (Cent ans), 1981 (Chronique), 1985 (L'amour)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_afro_q3",
+      "cat": "litt",
+      "question": "Classe ces écrivains africains anglophones par ordre de naissance du plus jeune au plus âgé :",
+      "pool": [
+        "Chinua Achebe",
+        "Ngugi wa Thiong'o",
+        "Wole Soyinka",
+        "Ben Okri"
+      ],
+      "correct": [
+        "Ben Okri",
+        "Ngugi wa Thiong'o",
+        "Chinua Achebe",
+        "Wole Soyinka"
+      ],
+      "explanation": "1959 (Okri), 1938 (Ngugi), 1930 (Achebe), 1934 (Soyinka)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_africaine",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_lati_q4",
+      "cat": "litt",
+      "question": "Remets dans l'ordre géographique ces pays d'Amérique latine du nord au sud :",
+      "pool": [
+        "Mexique",
+        "Argentine",
+        "Chili",
+        "Pérou"
+      ],
+      "correct": [
+        "Mexique",
+        "Pérou",
+        "Chili",
+        "Argentine"
+      ],
+      "explanation": "19,3°N (Mexique), 10°S (Pérou), 30°S (Chili), 34°S (Argentine)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Am%C3%A9rique_du_Sud",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_lati_q6",
+      "cat": "litt",
+      "question": "Remets dans l'ordre chronologique les dates de naissance des écrivains latino-américains :",
+      "pool": [
+        "Isabel Allende",
+        "Mario Vargas Llosa",
+        "Gabriel García Márquez",
+        "Jorge Luis Borges"
+      ],
+      "correct": [
+        "Jorge Luis Borges",
+        "Gabriel García Márquez",
+        "Mario Vargas Llosa",
+        "Isabel Allende"
+      ],
+      "explanation": "1899 (Borges), 1927 (García Márquez), 1936 (Vargas Llosa), 1942 (Allende)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_latin-am%C3%A9ricaine",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_afro_q7",
+      "cat": "litt",
+      "question": "Classe ces écrivains africains par ordre de nombre de prix littéraires remportés du plus faible au plus élevé :",
+      "pool": [
+        "Chinua Achebe",
+        "Ngugi wa Thiong'o",
+        "Wole Soyinka",
+        "Mia Couto"
+      ],
+      "correct": [
+        "Mia Couto",
+        "Ngugi wa Thiong'o",
+        "Chinua Achebe",
+        "Wole Soyinka"
+      ],
+      "explanation": "1 prix (Couto), 2 prix (Ngugi), 3 prix (Achebe), 4 prix (Soyinka)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_africaine",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_lati_q8",
+      "cat": "litt",
+      "question": "Remets dans l'ordre hiérarchique les genres littéraires en Amérique latine du plus mineur au plus majeur :",
+      "pool": [
+        "Poésie",
+        "Théâtre",
+        "Roman",
+        "Essai"
+      ],
+      "correct": [
+        "Essai",
+        "Théâtre",
+        "Poésie",
+        "Roman"
+      ],
+      "explanation": "moins lu (Essai), moins représenté (Théâtre), populaire (Poésie), le plus lu (Roman)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_latin-am%C3%A9ricaine",
+      "atlasId": "litt_hugo"
+    },
+    {
+      "id": "sc_litt_lati_q10",
+      "cat": "litt",
+      "question": "Remets dans l'ordre chronologique les dates de publication des œuvres de Pablo Neruda :",
+      "pool": [
+        "Twenty Love Poems and a Song of Despair",
+        "Full Woman, Fleshly Apple, Hot Moon",
+        "The Captain's Verses",
+        "Memoirs"
+      ],
+      "correct": [
+        "Twenty Love Poems and a Song of Despair",
+        "The Captain's Verses",
+        "Full Woman, Fleshly Apple, Hot Moon",
+        "Memoirs"
+      ],
+      "explanation": "1924 (Twenty Love), 1952 (The Captain's), 1952 (Full Woman), 1974 (Memoirs)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pablo_Neruda",
+      "atlasId": "litt_hugo"
+    }
+  ],
+  "mixed": [
+    {
+      "id": "sc_mixed_chrono_q1",
+      "cat": "mixed",
+      "question": "Classe ces brevets d'invention par ordre chronologique de déposant :",
+      "pool": [
+        "Brevet de la roue à aubes (1837)",
+        "Brevet de la machine à vapeur (1712)",
+        "Brevet de la locomotive à vapeur (1804)",
+        "Brevet de la turbine à vapeur (1884)"
+      ],
+      "correct": [
+        "Brevet de la machine à vapeur (1712)",
+        "Brevet de la locomotive à vapeur (1804)",
+        "Brevet de la roue à aubes (1837)",
+        "Brevet de la turbine à vapeur (1884)"
+      ],
+      "explanation": "1712 (machine à vapeur), 1804 (locomotive à vapeur), 1837 (roue à aubes), 1884 (turbine à vapeur)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Brevet_d%27invention",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_geo_q2",
+      "cat": "mixed",
+      "question": "Classe ces villes par ordre géographique de longitude est à ouest :",
+      "pool": [
+        "Paris",
+        "Londres",
+        "Rome",
+        "Athènes"
+      ],
+      "correct": [
+        "Athènes",
+        "Rome",
+        "Paris",
+        "Londres"
+      ],
+      "explanation": "Athènes (23,7° E), Rome (12,5° E), Paris (2,3° E), Londres (0,1° O)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Longitude",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_chrono_q3",
+      "cat": "mixed",
+      "question": "Classe ces événements historiques par ordre chronologique de date :",
+      "pool": [
+        "Bataille de Waterloo (1815)",
+        "Révolution française (1789)",
+        "Guerre de Sécession (1861-1865)",
+        "Congrès de Vienne (1815)"
+      ],
+      "correct": [
+        "Révolution française (1789)",
+        "Bataille de Waterloo (1815)",
+        "Congrès de Vienne (1815)",
+        "Guerre de Sécession (1861-1865)"
+      ],
+      "explanation": "1789 (Révolution française), 1815 (Bataille de Waterloo), 1815 (Congrès de Vienne), 1861-1865 (Guerre de Sécession)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_France",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_geo_q4",
+      "cat": "mixed",
+      "question": "Classe ces montagnes par ordre géographique de latitude nord à sud :",
+      "pool": [
+        "Mont Blanc",
+        "Mont Everest",
+        "Kilimanjaro",
+        "Aconcagua"
+      ],
+      "correct": [
+        "Mont Everest",
+        "Kilimanjaro",
+        "Aconcagua",
+        "Mont Blanc"
+      ],
+      "explanation": "Mont Everest (27,9° N), Kilimanjaro (3,1° S), Aconcagua (32,7° S), Mont Blanc (45,8° N)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Latitude",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_chrono_q5",
+      "cat": "mixed",
+      "question": "Classe ces découvertes scientifiques par ordre chronologique de date :",
+      "pool": [
+        "Découverte de la gravitation (1687)",
+        "Découverte de la radium (1898)",
+        "Découverte de la pénicilline (1928)",
+        "Découverte de la structure de l'ADN (1953)"
+      ],
+      "correct": [
+        "Découverte de la gravitation (1687)",
+        "Découverte de la radium (1898)",
+        "Découverte de la pénicilline (1928)",
+        "Découverte de la structure de l'ADN (1953)"
+      ],
+      "explanation": "1687 (gravitation), 1898 (radium), 1928 (pénicilline), 1953 (structure de l'ADN)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_sciences",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_geo_q6",
+      "cat": "mixed",
+      "question": "Classe ces pays par ordre géographique de superficie :",
+      "pool": [
+        "France",
+        "Allemagne",
+        "Italie",
+        "Espagne"
+      ],
+      "correct": [
+        "Italie",
+        "Allemagne",
+        "Espagne",
+        "France"
+      ],
+      "explanation": "Italie (301 338 km²), Allemagne (357 021 km²), Espagne (505 992 km²), France (551 695 km²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Superficie",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_chrono_q7",
+      "cat": "mixed",
+      "question": "Classe ces inventions par ordre chronologique de date :",
+      "pool": [
+        "Invention de la bicyclette (1817)",
+        "Invention de la locomotive (1804)",
+        "Invention de l'automobile (1886)",
+        "Invention de l'avion (1903)"
+      ],
+      "correct": [
+        "Invention de la locomotive (1804)",
+        "Invention de la bicyclette (1817)",
+        "Invention de l'automobile (1886)",
+        "Invention de l'avion (1903)"
+      ],
+      "explanation": "1804 (locomotive), 1817 (bicyclette), 1886 (automobile), 1903 (avion)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_transports",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_geo_q8",
+      "cat": "mixed",
+      "question": "Classe ces villes par ordre géographique de population :",
+      "pool": [
+        "Lyon",
+        "Marseille",
+        "Toulouse",
+        "Bordeaux"
+      ],
+      "correct": [
+        "Toulouse",
+        "Lyon",
+        "Marseille",
+        "Bordeaux"
+      ],
+      "explanation": "Toulouse (479 054 hab.), Lyon (513 275 hab.), Marseille (863 310 hab.), Bordeaux (257 068 hab.)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9mographie",
+      "atlasId": "ext_philo"
+    },
+    {
+      "id": "sc_mixed_geo_q10",
+      "cat": "mixed",
+      "question": "Classe ces pays par ordre géographique de latitude :",
+      "pool": [
+        "Japon",
+        "Chine",
+        "Russie",
+        "Canada"
+      ],
+      "correct": [
+        "Canada",
+        "Russie",
+        "Chine",
+        "Japon"
+      ],
+      "explanation": "Canada (42,0° N), Russie (61,5° N), Chine (35,8° N), Japon (36,2° N)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Latitude",
+      "atlasId": "ext_philo"
+    }
+  ]
+}

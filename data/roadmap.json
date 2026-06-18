@@ -1,0 +1,635 @@
+{
+  "version": "2.1",
+  "generatedAt": "2026-06-16T13:38:12.687269",
+  "totalMilestones": 40,
+  "xpTotal": 19070,
+  "questionCounts": {
+    "qcm": 740,
+    "tf": 120,
+    "scramble": 110,
+    "total": 970
+  },
+  "catsPresent": [
+    "geo",
+    "sci",
+    "sport",
+    "chateaux",
+    "cinema",
+    "art",
+    "mytho",
+    "gastro",
+    "extended",
+    "hist",
+    "mixed",
+    "litt"
+  ],
+  "milestones": [
+    {
+      "id": 1,
+      "xpRequired": 50,
+      "title": "Premier Pas",
+      "icon": "🌍",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 10,
+        "item": null
+      },
+      "description": "Commence ton aventure en geo !",
+      "cat": "geo"
+    },
+    {
+      "id": 2,
+      "xpRequired": 150,
+      "title": "Apprenti Curieux",
+      "icon": "🔬",
+      "tier": "bronze",
+      "reward": {
+        "type": "heart",
+        "icon": "❤️",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Commence ton aventure en sci !",
+      "cat": "sci"
+    },
+    {
+      "id": 3,
+      "xpRequired": 300,
+      "title": "Explorateur Bronze",
+      "icon": "⚽",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 15,
+        "item": null
+      },
+      "description": "Commence ton aventure en sport !",
+      "cat": "sport"
+    },
+    {
+      "id": 4,
+      "xpRequired": 500,
+      "title": "Esprit Éveillé",
+      "icon": "🏰",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 10,
+        "item": null
+      },
+      "description": "Commence ton aventure en chateaux !",
+      "cat": "chateaux"
+    },
+    {
+      "id": 5,
+      "xpRequired": 700,
+      "title": "Découvreur",
+      "icon": "🎬",
+      "tier": "bronze",
+      "reward": {
+        "type": "heart",
+        "icon": "❤️",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Commence ton aventure en cinema !",
+      "cat": "cinema"
+    },
+    {
+      "id": 6,
+      "xpRequired": 900,
+      "title": "Premier Pas",
+      "icon": "🎨",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 15,
+        "item": null
+      },
+      "description": "Commence ton aventure en art !",
+      "cat": "art"
+    },
+    {
+      "id": 7,
+      "xpRequired": 1150,
+      "title": "Apprenti Curieux",
+      "icon": "⚡",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 10,
+        "item": null
+      },
+      "description": "Commence ton aventure en mytho !",
+      "cat": "mytho"
+    },
+    {
+      "id": 8,
+      "xpRequired": 1450,
+      "title": "Explorateur Bronze",
+      "icon": "🍽️",
+      "tier": "bronze",
+      "reward": {
+        "type": "heart",
+        "icon": "❤️",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Commence ton aventure en gastro !",
+      "cat": "gastro"
+    },
+    {
+      "id": 9,
+      "xpRequired": 1750,
+      "title": "Esprit Éveillé",
+      "icon": "🧠",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 15,
+        "item": null
+      },
+      "description": "Commence ton aventure en extended !",
+      "cat": "extended"
+    },
+    {
+      "id": 10,
+      "xpRequired": 2100,
+      "title": "Découvreur",
+      "icon": "📜",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 10,
+        "item": null
+      },
+      "description": "Commence ton aventure en hist !",
+      "cat": "hist"
+    },
+    {
+      "id": 11,
+      "xpRequired": 2400,
+      "title": "Premier Pas",
+      "icon": "🎲",
+      "tier": "bronze",
+      "reward": {
+        "type": "heart",
+        "icon": "❤️",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Commence ton aventure en mixed !",
+      "cat": "mixed"
+    },
+    {
+      "id": 12,
+      "xpRequired": 2800,
+      "title": "Apprenti Curieux",
+      "icon": "📚",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 15,
+        "item": null
+      },
+      "description": "Commence ton aventure en litt !",
+      "cat": "litt"
+    },
+    {
+      "id": 13,
+      "xpRequired": 3150,
+      "title": "Lettré Confirmé",
+      "icon": "🌍",
+      "tier": "silver",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 20,
+        "item": null
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "geo"
+    },
+    {
+      "id": 14,
+      "xpRequired": 3550,
+      "title": "Esprit Affûté",
+      "icon": "🔬",
+      "tier": "silver",
+      "reward": {
+        "type": "powerup",
+        "icon": "✂️",
+        "amount": 1,
+        "item": "fiftyfifty"
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "sci"
+    },
+    {
+      "id": 15,
+      "xpRequired": 3950,
+      "title": "Chasseur de Savoirs",
+      "icon": "⚽",
+      "tier": "silver",
+      "reward": {
+        "type": "powerup",
+        "icon": "🛡️",
+        "amount": 1,
+        "item": "shield"
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "sport"
+    },
+    {
+      "id": 16,
+      "xpRequired": 4400,
+      "title": "Navigateur Culturel",
+      "icon": "🏰",
+      "tier": "silver",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 30,
+        "item": null
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "chateaux"
+    },
+    {
+      "id": 17,
+      "xpRequired": 4850,
+      "title": "Érudit en Herbe",
+      "icon": "🎬",
+      "tier": "silver",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 20,
+        "item": null
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "cinema"
+    },
+    {
+      "id": 18,
+      "xpRequired": 5300,
+      "title": "Lettré Confirmé",
+      "icon": "🎨",
+      "tier": "silver",
+      "reward": {
+        "type": "powerup",
+        "icon": "✂️",
+        "amount": 1,
+        "item": "fiftyfifty"
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "art"
+    },
+    {
+      "id": 19,
+      "xpRequired": 5800,
+      "title": "Esprit Affûté",
+      "icon": "⚡",
+      "tier": "silver",
+      "reward": {
+        "type": "powerup",
+        "icon": "🛡️",
+        "amount": 1,
+        "item": "shield"
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "mytho"
+    },
+    {
+      "id": 20,
+      "xpRequired": 6300,
+      "title": "Chasseur de Savoirs",
+      "icon": "🍽️",
+      "tier": "silver",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 30,
+        "item": null
+      },
+      "description": "Tu maîtrises les bases — continue sur ta lancée !",
+      "cat": "gastro"
+    },
+    {
+      "id": 21,
+      "xpRequired": 6800,
+      "title": "Maître des Questions",
+      "icon": "🧠",
+      "tier": "gold",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 40,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "extended"
+    },
+    {
+      "id": 22,
+      "xpRequired": 7350,
+      "title": "Encyclopédiste",
+      "icon": "📜",
+      "tier": "gold",
+      "reward": {
+        "type": "chest",
+        "icon": "🎁",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "hist"
+    },
+    {
+      "id": 23,
+      "xpRequired": 7850,
+      "title": "Sage Doré",
+      "icon": "🎲",
+      "tier": "gold",
+      "reward": {
+        "type": "powerup",
+        "icon": "⚡",
+        "amount": 1,
+        "item": "doubleXP"
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "mixed"
+    },
+    {
+      "id": 24,
+      "xpRequired": 8400,
+      "title": "Virtuose du Quiz",
+      "icon": "📚",
+      "tier": "gold",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 50,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "litt"
+    },
+    {
+      "id": 25,
+      "xpRequired": 9000,
+      "title": "Prodige Culturel",
+      "icon": "🌍",
+      "tier": "gold",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 40,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "geo"
+    },
+    {
+      "id": 26,
+      "xpRequired": 9550,
+      "title": "Maître des Questions",
+      "icon": "🔬",
+      "tier": "gold",
+      "reward": {
+        "type": "chest",
+        "icon": "🎁",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "sci"
+    },
+    {
+      "id": 27,
+      "xpRequired": 10150,
+      "title": "Encyclopédiste",
+      "icon": "⚽",
+      "tier": "gold",
+      "reward": {
+        "type": "powerup",
+        "icon": "⚡",
+        "amount": 1,
+        "item": "doubleXP"
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "sport"
+    },
+    {
+      "id": 28,
+      "xpRequired": 10800,
+      "title": "Sage Doré",
+      "icon": "🏰",
+      "tier": "gold",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 50,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "chateaux"
+    },
+    {
+      "id": 29,
+      "xpRequired": 11400,
+      "title": "Virtuose du Quiz",
+      "icon": "🎬",
+      "tier": "gold",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 40,
+        "item": null
+      },
+      "description": "Mi-parcours — 485 questions passées !",
+      "cat": "cinema"
+    },
+    {
+      "id": 30,
+      "xpRequired": 12050,
+      "title": "Grand Érudit",
+      "icon": "🎨",
+      "tier": "platinum",
+      "reward": {
+        "type": "chest",
+        "icon": "🎁",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 37% !",
+      "cat": "art"
+    },
+    {
+      "id": 31,
+      "xpRequired": 12700,
+      "title": "Phénomène Platine",
+      "icon": "⚡",
+      "tier": "platinum",
+      "reward": {
+        "type": "trophy",
+        "icon": "🏆",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 33% !",
+      "cat": "mytho"
+    },
+    {
+      "id": 32,
+      "xpRequired": 13350,
+      "title": "Oracle du Savoir",
+      "icon": "🍽️",
+      "tier": "platinum",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 80,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 30% !",
+      "cat": "gastro"
+    },
+    {
+      "id": 33,
+      "xpRequired": 14000,
+      "title": "Champion des Cultures",
+      "icon": "🧠",
+      "tier": "platinum",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 60,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 27% !",
+      "cat": "extended"
+    },
+    {
+      "id": 34,
+      "xpRequired": 14700,
+      "title": "Titan de la Connaissance",
+      "icon": "📜",
+      "tier": "platinum",
+      "reward": {
+        "type": "chest",
+        "icon": "🎁",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 23% !",
+      "cat": "hist"
+    },
+    {
+      "id": 35,
+      "xpRequired": 15400,
+      "title": "Grand Érudit",
+      "icon": "🎲",
+      "tier": "platinum",
+      "reward": {
+        "type": "trophy",
+        "icon": "🏆",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 19% !",
+      "cat": "mixed"
+    },
+    {
+      "id": 36,
+      "xpRequired": 16100,
+      "title": "Phénomène Platine",
+      "icon": "📚",
+      "tier": "platinum",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 80,
+        "item": null
+      },
+      "description": "Les sommets approchent — plus que 16% !",
+      "cat": "litt"
+    },
+    {
+      "id": 37,
+      "xpRequired": 16850,
+      "title": "Légende Vivante",
+      "icon": "🌍",
+      "tier": "legend",
+      "reward": {
+        "type": "trophy",
+        "icon": "🏆",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Rang d'élite — 16850 XP cumulés !",
+      "cat": "geo"
+    },
+    {
+      "id": 38,
+      "xpRequired": 17550,
+      "title": "Maître Absolu",
+      "icon": "🔬",
+      "tier": "legend",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 100,
+        "item": null
+      },
+      "description": "Rang d'élite — 17550 XP cumulés !",
+      "cat": "sci"
+    },
+    {
+      "id": 39,
+      "xpRequired": 18300,
+      "title": "Légende Vivante",
+      "icon": "⚽",
+      "tier": "legend",
+      "reward": {
+        "type": "trophy",
+        "icon": "🏆",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Rang d'élite — 18300 XP cumulés !",
+      "cat": "sport"
+    },
+    {
+      "id": 40,
+      "xpRequired": 19070,
+      "title": "Maître Absolu",
+      "icon": "🏰",
+      "tier": "legend",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 100,
+        "item": null
+      },
+      "description": "Le sommet du savoir — 970 questions maîtrisées !",
+      "cat": "chateaux"
+    }
+  ],
+  "xpCurve": {
+    "formula": "xp_total * (i/n)^1.6 arrondi à 50",
+    "earlyGame": 393,
+    "midGame": 786,
+    "lateGame": 1179,
+    "estimatedSessions": 49
+  }
+}

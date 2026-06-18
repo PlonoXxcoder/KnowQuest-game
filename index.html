@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>KnowQuest V2.0</title>
-<link rel="manifest" href="/manifest.json">
+<link rel="manifest" href="manifest.json">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -543,11 +543,14 @@ html,body { height:100%; background:var(--bg); overflow:hidden; user-select:none
 @keyframes slideDown { from{opacity:0;transform:translateX(-50%) translateY(-20px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/globe.gl@2/dist/globe.gl.min.js">
+</script>
+<script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js');
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => console.log('Service Worker enregistré !', reg))
+      .catch(err => console.log('Erreur de Service Worker :', err));
   }
 </script>
-
 </head>
 <body>
 <div class="app">
@@ -4584,6 +4587,21 @@ function enregistrerReponse(donneesPartie) {
 initOnboard();
 if(loadData()&&P.name){startApp();}else{document.getElementById('scrOnboard').classList.add('active');}
 </script>
+<!-- CHARGEZ LE LOADER APRÈS -->
 <script src="scripts/data_loader.js"></script>
+
+<!-- ET AJOUTEZ LE DÉCLENCHEUR DE SÉCURITÉ -->
+<script>
+  window.addEventListener('kq:data-loaded', () => {
+    console.log("Données prêtes ! Lancement du jeu...");
+    if(P.name) {
+        startApp();
+    } else {
+        // On est déjà dans le cas où l'onboard est actif, 
+        // mais on s'assure que tout est bien initialisé
+        startApp();
+    }
+  });
+</script>
 </body>
 </html>

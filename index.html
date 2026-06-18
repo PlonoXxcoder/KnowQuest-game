@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>KnowQuest V2.0</title>
 <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7c5cfc">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="KnowQuest">
+<link rel="apple-touch-icon" href="icon-192.png">
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
@@ -26,7 +32,9 @@
   --flag:#f44336; --flag-bg:#ffebee;
 }
 html,body { height:100%; background:var(--bg); overflow:hidden; user-select:none; color:var(--text); }
-.app { width:100%; max-width:480px; height:100dvh; margin:0 auto; background:var(--bg); display:flex; flex-direction:column; overflow:hidden; position:relative; box-shadow:0 0 40px rgba(0,0,0,0.1); }
+.app { width:100vw; height:100vh; height:100dvh; background:var(--bg); display:flex; flex-direction:column; overflow:hidden; position:relative; }
+.install-btn { position:fixed; top:max(10px,env(safe-area-inset-top)); right:10px; z-index:3000; background:var(--purple); color:#fff; border:none; border-radius:20px; padding:8px 14px; font-size:13px; font-weight:900; box-shadow:0 4px 12px rgba(0,0,0,0.25); align-items:center; gap:6px; cursor:pointer; display:none; }
+.install-btn.show { display:flex; }
 .screen { display:none; flex-direction:column; flex:1; overflow:hidden; background:var(--bg); }
 .screen.active { display:flex; animation:fadeUp 0.25s ease-out forwards; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
@@ -550,10 +558,45 @@ html,body { height:100%; background:var(--bg); overflow:hidden; user-select:none
       .then(reg => console.log('Service Worker enregistré !', reg))
       .catch(err => console.log('Erreur de Service Worker :', err));
   }
+
+  // ── Install PWA (bouton "Installer l'app") ──────────────────────────────
+  let deferredInstallPrompt = null;
+
+  function isRunningStandalone() {
+    return window.matchMedia('(display-mode: standalone)').matches ||
+           window.matchMedia('(display-mode: fullscreen)').matches ||
+           window.navigator.standalone === true;
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    const btn = document.getElementById('installBtn');
+    if (btn && !isRunningStandalone()) btn.classList.add('show');
+  });
+
+  window.addEventListener('appinstalled', () => {
+    deferredInstallPrompt = null;
+    const btn = document.getElementById('installBtn');
+    if (btn) btn.classList.remove('show');
+  });
+
+  async function installApp() {
+    const btn = document.getElementById('installBtn');
+    if (!deferredInstallPrompt) {
+      alert("L'installation n'est pas disponible pour le moment sur ce navigateur.");
+      return;
+    }
+    btn.classList.remove('show');
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+  }
 </script>
 </head>
 <body>
 <div class="app">
+<button class="install-btn" id="installBtn" onclick="installApp()">📲 Installer l'app</button>
 
 <!-- ONBOARDING -->
 <div class="screen active" id="scrOnboard">

@@ -6,7 +6,7 @@ const FILES_TO_CACHE = [
   'manifest.json',
   'sw.js',
   'scripts/data_loader.js',
-  'logo.jpg',
+  'licon-512.png',
   'icon-192.png'
 ];
 

@@ -8410,27 +8410,26 @@
     }
 
     async function enregistrerReponse(donneesPartie) {
-      // --- AJOUT DE LA LOGIQUE D'ENRICHISSEMENT ICI ---
-      const session_id = _sessionId || "session_" + Date.now();
-      const source = _currentSource || "normal";
-      const position = _positionInSession || 0;
-      
-      const donneesEnrichies = {
-        ...donneesPartie,
-        session_id: session_id,
-        source: source,
-        hint_used: _currentPowerupUsed || null,
-        position_in_session: position,
-        time_taken_ms: donneesPartie.tempsMisMs || (_questionStartTime ? Date.now() - _questionStartTime : null),
-        created_at: new Date().toISOString()
+      // On ne garde QUE les champs que votre serveur accepte
+      const donneesNettoyees = {
+        idJoueur: donneesPartie.idJoueur,
+        idQuestion: donneesPartie.idQuestion,
+        texteQuestion: donneesPartie.texteQuestion,
+        categorie: donneesPartie.categorie,
+        reponseDonnee: donneesPartie.reponseDonnee,
+        reponseCorrecte: donneesPartie.reponseCorrecte,
+        estCorrect: donneesPartie.estCorrect,
+        tempsMisMs: donneesPartie.tempsMisMs
       };
     
-      // Correction : Utilisation de apiFetch (sans le 't' au début)
-      apiFetch('/answer', donneesEnrichies)
+      console.log('[Collecte] Envoi des données validées...', donneesNettoyees);
+    
+      apiFetch('/answer', donneesNettoyees)
         .then(data => { 
-          if (data) console.log('[Collecte] Réponse synchronisée avec succès :', data); 
+          if (data) console.log('[Collecte] Réponse synchronisée avec succès !', data); 
         });
     }
+
 
 
     // ═══════════════════════════════════════════════════════════════════════════

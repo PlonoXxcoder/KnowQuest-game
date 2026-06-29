@@ -8419,30 +8419,19 @@
         ...donneesPartie,
         session_id: session_id,
         source: source,
-        hint_used: _currentPowerupUsed || null, // Utilise le powerup si utilisé
+        hint_used: _currentPowerupUsed || null,
         position_in_session: position,
-        time_taken_ms: donneesPartie.tempsMisMs || ( _questionStartTime ? Date.now() - _questionStartTime : null),
+        time_taken_ms: donneesPartie.tempsMisMs || (_questionStartTime ? Date.now() - _questionStartTime : null),
         created_at: new Date().toISOString()
       };
-      // ------------------------------------------------
     
-      try {
-        const db = await openIDB();
-        const tx = db.transaction('queue', 'readwrite');
-        const store = tx.objectStore('queue');
-        
-        // On envoie les données ENRICHIES à la file d'attente
-        await store.add({ 
-          endpoint: '/answer', 
-          body: donneesEnrichies, 
-          ts: Date.now() 
+      // Correction : Utilisation de apiFetch (sans le 't' au début)
+      apiFetch('/answer', donneesEnrichies)
+        .then(data => { 
+          if (data) console.log('[Collecte] Réponse synchronisée avec succès :', data); 
         });
-        
-        console.log('[Collecte] Réponse enregistrée avec succès :', donneesEnrichies);
-      } catch (e) {
-        console.error('[Collecte] Erreur lors de l\'enregistrement hors-ligne :', e);
-      }
     }
+
 
     // ═══════════════════════════════════════════════════════════════════════════
     // KnowQuest — Patch Collecte de Données v2 (intégré automatiquement)

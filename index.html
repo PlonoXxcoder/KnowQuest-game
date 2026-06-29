@@ -8409,18 +8409,39 @@
         .then(data => { if (data) console.log('Joueur connecté à la base :', data); });
     }
 
-    function enregistrerReponse(donneesPartie) {
-      apiFetch('/answer', {
-        id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
-        player_id: donneesPartie.idJoueur,
-        question_id: donneesPartie.idQuestion,
-        question_text: donneesPartie.texteQuestion,
-        category: donneesPartie.categorie,
-        answer_given: donneesPartie.reponseDonnee,
-        correct_answer: donneesPartie.reponseCorrecte,
-        is_correct: donneesPartie.estCorrect ? 1 : 0,
-        time_taken_ms: donneesPartie.tempsMisMs
-      }).then(data => { if (data) console.log('Donnée enregistrée !'); });
+    async function enregistrerReponse(donneesPartie) {
+      // --- AJOUT DE LA LOGIQUE D'ENRICHISSEMENT ICI ---
+      const session_id = _sessionId || "session_" + Date.now();
+      const source = _currentSource || "normal";
+      const position = _positionInSession || 0;
+      
+      const donneesEnrichies = {
+        ...donneesPartie,
+        session_id: session_id,
+        source: source,
+        hint_used: _currentPowerupUsed || null, // Utilise le powerup si utilisé
+        position_in_session: position,
+        time_taken_ms: donneesPartie.tempsMisMs || ( _questionStartTime ? Date.now() - _questionStartTime : null),
+        created_at: new Date().toISOString()
+      };
+      // ------------------------------------------------
+    
+      try {
+        const db = await openIDB();
+        const tx = db.transaction('queue', 'readwrite');
+        const store = tx.objectStore('queue');
+        
+        // On envoie les données ENRICHIES à la file d'attente
+        await store.add({ 
+          endpoint: '/answer', 
+          body: donneesEnrichies, 
+          ts: Date.now() 
+        });
+        
+        console.log('[Collecte] Réponse enregistrée avec succès :', donneesEnrichies);
+      } catch (e) {
+        console.error('[Collecte] Erreur lors de l\'enregistrement hors-ligne :', e);
+      }
     }
 
     // ═══════════════════════════════════════════════════════════════════════════
@@ -8459,31 +8480,8 @@
       if (_originalUsePowerup) _originalUsePowerup(type);
     }
 
-    // ── 4. Patch enregistrerReponse ──────────────────────────────────────────
-    const _originalEnregistrerReponse = enregistrerReponse;
-    function enregistrerReponse(donneesPartie) {
-      const timeMsCalculé = donneesPartie.tempsMisMs
-        || (_questionStartTime ? Date.now() - _questionStartTime : null);
-      const donneesEnrichies = Object.assign({}, donneesPartie, {
-        tempsMisMs:          timeMsCalculé,
-        source:              _currentSource      || 'normal',
-        hint_used:           _currentPowerupUsed || null,
-        position_in_session: _positionInSession,
-        session_id:          _sessionId,
-      });
-      _currentPowerupUsed = null;
-      console.log('[Collecte] Réponse enrichie :', {
-        question_id:         donneesEnrichies.idQuestion,
-        source:              donneesEnrichies.source,
-        hint_used:           donneesEnrichies.hint_used,
-        position_in_session: donneesEnrichies.position_in_session,
-        time_ms:             donneesEnrichies.tempsMisMs,
-      });
-      _originalEnregistrerReponse(donneesEnrichies);
-    }
 
-
-    // ── 5. Patch renderGPActiveQuestion (mode GP) ─────────────────────────────────
+    // ── 4. Patch renderGPActiveQuestion (mode GP) ─────────────────────────────────
     if (typeof renderGPActiveQuestion === 'function') {
       const _origRenderGP = renderGPActiveQuestion;
       window.renderGPActiveQuestion = function(...args) {
@@ -8492,7 +8490,7 @@
       };
     }
 
-    // ── 6. Debug console ──────────────────────────────────────────────────────────
+    // ── 5. Debug console ──────────────────────────────────────────────────────────
     window._collecteDebug = () => ({
       sessionId:         _sessionId,
       sessionDurationMs: _sessionStartTime ? Date.now() - _sessionStartTime : null,

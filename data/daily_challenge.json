@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-24",
+  "cat": "hist",
+  "icon": "📜",
+  "title": "Défi du Jour",
+  "description": "Répondre correctement à une série de questions dans la catégorie de l'histoire pour gagner des gemmes",
+  "type": "score",
+  "target": 5,
+  "mode": "cat",
+  "reward": {
+    "type": "gems",
+    "icon": "💎",
+    "amount": 25,
+    "item": null
+  },
+  "completed": false,
+  "_source": "llm"
+}

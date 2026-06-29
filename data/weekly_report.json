@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-06-24T16:55:20.617033",
+  "period": {
+    "from": "2026-06-17",
+    "to": "2026-06-24"
+  },
+  "this_week": {
+    "xp_earned": 100,
+    "sessions": 1,
+    "perfect_sessions": 0,
+    "xp_trend": 100,
+    "xp_trend_label": "+100"
+  },
+  "player": {
+    "xp_total": 100,
+    "streak": 1,
+    "success_rate": 0.833,
+    "skill_level": "avance",
+    "sessions_total": 1
+  },
+  "categories": {
+    "best": {
+      "cat": "geo",
+      "rate": 1.0
+    },
+    "worst": {
+      "cat": "geo",
+      "rate": 1.0
+    },
+    "rates": {
+      "geo": 1.0
+    }
+  },
+  "mastery": {
+    "cinema": {
+      "level": "bronze",
+      "icon": "🥉",
+      "xp": 40,
+      "next_xp": 200,
+      "pct": 0.2
+    },
+    "geo": {
+      "level": "bronze",
+      "icon": "🥉",
+      "xp": 60,
+      "next_xp": 200,
+      "pct": 0.3
+    }
+  },
+  "next_milestone": {
+    "milestone": {
+      "id": 2,
+      "xpRequired": 150,
+      "title": "Champion de Bronze",
+      "icon": "⚽",
+      "tier": "bronze",
+      "reward": {
+        "type": "heart",
+        "icon": "❤️",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Avec 150 points d'expérience en sport, vous êtes sur la bonne voie pour devenir un athlète de renom !",
+      "cat": "sport",
+      "isWeakCat": false
+    },
+    "xp_needed": 50,
+    "avg_xp_session": 100,
+    "sessions_needed": 1,
+    "estimated_date": "25/06/2026"
+  },
+  "engagement": {
+    "score": 37,
+    "label": "😴 Faible",
+    "breakdown": {
+      "sessions_recentes": 10,
+      "taux_reussite": 25,
+      "streak": 2,
+      "progression": 0
+    }
+  },
+  "heatmap": [
+    {
+      "date": "2026-06-18",
+      "sessions": 1,
+      "xp": 100,
+      "intensity": 4
+    }
+  ],
+  "active_events": [],
+  "surprise_pending": false
+}

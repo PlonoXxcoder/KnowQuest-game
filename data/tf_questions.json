@@ -8,7 +8,8 @@
       "xp": 10,
       "explanation": "La ville de Djibouti est située à une altitude de 10 mètres au-dessus du niveau de la mer, mais ce n'est pas la capitale la plus basse du monde. Celle-ci est Baku, en Azerbaïdjan, qui est située à -28 mètres.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Djibouti_(ville)",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_mauritanie_q2",
@@ -18,7 +19,8 @@
       "xp": 10,
       "explanation": "La Mauritanie est effectivement le pays avec la plus grande proportion de désert, avec environ 90% de son territoire désertique. Le désert du Sahara couvre la majeure partie de son territoire.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Mauritanie",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_namibie_q3",
@@ -28,7 +30,8 @@
       "xp": 10,
       "explanation": "Le désert du Kalahari est en réalité plus grand que le désert de Namib. Le désert du Kalahari couvre une superficie d'environ 520 000 km², tandis que le désert de Namib couvre une superficie d'environ 81 000 km².",
       "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9sert_de_Namib",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_guinee_q4",
@@ -38,7 +41,8 @@
       "xp": 10,
       "explanation": "La Guinée équatoriale abrite en effet une grande partie de la forêt tropicale du bassin du Congo, qui est l'une des plus grandes forêts tropicales du monde. Le pays a une densité de forêts tropicales très élevée, avec plus de 60% de son territoire couvert de forêts.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e_%C3%A9quatoriale",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_senegal_q5",
@@ -48,7 +52,8 @@
       "xp": 10,
       "explanation": "Le Sénégal a une côte de environ 531 km, mais ce n'est pas le pays avec la plus grande côte en Afrique de l'Ouest. Ce titre revient à la Guinée, qui a une côte de environ 622 km.",
       "wikipedia": "https://fr.wikipedia.org/wiki/S%C3%A9n%C3%A9gal",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_mali_q6",
@@ -58,7 +63,8 @@
       "xp": 10,
       "explanation": "Le Mali est un pays avec une grande partie de désert, mais ce n'est pas le pays avec la plus grande superficie de désert dans le monde. Ce titre revient à l'Australie, qui a une grande partie de son territoire désertique.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Mali",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_tchad_q7",
@@ -68,7 +74,8 @@
       "xp": 10,
       "explanation": "Le lac Tchad est un grand lac, mais ce n'est pas le plus grand lac d'Afrique subsaharienne. Ce titre revient au lac Tanganyika, qui est le plus grand lac d'Afrique par volume et le deuxième plus grand lac par superficie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Tchad",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_burkina_faso_q8",
@@ -78,7 +85,8 @@
       "xp": 10,
       "explanation": "Le Burkina Faso a effectivement une densité de population très élevée, avec plus de 64 habitants par kilomètre carré. Cela est dû à la croissance démographique rapide et à la urbanisation.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Burkina_Faso",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_niger_q9",
@@ -88,7 +96,8 @@
       "xp": 10,
       "explanation": "Le Niger a une grande partie de désert de sable, mais ce n'est pas le pays avec la plus grande superficie de désert de sable en Afrique subsaharienne. Ce titre revient à la Libye, qui a une grande partie de son territoire désertique.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Niger",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_geo_gabon_q10",
@@ -98,6 +107,207 @@
       "xp": 10,
       "explanation": "Le Gabon abrite effectivement une grande partie de la forêt tropicale du bassin du Congo, qui est l'une des plus grandes forêts tropicales du monde. Le pays a une superficie de forêt tropicale très élevée, avec plus de 85% de son territoire couvert de forêts.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Gabon",
+      "atlasId": "geo_monde",
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_geo_madagascar_q11",
+      "cat": "geo",
+      "question": "Madagascar est la plus grande île d'Afrique et la quatrième plus grande île du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Madagascar est effectivement la plus grande île d'Afrique avec une superficie d'environ 587 000 km². Elle est la quatrième plus grande île du monde après le Groenland, la Nouvelle-Guinée et le Bornéo.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Madagascar",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_congo_q12",
+      "cat": "geo",
+      "question": "Le fleuve Congo est le fleuve le plus profond du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le fleuve Congo est effectivement le fleuve le plus profond du monde, avec une profondeur maximale dépassant 220 mètres dans certaines sections. Il est également le deuxième plus long fleuve d'Afrique après le Nil.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Congo",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_egypte_q13",
+      "cat": "geo",
+      "question": "L'Égypte est le pays arabophone le plus peuplé au monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Égypte est effectivement le pays arabophone le plus peuplé au monde, avec plus de 104 millions d'habitants. Elle devance largement l'Algérie et le Soudan en termes de population parmi les pays de la Ligue arabe.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89gypte",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_victoria_q14",
+      "cat": "geo",
+      "question": "Les chutes Victoria sont les plus larges chutes d'eau du monde.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les chutes Victoria ne sont pas les plus larges du monde. Ce titre revient aux chutes d'Iguazú, à la frontière entre le Brésil et l'Argentine, qui s'étendent sur environ 2 700 mètres. Les chutes Victoria mesurent environ 1 708 mètres de large.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chutes_Victoria",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_lac_victoria_q15",
+      "cat": "geo",
+      "question": "Le lac Victoria est le plus grand lac d'Afrique par sa superficie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le lac Victoria est effectivement le plus grand lac d'Afrique par sa superficie, avec environ 68 800 km². Il est partagé entre la Tanzanie, l'Ouganda et le Kenya. Cependant, le lac Tanganyika est plus grand en volume d'eau.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Victoria",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_ethiopie_q16",
+      "cat": "geo",
+      "question": "L'Éthiopie est le seul pays d'Afrique à n'avoir jamais été colonisé.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Éthiopie a résisté à la colonisation européenne plus longtemps que la plupart des pays africains, mais elle a été occupée par l'Italie de 1936 à 1941. Le Liberia est également souvent cité comme n'ayant pas été colonisé, bien qu'il ait été fondé par des colons américains.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89thiopie",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_sahara_q17",
+      "cat": "geo",
+      "question": "Le Sahara est le plus grand désert chaud du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Sahara est effectivement le plus grand désert chaud du monde, couvrant environ 9,2 millions de km². Cependant, si l'on inclut les déserts froids, l'Antarctique et l'Arctique sont plus grands.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sahara",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_nil_q18",
+      "cat": "geo",
+      "question": "Le Nil est le plus long fleuve du monde.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que le Nil soit traditionnellement considéré comme le plus long fleuve du monde avec environ 6 650 km, des études récentes suggèrent que l'Amazone pourrait être plus long, avec environ 6 992 km selon certaines mesures. Le débat scientifique reste ouvert.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nil",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_kilimandjaro_q19",
+      "cat": "geo",
+      "question": "Le Kilimandjaro est le plus haut sommet d'Afrique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Kilimandjaro est effectivement le plus haut sommet d'Afrique, avec son pic Uhuru atteignant 5 895 mètres d'altitude. Il est situé en Tanzanie et est un volcan dormant.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Kilimandjaro",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_suez_q20",
+      "cat": "geo",
+      "question": "Le canal de Suez sépare le continent africain du continent asiatique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le canal de Suez sépare effectivement l'Afrique de l'Asie. Il relie la mer Méditerranée à la mer Rouge et constitue une frontière géographique entre les deux continents sur son tracé.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Canal_de_Suez",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_cap_q21",
+      "cat": "geo",
+      "question": "Le Cap est la ville la plus au sud du continent africain.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Cap n'est pas la ville la plus au sud de l'Afrique. Ce titre revient à Cape Agulhas, située environ 170 km plus au sud. Cape Agulhas est également le point officiel de séparation entre l'océan Atlantique et l'océan Indien.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cape_Agulhas",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_rdc_q22",
+      "cat": "geo",
+      "question": "La République démocratique du Congo est le plus grand pays d'Afrique par sa superficie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La RDC est le plus grand pays d'Afrique subsaharienne par sa superficie avec environ 2 345 000 km², mais le plus grand pays d'Afrique dans son ensemble est l'Algérie, avec environ 2 382 000 km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9publique_d%C3%A9mocratique_du_Congo",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_nigeria_q23",
+      "cat": "geo",
+      "question": "Le Nigeria est le pays le plus peuplé d'Afrique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Nigeria est effectivement le pays le plus peuplé d'Afrique, avec plus de 220 millions d'habitants. Il représente environ un sixième de la population totale du continent africain.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nigeria",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_okavango_q24",
+      "cat": "geo",
+      "question": "Le delta de l'Okavango est le plus grand delta intérieur du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le delta de l'Okavango, situé au Botswana, est effectivement le plus grand delta intérieur du monde. Contrairement à la plupart des deltas, ses eaux ne se jettent pas dans la mer mais se dispersent dans le désert du Kalahari.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Delta_de_l%27Okavango",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_mount_kenya_q25",
+      "cat": "geo",
+      "question": "Le mont Kenya est le deuxième plus haut sommet d'Afrique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le mont Kenya est effectivement le deuxième plus haut sommet d'Afrique, avec son point culminant Batian atteignant 5 199 mètres d'altitude. Il est situé juste après le Kilimandjaro en altitude.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Kenya",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_rwanda_q26",
+      "cat": "geo",
+      "question": "Le Rwanda est surnommé le 'Pays des Mille Collines' en raison de son relief vallonné.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Rwanda est effectivement surnommé le 'Pays des Mille Collines' en raison de son relief particulièrement vallonné et montagneux. Le pays est situé sur un plateau à une altitude moyenne de 1 500 mètres.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rwanda",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_gibraltar_q27",
+      "cat": "geo",
+      "question": "Le détroit de Gibraltar sépare l'Europe de l'Afrique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le détroit de Gibraltar sépare effectivement l'Europe (Espagne) de l'Afrique (Maroc). Il relie l'océan Atlantique à la mer Méditerranée et fait seulement environ 14 kilomètres de large à son point le plus étroit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9troit_de_Gibraltar",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_rift_q28",
+      "cat": "geo",
+      "question": "La vallée du Grand Rift est la plus longue faille du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La vallée du Grand Rift est effectivement la plus longue faille du monde, s'étendant sur environ 6 000 km de la Syrie au Mozambique. Elle est le résultat de la séparation des plaques tectoniques africaine et somalienne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vall%C3%A9e_du_Grand_Rift",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_seychelles_q29",
+      "cat": "geo",
+      "question": "Les Seychelles sont le pays le moins peuplé d'Afrique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Seychelles sont effectivement le pays le moins peuplé d'Afrique, avec environ 100 000 habitants. C'est un archipel de 115 îles situé dans l'océan Indien.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Seychelles",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "tf_geo_angola_q30",
+      "cat": "geo",
+      "question": "L'Angola est le plus grand pays lusophone d'Afrique par sa superficie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Angola est effectivement le plus grand pays lusophone d'Afrique par sa superficie, avec environ 1 246 700 km². Le portugais est sa langue officielle, héritage de la colonisation portugaise qui s'est achevée en 1975.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Angola",
       "atlasId": "geo_monde"
     }
   ],
@@ -110,7 +320,8 @@
       "xp": 10,
       "explanation": "Les Templiers ont créé un système de banque et de prêt qui a permis aux pèlerins de déposer leurs biens et de les récupérer en Terre sainte, ce qui a contribué à l'établissement d'un système financier moderne. Ils ont également développé un système de lettres de change qui a facilité les transactions commerciales.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_du_Temple",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_rev_am_q2",
@@ -120,7 +331,8 @@
       "xp": 10,
       "explanation": "Bien que les idées des Lumières aient eu une influence sur la Révolution américaine, ce sont les idées des philosophes anglais tels que John Locke et Thomas Paine qui ont eu une influence plus directe sur les révolutionnaires américains. Les idées de Locke sur les droits naturels et la souveraineté populaire ont eu un impact significatif sur la Déclaration d'indépendance.",
       "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_am%C3%A9ricaine",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_croisade_q3",
@@ -130,7 +342,8 @@
       "xp": 10,
       "explanation": "Le pape Urbain II a lancé un appel à la croisade en 1095 pour reconquérir la Terre sainte des musulmans, qui avait été conquise par les armées musulmanes en 638. Cette croisade a duré de 1095 à 1099 et a abouti à la prise de Jérusalem par les croisés.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Premi%C3%A8re_croisade",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_rev_fr_q4",
@@ -140,7 +353,8 @@
       "xp": 10,
       "explanation": "Bien que la faim et la misère économique aient été des facteurs contributifs à la Révolution française, ce sont les facteurs politiques et sociaux tels que l'absolutisme royal, la monarchie absolue et les inégalités sociales qui ont joué un rôle plus important dans le déclenchement de la révolution. Les idées des Lumières et la montée du nationalisme ont également joué un rôle significatif.",
       "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_croisade_q5",
@@ -150,7 +364,8 @@
       "xp": 10,
       "explanation": "Les Hospitaliers ont été fondés en 1099 pour soigner les pèlerins chrétiens en Terre sainte. Ils ont également développé une organisation militaire pour protéger les pèlerins et les chrétiens en Terre sainte.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_de_Saint-Jean_de_J%C3%A9rusalem",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_rev_am_q6",
@@ -160,7 +375,8 @@
       "xp": 10,
       "explanation": "Bien que la taxation sans représentation ait été un facteur contributif à la Révolution américaine, ce sont les facteurs tels que les restrictions commerciales, les différences culturelles et les aspirations à l'indépendance qui ont joué un rôle plus important dans le déclenchement de la révolution. Les Américains ont également été influencés par les idées des Lumières et le modèle de la constitution britannique.",
       "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_am%C3%A9ricaine",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_croisade_q7",
@@ -170,7 +386,8 @@
       "xp": 10,
       "explanation": "La quatrième croisade a abouti à la prise de Constantinople par les croisés en 1204, ce qui a marqué la fin de l'Empire byzantin. Les croisés ont établi un empire latin en Constantinople, qui a duré jusqu'en 1261.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Quatri%C3%A8me_croisade",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_rev_fr_q8",
@@ -180,7 +397,8 @@
       "xp": 10,
       "explanation": "Bien que les idées des Lumières aient eu une influence sur la Révolution française, ce sont les idées des philosophes français tels que Voltaire, Rousseau et Montesquieu qui ont eu une influence plus directe sur les révolutionnaires français. Les idées des philosophes allemands tels que Kant et Hegel ont eu une influence plus tardive sur la pensée française.",
       "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_croisade_q9",
@@ -190,7 +408,8 @@
       "xp": 10,
       "explanation": "Les Templiers ont été accusés d'hérésie et de blasphème par le roi Philippe IV de France en 1307, ce qui a abouti à leur arrestation et à leur exécution. Les accusations portaient sur des rituels secrets et des pratiques hérétiques, mais les historiens considèrent que ces accusations étaient probablement infondées et motivées par des raisons politiques et financières.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_du_Temple",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
     },
     {
       "id": "tf_hist_rev_am_q10",
@@ -200,6 +419,207 @@
       "xp": 10,
       "explanation": "Bien que la Déclaration d'indépendance ait été un document important dans la Révolution américaine, ce sont les facteurs tels que les restrictions commerciales, les différences culturelles et les aspirations à l'indépendance qui ont joué un rôle plus important dans le déclenchement de la révolution. La Déclaration d'indépendance a été adoptée en 1776, mais les hostilités avaient déjà commencé en 1775.",
       "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_am%C3%A9ricaine",
+      "atlasId": "hist_fr",
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_hist_cent_ans_q11",
+      "cat": "hist",
+      "question": "La guerre de Cent Ans a duré exactement cent ans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La guerre de Cent Ans n'a pas duré exactement cent ans. Elle s'est étendue de 1337 à 1453, soit environ 116 ans. Ce nom a été donné par les historiens postérieurs pour simplifier la période de conflit entre la France et l'Angleterre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_de_Cent_Ans",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_napoleon_q12",
+      "cat": "hist",
+      "question": "Napoléon Bonaparte est né en Corse, qui était alors un territoire de la République de Gênes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Napoléon est effectivement né à Ajaccio en Corse en 1769, quelques mois après que la Corse ait été cédée par la République de Gênes à la France. Il est donc devenu citoyen français dès sa naissance.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Napol%C3%A9on_Bonaparte",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_industrielle_q13",
+      "cat": "hist",
+      "question": "La Révolution industrielle a débuté en France au début du XVIIIe siècle.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Révolution industrielle a débuté en Grande-Bretagne à la fin du XVIIIe siècle, vers 1760, avant de se diffuser dans le reste de l'Europe et dans le monde. La France n'a connu son industrialisation massive qu'au cours du XIXe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_industrielle",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_froide_q14",
+      "cat": "hist",
+      "question": "Pendant la guerre froide, les États-Unis et l'URSS n'ont jamais eu d'affrontement militaire direct.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Pendant toute la durée de la guerre froide (1947-1991), les États-Unis et l'URSS n'ont jamais eu d'affrontement militaire direct. Ils ont cependant mené de nombreux conflits par procuration, comme la guerre de Corée ou la guerre du Vietnam.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_14_18_q15",
+      "cat": "hist",
+      "question": "La Première Guerre mondiale a été déclenchée par l'assassinat de l'archiduc François-Ferdinand à Sarajevo.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'assassinat de l'archiduc François-Ferdinand d'Autriche-Hongrie le 28 juin 1914 à Sarajevo par Gavrilo Princip est effectivement considéré comme l'élément déclencheur de la Première Guerre mondiale, déclenchant un jeu d'alliances qui a conduit au conflit généralisé.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Assassinat_de_l%27archiducFran%C3%A7ois-Ferdinand",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_rome_q16",
+      "cat": "hist",
+      "question": "L'Empire romain d'Occident est tombé en 476 après J.-C.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Empire romain d'Occident est effectivement tombé en 476 après J.-C., lorsque le chef germanique Odoacre a déposé le dernier empereur romain d'Occident, Romulus Augustule. L'Empire romain d'Orient, lui, a survécu jusqu'en 1453.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chute_de_l%27Empire_romain_d%27Occident",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_waterloo_q17",
+      "cat": "hist",
+      "question": "La bataille de Waterloo a marqué la défaite définitive de Napoléon Bonaparte.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La bataille de Waterloo, le 18 juin 1815, a effectivement marqué la défaite définitive de Napoléon. Après cette bataille, il a été exilé sur l'île de Sainte-Hélène où il est mort en 1821.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bataille_de_Waterloo",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_renaissance_q18",
+      "cat": "hist",
+      "question": "La Renaissance a débuté en France avant de se diffuser en Italie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Renaissance a débuté en Italie, notamment à Florence, au XIVe siècle, avant de se diffuser dans le reste de l'Europe, dont la France, à partir du XVe siècle. Elle a été favorisée par les riches familles de marchands italiens comme les Médicis.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Renaissance",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_bastille_q19",
+      "cat": "hist",
+      "question": "La prise de la Bastille le 14 juillet 1789 a libéré des centaines de prisonniers politiques.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Lors de la prise de la Bastille le 14 juillet 1789, il n'y avait que 7 prisonniers dans la forteresse, et aucun d'entre eux n'était un prisonnier politique. L'événement a cependant pris une symbolique majeure et est devenu le symbole de la Révolution française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Prise_de_la_Bastille",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_westphalie_q20",
+      "cat": "hist",
+      "question": "Les traités de Westphalie de 1648 ont mis fin à la guerre de Trente Ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les traités de Westphalie, signés en 1648 à Münster et Osnabrück, ont effectivement mis fin à la guerre de Trente Ans. Ils ont également posé les bases du droit international moderne et du concept de souveraineté des États.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Trait%C3%A9s_de_Westphalie",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_secession_q21",
+      "cat": "hist",
+      "question": "La guerre de Sécession américaine a duré de 1861 à 1865.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La guerre de Sécession américaine a effectivement duré de 1861 à 1865, opposant les États du Nord (l'Union) aux États du Sud (les États confédérés). Elle s'est terminée par la victoire du Nord et l'abolition de l'esclavage.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_de_S%C3%A9cession",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_peste_noire_q22",
+      "cat": "hist",
+      "question": "La peste noire du XIVe siècle a tué environ un tiers de la population européenne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La peste noire, qui a frappé l'Europe entre 1347 et 1351, a effectivement tué environ un tiers de la population européenne, soit entre 25 et 50 millions de personnes. Elle a eu des conséquences profondes sur la société médiévale.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Peste_noire",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_colomb_q23",
+      "cat": "hist",
+      "question": "Christophe Colomb a atteint le continent américain lors de son premier voyage en 1492.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Lors de son premier voyage en 1492, Christophe Colomb a atteint les îles des Caraïbes, notamment Hispaniola et Cuba, mais il n'a pas atteint le continent américain. Il a fallu attendre son troisième voyage en 1498 pour qu'il atteigne le continent sud-américain.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Christophe_Colomb",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_berlin_q24",
+      "cat": "hist",
+      "question": "Le mur de Berlin est tombé en 1989.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le mur de Berlin est effectivement tombé le 9 novembre 1989, marquant la fin symbolique de la guerre froide et le début de la réunification allemande, qui a été officiellement proclamée le 3 octobre 1990.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mur_de_Berlin",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_stalingrad_q25",
+      "cat": "hist",
+      "question": "La bataille de Stalingrad s'est déroulée pendant la Première Guerre mondiale.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La bataille de Stalingrad s'est déroulée pendant la Seconde Guerre mondiale, d'août 1942 à février 1943. Elle a opposé l'armée soviétique à l'armée allemande et est considérée comme le tournant majeur de la guerre sur le front oriental.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bataille_de_Stalingrad",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_reforme_q26",
+      "cat": "hist",
+      "question": "La Réforme protestante a été initiée par Martin Luther en 1517.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Réforme protestante a effectivement été initiée par Martin Luther en 1517, lorsqu'il a publié ses 95 thèses critiquant la vente d'indulgences par l'Église catholique. Ce geste a déclenché un mouvement de réforme qui a conduit à la division du christianisme occidental.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9forme_protestante",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_vikings_q27",
+      "cat": "hist",
+      "question": "Les Vikings ont atteint l'Amérique du Nord avant Christophe Colomb.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Vikings, menés par Leif Erikson, ont effectivement atteint l'Amérique du Nord vers l'an 1000, soit près de 500 ans avant Christophe Colomb. Ils ont établi une colonie à L'Anse aux Meadows, sur l'île de Terre-Neuve, au Canada.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vikings",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_alesia_q28",
+      "cat": "hist",
+      "question": "Jules César a vaincu Vercingétorix à la bataille d'Alésia en 52 avant J.-C.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Jules César a effectivement vaincu Vercingétorix à la bataille d'Alésia en 52 avant J.-C. Cette victoire a marqué la fin de la résistance gauloise et a permis à César de conquérir l'ensemble de la Gaule.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bataille_d%27Al%C3%A9sia",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_algerie_q29",
+      "cat": "hist",
+      "question": "L'Algérie a obtenu son indépendance de la France en 1962.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Algérie a effectivement obtenu son indépendance de la France le 5 juillet 1962, après une guerre d'indépendance longue et sanglante qui a duré de 1954 à 1962. Les accords d'Évian, signés en mars 1962, ont mis fin au conflit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_d%27Alg%C3%A9rie",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "tf_hist_louis14_q30",
+      "cat": "hist",
+      "question": "Louis XIV a régné sur la France pendant plus de 70 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Louis XIV a effectivement régné sur la France pendant 72 ans, de 1643 à 1715, ce qui en fait le plus long règne d'un souverain européen attesté. Il a commencé à régner personnellement en 1661 après la mort de Mazarin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Louis_XIV",
       "atlasId": "hist_fr"
     }
   ],
@@ -212,7 +632,8 @@
       "xp": 10,
       "explanation": "En effet, la mécanique quantique décrit les particules comme des systemes probabilistes, pouvant exister dans plusieurs états simultanément, ce qui est connu sous le nom de superposition. Cela a été démontré à travers de nombreuses expériences, notamment l'expérience de la double fente.",
       "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9canique_quantique",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_exoplanetes_q2",
@@ -222,7 +643,8 @@
       "explanation": "Bien que de nombreuses exoplanètes découvertes soient effectivement des géantes gazeuses, d'autres types de planètes, comme les planètes telluriques ou les planètes de type Neptune, ont également été détectés. Les méthodes de détection varient et permettent de découvrir une grande variété de types de planètes.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_trous_noirs_q3",
@@ -232,7 +654,8 @@
       "explanation": "Cette idée est une théorie spéculative et non confirmée. Les trous noirs sont des régions de l'espace où la gravité est si forte qu'aucune lumière ou matière ne peut s'échapper, mais il n'y a aucune preuve scientifique que'ils soient des portails vers d'autres univers. Les trous noirs sont plutôt des objets stellaires extrêmement denses.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Trou_noir",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_astrophysique_q4",
@@ -242,7 +665,8 @@
       "explanation": "En effet, les étoiles à neutrons sont des objets extrêmement denses et peuvent avoir des vitesses de rotation très élevées. Certaines étoiles à neutrons ont été observées avec des vitesses de rotation supérieures à 1 000 tours par seconde, ce qui est due à la conservation du moment angulaire lors de l'effondrement de l'étoile progenitrice.",
       "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89toile_%C3%A0_neutrons",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_quantique_q5",
@@ -252,7 +676,8 @@
       "explanation": "La mécanique quantique est en réalité une théorie probabiliste, car elle décrit les phénomènes physiques en termes de probabilités et non de certitudes. Cela signifie que les résultats des mesures ne peuvent être prédits qu'en termes de probabilités et non avec certitude.",
       "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9canique_quantique",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_exoplanetes_q6",
@@ -262,7 +687,8 @@
       "explanation": "Les exoplanètes ont été détectées dans de nombreuses galaxies, y compris la Voie lactée, mais aussi dans d'autres galaxies comme Andromède ou des galaxies lointaines. Les méthodes de détection actuelles permettent de découvrir des exoplanètes dans une large gamme de distances et de galaxies.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_trous_noirs_q7",
@@ -272,7 +698,8 @@
       "explanation": "Les trous noirs sont en réalité des objets extrêmement sombres, car leur gravité est si forte qu'aucune lumière ne peut s'échapper. Cependant, les disques d'accrétion qui les entourent peuvent émettre des quantités importantes de lumière et de rayonnement.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Trou_noir",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_astrophysique_q8",
@@ -282,7 +709,8 @@
       "explanation": "En effet, les supernovae sont des explosions cataclysmiques d'étoiles massives qui se produisent lorsque l'étoile a épuisé son carburant nucléaire et s'effondre sous son propre poids. Cela peut se produire à la fin de la vie d'une étoile massive ou lors d'une collision entre deux étoiles.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Supernova",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_quantique_q9",
@@ -292,7 +720,8 @@
       "explanation": "La mécanique quantique est en réalité une théorie qui s'applique à toutes les échelles, des particules élémentaires aux systèmes macroscopiques. Les principes quantiques ont été observés et exploités dans de nombreux systèmes, y compris les solides, les liquides et les gaz.",
       "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9canique_quantique",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sci_exoplanetes_q10",
@@ -302,7 +731,208 @@
       "explanation": "Les exoplanètes ont été détectées en orbite autour de toutes sortes d'étoiles, y compris des étoiles similaires au Soleil, mais aussi des étoiles plus petites et plus froides, comme les naines rouges, ou des étoiles plus massives et plus chaudes, comme les géantes bleues.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Exoplan%C3%A8te",
       "atlasId": "sci_univers",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_sci_lumiere_q11",
+      "cat": "sci",
+      "question": "La vitesse de la lumière dans le vide est exactement égale à 300 000 km/s.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La vitesse de la lumière dans le vide est de 299 792 458 m/s, soit environ 299 792 km/s, et non exactement 300 000 km/s. Cette valeur est une constante fondamentale de la physique, notée c.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vitesse_de_la_lumi%C3%A8re",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_soleil_q12",
+      "cat": "sci",
+      "question": "Le Soleil est classé comme une étoile de type naine jaune.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Soleil est effectivement classé comme une étoile de type naine jaune, ou naine de type G2V. Sa température de surface est d'environ 5 500 °C, ce qui lui donne sa couleur jaune caractéristique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Soleil",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_expansion_q13",
+      "cat": "sci",
+      "question": "L'Univers est en expansion accélérée.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Univers est effectivement en expansion accélérée, comme l'ont démontré les observations des supernovae lointaines dans les années 1990. Cette accélération est attribuée à l'énergie noire, une forme d'énergie mystérieuse qui représente environ 68% de l'Univers.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Expansion_de_l%27Univers",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_mars_q14",
+      "cat": "sci",
+      "question": "La couleur rouge de Mars est due à la présence d'oxyde de fer à sa surface.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La couleur rouge caractéristique de Mars est effectivement due à la présence d'oxyde de fer (rouille) à sa surface. Le sol martien contient une grande quantité de minéraux riches en fer qui, au contact de l'oxygène, ont formé cet oxyde de fer.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mars_(plan%C3%A8te)",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_jupiter_q15",
+      "cat": "sci",
+      "question": "Jupiter est la plus grande planète du système solaire.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Jupiter est effectivement la plus grande planète du système solaire, avec un diamètre d'environ 139 820 km, soit plus de 11 fois celui de la Terre. Sa masse est plus de deux fois celle de toutes les autres planètes du système solaire réunies.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jupiter_(plan%C3%A8te)",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_lune_q16",
+      "cat": "sci",
+      "question": "La Lune s'éloigne progressivement de la Terre.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Lune s'éloigne effectivement de la Terre d'environ 3,8 centimètres par an. Ce phénomène est dû aux effets de marée exercés par la Lune sur la Terre, qui transfèrent de l'énergie angulaire de la Terre à la Lune.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lune",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_eau_q17",
+      "cat": "sci",
+      "question": "L'eau pure est plus dense à 0°C qu'à 4°C.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'eau pure atteint sa densité maximale à environ 4°C, et non à 0°C. C'est une propriété anomalique de l'eau qui permet aux lacs de geler en surface tout en conservant de l'eau liquide en profondeur, protégeant ainsi la vie aquatique en hiver.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Eau",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_oxygene_q18",
+      "cat": "sci",
+      "question": "L'oxygène est l'élément le plus abondant dans la croûte terrestre.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'oxygène est effectivement l'élément le plus abondant dans la croûte terrestre en termes de masse, représentant environ 46% de la masse de la croûte. Il est présent dans de nombreux minéraux et roches sous forme d'oxydes et de silicates.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Oxyg%C3%A8ne",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_adn_q19",
+      "cat": "sci",
+      "question": "L'ADN a une structure en double hélice.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'ADN a effectivement une structure en double hélice, découverte par James Watson et Francis Crick en 1953, en s'appuyant sur les travaux de Rosalind Franklin. Les deux brins d'ADN sont reliés par des paires de bases (adénine-thymine et guanine-cytosine).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Acide_d%C3%A9soxyribonucl%C3%A9ique",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_pluton_q20",
+      "cat": "sci",
+      "question": "Pluton a été reclassé comme planète naine en 2006.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Pluton a effectivement été reclassé comme planète naine par l'Union astronomique internationale en 2006. Cette décision a été prise car Pluton n'a pas 'nettoyé son orbite' des autres objets, un critère nécessaire pour être considéré comme une planète.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pluton_(plan%C3%A8te_naine)",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_dilation_q21",
+      "cat": "sci",
+      "question": "La relativité générale prévoit que le temps ralentit près d'un trou noir.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La relativité générale d'Einstein prévoit effectivement que le temps ralentit dans un champ gravitationnel intense, comme celui d'un trou noir. Près de l'horizon des événements, le temps semble quasiment s'arrêter pour un observateur lointain.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dilatation_du_temps",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_voie_lactee_q22",
+      "cat": "sci",
+      "question": "La Voie lactée contient entre 100 et 400 milliards d'étoiles.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Voie lactée contient effectivement entre 100 et 400 milliards d'étoiles selon les estimations. Notre galaxie est une galaxie spirale barrée d'un diamètre d'environ 100 000 années-lumière.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Voie_lact%C3%A9e",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_big_bang_q23",
+      "cat": "sci",
+      "question": "Le Big Bang s'est produit il y a environ 13,8 milliards d'années.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Big Bang s'est effectivement produit il y a environ 13,8 milliards d'années, selon les mesures les plus récentes du satellite Planck. Cet événement marque le début de l'Univers tel que nous le connaissons.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Big_Bang",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_saturne_q24",
+      "cat": "sci",
+      "question": "Saturne est suffisamment peu dense pour flotter sur l'eau.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Saturne a effectivement une densité moyenne d'environ 0,687 g/cm³, ce qui est inférieur à celle de l'eau (1 g/cm³). En théorie, si l'on trouvait un bassin d'eau assez grand, Saturne y flotterait.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Saturne_(plan%C3%A8te)",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_venus_q25",
+      "cat": "sci",
+      "question": "Vénus est la planète la plus chaude du système solaire car elle est la plus proche du Soleil.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que Mercure soit la planète la plus proche du Soleil, Vénus est la plus chaude du système solaire avec une température moyenne de surface d'environ 465°C. Cela est dû à son atmosphère très dense en CO2 qui crée un effet de serre intense.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/V%C3%A9nus_(plan%C3%A8te)",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_neutrinos_q26",
+      "cat": "sci",
+      "question": "Les neutrinos peuvent traverser la Terre sans interagir avec la matière.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les neutrinos sont des particules élémentaires qui interagissent extrêmement faiblement avec la matière. Des milliards de neutrinos traversent la Terre à chaque seconde sans être arrêtés, ce qui les rend très difficiles à détecter.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Neutrino",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_ozone_q27",
+      "cat": "sci",
+      "question": "La couche d'ozone protège la Terre des rayonnements ultraviolets du Soleil.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La couche d'ozone, située dans la stratosphère entre 15 et 35 km d'altitude, absorbe effectivement la majeure partie des rayonnements ultraviolets nocifs du Soleil (UV-B et UV-C), protégeant ainsi la vie sur Terre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Couche_d%27ozone",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_anneaux_q28",
+      "cat": "sci",
+      "question": "Les anneaux de Saturne sont principalement composés de gaz.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les anneaux de Saturne ne sont pas composés de gaz mais principalement de particules de glace d'eau et de roches, dont la taille varie de grains de poussière à des objets de plusieurs mètres de diamètre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Anneaux_de_Saturne",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_photosynthese_q29",
+      "cat": "sci",
+      "question": "La photosynthèse convertit le dioxyde de carbone et l'eau en glucose et en oxygène.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La photosynthèse convertit effectivement le dioxyde de carbone (CO2) et l'eau (H2O) en glucose (C6H12O6) et en oxygène (O2), en utilisant l'énergie lumineuse du Soleil. Ce processus est réalisé par les plantes, les algues et certaines bactéries.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Photosynth%C3%A8se",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "tf_sci_etoile_polaire_q30",
+      "cat": "sci",
+      "question": "L'étoile Polaire est l'étoile la plus brillante du ciel nocturne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'étoile Polaire n'est pas l'étoile la plus brillante du ciel. L'étoile la plus brillante est Sirius, située dans la constellation du Grand Chien. L'étoile Polaire est seulement la 50e étoile la plus brillante du ciel, mais elle est célèbre car elle indique approximativement le nord.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89toile_Polaire",
+      "atlasId": "sci_univers"
     }
   ],
   "art": [
@@ -314,7 +944,8 @@
       "xp": 10,
       "explanation": "Marcel Proust a écrit 'À la recherche du temps perdu' en quatorze ans, de 1909 à 1922. Ce roman est considéré comme l'un des plus grands romans du XXe siècle et est connu pour sa complexité et sa profondeur.",
       "wikipedia": "https://fr.wikipedia.org/wiki/À_la_recherche_du_temps_perdu",
-      "atlasId": "art_joconde"
+      "atlasId": "art_joconde",
+      "difficulty": "easy"
     },
     {
       "id": "tf_art_monet_q2",
@@ -324,7 +955,8 @@
       "explanation": "Claude Monet a peint 'Impression, soleil levant' en 1872, ce qui a donné son nom au mouvement impressionniste. Ce tableau est considéré comme l'un des plus importants de l'histoire de l'art.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Impression,_soleil_levant",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_joyce_q3",
@@ -334,7 +966,8 @@
       "explanation": "James Joyce a écrit 'Ulysse' en anglais, mais il a travaillé avec des traducteurs pour traduire le roman en français. Le processus de traduction a été complexe et a nécessité plusieurs années.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ulysse_(roman)",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_art_van_gogh_q4",
@@ -344,7 +977,8 @@
       "explanation": "Vincent van Gogh a vendu seulement un tableau de son vivant, 'La vigne rouge', pour 400 francs. Il a peint plus de 900 tableaux, mais la plupart n'ont été reconnus qu'après sa mort.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Vincent_van_Gogh",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_wilde_q5",
@@ -354,7 +988,8 @@
       "explanation": "Oscar Wilde a écrit 'Le Portrait de Dorian Gray' en plusieurs années, de 1889 à 1890. Le roman a été publié en serialisation dans une revue littéraire avant d'être publié en livre.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Portrait_de_Dorian_Gray",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_art_gauguin_q6",
@@ -364,7 +999,8 @@
       "explanation": "Paul Gauguin a peint 'Où vas-tu ?' en 1892, pendant son séjour à Tahiti. Le tableau est considéré comme l'un des plus importants de la période post-impressionniste.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Paul_Gauguin",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_mann_q7",
@@ -374,7 +1010,8 @@
       "explanation": "Thomas Mann a écrit 'La Montagne magique' en plusieurs années, de 1913 à 1924. Le roman est considéré comme l'un des plus importants du XXe siècle et a nécessité une recherche approfondie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/La_Montagne_magique",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_art_seurat_q8",
@@ -384,7 +1021,8 @@
       "explanation": "Georges Seurat a peint 'Un dimanche après-midi à l'Île de la Grande Jatte' en deux ans, de 1884 à 1886. Le tableau est considéré comme l'un des plus importants de la période post-impressionniste et a été créé en utilisant la technique du pointillisme.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Un_dimanche_après-midi_à_l%27Île_de_la_Grande_Jatte",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_kafka_q9",
@@ -394,7 +1032,8 @@
       "explanation": "Franz Kafka a écrit 'Le Procès' en plusieurs années, de 1914 à 1915. Le roman a été publié à titre posthume et est considéré comme l'un des plus importants du XXe siècle.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Procès",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_art_toulouse_q10",
@@ -404,7 +1043,208 @@
       "explanation": "Henri de Toulouse-Lautrec a peint 'La Revue blanche' en 1895, ce qui est considéré comme l'un des plus importants tableaux de la période post-impressionniste. Le tableau est une représentation de la vie nocturne à Paris.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec",
       "atlasId": "art_joconde",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_art_davinci_q11",
+      "cat": "art",
+      "question": "Léonard de Vinci écrivait la plupart de ses notes personnelles en écriture miroir, de droite à gauche.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Léonard de Vinci écrivait effectivement la plupart de ses notes en écriture miroir, c'est-à-dire de droite à gauche. Les raisons exactes de cette pratique restent débattues : certains pensent que c'était pour garder ses notes secrètes, d'autres que c'était plus naturel pour lui en tant que gaucher.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/L%C3%A9onard_de_Vinci",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_joconde_q12",
+      "cat": "art",
+      "question": "La Joconde a été peinte sur une toile.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Joconde n'a pas été peinte sur une toile mais sur un panneau de bois de peuplier. Cette technique était courante à la Renaissance pour les peintures de chevalet. Le panneau mesure 77 cm sur 53 cm.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Joconde",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_picasso_q13",
+      "cat": "art",
+      "question": "Pablo Picasso a peint 'Guernica' en 1937 en réponse au bombardement de la ville espagnole.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Picasso a effectivement peint 'Guernica' en 1937 en réponse au bombardement de la ville basque de Guernica par l'aviation allemande et italienne pendant la guerre d'Espagne. Ce tableau monumentnel est devenu un symbole universel contre la guerre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guernica_(tableau)",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_beethoven_q14",
+      "cat": "art",
+      "question": "Ludwig van Beethoven a continué à composer de la musique après être devenu totalement sourd.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Beethoven a effectivement continué à composer après avoir perdu l'audition. Il a notamment composé sa célèbre Neuvième Symphonie, incluant l'Ode à la Joie, alors qu'il était complètement sourd. Il utilisait des carnets pour communiquer.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ludwig_van_Beethoven",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_michel_ange_q15",
+      "cat": "art",
+      "question": "Michel-Ange a peint le plafond de la chapelle Sixtine en étant allongé sur le dos.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Michel-Ange n'a pas peint le plafond de la chapelle Sixtine allongé sur le dos. Il a construit un système d'échafaudage spécial qui lui permettait de peindre debout, la tête penchée en arrière. Ce mythe a été popularisé par le film 'L'Agonie et l'Extase'.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Plafond_de_la_chapelle_Sixtine",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_litt_shakespeare_q16",
+      "cat": "art",
+      "question": "William Shakespeare a inventé ou popularisé de nombreux mots de la langue anglaise.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Shakespeare a effectivement inventé ou popularisé plus de 1 700 mots en anglais, dont des termes courants comme 'assassin', 'eyeball' ou 'lonely'. Son influence sur la langue anglaise est considérable.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/William_Shakespeare",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_joconde_vol_q17",
+      "cat": "art",
+      "question": "La Joconde a été volée au Louvre en 1911 et n'a été retrouvée que deux ans plus tard.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Joconde a effectivement été volée le 21 août 1911 par Vincenzo Peruggia, un vitrier italien qui travaillait au Louvre. Elle a été retrouvée en décembre 1913 à Florence, en Italie. Ce vol a contribué à faire du tableau une œuvre mondialement célèbre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vol_de_la_Joconde",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_dali_q18",
+      "cat": "art",
+      "question": "Salvador Dalí est le peintre le plus représentatif du mouvement surréaliste.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Dalí est effectivement l'un des peintres les plus emblématiques du surréalisme, avec des œuvres comme 'La Persistance de la mémoire' et ses célèbres montres molles. Il a développé la méthode paranoïaque-critique pour accéder à l'inconscient.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_mozart_q19",
+      "cat": "art",
+      "question": "Wolfgang Amadeus Mozart a composé ses premières œuvres musicales à l'âge de cinq ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Mozart a effectivement commencé à composer à l'âge de cinq ans. Son père Leopold, musicien lui-même, a rapidement reconnu le talent prodigieux de son fils et l'a fait voyager à travers l'Europe pour le présenter aux cours royales.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_vangogh_oreille_q20",
+      "cat": "art",
+      "question": "Vincent van Gogh s'est coupé intégralement l'oreille gauche.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Van Gogh ne s'est pas coupé l'oreille entière mais seulement une partie du lobe de l'oreille gauche. Cet événement s'est produit en décembre 1888 à Arles, après une dispute avec Paul Gauguin. Il a enveloppé le morceau de lobe dans un linge et l'a remis à une femme dans un bordel.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vincent_van_Gogh",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_warhol_q21",
+      "cat": "art",
+      "question": "Andy Warhol est le fondateur du mouvement pop art.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Andy Warhol n'est pas le fondateur du pop art. Le mouvement est né en Grande-Bretagne dans les années 1950 avec des artistes comme Richard Hamilton et Eduardo Paolozzi. Warhol est cependant devenu l'artiste pop art le plus célèbre grâce à ses œuvres comme les boîtes de soupe Campbell's.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pop_art",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_klimt_q22",
+      "cat": "art",
+      "question": "Gustav Klimt a peint 'Le Baiser' en 1908.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Gustav Klimt a effectivement peint 'Le Baiser' entre 1907 et 1908, pendant sa période dorée. Ce tableau est l'une des œuvres les plus célèbres de l'Art nouveau et est exposé au musée du Belvédère à Vienne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Baiser_(Klimt)",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_rembrandt_q23",
+      "cat": "art",
+      "question": "Le tableau 'La Ronde de nuit' de Rembrandt représente une scène de nuit.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Malgré son nom, 'La Ronde de nuit' ne représente pas une scène de nuit. Le tableau a été appelé ainsi car au XVIIIe siècle, le vernis qui le recouvrait avait noirci, donnant l'impression d'une scène nocturne. En réalité, la scène se déroule en plein jour.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Ronde_de_nuit",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_botticelli_q24",
+      "cat": "art",
+      "question": "'La Naissance de Vénus' de Sandro Botticelli a été peinte à la fin du XVe siècle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'La Naissance de Vénus' a effectivement été peinte par Botticelli vers 1485, à la fin du XVe siècle. C'est l'un des premiers tableaux de la Renaissance à représenter un sujet mythologique de grande taille, commandé par la famille Médicis.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Naissance_de_V%C3%A9nus_(Botticelli)",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_munch_q25",
+      "cat": "art",
+      "question": "Edvard Munch a peint 'Le Cri' après avoir été victime d'une agression.",
+      "r": false,
+      "xp": 10,
+      "explanation": "'Le Cri' n'est pas basé sur une agression physique. Munch a écrit dans son journal qu'il avait ressenti un cri infini traverser la nature lors d'une promenade au crépuscule, inspiré par un coucher de soleil particulièrement rouge. L'œuvre exprime l'angoisse existentielle de l'artiste.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Cri",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_monet_nenuphars_q26",
+      "cat": "art",
+      "question": "Claude Monet a peint plus de 200 toiles représentant des nymphéas.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Monet a peint environ 250 toiles représentant des nymphéas, et non plus de 200. Ces tableaux ont été réalisés dans son jardin de Giverny entre 1896 et sa mort en 1926, et constituent sa dernière grande série artistique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nymph%C3%A9as_(s%C3%A9rie_de_tableaux)",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_litt_dante_q27",
+      "cat": "art",
+      "question": "Dante Alighieri a écrit 'La Divine Comédie' en latin, la langue savante de son époque.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Dante a écrit 'La Divine Comédie' en toscan, un dialecte italien vernaculaire, et non en latin. Ce choix était révolutionnaire pour l'époque et a contribué à faire du toscan la base de la langue italienne moderne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Divine_Com%C3%A9die",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_litt_cervantes_q28",
+      "cat": "art",
+      "question": "'Don Quichotte' de Miguel de Cervantes a été publié en deux parties, à dix ans d'intervalle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Don Quichotte' a effectivement été publié en deux parties : la première en 1605 et la seconde en 1615. Le succès de la première partie a motivé la publication d'une suite non autorisée, ce qui a poussé Cervantes à écrire la véritable seconde partie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Don_Qquichotte",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_bach_q29",
+      "cat": "art",
+      "question": "Jean-Sébastien Bach était peu connu de son vivant en dehors de l'Allemagne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Bach était effectivement surtout connu en Allemagne de son vivant, en tant qu'organiste et compositeur d'église. Sa renommée internationale n'a vraiment commencé qu'au XIXe siècle, grâce à la redécouverte de son œuvre par des musiciens comme Mendelssohn.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jean-S%C3%A9bastien_Bach",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "tf_art_dali_chupa_chups_q30",
+      "cat": "art",
+      "question": "Salvador Dalí a dessiné le logo de la marque Chupa Chups.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Dalí a effectivement dessiné le logo de Chupa Chups en 1969, à la demande de son ami Enric Bernat, fondateur de la marque. La célèbre marguerite stylisée avec le nom de la marque est toujours utilisée aujourd'hui.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chupa_Chups",
+      "atlasId": "art_joconde"
     }
   ],
   "cinema": [
@@ -416,7 +1256,8 @@
       "xp": 10,
       "explanation": "Le film 'Les Quatre Cents Coups' de François Truffaut a été tourné en noir et blanc, ce qui était courant pour les films de la Nouvelle Vague à l'époque. Le choix du noir et blanc était souvent dû à des contraintes budgétaires, mais également pour créer une ambiance spécifique.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Les_Quatre_Cents_Coups",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_culte_q2",
@@ -426,7 +1267,8 @@
       "explanation": "Le film 'Eraserhead' de David Lynch a été tourné avec un budget très faible, estimé à environ 20 000 dollars. Le film a été réalisé sur plusieurs années, avec des périodes de tournage intermittentes, en raison des contraintes financières.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Eraserhead",
       "atlasId": "cin_oscar",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_godard_q3",
@@ -436,7 +1278,8 @@
       "xp": 10,
       "explanation": "Jean-Luc Godard a réalisé plus de 50 films au cours de sa carrière, ce qui en fait l'un des réalisateurs les plus prolifiques de l'histoire du cinéma. Son œuvre est caractérisée par une grande diversité de styles et de genres.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jean-Luc_Godard",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_varda_q4",
@@ -446,7 +1289,8 @@
       "explanation": "Agnès Varda a réalisé son premier film, 'La Pointe Courte', à l'âge de 26 ans. Ce film a été tourné en 1954 et est considéré comme l'un des premiers films de la Nouvelle Vague.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Agn%C3%A8s_Varda",
       "atlasId": "cin_oscar",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_truffaut_q5",
@@ -456,7 +1300,8 @@
       "explanation": "François Truffaut n'a jamais écrit un livre sur la vie et l'œuvre de Jean-Luc Godard. Cependant, les deux réalisateurs ont été amis et ont eu une grande influence l'un sur l'autre dans leur travail.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Truffaut",
       "atlasId": "cin_oscar",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_culte_q6",
@@ -466,7 +1311,8 @@
       "xp": 10,
       "explanation": "Le film 'The Texas Chain Saw Massacre' a été interdit dans de nombreux pays en raison de sa violence et de ses scènes de gore. Le film a été réalisé en 1974 et est considéré comme l'un des premiers films d'horreur à avoir eu un impact significatif sur la culture populaire.",
       "wikipedia": "https://fr.wikipedia.org/wiki/The_Texas_Chain_Saw_Massacre",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_nouvelle_vague_q7",
@@ -476,7 +1322,8 @@
       "explanation": "La Nouvelle Vague française a été caractérisée par une utilisation minimale de la technologie cinématographique, avec souvent des budgets faibles et des équipements de tournage simples. Les réalisateurs de la Nouvelle Vague ont préféré se concentrer sur l'histoire, les personnages et la mise en scène plutôt que sur les effets spéciaux et la technologie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
       "atlasId": "cin_oscar",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_godard_q8",
@@ -486,7 +1333,8 @@
       "explanation": "Jean-Luc Godard a réalisé son premier film, 'À bout de souffle', en France en 1960. Le film a été tourné à Paris et a lancé la carrière de Godard en tant que réalisateur.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jean-Luc_Godard",
       "atlasId": "cin_oscar",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_varda_q9",
@@ -496,7 +1344,8 @@
       "xp": 10,
       "explanation": "Agnès Varda a réalisé un film intitulé 'Les Glaneuses et moi' en 2000, qui explore la vie des sans-abri à Paris. Le film est un documentaire qui suit la vie de plusieurs personnes sans abri et explore les questions de pauvreté et d'exclusion sociale.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Agn%C3%A8s_Varda",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "easy"
     },
     {
       "id": "tf_cinema_truffaut_q10",
@@ -506,7 +1355,208 @@
       "explanation": "François Truffaut n'a jamais réalisé un film sur la vie d'un enfant dans un camp de concentration. Cependant, il a réalisé un film intitulé 'L'Enfant sauvage' en 1970, qui explore la vie d'un enfant sauvage qui a grandi en isolation.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Fran%C3%A7ois_Truffaut",
       "atlasId": "cin_oscar",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_cinema_citizen_kane_q11",
+      "cat": "cinema",
+      "question": "Orson Welles avait 25 ans lorsqu'il a réalisé 'Citizen Kane'.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Orson Welles avait effectivement 25 ans lorsqu'il a réalisé 'Citizen Kane' en 1941. Ce film, souvent considéré comme le plus grand film de l'histoire du cinéma, a été réalisé avec un niveau de contrôle créatif exceptionnel pour un réalisateur si jeune.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Citizen_Kane",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_titanic_q12",
+      "cat": "cinema",
+      "question": "'Titanic' de James Cameron a été le film le plus cher jamais réalisé au moment de sa sortie en 1997.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Titanic' était effectivement le film le plus cher jamais réalisé au moment de sa sortie, avec un budget estimé à 200 millions de dollars. Il a battu ce record qu'il détenait lui-même avec 'Avatar' en 2009.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Titanic_(film,_1997)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_parrain_q13",
+      "cat": "cinema",
+      "question": "Marlon Brando a refusé l'Oscar du meilleur acteur pour 'Le Parrain' en 1973.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Marlon Brando a effectivement refusé l'Oscar du meilleur acteur pour 'Le Parrain' en 1973. Il a envoyé une activiste amérindienne, Sacheen Littlefeather, au podium pour lire un discours dénonçant le traitement des Amérindiens par l'industrie du cinéma.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Parrain_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_star_wars_q14",
+      "cat": "cinema",
+      "question": "Le premier 'Star Wars' s'appelait initialement 'La Guerre des étoiles'.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier 'Star Wars' s'appelait initialement 'The Star Wars' (avec l'article 'The'), et non 'La Guerre des étoiles'. Le titre français 'La Guerre des étoiles' est une adaptation qui n'était pas le titre original du film de George Lucas.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Star_Wars_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_metropolis_q15",
+      "cat": "cinema",
+      "question": "'Metropolis' de Fritz Lang est sorti en 1927 et est considéré comme un chef-d'œuvre du cinéma expressionniste allemand.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Metropolis' est effectivement sorti en 1927 et est considéré comme l'un des chefs-d'œuvre du cinéma expressionniste allemand. C'est l'un des premiers films de science-fiction de l'histoire du cinéma et son esthétique a influencé de nombreux réalisateurs.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Metropolis_(film,_1927)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_jurassic_q16",
+      "cat": "cinema",
+      "question": "'Jurassic Park' est le premier film à avoir utilisé des créatures générées entièrement par ordinateur.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Jurassic Park' est effectivement le premier film à avoir utilisé des créatures générées entièrement par images de synthèse de manière photoréaliste. Les dinosaures CGI créés par ILM ont révolutionné l'industrie du cinéma en 1993.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jurassic_Park_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_2001_q17",
+      "cat": "cinema",
+      "question": "L'ordinateur HAL 9000 dans '2001 : L'Odyssée de l'espace' a un seul œil rouge.",
+      "r": true,
+      "xp": 10,
+      "explanation": "HAL 9000 est effectivement représenté par un seul œil rouge, une caméra qui le rend immédiatement reconnaissable. Ce design minimaliste créé par Stanley Kubrick est devenu l'un des symboles les plus iconiques du cinéma de science-fiction.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/2001,_l%27Odyss%C3%A9e_de_l%27espace",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_psycho_q18",
+      "cat": "cinema",
+      "question": "'Psychose' d'Alfred Hitchcock est le premier film de l'histoire du cinéma à montrer des toilettes à l'écran.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Psychose' est effectivement considéré comme le premier film hollywoodien à montrer des toilettes à l'écran, lors de la scène où Marion Crane jette des notes dans la cuvette. Le code Hays de l'époque interdisait de montrer des toilettes, mais Hitchcock a obtenu une dérogation.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Psychose_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_seigneur_q19",
+      "cat": "cinema",
+      "question": "La trilogie du 'Seigneur des Anneaux' a été intégralement tournée en Nouvelle-Zélande.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La trilogie du 'Seigneur des Anneaux' de Peter Jackson a effectivement été intégralement tournée en Nouvelle-Zélande. Le tournage s'est déroulé sur plus de 150 lieux différents à travers le pays, ce qui a considérablement boosté le tourisme néo-zélandais.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Seigneur_des_Anneaux_(trilogie)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_blade_runner_q20",
+      "cat": "cinema",
+      "question": "'Blade Runner' est adapté du roman 'Le Guetteur au-dessus du champ de blé' de Philip K. Dick.",
+      "r": false,
+      "xp": 10,
+      "explanation": "'Blade Runner' est adapté du roman 'Les Androïdes rêvent-ils de moutons électriques ?' (Do Androids Dream of Electric Sheep?) de Philip K. Dick, publié en 1968. Il n'existe pas de roman de Philip K. Dick intitulé 'Le Guetteur au-dessus du champ de blé'.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Blade_Runner",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_matrix_q21",
+      "cat": "cinema",
+      "question": "L'effet 'bullet time' utilisé dans 'Matrix' a été créé spécialement pour ce film.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'effet 'bullet time', qui permet de figer le temps tout en faisant tourner la caméra autour d'un sujet, a effectivement été développé spécifiquement pour 'Matrix' par la société Manex Visual Effects. Il est devenu l'un des effets les plus imités de l'histoire du cinéma.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Matrix_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_pulp_q22",
+      "cat": "cinema",
+      "question": "'Pulp Fiction' de Quentin Tarantino raconte son histoire de manière linéaire.",
+      "r": false,
+      "xp": 10,
+      "explanation": "'Pulp Fiction' ne raconte pas son histoire de manière linéaire. Le film est célèbre pour sa structure narrative non linéaire, qui entremêle plusieurs histoires dans un ordre chronologique brouillé. Cette technique a fortement influencé le cinéma des années 1990 et 2000.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pulp_Fiction",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_apocalypse_q23",
+      "cat": "cinema",
+      "question": "'Apocalypse Now' de Francis Ford Coppola est librement inspiré du roman 'Au cœur des ténèbres' de Joseph Conrad.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Apocalypse Now' est effectivement librement inspiré du roman 'Au cœur des ténèbres' de Joseph Conrad. Le film transpose l'histoire du roman, qui se déroule dans le Congo belge, dans le contexte de la guerre du Vietnam.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Apocalypse_Now",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_vertigo_q24",
+      "cat": "cinema",
+      "question": "'Vertigo' d'Alfred Hitchcock a été classé meilleur film de tous les temps par le sondage du Sight & Sound en 2012.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Vertigo' a effectivement été classé premier du sondage décennal du Sight & Sound en 2012, détrônant 'Citizen Kane' qui occupait cette place depuis 50 ans. Ce sondage est réalisé auprès de critiques de cinéma du monde entier.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sueurs_froides_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_singing_q25",
+      "cat": "cinema",
+      "question": "'Singin' in the Rain' est sorti en 1952 et raconte la transition du cinéma muet au cinéma parlant.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Singin' in the Rain' est effectivement sorti en 1952 et son intrigue tourne autour de la transition du cinéma muet au cinéma parlant à la fin des années 1920. Le film est considéré comme l'un des plus grands musicals de l'histoire du cinéma.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chantons_sous_la_pluie",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_dolce_vita_q26",
+      "cat": "cinema",
+      "question": "'La Dolce Vita' de Federico Fellini a remporté la Palme d'or au Festival de Cannes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'La Dolce Vita' a effectivement remporté la Palme d'or au Festival de Cannes en 1960. Ce film est devenu un symbole de la société italienne de l'après-guerre et le terme 'dolce vita' est entré dans le langage courant.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Dolce_Vita",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_rashomon_q27",
+      "cat": "cinema",
+      "question": "'Rashomon' d'Akira Kurosawa utilise le procédé narratif des points de vue multiples sur un même événement.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Rashomon' est effectivement célèbre pour son procédé narratif innovant : le même meurtre est raconté par plusieurs personnages, chacun proposant une version différente des faits. Ce procédé est devenu si célèbre qu'il a donné naissance au terme 'effet Rashomon'.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rashomon_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_grease_q28",
+      "cat": "cinema",
+      "question": "'Grease' est sorti en 1978 et est devenu le film musical le plus rentable de son époque.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que 'Grease' ait été un immense succès en 1978, le film musical le plus rentable de l'époque est 'La Mélodie du bonheur' (1965), qui avait rapporté bien plus. 'Grease' reste cependant l'un des films musicaux les plus rentables de l'histoire.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grease_(film)",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_et_q29",
+      "cat": "cinema",
+      "question": "'E.T. l'extra-terrestre' de Steven Spielberg est resté le film le plus rentable de l'histoire jusqu'en 1993.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'E.T.' est effectivement resté le film le plus rentable de l'histoire du cinéma de 1982 à 1993, date à laquelle il a été détrôné par 'Jurassic Park', également de Spielberg. Au total, 'E.T.' a rapporté plus de 790 millions de dollars.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/E.T._l%27extra-terrestre",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "tf_cinema_intouchables_q30",
+      "cat": "cinema",
+      "question": "'Intouchables' est le plus grand succès au box-office français de tous les temps.",
+      "r": true,
+      "xp": 10,
+      "explanation": "'Intouchables' d'Olivier Nakache et Éric Toledano est effectivement le film ayant réalisé le plus grand nombre d'entrées en France avec plus de 19,4 millions de spectateurs. Il devance 'Bienvenue chez les Ch'tis' qui compte environ 19,3 millions d'entrées.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Intouchables_(film)",
+      "atlasId": "cin_oscar"
     }
   ],
   "sport": [
@@ -518,7 +1568,8 @@
       "xp": 10,
       "explanation": "Le Giro d'Italia et la Vuelta d'Espagne sont souvent plus longs que le Tour de France. Le record de distance totale est détenu par le Tour d'Italie 1999 avec 3 977 km. Le Tour de France est cependant l'un des plus prestigieux et des plus difficiles.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France",
-      "atlasId": "spt_cyclisme"
+      "atlasId": "spt_cyclisme",
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_natation_q2",
@@ -528,7 +1579,8 @@
       "explanation": "La natation a connu une révolution technologique et méthodologique ces dernières années, avec des avancées en matière de matériel et d'entraînement. Les records du monde chutent régulièrement, notamment grâce aux progrès de la science du sport et aux nouvelles générations de nageurs.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Championnats_du_monde_de_natation",
       "atlasId": "spt_natation",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_cyclisme_q3",
@@ -538,7 +1590,8 @@
       "explanation": "Le vainqueur du Tour de France est déterminé par le cumul des temps réalisés sur chaque étape, et non par le nombre d'étapes gagnées. Il est possible de remporter le Tour de France sans gagner une seule étape, si l'on termine suffisamment souvent dans les premiers.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France",
       "atlasId": "spt_cyclisme",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_natation_q4",
@@ -548,7 +1601,8 @@
       "explanation": "Katie Ledecky est l'une des nageuses les plus décorées de l'histoire, avec de multiples titres olympiques et mondiaux. Elle détient actuellement le record de médailles d'or olympiques en natation, devançant des légendes comme Michael Phelps.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Katie_Ledecky",
       "atlasId": "spt_natation",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_cyclisme_q5",
@@ -558,7 +1612,8 @@
       "explanation": "Le Tour de France a été créé en 1903, tandis que le Giro d'Italie a été créé en 1909. Le Tour de France est donc la course cycliste la plus ancienne des trois grands tours.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Giro_d%27Italia",
       "atlasId": "spt_cyclisme",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_natation_q6",
@@ -568,7 +1623,8 @@
       "explanation": "La natation est un sport très populaire, mais elle ne détient pas le record de nombre de pratiquants. Selon certaines estimations, le football (ou soccer) est le sport le plus pratiqué dans le monde, suivi par des sports comme le basket-ball ou le tennis.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Natation",
       "atlasId": "spt_natation",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_cyclisme_q7",
@@ -578,7 +1634,8 @@
       "explanation": "Le Vuelta d'Espagne est souvent considéré comme la course cycliste la plus difficile en termes de dénivelé, en raison de sa géographie particulière avec de nombreuses côtes et montagnes. Les étapes du Vuelta sont souvent plus escarpées que celles du Tour de France ou du Giro d'Italie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Tour_d%27Espagne",
       "atlasId": "spt_cyclisme",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_natation_q8",
@@ -588,7 +1645,8 @@
       "explanation": "Même si les records de natation ont évolué ces dernières années, le record du monde du 400 mètres nage libre hommes n'a pas été battu plus de 20 fois depuis l'an 2000. Les progrès sont réguliers mais pas à ce point.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Championnats_du_monde_de_natation",
       "atlasId": "spt_natation",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_cyclisme_q9",
@@ -598,7 +1656,8 @@
       "explanation": "Le Tour de France a été annulé à plusieurs reprises pour des raisons liées à la guerre, notamment pendant les deux guerres mondiales. Cependant, les annulations pour des raisons non liées à la guerre sont rares et ne dépassent pas 5.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France",
       "atlasId": "spt_cyclisme",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_sport_natation_q10",
@@ -608,7 +1667,208 @@
       "explanation": "La natation synchronisée a été introduite aux Jeux olympiques en 1984 comme sport de démonstration, mais elle n'est devenue un sport olympique à part entière qu'à partir des Jeux olympiques de 1996 à Atlanta. Elle a été supprimée du programme olympique après les Jeux de 1996.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Natation_synchronis%C3%A9e",
       "atlasId": "spt_natation",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_sport_football_q11",
+      "cat": "sport",
+      "question": "Le football est le sport le plus pratiqué au monde en nombre de licenciés.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le football est effectivement le sport le plus pratiqué au monde, avec environ 265 millions de joueurs licenciés selon la FIFA. Il est pratiqué dans plus de 200 pays et comptait environ 3,5 milliards de spectateurs lors de la Coupe du Monde 2018.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Football",
+      "atlasId": "spt_football"
+    },
+    {
+      "id": "tf_sport_olympiques_q12",
+      "cat": "sport",
+      "question": "Les Jeux olympiques antiques se déroulaient toujours à Olympie en Grèce.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Jeux olympiques antiques se déroulaient effectivement toujours à Olympie, dans le Péloponnèse en Grèce. Ils ont été créés en 776 av. J.-C. et se sont tenus tous les quatre ans pendant près de 1 200 ans jusqu'en 393 apr. J.-C.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jeux_olympiques_antiques",
+      "atlasId": "spt_olympiques"
+    },
+    {
+      "id": "tf_sport_marathon_q13",
+      "cat": "sport",
+      "question": "Le marathon tire son nom d'une course historique d'environ 42 kilomètres.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le marathon tire effectivement son nom de la légende du soldat grec Philippidès (ou Pheidippidès) qui aurait couru environ 42 kilomètres entre Marathon et Athènes en 490 av. J.-C. pour annoncer la victoire grecque contre les Perses, avant de s'effondrer et mourir.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Marathon_(sport)",
+      "atlasId": "spt_athletisme"
+    },
+    {
+      "id": "tf_sport_tennis_q14",
+      "cat": "sport",
+      "question": "Le tennis moderne trouve ses origines dans le jeu de paume pratiqué en France au Moyen Âge.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le tennis moderne descend effectivement du jeu de paume, un sport très populaire en France du Moyen Âge au XVIIIe siècle. Le mot 'tennis' viendrait d'ailleurs du français 'tenez !', crié par le joueur au moment de servir.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tennis",
+      "atlasId": "spt_tennis"
+    },
+    {
+      "id": "tf_sport_basket_q15",
+      "cat": "sport",
+      "question": "Le basket-ball a été inventé par un médecin canadien.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le basket-ball a été inventé par James Naismith, un professeur d'éducation physique canadien, mais il n'était pas médecin. Il a inventé ce sport en décembre 1891 au Springfield College dans le Massachusetts pour occuper ses élèves pendant l'hiver.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Basket-ball",
+      "atlasId": "spt_basketball"
+    },
+    {
+      "id": "tf_sport_volley_q16",
+      "cat": "sport",
+      "question": "Le volley-ball a été inventé aux États-Unis en 1895.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le volley-ball a effectivement été inventé par William G. Morgan en 1895 à Holyoke, Massachusetts, aux États-Unis. Il a créé ce sport comme une alternative moins violente au basket-ball pour les personnes plus âgées.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Volley-ball",
+      "atlasId": "spt_volleyball"
+    },
+    {
+      "id": "tf_sport_rugby_q17",
+      "cat": "sport",
+      "question": "Le rugby tire son nom d'une ville anglaise où le sport aurait été inventé.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le rugby tire effectivement son nom de la ville de Rugby en Angleterre. Selon la légende, en 1823, un élève de la Rugby School, William Webb Ellis, aurait ramassé le ballon à la main pendant un match de football, créant ainsi un nouveau sport.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rugby_%C3%A0_XV",
+      "atlasId": "spt_rugby"
+    },
+    {
+      "id": "tf_sport_golf_q18",
+      "cat": "sport",
+      "question": "Le golf moderne est originaire d'Écosse.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le golf moderne est effectivement originaire d'Écosse, où les premiers parcours ont été aménagés au XVe siècle. Le Old Course de St Andrews, en Écosse, est considéré comme le berceau du golf et le plus ancien parcours du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Golf",
+      "atlasId": "spt_golf"
+    },
+    {
+      "id": "tf_sport_boxe_q19",
+      "cat": "sport",
+      "question": "La boxe anglaise était un sport olympique dans l'Antiquité grecque.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La boxe pratiquée dans l'Antiquité grecque était la pugilat, qui est différente de la boxe anglaise moderne. La boxe anglaise, avec ses règles codifiées par les Queensberry Rules, n'est apparue qu'au XVIIIe siècle en Grande-Bretagne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Boxe_anglaise",
+      "atlasId": "spt_boxe"
+    },
+    {
+      "id": "tf_sport_f1_q20",
+      "cat": "sport",
+      "question": "Le premier championnat du monde de Formule 1 a eu lieu en 1950.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le premier championnat du monde de Formule 1 a effectivement eu lieu en 1950. La première course du championnat s'est déroulée le 13 mai 1950 à Silverstone, en Grande-Bretagne, et a été remportée par l'Italien Giuseppe Farina.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Formule_1",
+      "atlasId": "spt_f1"
+    },
+    {
+      "id": "tf_sport_100m_q21",
+      "cat": "sport",
+      "question": "Le record du monde du 100 mètres masculin est passé sous la barre des 10 secondes pour la première fois en 1968.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le record du monde du 100 mètres est effectivement passé sous les 10 secondes pour la première fois le 14 octobre 1968 à Mexico, lorsque l'Américain Jim Hines a couru en 9,95 secondes. Cette performance a été facilitée par l'altitude de Mexico.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/100_m%C3%A8tres_(athl%C3%A9tisme)",
+      "atlasId": "spt_athletisme"
+    },
+    {
+      "id": "tf_sport_ski_q22",
+      "cat": "sport",
+      "question": "Le ski est originaire de Scandinavie et remonte à plus de 4 000 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le ski est effectivement originaire de Scandinavie. Les plus anciens ski connus, découverts en Russie près de la frontière norvégienne, datent d'environ 6 000 ans. Le ski était à l'origine un moyen de transport utilisé pour se déplacer dans la neige.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ski",
+      "atlasId": "spt_ski"
+    },
+    {
+      "id": "tf_sport_escrime_q23",
+      "cat": "sport",
+      "question": "L'escrime est l'un des rares sports à avoir été présent à toutes les éditions des Jeux olympiques modernes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'escrime est effectivement l'un des cinq sports qui ont été présents à toutes les éditions des Jeux olympiques modernes depuis 1896, avec l'athlétisme, le cyclisme, la natation et la gymnastique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Escrime",
+      "atlasId": "spt_escrime"
+    },
+    {
+      "id": "tf_sport_judo_q24",
+      "cat": "sport",
+      "question": "Le judo a été créé par un professeur d'éducation physique japonais au XXe siècle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le judo a été créé par Jigoro Kano en 1882 au Japon. Kano, qui était professeur, a développé le judo à partir du jujitsu en éliminant les techniques dangereuses et en ajoutant un volet éducatif et moral. Le judo est devenu sport olympique en 1964.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Judo",
+      "atlasId": "spt_judo"
+    },
+    {
+      "id": "tf_sport_handball_q25",
+      "cat": "sport",
+      "question": "Le handball moderne a été codifié en Allemagne dans les années 1910.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le handball moderne a effectivement été codifié par Karl Schelenz en Allemagne en 1917-1919, à partir d'un jeu plus ancien appelé le 'Haandbold' danois. Le handball est devenu sport olympique en 1972 pour les hommes et en 1976 pour les femmes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Handball",
+      "atlasId": "spt_handball"
+    },
+    {
+      "id": "tf_sport_surf_q26",
+      "cat": "sport",
+      "question": "Le surf a été inventé par des populations polynésiennes bien avant l'arrivée des Européens.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le surf a effectivement été pratiqué par les peuples polynésiens, notamment les Hawaïens, bien avant l'arrivée des Européens. Les premiers témoignages écrits de la pratique du surf remontent au XVIIIe siècle, lorsque le capitaine Cook a observé des Hawaïens surfer.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Surf",
+      "atlasId": "spt_surf"
+    },
+    {
+      "id": "tf_sport_badminton_q27",
+      "cat": "sport",
+      "question": "Le badminton tient son nom d'un domaine anglais.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le badminton tient effectivement son nom de Badminton House, le domaine du duc de Beaufort dans le Gloucestershire, en Angleterre. C'est là que le jeu a été popularisé en 1873, bien que des jeux similaires existaient depuis des siècles en Asie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Badminton",
+      "atlasId": "spt_badminton"
+    },
+    {
+      "id": "tf_sport_tennis_table_q28",
+      "cat": "sport",
+      "question": "Le tennis de table a été inventé en Angleterre à la fin du XIXe siècle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le tennis de table a effectivement été inventé en Angleterre à la fin du XIXe siècle, où il était d'abord pratiqué comme un divertissement de salon après les repas. Il a été appelé 'ping-pong' en raison du son produit par la balle frappant la raquette et la table.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tennis_de_table",
+      "atlasId": "spt_tennis_table"
+    },
+    {
+      "id": "tf_sport_tdf_1903_q29",
+      "cat": "sport",
+      "question": "Le premier Tour de France en 1903 comptait 6 étapes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le premier Tour de France en 1903 comptait effectivement 6 étapes pour un total de 2 428 km. Les étapes étaient extrêmement longues, dépassant souvent 400 km chacune. Maurice Garin a remporté cette première édition.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France_1903",
+      "atlasId": "spt_cyclisme"
+    },
+    {
+      "id": "tf_sport_brasse_q30",
+      "cat": "sport",
+      "question": "La brasse est la nage la plus rapide en compétition de natation.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La brasse n'est pas la nage la plus rapide. Le crawl (ou nage libre) est la nage la plus rapide, suivie du dos et du papillon. La brasse est en réalité la nage la plus lente des quatre styles officiels en compétition.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Brasse_(natation)",
+      "atlasId": "spt_natation"
     }
   ],
   "gastro": [
@@ -620,7 +1880,8 @@
       "xp": 10,
       "explanation": "Le piment est originaire d'Amérique du Sud et a été introduit en Europe par les conquistadors espagnols. Les Romains, quant à eux, connaissaient déjà le poivre, qui était importé d'Asie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Piment",
-      "atlasId": "gst_epices"
+      "atlasId": "gst_epices",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_cacao_q2",
@@ -630,7 +1891,8 @@
       "xp": 10,
       "explanation": "Le cacao contient de la phényléthylamine, un élément chimique qui stimule la production de sérotonine dans le cerveau, ce qui peut avoir un effet anti-dépresseur. C'est pourquoi le chocolat est souvent associé à des émotions positives.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Cacao",
-      "atlasId": "gst_chocolat"
+      "atlasId": "gst_chocolat",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_curcuma_q3",
@@ -640,7 +1902,8 @@
       "explanation": "Le curcuma est une épice qui peut être cultivée dans de nombreux pays tropicaux, notamment en Inde, mais aussi en Chine, en Indonésie et au Japon. Il est également possible de la cultiver en Europe dans des serres.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Curcuma",
       "atlasId": "gst_epices",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_gingembre_q4",
@@ -650,7 +1913,8 @@
       "xp": 10,
       "explanation": "Le gingembre contient des composés qui ont des propriétés anti-inflammatoires, ce qui peut aider à soulager les douleurs articulaires et les problèmes de digestion. Il est souvent utilisé en médecine traditionnelle pour traiter ces problèmes.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Gingembre",
-      "atlasId": "gst_epices"
+      "atlasId": "gst_epices",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_poisson_q5",
@@ -660,7 +1924,8 @@
       "xp": 10,
       "explanation": "Le poisson est une excellente source de protéines et d'oméga-3, mais il est relativement pauvre en vitamine C. Les meilleures sources de vitamine C sont les fruits et les légumes, tels que les agrumes, les kiwis et les feuilles de chou.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Poisson",
-      "atlasId": "gst_poisson"
+      "atlasId": "gst_poisson",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_cannelle_q6",
@@ -670,7 +1935,8 @@
       "xp": 10,
       "explanation": "La cannelle contient des composés qui peuvent aider à réguler le taux de sucre dans le sang en améliorant la sensibilité à l'insuline. Elle est souvent utilisée en médecine traditionnelle pour traiter les problèmes de glycémie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Cannelle",
-      "atlasId": "gst_epices"
+      "atlasId": "gst_epices",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_noix_q7",
@@ -680,7 +1946,8 @@
       "xp": 10,
       "explanation": "Les noix sont une excellente source de protéines végétales, de graisses saines et de fibres. Elles sont également riches en antioxydants et en minéraux tels que le magnésium et le potassium.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Noix",
-      "atlasId": "gst_fruitssecs"
+      "atlasId": "gst_fruitssecs",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_clou_girofle_q8",
@@ -690,7 +1957,8 @@
       "xp": 10,
       "explanation": "Le clou de girofle contient des composés qui ont des propriétés analgésiques et anti-inflammatoires, ce qui peut aider à soulager les douleurs dentaires. Il est souvent utilisé en médecine traditionnelle pour traiter ces problèmes.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Clou_de_girofle",
-      "atlasId": "gst_epices"
+      "atlasId": "gst_epices",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_anis_q9",
@@ -700,7 +1968,8 @@
       "xp": 10,
       "explanation": "L'anis contient des composés qui ont des propriétés carminatives et anti-inflammatoires, ce qui peut aider à soulager les problèmes de digestion tels que les ballonnements et les crampes abdominales.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Anis",
-      "atlasId": "gst_epices"
+      "atlasId": "gst_epices",
+      "difficulty": "easy"
     },
     {
       "id": "tf_gastro_cardamome_q10",
@@ -710,6 +1979,197 @@
       "xp": 10,
       "explanation": "La cardamome contient des composés qui ont des propriétés antibactériennes et anti-inflammatoires, ce qui peut aider à freshir l'haleine en éliminant les bactéries qui causent les problèmes de haleine.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Cardamome",
+      "atlasId": "gst_epices",
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_gastro_safran_q11",
+      "cat": "gastro",
+      "question": "Le safran est l'épice la plus chère au monde, pesée au gramme.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le safran est effectivement l'épice la plus chère au monde. Son prix élevé s'explique par le fait qu'il faut environ 150 000 fleurs de crocus pour produire un seul kilogramme de safran, chaque fleur ne contenant que trois stigmates.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Safran",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_vanille_q12",
+      "cat": "gastro",
+      "question": "La vanille est originaire de Madagascar.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La vanille est originaire du Mexique, où les Aztèques l'utilisaient déjà. C'est seulement au XIXe siècle que la vanille a été introduite à Madagascar, qui est devenu depuis le premier producteur mondial de vanille.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vanille",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_olive_q14",
+      "cat": "gastro",
+      "question": "L'huile d'olive extra vierge est obtenue par un premier pressage à froid des olives.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'huile d'olive extra vierge est effectivement obtenue par un premier pressage à froid des olives, sans aucun traitement chimique. C'est la qualité la plus élevée d'huile d'olive, avec une acidité libre maximale de 0,8%.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Huile_d%27olive",
+      "atlasId": "gst_huiles"
+    },
+    {
+      "id": "tf_gastro_sushi_q15",
+      "cat": "gastro",
+      "question": "Le sushi a été inventé au Japon au XIXe siècle comme méthode de conservation du poisson.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le sushi moderne tel qu'on le connaît aujourd'hui a été inventé au Japon au XIXe siècle par Hanaya Yohei, mais c'est le narezushi (poisson fermenté avec du riz) qui était à l'origine une méthode de conservation du poisson datant de l'Asie du Sud-Est. Le sushi moderne ne conserve pas le poisson mais le sert frais.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sushi",
+      "atlasId": "gst_poisson"
+    },
+    {
+      "id": "tf_gastro_pasta_q16",
+      "cat": "gastro",
+      "question": "Les pâtes ont été introduites en Italie par Marco Polo à son retour de Chine.",
+      "r": false,
+      "xp": 10,
+      "explanation": "C'est un mythe courant. Les pâtes étaient déjà connues en Italie bien avant Marco Polo. Des références à des plats ressemblant à des pâtes existent dans la cuisine romaine antique, et des pâtes séchées ont été produites en Italie dès le XIIe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%A2tes_(alimentation)",
+      "atlasId": "gst_pates"
+    },
+    {
+      "id": "tf_gastro_fromage_q17",
+      "cat": "gastro",
+      "question": "La France est le pays qui compte le plus grandes variétés de fromages au monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La France est effectivement le pays qui compte le plus grand nombre de variétés de fromages, avec plus de 1 000 variétés différentes. Le général de Gaulle disait d'ailleurs : 'Comment voulez-vous gouverner un pays qui a 246 variétés de fromages ?'",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fromage_fran%C3%A7ais",
+      "atlasId": "gst_fromage"
+    },
+    {
+      "id": "tf_gastro_croissant_q18",
+      "cat": "gastro",
+      "question": "Le croissant est une invention purement française.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le croissant n'est pas une invention française. Il trouve ses origines en Autriche, plus précisément à Vienne, sous le nom de 'Kipferl'. Il aurait été créé pour célébrer la victoire sur les Ottomans lors du siège de Vienne en 1683. Il a été popularisé en France au XIXe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Croissant_(p%C3%A2tisserie)",
+      "atlasId": "gst_patisserie"
+    },
+    {
+      "id": "tf_gastro_poisson_chaud_q19",
+      "cat": "gastro",
+      "question": "Le poisson doit toujours être cuit à très haute température pour être sûr qu'il est sans danger.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le poisson n'a pas besoin d'être cuit à très haute température. Il suffit qu'il atteigne une température interne de 63°C pour être sûr. Cuire le poisson à trop haute température risque de le dessécher et de détruire certains de ses nutriments.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Poisson_(alimentation)",
+      "atlasId": "gst_poisson"
+    },
+    {
+      "id": "tf_gastro_miel_q20",
+      "cat": "gastro",
+      "question": "Le miel ne se périme jamais s'il est conservé dans de bonnes conditions.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le miel est effectivement l'un des rares aliments qui ne se périme jamais. Sa faible teneur en eau et son acidité élevée empêchent le développement des bactéries. Des pots de miel trouvés dans des tombes égyptiennes vieilles de 3 000 ans étaient encore consommables.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Miel",
+      "atlasId": "gst_miel"
+    },
+    {
+      "id": "tf_gastro_tomate_q21",
+      "cat": "gastro",
+      "question": "La tomate était considérée comme toxique en Europe à son arrivée.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La tomate était effectivement considérée comme toxique en Europe lorsqu'elle y a été introduite en provenance d'Amérique du Sud au XVIe siècle. Elle appartenait à la famille des solanacées, comme la belladone, une plante toxique. Elle n'a été consommée couramment en Europe qu'à partir du XVIIIe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tomate",
+      "atlasId": "gst_legumes"
+    },
+    {
+      "id": "tf_gastro_pomme_q22",
+      "cat": "gastro",
+      "question": "Toutes les variétés de pommes commercialisées descendent d'une seule espèce sauvage d'Asie centrale.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La plupart des variétés de pommes cultivées (Malus domestica) descendent effectivement de Malus sieversii, une espèce sauvage originaire des montagnes du Kazakhstan en Asie centrale. Alexandre le Grand aurait rapporté des pommes cultivées de cette région.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pomme",
+      "atlasId": "gst_fruits"
+    },
+    {
+      "id": "tf_gastro_ketchup_q23",
+      "cat": "gastro",
+      "question": "Le ketchup original ne contenait pas de tomates.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le ketchup original, d'origine chinoise puis adapté par les Britanniques, ne contenait pas de tomates. Il était à base de poisson fermenté, de noix et de champignons. La version à base de tomates n'est apparue qu'au début du XIXe siècle aux États-Unis.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ketchup",
+      "atlasId": "gst_sauces"
+    },
+    {
+      "id": "tf_gastro_huitre_q24",
+      "cat": "gastro",
+      "question": "Les huîtres sont des animaux qui changent de sexe au cours de leur vie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les huîtres effectivement changent de sexe au cours de leur vie, un phénomène appelé hermaphrodisme successif. Elles naissent généralement mâles puis deviennent femelles après une ou plusieurs années. Certaines espèces peuvent même changer de sexe plusieurs fois.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Hu%C3%AEtre",
+      "atlasId": "gst_fruits_de_mer"
+    },
+    {
+      "id": "tf_gastro_champagne_q25",
+      "cat": "gastro",
+      "question": "Le champagne a été inventé par Dom Pérignon.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Dom Pérignon n'a pas inventé le champagne. En réalité, il a travaillé à éliminer les bulles du vin de Champagne, qu'il considérait comme un défaut. La méthode de champagnisation a été développée progressivement, et les bulles ont été appréciées plus tard. Dom Pérignon a cependant contribué à améliorer la qualité du vin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Champagne_(vin)",
+      "atlasId": "gst_vin"
+    },
+    {
+      "id": "tf_gastro_avocat_q26",
+      "cat": "gastro",
+      "question": "L'avocat est botaniquement classé comme un fruit.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'avocat est effectivement un fruit au sens botanique, puisqu'il se développe à partir de la fleur et contient un noyau (le pépin). Il appartient à la famille des lauracées. Bien qu'il soit souvent utilisé en cuisine salée, c'est bien un fruit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Avocat_(fruit)",
+      "atlasId": "gst_fruits"
+    },
+    {
+      "id": "tf_gastro_poireau_q27",
+      "cat": "gastro",
+      "question": "Le poireau est le légume emblématique du pays de Galles.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le poireau est effectivement l'emblème végétal du pays de Galles. Selon la légende, le roi Cadwaladr aurait ordonné à ses soldats de porter des poireaux sur leur casque lors d'une bataille contre les Saxons pour se reconnaître, assurant la victoire.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Poireau",
+      "atlasId": "gst_legumes"
+    },
+    {
+      "id": "tf_gastro_sel_q28",
+      "cat": "gastro",
+      "question": "Le sel de Guélande est une fleur de sel.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le sel de Guérande est un sel marin de qualité, mais ce n'est pas une fleur de sel. La fleur de sel de Guérande est un produit distinct : ce sont les cristaux fins qui se forment à la surface des marais salants, récoltés à la main. Le sel de Guérande classique est récolté au fond de l'œillette.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sel_de_Gu%C3%A9rande",
+      "atlasId": "gst_epices"
+    },
+    {
+      "id": "tf_gastro_fraise_q29",
+      "cat": "gastro",
+      "question": "La fraise n'est pas un vrai fruit au sens botanique du terme.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La fraise n'est effectivement pas un vrai fruit au sens botanique. Ce que l'on mange est en réalité un faux fruit, ou 'fruit accessoire', formé par le réceptacle floral élargi. Les vrais fruits sont les petits grains (akènes) jaunes sur la surface de la fraise.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fraise_(fruit)",
+      "atlasId": "gst_fruits"
+    },
+    {
+      "id": "tf_gastro_wasabi_q30",
+      "cat": "gastro",
+      "question": "La majorité du wasabi consommé dans le monde ne contient pas de vrai wasabi.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La grande majorité du wasabi consommé dans le monde, notamment dans les restaurants japonais hors du Japon, ne contient pas de vrai wasabi. Il est le plus souvent remplacé par un mélange de raifort, de moutarde et de colorant vert, car le vrai wasabi est très cher et difficile à cultiver.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Wasabi",
       "atlasId": "gst_epices"
     }
   ],
@@ -722,7 +2182,8 @@
       "xp": 10,
       "explanation": "Le Minotaure était en réalité le fils de Pasiphaé, la femme du roi Minos, et d'un taureau. Il était considéré comme un monstre et non comme un demi-dieu. La mythologie grecque est riche en créatures mythologiques complexes.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Minotaure",
-      "atlasId": "mytho_minotaure"
+      "atlasId": "mytho_minotaure",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_chimere_q2",
@@ -732,7 +2193,8 @@
       "xp": 10,
       "explanation": "La Chimère était effectivement décrite comme une créature hybride avec la tête d'un lion, le corps d'une chèvre et la queue d'un serpent. Elle était censée cracher du feu et était considérée comme un monstre redoutable.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Chim%C3%A8re_(mythologie)",
-      "atlasId": "mytho_chimere"
+      "atlasId": "mytho_chimere",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_meduse_q3",
@@ -742,7 +2204,8 @@
       "xp": 10,
       "explanation": "Méduse était en réalité une des trois Gorgones, des créatures mythologiques connues pour leur capacité à pétrifier les hommes. Elle n'était pas une déesse de la beauté, mais plutôt une créature terrifiante avec des serpents pour cheveux.",
       "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9duse",
-      "atlasId": "mytho_meduse"
+      "atlasId": "mytho_meduse",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_dragons_q4",
@@ -752,7 +2215,8 @@
       "xp": 10,
       "explanation": "Les dragons de la mythologie européenne étaient souvent dépeints comme des créatures puissantes et terrifiantes, mais pas toujours malignes. Certains dragons étaient considérés comme des créatures bénéfiques, apportant la chance et la prospérité.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Dragon",
-      "atlasId": "mytho_dragon"
+      "atlasId": "mytho_dragon",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_griffon_q5",
@@ -762,7 +2226,8 @@
       "xp": 10,
       "explanation": "Le Griffon était effectivement décrit comme une créature hybride avec le corps d'un lion et la tête d'un aigle. Il était souvent associé à la protection des trésors et des tombes.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Griffon",
-      "atlasId": "mytho_griffon"
+      "atlasId": "mytho_griffon",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_sphinx_q6",
@@ -772,7 +2237,8 @@
       "xp": 10,
       "explanation": "Le Sphinx était effectivement décrit comme une créature hybride avec la tête d'un homme et le corps d'un lion. Il était souvent associé à la sagesse et à la connaissance.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Sphinx",
-      "atlasId": "mytho_sphinx"
+      "atlasId": "mytho_sphinx",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_harpyes_q7",
@@ -782,7 +2248,8 @@
       "xp": 10,
       "explanation": "Les Harpies étaient en réalité des créatures avec le corps d'un oiseau et la tête d'une femme. Elles étaient souvent associées aux vents et à la tempête.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Harpye",
-      "atlasId": "mytho_harpye"
+      "atlasId": "mytho_harpye",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_centaures_q8",
@@ -792,7 +2259,8 @@
       "xp": 10,
       "explanation": "Les Centaures étaient effectivement décrits comme des créatures hybrides avec le corps d'un cheval et la tête d'un homme. Ils étaient souvent associés à la sagesse et à la connaissance.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Centaur",
-      "atlasId": "mytho_centaur"
+      "atlasId": "mytho_centaur",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_basilic_q9",
@@ -802,7 +2270,8 @@
       "xp": 10,
       "explanation": "Le Basilic était effectivement décrit comme une créature capable de tuer avec un seul regard. Il était souvent associé à la mort et à la destruction.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Basilic_(mythologie)",
-      "atlasId": "mytho_basilic"
+      "atlasId": "mytho_basilic",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mytho_manticore_q10",
@@ -812,7 +2281,208 @@
       "xp": 10,
       "explanation": "La Manticore était en réalité décrite comme une créature avec le corps d'un lion, la tête d'un homme et des ailes d'un aigle. Elle était souvent associée à la chasse et à la destruction.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Manticore",
-      "atlasId": "mytho_manticore"
+      "atlasId": "mytho_manticore",
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_mytho_pegasus_q11",
+      "cat": "mytho",
+      "question": "Pégase est né du sang de Méduse lorsque Persée l'a décapitée.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Pégase est effectivement né du sang de Méduse lorsque Persée l'a décapitée. Avec son frère Chrysaor, il est sorti du cou de la Gorgone.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%A9gase_(mythologie)",
+      "atlasId": "mytho_pegase"
+    },
+    {
+      "id": "tf_mytho_hydre_q12",
+      "cat": "mytho",
+      "question": "L'Hydre de Lerne était un serpent à plusieurs têtes qui repoussaient lorsqu'on les coupait.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Hydre de Lerne était effectivement un serpent aquatique à plusieurs têtes, et chaque fois qu'une tête était coupée, deux nouvelles repoussaient à sa place.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Hydre_de_Lerne",
+      "atlasId": "mytho_hydre"
+    },
+    {
+      "id": "tf_mytho_cerbere_q13",
+      "cat": "mytho",
+      "question": "Cerbère, le chien gardien des Enfers, avait trois têtes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Cerbère était effectivement le chien à trois têtes qui gardait l'entrée des Enfers dans la mythologie grecque.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cerb%C3%A8re_(mythologie)",
+      "atlasId": "mytho_cerbere"
+    },
+    {
+      "id": "tf_mytho_phoenix_q14",
+      "cat": "mytho",
+      "question": "Le Phénix est une créature mythologique originaire de la mythologie grecque.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Phénix n'est pas originaire de la mythologie grecque. Il trouve ses origines dans la mythologie égyptienne antique, où il était associé au dieu Rê et au soleil sous le nom de Benu.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ph%C3%A9nix_(mythologie)",
+      "atlasId": "mytho_phoenix"
+    },
+    {
+      "id": "tf_mytho_cyclopes_q15",
+      "cat": "mytho",
+      "question": "Tous les Cyclopes de la mythologie grecque n'avaient qu'un seul œil.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Cyclopes étaient effectivement des créatures n'ayant qu'un seul œil au milieu du front.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cyclope",
+      "atlasId": "mytho_cyclope"
+    },
+    {
+      "id": "tf_mytho_loup_garou_q16",
+      "cat": "mytho",
+      "question": "La légende du loup-garou trouve ses origines dans la mythologie grecque avec le roi Lycaon.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La légende du loup-garou trouve effectivement l'une de ses plus anciennes origines dans le mythe grec de Lycaon, roi d'Arcadie, qui a été transformé en loup par Zeus.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lycanthrope",
+      "atlasId": "mytho_loup_garou"
+    },
+    {
+      "id": "tf_mytho_kraken_q17",
+      "cat": "mytho",
+      "question": "Le Kraken est une créature de la mythologie grecque antique.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Kraken n'est pas issu de la mythologie grecque antique. Il vient des légendes scandinaves et norvégiennes du Moyen Âge.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Kraken",
+      "atlasId": "mytho_kraken"
+    },
+    {
+      "id": "tf_mytho_ithyphalle_q18",
+      "cat": "mytho",
+      "question": "Les Satyres de la mythologie grecque étaient des créatures mi-hommes mi-boucs.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Satyres étaient effectivement des créatures hybrides mi-hommes mi-boucs, avec des cornes, des oreilles pointues et une queue de bouc.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Satyre",
+      "atlasId": "mytho_satyre"
+    },
+    {
+      "id": "tf_mytho_sirenes_q19",
+      "cat": "mytho",
+      "question": "Les Sirènes de la mythologie grecque étaient des créatures mi-femmes mi-poissons.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Dans la mythologie grecque antique, les Sirènes étaient des créatures mi-femmes mi-oiseaux, et non mi-poissons.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sir%C3%A8ne_(mythologie)",
+      "atlasId": "mytho_sirene"
+    },
+    {
+      "id": "tf_mytho_talion_q20",
+      "cat": "mytho",
+      "question": "Les Furies de la mythologie romaine étaient des divinités chargées de punir les crimes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les Furies (ou Érinyes dans la mythologie grecque) étaient effectivement des divinités chargées de poursuivre et de punir les criminels.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Furies_(mythologie)",
+      "atlasId": "mytho_furies"
+    },
+    {
+      "id": "tf_mytho_yggdrasil_q21",
+      "cat": "mytho",
+      "question": "Yggdrasil est l'arbre cosmique de la mythologie nordique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Yggdrasil est effectivement l'arbre cosmique de la mythologie nordique, un frêne gigantesque qui relie les neuf mondes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Yggdrasil",
+      "atlasId": "mytho_yggdrasil"
+    },
+    {
+      "id": "tf_mytho_minotaure_labyrinthe_q22",
+      "cat": "mytho",
+      "question": "Le labyrinthe du Minotaure a été construit par Dédale.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le labyrinthe a effectivement été construit par Dédale, le plus habile architecte et inventeur de la mythologie grecque.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9dale",
+      "atlasId": "mytho_labyrinthe"
+    },
+    {
+      "id": "tf_mytho_thor_q23",
+      "cat": "mytho",
+      "question": "Thor, le dieu du tonnerre de la mythologie nordique, portait un marteau nommé Mjöllnir.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Thor portait effectivement Mjöllnir, un marteau forgé par les nains Brokk et Eitri.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mj%C3%B6llnir",
+      "atlasId": "mytho_thor"
+    },
+    {
+      "id": "tf_mytho_achille_q24",
+      "cat": "mytho",
+      "question": "Achille était invulnérable de tout son corps selon la mythologie grecque la plus ancienne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Dans les versions les plus anciennes, comme l'Iliade d'Homère, Achille n'était pas invulnérable. Le mythe du talon est une version tardive.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Achille",
+      "atlasId": "mytho_achille"
+    },
+    {
+      "id": "tf_mytho_odin_q25",
+      "cat": "mytho",
+      "question": "Odin a sacrifié un de ses yeux pour obtenir la sagesse.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Odin a effectivement sacrifié un de ses yeux en échange de la sagesse, en le jetant dans le puits de Mímir.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Odin",
+      "atlasId": "mytho_odin"
+    },
+    {
+      "id": "tf_mytho_helene_q26",
+      "cat": "mytho",
+      "question": "Hélène de Troie était la fille de Zeus et de Léda.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Hélène de Troie était effectivement la fille de Zeus et de Léda. Selon le mythe, Zeus aurait pris la forme d'un cygne pour séduire Léda.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/H%C3%A9l%C3%A8ne_de_Troie",
+      "atlasId": "mytho_helene"
+    },
+    {
+      "id": "tf_mytho_fenrir_q27",
+      "cat": "mytho",
+      "question": "Fenrir est un loup géant de la mythologie nordique qui doit dévorer Odin lors du Ragnarök.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Fenrir est effectivement un loup géant, fils de Loki et de la géante Angrboda, destiné à dévorer Odin lors du Ragnarök.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fenrir",
+      "atlasId": "mytho_fenrir"
+    },
+    {
+      "id": "tf_mytho_pandore_q28",
+      "cat": "mytho",
+      "question": "Dans la mythologie grecque, Pandore a ouvert une boîte qui a libéré tous les maux de l'humanité.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Pandore a effectivement ouvert la boîte (ou jarre) que Zeus lui avait confiée, libérant tous les maux de l'humanité. Seul l'Espoir est resté au fond.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pandore",
+      "atlasId": "mytho_pandore"
+    },
+    {
+      "id": "tf_mytho_loki_q29",
+      "cat": "mytho",
+      "question": "Loki était un dieu Ases dans la mythologie nordique.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Loki n'était pas un dieu Ases mais un géant (Jötunn) adopté par les Ases.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Loki",
+      "atlasId": "mytho_loki"
+    },
+    {
+      "id": "tf_mytho_narcisse_q30",
+      "cat": "mytho",
+      "question": "Narcisse s'est épris de son propre reflet dans l'eau et en est mort de chagrin.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Narcisse s'est effectivement épris de son propre reflet dans un miroir d'eau et est resté fixé devant jusqu'à en mourir de chagrin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Narcisse_(mythologie)",
+      "atlasId": "mytho_narcisse"
     }
   ],
   "chateaux": [
@@ -824,7 +2494,8 @@
       "xp": 10,
       "explanation": "Les architectes français de la Renaissance, comme Philibert de l'Orme, ont voyagé en Italie et ont été inspirés par les œuvres de maîtres tels que Bramante et Michel-Ange. Cela se reflète dans les proportions, les ornements et les détails de leurs constructions. Le Château d'Anet, par exemple, montre une influence italienne marquée.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Renaissance_fran%C3%A7aise",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "easy"
     },
     {
       "id": "tf_jardins_francais_q2",
@@ -834,7 +2505,8 @@
       "xp": 10,
       "explanation": "Les jardins à la française sont en fait connus pour leurs lignes droites, leurs perspectives géométriques et leurs formes régulières, contrairement aux jardins à l'anglaise qui privilégient les courbes et les formes naturelles. Le Jardin des Tuileries à Paris est un exemple classique de jardin à la française.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_%C3%A0_la_fran%C3%A7aise",
-      "atlasId": "jardins_france"
+      "atlasId": "jardins_france",
+      "difficulty": "easy"
     },
     {
       "id": "tf_chateaux_ile_de_france_q3",
@@ -844,7 +2516,8 @@
       "xp": 10,
       "explanation": "Le Château de Vaux-le-Vicomte a été construit pour Nicolas Fouquet, le Surintendant des Finances de Louis XIV, et non pour un roi de France. Il est considéré comme l'un des premiers exemples de l'architecture classique française et a inspiré la construction du Château de Versailles.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vaux-le-Vicomte",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "easy"
     },
     {
       "id": "tf_jardins_anglais_q4",
@@ -854,7 +2527,8 @@
       "xp": 10,
       "explanation": "Les jardins à l'anglaise, également appelés jardins paysagers, sont conçus pour créer un environnement esthétique et pittoresque, avec des éléments tels que des lacs, des collines et des bois. Ils ne sont pas principalement destinés à la production de fruits ou de légumes, mais plutôt à offrir un espace de détente et de contemplation.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_paysager",
-      "atlasId": "jardins_angleterre"
+      "atlasId": "jardins_angleterre",
+      "difficulty": "easy"
     },
     {
       "id": "tf_chateaux_renaissance_q5",
@@ -864,7 +2538,8 @@
       "xp": 10,
       "explanation": "La Renaissance en France a marqué une rupture avec l'architecture militaire médiévale. Les châteaux de la Renaissance, tels que Chambord ou Chenonceau, sont caractérisés par une architecture plus légère, des fenêtres plus grandes et une décoration plus raffinée, reflétant les goûts esthétiques de l'époque.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Renaissance",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "easy"
     },
     {
       "id": "tf_jardins_francais_q6",
@@ -874,7 +2549,8 @@
       "xp": 10,
       "explanation": "Les jardins à la française, avec leurs parterres de broderie, leurs statues et leurs fontaines, nécessitent en réalité un entretien régulier et méticuleux pour maintenir leur apparence géométrique et leur propreté. Cela inclut la taille des buis, la tonte des pelouses et le nettoyage des bassins.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_%C3%A0_la_fran%C3%A7aise",
-      "atlasId": "jardins_france"
+      "atlasId": "jardins_france",
+      "difficulty": "easy"
     },
     {
       "id": "tf_chateaux_ile_de_france_q7",
@@ -884,7 +2560,8 @@
       "explanation": "Le Château de Fontainebleau a effectivement été construit sur le site d'un ancien château fort médiéval. Les rois de France, à partir de François Ier, ont transformé et agrandi ce château pour en faire un palais royal, incorporant des éléments de l'architecture Renaissance italienne.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Fontainebleau",
       "atlasId": "chateaux_france",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_jardins_anglais_q8",
@@ -894,7 +2571,8 @@
       "xp": 10,
       "explanation": "Les jardins à l'anglaise, ou jardins paysagers, sont souvent conçus pour créer une impression de liberté et de continuité avec la campagne environnante. Ils peuvent donc ne pas être entourés de murs, mais plutôt s'intégrer au paysage naturel, avec des haies, des bosquets et des éléments d'eau qui créent des limites plus douces.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_paysager",
-      "atlasId": "jardins_angleterre"
+      "atlasId": "jardins_angleterre",
+      "difficulty": "easy"
     },
     {
       "id": "tf_chateaux_renaissance_q9",
@@ -904,7 +2582,8 @@
       "xp": 10,
       "explanation": "Bien que certains châteaux de la Renaissance aient été construits pour des rois de France, comme le Château de Chambord, beaucoup d'autres ont été commandés par des nobles et des riches bourgeois qui voulaient afficher leur richesse et leur goût esthétique. Le Château d'Anet, par exemple, a été construit pour Diane de Poitiers.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_la_Renaissance",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "easy"
     },
     {
       "id": "tf_jardins_francais_q10",
@@ -914,7 +2593,258 @@
       "explanation": "Les jardins à la française, avec leur esthétique formelle et géométrique, ont eu un impact sur le design des jardins dans d'autres parties du monde, y compris en Asie. Par exemple, les jardins du Palais impérial de Pékin en Chine montrent des influences des jardins à la française dans leur utilisation de l'eau, des statues et des parterres de fleurs.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Jardin_%C3%A0_la_fran%C3%A7aise",
       "atlasId": "jardins_france",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
+    },
+    {
+      "id": "tf_chateaux_versailles_q6",
+      "cat": "chateaux",
+      "question": "Le Château de Versailles a été initialement construit comme un simple pavillon de chasse par Louis XIII.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Versailles a effectivement été initialement construit comme un pavillon de chasse par Louis XIII en 1623.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Versailles",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_chambord_q7",
+      "cat": "chateaux",
+      "question": "Le Château de Chambord a été construit sous le règne de François Ier.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Chambord a effectivement été commandé par François Ier en 1519.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chambord",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_chenonceau_q8",
+      "cat": "chateaux",
+      "question": "Le Château de Chenonceau a été construit directement sur un pont enjambant la Loire.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Château de Chenonceau n'enjambe pas la Loire mais le Cher, un affluent de la Loire.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chenonceau",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_jardins_leNotre_q9",
+      "cat": "chateaux",
+      "question": "André Le Nôtre a dessiné les jardins du Château de Versailles.",
+      "r": true,
+      "xp": 10,
+      "explanation": "André Le Nôtre a effectivement dessiné les jardins du Château de Versailles pour Louis XIV.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Andr%C3%A9_Le_N%C3%B4tre",
+      "atlasId": "jardins_france"
+    },
+    {
+      "id": "tf_chateaux_fontainebleau_q10",
+      "cat": "chateaux",
+      "question": "Le Château de Fontainebleau est le seul château royal français à avoir été habité par tous les rois de France.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bien que très fréquenté, le Château de Fontainebleau n'a pas été habité par absolument tous les rois de France.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Fontainebleau",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_nuance_q11",
+      "cat": "chateaux",
+      "question": "Le Château de Nuance est un château de la Loire connu pour ses façades roses.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Il n'existe pas de château de la Loire célèbre appelé 'Château de Nuance'. Ce nom est fictif.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teaux_de_la_Loire",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_azay_q12",
+      "cat": "chateaux",
+      "question": "Le Château d'Azay-le-Rideau est construit sur une île au milieu de l'Indre.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château d'Azay-le-Rideau est effectivement construit sur une île formée par l'Indre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Azay-le-Rideau",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_louvre_q13",
+      "cat": "chateaux",
+      "question": "Le Louvre était à l'origine une forteresse médiévale construite sous Philippe Auguste.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Louvre était effectivement à l'origine une forteresse médiévale, construite vers 1190 sous le règne de Philippe Auguste.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Palais_du_Louvre",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_mont_saint_michel_q14",
+      "cat": "chateaux",
+      "question": "Le Mont Saint-Michel est un château construit sur une île.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Mont Saint-Michel n'est pas un château mais une abbaye fortifiée à vocation religieuse.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Saint-Michel",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_cheverny_q15",
+      "cat": "chateaux",
+      "question": "Le Château de Cheverny aurait inspiré Hergé pour créer le château de Moulinsart dans les aventures de Tintin.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Cheverny a effectivement inspiré Hergé pour le château de Moulinsart dans les aventures de Tintin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Cheverny",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_vincennes_q16",
+      "cat": "chateaux",
+      "question": "Le Château de Vincennes possède le plus haut donjon d'Europe.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le donjon du Château de Vincennes mesure 52 mètres de haut, mais le titre du plus haut donjon d'Europe revient à d'autres forteresses.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Vincennes",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_pierrefonds_q17",
+      "cat": "chateaux",
+      "question": "Le Château de Pierrefonds a été restauré par Viollet-le-Duc au XIXe siècle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Pierrefonds a effectivement été restauré par Viollet-le-Duc sous Napoléon III à partir de 1857.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Pierrefonds",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_blois_q18",
+      "cat": "chateaux",
+      "question": "Le Château de Blois présente quatre ailes construites dans quatre styles architecturaux différents.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Blois présente effectivement quatre ailes construites dans des styles différents : gothique, gothique flamboyant, Renaissance et classique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Blois",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_scone_q19",
+      "cat": "chateaux",
+      "question": "Le Château de Scone en Écosse est le lieu historique du couronnement des rois écossais.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Scone est effectivement le lieu historique du couronnement des rois écossais, où se trouvait la Pierre du Destin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Scone_(Sch%C3%A9cosse)",
+      "atlasId": "chateaux_europe"
+    },
+    {
+      "id": "tf_chateaux_neuschwanstein_q20",
+      "cat": "chateaux",
+      "question": "Le Château de Neuschwanstein en Bavière a inspiré le château de la Belle au Bois Dormant de Disney.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Neuschwanstein a effectivement inspiré le château de la Belle au Bois Dormant dans les parcs Disney.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Neuschwanstein",
+      "atlasId": "chateaux_europe"
+    },
+    {
+      "id": "tf_chateaux_amboise_q21",
+      "cat": "chateaux",
+      "question": "Léonard de Vinci est enterré dans la chapelle du Château d'Amboise.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Léonard de Vinci est effectivement enterré dans la chapelle Saint-Hubert du Château d'Amboise.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Amboise",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_windsor_q22",
+      "cat": "chateaux",
+      "question": "Le Château de Windsor est la résidence officielle la plus ancienne au monde encore en usage.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Windsor est effectivement la résidence royale la plus ancienne au monde encore en usage continu depuis Guillaume le Conquérant.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Windsor",
+      "atlasId": "chateaux_europe"
+    },
+    {
+      "id": "tf_chateaux_chantilly_q23",
+      "cat": "chateaux",
+      "question": "Le Château de Chantilly abrite l'un des plus grands musées de peinture ancienne de France après le Louvre.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Chantilly abrite effectivement le Musée Condé, une des plus importantes collections de peinture ancienne de France après le Louvre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Chantilly",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_grignan_q24",
+      "cat": "chateaux",
+      "question": "Le Château de Grignan est associé à la marquise de Sévigné.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Grignan est étroitement associé à la marquise de Sévigné, qui y séjourna plusieurs fois et y mourut en 1696.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Grignan",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_hohenzollern_q25",
+      "cat": "chateaux",
+      "question": "Le Château de Hohenzollern est le berceau de la dynastie impériale allemande.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château de Hohenzollern est effectivement le berceau de la dynastie des Hohenzollern, qui a régné sur l'Empire allemand de 1871 à 1918.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Hohenzollern",
+      "atlasId": "chateaux_europe"
+    },
+    {
+      "id": "tf_chateaux_usse_q26",
+      "cat": "chateaux",
+      "question": "Le Château d'Ussé aurait inspiré Charles Perrault pour écrire 'La Belle au Bois Dormant'.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château d'Ussé aurait effectivement inspiré Charles Perrault pour son conte 'La Belle au Bois Dormant'.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Uss%C3%A9",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_edimbourg_q27",
+      "cat": "chateaux",
+      "question": "Le Château d'Édimbourg est construit sur un volcan éteint.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Château d'Édimbourg est effectivement construit sur le Castle Rock, un rocher volcanique éteint formé il y a environ 340 millions d'années.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27%C3%89dimbourg",
+      "atlasId": "chateaux_europe"
+    },
+    {
+      "id": "tf_chateaux_villandry_q28",
+      "cat": "chateaux",
+      "question": "Les jardins du Château de Villandry sont célèbres pour leurs jardins ornementaux en motifs géométriques végétaux.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les jardins du Château de Villandry sont effectivement célèbres pour leurs jardins d'ornement en buis taillés formant des motifs géométriques.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Villandry",
+      "atlasId": "jardins_france"
+    },
+    {
+      "id": "tf_chateaux_langeais_q29",
+      "cat": "chateaux",
+      "question": "Le mariage entre Charles VIII et Anne de Bretagne a eu lieu au Château de Langeais.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le mariage entre Charles VIII et Anne de Bretagne a effectivement eu lieu au Château de Langeais le 6 décembre 1491.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Langeais",
+      "atlasId": "chateaux_france"
+    },
+    {
+      "id": "tf_chateaux_oberhofen_q30",
+      "cat": "chateaux",
+      "question": "Le Château d'Oberhofen en Suisse possède une tour d'eau qui est en réalité un pont-levis.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Château d'Oberhofen possède une tour d'eau caractéristique construite dans le lac de Thoune, mais ce n'est pas un pont-levis.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Oberhofen",
+      "atlasId": "chateaux_europe"
     }
   ],
   "extended": [
@@ -926,7 +2856,8 @@
       "xp": 10,
       "explanation": "La famille de langues ouralo-altaïques est une grande famille linguistique qui comprend des langues telles que le finnois, l'estonien et le hongrois. Ces langues sont parlées principalement en Europe du Nord et en Asie. La famille ouralo-altaïque est distincte des familles indo-européennes et slaves.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Langues_ouralo-alta%C3%AFques",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_intelligence_artificielle_transparence",
@@ -936,7 +2867,8 @@
       "xp": 10,
       "explanation": "Les systèmes d'intelligence artificielle, en particulier ceux utilisant des réseaux neuronaux profonds, peuvent être opaques dans leurs processus de décision. Cela signifie que les raisons derrière les décisions prises par ces systèmes ne sont pas toujours claires ou compréhensibles pour les humains.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_linguistique_langues_menacees",
@@ -946,7 +2878,8 @@
       "xp": 10,
       "explanation": "Selon l'UNESCO, il existe plus de 2 400 langues menacées dans le monde, ce qui représente environ 30% des langues parlées dans le monde. Ces langues sont en danger debido à la mondialisation, à l'urbanisation et à la perte de la diversité culturelle.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Langue_en_voie_de_disparition",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_intelligence_artificielle_regulation",
@@ -956,7 +2889,8 @@
       "xp": 10,
       "explanation": "L'intelligence artificielle n'est pas réglementée de la même manière que les produits chimiques toxiques. Bien que certains pays aient mis en place des règlements pour l'utilisation de l'intelligence artificielle, il n'existe pas de cadre réglementaire global pour cette technologie.",
       "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9glementation_de_l%27intelligence_artificielle",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_linguistique_famille_indo_europenne",
@@ -966,7 +2900,8 @@
       "xp": 10,
       "explanation": "La famille de langues indo-européennes comprend des langues telles que le français, l'espagnol, l'allemand, le russe, etc. Le chinois et le japonais appartiennent à des familles de langues différentes : la famille sino-tibétaine pour le chinois et la famille japonaise pour le japonais.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Langues_indo-europ%C3%A9ennes",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_intelligence_artificielle_ethique",
@@ -976,7 +2911,8 @@
       "xp": 10,
       "explanation": "L'intelligence artificielle peut avoir des implications éthiques négatives, telles que la discrimination, la surveillance et la perte d'emplois. Il est important de considérer ces implications lors de la conception et de la mise en œuvre de systèmes d'intelligence artificielle.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle_%C3%A9thique",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_linguistique_langue_signes",
@@ -986,7 +2922,8 @@
       "xp": 10,
       "explanation": "La langue des signes varie d'un pays à l'autre, même si certaines langues des signes partagent des similarités. Chaque pays a sa propre langue des signes, qui est spécifique à sa culture et à sa communauté des sourds.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Langue_des_signes",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_intelligence_artificielle_intelligence_humaine",
@@ -996,7 +2933,8 @@
       "xp": 10,
       "explanation": "L'intelligence artificielle peut surpasser l'intelligence humaine dans certains domaines spécifiques, tels que les calculs mathématiques ou les jeux de stratégie, mais elle ne peut pas surpasser l'intelligence humaine dans tous les domaines, notamment dans les domaines qui nécessitent de la créativité, de l'empathie et de la compréhension humaine.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_linguistique_famille_afro_asiatique",
@@ -1006,7 +2944,8 @@
       "xp": 10,
       "explanation": "La famille de langues afro-asiatiques comprend des langues telles que le swahili, l'amharique, l'arabe, l'hébreu, etc. Cette famille de langues est parlée principalement en Afrique et au Moyen-Orient.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Langues_afro-asiatiques",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_intelligence_artificielle_sensibilite",
@@ -1016,7 +2955,8 @@
       "xp": 10,
       "explanation": "Les systèmes d'intelligence artificielle ne sont pas sensibles aux émotions humaines de la même manière que les humains. Bien que certains systèmes d'intelligence artificielle puissent être conçus pour simuler des émotions ou reconnaître les émotions humaines, ils ne possèdent pas de véritable conscience émotionnelle.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Intelligence_artificielle_%C3%A9motionnelle",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     }
   ],
   "litt": [
@@ -1028,7 +2968,8 @@
       "xp": 10,
       "explanation": "Léon Tolstoï a écrit 'La Guerre et la Paix' en près de 6 ans, de 1863 à 1869. Ce roman est considéré comme l'un des plus grands romans de la littérature russe et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/La_Guerre_et_la_paix",
-      "atlasId": "litt_tolstoi"
+      "atlasId": "litt_tolstoi",
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_francais_q2",
@@ -1038,7 +2979,8 @@
       "xp": 10,
       "explanation": "Victor Hugo a écrit 'Les Misérables' pendant son exil à Guernesey, où il s'était installé en 1855. Le roman a été publié en 1862 et est considéré comme l'un des plus grands romans de la littérature française.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Les_Mis%C3%A9rables",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_russe_q3",
@@ -1048,7 +2990,8 @@
       "explanation": "Fiodor Dostoïevski a écrit 'Crime et Châtiment' sous l'influence de la littérature russe et des idées philosophiques de son époque, mais pas spécifiquement sous l'influence de la littérature française. Cependant, il a été influencé par les idées de penseurs français tels que Jean-Jacques Rousseau.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Crime_et_ch%C3%A2timent",
       "atlasId": "litt_dostoievski",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_francais_q4",
@@ -1058,7 +3001,8 @@
       "explanation": "Gustave Flaubert a écrit 'Madame Bovary' en plus de 5 ans, de 1851 à 1856. Ce roman est considéré comme l'un des plus grands romans de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Madame_Bovary",
       "atlasId": "litt_flaubert",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_russe_q5",
@@ -1068,7 +3012,8 @@
       "xp": 10,
       "explanation": "Anton Tchekhov a écrit 'La Dame au petit chien' en 1899, peu de temps avant sa mort. Cette nouvelle est considérée comme l'une des meilleures œuvres de Tchekhov et a été publiée pour la première fois dans la revue russe 'Russkaïa Mysl' en décembre 1899.",
       "wikipedia": "https://fr.wikipedia.org/wiki/La_Dame_au_petit_chien",
-      "atlasId": "litt_tchekhov"
+      "atlasId": "litt_tchekhov",
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_francais_q6",
@@ -1078,7 +3023,8 @@
       "explanation": "Émile Zola a écrit 'Germinal' en plus de 2 ans, de 1884 à 1885. Ce roman est considéré comme l'un des plus grands romans de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Germinal_(roman)",
       "atlasId": "litt_zola",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_russe_q7",
@@ -1088,7 +3034,8 @@
       "explanation": "Nicolas Gogol a écrit 'Les Âmes mortes' en plus de 10 ans, de 1836 à 1852. Ce roman est considéré comme l'un des plus grands romans de la littérature russe et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Les_%C3%82mes_mortes",
       "atlasId": "litt_gogol",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_francais_q8",
@@ -1098,7 +3045,8 @@
       "xp": 10,
       "explanation": "Honoré de Balzac a écrit 'La Comédie humaine' en moins de 20 ans, de 1832 à 1850. Ce cycle de romans est considéré comme l'un des plus grands travaux de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/La_Com%C3%A9die_humaine",
-      "atlasId": "litt_balzac"
+      "atlasId": "litt_balzac",
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_russe_q9",
@@ -1108,7 +3056,8 @@
       "explanation": "Léon Tolstoï a écrit 'Anna Karénine' en plus de 4 ans, de 1873 à 1877. Ce roman est considéré comme l'un des plus grands romans de la littérature russe et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Anna_Kar%C3%A9nine",
       "atlasId": "litt_tolstoi",
-      "xp": 10
+      "xp": 10,
+      "difficulty": "easy"
     },
     {
       "id": "tf_litt_francais_q10",
@@ -1118,7 +3067,8 @@
       "xp": 10,
       "explanation": "Gustave Flaubert a écrit 'Salammbô' en moins de 5 ans, de 1857 à 1862. Ce roman est considéré comme l'un des plus grands romans de la littérature française et a nécessité une grande quantité de recherches et de révisions.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Salammb%C3%B4",
-      "atlasId": "litt_flaubert"
+      "atlasId": "litt_flaubert",
+      "difficulty": "easy"
     }
   ],
   "mixed": [
@@ -1130,7 +3080,8 @@
       "xp": 10,
       "explanation": "Les ouragans peuvent se former dans les deux hémisphères, mais ils sont plus fréquents dans l'hémisphère nord en raison de la présence de plus d'océans chauds. Les tempêtes tropicales dans l'hémisphère sud sont généralement appelées cyclones ou tempêtes tropicales.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ouragan",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_record_q2",
@@ -1140,7 +3091,8 @@
       "xp": 10,
       "explanation": "Le lac Baïkal est le plus grand lac d'eau douce du monde en termes de volume, mais le lac Supérieur est le plus grand lac d'eau douce en termes de superficie. Le lac Baïkal est situé en Russie et est connu pour sa profondeur et sa biodiversité.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Ba%C3%AFkal",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_phenomene_q3",
@@ -1150,7 +3102,8 @@
       "xp": 10,
       "explanation": "Les éclairs peuvent chauffer l'air à des températures extrêmement élevées, souvent supérieures à 30 000 degrés Celsius, ce qui est plus chaud que la surface du soleil. Cette chaleur est causée par la résistance de l'air à la décharge électrique.",
       "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89clair",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_record_q4",
@@ -1160,7 +3113,8 @@
       "xp": 10,
       "explanation": "Le mont Everest est le point le plus élevé de la Terre, mais ce n'est pas le point le plus éloigné du centre de la Terre. Le Chimborazo, un volcan en Équateur, est le point le plus éloigné du centre de la Terre en raison de la forme elliptique de la Terre.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Everest",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_phenomene_q5",
@@ -1170,7 +3124,8 @@
       "xp": 10,
       "explanation": "Les tornades se forment généralement dans les régions continentales, loin des océans. Les États-Unis, par exemple, sont touchés par de nombreuses tornades chaque année, en particulier dans la région connue sous le nom de Tornado Alley.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Tornade",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_record_q6",
@@ -1180,7 +3135,8 @@
       "xp": 10,
       "explanation": "Le Grand Canyon est l'un des plus grands canyons du monde, mais il n'est pas le plus long. Le canyon du Yarlung Tsangpo, en Chine, est considéré comme le plus long canyon du monde, avec une longueur d'environ 496 km.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Canyon",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_phenomene_q7",
@@ -1190,7 +3146,8 @@
       "xp": 10,
       "explanation": "Les ouragans se forment généralement sur les océans chauds, où la température de l'eau est supérieure à 26,5 degrés Celsius. Les ouragans ne peuvent pas se former sur les océans froids, car ils nécessitent une grande quantité de chaleur pour se développer.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Ouragan",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_record_q8",
@@ -1200,7 +3157,8 @@
       "xp": 10,
       "explanation": "Le lac Vostok est effectivement le plus grand lac sous-glaciaire du monde, situé sous la calotte glaciaire de l'Antarctique. Il est estimé qu'il contient environ 14 000 km³ d'eau, ce qui en fait l'un des plus grands lacs d'eau douce du monde.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Vostok",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_phenomene_q9",
@@ -1210,7 +3168,8 @@
       "xp": 10,
       "explanation": "Les éclairs peuvent frapper le même endroit deux fois, voire plusieurs fois. En fait, la statue de la Liberté à New York est frappée par la foudre environ 25 fois par an.",
       "wikipedia": "https://fr.wikipedia.org/wiki/%C3%89clair",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     },
     {
       "id": "tf_mixed_record_q10",
@@ -1220,7 +3179,8 @@
       "xp": 10,
       "explanation": "Le désert du Sahara est le plus grand désert chaud du monde, mais il n'est pas le plus grand désert du monde. Le désert de l'Antarctique est considéré comme le plus grand désert du monde, couvrant environ 14 millions de km².",
       "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9sert_du_Sahara",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "easy"
     }
   ]
 }

@@ -19,7 +19,8 @@
       "explanation": "Lomé (~837 437 habitants), Kigali (~1 135 428 habitants), Bamako (~2 513 747 habitants), Kinshasa (~12 711 000 habitants)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Lom%C3%A9",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q2",
@@ -40,7 +41,8 @@
       "explanation": "Gaborone (~169 km²), Lubumbashi (~747 km²), Brazzaville (~1 000 km²), Dar es Salaam (~1 393 km²)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Gaborone",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q3",
@@ -61,7 +63,8 @@
       "explanation": "Zambie (~4,4 tonnes), Mali (~45,3 tonnes), Ghana (~106,1 tonnes), Afrique du Sud (~139,9 tonnes) en 2020",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Industrie_min%C3%A8re_en_Afrique_du_Sud",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q4",
@@ -82,7 +85,8 @@
       "explanation": "Guinée-Bissau (~36 127 km²), Sénégal (~196 722 km²), Guinée (~245 857 km²), Mali (~1 240 192 km²)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e-Bissau",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q5",
@@ -103,7 +107,8 @@
       "explanation": "Lac Volta (~8 502 km²), Lac Nubia (~22 000 km²), Lac Tanganyika (~32 900 km²), Lac Victoria (~69 485 km²)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Volta",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q6",
@@ -124,7 +129,8 @@
       "explanation": "Monts de Cristal (~1 000 m), Monts du Mandara (~1 400 m), Monts Drakensberg (~3 482 m), Mont Kenya (~5 199 m)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Monts_de_Cristal",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q7",
@@ -145,7 +151,8 @@
       "explanation": "Fleuve Okavango (~1 800 km), Fleuve Limpopo (~1 800 km), Fleuve Orange (~2 340 km), Fleuve Congo (~4 700 km)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Orange",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q8",
@@ -166,7 +173,8 @@
       "explanation": "Ghana (~35 000 tonnes), Mali (~50 000 tonnes), Burkina Faso (~60 000 tonnes), Côte d'Ivoire (~140 000 tonnes) en 2020",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Coton_en_Afrique",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q9",
@@ -187,7 +195,8 @@
       "explanation": "Guinée-Bissau (~1,9 million), Guinée (~13,1 million), Sénégal (~16,7 million), Nigeria (~202 million)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guin%C3%A9e-Bissau",
-      "atlasId": "geo_monde"
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_geo_afrique_q10",
@@ -208,6 +217,112 @@
       "explanation": "Ghana (~100 000 barils/jour), Côte d'Ivoire (~35 000 barils/jour), Angola (~1,8 million barils/jour), Nigeria (~2,5 million barils/jour) en 2020",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Industrie_p%C3%A9troli%C3%A8re_en_Angola",
+      "atlasId": "geo_monde",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_geo_asie_q11",
+      "cat": "geo",
+      "question": "Classe ces pays d'Asie du Sud-Est par ordre de superficie, du plus petit au plus grand :",
+      "pool": [
+        "Singapour",
+        "Brunei",
+        "Timor oriental",
+        "Cambodge"
+      ],
+      "correct": [
+        "Singapour",
+        "Brunei",
+        "Timor oriental",
+        "Cambodge"
+      ],
+      "explanation": "Singapour (~728 km²), Brunei (~5 765 km²), Timor oriental (~14 874 km²), Cambodge (~181 035 km²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Asie_du_Sud-Est",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_asie_q12",
+      "cat": "geo",
+      "question": "Classe ces fleuves d'Asie par ordre de longueur, du plus court au plus long :",
+      "pool": [
+        "Mékong",
+        "Gange",
+        "Yangtsé",
+        "Ob"
+      ],
+      "correct": [
+        "Gange",
+        "Mékong",
+        "Yangtsé",
+        "Ob"
+      ],
+      "explanation": "Gange (~2 525 km), Mékong (~4 350 km), Yangtsé (~6 300 km), Ob (~5 410 km)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gange",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_asie_q13",
+      "cat": "geo",
+      "question": "Classe ces îles d'Asie par ordre de population, du plus petit au plus grand :",
+      "pool": [
+        "Bali",
+        "Sri Lanka",
+        "Sumatra",
+        "Java"
+      ],
+      "correct": [
+        "Bali",
+        "Sri Lanka",
+        "Sumatra",
+        "Java"
+      ],
+      "explanation": "Bali (~4,3 millions), Sri Lanka (~22 millions), Sumatra (~58 millions), Java (~151 millions)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Java_(%C3%AEle)",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_asie_q14",
+      "cat": "geo",
+      "question": "Classe ces déserts d'Asie par ordre de superficie, du plus petit au plus grand :",
+      "pool": [
+        "Désert de Gobi",
+        "Désert du Karakoum",
+        "Désert de Thar",
+        "Désert d'Arabie"
+      ],
+      "correct": [
+        "Désert de Thar",
+        "Désert du Karakoum",
+        "Désert de Gobi",
+        "Désert d'Arabie"
+      ],
+      "explanation": "Désert de Thar (~200 000 km²), Désert du Karakoum (~350 000 km²), Désert de Gobi (~1 300 000 km²), Désert d'Arabie (~2 330 000 km²)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9sert_d%27Arabie",
+      "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_asie_q15",
+      "cat": "geo",
+      "question": "Classe ces métropoles d'Asie par altitude moyenne, de la plus basse à la plus haute :",
+      "pool": [
+        "Tokyo",
+        "Mumbai",
+        "Pékin",
+        "Katmandou"
+      ],
+      "correct": [
+        "Mumbai",
+        "Tokyo",
+        "Pékin",
+        "Katmandou"
+      ],
+      "explanation": "Mumbai (~14 m), Tokyo (~40 m), Pékin (~43 m), Katmandou (~1 400 m)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Katmandou",
       "atlasId": "geo_monde"
     }
   ],
@@ -231,7 +346,8 @@
       "explanation": "1687 (théorie de la gravitation de Newton), 1887 (expérience de Michelson-Morley), 1907 (principe d'équivalence d'Einstein), 1915 (prédiction des ondes gravitationnelles)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Relativit%C3%A9_g%C3%A9n%C3%A9rale",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q2",
@@ -252,7 +368,8 @@
       "explanation": "1785 (loi de Coulomb), 1831 (théorie des champs électromagnétiques de Faraday), 1864 (équations de Maxwell), 1895 (théorie de l'électromagnétisme de Lorentz)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Électromagnétisme",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q3",
@@ -273,7 +390,8 @@
       "explanation": "1929 (mesure de la constante de Hubble), 1948 (théorie du Big Bang), 1964 (découverte de la radiation cosmique), 1998 (observation des supernovae)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Cosmologie",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q4",
@@ -294,7 +412,8 @@
       "explanation": "0,01-10 nm (rayons X), 10-400 nm (ultraviolet), 400-700 nm (lumière visible), 700-1000000 nm (infrarouge)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Optique",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q5",
@@ -315,7 +434,8 @@
       "explanation": "1630 (expérience de la vitesse de la lumière), 1887 (expérience de Michelson-Morley), 1905 (théorie de la relativité restreinte d'Einstein), 1905 (prédiction de la dilatation du temps)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Relativit%C3%A9_restreinte",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q6",
@@ -336,7 +456,8 @@
       "explanation": "300 av. J.-C. (théorie de la création de l'univers), 1948 (théorie de l'état stationnaire), 1948 (théorie du Big Bang), 1980 (théorie de l'inflation)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Cosmologie",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q7",
@@ -357,7 +478,8 @@
       "explanation": "1785 (loi de Coulomb), 1831 (théorie des champs électromagnétiques de Faraday), 1887 (découverte de l'effet photoélectrique), 1864 (équations de Maxwell)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Électromagnétisme",
-      "atlasId": "sci_univers"
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
     },
     {
       "id": "sc_sci_chrono_q8",
@@ -378,6 +500,112 @@
       "explanation": "10^12-10^14 Hz (infrarouge), 10^14-10^15 Hz (lumière visible), 10^15-10^17 Hz (ultraviolet), 10^17-10^19 Hz (rayons X)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Optique",
+      "atlasId": "sci_univers",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_sci_chimie_q9",
+      "cat": "sci",
+      "question": "Classe ces éléments chimiques par ordre de numéro atomique, du plus petit au plus grand :",
+      "pool": [
+        "Carbone",
+        "Oxygène",
+        "Fer",
+        "Or"
+      ],
+      "correct": [
+        "Carbone",
+        "Oxygène",
+        "Fer",
+        "Or"
+      ],
+      "explanation": "Carbone (Z=6), Oxygène (Z=8), Fer (Z=26), Or (Z=79)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tableau_p%C3%A9riodique_des_%C3%A9l%C3%A9ments",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_bio_q10",
+      "cat": "sci",
+      "question": "Remets dans l'ordre chronologique ces découvertes en biologie cellulaire :",
+      "pool": [
+        "Microscope de Hooke",
+        "Théorie cellulaire de Schwann",
+        "Découverte de l'ADN",
+        "Séquençage du génome humain"
+      ],
+      "correct": [
+        "Microscope de Hooke",
+        "Théorie cellulaire de Schwann",
+        "Découverte de l'ADN",
+        "Séquençage du génome humain"
+      ],
+      "explanation": "1665 (Microscope de Hooke), 1839 (Théorie cellulaire), 1953 (Découverte de l'ADN), 2003 (Séquençage du génome humain)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Biologie_cellulaire",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_astre_q11",
+      "cat": "sci",
+      "question": "Classe ces planètes du système solaire par ordre d'éloignement au soleil, de la plus proche à la plus éloignée :",
+      "pool": [
+        "Vénus",
+        "Terre",
+        "Mars",
+        "Jupiter"
+      ],
+      "correct": [
+        "Vénus",
+        "Terre",
+        "Mars",
+        "Jupiter"
+      ],
+      "explanation": "Vénus (~0,72 UA), Terre (~1 UA), Mars (~1,52 UA), Jupiter (~5,2 UA)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Syst%C3%A8me_solaire",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_unites_q12",
+      "cat": "sci",
+      "question": "Classe ces unités de mesure de longueur par ordre croissant :",
+      "pool": [
+        "Nanomètre",
+        "Micromètre",
+        "Millimètre",
+        "Centimètre"
+      ],
+      "correct": [
+        "Nanomètre",
+        "Micromètre",
+        "Millimètre",
+        "Centimètre"
+      ],
+      "explanation": "Nanomètre (10^-9 m), Micromètre (10^-6 m), Millimètre (10^-3 m), Centimètre (10^-2 m)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Unit%C3%A9_de_longueur",
+      "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_info_q13",
+      "cat": "sci",
+      "question": "Remets dans l'ordre chronologique ces inventions liées à l'informatique :",
+      "pool": [
+        "Machine analytique de Babbage",
+        "Transistor",
+        "Circuit intégré",
+        "World Wide Web"
+      ],
+      "correct": [
+        "Machine analytique de Babbage",
+        "Transistor",
+        "Circuit intégré",
+        "World Wide Web"
+      ],
+      "explanation": "1837 (Machine analytique), 1947 (Transistor), 1958 (Circuit intégré), 1989 (World Wide Web)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_l%27informatique",
       "atlasId": "sci_univers"
     }
   ],
@@ -401,7 +629,8 @@
       "explanation": "1961 (Mur de Berlin), 1948-1949 (Crise de Berlin), 1968 (Invasion de la Tchécoslovaquie), 1962 (Crise des missiles de Cuba)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_croisades_q2",
@@ -422,7 +651,8 @@
       "explanation": "1113 (Hospitaliers), 1118 (Templiers), 1190 (Teutoniques), 1215 (Cordeliers)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_militaire",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_guerre_froide_q3",
@@ -443,7 +673,8 @@
       "explanation": "1949 (Révolution chinoise), 1950-1953 (Guerre de Corée), 1955-1975 (Guerre du Viêt Nam), 1979-1989 (Invasion soviétique de l'Afghanistan)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_croisades_q4",
@@ -464,7 +695,8 @@
       "explanation": "1097 (Bataille d'Antioche), 1099 (Bataille de Jérusalem), 1187 (Bataille de Hattin), 1396 (Bataille de Nicopolis)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Croisades",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_guerre_froide_q5",
@@ -485,7 +717,8 @@
       "explanation": "1945 (Traité de Yalta), 1945 (Traité de Potsdam), 1955 (Traité de Varsovie), 1975 (Traité de Helsinki)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_croisades_q6",
@@ -506,7 +739,8 @@
       "explanation": "529 (Bénédictins), 1098 (Cisterciens), 1209 (Franciscains), 1216 (Dominicains)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_religieux",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_guerre_froide_q7",
@@ -527,7 +761,8 @@
       "explanation": "1956 (Révolution hongroise), 1948-1949 (Crise de Berlin), 1961 (Construction du Mur de Berlin), 1968 (Invasion de la Tchécoslovaquie)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_croisades_q8",
@@ -548,7 +783,8 @@
       "explanation": "1098 (Comté d'Édesse), 1099 (Royaume de Jérusalem), 1098 (Principauté d'Antioche), 1104 (Comté de Tripoli)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Croisades",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_guerre_froide_q9",
@@ -569,7 +805,8 @@
       "explanation": "1953-1959 (Révolution cubaine), 1961 (Invasion de la baie des Cochons), 1962 (Crise des missiles de Cuba), 1955-1975 (Guerre du Viêt Nam)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide",
-      "atlasId": "hist_fr"
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
     },
     {
       "id": "sc_hist_croisades_q10",
@@ -590,6 +827,112 @@
       "explanation": "1218 (Bataille de Damiette), 1191 (Bataille de Saint-Jean-d'Acre), 1571 (Bataille de Lépante), 1191 (Bataille de Chypre)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Croisades",
+      "atlasId": "hist_fr",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_hist_revfr_q11",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces événements de la Révolution française :",
+      "pool": [
+        "Prise de la Bastille",
+        "Fuite de Varennes",
+        "Exécution de Louis XVI",
+        "Réaction de Thermidor"
+      ],
+      "correct": [
+        "Prise de la Bastille",
+        "Fuite de Varennes",
+        "Exécution de Louis XVI",
+        "Réaction de Thermidor"
+      ],
+      "explanation": "1789 (Prise de la Bastille), 1791 (Fuite de Varennes), 1793 (Exécution de Louis XVI), 1794 (Réaction de Thermidor)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/R%C3%A9volution_fran%C3%A7aise",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_napoleon_q12",
+      "cat": "hist",
+      "question": "Classe ces batailles napoléoniennes par ordre chronologique :",
+      "pool": [
+        "Austerlitz",
+        "Iéna",
+        "Wagram",
+        "Waterloo"
+      ],
+      "correct": [
+        "Austerlitz",
+        "Iéna",
+        "Wagram",
+        "Waterloo"
+      ],
+      "explanation": "1805 (Austerlitz), 1806 (Iéna), 1809 (Wagram), 1815 (Waterloo)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerres_napol%C3%A9oniennes",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_guerre14_q13",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces événements de la Première Guerre mondiale :",
+      "pool": [
+        "Assassinat de François-Ferdinand",
+        "Bataille de Verdun",
+        "Entrée en guerre des États-Unis",
+        "Armistice"
+      ],
+      "correct": [
+        "Assassinat de François-Ferdinand",
+        "Bataille de Verdun",
+        "Entrée en guerre des États-Unis",
+        "Armistice"
+      ],
+      "explanation": "1914 (Assassinat), 1916 (Verdun), 1917 (Entrée en guerre des USA), 1918 (Armistice)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Premi%C3%A8re_Guerre_mondiale",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_rois_q14",
+      "cat": "hist",
+      "question": "Classe ces rois de France par ordre de début de règne, du plus ancien au plus récent :",
+      "pool": [
+        "Louis XIV",
+        "Louis XV",
+        "Louis XVI",
+        "Charles X"
+      ],
+      "correct": [
+        "Louis XIV",
+        "Louis XV",
+        "Louis XVI",
+        "Charles X"
+      ],
+      "explanation": "1643 (Louis XIV), 1715 (Louis XV), 1774 (Louis XVI), 1824 (Charles X)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rois_de_France",
+      "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_ww2_q15",
+      "cat": "hist",
+      "question": "Remets dans l'ordre chronologique ces opérations majeures de la Seconde Guerre mondiale :",
+      "pool": [
+        "Opération Barbarossa",
+        "Bataille de Stalingrad",
+        "Débarquement en Normandie",
+        "Bataille de Berlin"
+      ],
+      "correct": [
+        "Opération Barbarossa",
+        "Bataille de Stalingrad",
+        "Débarquement en Normandie",
+        "Bataille de Berlin"
+      ],
+      "explanation": "1941 (Barbarossa), 1942-1943 (Stalingrad), 1944 (Normandie), 1945 (Berlin)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Seconde_Guerre_mondiale",
       "atlasId": "hist_fr"
     }
   ],
@@ -613,7 +956,8 @@
       "explanation": "Cézanne (1839), Seurat (1859), Van Gogh (1859), Gauguin (1848), donc l'ordre correct est : Cézanne, Gauguin, Seurat, Van Gogh",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Postimpressionnisme",
-      "atlasId": "art_joconde"
+      "atlasId": "art_joconde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_theatre_elis_q2",
@@ -634,7 +978,8 @@
       "explanation": "Roméo et Juliette (1595-1596), Hamlet (1599-1602), Othello (1603-1604), Macbeth (1605-1606)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/William_Shakespeare",
-      "atlasId": "theatre_shakespeare"
+      "atlasId": "theatre_shakespeare",
+      "difficulty": "medium"
     },
     {
       "id": "sc_art_imp_q3",
@@ -655,7 +1000,8 @@
       "explanation": "Fauvisme (1905-1908, 3 ans), Cubisme (1907-1914, 7 ans), Impressionnisme (1870-1900, 30 ans), Post-impressionnisme (1880-1920, 40 ans)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Impressionnisme",
-      "atlasId": "art_joconde"
+      "atlasId": "art_joconde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_theatre_ant_q4",
@@ -676,7 +1022,8 @@
       "explanation": "Délos (sud-est), Épidaure (sud), Dionysos (centre), Athènes (centre)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Théâtre_grec_antique",
-      "atlasId": "theatre_grec"
+      "atlasId": "theatre_grec",
+      "difficulty": "medium"
     },
     {
       "id": "sc_art_imp_q5",
@@ -697,7 +1044,8 @@
       "explanation": "Monet (plus de 2 500 peintures), Renoir (plus de 2 000), Degas (plus de 1 500), Cassatt (environ 400)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Impressionnisme",
-      "atlasId": "art_joconde"
+      "atlasId": "art_joconde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_theatre_elis_q6",
@@ -718,7 +1066,8 @@
       "explanation": "Les Précieuses ridicules (1659), L'École des femmes (1662), Tartuffe (1664), Le Malade imaginaire (1673)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Molière",
-      "atlasId": "theatre_moliere"
+      "atlasId": "theatre_moliere",
+      "difficulty": "medium"
     },
     {
       "id": "sc_art_imp_q7",
@@ -739,7 +1088,8 @@
       "explanation": "Marmottan (environ 2 000 m²), Rodin (environ 18 000 m²), Orsay (environ 57 000 m²), Louvre (environ 72 000 m²)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Musée_d%27Orsay",
-      "atlasId": "art_joconde"
+      "atlasId": "art_joconde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_theatre_ant_q8",
@@ -760,7 +1110,8 @@
       "explanation": "Thasos (nord-est), Delphes (centre), Corinthe (sud), Épidaure (sud)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Théâtre_grec_antique",
-      "atlasId": "theatre_grec"
+      "atlasId": "theatre_grec",
+      "difficulty": "medium"
     },
     {
       "id": "sc_art_imp_q9",
@@ -781,7 +1132,8 @@
       "explanation": "École des Beaux-Arts (1648), École de Barbizon (1830), Académie Julian (1868), École de Paris (fin XIXe siècle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/École_des_Beaux-Arts",
-      "atlasId": "art_joconde"
+      "atlasId": "art_joconde",
+      "difficulty": "medium"
     },
     {
       "id": "sc_theatre_elis_q10",
@@ -802,7 +1154,113 @@
       "explanation": "Marlowe (1564-1593), Shakespeare (1564-1616), Jonson (1572-1637), Webster (1580-1625)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Théâtre_élisabéthain",
-      "atlasId": "theatre_elisabéthain"
+      "atlasId": "theatre_elisabéthain",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_art_renai_q11",
+      "cat": "art",
+      "question": "Classe ces peintres de la Renaissance par ordre de naissance, du plus ancien au plus récent :",
+      "pool": [
+        "Giotto",
+        "Sandro Botticelli",
+        "Léonard de Vinci",
+        "Raphaël"
+      ],
+      "correct": [
+        "Giotto",
+        "Sandro Botticelli",
+        "Léonard de Vinci",
+        "Raphaël"
+      ],
+      "explanation": "Giotto (~1267), Botticelli (1445), Léonard de Vinci (1452), Raphaël (1483)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Renaissance_artistique",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_art_renai_q12",
+      "cat": "art",
+      "question": "Remets dans l'ordre chronologique la construction de ces monuments de la Renaissance :",
+      "pool": [
+        "Dôme de Florence",
+        "Château de Chambord",
+        "Villa Rotonda",
+        "Galerie des Offices"
+      ],
+      "correct": [
+        "Dôme de Florence",
+        "Galerie des Offices",
+        "Château de Chambord",
+        "Villa Rotonda"
+      ],
+      "explanation": "Dôme de Florence (1436), Galerie des Offices (1581), Château de Chambord (1547), Villa Rotonda (1592)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Architecture_de_la_Renaissance",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_art_renai_q13",
+      "cat": "art",
+      "question": "Classe ces œuvres de Léonard de Vinci par date de création, de la plus ancienne à la plus récente :",
+      "pool": [
+        "La Vierge aux rochers",
+        "La Cène",
+        "La Joconde",
+        "Saint Jean-Baptiste"
+      ],
+      "correct": [
+        "La Vierge aux rochers",
+        "La Cène",
+        "La Joconde",
+        "Saint Jean-Baptiste"
+      ],
+      "explanation": "La Vierge aux rochers (1483-1486), La Cène (1495-1498), La Joconde (1503-1519), Saint Jean-Baptiste (1513-1516)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/L%C3%A9onard_de_Vinci",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_art_sculpt_q14",
+      "cat": "art",
+      "question": "Classe ces sculpteurs de la Renaissance par ordre de naissance :",
+      "pool": [
+        "Donatello",
+        "Michel-Ange",
+        "Benvenuto Cellini",
+        "Andrea del Verrocchio"
+      ],
+      "correct": [
+        "Donatello",
+        "Andrea del Verrocchio",
+        "Michel-Ange",
+        "Benvenuto Cellini"
+      ],
+      "explanation": "Donatello (~1386), Verrocchio (1435), Michel-Ange (1475), Cellini (1500)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sculpture_de_la_Renaissance",
+      "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_art_mouv_q15",
+      "cat": "art",
+      "question": "Remets dans l'ordre chronologique ces périodes de l'art italien :",
+      "pool": [
+        "Trecento",
+        "Quattrocento",
+        "Maniérisme",
+        "Haut Renaissance"
+      ],
+      "correct": [
+        "Trecento",
+        "Quattrocento",
+        "Haut Renaissance",
+        "Maniérisme"
+      ],
+      "explanation": "Trecento (XIVe siècle), Quattrocento (XVe siècle), Haut Renaissance (~1490-1527), Maniérisme (XVIe siècle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Art_italien",
+      "atlasId": "art_joconde"
     }
   ],
   "cinema": [
@@ -825,7 +1283,8 @@
       "explanation": "1958 (Le Beau Serge), 1959 (Les Quatre Cents Coups), 1959 (Le Signe du lion), 1960 (À bout de souffle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
     },
     {
       "id": "sc_cinema_anime_techno_q2",
@@ -846,7 +1305,8 @@
       "explanation": "Dessin traditionnel (1988), mélange de techniques (2001), image de synthèse (1995), captation de mouvement (2015)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Film_d%27animation",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
     },
     {
       "id": "sc_cinema_nv_geo_q3",
@@ -867,7 +1327,8 @@
       "explanation": "Bordeaux (44,8° N), Lyon (45,8° N), Paris (48,8° N), Marseille (43,3° N)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
     },
     {
       "id": "sc_cinema_anime_duree_q4",
@@ -888,7 +1349,8 @@
       "explanation": "81 minutes (Toy Story), 91 minutes (Les Minions), 124 minutes (Akira), 125 minutes (Spirited Away)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Film_d%27animation",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
     },
     {
       "id": "sc_cinema_nv_real_q5",
@@ -909,7 +1371,8 @@
       "explanation": "1920 (Rohmer), 1930 (Chabrol et Godard), 1932 (Truffaut)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
     },
     {
       "id": "sc_cinema_nv_scen_q7",
@@ -930,7 +1393,8 @@
       "explanation": "1958 (Le Beau Serge), 1959 (Les Quatre Cents Coups), 1959 (Le Signe du lion), 1960 (À bout de souffle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
-      "atlasId": "cin_oscar"
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
     },
     {
       "id": "sc_cinema_nv_act_q9",
@@ -951,6 +1415,91 @@
       "explanation": "1958 (Le Beau Serge), 1959 (Les Quatre Cents Coups), 1960 (À bout de souffle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle_Vague",
+      "atlasId": "cin_oscar",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_cinema_scifi_q8",
+      "cat": "cinema",
+      "question": "Classe ces films de science-fiction par ordre de sortie au cinéma, du plus ancien au plus récent :",
+      "pool": [
+        "Métropolis",
+        "2001 : L'Odyssée de l'espace",
+        "Star Wars : Un nouvel espoir",
+        "Matrix"
+      ],
+      "correct": [
+        "Métropolis",
+        "2001 : L'Odyssée de l'espace",
+        "Star Wars : Un nouvel espoir",
+        "Matrix"
+      ],
+      "explanation": "Métropolis (1927), 2001 : L'Odyssée de l'espace (1968), Star Wars (1977), Matrix (1999)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Film_de_science-fiction",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_hollywood_q10",
+      "cat": "cinema",
+      "question": "Classe ces réalisateurs par nombre d'Oscars du meilleur réalisateur, du plus petit au plus grand :",
+      "pool": [
+        "Steven Spielberg",
+        "Billy Wilder",
+        "John Ford",
+        "William Wyler"
+      ],
+      "correct": [
+        "Billy Wilder",
+        "Steven Spielberg",
+        "William Wyler",
+        "John Ford"
+      ],
+      "explanation": "Billy Wilder (2 Oscars), Steven Spielberg (2 Oscars), William Wyler (3 Oscars), John Ford (4 Oscars)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Oscar_du_meilleur_r%C3%A9alisateur",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_studios_q11",
+      "cat": "cinema",
+      "question": "Classe ces studios de cinéma par année de fondation, du plus ancien au plus récent :",
+      "pool": [
+        "Universal Pictures",
+        "Paramount Pictures",
+        "Warner Bros.",
+        "Walt Disney Pictures"
+      ],
+      "correct": [
+        "Paramount Pictures",
+        "Universal Pictures",
+        "Warner Bros.",
+        "Walt Disney Pictures"
+      ],
+      "explanation": "Paramount (1912), Universal (1912), Warner Bros. (1923), Walt Disney Pictures (1923)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Major_de_cin%C3%A9ma",
+      "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_western_q12",
+      "cat": "cinema",
+      "question": "Classe ces westerns spaghetti par ordre chronologique de sortie :",
+      "pool": [
+        "Pour une poignée de dollars",
+        "Et pour quelques dollars de plus",
+        "Le Bon, la Brute et le Truand",
+        "Il était une fois dans l'Ouest"
+      ],
+      "correct": [
+        "Pour une poignée de dollars",
+        "Et pour quelques dollars de plus",
+        "Le Bon, la Brute et le Truand",
+        "Il était une fois dans l'Ouest"
+      ],
+      "explanation": "Pour une poignée de dollars (1964), Et pour quelques dollars de plus (1965), Le Bon, la Brute et le Truand (1966), Il était une fois dans l'Ouest (1968)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Western_spaghetti",
       "atlasId": "cin_oscar"
     }
   ],
@@ -974,7 +1523,8 @@
       "explanation": "Warriors de Golden State (7 titres), Bulls de Chicago (8 titres), Lakers de Los Angeles (17 titres), Celtics de Boston (17 titres)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/National_Basketball_Association",
-      "atlasId": "spt_basketball"
+      "atlasId": "spt_basketball",
+      "difficulty": "medium"
     },
     {
       "id": "sc_dopage_chrono_q2",
@@ -995,7 +1545,8 @@
       "explanation": "1988 (Ben Johnson), 1998 (Tour de France et Festina), 2003 (BALCO)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
-      "atlasId": "spt_dopage"
+      "atlasId": "spt_dopage",
+      "difficulty": "medium"
     },
     {
       "id": "sc_nba_records_q3",
@@ -1016,7 +1567,8 @@
       "explanation": "Kevin Durant (2 titres), LeBron James (4 titres), Bill Russell (5 titres), Kareem Abdul-Jabbar (6 titres)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/NBA_Most_Valuable_Player",
-      "atlasId": "spt_basketball"
+      "atlasId": "spt_basketball",
+      "difficulty": "medium"
     },
     {
       "id": "sc_dopage_geographie_q4",
@@ -1037,7 +1589,8 @@
       "explanation": "1894 (Comité international olympique), 1904 (Fédération internationale de football association), 1900 (Union cycliste internationale), 1999 (Agence mondiale antidopage)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Agence_mondiale_antidopage",
-      "atlasId": "spt_dopage"
+      "atlasId": "spt_dopage",
+      "difficulty": "medium"
     },
     {
       "id": "sc_nba_franchises_q5",
@@ -1058,7 +1611,8 @@
       "explanation": "1946 (Celtics de Boston), 1947 (Lakers de Los Angeles), 1949 (Hawks d'Atlanta), 1966 (Bulls de Chicago)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/National_Basketball_Association",
-      "atlasId": "spt_basketball"
+      "atlasId": "spt_basketball",
+      "difficulty": "medium"
     },
     {
       "id": "sc_dopage_sanctions_q6",
@@ -1079,7 +1633,8 @@
       "explanation": "Avertissement (minimum), suspension temporaire (moyen), perte de titres (sévère), interdiction à vie (maximum)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
-      "atlasId": "spt_dopage"
+      "atlasId": "spt_dopage",
+      "difficulty": "medium"
     },
     {
       "id": "sc_nba_coaches_q7",
@@ -1100,7 +1655,8 @@
       "explanation": "Gregg Popovich (5 titres), Pat Riley (5 titres), Red Auerbach (9 titres), Phil Jackson (11 titres)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/National_Basketball_Association",
-      "atlasId": "spt_basketball"
+      "atlasId": "spt_basketball",
+      "difficulty": "medium"
     },
     {
       "id": "sc_dopage_substances_q8",
@@ -1121,7 +1677,8 @@
       "explanation": "1976 (stéroïdes anabolisants), 1976 (cocaïne), 1998 (cannabinoïdes), 2000 (EPO)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
-      "atlasId": "spt_dopage"
+      "atlasId": "spt_dopage",
+      "difficulty": "medium"
     },
     {
       "id": "sc_nba_joueurs_q9",
@@ -1142,7 +1699,8 @@
       "explanation": "Magic Johnson (3 titres), LeBron James (4 titres), Michael Jordan (6 titres), Kareem Abdul-Jabbar (6 titres)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/NBA_Finals_MVP",
-      "atlasId": "spt_basketball"
+      "atlasId": "spt_basketball",
+      "difficulty": "medium"
     },
     {
       "id": "sc_dopage_cas_q10",
@@ -1163,7 +1721,113 @@
       "explanation": "1988 (Ben Johnson), 2007 (Marion Jones), 2006 (Floyd Landis), 2012 (Lance Armstrong)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Dopage",
-      "atlasId": "spt_dopage"
+      "atlasId": "spt_dopage",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_foot_ballon_q11",
+      "cat": "sport",
+      "question": "Classe ces joueurs de football par nombre de Ballons d'Or, du plus petit au plus grand :",
+      "pool": [
+        "George Weah",
+        "Ronaldo",
+        "Michel Platini",
+        "Lionel Messi"
+      ],
+      "correct": [
+        "George Weah",
+        "Ronaldo",
+        "Michel Platini",
+        "Lionel Messi"
+      ],
+      "explanation": "George Weah (1 Ballon d'Or), Ronaldo (2), Michel Platini (3), Lionel Messi (8)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ballon_d%27or",
+      "atlasId": "spt_football"
+    },
+    {
+      "id": "sc_foot_cdm_q12",
+      "cat": "sport",
+      "question": "Remets dans l'ordre chronologique ces éditions de la Coupe du monde de football :",
+      "pool": [
+        "Suisse 1954",
+        "Angleterre 1966",
+        "Mexique 1970",
+        "Espagne 1982"
+      ],
+      "correct": [
+        "Suisse 1954",
+        "Angleterre 1966",
+        "Mexique 1970",
+        "Espagne 1982"
+      ],
+      "explanation": "1954 (Suisse), 1966 (Angleterre), 1970 (Mexique), 1982 (Espagne)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_football",
+      "atlasId": "spt_football"
+    },
+    {
+      "id": "sc_foot_stades_q13",
+      "cat": "sport",
+      "question": "Classe ces stades de football par capacité d'accueil, du plus petit au plus grand :",
+      "pool": [
+        "Stade Vélodrome",
+        "Santiago Bernabéu",
+        "Camp Nou",
+        "Wembley"
+      ],
+      "correct": [
+        "Santiago Bernabéu",
+        "Stade Vélodrome",
+        "Wembley",
+        "Camp Nou"
+      ],
+      "explanation": "Santiago Bernabéu (~81 000 places), Vélodrome (~67 000), Wembley (~90 000), Camp Nou (~99 000)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Stade_de_football",
+      "atlasId": "spt_football"
+    },
+    {
+      "id": "sc_foot_cld_q14",
+      "cat": "sport",
+      "question": "Classe ces clubs de football par nombre de Ligues des Champions remportées, du plus petit au plus grand :",
+      "pool": [
+        "Chelsea FC",
+        "FC Porto",
+        "FC Barcelone",
+        "Real Madrid"
+      ],
+      "correct": [
+        "FC Porto",
+        "Chelsea FC",
+        "FC Barcelone",
+        "Real Madrid"
+      ],
+      "explanation": "FC Porto (2 titres), Chelsea FC (2 titres), FC Barcelone (5 titres), Real Madrid (15 titres)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ligue_des_champions_de_l%27UEFA",
+      "atlasId": "spt_football"
+    },
+    {
+      "id": "sc_foot_euro_q15",
+      "cat": "sport",
+      "question": "Remets dans l'ordre chronologique ces finales de l'Euro de football :",
+      "pool": [
+        "Euro 1984 (France)",
+        "Euro 2000 (France)",
+        "Euro 2016 (Portugal)",
+        "Euro 2020 (Italie)"
+      ],
+      "correct": [
+        "Euro 1984 (France)",
+        "Euro 2000 (France)",
+        "Euro 2016 (Portugal)",
+        "Euro 2020 (Italie)"
+      ],
+      "explanation": "1984 (France), 2000 (France), 2016 (Portugal), 2020 (Italie)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Championnat_d%27Europe_de_football",
+      "atlasId": "spt_football"
     }
   ],
   "gastro": [
@@ -1186,7 +1850,8 @@
       "explanation": "Paprika : 10 000 à 20 000 μmol TE/100g, Cumin : 20 000 à 30 000 μmol TE/100g, Gingembre : 30 000 à 40 000 μmol TE/100g, Curcuma : 40 000 à 50 000 μmol TE/100g",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Épice",
-      "atlasId": "gst_epices"
+      "atlasId": "gst_epices",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_origine_q2",
@@ -1207,7 +1872,8 @@
       "explanation": "Thym : originaire d'Europe du Nord, Romarin : originaire du bassin méditerranéen, Laurier : originaire de la région méditerranéenne, Sarımsak : originaire de la Turquie",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Thym",
-      "atlasId": "gst_aromates"
+      "atlasId": "gst_aromates",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_chrono_q3",
@@ -1228,7 +1894,8 @@
       "explanation": "Maïs : domestiqué il y a environ 9 000 ans, Haricot : domestiqué il y a environ 8 000 ans, Pomme de terre : découverte par les Incas il y a environ 7 000 ans, Tomate : découverte par les Aztèques il y a environ 2 000 ans",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Pomme_de_terre",
-      "atlasId": "gst_aliments"
+      "atlasId": "gst_aliments",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_classement_q4",
@@ -1249,7 +1916,8 @@
       "explanation": "Huile d'olive : 0,7 à 1,5% d'oméga-3, Huile de noix : 2 à 3% d'oméga-3, Huile de colza : 8 à 10% d'oméga-3, Huile de lin : 50 à 60% d'oméga-3",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Huile_végétale",
-      "atlasId": "gst_huiles"
+      "atlasId": "gst_huiles",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_origine_q5",
@@ -1270,7 +1938,8 @@
       "explanation": "Mangue : originaire d'Asie du Sud-Est, Ananas : originaire d'Amérique du Sud, Pamplemousse : originaire d'Amérique du Nord, Orange : originaire de Chine",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Mangue",
-      "atlasId": "gst_fruits"
+      "atlasId": "gst_fruits",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_chrono_q6",
@@ -1291,7 +1960,8 @@
       "explanation": "Crème brûlée : créée au XVIIe siècle, Mille-feuille : créée au XVIIIe siècle, Tarte Tatin : créée au XIXe siècle, Éclair : créé au XIXe siècle",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Tarte_Tatin",
-      "atlasId": "gst_desserts"
+      "atlasId": "gst_desserts",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_classement_q7",
@@ -1312,7 +1982,8 @@
       "explanation": "Fromage blanc : 0 à 10% de matière grasse, Cottage : 10 à 20% de matière grasse, Feta : 20 à 30% de matière grasse, Brie : 30 à 40% de matière grasse",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Fromage_blanc",
-      "atlasId": "gst_fromages"
+      "atlasId": "gst_fromages",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_origine_q8",
@@ -1333,7 +2004,8 @@
       "explanation": "Whisky : originaire d'Écosse, Vodka : originaire de Russie, Rakı : originaire de Turquie, Pastis : originaire de France",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Whisky",
-      "atlasId": "gst_boissons"
+      "atlasId": "gst_boissons",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_chrono_q9",
@@ -1354,7 +2026,8 @@
       "explanation": "Carotte : domestiquée il y a environ 1 000 ans, Poivron : domestiqué il y a environ 500 ans, Aubergine : introduite en Europe il y a environ 400 ans, Courgette : introduite en Europe il y a environ 200 ans",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Poivron",
-      "atlasId": "gst_legumes"
+      "atlasId": "gst_legumes",
+      "difficulty": "medium"
     },
     {
       "id": "sc_gastro_classement_q10",
@@ -1375,7 +2048,113 @@
       "explanation": "Riz : 0,5 à 1,5% de fibres, Blé : 2 à 3% de fibres, Orge : 4 à 5% de fibres, Avoine : 8 à 10% de fibres",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Riz",
+      "atlasId": "gst_cereales",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_gastro_vins_q11",
+      "cat": "gastro",
+      "question": "Classe ces vins par leur teneur en sucre résiduel, du plus sec au plus doux :",
+      "pool": [
+        "Brut nature",
+        "Extra brut",
+        "Demi-sec",
+        "Doux"
+      ],
+      "correct": [
+        "Brut nature",
+        "Extra brut",
+        "Demi-sec",
+        "Doux"
+      ],
+      "explanation": "Brut nature (< 3 g/L), Extra brut (< 6 g/L), Demi-sec (32-50 g/L), Doux (> 50 g/L)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vin_effervescent",
+      "atlasId": "gst_boissons"
+    },
+    {
+      "id": "sc_gastro_viandes_q12",
+      "cat": "gastro",
+      "question": "Classe ces viandes par leur teneur en fer, du plus faible au plus élevé :",
+      "pool": [
+        "Porc",
+        "Veau",
+        "Bœuf",
+        "Agneau"
+      ],
+      "correct": [
+        "Porc",
+        "Veau",
+        "Bœuf",
+        "Agneau"
+      ],
+      "explanation": "Porc (~0,5 à 1 mg/100g), Veau (~0,7 mg/100g), Bœuf (~2 à 3 mg/100g), Agneau (~2,5 à 3,5 mg/100g)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Viande",
+      "atlasId": "gst_viandes"
+    },
+    {
+      "id": "sc_gastro_techniques_q13",
+      "cat": "gastro",
+      "question": "Remets dans l'ordre chronologique l'invention de ces techniques de conservation :",
+      "pool": [
+        "Appertisation",
+        "Pasteurisation",
+        "Séchage",
+        "Réfrigération industrielle"
+      ],
+      "correct": [
+        "Séchage",
+        "Appertisation",
+        "Pasteurisation",
+        "Réfrigération industrielle"
+      ],
+      "explanation": "Séchage (Antiquité), Appertisation (1795), Pasteurisation (1864), Réfrigération industrielle (fin XIXe siècle)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Conservation_des_aliments",
+      "atlasId": "gst_techniques"
+    },
+    {
+      "id": "sc_gastro_pates_q14",
+      "cat": "gastro",
+      "question": "Classe ces types de pâtes par ordre de taille moyenne, du plus petit au plus grand :",
+      "pool": [
+        "Orzo",
+        "Penne",
+        "Fusilli",
+        "Lasagne"
+      ],
+      "correct": [
+        "Orzo",
+        "Penne",
+        "Fusilli",
+        "Lasagne"
+      ],
+      "explanation": "Orzo (grain de riz, ~1 cm), Penne (~4 cm), Fusilli (~5-7 cm), Lasagne (feuille de ~25 cm)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/P%C3%A2tes_alimentaires",
       "atlasId": "gst_cereales"
+    },
+    {
+      "id": "sc_gastro_condiments_q15",
+      "cat": "gastro",
+      "question": "Classe ces condiments par leur origine géographique, d'ouest en est :",
+      "pool": [
+        "Moutarde de Dijon",
+        "Sauce soja",
+        "Nuoc-mâm",
+        "Ketchup"
+      ],
+      "correct": [
+        "Ketchup",
+        "Moutarde de Dijon",
+        "Sauce soja",
+        "Nuoc-mâm"
+      ],
+      "explanation": "Ketchup (Amérique du Nord), Moutarde de Dijon (Europe de l'Ouest), Sauce soja (Chine), Nuoc-mâm (Asie du Sud-Est)",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Condiment",
+      "atlasId": "gst_epices"
     }
   ],
   "mytho": [
@@ -1398,7 +2177,8 @@
       "explanation": "L'ordre exact est débattu, mais généralement accepté comme suit : 1er travail (cerfs), 5e (écuries), 2e (Hydre), 12e (Cerbère).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Travaux_d%27Hercule",
-      "atlasId": "mytho_hercule"
+      "atlasId": "mytho_hercule",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_geo_q2",
@@ -1419,7 +2199,8 @@
       "explanation": "Les coordonnées géographiques permettent de les classer ainsi : Olympe (nord), Ida (nord-ouest), Olympus (centre), Cythère (sud).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Olympe",
-      "atlasId": "mytho_olympus"
+      "atlasId": "mytho_olympus",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_hier_q3",
@@ -1440,7 +2221,8 @@
       "explanation": "Zeus (roi), Poséidon (frère et dieu de la mer), Hadès (frère et dieu des enfers), Héra (sœur et épouse de Zeus).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Panth%C3%A9on_de_la_mythologie_grecque",
-      "atlasId": "mytho_zeus"
+      "atlasId": "mytho_zeus",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mythochrono_q4",
@@ -1461,7 +2243,8 @@
       "explanation": "Énée quitte Troie en 1200 av. J.-C., naissance de Romulus et Rémus en 771 av. J.-C., fondation de Rome en 753 av. J.-C., enlèvement des Sabines peu après.",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Fondation_de_Rome",
-      "atlasId": "mytho_rome"
+      "atlasId": "mytho_rome",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_dur_q5",
@@ -1482,7 +2265,8 @@
       "explanation": "Tullus Hostilius (31 ans), Romulus (40 ans), Numa Pompilius (43 ans), Tarquin l'Ancien (44 ans selon certaines sources).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Rois_de_Rome",
-      "atlasId": "mytho_rois"
+      "atlasId": "mytho_rois",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_long_q6",
@@ -1503,7 +2287,8 @@
       "explanation": "Scamandre (~100 km), Événos (~160 km), Alphée (~240 km), Achéloos (~330 km).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Ach%C3%A9loos",
-      "atlasId": "mytho_fleuves"
+      "atlasId": "mytho_fleuves",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_pop_q7",
@@ -1524,7 +2309,8 @@
       "explanation": "Délos (quelques milliers), Sparte (~10 000), Corinthe (~50 000), Athènes (~150 000 à son apogée).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ath%C3%A8nes",
-      "atlasId": "mytho_villes"
+      "atlasId": "mytho_villes",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_mont_q8",
@@ -1545,7 +2331,8 @@
       "explanation": "Cythère (~740 m), Parnasse (~1 245 m), Ida (~1 770 m), Olympe (~2 917 m).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Olympe",
-      "atlasId": "mytho_monts"
+      "atlasId": "mytho_monts",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_trav_q9",
@@ -1566,7 +2353,8 @@
       "explanation": "L'ordre de difficulté est subjectif mais souvent considéré comme suit : cerfs (premier et facile), écuries (sale mais pas mortel), Hydre (mortelle et cachée), Cerbère (garde des enfers).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Travaux_d%27Hercule",
-      "atlasId": "mytho_hercule"
+      "atlasId": "mytho_hercule",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mytho_gene_q10",
@@ -1587,7 +2375,134 @@
       "explanation": "Ouranos (première génération), Cronos (fils d'Ouranos), Zeus (fils de Cronos), Hadès (fils de Cronos, frère de Zeus).",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Panth%C3%A9on_de_la_mythologie_grecque",
-      "atlasId": "mytho_zeus"
+      "atlasId": "mytho_zeus",
+      "difficulty": "medium"
+    },
+    {
+      "id": "sc_mytho_chrono_q4",
+      "cat": "mytho",
+      "question": "Classe les événements de la fondation de Rome :",
+      "pool": [
+        "Départ d'Énée de Troie",
+        "Rhea Silvia donne naissance à Romulus et Rémus",
+        "Fondation de Rome",
+        "Enlèvement des Sabines"
+      ],
+      "correct": [
+        "Départ d'Énée de Troie",
+        "Rhea Silvia donne naissance à Romulus et Rémus",
+        "Fondation de Rome",
+        "Enlèvement des Sabines"
+      ],
+      "explanation": "Départ de Troie (~1184 av. J.-C.), Naissance des jumeaux (~771 av. J.-C.), Fondation de Rome (753 av. J.-C.), Enlèvement des Sabines (peu après 753 av. J.-C.).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fondation_de_Rome",
+      "atlasId": "mytho_fondation"
+    },
+    {
+      "id": "sc_mytho_monstres_q5",
+      "cat": "mytho",
+      "question": "Classe ces monstres de la mythologie grecque par leur nombre de têtes, du moins au plus :",
+      "pool": [
+        "Sphinx",
+        "Gorgone (Méduse)",
+        "Cerbère",
+        "Hydre de Lerne"
+      ],
+      "correct": [
+        "Sphinx",
+        "Gorgone (Méduse)",
+        "Cerbère",
+        "Hydre de Lerne"
+      ],
+      "explanation": "Sphinx (1 tête humaine), Gorgone (1 tête), Cerbère (3 têtes de chien), Hydre de Lerne (9 têtes).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cr%C3%A9atures_fantastiques_de_la_mythologie_grecque",
+      "atlasId": "mytho_monstres"
+    },
+    {
+      "id": "sc_mytho_troie_q6",
+      "cat": "mytho",
+      "question": "Remets dans l'ordre chronologique ces étapes de la guerre de Troie :",
+      "pool": [
+        "Jugement de Pâris",
+        "Enlèvement d'Hélène",
+        "Débarquement des Grecs",
+        "Ruse du Cheval de Troie"
+      ],
+      "correct": [
+        "Jugement de Pâris",
+        "Enlèvement d'Hélène",
+        "Débarquement des Grecs",
+        "Ruse du Cheval de Troie"
+      ],
+      "explanation": "Jugement de Pâris (avant la guerre), Enlèvement d'Hélène (déclencheur), Débarquement à Troie (début du siège), Cheval de Troie (fin du siège).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_de_Troie",
+      "atlasId": "mytho_troie"
+    },
+    {
+      "id": "sc_mytho_heros_q7",
+      "cat": "mytho",
+      "question": "Classe ces héros de la mythologie grecque par génération, du plus ancien au plus récent :",
+      "pool": [
+        "Persée",
+        "Héraclès",
+        "Achille",
+        "Ulysse"
+      ],
+      "correct": [
+        "Persée",
+        "Héraclès",
+        "Achille",
+        "Ulysse"
+      ],
+      "explanation": "Persée (avant la génération des Argonautes), Héraclès (contemporain des Argonautes), Achille (guerre de Troie), Ulysse (après la guerre de Troie).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/H%C3%A9ros_de_la_mythologie_grecque",
+      "atlasId": "mytho_heroes"
+    },
+    {
+      "id": "sc_mytho_marine_q8",
+      "cat": "mytho",
+      "question": "Classe ces créatures marines par leur niveau de dangerosité dans les récits, de la plus inoffensive à la plus fatale :",
+      "pool": [
+        "Néréides",
+        "Sirènes",
+        "Charybde",
+        "Scylla"
+      ],
+      "correct": [
+        "Néréides",
+        "Sirènes",
+        "Charybde",
+        "Scylla"
+      ],
+      "explanation": "Néréides (bienveillantes), Sirènes (dangereuses par le chant), Charybde (crée un tourbillon mortel), Scylla (déchire et dévore les marins).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cr%C3%A9atures_marines_de_la_mythologie_grecque",
+      "atlasId": "mytho_marine"
+    },
+    {
+      "id": "sc_mytho_metamorph_q9",
+      "cat": "mytho",
+      "question": "Remets dans l'ordre chronologique ces métamorphoses célèbres racontées par Ovide :",
+      "pool": [
+        "Daphné en laurier",
+        "Arachné en araignée",
+        "Narcisse en fleur",
+        "Orphée en cygne"
+      ],
+      "correct": [
+        "Daphné en laurier",
+        "Arachné en araignée",
+        "Narcisse en fleur",
+        "Orphée en cygne"
+      ],
+      "explanation": "Daphné (Livre I), Arachné (Livre VI), Narcisse (Livre III), Orphée (Livre XI).",
+      "xp": 20,
+      "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9tamorphoses_(Ovide)",
+      "atlasId": "mytho_metamorphoses"
     }
   ],
   "chateaux": [
@@ -1610,7 +2525,8 @@
       "explanation": "Château d'Amboise (XIe siècle), Château de Blois (XIIIe siècle), Château de Chenonceau (XVe siècle), Château de Chambord (XVIe siècle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Amboise",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_palais_europe_q2",
@@ -1631,7 +2547,8 @@
       "explanation": "Palais de Versailles (~800 000 m²), Palais de l'Alcázar de Madrid (~150 000 m²), Palais de Buckingham (~77 000 m²), Palais du Quirinal (~110 000 m²)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_chateaux_france_q3",
@@ -1652,7 +2569,8 @@
       "explanation": "Château de Pierrefonds (49,3°N), Château de Chambord (47,6°N), Château de Chenonceau (47,3°N), Château de Villandry (47,1°N)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Pierrefonds",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_palais_royaux_q4",
@@ -1673,7 +2591,8 @@
       "explanation": "Château de Windsor (XIe siècle), Palais de Versailles (XVIIe siècle), Palais du Quirinal (XVIe siècle), Palais de Buckingham (XVIIIe siècle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Windsor",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_chateaux_loire_q5",
@@ -1694,7 +2613,8 @@
       "explanation": "Château d'Amboise (XIe siècle), Château de Blois (XIIIe siècle), Château de Chaumont-sur-Loire (XVe siècle), Château de Chambord (XVIe siècle)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_d%27Amboise",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_palais_europe_q6",
@@ -1715,7 +2635,8 @@
       "explanation": "Palais de l'Alcázar de Madrid (~100 m), Palais de Versailles (~60 m), Palais du Quirinal (~50 m), Palais de Buckingham (~40 m)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_chateaux_france_q7",
@@ -1736,7 +2657,8 @@
       "explanation": "Château de Villandry (0,3°E), Château de Chenonceau (1,3°E), Château de Chambord (1,5°E), Château de Pierrefonds (3,0°E)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Ch%C3%A2teau_de_Villandry",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     },
     {
       "id": "sc_palais_royaux_q8",
@@ -1757,7 +2679,8 @@
       "explanation": "Palais de Versailles (~1000 personnes), Château de Windsor (~500 personnes), Palais de Buckingham (~400 personnes), Palais du Quirinal (~200 personnes)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
-      "atlasId": "chateaux_france"
+      "atlasId": "chateaux_france",
+      "difficulty": "medium"
     }
   ],
   "extended": [
@@ -1780,7 +2703,8 @@
       "explanation": "Vostok 1 (1961), Apollo 11 (1969), Voyager 1 (1977), International Space Station (1998)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Programme_Apollo",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "le_corbusier_buildings",
@@ -1801,7 +2725,8 @@
       "explanation": "Villa Savoye (1928), Unité d'Habitation (1952), Chapelle de Notre-Dame du Haut (1955), Cabanon de Le Corbusier (1952)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "zaha_hadid_buildings",
@@ -1822,7 +2747,8 @@
       "explanation": "Guangzhou Opera House (2010), London Aquatics Centre (2012), Heydar Aliyev Center (2012), Wangjing SOHO (2014)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Zaha_Hadid",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "space_agency_foundations",
@@ -1843,7 +2769,8 @@
       "explanation": "NASA (1958), ESA (1975), Roscosmos (1992), CNSA (1993)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/NASA",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "le_corbusier_styles",
@@ -1864,7 +2791,8 @@
       "explanation": "Purisme (1910), International Style (1920), Brutalisme (1950), Expressionnisme (1960)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "space_mission_durations",
@@ -1885,7 +2813,8 @@
       "explanation": "Apollo 11 (8 jours), New Horizons (9 ans), Voyager 1 (44 ans), International Space Station (environ 20 ans de présence continue)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Programme_Apollo",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "zaha_hadid_awards",
@@ -1906,7 +2835,8 @@
       "explanation": "Stirling Prize (2010), RIBA Royal Gold Medal (2015), Pritzker Architecture Prize (2004), Jane Drew Prize (2012)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Zaha_Hadid",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "le_corbusier_books",
@@ -1927,7 +2857,8 @@
       "explanation": "L'Art décoratif d'aujourd'hui (1925), Vers une architecture (1923), Urbanisme (1929), La Ville radieuse (1935)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "space_agency_budgets",
@@ -1948,7 +2879,8 @@
       "explanation": "CNSA (environ 11 milliards de dollars), Roscosmos (environ 20 milliards de dollars), ESA (environ 22 milliards de dollars), NASA (environ 23 milliards de dollars)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/NASA",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "le_corbusierprojects_costs",
@@ -1969,7 +2901,8 @@
       "explanation": "Cabanon de Le Corbusier (environ 100 000 dollars), Villa Savoye (environ 150 000 dollars), Chapelle de Notre-Dame du Haut (environ 200 000 dollars), Unité d'Habitation (environ 1 million de dollars)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     }
   ],
   "litt": [
@@ -1992,7 +2925,8 @@
       "explanation": "1945 (Senghor), 1954 (Beti), 1971 (Lopès), 1972 (Kourouma)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_africaine",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_lati_q2",
@@ -2013,7 +2947,8 @@
       "explanation": "1975 (L'automne), 1967 (Cent ans), 1981 (Chronique), 1985 (L'amour)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_afro_q3",
@@ -2034,7 +2969,8 @@
       "explanation": "1959 (Okri), 1938 (Ngugi), 1930 (Achebe), 1934 (Soyinka)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_africaine",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_lati_q4",
@@ -2055,7 +2991,8 @@
       "explanation": "19,3°N (Mexique), 10°S (Pérou), 30°S (Chili), 34°S (Argentine)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Am%C3%A9rique_du_Sud",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_lati_q6",
@@ -2076,7 +3013,8 @@
       "explanation": "1899 (Borges), 1927 (García Márquez), 1936 (Vargas Llosa), 1942 (Allende)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_latin-am%C3%A9ricaine",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_afro_q7",
@@ -2097,7 +3035,8 @@
       "explanation": "1 prix (Couto), 2 prix (Ngugi), 3 prix (Achebe), 4 prix (Soyinka)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_africaine",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_lati_q8",
@@ -2118,7 +3057,8 @@
       "explanation": "moins lu (Essai), moins représenté (Théâtre), populaire (Poésie), le plus lu (Roman)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Litt%C3%A9rature_latin-am%C3%A9ricaine",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_litt_lati_q10",
@@ -2139,7 +3079,8 @@
       "explanation": "1924 (Twenty Love), 1952 (The Captain's), 1952 (Full Woman), 1974 (Memoirs)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Pablo_Neruda",
-      "atlasId": "litt_hugo"
+      "atlasId": "litt_hugo",
+      "difficulty": "medium"
     }
   ],
   "mixed": [
@@ -2162,7 +3103,8 @@
       "explanation": "1712 (machine à vapeur), 1804 (locomotive à vapeur), 1837 (roue à aubes), 1884 (turbine à vapeur)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Brevet_d%27invention",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_geo_q2",
@@ -2183,7 +3125,8 @@
       "explanation": "Athènes (23,7° E), Rome (12,5° E), Paris (2,3° E), Londres (0,1° O)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Longitude",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_chrono_q3",
@@ -2204,7 +3147,8 @@
       "explanation": "1789 (Révolution française), 1815 (Bataille de Waterloo), 1815 (Congrès de Vienne), 1861-1865 (Guerre de Sécession)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_France",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_geo_q4",
@@ -2225,7 +3169,8 @@
       "explanation": "Mont Everest (27,9° N), Kilimanjaro (3,1° S), Aconcagua (32,7° S), Mont Blanc (45,8° N)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Latitude",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_chrono_q5",
@@ -2246,7 +3191,8 @@
       "explanation": "1687 (gravitation), 1898 (radium), 1928 (pénicilline), 1953 (structure de l'ADN)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_sciences",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_geo_q6",
@@ -2267,7 +3213,8 @@
       "explanation": "Italie (301 338 km²), Allemagne (357 021 km²), Espagne (505 992 km²), France (551 695 km²)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Superficie",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_chrono_q7",
@@ -2288,7 +3235,8 @@
       "explanation": "1804 (locomotive), 1817 (bicyclette), 1886 (automobile), 1903 (avion)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_transports",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_geo_q8",
@@ -2309,7 +3257,8 @@
       "explanation": "Toulouse (479 054 hab.), Lyon (513 275 hab.), Marseille (863 310 hab.), Bordeaux (257 068 hab.)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/D%C3%A9mographie",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     },
     {
       "id": "sc_mixed_geo_q10",
@@ -2330,7 +3279,8 @@
       "explanation": "Canada (42,0° N), Russie (61,5° N), Chine (35,8° N), Japon (36,2° N)",
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Latitude",
-      "atlasId": "ext_philo"
+      "atlasId": "ext_philo",
+      "difficulty": "medium"
     }
   ]
 }

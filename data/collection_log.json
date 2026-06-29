@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-06-23T13:30:08.943076",
+    "player_id": "2026-06-18_8761",
+    "n_answers": 0,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-06-23T13:31:53.983513",
+    "player_id": "2026-06-18_8761",
+    "n_answers": 0,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-06-23T13:32:11.073437",
+    "player_id": "2026-06-18_8761",
+    "n_answers": 0,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-06-23T13:32:24.159063",
+    "player_id": "2026-06-18_8761",
+    "n_answers": 6,
+    "status": "success"
+  }
+]

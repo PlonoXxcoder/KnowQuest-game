@@ -480,15 +480,6 @@
       font-size: 14px;
     }
 
-    .shop-details {
-      text-align: left;
-    }
-
-    .shop-name {
-      font-weight: 900;
-      font-size: 14px;
-    }
-
     .shop-desc {
       font-size: 11px;
       color: var(--muted);
@@ -1794,44 +1785,44 @@
     }
 
     .map-footer {
-      padding: 12px 16px;
+      padding: 10px 14px 12px;
       background: #0f1a2e;
       border-top: 2px solid #2a3a5a;
       flex-shrink: 0;
     }
 
     .map-feedback {
-      text-align: center;
-      color: #fff;
-      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      font-size: 13px;
       font-weight: 800;
-      min-height: 30px;
-      margin-bottom: 8px;
+      min-height: 20px;
+      text-align: left;
     }
 
-    .map-feedback.correct {
-      color: var(--green);
-    }
-
-    .map-feedback.wrong {
-      color: var(--red);
-    }
+    .map-feedback.correct { color: var(--green); }
+    .map-feedback.wrong   { color: var(--red); }
 
     .btn-hint {
       flex: 1;
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #fff;
-      font-weight: 800;
+      background: rgba(255,215,0,0.1);
+      border: 1.5px solid rgba(255,215,0,0.35);
+      color: var(--gold);
+      font-weight: 900;
       font-size: 11px;
       padding: 8px 4px;
       border-radius: 10px;
       cursor: pointer;
+      transition: background .15s, opacity .2s;
     }
 
-    .btn-hint:active {
-      background: rgba(255, 255, 255, 0.18);
+    .btn-hint:active  { background: rgba(255,215,0,0.22); }
+    .btn-hint:disabled{ opacity: .4; cursor: default; }
+
+    @keyframes chronoPulse {
+      0%,100% { transform: scale(1); }
+      50%      { transform: scale(1.15); }
     }
+    .chrono-urgent { animation: chronoPulse .5s infinite; }
 
     .map-mode-card {
       background: rgba(255, 255, 255, 0.06);
@@ -3322,6 +3313,48 @@
       gap: 8px;
     }
 
+    /* Flash rouge lors de la perte de vie */
+    .flash-red {
+      position: absolute;
+      inset: 0;
+      background-color: transparent;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .flash-red.active {
+      animation: screenFlashRed 0.5s ease-out;
+    }
+
+    @keyframes screenFlashRed {
+      0% {
+        background-color: rgba(255, 75, 75, 0.45);
+      }
+
+      100% {
+        background-color: transparent;
+      }
+    }
+
+    /* Animation de cœur brisé */
+    @keyframes heartBreak {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.5) rotate(-20deg);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .heart-lost-anim {
+      animation: heartBreak 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
     @keyframes slideDown {
       from {
         opacity: 0;
@@ -3578,6 +3611,9 @@
         <button
           style="width:100%;margin-top:12px;background:linear-gradient(135deg,#1a1a2e,#2d2d4e);color:var(--gold);border:2px solid var(--gold);border-radius:16px;padding:14px;font-weight:900;font-size:15px;cursor:pointer;"
           onclick="openAtlas()">🌍 Mon Atlas — <span id="atlasCountBtn">0</span> fiches</button>
+        <button
+          style="width:100%;margin-top:10px;background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;border:none;border-radius:16px;padding:14px;font-weight:900;font-size:15px;cursor:pointer;"
+          onclick="openObjectivesModal()">🎯 Objectifs personnalisés & 🔥 Streaks</button>
         <div class="section-divider">📊 Stats par Catégorie</div>
         <div id="categoryStats" class="stats-chart"></div>
         <div class="section-divider">⏱️ Historique</div>
@@ -3610,6 +3646,7 @@
 
     <!-- QUIZ SCREEN -->
     <div id="scrQuiz" class="screen">
+      <div class="flash-red" id="screenFlashEl"></div>
       <div class="q-header">
         <button class="q-close" onclick="exitQuiz()">✕</button>
         <div class="q-bar-wrap">
@@ -3833,17 +3870,36 @@
         <div id="globeViz" style="width:100%;height:100%"></div>
       </div>
       <div class="map-footer">
-        <div class="map-feedback" id="mapFeedback"></div>
-        <div style="display:flex;gap:6px;margin-bottom:8px">
-          <button class="btn-hint" onclick="mapHint('continent')">💎50 🌍 Continent</button>
-          <button class="btn-hint" onclick="mapHint('letter')">💎30 🔤 Initiale</button>
-          <button class="btn-hint" onclick="mapHint('radar')">💎80 📡 Zone</button>
+        <!-- Chrono + feedback -->
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+          <div id="mapChronoWrap" style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);border-radius:10px;padding:5px 10px">
+            <span style="font-size:15px">⏱️</span>
+            <span id="mapChronoVal" style="font-size:18px;font-weight:900;color:var(--gold);min-width:28px;text-align:right">20</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.5);font-weight:700">s</span>
+            <span id="mapChronoMult" style="font-size:11px;font-weight:900;color:var(--green);margin-left:2px">×2.0</span>
+          </div>
+          <div id="mapFeedback" class="map-feedback" style="flex:1"></div>
         </div>
+        <!-- Indices (5 gems chacun maintenant) -->
+        <div style="display:flex;gap:6px;margin-bottom:8px" id="mapHintBtns">
+          <button class="btn-hint" id="hintCont" onclick="mapHint('continent')">💎5 🌍 Continent</button>
+          <button class="btn-hint" id="hintLetter" onclick="mapHint('letter')">💎5 🔤 Initiale</button>
+          <button class="btn-hint" id="hintRadar" onclick="mapHint('radar')">💎5 📡 Zone</button>
+        </div>
+        <!-- Score + multiplicateur + bouton suivant -->
         <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
-          <div style="color:rgba(255,255,255,0.6);font-size:13px;font-weight:800">Score : <span id="mapTotalScore"
-              style="color:var(--gold);font-size:16px;font-weight:900">0</span> pts</div>
+          <div style="color:rgba(255,255,255,0.6);font-size:12px;font-weight:800;line-height:1.4">
+            Score<br>
+            <span id="mapTotalScore" style="color:var(--gold);font-size:18px;font-weight:900">0</span>
+            <span style="font-size:11px;color:rgba(255,255,255,0.4)"> pts</span>
+          </div>
+          <div style="text-align:center;font-size:11px;color:rgba(255,255,255,0.5);font-weight:700;line-height:1.4">
+            Pts / question<br>
+            <span style="font-size:14px;font-weight:900;color:rgba(255,255,255,0.8)">max 2000</span>
+            <span style="display:block;font-size:10px;color:rgba(255,255,255,0.35)">1000 base × chrono</span>
+          </div>
           <button id="mapNextBtn" class="btn-action active-next"
-            style="flex:1;max-width:180px;padding:12px;border-radius:14px;display:none"
+            style="flex:1;max-width:160px;padding:12px;border-radius:14px;display:none"
             onclick="mapNextQuestion()">Suivant →</button>
         </div>
       </div>
@@ -3881,7 +3937,38 @@
           </div>
           <div class="map-mode-card" onclick="startMapQuiz('atlas')">📖<br>Atlas<div class="sub">Explore librement</div>
           </div>
+          <div class="map-mode-card" onclick="startMapQuiz('heatmap')">🌡️<br>Heatmap<div class="sub">Tes pays maîtrisés</div>
+          </div>
+          <div class="map-mode-card" style="grid-column:1/-1;background:linear-gradient(135deg,var(--blue),var(--purple))" onclick="startTourDuMonde()">🌍<br>Tour du Monde<div class="sub">30 étapes · narration</div>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- MODAL OBJECTIFS PERSONNALISÉS -->
+    <div class="modal-bg" id="objectivesModal" onclick="if(event.target===this)this.classList.remove('open')">
+      <div class="modal-content" style="border-radius:24px 24px 0 0;padding:24px 18px;max-height:90vh;overflow:auto">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <div style="font-size:18px;font-weight:900">🎯 Objectifs personnalisés</div>
+          <button class="q-close" onclick="document.getElementById('objectivesModal').classList.remove('open')">✕</button>
+        </div>
+        <!-- Objectifs en cours -->
+        <div id="objectivesList" style="margin-bottom:14px"></div>
+        <!-- Lancer un nouvel objectif -->
+        <div style="font-size:13px;font-weight:800;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Lancer un objectif (10 jours)</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('geo')">🗺️ Géographie</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('hist')">🏛️ Histoire</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('sci')">🔬 Sciences</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('art')">🎨 Art</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('cinema')">🎬 Cinéma</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('sport')">⚽ Sport</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('gastro')">🍽️ Gastronomie</button>
+          <button class="btn-secondary" style="font-size:13px;padding:10px 8px;border-radius:12px" onclick="startObjective('mytho')">⚡ Mythologie</button>
+        </div>
+        <!-- Streaks par catégorie -->
+        <div style="font-size:13px;font-weight:800;color:var(--muted);margin:14px 0 8px;text-transform:uppercase;letter-spacing:.5px">🔥 Streaks par catégorie</div>
+        <div id="catStreaksList"></div>
       </div>
     </div>
 
@@ -4065,6 +4152,8 @@
       doubleXPActive: false, shieldActive: false,
       gpWins: 0,
       catStats: {},    // {geo:{correct:5,total:10}, ...}
+      catStreak: {},   // {geo:{current:3,best:5}, ...} — streak par catégorie
+      objectives: [],  // [{cat,label,startDate,endDate,dailyGoal,progress:[],done}]
       history: [],     // [{mode,acc,xp,date,correct,total}] last 10
       survieRecord: 0,
       chronoBest: 0,
@@ -4075,7 +4164,8 @@
       streakDays: 0,          // consecutive days played (for streak bonus)
       weeklyMissions: [],     // [{id,desc,target,progress,reward,done}]
       weeklyMissionReset: '', // ISO week string
-      bossDefeated: {},       // {chapterId: true}
+      bossDefeated: {},
+      recentlySeen: [],      // {chapterId: true}
       // Championship
       championship: {
         active: false,
@@ -4353,7 +4443,8 @@
     }
 
     function startGPQual() {
-      const pool = shuffle(getPool('mixed')).slice(0, 5);
+      const rawPool = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB];
+      const pool = shuffle(filterSeenQuestions(rawPool)).slice(0, 15);
       Q = { mode: 'gp_qual', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
       document.getElementById('scrGP').classList.remove('active');
       document.getElementById('scrQuiz').classList.add('active');
@@ -5508,11 +5599,6 @@
       _origShowResult();
     };
 
-    let P_state = {};
-    let P_P = { ...P };
-    let P_Q = { ...Q };
-    let P_GP = { ...GP };
-
     let _timerInterval = null;
     let _timerSec = 15;
     let _heartRegenInterval = null;
@@ -5533,6 +5619,90 @@
     };
 
     // ===== CORE =====
+    // Filtre pour éviter la répétition immédiate des questions
+    function filterSeenQuestions(pool) {
+      if (!P.recentlySeen) P.recentlySeen = [];
+      const filtered = pool.filter(q => q.id && !P.recentlySeen.includes(q.id));
+      if (filtered.length < 5 && pool.length >= 5) {
+        // En cas de pool presque épuisé, on libère la moitié des questions stockées pour ne pas bloquer
+        const toRemove = Math.floor(P.recentlySeen.length / 2);
+        P.recentlySeen.splice(0, toRemove);
+        save();
+        return pool.filter(q => q.id && !P.recentlySeen.includes(q.id));
+      }
+      return filtered.length > 0 ? filtered : pool;
+    }
+
+    // Déduction de cœur unifiée avec animations visuelles et physiques
+    function deductHeart() {
+      if (P.shieldActive) {
+        P.shieldActive = false;
+        const sb = document.getElementById('shieldBadge');
+        if (sb) sb.className = 'shield-active-badge';
+        showToast('🛡️ Bouclier activé !');
+        return;
+      }
+
+      // Déclenche le flash rouge
+      const flash = document.getElementById('screenFlashEl');
+      if (flash) {
+        flash.classList.add('active');
+        setTimeout(() => flash.classList.remove('active'), 500);
+      }
+
+      const lastHeartIdx = P.hearts;
+      P.hearts = Math.max(0, P.hearts - 1);
+      P.lastHeartTime = Date.now();
+
+      // Secoue l'indicateur supérieur
+      const tbHearts = document.getElementById('valHearts');
+      if (tbHearts) {
+        tbHearts.parentElement.classList.add('shake');
+        setTimeout(() => tbHearts.parentElement.classList.remove('shake'), 400);
+      }
+
+      // Met à jour et anime le cœur brisé (💔)
+      const heartEl = document.getElementById('qHeart_' + lastHeartIdx);
+      if (heartEl) {
+        heartEl.textContent = '💔';
+        heartEl.classList.add('heart-lost-anim');
+        setTimeout(() => {
+          heartEl.textContent = '🖤';
+          heartEl.style.opacity = '0.3';
+          heartEl.style.transform = 'scale(0.8)';
+        }, 500);
+      }
+
+      // Gestion de la fin de partie si 0 cœur
+      if (P.hearts <= 0 && !['infinite', 'Revision', 'chrono', 'survie', 'duel', 'flash', 'chaine'].includes(Q.mode)) {
+        setTimeout(() => {
+          document.getElementById('scrQuiz').classList.remove('active');
+          document.getElementById('scrNoHearts').style.display = 'flex';
+          updateUI();
+        }, 700);
+      }
+    }
+
+    // Rendu dynamique des cœurs actifs et vides du quiz
+    function renderQuizHearts() {
+      const qh = document.getElementById('qHearts');
+      if (!qh) return;
+      qh.innerHTML = '';
+      const maxHearts = 5;
+      for (let i = 1; i <= maxHearts; i++) {
+        const span = document.createElement('span');
+        span.textContent = '❤️';
+        span.style.transition = 'all 0.5s ease';
+        span.style.display = 'inline-block';
+        if (i > P.hearts) {
+          span.textContent = '🖤';
+          span.style.opacity = '0.3';
+          span.style.transform = 'scale(0.8)';
+        }
+        span.id = 'qHeart_' + i;
+        qh.appendChild(span);
+      }
+    }
     function save() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(P)); } catch (e) { } }
     function loadData() { try { const d = localStorage.getItem(STORAGE_KEY); if (d) { P = Object.assign(P, JSON.parse(d)); return true; } } catch (e) { } return false; }
     function shuffle(a) { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[b[i], b[j]] = [b[j], b[i]]; } return b; }
@@ -5555,45 +5725,66 @@
       setTimeout(() => t.remove(), dur);
     }
 
-    function getPool(bankKey) {
-      if (bankKey === 'geo') return window.GEO_QB;
-      if (bankKey === 'hist') return window.HIST_QB;
-      if (bankKey === 'sci') return window.SCI_QB;
-      if (bankKey === 'art') return window.ART_QB;
-      if (bankKey === 'cinema') return window.CINEMA_QB;
-      if (bankKey === 'sport') return window.SPORT_QB;
-      if (bankKey === 'gastro') return window.GASTRO_QB;
-      if (bankKey === 'mytho') return window.MYTHO_QB;
-      if (bankKey === 'chateaux') return window.CHATEAUX_QB;
+    // ===== CHARGEMENT PROGRESSIF DES QUESTIONS =====
+    // Les banques sont déjà dans window.X_QB (injectées par data_loader.js).
+    // Ce système ajoute un chargement à la demande : on ne résout la banque
+    // que quand elle est réellement nécessaire, et on trace les banques déjà prêtes.
+    const _loadedBanks = new Set();
 
+    async function ensureBankLoaded(bankKey) {
+      if (_loadedBanks.has(bankKey)) return; // déjà prête
+      const winKey = {
+        geo: 'GEO_QB', hist: 'HIST_QB', sci: 'SCI_QB', art: 'ART_QB',
+        cinema: 'CINEMA_QB', sport: 'SPORT_QB', gastro: 'GASTRO_QB',
+        mytho: 'MYTHO_QB', chateaux: 'CHATEAUX_QB', mixed: null,
+        tf: 'TF_QB', scramble: 'SCRAMBLE_QB', extended: 'EXTENDED_QB'
+      }[bankKey];
+      if (winKey && window[winKey] && window[winKey].length > 0) {
+        _loadedBanks.add(bankKey);
+        return; // data_loader.js l'a déjà injectée
+      }
+      // Si la banque n'est pas encore disponible, on attend le signal kq:data-loaded
+      await new Promise(resolve => {
+        const check = () => {
+          if (winKey && window[winKey] && window[winKey].length > 0) {
+            _loadedBanks.add(bankKey); resolve();
+          } else {
+            window.addEventListener('kq:data-loaded', () => { _loadedBanks.add(bankKey); resolve(); }, { once: true });
+          }
+        };
+        check();
+      });
+    }
+
+    function getPool(bankKey) {
+      // Résolution synchrone (la banque doit être prête — appelée après ensureBankLoaded)
+      if (bankKey === 'geo') return window.GEO_QB || [];
+      if (bankKey === 'hist') return window.HIST_QB || [];
+      if (bankKey === 'sci') return window.SCI_QB || [];
+      if (bankKey === 'art') return window.ART_QB || [];
+      if (bankKey === 'cinema') return window.CINEMA_QB || [];
+      if (bankKey === 'sport') return window.SPORT_QB || [];
+      if (bankKey === 'gastro') return window.GASTRO_QB || [];
+      if (bankKey === 'mytho') return window.MYTHO_QB || [];
+      if (bankKey === 'chateaux') return window.CHATEAUX_QB || [];
       if (bankKey === 'mixed' || bankKey === 'mixedAll') {
-        const all = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.ART_QB,
-        ...window.CINEMA_QB, ...window.SPORT_QB, ...window.GASTRO_QB,
-        ...window.MYTHO_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB];
+        const all = [
+          ...(window.GEO_QB || []), ...(window.HIST_QB || []), ...(window.SCI_QB || []),
+          ...(window.ART_QB || []), ...(window.CINEMA_QB || []), ...(window.SPORT_QB || []),
+          ...(window.GASTRO_QB || []), ...(window.MYTHO_QB || []),
+          ...(window.EXTENDED_QB || []), ...(window.CHATEAUX_QB || [])
+        ];
         return shuffle(all);
       }
-
-      if (bankKey === 'tf') return window.TF_QB;
-      if (bankKey === 'scramble') return window.SCRAMBLE_QB;
-
-      return window.GEO_QB;
+      if (bankKey === 'tf') return window.TF_QB || [];
+      if (bankKey === 'scramble') return window.SCRAMBLE_QB || [];
+      return window.GEO_QB || [];
     }
 
     // Adaptive difficulty
     function getDifficultyPool(bankKey) {
       const pool = getPool(bankKey);
-      const stat = P.catStats[bankKey];
-      if (!stat || stat.total < 5) return pool.filter(q => q.difficulty === 'easy');
-      const rate = stat.correct / stat.total;
-      if (rate >= 0.8) {
-        P.difficultyOverride[bankKey] = 'hard';
-        return pool.filter(q => q.difficulty === 'hard' || q.difficulty === 'medium');
-      } else if (rate >= 0.6) {
-        P.difficultyOverride[bankKey] = 'medium';
-        return pool.filter(q => q.difficulty === 'medium' || q.difficulty === 'easy');
-      }
-      P.difficultyOverride[bankKey] = 'easy';
-      return pool.filter(q => q.difficulty === 'easy');
+      return filterSeenQuestions(pool);
     }
 
     function recordCatStat(cat, correct) {
@@ -5601,6 +5792,10 @@
       if (!P.catStats[cat]) P.catStats[cat] = { correct: 0, total: 0 };
       P.catStats[cat].total++;
       if (correct) P.catStats[cat].correct++;
+      // Streak par catégorie
+      updateCatStreak(cat, correct);
+      // Objectifs personnalisés
+      if (correct) updateObjectiveProgress(cat);
     }
 
     // Heart regen system
@@ -5901,7 +6096,7 @@
       document.getElementById('nmSub').textContent = `${node.qCount} questions`;
       const diff = P.difficultyOverride[node.bank] || 'easy';
       const diffLabel = diff === 'hard' ? '🔴 Difficile' : diff === 'medium' ? '🟠 Intermédiaire' : '🟢 Facile';
-      document.getElementById('nmDiff').textContent = `Difficulté adaptative : ${diffLabel}`;
+      document.getElementById('nmDiff').textContent = '';
       document.getElementById('nodeModal').classList.add('open');
       document.getElementById('nmBtn').onclick = () => { document.getElementById('nodeModal').classList.remove('open'); startQuizFlow(node.qCount, node.id, 'qcm', node.bank); };
     }
@@ -5995,6 +6190,14 @@
       audio.playTreasure();
       spawnConfetti();
       triggerAtlasUnlockAnimation(cardId);
+      // 🌍 Mode Atlas animé : zoom + ring sur le globe si la carte a des coords
+      if (card.lat !== undefined && card.lng !== undefined && GLOBE) {
+        setTimeout(() => {
+          GLOBE.pointOfView({ lat: card.lat, lng: card.lng, altitude: 1.4 }, 1200);
+          GLOBE.ringsData([{ lat: card.lat, lng: card.lng, color: 'rgba(255,215,0,0.8)' }]);
+          setTimeout(() => GLOBE.ringsData([]), 3000);
+        }, 400);
+      }
     }
 
     function closeDiscovery() {
@@ -6092,7 +6295,7 @@
 
     // Chrono mode
     function startChronoMode() {
-      const pool = shuffle(getPool('mixed')).slice(0, 10);
+      const pool = shuffle(filterSeenQuestions(getPool('mixed'))).slice(0, 10);
       Q = { mode: 'chrono', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false };
       launchQuizScreen();
     }
@@ -6106,7 +6309,7 @@
 
     // Duel mode
     function startDuelMode() {
-      const pool = shuffle(getPool('mixed')).slice(0, 10);
+      const pool = shuffle(filterSeenQuestions(getPool('mixed'))).slice(0, 10);;
       Q = { mode: 'duel', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false };
       launchQuizScreen();
     }
@@ -6131,7 +6334,7 @@
         chain = { title: 'Chaîne du savoir', ids: [] };
         qs = shuffle(allPool).slice(0, 10);
       }
-      Q = { mode: 'chaine', type: 'qcm', qs: shuffle(qs), idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: chain, chainIdx: 0, chainBroken: false };
+      Q = { mode: 'chaine', type: 'qcm', qs: shuffle(filterSeenQuestions(qs)), idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: chain, chainIdx: 0, chainBroken: false };
       launchQuizScreen();
     }
 
@@ -6139,6 +6342,7 @@
       if (P.hearts <= 0 && !['infinite', 'Revision', 'Mastery', 'chrono', 'survie', 'duel', 'flash', 'chaine', 'daily'].includes(modeId) && !modeId.startsWith('cat_')) {
         document.getElementById('scrNoHearts').style.display = 'flex'; updateUI(); return;
       }
+      startSession(bankKey === 'seasonal' ? 'seasonal' : 'normal'); // ← Patch Collecte v2
       let pool = [];
       if (type === 'mistakes') pool = shuffle([...P.mistakes]);
       else if (type === 'tf') pool = shuffle(window.TF_QB);
@@ -6160,6 +6364,7 @@
 
     function renderQ() {
       if (Q.qs.length === 0) { showResult(); return; }
+      renderQuizHearts();
       if (Q.mode === 'infinite' && Q.idx >= Q.qs.length) {
         const more = shuffle(getPool('mixed')).slice(0, 20);
         Q.qs.push(...more);
@@ -6264,9 +6469,8 @@
       Q.state = 'checked';
       audio.playWrong();
       Q.combo = 0;
-      if (!P.shieldActive && Q.mode !== 'flash') {
-        P.hearts = Math.max(0, P.hearts - 1);
-        P.lastHeartTime = Date.now();
+      if (Q.mode !== 'flash') {
+        deductHeart();
       }
       if (Q.mode === 'survie') { Q.survieErrors++; if (Q.survieErrors >= 3) { showResult(); return; } }
       if (Q.mode === 'duel') { Q.duelAiHP = Math.max(0, Q.duelAiHP - 0); Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1); if (Q.duelPlayerHP <= 0) { showResult(); return; } }
@@ -6318,7 +6522,13 @@
         isCorrect = JSON.stringify(Q.userSel) === JSON.stringify(q.correct);
         const z = document.getElementById('scZone'); if (z) z.style.borderColor = isCorrect ? 'var(--green)' : 'var(--red)';
       }
-
+      if (q && q.id) {
+        if (!P.recentlySeen) P.recentlySeen = [];
+        if (!P.recentlySeen.includes(q.id)) {
+          P.recentlySeen.push(q.id);
+          if (P.recentlySeen.length > 80) P.recentlySeen.shift();
+        }
+      }
       if (isCorrect) {
         audio.playCorrect();
         Q.combo++; Q.correct++;
@@ -6388,8 +6598,12 @@
         if (window.navigator.vibrate) window.navigator.vibrate(200);
         Q.combo = 0; Q.chainBroken = Q.mode === 'chaine';
         recordCatStat(q.cat, false);
-        if (P.shieldActive) { P.shieldActive = false; document.getElementById('shieldBadge').className = 'shield-active-badge'; showToast('🛡️ Bouclier activé !'); }
-        else if (!['infinite', 'Revision'].includes(Q.mode)) { P.hearts = Math.max(0, P.hearts - 1); P.lastHeartTime = Date.now(); }
+
+        // On appelle UNIQUEMENT deductHeart() qui gère les vies, le bouclier et les animations
+        if (!['infinite', 'Revision'].includes(Q.mode)) {
+          deductHeart();
+        }
+
         if (Q.mode === 'survie') { Q.survieErrors++; if (Q.survieErrors >= 3) { audio.playGameOver(); setTimeout(() => showResult(), 400); return; } }
         if (Q.mode === 'duel') { Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1); if (Q.duelPlayerHP <= 0) { audio.playGameOver(); setTimeout(() => showResult(), 400); return; } }
         if (!P.mistakes.find(m => m.question === q.question)) P.mistakes.push(q);
@@ -6674,6 +6888,7 @@
       if (P.dailyChallengeDate === today && P.dailyChallengeDone) {
         showToast('✅ Défi déjà complété aujourd\'hui !'); return;
       }
+      startSession('daily_challenge'); // ← Patch Collecte v2
       const pool = getDailyChallengePool();
       if (pool.length === 0) { showToast('⏳ Questions non chargées !'); return; }
       Q = {
@@ -6856,6 +7071,141 @@
       if (changed) { save(); updateMissionsSummary(); }
     }
 
+    // ===== STREAK PAR CATÉGORIE =====
+    const CAT_LABELS = { geo: '🗺️ Géographie', hist: '🏛️ Histoire', sci: '🔬 Sciences', art: '🎨 Art', cinema: '🎬 Cinéma', sport: '⚽ Sport', gastro: '🍽️ Gastronomie', mytho: '⚡ Mythologie', mixed: '🎲 Mixte', extended: '🌐 Culture', chateaux: '🏰 Châteaux' };
+
+    function updateCatStreak(cat, isCorrect) {
+      if (!cat) return;
+      if (!P.catStreak) P.catStreak = {};
+      if (!P.catStreak[cat]) P.catStreak[cat] = { current: 0, best: 0 };
+      const s = P.catStreak[cat];
+      if (isCorrect) {
+        s.current++;
+        if (s.current > s.best) s.best = s.current;
+        // Paliers de récompense : 5, 10, 20 bonnes réponses d'affilée
+        if ([5, 10, 20].includes(s.current)) {
+          const label = CAT_LABELS[cat] || cat;
+          const gems = s.current === 5 ? 10 : s.current === 10 ? 25 : 50;
+          P.gems += gems;
+          showToast(`🔥 Streak ${label} ×${s.current} ! +${gems}💎`);
+          if (window.navigator.vibrate) window.navigator.vibrate([50, 30, 50]);
+        }
+      } else {
+        s.current = 0;
+      }
+    }
+
+    function renderCatStreaks() {
+      if (!P.catStreak) return '';
+      return Object.entries(P.catStreak)
+        .filter(([, s]) => s.best >= 3)
+        .sort(([, a], [, b]) => b.best - a.best)
+        .map(([cat, s]) => {
+          const label = CAT_LABELS[cat] || cat;
+          const pct = Math.min(100, Math.round((s.current / 10) * 100));
+          return `<div style="margin-bottom:10px">
+            <div style="display:flex;justify-content:space-between;font-size:13px;font-weight:800;margin-bottom:4px">
+              <span>${label}</span>
+              <span style="color:var(--orange)">🔥 ${s.current} <span style="color:var(--muted);font-size:11px">· record ${s.best}</span></span>
+            </div>
+            <div style="background:var(--border);border-radius:6px;height:8px">
+              <div style="width:${pct}%;height:100%;background:linear-gradient(90deg,var(--orange),var(--gold));border-radius:6px;transition:width .4s"></div>
+            </div>
+          </div>`;
+        }).join('');
+    }
+
+    // ===== OBJECTIFS PERSONNALISÉS (10 jours) =====
+    const OBJECTIVE_TEMPLATES = [
+      { cat: 'geo', label: 'Maîtriser la Géographie', dailyGoal: 10, icon: '🗺️', color: 'var(--blue)' },
+      { cat: 'hist', label: 'Maîtriser l\'Histoire', dailyGoal: 10, icon: '🏛️', color: 'var(--purple)' },
+      { cat: 'sci', label: 'Maîtriser les Sciences', dailyGoal: 10, icon: '🔬', color: 'var(--green)' },
+      { cat: 'art', label: 'Maîtriser l\'Art', dailyGoal: 10, icon: '🎨', color: 'var(--orange)' },
+      { cat: 'cinema', label: 'Maîtriser le Cinéma', dailyGoal: 10, icon: '🎬', color: 'var(--cinema)' },
+      { cat: 'sport', label: 'Maîtriser le Sport', dailyGoal: 10, icon: '⚽', color: 'var(--red)' },
+      { cat: 'gastro', label: 'Maîtriser la Gastronomie', dailyGoal: 10, icon: '🍽️', color: 'var(--gold)' },
+      { cat: 'mytho', label: 'Maîtriser la Mythologie', dailyGoal: 10, icon: '⚡', color: 'var(--mytho)' },
+    ];
+
+    function startObjective(cat) {
+      if (!P.objectives) P.objectives = [];
+      const already = P.objectives.find(o => o.cat === cat && !o.done);
+      if (already) { showToast('⚠️ Objectif déjà en cours pour cette catégorie !'); return; }
+      const tpl = OBJECTIVE_TEMPLATES.find(t => t.cat === cat);
+      if (!tpl) return;
+      const startDate = new Date().toISOString().split('T')[0];
+      const end = new Date(); end.setDate(end.getDate() + 9);
+      const obj = { ...tpl, startDate, endDate: end.toISOString().split('T')[0], progress: {}, done: false };
+      P.objectives.push(obj);
+      save();
+      showToast(`🎯 Objectif lancé : ${tpl.label} — 10 questions/jour pendant 10 jours !`);
+      renderObjectivesUI();
+    }
+
+    function updateObjectiveProgress(cat) {
+      if (!P.objectives) return;
+      const today = new Date().toISOString().split('T')[0];
+      P.objectives.forEach(obj => {
+        if (obj.done || obj.cat !== cat) return;
+        if (today > obj.endDate) { obj.done = true; return; }
+        if (!obj.progress || typeof obj.progress !== 'object') obj.progress = {}; // guard vieux save
+        obj.progress[today] = (obj.progress[today] || 0) + 1;
+        const todayCount = obj.progress[today];
+        if (todayCount === obj.dailyGoal) {
+          showToast(`✅ Objectif du jour atteint : ${obj.label} ! (${Object.keys(obj.progress).length}/10 jours)`);
+        }
+        const donedays = Object.values(obj.progress).filter(v => v >= obj.dailyGoal).length;
+        if (donedays >= 10) {
+          obj.done = true;
+          P.gems += 200; P.xp += 500;
+          showBonusPopup('🏆', 'Objectif accompli !', `${obj.label} maîtrisée !`, ['🏆 +500 XP', '💎 +200 Gemmes', `${obj.icon} Spécialiste débloqué !`]);
+          save();
+        }
+      });
+    }
+
+    function renderObjectivesUI() {
+      const el = document.getElementById('objectivesList');
+      if (!el) return;
+      if (!P.objectives || P.objectives.length === 0) {
+        el.innerHTML = '<div style="text-align:center;color:var(--muted);font-size:13px;padding:12px">Aucun objectif en cours.<br>Lance-en un ci-dessous !</div>';
+        return;
+      }
+      el.innerHTML = P.objectives.map(obj => {
+        const today = new Date().toISOString().split('T')[0];
+        const progress = (obj.progress && typeof obj.progress === 'object') ? obj.progress : {};
+        const donedays = Object.values(progress).filter(v => v >= obj.dailyGoal).length;
+        const todayCount = progress[today] || 0;
+        const pct = Math.round((donedays / 10) * 100);
+        const todayPct = Math.min(100, Math.round((todayCount / obj.dailyGoal) * 100));
+        return `<div style="background:var(--bg);border:2px solid ${obj.color};border-radius:14px;padding:12px;margin-bottom:10px;${obj.done ? 'opacity:.6' : ''}">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+            <span style="font-size:24px">${obj.icon}</span>
+            <div style="flex:1">
+              <div style="font-size:14px;font-weight:900;color:${obj.color}">${obj.label}</div>
+              <div style="font-size:11px;color:var(--muted);font-weight:700">${obj.done ? '✅ Terminé !' : `Jusqu\'au ${obj.endDate}`}</div>
+            </div>
+            <div style="text-align:right;font-size:20px;font-weight:900;color:${obj.color}">${donedays}/10</div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);font-weight:700;margin-bottom:4px">Progression globale (jours complets)</div>
+          <div style="background:var(--border);border-radius:6px;height:8px;margin-bottom:8px">
+            <div style="width:${pct}%;height:100%;background:${obj.color};border-radius:6px;transition:width .4s"></div>
+          </div>
+          <div style="font-size:11px;color:var(--muted);font-weight:700;margin-bottom:4px">Aujourd'hui : ${todayCount}/${obj.dailyGoal} questions</div>
+          <div style="background:var(--border);border-radius:6px;height:6px">
+            <div style="width:${todayPct}%;height:100%;background:linear-gradient(90deg,${obj.color},var(--gold));border-radius:6px;transition:width .4s"></div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    function openObjectivesModal() {
+      renderObjectivesUI();
+      const el = document.getElementById('catStreaksList');
+      if (el) el.innerHTML = renderCatStreaks() || '<div style="color:var(--muted);font-size:13px;text-align:center;padding:10px">Aucun streak pour l\'instant — réponds à des questions !</div>';
+      document.getElementById('objectivesModal').classList.add('open');
+    }
+
     function updateMissionsSummary() {
       const el = document.getElementById('missionsSummary'); if (!el) return;
       if (!P.weeklyMissions || P.weeklyMissions.length === 0) { el.textContent = 'Chargement…'; return; }
@@ -6887,6 +7237,203 @@
     </div>`;
       }).join('');
       document.getElementById('missionsModal').classList.add('open');
+    }
+
+    // Table de correspondance : noms français → nom(s) dans le GeoJSON Natural Earth
+    const FR_TO_GEOJSON = {
+      'albanie': ['albania'],
+      'allemagne': ['germany'],
+      'autriche': ['austria'],
+      'belgique': ['belgium'],
+      'bielorussie': ['belarus'],
+      'bosnie-herzegovine': ['bosnia and herz', 'bosnia and herzegovina'],
+      'bulgarie': ['bulgaria'],
+      'croatie': ['croatia'],
+      'danemark': ['denmark'],
+      'espagne': ['spain'],
+      'estonie': ['estonia'],
+      'finlande': ['finland'],
+      'france': ['france'],
+      'grece': ['greece'],
+      'hongrie': ['hungary'],
+      'irlande': ['ireland'],
+      'islande': ['iceland'],
+      'italie': ['italy'],
+      'lettonie': ['latvia'],
+      'lituanie': ['lithuania'],
+      'luxembourg': ['luxembourg'],
+      'macedoine': ['macedonia', 'north macedonia'],
+      'malte': ['malta'],
+      'moldavie': ['moldova'],
+      'montenegro': ['montenegro'],
+      'norvege': ['norway'],
+      'pays-bas': ['netherlands'],
+      'pologne': ['poland'],
+      'portugal': ['portugal'],
+      'republique tcheque': ['czech rep', 'czechia', 'czech republic'],
+      'roumanie': ['romania'],
+      'royaume-uni': ['united kingdom'],
+      'russie': ['russia'],
+      'serbie': ['serbia'],
+      'slovaquie': ['slovakia'],
+      'slovenie': ['slovenia'],
+      'suede': ['sweden'],
+      'suisse': ['switzerland'],
+      'ukraine': ['ukraine'],
+      'vatican': ['vatican'],
+      // Asie
+      'afghanistan': ['afghanistan'],
+      'arabie saoudite': ['saudi arabia'],
+      'armenie': ['armenia'],
+      'azerbaidjan': ['azerbaijan'],
+      'bahrein': ['bahrain'],
+      'bangladesh': ['bangladesh'],
+      'bhoutan': ['bhutan'],
+      'brunei': ['brunei'],
+      'cambodge': ['cambodia'],
+      'chine': ['china'],
+      'coree du nord': ['north korea', "dem. rep. korea"],
+      'coree du sud': ['south korea', 'korea'],
+      'emirats arabes unis': ['united arab emirates'],
+      'georgie': ['georgia'],
+      'inde': ['india'],
+      'indonesie': ['indonesia'],
+      'irak': ['iraq'],
+      'iran': ['iran'],
+      'israel': ['israel'],
+      'japon': ['japan'],
+      'jordanie': ['jordan'],
+      'kazakhstan': ['kazakhstan'],
+      'kirghizistan': ['kyrgyzstan'],
+      'koweit': ['kuwait'],
+      'laos': ['laos'],
+      'liban': ['lebanon'],
+      'malaisie': ['malaysia'],
+      'mongolie': ['mongolia'],
+      'nepal': ['nepal'],
+      'oman': ['oman'],
+      'ouzbekistan': ['uzbekistan'],
+      'pakistan': ['pakistan'],
+      'palestine': ['palestine', 'west bank', 'gaza'],
+      'philippines': ['philippines'],
+      'qatar': ['qatar'],
+      'singapour': ['singapore'],
+      'sri lanka': ['sri lanka'],
+      'syrie': ['syria'],
+      'taiwan': ['taiwan'],
+      'tadjikistan': ['tajikistan'],
+      'thailande': ['thailand'],
+      'timor oriental': ['timor-leste', 'east timor'],
+      'turkmenistan': ['turkmenistan'],
+      'turquie': ['turkey'],
+      'vietnam': ['vietnam', 'viet nam'],
+      'yemen': ['yemen'],
+      // Afrique
+      'afrique du sud': ['south africa'],
+      'algerie': ['algeria'],
+      'angola': ['angola'],
+      'benin': ['benin'],
+      'botswana': ['botswana'],
+      'burkina faso': ['burkina faso'],
+      'burundi': ['burundi'],
+      'cameroun': ['cameroon'],
+      'cap-vert': ['cape verde'],
+      'comores': ['comoros'],
+      "cote d'ivoire": ['ivory coast', "cote d'ivoire"],
+      'djibouti': ['djibouti'],
+      'egypte': ['egypt'],
+      'erythree': ['eritrea'],
+      'eswatini': ['swaziland', 'eswatini'],
+      'ethiopie': ['ethiopia'],
+      'gabon': ['gabon'],
+      'gambie': ['gambia'],
+      'ghana': ['ghana'],
+      'guinee': ['guinea'],
+      'guinee equatoriale': ['eq. guinea', 'equatorial guinea'],
+      'guinee-bissau': ['guinea-bissau'],
+      'kenya': ['kenya'],
+      'liberia': ['liberia'],
+      'libye': ['libya'],
+      'madagascar': ['madagascar'],
+      'malawi': ['malawi'],
+      'mali': ['mali'],
+      'maroc': ['morocco'],
+      'mauritanie': ['mauritania'],
+      'mozambique': ['mozambique'],
+      'namibie': ['namibia'],
+      'niger': ['niger'],
+      'nigeria': ['nigeria'],
+      'ouganda': ['uganda'],
+      'republique centrafricaine': ['central african rep.', 'central african republic'],
+      'republique democratique du congo': ['dem. rep. congo', 'democratic republic of the congo', 'drc'],
+      'republique du congo': ['congo', 'republic of the congo'],
+      'rwanda': ['rwanda'],
+      'sao tome-et-principe': ['sao tome and principe'],
+      'senegal': ['senegal'],
+      'sierra leone': ['sierra leone'],
+      'somalie': ['somalia'],
+      'soudan': ['sudan'],
+      'soudan du sud': ['s. sudan', 'south sudan'],
+      'tanzanie': ['tanzania'],
+      'tchad': ['chad'],
+      'togo': ['togo'],
+      'tunisie': ['tunisia'],
+      'zambie': ['zambia'],
+      'zimbabwe': ['zimbabwe'],
+      // Amériques
+      'argentine': ['argentina'],
+      'bolivie': ['bolivia'],
+      'bresil': ['brazil'],
+      'canada': ['canada'],
+      'chili': ['chile'],
+      'colombie': ['colombia'],
+      'costa rica': ['costa rica'],
+      'cuba': ['cuba'],
+      'equateur': ['ecuador'],
+      'etats-unis': ['united states', 'united states of america'],
+      'guatemala': ['guatemala'],
+      'haiti': ['haiti'],
+      'honduras': ['honduras'],
+      'jamaique': ['jamaica'],
+      'mexique': ['mexico'],
+      'nicaragua': ['nicaragua'],
+      'panama': ['panama'],
+      'paraguay': ['paraguay'],
+      'perou': ['peru'],
+      'salvador': ['el salvador'],
+      'uruguay': ['uruguay'],
+      'venezuela': ['venezuela'],
+      // Océanie
+      'australie': ['australia'],
+      'fidji': ['fiji'],
+      'nouvelle-zelande': ['new zealand'],
+      'papouasie-nouvelle-guinee': ['papua new guinea'],
+    };
+
+    // Normalise une chaîne pour comparaison insensible aux accents et à la casse
+    function normalizeStr(s) {
+      return (s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+    }
+
+    // Vérifie si un nom GeoJSON correspond au nom français de la question
+    function countryMatches(frName, geoName) {
+      const normFr = normalizeStr(frName);
+      const normGeo = normalizeStr(geoName);
+      // Cherche dans la table de correspondance
+      const aliases = FR_TO_GEOJSON[normFr] || [];
+      if (aliases.some(a => normalizeStr(a) === normGeo || normGeo.includes(normalizeStr(a)) || normalizeStr(a).includes(normGeo))) return true;
+      // Fallback : comparaison directe normalisée
+      return normFr === normGeo || normGeo.includes(normFr) || normFr.includes(normGeo);
+    }
+
+    function haversineKm(lat1, lng1, lat2, lng2) {
+      const R = 6371;
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLng = (lng2 - lng1) * Math.PI / 180;
+      const a = Math.sin(dLat/2) ** 2 +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                Math.sin(dLng/2) ** 2;
+      return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
     }
 
     const MAP_QUESTIONS = [
@@ -7179,8 +7726,122 @@
       return 'Monde';
     }
 
+    // ===== TOUR DU MONDE =====
+    const TOUR_ETAPES = [
+      { name: 'France', lat: 46.2, lng: 2.2, narration: '🗼 Paris, la Ville Lumière, vous accueille. La France est réputée pour sa gastronomie, son art de vivre et ses châteaux.', emoji: '🥐' },
+      { name: 'Espagne', lat: 40.4, lng: -3.7, narration: '💃 Olé ! L\'Espagne, pays du flamenco, de la paella et du soleil méditerranéen. Seconde destination touristique mondiale.', emoji: '🥘' },
+      { name: 'Italie', lat: 41.9, lng: 12.5, narration: '🍕 Benvenuti en Italie ! Berceau de la Renaissance, de la pizza et du Colisée. L\'un des plus grands musées à ciel ouvert au monde.', emoji: '🍕' },
+      { name: 'Grèce', lat: 39.0, lng: 21.8, narration: '🏛️ Athènes, berceau de la démocratie et de la philosophie. Le Parthénon domine la ville depuis 2 500 ans.', emoji: '🫒' },
+      { name: 'Égypte', lat: 26.8, lng: 30.8, narration: '🔺 Les Pyramides de Gizeh, seule des Sept Merveilles du monde encore debout. La civilisation égyptienne a 5 000 ans d\'histoire.', emoji: '🐫' },
+      { name: 'Kenya', lat: -0.0, lng: 37.9, narration: '🦁 La savane kényane abrite les plus grandes migrations d\'animaux du monde — lions, éléphants, girafes à perte de vue.', emoji: '🦁' },
+      { name: 'Afrique du Sud', lat: -30.5, lng: 22.9, narration: '🌈 Nation Arc-en-ciel, l\'Afrique du Sud est l\'un des pays les plus biodiversifiés de la planète, avec le Cap de Bonne-Espérance.', emoji: '🐧' },
+      { name: 'Inde', lat: 20.6, lng: 78.9, narration: '🕌 Le Taj Mahal, chef-d\'œuvre de l\'architecture moghole, fut construit par un empereur pour honorer son amour disparu.', emoji: '🪷' },
+      { name: 'Chine', lat: 35.8, lng: 104.1, narration: '🐉 La Grande Muraille de Chine s\'étend sur plus de 21 000 km. L\'Empire du Milieu est la civilisation continue la plus ancienne du monde.', emoji: '🏮' },
+      { name: 'Japon', lat: 36.2, lng: 138.2, narration: '⛩️ Le mont Fuji, symbole du Japon, culmine à 3 776 m. Le pays du Soleil Levant allie tradition millénaire et modernité extrême.', emoji: '🌸' },
+      { name: 'Australie', lat: -25.3, lng: 133.7, narration: '🦘 L\'Australie, continent-île, abrite 80 % d\'espèces animales uniques au monde, dont le kangourou et le koala.', emoji: '🦘' },
+      { name: 'Nouvelle-Zélande', lat: -40.9, lng: 174.9, narration: '🏔️ Les fjords de Milford Sound et les volcans actifs font de la Nouvelle-Zélande un paradis pour les amateurs de nature.', emoji: '🐑' },
+      { name: 'Brésil', lat: -14.2, lng: -51.9, narration: '🌴 L\'Amazonie, poumon de la Terre, couvre 60 % du Brésil. Rio de Janeiro est réputée pour son carnaval et le Christ Rédempteur.', emoji: '🦜' },
+      { name: 'Argentine', lat: -38.4, lng: -63.6, narration: '💃 Terre du tango et de Maradona, l\'Argentine est aussi connue pour la Patagonie, les glaciers Perito Moreno et les pampas infinies.', emoji: '🥩' },
+      { name: 'Pérou', lat: -9.1, lng: -75.0, narration: '🏔️ Le Machu Picchu, cité inca perchée à 2 430 m dans les Andes, reste l\'un des sites archéologiques les plus mystérieux du monde.', emoji: '🦙' },
+      { name: 'Mexique', lat: 23.6, lng: -102.5, narration: '🌵 Le Mexique, berceau des civilisations maya et aztèque, fascine par ses pyramides, ses plages de Cancún et ses cuisines épicées.', emoji: '🌮' },
+      { name: 'États-Unis', lat: 37.1, lng: -95.9, narration: '🗽 New York, Los Angeles, le Grand Canyon… Les États-Unis, 4e plus grand pays du monde, sont une mosaïque de paysages et cultures.', emoji: '🦅' },
+      { name: 'Canada', lat: 56.1, lng: -106.3, narration: '🍁 Le Canada, 2e plus grand pays du monde, possède 20 % des eaux douces mondiales et les chutes du Niagara, frontière naturelle avec les USA.', emoji: '🦫' },
+      { name: 'Maroc', lat: 31.8, lng: -7.1, narration: '🕌 Marrakech et ses souks labyrinthiques, Fès et sa médina médiévale… Le Maroc est une porte entre l\'Europe et l\'Afrique.', emoji: '🏺' },
+      { name: 'Turquie', lat: 38.9, lng: 35.2, narration: '🕌 Istanbul, seule métropole au monde à cheval sur deux continents, mêle l\'architecture ottomane et byzantine depuis des millénaires.', emoji: '🍡' },
+      { name: 'Russie', lat: 61.5, lng: 105.3, narration: '🔴 La Russie, plus grand pays du monde avec 17 millions de km², s\'étend sur 11 fuseaux horaires, de Kaliningrad au Kamtchatka.', emoji: '🪆' },
+      { name: 'Norvège', lat: 60.5, lng: 8.4, narration: '🌌 Les fjords norvégiens et les aurores boréales font de ce pays l\'une des destinations naturelles les plus spectaculaires du monde.', emoji: '🐳' },
+      { name: 'Islande', lat: 64.9, lng: -19.0, narration: '🌋 Terre de glace et de feu, l\'Islande possède geysers, volcans actifs, glaciers millénaires et bains géothermaux comme le Blue Lagoon.', emoji: '🌋' },
+      { name: 'Thaïlande', lat: 15.9, lng: 100.9, narration: '🛕 Bangkok, ses temples scintillants, ses marchés flottants et sa street food légendaire. La Thaïlande est le « Pays du Sourire ».', emoji: '🙏' },
+      { name: 'Indonésie', lat: -0.8, lng: 113.9, narration: '🌴 L\'Indonésie, archipel de 17 000 îles, est le 4e pays le plus peuplé du monde et abrite Bali, Java et le majestueux Krakatoa.', emoji: '🦧' },
+      { name: 'Éthiopie', lat: 9.0, lng: 38.7, narration: '☕ L\'Éthiopie est le berceau du café ! La Vallée du Rift, les os de Lucy et les monastères du lac Tana font de ce pays un musée vivant.', emoji: '☕' },
+      { name: 'Iran', lat: 32.4, lng: 53.7, narration: '🏛️ Persépolis, ancienne capitale de l\'Empire perse, et Ispahan la magnifique attestent d\'une civilisation parmi les plus anciennes du monde.', emoji: '🌹' },
+      { name: 'Inde', lat: 20.6, lng: 78.9, narration: '🌊 De retour en Asie : Varanasi, la plus ancienne cité du monde encore habitée, où le Gange est vénéré comme une déesse.', emoji: '🎆' },
+      { name: 'Chili', lat: -35.7, lng: -71.5, narration: '🗿 L\'île de Pâques et ses 887 moaïs mystérieux. Le Chili est aussi le plus long pays du monde, s\'étendant sur 4 300 km du nord au sud.', emoji: '🌋' },
+      { name: 'France', lat: 46.2, lng: 2.2, narration: '🏠 Retour à Paris ! Vous avez effectué le Tour du Monde en 30 étapes. Combien de ces pays avez-vous déjà visités ? 🌍', emoji: '🏆' },
+    ];
+
+    let TOUR = { active: false, idx: 0 };
+
+    function startTourDuMonde() {
+      TOUR = { active: true, idx: 0 };
+      GLOBE_MODE = 'tour';
+      document.getElementById('mapModeModal').style.display = 'none';
+      document.getElementById('scrMapQuiz').classList.add('active');
+      document.getElementById('topbar').style.display = 'none';
+      document.getElementById('bnav').style.display = 'none';
+      MAP_Q = { questions: [], idx: 0, score: 0, answered: true, mode: 'tour' };
+      buildWorldMap();
+      // Attend que les données GeoJSON soient disponibles avant d'afficher la première étape
+      const waitForGlobe = () => {
+        if (GLOBE_COUNTRIES.length > 0) {
+          renderTourEtape();
+        } else {
+          setTimeout(waitForGlobe, 200);
+        }
+      };
+      setTimeout(waitForGlobe, 400);
+    }
+
+    function renderTourEtape() {
+      if (TOUR.idx >= TOUR_ETAPES.length) { endTourDuMonde(); return; }
+      const etape = TOUR_ETAPES[TOUR.idx];
+      document.getElementById('mapQCurr').textContent = TOUR.idx + 1;
+      document.getElementById('mapQTot').textContent = TOUR_ETAPES.length;
+      document.getElementById('mapQuestion').textContent = `${etape.emoji} Étape ${TOUR.idx + 1} : ${etape.name}`;
+      document.getElementById('mapFeedback').textContent = etape.narration;
+      document.getElementById('mapFeedback').className = 'map-feedback correct';
+      document.getElementById('mapNextBtn').style.display = 'block';
+      document.getElementById('mapNextBtn').textContent = TOUR.idx < TOUR_ETAPES.length - 1 ? 'Étape suivante →' : '🏠 Fin du Tour !';
+      if (GLOBE) {
+        GLOBE.pointOfView({ lat: etape.lat, lng: etape.lng, altitude: 1.5 }, 1400);
+        GLOBE.ringsData([{ lat: etape.lat, lng: etape.lng, color: 'rgba(250,204,21,0.8)' }]);
+        // Ajoute le marqueur du tour sans écraser les villes existantes
+        const tourMarker = [{ lat: etape.lat, lng: etape.lng, emoji: etape.emoji, size: 30, _isTour: true }];
+        const existing = (GLOBE.htmlElementsData() || []).filter(d => !d._isTour);
+        GLOBE.htmlElementsData([...existing, ...tourMarker]);
+      }
+    }
+
+    function tourNextEtape() {
+      TOUR.idx++;
+      renderTourEtape();
+    }
+
+    function endTourDuMonde() {
+      P.gems += 100; P.xp += 300; save();
+      // Nettoie les marqueurs de tour avant de quitter
+      if (GLOBE) {
+        GLOBE.ringsData([]);
+        const existing = (GLOBE.htmlElementsData() || []).filter(d => !d._isTour);
+        GLOBE.htmlElementsData(existing);
+      }
+      exitMapQuiz();
+      GLOBE_MODE = 'quiz';
+      setTimeout(() => showBonusPopup('🌍', 'Tour du Monde complété !', '30 pays explorés !', ['🏆 +300 XP', '💎 +100 Gemmes', '🌍 Explorateur mondial !']), 300);
+    }
+
     function startMapQuiz(mode) {
       document.getElementById('mapModeModal').style.display = 'none';
+      // Mode Heatmap : affiche le globe coloré selon les stats du joueur
+      if (mode === 'heatmap') {
+        GLOBE_MODE = 'heatmap';
+        document.getElementById('scrMapQuiz').classList.add('active');
+        document.getElementById('topbar').style.display = 'none';
+        document.getElementById('bnav').style.display = 'none';
+        MAP_Q = { questions: [], idx: 0, score: 0, answered: true, mode: 'heatmap' };
+        buildWorldMap();
+        setTimeout(() => {
+          document.getElementById('mapQuestion').textContent = '🌡️ Heatmap — tes pays maîtrisés';
+          document.getElementById('mapFeedback').textContent = '🟢 Maîtrisé  🟡 En progression  🟠 À travailler  ⚫ Non exploré';
+          document.getElementById('mapFeedback').className = 'map-feedback';
+          document.getElementById('mapNextBtn').style.display = 'none';
+          document.getElementById('mapQCurr').textContent = '—';
+          document.getElementById('mapQTot').textContent = '—';
+          if (GLOBE) GLOBE.polygonsData([...GLOBE_COUNTRIES]);
+        }, 500);
+        return;
+      }
+      GLOBE_MODE = 'quiz';
       let pool;
       if (mode === 'villes') {
         pool = MAP_CITIES.map(c => ({ ...c, isCity: true }));
@@ -7203,18 +7864,63 @@
         document.getElementById('mapQCurr').textContent = '∞';
         document.getElementById('mapQTot').textContent = '∞';
       } else {
-        renderMapQuestion();
+        // Attend que le globe soit initialisé avant de lancer la première question
+        const waitGlobe = () => GLOBE ? renderMapQuestion() : setTimeout(waitGlobe, 100);
+        setTimeout(waitGlobe, 100);
       }
     }
 
     // ============================================================
     // 🌍 1. LE MOTEUR 3D — Globe.gl (Three.js sous le capot)
     // ============================================================
+
+    // Calcule le centroïde d'un polygone GeoJSON (top-level, réutilisable)
+    function polygonCentroid(geometry) {
+      if (!geometry) return null;
+      let coords = [];
+      if (geometry.type === 'Polygon') {
+        coords = geometry.coordinates[0];
+      } else if (geometry.type === 'MultiPolygon') {
+        let biggest = [];
+        geometry.coordinates.forEach(poly => { if (poly[0].length > biggest.length) biggest = poly[0]; });
+        coords = biggest;
+      }
+      if (!coords || !coords.length) return null;
+      let latSum = 0, lngSum = 0;
+      coords.forEach(([lng, lat]) => { latSum += lat; lngSum += lng; });
+      return { lat: latSum / coords.length, lng: lngSum / coords.length };
+    }
+
     function buildWorldMap() {
       const el = document.getElementById('globeViz');
+      // Détruit l'ancienne instance pour éviter fuites mémoire + double handlers
+      if (GLOBE) {
+        try { GLOBE._destructor && GLOBE._destructor(); } catch (_) {}
+        GLOBE = null;
+      }
       el.innerHTML = '';
-      // Le conteneur peut avoir une taille nulle juste après l'activation de l'écran (display:none -> flex)
+      GLOBE_COUNTRIES = [];
       setTimeout(() => initGlobe(el), 50);
+    }
+
+    let GLOBE_MODE = 'quiz'; // 'quiz' | 'heatmap' | 'tour'
+
+    // Calcule la couleur heatmap d'un pays selon les bonnes réponses du joueur
+    function getHeatmapColor(countryName) {
+      if (!countryName) return 'rgba(45,90,61,0.35)';
+      const name = countryName.toLowerCase();
+      // Cherche dans les catStats si le joueur a des stats pour ce pays
+      // On scanne les clés de catStats et on regarde si une question geo correspond
+      const geoStat = P.catStats['geo'];
+      if (!geoStat || geoStat.total === 0) return 'rgba(45,90,61,0.35)';
+      const allQ = window.GEO_QB || [];
+      const matching = allQ.filter(q => q.question && q.question.toLowerCase().includes(name));
+      if (matching.length === 0) return 'rgba(45,90,61,0.35)';
+      // Estime le ratio de réussite sur ce pays à partir du ratio global geo
+      const ratio = geoStat.correct / geoStat.total;
+      if (ratio >= 0.75) return 'rgba(34,197,94,0.7)';   // 🟢 Maîtrisé
+      if (ratio >= 0.5)  return 'rgba(250,204,21,0.6)';  // 🟡 En progression
+      return 'rgba(251,146,60,0.5)';                      // 🟠 À travailler
     }
 
     function initGlobe(el) {
@@ -7234,9 +7940,21 @@
         .polygonAltitude(0.01)
         .polygonSideColor(() => 'rgba(0,0,0,0)')
         .polygonStrokeColor(() => '#7dd3fc')
-        .polygonCapColor(d => d.__hint
-          ? 'rgba(250,204,21,0.55)'
-          : (d.__guessed ? (d.__correct ? 'rgba(34,197,94,0.6)' : 'rgba(239,68,68,0.6)') : 'rgba(45,90,61,0.55)'))
+        .polygonCapColor(d => {
+          if (GLOBE_MODE === 'heatmap') {
+            const name = d.properties?.NAME || d.properties?.name || '';
+            return getHeatmapColor(name);
+          }
+          // Pays cliqué correct → vert
+          if (d.__guessed && d.__correct) return 'rgba(34,197,94,0.75)';
+          // Pays cliqué incorrect → rouge
+          if (d.__guessed && !d.__correct) return 'rgba(239,68,68,0.8)';
+          // Bon pays révélé après mauvaise réponse → jaune vif
+          if (d.__hint && !d.__guessed) return 'rgba(250,204,21,0.85)';
+          // Continent surligné (indice) → jaune doux
+          if (d.__hint) return 'rgba(250,204,21,0.5)';
+          return 'rgba(45,90,61,0.55)';
+        })
 
         // 📌 Les villes/repères placés par le joueur (htmlElementsData)
         .htmlElementsData([])
@@ -7272,35 +7990,64 @@
       // ⚙️ Gestionnaire de clic sur un PAYS : vérifie la réponse à la question (modes pays)
       GLOBE.onPolygonClick(feat => {
         if (MAP_Q.mode === 'atlas') {
-          // Mode Atlas : juste un petit flash de couleur, pas de score
           feat.__guessed = true; feat.__correct = true;
           GLOBE.polygonsData([...GLOBE_COUNTRIES]);
           setTimeout(() => { feat.__guessed = false; GLOBE.polygonsData([...GLOBE_COUNTRIES]); }, 600);
           return;
         }
-        if (MAP_Q.answered || MAP_Q.mode === 'villes') return;
+        // 🔒 Verrou IMMÉDIAT — première ligne, bloque tout double-clic
+        if (MAP_Q.answered || !MAP_Q.questions || MAP_Q.idx >= MAP_Q.questions.length) return;
+        if (MAP_Q.mode === 'villes' || MAP_Q.mode === 'heatmap' || MAP_Q.mode === 'tour') return;
+        MAP_Q.answered = true;
+
         const q = MAP_Q.questions[MAP_Q.idx];
-        const name = (feat.properties?.NAME || feat.properties?.name || '').toLowerCase();
-        const target = q.name.toLowerCase();
-        const correct = name.includes(target) || target.includes(name);
+        const clickedName = feat.properties?.NAME || feat.properties?.name || '';
+        const correct = countryMatches(q.name, clickedName);
+
+        // Réinitialise tous les flags visuels
+        GLOBE_COUNTRIES.forEach(f => { f.__hint = false; f.__guessed = false; f.__correct = false; });
+
+        // Pays cliqué : vert si correct, rouge si mauvais
         feat.__guessed = true;
         feat.__correct = correct;
-        GLOBE.polygonsData([...GLOBE_COUNTRIES]); // force le rafraîchissement des couleurs
-        handleMapGuess(feat.properties?.lat, feat.properties?.lng, correct ? 0 : 1500, correct);
+
+        // Bon pays affiché en jaune si mauvaise réponse
+        if (!correct) {
+          GLOBE_COUNTRIES.forEach(f => {
+            const n = f.properties?.NAME || f.properties?.name || '';
+            if (countryMatches(q.name, n)) f.__hint = true;
+          });
+        }
+
+        GLOBE.polygonsData([...GLOBE_COUNTRIES]);
+
+        const centroid = polygonCentroid(feat.geometry);
+        const km = correct ? 0 : centroid
+          ? Math.round(haversineKm(centroid.lat, centroid.lng, q.lat, q.lng))
+          : 9999;
+        handleMapGuess(centroid?.lat ?? q.lat, centroid?.lng ?? q.lng, km, correct);
       });
 
-      // ⚙️ Gestionnaire de clic sur le GLOBE : récupère lat/lng (modes villes, ou repère libre)
+      // ⚙️ Gestionnaire de clic sur le GLOBE (océan ou repère libre)
       GLOBE.onGlobeClick(({ lat, lng }) => {
         if (MAP_Q.mode === 'atlas') { placeCity(lat, lng); return; }
-        if (!MAP_Q.answered) {
-          // mode "quiz" : on évalue la distance entre le clic et la cible
-          const q = MAP_Q.questions[MAP_Q.idx];
-          const km = haversineKm(lat, lng, q.lat, q.lng);
-          handleMapGuess(lat, lng, km, km < 50);
-        } else {
-          // mode "construction" : on pose une nouvelle ville sur la carte
-          placeCity(lat, lng);
-        }
+        // 🔒 Verrou identique
+        if (MAP_Q.answered || !MAP_Q.questions || MAP_Q.idx >= MAP_Q.questions.length) return;
+        if (MAP_Q.mode === 'villes' || MAP_Q.mode === 'heatmap' || MAP_Q.mode === 'tour') return;
+        MAP_Q.answered = true;
+
+        const q = MAP_Q.questions[MAP_Q.idx];
+        const km = Math.round(haversineKm(lat, lng, q.lat, q.lng));
+        const correct = km < 80;
+
+        GLOBE_COUNTRIES.forEach(f => { f.__hint = false; f.__guessed = false; });
+        GLOBE_COUNTRIES.forEach(f => {
+          const n = f.properties?.NAME || f.properties?.name || '';
+          if (countryMatches(q.name, n)) f.__hint = true;
+        });
+        GLOBE.polygonsData([...GLOBE_COUNTRIES]);
+
+        handleMapGuess(lat, lng, km, correct);
       });
 
       window.addEventListener('resize', () => {
@@ -7321,117 +8068,214 @@
       GLOBE.htmlElementsData([...MAP_VILLES, ...extra]);
     }
 
-    // ✅ Traite une réponse (clic sur pays OU sur le globe) et met à jour le score
-    function handleMapGuess(guessLat, guessLng, km, isGood) {
-      const q = MAP_Q.questions[MAP_Q.idx];
-      const pts = isGood ? 1000 : Math.max(0, Math.round(1000 * Math.max(0, 1 - km / 3000)));
-      MAP_Q.score += pts;
-      MAP_Q.answered = true;
+    // ===== CHRONO CARTE =====
+    let _mapChrono = null;
+    let _mapChronoSec = 20;
 
-      // Marqueurs : repère du joueur + cible réelle
-      refreshMapMarkers([
-        { lat: guessLat ?? q.lat, lng: guessLng ?? q.lng, emoji: '📌', size: 26 },
-        { lat: q.lat, lng: q.lng, emoji: '🎯', size: 26 }
-      ]);
-      GLOBE.ringsData([{ lat: q.lat, lng: q.lng }]);
+    function startMapChrono() {
+      clearInterval(_mapChrono);
+      _mapChronoSec = 20;
+      _updateChronoUI();
+      _mapChrono = setInterval(() => {
+        _mapChronoSec--;
+        _updateChronoUI();
+        if (_mapChronoSec <= 0) {
+          clearInterval(_mapChrono);
+          if (!MAP_Q.answered) {
+            MAP_Q.answered = true;
+            // Affiche le bon pays en jaune avant le feedback
+            if (GLOBE_COUNTRIES.length && MAP_Q.questions?.[MAP_Q.idx]) {
+              const qName = MAP_Q.questions[MAP_Q.idx].name;
+              GLOBE_COUNTRIES.forEach(f => {
+                const n = f.properties?.NAME || f.properties?.name || '';
+                f.__hint = countryMatches(qName, n);
+              });
+              GLOBE.polygonsData([...GLOBE_COUNTRIES]);
+            }
+            handleMapGuess(null, null, 99999, false, true);
+          }
+        }
+      }, 1000);
+    }
+
+    function stopMapChrono() {
+      clearInterval(_mapChrono);
+      _mapChrono = null;
+    }
+
+    function _updateChronoUI() {
+      const el = document.getElementById('mapChronoVal');
+      const mult = document.getElementById('mapChronoMult');
+      if (!el) return;
+      el.textContent = _mapChronoSec;
+      const m = _getChronoMultiplier();
+      if (mult) {
+        mult.textContent = `×${m.toFixed(1)}`;
+        mult.style.color = m >= 1.5 ? 'var(--green)' : m >= 1.0 ? 'var(--gold)' : 'var(--red)';
+      }
+      el.style.color = _mapChronoSec <= 5 ? 'var(--red)' : _mapChronoSec <= 10 ? 'var(--orange)' : 'var(--gold)';
+      const wrap = document.getElementById('mapChronoWrap');
+      if (wrap) wrap.classList.toggle('chrono-urgent', _mapChronoSec <= 5);
+    }
+
+    function _getChronoMultiplier() {
+      // 20s → ×2.0 | 10s → ×1.0 | 0s → ×0.5 (linéaire)
+      return Math.max(0.5, 0.5 + (_mapChronoSec / 20) * 1.5);
+    }
+
+    // ✅ Traite une réponse — appelée APRÈS que MAP_Q.answered = true a été posé par le caller
+    function handleMapGuess(guessLat, guessLng, km, isGood, timeout = false) {
+      stopMapChrono();
+      const q = MAP_Q.questions[MAP_Q.idx];
+      if (!q) return;
+
+      // Calcul du score avec multiplicateur chrono
+      let pts = 0;
+      if (!timeout) {
+        const base = isGood ? 1000 : Math.max(0, Math.round(1000 * Math.max(0, 1 - km / 3000)));
+        pts = Math.round(base * _getChronoMultiplier());
+      }
+      MAP_Q.score += pts;
+
+      // Marqueurs visuels
+      if (guessLat != null) {
+        refreshMapMarkers([
+          { lat: guessLat, lng: guessLng, emoji: isGood ? '✅' : '❌', size: 26 },
+          { lat: q.lat, lng: q.lng, emoji: '🎯', size: 26 }
+        ]);
+      } else {
+        refreshMapMarkers([{ lat: q.lat, lng: q.lng, emoji: '🎯', size: 26 }]);
+      }
+      GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
       GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 1.6 }, 1000);
 
+      // Feedback texte
       const fb = document.getElementById('mapFeedback');
-      fb.className = `map-feedback ${pts > 500 ? 'correct' : 'wrong'}`;
-      fb.textContent = pts > 700 ? `🎯 Excellent ! +${pts} pts` : pts > 300 ? `👍 Pas mal ! +${pts} pts (${km} km)` : `📍 C'était ${q.name} · +${pts} pts (${km} km)`;
-      document.getElementById('mapTotalScore').textContent = MAP_Q.score;
+      if (timeout) {
+        fb.className = 'map-feedback wrong';
+        fb.textContent = `⏰ Temps écoulé ! C'était ${q.name} — 0 pt`;
+      } else if (isGood) {
+        fb.className = 'map-feedback correct';
+        fb.textContent = `🎯 Bravo ! +${pts} pts`;
+      } else {
+        fb.className = 'map-feedback wrong';
+        fb.textContent = km < 500
+          ? `🟡 Presque (${km} km) ! C'était ${q.name} · +${pts} pts`
+          : `❌ C'était ${q.name} · +${pts} pts (${km} km)`;
+      }
+
+      document.getElementById('mapTotalScore').textContent = MAP_Q.score.toLocaleString();
       document.getElementById('mapNextBtn').style.display = '';
+      ['hintCont','hintLetter','hintRadar'].forEach(id => {
+        const b = document.getElementById(id);
+        if (b) { b.disabled = true; b.style.opacity = '0.4'; }
+      });
       updateMissionProgress('mapquiz', 1);
     }
 
     function renderMapQuestion() {
       if (MAP_Q.idx >= MAP_Q.questions.length) { endMapQuiz(); return; }
       const q = MAP_Q.questions[MAP_Q.idx];
-      document.getElementById('mapQuestion').textContent = q.isCity ? `📍 Où se trouve la ville de : ${q.name} ?` : `📍 Où se trouve : ${q.name} ?`;
+      document.getElementById('mapQuestion').textContent = q.isCity
+        ? `📍 Où se trouve la ville de : ${q.name} ?`
+        : `📍 Où se trouve : ${q.name} ?`;
       document.getElementById('mapQCurr').textContent = MAP_Q.idx + 1;
       document.getElementById('mapQTot').textContent = MAP_Q.questions.length;
-      document.getElementById('mapFeedback').textContent = `💡 Indice : ${q.hint}`;
+      document.getElementById('mapFeedback').textContent = `💡 ${q.hint}`;
       document.getElementById('mapFeedback').className = 'map-feedback';
       document.getElementById('mapNextBtn').style.display = 'none';
+      // Réactive les boutons d'indice
+      ['hintCont','hintLetter','hintRadar'].forEach(id => {
+        const b = document.getElementById(id);
+        if (b) { b.disabled = false; b.style.opacity = '1'; }
+      });
       if (GLOBE) {
         GLOBE.ringsData([]);
         if (GLOBE_COUNTRIES.length) {
-          GLOBE_COUNTRIES.forEach(f => { f.__hint = false; });
+          GLOBE_COUNTRIES.forEach(f => { f.__hint = false; f.__guessed = false; f.__correct = false; });
           GLOBE.polygonsData([...GLOBE_COUNTRIES]);
         }
         refreshMapMarkers();
       }
       MAP_Q.answered = false;
+      startMapChrono();
+      // Zoom sur la région de la question
+      if (GLOBE) GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 2.2 }, 1200);
     }
 
     // ============================================================
-    // 💎 Boutique d'indices — dépense tes gemmes !
+    // 💎 Boutique d'indices — 5 gems chacun
     // ============================================================
     function mapHint(type) {
       if (MAP_Q.mode === 'atlas' || MAP_Q.answered) return;
       const q = MAP_Q.questions[MAP_Q.idx];
-      const costs = { continent: 50, letter: 30, radar: 80 };
-      const cost = costs[type];
-      if (P.gems < cost) { showToast('💎 Pas assez de gemmes !'); return; }
+      const cost = 5;
+      if (P.gems < cost) { showToast('💎 Pas assez de gemmes ! (5 💎 requis)'); return; }
+      P.gems -= cost;
+      save();
+      document.getElementById('valGems').textContent = P.gems;
+      const fb = document.getElementById('mapFeedback');
 
       if (type === 'letter') {
-        P.gems -= cost;
-        document.getElementById('valGems').textContent = P.gems;
-        const fb = document.getElementById('mapFeedback');
-        fb.textContent = `🔤 Ça commence par : "${q.name.charAt(0).toUpperCase()}"`;
+        fb.textContent = `🔤 Ça commence par : "${q.name.charAt(0).toUpperCase()}" · (Lettre utilisée, −5💎)`;
         return;
       }
 
       if (type === 'continent') {
         const cont = q.cont || continentFromHint(q.hint);
-        if (!GLOBE_COUNTRIES.length) { showToast('🌍 Chargement de la carte en cours…'); return; }
-        P.gems -= cost;
-        document.getElementById('valGems').textContent = P.gems;
+        if (!GLOBE_COUNTRIES.length) { showToast('🌍 Carte en cours de chargement…'); P.gems += cost; save(); return; }
         GLOBE_COUNTRIES.forEach(f => {
           const c = f.properties?.CONTINENT === 'Seven seas (open ocean)' ? null : f.properties?.CONTINENT;
           const fc = (c === 'North America' || c === 'South America') ? 'Amérique'
             : c === 'Europe' ? 'Europe' : c === 'Africa' ? 'Afrique'
-              : c === 'Asia' ? 'Asie' : (c === 'Oceania' ? 'Océanie' : null);
+            : c === 'Asia' ? 'Asie' : (c === 'Oceania' ? 'Océanie' : null);
           f.__hint = (fc === cont);
         });
         GLOBE.polygonsData([...GLOBE_COUNTRIES]);
-        document.getElementById('mapFeedback').textContent = `🌍 Indice : c'est en ${cont} (zone surlignée en jaune)`;
+        fb.textContent = `🌍 Zone surlignée en jaune : ${cont} (−5💎)`;
+        // Zoom sur le continent
+        const contCoords = { Europe: [50, 15, 2.5], Afrique: [5, 20, 2.5], Asie: [35, 90, 2.5], Amérique: [10, -70, 2.5], Océanie: [-25, 140, 2.5], Monde: [0, 0, 2.5] };
+        const cc = contCoords[cont] || contCoords.Monde;
+        GLOBE.pointOfView({ lat: cc[0], lng: cc[1], altitude: cc[2] }, 1200);
         return;
       }
 
       if (type === 'radar') {
-        P.gems -= cost;
-        document.getElementById('valGems').textContent = P.gems;
-        GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.7)' }]);
-        GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 2.2 }, 1200);
-        document.getElementById('mapFeedback').textContent = `📡 Une zone a été révélée sur le globe…`;
+        GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
+        GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 2.4 }, 1200);
+        fb.textContent = `📡 Zone révélée sur le globe (−5💎) — cherche dans ce secteur !`;
       }
     }
 
     function mapNextQuestion() {
+      if (MAP_Q.mode === 'tour') { tourNextEtape(); return; }
       MAP_Q.idx++;
       renderMapQuestion();
     }
 
     function endMapQuiz() {
       const score = MAP_Q.score;
-      const maxScore = MAP_Q.questions.length * 1000;
-      const pct = Math.round(score / maxScore * 100);
-      const gemsEarned = Math.round(score / 200);
+      const total = MAP_Q.questions?.length || 0;
+      const maxScore = total * 2000; // max théorique avec ×2 chrono
+      const pct = total > 0 ? Math.round((score / (total * 1000)) * 100) : 0;
+      const gemsEarned = Math.max(0, Math.round(score / 200));
       P.gems += gemsEarned;
+      P.xp += Math.round(score / 100);
       save();
       exitMapQuiz();
       setTimeout(() => {
         showBonusPopup('🗺️', 'Carte Interactive !',
-          `Score final : ${score.toLocaleString()} / ${maxScore.toLocaleString()} pts`,
-          [`🏆 ${pct}% de précision`, `💎 +${gemsEarned} Gemmes`]);
+          `Score : ${score.toLocaleString()} pts`,
+          [`🏆 ${pct}% de précision`, `💎 +${gemsEarned} Gemmes`, `⭐ +${Math.round(score / 100)} XP`]);
       }, 300);
     }
 
     function exitMapQuiz() {
+      stopMapChrono();
       document.getElementById('scrMapQuiz').classList.remove('active');
       document.getElementById('topbar').style.display = 'flex';
       document.getElementById('bnav').style.display = 'flex';
+      GLOBE_MODE = 'quiz';
     }
 
     // ===== ENHANCED ATLAS ANIMATION =====
@@ -7473,13 +8317,11 @@
       P.name = n;
       P.lastPlayDate = new Date().toISOString().split('T')[0];
 
-      // --- AJOUTE CETTE LIGNE ICI ---
-      const idJoueurUnique = P.lastPlayDate + "_" + Math.floor(Math.random() * 10000);
-      P.idUnique = idJoueurUnique; // On le stocke précieusement dans l'état du jeu
-      // ------------------------------
+      // Génération d'un identifiant vraiment unique pour le joueur
+      P.idUnique = (crypto.randomUUID ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2)));
 
       save();
-      synchroniserJoueur(P.idUnique, P.name, P.avatar); // Utilise P.idUnique
+      synchroniserJoueur(P.idUnique, P.name, P.avatar);
       startApp();
     }
 
@@ -7495,58 +8337,202 @@
       updateMissionsSummary();
       startHeartRegen();
     }
-    function synchroniserJoueur(idUnique, pseudo, avatarChoisi) {
-      fetch('https://knowquest-api.onrender.com/api/player', { // ⚠️ Remplace par ta vraie URL Render
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: idUnique,      // Un identifiant unique (ex: un UUID ou un timestamp)
-          name: pseudo,      // Le nom du joueur
-          avatar: avatarChoisi // Son avatar
-        })
-      })
-        .then(res => res.json())
-        .then(data => console.log("Joueur connecté à la base :", data))
-        .catch(err => console.error("Erreur de synchro :", err));
-    }
-    function enregistrerReponse(donneesPartie) {
-      fetch('https://knowquest-api.onrender.com/api/answer', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
-          player_id: donneesPartie.idJoueur,
-          question_id: donneesPartie.idQuestion,
-          question_text: donneesPartie.texteQuestion, // Reçoit "texteQuestion"
-          category: donneesPartie.categorie,          // Reçoit "categorie"
-          answer_given: donneesPartie.reponseDonnee,
-          correct_answer: donneesPartie.reponseCorrecte,
-          is_correct: donneesPartie.estCorrect ? 1 : 0, // Reçoit "estCorrect" (1 ou 0)
-          time_taken_ms: donneesPartie.tempsMisMs       // Reçoit "tempsMisMs"
-        })
-      })
-        .then(res => res.json())
-        .then(data => console.log("Donnée enregistrée !"))
-        .catch(err => console.error("Erreur d'enregistrement :", err));
+    // ===== CACHE INDEXEDDB — FILE D'ATTENTE HORS-LIGNE =====
+    const API_BASE = 'https://knowquest-api.onrender.com/api';
+    let _idb = null;
+
+    function openIDB() {
+      if (_idb) return Promise.resolve(_idb);
+      return new Promise((resolve, reject) => {
+        const req = indexedDB.open('knowquest_offline', 1);
+        req.onupgradeneeded = e => {
+          e.target.result.createObjectStore('queue', { keyPath: 'id', autoIncrement: true });
+        };
+        req.onsuccess = e => { _idb = e.target.result; resolve(_idb); };
+        req.onerror = () => reject(req.error);
+      });
     }
 
+    async function enqueueRequest(endpoint, body) {
+      try {
+        const db = await openIDB();
+        const tx = db.transaction('queue', 'readwrite');
+        tx.objectStore('queue').add({ endpoint, body, ts: Date.now() });
+      } catch (e) { console.warn('IDB enqueue error:', e); }
+    }
+
+    async function flushOfflineQueue() {
+      if (!navigator.onLine) return;
+      try {
+        const db = await openIDB();
+        const tx = db.transaction('queue', 'readwrite');
+        const store = tx.objectStore('queue');
+        const all = await new Promise(r => { const req = store.getAll(); req.onsuccess = () => r(req.result); });
+        if (!all.length) return;
+        console.log(`[offline queue] ${all.length} requête(s) en attente — envoi…`);
+        for (const item of all) {
+          try {
+            const res = await fetch(`${API_BASE}${item.endpoint}`, {
+              method: 'POST', headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(item.body)
+            });
+            if (res.ok) store.delete(item.id);
+          } catch (_) { /* on réessaiera au prochain online */ }
+        }
+        console.log('[offline queue] Flush terminé.');
+      } catch (e) { console.warn('IDB flush error:', e); }
+    }
+
+    // Rejoue la queue dès que le réseau revient
+    window.addEventListener('online', () => {
+      showToast('📶 Connexion rétablie — synchronisation en cours…');
+      flushOfflineQueue();
+    });
+
+    async function apiFetch(endpoint, body) {
+      try {
+        const res = await fetch(`${API_BASE}${endpoint}`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(body)
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return await res.json();
+      } catch (err) {
+        console.warn(`[offline] ${endpoint} mis en file d'attente.`, err);
+        await enqueueRequest(endpoint, body);
+        return null;
+      }
+    }
+
+    function synchroniserJoueur(idUnique, pseudo, avatarChoisi) {
+      apiFetch('/player', { id: idUnique, name: pseudo, avatar: avatarChoisi })
+        .then(data => { if (data) console.log('Joueur connecté à la base :', data); });
+    }
+
+    function enregistrerReponse(donneesPartie) {
+      apiFetch('/answer', {
+        id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+        player_id: donneesPartie.idJoueur,
+        question_id: donneesPartie.idQuestion,
+        question_text: donneesPartie.texteQuestion,
+        category: donneesPartie.categorie,
+        answer_given: donneesPartie.reponseDonnee,
+        correct_answer: donneesPartie.reponseCorrecte,
+        is_correct: donneesPartie.estCorrect ? 1 : 0,
+        time_taken_ms: donneesPartie.tempsMisMs
+      }).then(data => { if (data) console.log('Donnée enregistrée !'); });
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════════
+    // KnowQuest — Patch Collecte de Données v2 (intégré automatiquement)
+    // ═══════════════════════════════════════════════════════════════════════════
+
+    // ── 1. Variables de tracking ──────────────────────────────────────────────────
+    let _currentPowerupUsed = null;
+    let _sessionId          = null;
+    let _sessionStartTime   = null;
+    let _questionStartTime  = null;
+    let _positionInSession  = 0;
+    let _currentSource      = 'normal';
+
+    // ── 2. Génère un ID de session au lancement de chaque partie ─────────────────
+    function startSession(source) {
+      _sessionId         = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
+      _sessionStartTime  = Date.now();
+      _positionInSession = 0;
+      _currentPowerupUsed = null;
+      _currentSource     = source || 'normal';
+      console.log('[Collecte] Session démarrée :', _sessionId, '| source:', _currentSource);
+    }
+
+    function startQuestionTimer() {
+      _questionStartTime  = Date.now();
+      _currentPowerupUsed = null;
+      _positionInSession++;
+    }
+
+    // ── 3. Patch usePowerup ───────────────────────────────────────────────────────
+    const _originalUsePowerup = typeof usePowerup === 'function' ? usePowerup : null;
+    function usePowerup(type) {
+      _currentPowerupUsed = type;
+      console.log('[Collecte] Powerup utilisé :', type, '| question pos:', _positionInSession);
+      if (_originalUsePowerup) _originalUsePowerup(type);
+    }
+
+    // ── 4. Patch enregistrerReponse ───────────────────────────────────────────────
+    const _originalEnregistrerReponse = enregistrerReponse;
+    function enregistrerReponse(donneesPartie) {
+      const timeMsCalculé = donneesPartie.tempsMisMs
+        || (_questionStartTime ? Date.now() - _questionStartTime : null);
+      const donneesEnrichies = Object.assign({}, donneesPartie, {
+        tempsMisMs:          timeMsCalculé,
+        source:              _currentSource      || 'normal',
+        hint_used:           _currentPowerupUsed || null,
+        position_in_session: _positionInSession,
+        session_id:          _sessionId,
+      });
+      _currentPowerupUsed = null;
+      console.log('[Collecte] Réponse enrichie :', {
+        question_id:         donneesEnrichies.idQuestion,
+        source:              donneesEnrichies.source,
+        hint_used:           donneesEnrichies.hint_used,
+        position_in_session: donneesEnrichies.position_in_session,
+        time_ms:             donneesEnrichies.tempsMisMs,
+      });
+      _originalEnregistrerReponse(donneesEnrichies);
+    }
+
+    // ── 5. Patch apiFetch ─────────────────────────────────────────────────────────
+    const _originalApiFetch = apiFetch;
+    function apiFetch(endpoint, body, opts) {
+      if (endpoint === '/answer' && body) {
+        body = Object.assign({}, body, {
+          source:              body.source              || _currentSource      || 'normal',
+          hint_used:           body.hint_used           !== undefined ? body.hint_used : (_currentPowerupUsed || null),
+          position_in_session: body.position_in_session || _positionInSession  || null,
+          session_id:          body.session_id          || _sessionId          || null,
+        });
+      }
+      return _originalApiFetch(endpoint, body, opts);
+    }
+
+    // ── 6. Patch renderGPActiveQuestion (mode GP) ─────────────────────────────────
+    if (typeof renderGPActiveQuestion === 'function') {
+      const _origRenderGP = renderGPActiveQuestion;
+      window.renderGPActiveQuestion = function(...args) {
+        startQuestionTimer();
+        return _origRenderGP.apply(this, args);
+      };
+    }
+
+    // ── 7. Debug console ──────────────────────────────────────────────────────────
+    window._collecteDebug = () => ({
+      sessionId:         _sessionId,
+      sessionDurationMs: _sessionStartTime ? Date.now() - _sessionStartTime : null,
+      positionActuelle:  _positionInSession,
+      powerupActuel:     _currentPowerupUsed,
+      source:            _currentSource,
+    });
+
+    // Flush au démarrage si on était hors-ligne avant
+    flushOfflineQueue();
+
     initOnboard();
-    if (loadData() && P.name) { startApp(); } else { document.getElementById('scrOnboard').classList.add('active'); }
+    let _appStarted = false;
+    if (loadData() && P.name) { _appStarted = true; startApp(); } else { document.getElementById('scrOnboard').classList.add('active'); }
   </script>
   <!-- CHARGEZ LE LOADER APRÈS -->
   <script src="scripts/data_loader.js"></script>
 
-  <!-- ET AJOUTEZ LE DÉCLENCHEUR DE SÉCURITÉ -->
+  <!-- DÉCLENCHEUR DE SÉCURITÉ : relance startApp uniquement si les données n'étaient pas encore prêtes -->
   <script>
     window.addEventListener('kq:data-loaded', () => {
       console.log("Données prêtes ! Lancement du jeu...");
-      if (P.name) {
-        startApp();
-      } else {
-        // On est déjà dans le cas où l'onboard est actif, 
-        // mais on s'assure que tout est bien initialisé
+      if (!_appStarted && P.name) {
+        _appStarted = true;
         startApp();
       }
+      // Si P.name est vide, l'onboard est déjà affiché — on ne fait rien
     });
   </script>
 </body>

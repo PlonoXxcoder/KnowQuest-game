@@ -1,33 +1,68 @@
 {
-  "version": "2.1",
-  "generatedAt": "2026-06-16T13:38:12.687269",
+  "version": "4.0",
+  "generatedAt": "2026-06-24T16:54:48.192198",
   "totalMilestones": 40,
-  "xpTotal": 19070,
+  "xpTotal": 53480,
   "questionCounts": {
-    "qcm": 740,
-    "tf": 120,
-    "scramble": 110,
-    "total": 970
+    "qcm": 2329,
+    "tf": 304,
+    "scramble": 150,
+    "total": 2783
   },
   "catsPresent": [
     "geo",
-    "sci",
     "sport",
+    "gastro",
+    "hist",
+    "sci",
     "chateaux",
-    "cinema",
     "art",
     "mytho",
-    "gastro",
+    "cinema",
     "extended",
-    "hist",
-    "mixed",
-    "litt"
+    "litt",
+    "mixed"
   ],
+  "playerProfile": {
+    "skillLevel": "avance",
+    "successRate": 0.833,
+    "streak": 1,
+    "sessionsCount": 1,
+    "xpTotal": 100,
+    "weakCats": [],
+    "strongCats": [],
+    "masteryBycat": {
+      "cinema": {
+        "level": "bronze",
+        "icon": "🥉",
+        "xp": 40,
+        "next_xp": 200,
+        "pct": 0.2
+      },
+      "geo": {
+        "level": "bronze",
+        "icon": "🥉",
+        "xp": 60,
+        "next_xp": 200,
+        "pct": 0.3
+      }
+    },
+    "engagement": {
+      "score": 37,
+      "label": "😴 Faible",
+      "breakdown": {
+        "sessions_recentes": 10,
+        "taux_reussite": 25,
+        "streak": 2,
+        "progression": 0
+      }
+    }
+  },
   "milestones": [
     {
       "id": 1,
       "xpRequired": 50,
-      "title": "Premier Pas",
+      "title": "Découvreur du Monde",
       "icon": "🌍",
       "tier": "bronze",
       "reward": {
@@ -36,14 +71,32 @@
         "amount": 10,
         "item": null
       },
-      "description": "Commence ton aventure en geo !",
-      "cat": "geo"
+      "description": "Vous commencez votre aventure avec 50 points d'expérience en géographie, prêt à explorer les merveilles de notre planète !",
+      "cat": "geo",
+      "isWeakCat": false
+    },
+    {
+      "id": "catchup",
+      "xpRequired": 150,
+      "title": "Bienvenue de retour !",
+      "icon": "🎉",
+      "tier": "bronze",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 55,
+        "item": null,
+        "_catchup": true
+      },
+      "description": "Absent 6 jour(s) — reprends là où tu t'es arrêté !",
+      "cat": "mixed",
+      "_is_catchup": true
     },
     {
       "id": 2,
       "xpRequired": 150,
-      "title": "Apprenti Curieux",
-      "icon": "🔬",
+      "title": "Champion de Bronze",
+      "icon": "⚽",
       "tier": "bronze",
       "reward": {
         "type": "heart",
@@ -51,14 +104,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Commence ton aventure en sci !",
-      "cat": "sci"
+      "description": "Avec 150 points d'expérience en sport, vous êtes sur la bonne voie pour devenir un athlète de renom !",
+      "cat": "sport",
+      "isWeakCat": false
     },
     {
       "id": 3,
       "xpRequired": 300,
-      "title": "Explorateur Bronze",
-      "icon": "⚽",
+      "title": "Gourmet en Herbe",
+      "icon": "🍽️",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -66,14 +120,15 @@
         "amount": 15,
         "item": null
       },
-      "description": "Commence ton aventure en sport !",
-      "cat": "sport"
+      "description": "150 points d'expérience en gastronomie, vous avez déjà un palais raffiné et une grande curiosité pour les saveurs du monde !",
+      "cat": "gastro",
+      "isWeakCat": false
     },
     {
       "id": 4,
-      "xpRequired": 500,
-      "title": "Esprit Éveillé",
-      "icon": "🏰",
+      "xpRequired": 550,
+      "title": "Historien Émergent",
+      "icon": "📜",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -81,14 +136,15 @@
         "amount": 10,
         "item": null
       },
-      "description": "Commence ton aventure en chateaux !",
-      "cat": "chateaux"
+      "description": "550 points d'expérience en histoire, vous commencez à déchiffrer les secrets du passé !",
+      "cat": "hist",
+      "isWeakCat": false
     },
     {
       "id": 5,
-      "xpRequired": 700,
-      "title": "Découvreur",
-      "icon": "🎬",
+      "xpRequired": 850,
+      "title": "Scientifique Curieux",
+      "icon": "🔬",
       "tier": "bronze",
       "reward": {
         "type": "heart",
@@ -96,14 +152,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Commence ton aventure en cinema !",
-      "cat": "cinema"
+      "description": "850 points d'expérience en sciences, les mystères de l'univers commencent à vous être révélés !",
+      "cat": "sci",
+      "isWeakCat": false
     },
     {
       "id": 6,
-      "xpRequired": 900,
-      "title": "Premier Pas",
-      "icon": "🎨",
+      "xpRequired": 1200,
+      "title": "Découvreur de Châteaux",
+      "icon": "🏰",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -111,14 +168,15 @@
         "amount": 15,
         "item": null
       },
-      "description": "Commence ton aventure en art !",
-      "cat": "art"
+      "description": "1200 points d'expérience dans l'exploration des châteaux, vous êtes prêt à découvrir les trésors et les histoires qui se cachent derrière ces murs anciens !",
+      "cat": "chateaux",
+      "isWeakCat": false
     },
     {
       "id": 7,
-      "xpRequired": 1150,
-      "title": "Apprenti Curieux",
-      "icon": "⚡",
+      "xpRequired": 1650,
+      "title": "Artiste en Développement",
+      "icon": "🎨",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -126,14 +184,15 @@
         "amount": 10,
         "item": null
       },
-      "description": "Commence ton aventure en mytho !",
-      "cat": "mytho"
+      "description": "1650 points d'expérience en art, votre créativité s'épanouit et vous commencez à voir le monde sous un jour nouveau !",
+      "cat": "art",
+      "isWeakCat": false
     },
     {
       "id": 8,
-      "xpRequired": 1450,
-      "title": "Explorateur Bronze",
-      "icon": "🍽️",
+      "xpRequired": 2150,
+      "title": "Mythologue Amateur",
+      "icon": "⚡",
       "tier": "bronze",
       "reward": {
         "type": "heart",
@@ -141,14 +200,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Commence ton aventure en gastro !",
-      "cat": "gastro"
+      "description": "2150 points d'expérience en mythologie, les légendes et les mythes commencent à prendre vie sous vos yeux !",
+      "cat": "mytho",
+      "isWeakCat": false
     },
     {
       "id": 9,
-      "xpRequired": 1750,
-      "title": "Esprit Éveillé",
-      "icon": "🧠",
+      "xpRequired": 2700,
+      "title": "Cinéphile Naissant",
+      "icon": "🎬",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -156,14 +216,15 @@
         "amount": 15,
         "item": null
       },
-      "description": "Commence ton aventure en extended !",
-      "cat": "extended"
+      "description": "2700 points d'expérience au cinéma, vous découvrez les classiques et les dernières tendances du septième art !",
+      "cat": "cinema",
+      "isWeakCat": false
     },
     {
       "id": 10,
-      "xpRequired": 2100,
-      "title": "Découvreur",
-      "icon": "📜",
+      "xpRequired": 3350,
+      "title": "Explorateur d'Horizons",
+      "icon": "🧠",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -171,14 +232,15 @@
         "amount": 10,
         "item": null
       },
-      "description": "Commence ton aventure en hist !",
-      "cat": "hist"
+      "description": "3350 points d'expérience dans l'exploration des horizons étendus, vous vous préparez à affronter de nouveaux défis !",
+      "cat": "extended",
+      "isWeakCat": false
     },
     {
       "id": 11,
-      "xpRequired": 2400,
-      "title": "Premier Pas",
-      "icon": "🎲",
+      "xpRequired": 4050,
+      "title": "Littéraire Émergent",
+      "icon": "📚",
       "tier": "bronze",
       "reward": {
         "type": "heart",
@@ -186,14 +248,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Commence ton aventure en mixed !",
-      "cat": "mixed"
+      "description": "4050 points d'expérience en littérature, les mots et les histoires commencent à vous transporter dans des mondes inconnus !",
+      "cat": "litt",
+      "isWeakCat": false
     },
     {
       "id": 12,
-      "xpRequired": 2800,
-      "title": "Apprenti Curieux",
-      "icon": "📚",
+      "xpRequired": 4800,
+      "title": "Polyvalent",
+      "icon": "🎲",
       "tier": "bronze",
       "reward": {
         "type": "gems",
@@ -201,59 +264,63 @@
         "amount": 15,
         "item": null
       },
-      "description": "Commence ton aventure en litt !",
-      "cat": "litt"
+      "description": "4800 points d'expérience dans des domaines variés, vous devenez un joueur polyvalent et prêt à relever tous les défis !",
+      "cat": "mixed",
+      "isWeakCat": false
     },
     {
       "id": 13,
-      "xpRequired": 3150,
-      "title": "Lettré Confirmé",
+      "xpRequired": 5650,
+      "title": "Géographe Confirmé",
       "icon": "🌍",
-      "tier": "silver",
+      "tier": "bronze",
       "reward": {
         "type": "gems",
         "icon": "💎",
-        "amount": 20,
+        "amount": 10,
         "item": null
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "geo"
+      "description": "5650 points d'expérience en géographie, vous approfondissez vos connaissances sur les régions du monde et leurs particularités !",
+      "cat": "geo",
+      "isWeakCat": false
     },
     {
       "id": 14,
-      "xpRequired": 3550,
-      "title": "Esprit Affûté",
-      "icon": "🔬",
-      "tier": "silver",
+      "xpRequired": 6550,
+      "title": "Sportif de Niveau",
+      "icon": "⚽",
+      "tier": "bronze",
       "reward": {
-        "type": "powerup",
-        "icon": "✂️",
+        "type": "heart",
+        "icon": "❤️",
         "amount": 1,
-        "item": "fiftyfifty"
+        "item": null
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "sci"
+      "description": "6550 points d'expérience en sport, vous êtes désormais un athlète aguerri, prêt à affronter les meilleurs !",
+      "cat": "sport",
+      "isWeakCat": false
     },
     {
       "id": 15,
-      "xpRequired": 3950,
-      "title": "Chasseur de Savoirs",
-      "icon": "⚽",
-      "tier": "silver",
+      "xpRequired": 7500,
+      "title": "Gastronome Raffiné",
+      "icon": "🍽️",
+      "tier": "bronze",
       "reward": {
-        "type": "powerup",
-        "icon": "🛡️",
-        "amount": 1,
-        "item": "shield"
+        "type": "gems",
+        "icon": "💎",
+        "amount": 15,
+        "item": null
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "sport"
+      "description": "7500 points d'expérience en gastronomie, vos papilles sont devenues expertes et vous appréciez les saveurs les plus subtiles !",
+      "cat": "gastro",
+      "isWeakCat": false
     },
     {
       "id": 16,
-      "xpRequired": 4400,
-      "title": "Navigateur Culturel",
-      "icon": "🏰",
+      "xpRequired": 8550,
+      "title": "Historien de Talent",
+      "icon": "📜",
       "tier": "silver",
       "reward": {
         "type": "gems",
@@ -261,13 +328,78 @@
         "amount": 30,
         "item": null
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "chateaux"
+      "description": "8550 points d'expérience en histoire, vous êtes désormais capable de déchiffrer les secrets les plus cachés du passé !",
+      "cat": "hist",
+      "isWeakCat": false
     },
     {
       "id": 17,
-      "xpRequired": 4850,
-      "title": "Érudit en Herbe",
+      "xpRequired": 9650,
+      "title": "Scientifique Avancé",
+      "icon": "🔬",
+      "tier": "silver",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 20,
+        "item": null
+      },
+      "description": "9650 points d'expérience en sciences, les mystères de l'univers ne vous sont plus étrangers et vous commencez à comprendre les mécanismes complexes de la nature !",
+      "cat": "sci",
+      "isWeakCat": false
+    },
+    {
+      "id": 18,
+      "xpRequired": 10850,
+      "title": "Spécialiste des Châteaux",
+      "icon": "🏰",
+      "tier": "silver",
+      "reward": {
+        "type": "powerup",
+        "icon": "✂️",
+        "amount": 1,
+        "item": "fiftyfifty"
+      },
+      "description": "10850 points d'expérience dans l'exploration des châteaux, vous connaissez maintenant les recoins les plus secrets de ces monuments historiques !",
+      "cat": "chateaux",
+      "isWeakCat": false
+    },
+    {
+      "id": 19,
+      "xpRequired": 12050,
+      "title": "Artiste Accompli",
+      "icon": "🎨",
+      "tier": "silver",
+      "reward": {
+        "type": "powerup",
+        "icon": "🛡️",
+        "amount": 1,
+        "item": "shield"
+      },
+      "description": "12050 points d'expérience en art, votre créativité a atteint de nouveaux sommets et vous êtes reconnu pour vos œuvres !",
+      "cat": "art",
+      "isWeakCat": false
+    },
+    {
+      "id": 20,
+      "xpRequired": 13350,
+      "title": "Mythologue Érudit",
+      "icon": "⚡",
+      "tier": "silver",
+      "reward": {
+        "type": "gems",
+        "icon": "💎",
+        "amount": 30,
+        "item": null
+      },
+      "description": "13350 points d'expérience en mythologie, les mythes et les légendes vous sont familiers et vous les interprétez avec sagesse !",
+      "cat": "mytho",
+      "isWeakCat": false
+    },
+    {
+      "id": 21,
+      "xpRequired": 14750,
+      "title": "Cinéaste Averti",
       "icon": "🎬",
       "tier": "silver",
       "reward": {
@@ -276,14 +408,15 @@
         "amount": 20,
         "item": null
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "cinema"
+      "description": "14750 points d'expérience au cinéma, vous connaissez les classiques, les dernières tendances et les secrets du métier !",
+      "cat": "cinema",
+      "isWeakCat": false
     },
     {
-      "id": 18,
-      "xpRequired": 5300,
-      "title": "Lettré Confirmé",
-      "icon": "🎨",
+      "id": 22,
+      "xpRequired": 16200,
+      "title": "Explorateur Expérimenté",
+      "icon": "🧠",
       "tier": "silver",
       "reward": {
         "type": "powerup",
@@ -291,14 +424,15 @@
         "amount": 1,
         "item": "fiftyfifty"
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "art"
+      "description": "16200 points d'expérience dans l'exploration des horizons étendus, vous avez affronté de nombreux défis et vous êtes prêt pour de nouvelles aventures !",
+      "cat": "extended",
+      "isWeakCat": false
     },
     {
-      "id": 19,
-      "xpRequired": 5800,
-      "title": "Esprit Affûté",
-      "icon": "⚡",
+      "id": 23,
+      "xpRequired": 17700,
+      "title": "Littéraire Confirmé",
+      "icon": "📚",
       "tier": "silver",
       "reward": {
         "type": "powerup",
@@ -306,74 +440,15 @@
         "amount": 1,
         "item": "shield"
       },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "mytho"
-    },
-    {
-      "id": 20,
-      "xpRequired": 6300,
-      "title": "Chasseur de Savoirs",
-      "icon": "🍽️",
-      "tier": "silver",
-      "reward": {
-        "type": "gems",
-        "icon": "💎",
-        "amount": 30,
-        "item": null
-      },
-      "description": "Tu maîtrises les bases — continue sur ta lancée !",
-      "cat": "gastro"
-    },
-    {
-      "id": 21,
-      "xpRequired": 6800,
-      "title": "Maître des Questions",
-      "icon": "🧠",
-      "tier": "gold",
-      "reward": {
-        "type": "gems",
-        "icon": "💎",
-        "amount": 40,
-        "item": null
-      },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "extended"
-    },
-    {
-      "id": 22,
-      "xpRequired": 7350,
-      "title": "Encyclopédiste",
-      "icon": "📜",
-      "tier": "gold",
-      "reward": {
-        "type": "chest",
-        "icon": "🎁",
-        "amount": 1,
-        "item": null
-      },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "hist"
-    },
-    {
-      "id": 23,
-      "xpRequired": 7850,
-      "title": "Sage Doré",
-      "icon": "🎲",
-      "tier": "gold",
-      "reward": {
-        "type": "powerup",
-        "icon": "⚡",
-        "amount": 1,
-        "item": "doubleXP"
-      },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "mixed"
+      "description": "17700 points d'expérience en littérature, les mots et les histoires sont désormais vos alliés pour explorer les profondeurs de l'âme humaine !",
+      "cat": "litt",
+      "isWeakCat": false
     },
     {
       "id": 24,
-      "xpRequired": 8400,
-      "title": "Virtuose du Quiz",
-      "icon": "📚",
+      "xpRequired": 19250,
+      "title": "Maître des Domaines Variés",
+      "icon": "🎲",
       "tier": "gold",
       "reward": {
         "type": "gems",
@@ -381,13 +456,14 @@
         "amount": 50,
         "item": null
       },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "litt"
+      "description": "19250 points d'expérience dans des domaines variés, vous êtes un vrai maître de la polyvalence et de l'adaptabilité !",
+      "cat": "mixed",
+      "isWeakCat": false
     },
     {
       "id": 25,
-      "xpRequired": 9000,
-      "title": "Prodige Culturel",
+      "xpRequired": 20900,
+      "title": "Géographe Éminent",
       "icon": "🌍",
       "tier": "gold",
       "reward": {
@@ -396,14 +472,15 @@
         "amount": 40,
         "item": null
       },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "geo"
+      "description": "20900 points d'expérience en géographie, vous êtes désormais un expert reconnu dans votre domaine et vos connaissances sont sollicitées par tous !",
+      "cat": "geo",
+      "isWeakCat": false
     },
     {
       "id": 26,
-      "xpRequired": 9550,
-      "title": "Maître des Questions",
-      "icon": "🔬",
+      "xpRequired": 22600,
+      "title": "Champion Sportif",
+      "icon": "⚽",
       "tier": "gold",
       "reward": {
         "type": "chest",
@@ -411,14 +488,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "sci"
+      "description": "22600 points d'expérience en sport, vous êtes un athlète de renom, admiré pour vos performances et votre détermination !",
+      "cat": "sport",
+      "isWeakCat": false
     },
     {
       "id": 27,
-      "xpRequired": 10150,
-      "title": "Encyclopédiste",
-      "icon": "⚽",
+      "xpRequired": 24350,
+      "title": "Gastronome de Réputation Mondiale",
+      "icon": "🍽️",
       "tier": "gold",
       "reward": {
         "type": "powerup",
@@ -426,14 +504,15 @@
         "amount": 1,
         "item": "doubleXP"
       },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "sport"
+      "description": "24350 points d'expérience en gastronomie, vos papilles sont désormais légendaires et vous êtes invité dans les meilleurs restaurants du monde !",
+      "cat": "gastro",
+      "isWeakCat": false
     },
     {
       "id": 28,
-      "xpRequired": 10800,
-      "title": "Sage Doré",
-      "icon": "🏰",
+      "xpRequired": 26200,
+      "title": "Historien de Référence",
+      "icon": "📜",
       "tier": "gold",
       "reward": {
         "type": "gems",
@@ -441,14 +520,15 @@
         "amount": 50,
         "item": null
       },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "chateaux"
+      "description": "26200 points d'expérience en histoire, vous êtes le référent incontournable pour tous ceux qui cherchent à comprendre le passé !",
+      "cat": "hist",
+      "isWeakCat": false
     },
     {
       "id": 29,
-      "xpRequired": 11400,
-      "title": "Virtuose du Quiz",
-      "icon": "🎬",
+      "xpRequired": 28100,
+      "title": "Scientifique de Premier Plan",
+      "icon": "🔬",
       "tier": "gold",
       "reward": {
         "type": "gems",
@@ -456,29 +536,31 @@
         "amount": 40,
         "item": null
       },
-      "description": "Mi-parcours — 485 questions passées !",
-      "cat": "cinema"
+      "description": "28100 points d'expérience en sciences, vous êtes à la pointe de la recherche et vos découvertes changent le monde !",
+      "cat": "sci",
+      "isWeakCat": false
     },
     {
       "id": 30,
-      "xpRequired": 12050,
-      "title": "Grand Érudit",
-      "icon": "🎨",
-      "tier": "platinum",
+      "xpRequired": 30100,
+      "title": "Spécialiste des Châteaux de Légende",
+      "icon": "🏰",
+      "tier": "gold",
       "reward": {
         "type": "chest",
         "icon": "🎁",
         "amount": 1,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 37% !",
-      "cat": "art"
+      "description": "30100 points d'expérience dans l'exploration des châteaux, vous avez découvert les secrets les plus cachés de ces monuments historiques et vous êtes considéré comme un expert !",
+      "cat": "chateaux",
+      "isWeakCat": false
     },
     {
       "id": 31,
-      "xpRequired": 12700,
-      "title": "Phénomène Platine",
-      "icon": "⚡",
+      "xpRequired": 32100,
+      "title": "Artiste Légendaire",
+      "icon": "🎨",
       "tier": "platinum",
       "reward": {
         "type": "trophy",
@@ -486,14 +568,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 33% !",
-      "cat": "mytho"
+      "description": "32100 points d'expérience en art, vos œuvres sont désormais des classiques et vous êtes considéré comme l'un des plus grands artistes de tous les temps !",
+      "cat": "art",
+      "isWeakCat": false
     },
     {
       "id": 32,
-      "xpRequired": 13350,
-      "title": "Oracle du Savoir",
-      "icon": "🍽️",
+      "xpRequired": 34250,
+      "title": "Mythologue Vénéré",
+      "icon": "⚡",
       "tier": "platinum",
       "reward": {
         "type": "gems",
@@ -501,14 +584,15 @@
         "amount": 80,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 30% !",
-      "cat": "gastro"
+      "description": "34250 points d'expérience en mythologie, les mythes et les légendes vous sont si familiers que vous les vivez comme si vous faisiez partie de ces histoires !",
+      "cat": "mytho",
+      "isWeakCat": false
     },
     {
       "id": 33,
-      "xpRequired": 14000,
-      "title": "Champion des Cultures",
-      "icon": "🧠",
+      "xpRequired": 36400,
+      "title": "Cinéaste de Légende",
+      "icon": "🎬",
       "tier": "platinum",
       "reward": {
         "type": "gems",
@@ -516,14 +600,15 @@
         "amount": 60,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 27% !",
-      "cat": "extended"
+      "description": "36400 points d'expérience au cinéma, vos films sont des chefs-d'œuvre et vous êtes considéré comme l'un des plus grands cinéastes de l'histoire !",
+      "cat": "cinema",
+      "isWeakCat": false
     },
     {
       "id": 34,
-      "xpRequired": 14700,
-      "title": "Titan de la Connaissance",
-      "icon": "📜",
+      "xpRequired": 38650,
+      "title": "Explorateur sans Égal",
+      "icon": "🧠",
       "tier": "platinum",
       "reward": {
         "type": "chest",
@@ -531,14 +616,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 23% !",
-      "cat": "hist"
+      "description": "38650 points d'expérience dans l'exploration des horizons étendus, vous avez affronté les défis les plus impossibles et vous êtes revenu avec des histoires à raconter !",
+      "cat": "extended",
+      "isWeakCat": false
     },
     {
       "id": 35,
-      "xpRequired": 15400,
-      "title": "Grand Érudit",
-      "icon": "🎲",
+      "xpRequired": 40950,
+      "title": "Littéraire Immortel",
+      "icon": "📚",
       "tier": "platinum",
       "reward": {
         "type": "trophy",
@@ -546,14 +632,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 19% !",
-      "cat": "mixed"
+      "description": "40950 points d'expérience en littérature, vos écrits sont désormais des classiques et vous êtes considéré comme l'un des plus grands écrivains de tous les temps !",
+      "cat": "litt",
+      "isWeakCat": false
     },
     {
       "id": 36,
-      "xpRequired": 16100,
-      "title": "Phénomène Platine",
-      "icon": "📚",
+      "xpRequired": 43300,
+      "title": "Maître Absolu",
+      "icon": "🎲",
       "tier": "platinum",
       "reward": {
         "type": "gems",
@@ -561,13 +648,14 @@
         "amount": 80,
         "item": null
       },
-      "description": "Les sommets approchent — plus que 16% !",
-      "cat": "litt"
+      "description": "43300 points d'expérience dans des domaines variés, vous êtes le maître incontesté de la polyvalence et de l'adaptabilité, et votre nom est prononcé avec respect par tous !",
+      "cat": "mixed",
+      "isWeakCat": false
     },
     {
       "id": 37,
-      "xpRequired": 16850,
-      "title": "Légende Vivante",
+      "xpRequired": 45750,
+      "title": "Géographe Légendaire",
       "icon": "🌍",
       "tier": "legend",
       "reward": {
@@ -576,14 +664,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Rang d'élite — 16850 XP cumulés !",
-      "cat": "geo"
+      "description": "45750 points d'expérience en géographie, vos connaissances sont si approfondies que vous pouvez prédire les changements du monde et guider les autres vers de nouvelles découvertes !",
+      "cat": "geo",
+      "isWeakCat": false
     },
     {
       "id": 38,
-      "xpRequired": 17550,
-      "title": "Maître Absolu",
-      "icon": "🔬",
+      "xpRequired": 48250,
+      "title": "Champion Légendaire",
+      "icon": "⚽",
       "tier": "legend",
       "reward": {
         "type": "gems",
@@ -591,14 +680,15 @@
         "amount": 100,
         "item": null
       },
-      "description": "Rang d'élite — 17550 XP cumulés !",
-      "cat": "sci"
+      "description": "48250 points d'expérience en sport, vous êtes un athlète de légende, votre nom est gravé dans l'histoire et votre legacy inspire les générations futures !",
+      "cat": "sport",
+      "isWeakCat": false
     },
     {
       "id": 39,
-      "xpRequired": 18300,
-      "title": "Légende Vivante",
-      "icon": "⚽",
+      "xpRequired": 50850,
+      "title": "Gastronome Divin",
+      "icon": "🍽️",
       "tier": "legend",
       "reward": {
         "type": "trophy",
@@ -606,14 +696,15 @@
         "amount": 1,
         "item": null
       },
-      "description": "Rang d'élite — 18300 XP cumulés !",
-      "cat": "sport"
+      "description": "50850 points d'expérience en gastronomie, vos papilles ont atteint un niveau divin et vous pouvez créer des plats qui transportent les gens dans des mondes de saveurs inconnus !",
+      "cat": "gastro",
+      "isWeakCat": false
     },
     {
       "id": 40,
-      "xpRequired": 19070,
-      "title": "Maître Absolu",
-      "icon": "🏰",
+      "xpRequired": 53480,
+      "title": "Historien Éternel",
+      "icon": "📜",
       "tier": "legend",
       "reward": {
         "type": "gems",
@@ -621,15 +712,150 @@
         "amount": 100,
         "item": null
       },
-      "description": "Le sommet du savoir — 970 questions maîtrisées !",
-      "cat": "chateaux"
+      "description": "53480 points d'expérience en histoire, vous êtes désormais l'historien éternel, votre connaissance du passé est infinie et votre sagesse guide les nations vers un avenir plus lumineux !",
+      "cat": "hist",
+      "isWeakCat": false
     }
   ],
+  "nextMilestone": {
+    "milestone": {
+      "id": 2,
+      "xpRequired": 150,
+      "title": "Champion de Bronze",
+      "icon": "⚽",
+      "tier": "bronze",
+      "reward": {
+        "type": "heart",
+        "icon": "❤️",
+        "amount": 1,
+        "item": null
+      },
+      "description": "Avec 150 points d'expérience en sport, vous êtes sur la bonne voie pour devenir un athlète de renom !",
+      "cat": "sport",
+      "isWeakCat": false
+    },
+    "xp_needed": 50,
+    "avg_xp_session": 100,
+    "sessions_needed": 1,
+    "estimated_date": "25/06/2026"
+  },
+  "activeEvents": [],
+  "surprisePending": false,
   "xpCurve": {
-    "formula": "xp_total * (i/n)^1.6 arrondi à 50",
-    "earlyGame": 393,
-    "midGame": 786,
-    "lateGame": 1179,
-    "estimatedSessions": 49
+    "skillLevel": "avance",
+    "earlyGame": 384,
+    "midGame": 768,
+    "lateGame": 1152,
+    "estimatedSessions": 139
+  },
+  "dailyChallenge": {
+    "date": "2026-06-24",
+    "cat": "hist",
+    "icon": "📜",
+    "title": "Défi du Jour",
+    "description": "Répondre correctement à une série de questions dans la catégorie de l'histoire pour gagner des gemmes",
+    "type": "score",
+    "target": 5,
+    "mode": "cat",
+    "reward": {
+      "type": "gems",
+      "icon": "💎",
+      "amount": 25,
+      "item": null
+    },
+    "completed": false,
+    "_source": "llm"
+  },
+  "weeklyReport": {
+    "generated_at": "2026-06-24T16:55:20.617033",
+    "period": {
+      "from": "2026-06-17",
+      "to": "2026-06-24"
+    },
+    "this_week": {
+      "xp_earned": 100,
+      "sessions": 1,
+      "perfect_sessions": 0,
+      "xp_trend": 100,
+      "xp_trend_label": "+100"
+    },
+    "player": {
+      "xp_total": 100,
+      "streak": 1,
+      "success_rate": 0.833,
+      "skill_level": "avance",
+      "sessions_total": 1
+    },
+    "categories": {
+      "best": {
+        "cat": "geo",
+        "rate": 1.0
+      },
+      "worst": {
+        "cat": "geo",
+        "rate": 1.0
+      },
+      "rates": {
+        "geo": 1.0
+      }
+    },
+    "mastery": {
+      "cinema": {
+        "level": "bronze",
+        "icon": "🥉",
+        "xp": 40,
+        "next_xp": 200,
+        "pct": 0.2
+      },
+      "geo": {
+        "level": "bronze",
+        "icon": "🥉",
+        "xp": 60,
+        "next_xp": 200,
+        "pct": 0.3
+      }
+    },
+    "next_milestone": {
+      "milestone": {
+        "id": 2,
+        "xpRequired": 150,
+        "title": "Champion de Bronze",
+        "icon": "⚽",
+        "tier": "bronze",
+        "reward": {
+          "type": "heart",
+          "icon": "❤️",
+          "amount": 1,
+          "item": null
+        },
+        "description": "Avec 150 points d'expérience en sport, vous êtes sur la bonne voie pour devenir un athlète de renom !",
+        "cat": "sport",
+        "isWeakCat": false
+      },
+      "xp_needed": 50,
+      "avg_xp_session": 100,
+      "sessions_needed": 1,
+      "estimated_date": "25/06/2026"
+    },
+    "engagement": {
+      "score": 37,
+      "label": "😴 Faible",
+      "breakdown": {
+        "sessions_recentes": 10,
+        "taux_reussite": 25,
+        "streak": 2,
+        "progression": 0
+      }
+    },
+    "heatmap": [
+      {
+        "date": "2026-06-18",
+        "sessions": 1,
+        "xp": 100,
+        "intensity": 4
+      }
+    ],
+    "active_events": [],
+    "surprise_pending": false
   }
 }

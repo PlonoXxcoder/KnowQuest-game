@@ -8459,7 +8459,7 @@
       if (_originalUsePowerup) _originalUsePowerup(type);
     }
 
-    // ── 4. Patch enregistrerReponse ───────────────────────────────────────────────
+    // ── 4. Patch enregistrerReponse ──────────────────────────────────────────
     const _originalEnregistrerReponse = enregistrerReponse;
     function enregistrerReponse(donneesPartie) {
       const timeMsCalculé = donneesPartie.tempsMisMs
@@ -8482,21 +8482,8 @@
       _originalEnregistrerReponse(donneesEnrichies);
     }
 
-    // ── 5. Patch apiFetch ─────────────────────────────────────────────────────────
-    const _originalApiFetch = apiFetch;
-    function apiFetch(endpoint, body, opts) {
-      if (endpoint === '/answer' && body) {
-        body = Object.assign({}, body, {
-          source:              body.source              || _currentSource      || 'normal',
-          hint_used:           body.hint_used           !== undefined ? body.hint_used : (_currentPowerupUsed || null),
-          position_in_session: body.position_in_session || _positionInSession  || null,
-          session_id:          body.session_id          || _sessionId          || null,
-        });
-      }
-      return _originalApiFetch(endpoint, body, opts);
-    }
 
-    // ── 6. Patch renderGPActiveQuestion (mode GP) ─────────────────────────────────
+    // ── 5. Patch renderGPActiveQuestion (mode GP) ─────────────────────────────────
     if (typeof renderGPActiveQuestion === 'function') {
       const _origRenderGP = renderGPActiveQuestion;
       window.renderGPActiveQuestion = function(...args) {
@@ -8505,7 +8492,7 @@
       };
     }
 
-    // ── 7. Debug console ──────────────────────────────────────────────────────────
+    // ── 6. Debug console ──────────────────────────────────────────────────────────
     window._collecteDebug = () => ({
       sessionId:         _sessionId,
       sessionDurationMs: _sessionStartTime ? Date.now() - _sessionStartTime : null,

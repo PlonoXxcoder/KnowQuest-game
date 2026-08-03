@@ -8468,6 +8468,31 @@
       if (_originalUsePowerup) _originalUsePowerup(type);
     }
 
+<<<<<<< HEAD
+=======
+    // ── 4. Patch enregistrerReponse ───────────────────────────────────────────────
+    const _originalEnregistrerReponse = enregistrerReponse;
+    function enregistrerReponse(donneesPartie) {
+      const timeMsCalculé = donneesPartie.tempsMisMs
+        || (_questionStartTime ? Date.now() - _questionStartTime : null);
+      const donneesEnrichies = Object.assign({}, donneesPartie, {
+        tempsMisMs:          timeMsCalculé,
+        source:              _currentSource      || 'normal',
+        hint_used:           _currentPowerupUsed || null,
+        position_in_session: _positionInSession,
+        session_id:          _sessionId,
+      });
+      _currentPowerupUsed = null;
+      console.log('[Collecte] Réponse enrichie :', {
+        question_id:         donneesEnrichies.idQuestion,
+        source:              donneesEnrichies.source,
+        hint_used:           donneesEnrichies.hint_used,
+        position_in_session: donneesEnrichies.position_in_session,
+        time_ms:             donneesEnrichies.tempsMisMs,
+      });
+      _originalEnregistrerReponse(donneesEnrichies); // ← pointe sur l'originale, pas sur elle-même
+    }
+>>>>>>> 2b07dd8 (Suppression de WizTree et mise à jour de index.html)
 
     // ── 4. Patch renderGPActiveQuestion (mode GP) ─────────────────────────────────
     if (typeof renderGPActiveQuestion === 'function') {

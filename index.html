@@ -10295,8 +10295,6 @@
         refreshMapMarkers([{ lat: q.lat, lng: q.lng, emoji: '🎯', size: 26 }]);
       }
       GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
-      GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 1.6 }, 1000);
-
       // Feedback texte
       const fb = document.getElementById('mapFeedback');
       if (timeout) {
@@ -10346,9 +10344,7 @@
         refreshMapMarkers();
       }
       MAP_Q.answered = false;
-      startMapChrono();
-      // Zoom sur la région de la question
-      if (GLOBE) GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 2.2 }, 1200);
+            startMapChrono();
     }
 
     // ============================================================

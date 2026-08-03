@@ -1,4 +1,4 @@
-const CACHE_NAME = 'knowquest-v1';
+const CACHE_NAME = 'knowquest-v2';
 
 // Liste des fichiers EXACTS qui sont sur votre GitHub
 const FILES_TO_CACHE = [

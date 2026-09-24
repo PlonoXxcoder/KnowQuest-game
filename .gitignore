@@ -1,0 +1,53 @@
+# ════════════════════════════════════════════════════════════════════════════
+#  Ce dépôt ne publie QUE le jeu jouable (web/ + data/).
+#  Tout le développement (pipeline de génération, agents, tests, outils)
+#  reste en local et n'est pas versionné ici.
+# ════════════════════════════════════════════════════════════════════════════
+
+# ── Développement (pipeline, agents, tests, outils) ─────────────────────────
+/agents/
+/batches/
+/core/
+/tests/
+/tools/
+/imports/
+/reports/
+/archive/
+/_js_check/
+/venv/
+/.pytest_cache/
+/main.py
+/requirements.txt
+/.env.example
+
+# ── Environnement & secrets ──────────────────────────────────────────────────
+.env
+.aider*
+.venv/
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# ── Exécution & sauvegardes locales du joueur (non publiées) ─────────────────
+logs/
+*.log
+.batch_progress.json
+data/*.bak-*
+data/*.tmp
+data/player_profile.json
+data/session.json
+data/daily_challenge.json
+data/collection_log.json
+data/weekly_report.json
+data/context_summary.json
+
+# ── Débris de debug JS ───────────────────────────────────────────────────────
+_js_check/
+
+# ── OS / éditeur ─────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

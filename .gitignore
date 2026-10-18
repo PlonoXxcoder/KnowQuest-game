@@ -10,9 +10,12 @@
 /core/
 /tests/
 /tools/
+/tools_new/
 /imports/
 /reports/
 /archive/
+/backups/
+/data/backups/
 /_js_check/
 /venv/
 /.pytest_cache/

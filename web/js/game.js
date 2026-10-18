@@ -7770,7 +7770,7 @@
 
     function enregistrerReponse(donneesPartie) {
       apiFetch('/answer', {
-        id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+        id: donneesPartie.id || (crypto.randomUUID ? crypto.randomUUID() : String(Date.now())),
         player_id: donneesPartie.idJoueur,
         question_id: donneesPartie.idQuestion,
         question_text: donneesPartie.texteQuestion,
@@ -7872,6 +7872,220 @@
       powerupActuel: _currentPowerupUsed,
       source: _currentSource,
     });
+
+    // ═════════════════════════════════════════════════════════════════════════════
+    // KnowQuest — Patch Collecte v3 : événements riches vers Oracle ORDS
+    // (POST /ords/admin/kq_v3/events). Corps en text/plain → requête « simple »
+    // sans préflight CORS, réponse ignorée (fire & forget). File locale
+    // (localStorage) reflushée au retour du réseau. Échec = jamais bloquant.
+    // ═════════════════════════════════════════════════════════════════════════════
+    const KQ_V3_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_v3/events';
+    const KQ_V3_KEY = 'kq_v3_2026_collecte_max';
+    const KQ_V3_VERSION = '3.0.0';
+    let _kqCurrentMode = null;
+    let _kqFlushTimer = null;
+    let _kqLastAppOpen = 0;
+
+    function _kqDevice() {
+      try {
+        const ua = navigator.userAgent || '';
+        const touch = ('ontouchstart' in window) ? 'tactile' : 'souris';
+        return ua.slice(-100) + ' | ' + touch;
+      } catch (_) { return 'inconnu'; }
+    }
+
+    function _kqEnqueue(evt) {
+      try {
+        const q = JSON.parse(localStorage.getItem('kq_v3_queue') || '[]');
+        q.push(evt);
+        while (q.length > 500) q.shift(); // file plafonnée
+        localStorage.setItem('kq_v3_queue', JSON.stringify(q));
+      } catch (_) { /* stockage indisponible : événement perdu, non bloquant */ }
+    }
+
+    async function _kqFlush() {
+      if (!navigator.onLine) return;
+      let q;
+      try { q = JSON.parse(localStorage.getItem('kq_v3_queue') || '[]'); } catch (_) { q = []; }
+      if (!q.length) return;
+      const reste = [];
+      for (const evt of q) {
+        try {
+          const res = await fetch(KQ_V3_URL, { method: 'POST', body: JSON.stringify(evt) });
+          if (!res.ok) { reste.push(evt); continue; }
+          // Le handler ORDS renvoie 200 même en rejet métier : on ne retire
+          // l'événement que si la réponse confirme l'insertion.
+          let ok = true;
+          try {
+            const d = await res.json();
+            if (d && d.status && d.status !== 'ok') ok = false;
+          } catch (_) { /* réponse illisible : on considère OK (HTTP 200) */ }
+          if (!ok) reste.push(evt);
+        } catch (_) { reste.push(evt); }
+      }
+      try { localStorage.setItem('kq_v3_queue', JSON.stringify(reste)); } catch (_) {}
+    }
+
+    function _kqScheduleFlush() {
+      if (_kqFlushTimer) return;
+      _kqFlushTimer = setTimeout(() => { _kqFlushTimer = null; _kqFlush(); }, 4000);
+    }
+
+    // API publique : window.kqTrack(type, payload) — événement libre vers Oracle
+    function kqTrack(type, payload) {
+      try {
+        const evt = Object.assign({
+          k: KQ_V3_KEY,
+          event_type: type,
+          player_id: (typeof P !== 'undefined' && P) ? (P.idUnique || P.name) : null,
+          session_id: _sessionId || null,
+          mode: _kqCurrentMode,
+          app_version: KQ_V3_VERSION,
+          device: _kqDevice(),
+          client_ts: new Date().toISOString(),
+        }, payload || {});
+        _kqEnqueue(evt);
+        _kqScheduleFlush();
+      } catch (_) { /* jamais d'erreur visible côté joueur */ }
+    }
+    window.kqTrack = kqTrack;
+
+    window.addEventListener('online', () => { _kqFlush(); });
+
+    // ── Mode courant : chaque écran de quiz passe par launchQuizScreen ──────────
+    const _v3origLaunchQuizScreen = launchQuizScreen;
+    launchQuizScreen = function () {
+      _kqCurrentMode = (typeof Q !== 'undefined' && Q && Q.mode) ? Q.mode : _kqCurrentMode;
+      return _v3origLaunchQuizScreen.apply(this, arguments);
+    };
+
+    // ── Début de session (fonction déclarée par le patch v2) ────────────────────
+    const _v3origStartSession = startSession;
+    startSession = function (source) {
+      _v3origStartSession(source);
+      kqTrack('session_start', { source: source || 'normal' });
+    };
+
+    // ── Chaque réponse : méta enrichie, corrélée au /answer par id ──────────────
+    const _v3origEnregistrerReponse = enregistrerReponse;
+    enregistrerReponse = function (donneesPartie) {
+      const _v3q = (typeof Q !== 'undefined' && Q && Q.qs) ? Q.qs[Q.idx] : null;
+      if (!donneesPartie.id) {
+        donneesPartie.id = crypto.randomUUID ? crypto.randomUUID() : String(Date.now());
+      }
+      _v3origEnregistrerReponse(donneesPartie);
+      try {
+        kqTrack('answer_meta', {
+          answer_id: donneesPartie.id,
+          question_id: donneesPartie.idQuestion,
+          category: donneesPartie.categorie,
+          correct: donneesPartie.estCorrect ? 1 : 0,
+          time_ms: donneesPartie.tempsMisMs,
+          mode: (typeof Q !== 'undefined' && Q && Q.mode) ? Q.mode : _kqCurrentMode,
+          difficulty: _v3q ? (_v3q.difficulty || null) : null,
+          streak_at_answer: (typeof P !== 'undefined' && P) ? (P.streakDays || 0) : 0,
+          position: donneesPartie.position_in_session || null,
+        });
+      } catch (_) {}
+    };
+
+    // ── Fin de session de quiz : résultat complet ───────────────────────────────
+    const _v3origShowResult = showResult;
+    showResult = function () {
+      _v3origShowResult.apply(this, arguments);
+      try {
+        const total = (typeof Q !== 'undefined' && Q && Q.qs) ? Math.min(Q.idx + 1, Q.qs.length) : 0;
+        kqTrack('mode_result', {
+          ended_reason: 'completed',
+          mode: (typeof Q !== 'undefined' && Q && Q.mode) ? Q.mode : _kqCurrentMode,
+          correct: (typeof Q !== 'undefined' && Q) ? Q.correct : null,
+          total: total,
+          xp: (typeof Q !== 'undefined' && Q) ? (Q.totalXP || 0) : 0,
+          new_cards: (typeof Q !== 'undefined' && Q) ? (Q.newAtlasCards || 0) : 0,
+          best_combo: (typeof Q !== 'undefined' && Q) ? (Q.combo || 0) : 0,
+          gems_after: (typeof P !== 'undefined' && P) ? (P.gems || 0) : null,
+          level: (typeof P !== 'undefined' && P) ? (P.level || null) : null,
+          streak: (typeof P !== 'undefined' && P) ? (P.streakDays || 0) : 0,
+          atlas_total: (typeof P !== 'undefined' && P && P.atlas) ? P.atlas.length : null,
+        });
+      } catch (_) {}
+    };
+
+    // ── Sortie avant le résultat → session abandonnée ───────────────────────────
+    const _v3origExitQuiz = exitQuiz;
+    exitQuiz = function () {
+      try {
+        if (typeof Q !== 'undefined' && Q && Q.qs && Q.idx > 0) {
+          kqTrack('session_end', {
+            ended_reason: 'abandoned',
+            mode: Q.mode || _kqCurrentMode,
+            correct: Q.correct || 0,
+            total: Q.idx,
+          });
+        }
+      } catch (_) {}
+      _kqCurrentMode = null;
+      return _v3origExitQuiz.apply(this, arguments);
+    };
+
+    // ── Achats (boutique + cœur de secours) ─────────────────────────────────────
+    const _v3origBuyItem = buyItem;
+    buyItem = function (type, cost) {
+      _v3origBuyItem(type, cost);
+      try { kqTrack('purchase', { item_type: type, cost_gems: cost, balance_after: (typeof P !== 'undefined' && P) ? P.gems : null }); } catch (_) {}
+    };
+    const _v3origBuyHeart = buyHeartAndContinue;
+    buyHeartAndContinue = function () {
+      _v3origBuyHeart();
+      try { kqTrack('purchase', { item_type: 'heart', cost_gems: 10, balance_after: (typeof P !== 'undefined' && P) ? P.gems : null }); } catch (_) {}
+    };
+
+    // ── Power-ups (au-dessus du wrapper v2) ─────────────────────────────────────
+    const _v3origUsePowerup = usePowerup;
+    usePowerup = function (type) {
+      _v3origUsePowerup(type);
+      try { kqTrack('powerup_used', { powerup: type }); } catch (_) {}
+    };
+
+    // ── Rallye du Monde / nœuds de route sur le globe ───────────────────────────
+    const _v3origEndRallye = endRallye;
+    endRallye = function () {
+      _v3origEndRallye();
+      try {
+        kqTrack('rally_result', {
+          conquered: (typeof RALLYE !== 'undefined' && RALLYE) ? RALLYE.conquered : null,
+          total: (typeof RALLYE !== 'undefined' && RALLYE && RALLYE.rounds) ? RALLYE.rounds.length : null,
+          best_streak: (typeof RALLYE !== 'undefined' && RALLYE) ? (RALLYE.bestStreak || 0) : 0,
+          road_node: (typeof RALLYE !== 'undefined' && RALLYE && RALLYE.roadNode) ? RALLYE.roadNode.id : null,
+        });
+      } catch (_) {}
+    };
+
+    // ── Heartbeat : snapshot du joueur au retour au menu (1 max / 10 min) ───────
+    const _v3origStartApp = startApp;
+    startApp = function () {
+      _v3origStartApp.apply(this, arguments);
+      try {
+        const now = Date.now();
+        if (now - _kqLastAppOpen > 10 * 60000) {
+          _kqLastAppOpen = now;
+          if (typeof P !== 'undefined' && P && P.idUnique) {
+            kqTrack('app_open', {
+              xp: P.xp || 0,
+              gems: P.gems || 0,
+              level: P.level || null,
+              streak: P.streakDays || 0,
+              hearts: P.hearts || 0,
+              atlas_total: P.atlas ? P.atlas.length : 0,
+              perfect_count: P.perfectCount || 0,
+            });
+          }
+        }
+      } catch (_) {}
+    };
+
+    // ── Flush de la file v3 au démarrage ────────────────────────────────────────
+    _kqFlush();
 
     // Flush au démarrage si on était hors-ligne avant
     flushOfflineQueue();

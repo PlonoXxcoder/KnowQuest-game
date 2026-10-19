@@ -6291,6 +6291,23 @@
       </div>
     </div>
 
+    <!-- CLASSEMENT MONDIAL -->
+    <div class="screen" id="scrClassement">
+      <div class="scr">
+        <h2 style="font-size:24px;font-weight:900;margin-top:10px">🏆 Classement Mondial</h2>
+        <div id="lbMe" style="display:none;margin:8px 0 2px"></div>
+        <div class="section-divider">🌍 Top Mondial — XP</div>
+        <div id="lbTop"><div style="font-size:13px;font-weight:800;color:var(--muted);padding:6px 2px">Chargement…</div></div>
+        <div class="section-divider">🌍 Défi Quotidien — Aujourd'hui</div>
+        <div id="lbDaily"><div style="font-size:13px;font-weight:800;color:var(--muted);padding:6px 2px">Les résultats du défi du jour apparaîtront ici.</div></div>
+        <div class="section-divider">🎓 Meilleurs Spécialistes</div>
+        <div id="lbCats"><div style="font-size:13px;font-weight:800;color:var(--muted);padding:6px 2px">Chargement…</div></div>
+        <div style="font-size:10px;font-weight:700;color:var(--muted);text-align:center;margin-top:16px">
+          🔒 Calculé côté serveur Oracle · pseudos et scores uniquement
+        </div>
+      </div>
+    </div>
+
     <!-- BOTTOM NAV -->
     <div class="bnav" id="bnav" style="display:none">
       <button class="bnav-btn on" id="tabHome" onclick="switchTab('Home')">
@@ -6298,6 +6315,9 @@
       </button>
       <button class="bnav-btn" id="tabLearn" onclick="switchTab('Learn')">
         <div class="bnav-ico">🕹️</div>Jeux
+      </button>
+      <button class="bnav-btn" id="tabClassement" onclick="switchTab('Classement')">
+        <div class="bnav-ico">🏆</div>Top
       </button>
       <button class="bnav-btn" id="tabShop" onclick="switchTab('Shop')">
         <div class="bnav-ico">💎</div>Boutique
@@ -6865,7 +6885,7 @@
 
   </div><!-- .app -->
 
-  <script src="js/game.js?v=1149b43d"></script>
+  <script src="js/game.js?v=c8c336c1"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
   <script src="data_loader.js?v=1c57f4be"></script>
 

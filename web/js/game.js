@@ -3903,7 +3903,7 @@
 
     // ===== NAVIGATION =====
     function switchTab(t) {
-      ['Home', 'Learn', 'Shop', 'Profile'].forEach(s => {
+      ['Home', 'Learn', 'Classement', 'Shop', 'Profile'].forEach(s => {
         const el = document.getElementById('scr' + s); if (el) el.classList.remove('active');
         const btn = document.getElementById('tab' + s); if (btn) btn.classList.remove('on');
       });
@@ -3911,6 +3911,7 @@
       document.getElementById('tab' + t).classList.add('on');
       if (t === 'Home') buildRoad();
       if (t === 'Learn') { updateDailyChallengeUI(); updateMissionsSummary(); renderSrsCard(); }
+      if (t === 'Classement') renderClassement();
       if (t === 'Profile' || t === 'Shop') { _shopBuilt = false; updateUI(); }
       updateCompanionVisibility();
     }
@@ -8079,6 +8080,13 @@
               atlas_total: P.atlas ? P.atlas.length : 0,
               perfect_count: P.perfectCount || 0,
             });
+            // Enregistrement au classement (MERGE serveur : le pseudo n'est
+            // écrit qu'à la première inscription, jamais écrasé ensuite)
+            kqTrack('player_profile', {
+              name: P.name || null,
+              avatar: P.avatar || null,
+              level: P.level || null,
+            });
           }
         }
       } catch (_) {}
@@ -8086,6 +8094,113 @@
 
     // ── Flush de la file v3 au démarrage ────────────────────────────────────────
     _kqFlush();
+
+    // ═════════════════════════════════════════════════════════════════════════════
+    // KnowQuest — Classement Mondial (lecture seule via ORDS KQ_APP)
+    // GET /ords/kq_lb/rank/{limit}[/{player_id}] · /day · /skills
+    // CORS autorisé pour GitHub Pages + localhost ; hors-ligne → dernier cache.
+    // ═════════════════════════════════════════════════════════════════════════════
+    const KQ_LB_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/kq_lb';
+    let _lbLoading = false;
+
+    function _lbEsc(s) {
+      const d = document.createElement('div');
+      d.textContent = s == null ? '' : String(s);
+      return d.innerHTML;
+    }
+
+    async function _lbFetch(path, ms) {
+      const ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+      const timer = ctrl ? setTimeout(() => ctrl.abort(), ms || 6000) : null;
+      try {
+        const res = await fetch(KQ_LB_URL + path, ctrl ? { signal: ctrl.signal } : {});
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return await res.json();
+      } finally { if (timer) clearTimeout(timer); }
+    }
+
+    function _lbRow(r, rank) {
+      const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '#' + rank;
+      const sub = (r.answers != null ? r.answers + ' réponses' : '') +
+        (r.accuracy != null ? ' · ' + r.accuracy + '% précision' : '') +
+        (r.streak ? ' · 🔥' + r.streak : '');
+      return `<div style="display:flex;align-items:center;gap:8px;padding:7px 10px;margin-bottom:6px;background:var(--card);border-radius:12px;${rank <= 3 ? 'border:2px solid var(--gold);' : ''}">
+        <div style="font-size:16px;font-weight:900;min-width:38px;text-align:center">${medal}</div>
+        <div style="font-size:22px">${_lbEsc(r.avatar) || '👤'}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:14px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${_lbEsc(r.name)}</div>
+          <div style="font-size:11px;font-weight:700;color:var(--muted)">${_lbEsc(sub)}</div>
+        </div>
+        <div style="font-size:15px;font-weight:900;color:var(--purple)">${r.xp} XP</div>
+      </div>`;
+    }
+
+    function _lbRender(data, cats, daily) {
+      const elTop = document.getElementById('lbTop');
+      const elMe = document.getElementById('lbMe');
+      const elDaily = document.getElementById('lbDaily');
+      const elCats = document.getElementById('lbCats');
+      if (!elTop) return;
+      if (data && data.top && data.top.length) {
+        elTop.innerHTML = data.top.map(r => _lbRow(r, r.rank)).join('');
+        const me = data.me;
+        if (me && me.rank && !data.top.some(t => t.rank === me.rank) &&
+            typeof P !== 'undefined' && P) {
+          elMe.style.display = 'block';
+          elMe.innerHTML = `<div style="display:flex;align-items:center;gap:8px;padding:7px 10px;background:var(--purple-bg);border-radius:12px;border:2px solid var(--purple)">
+            <div style="font-size:15px;font-weight:900;min-width:38px;text-align:center">#${me.rank}</div>
+            <div style="font-size:20px">${_lbEsc(P.avatar) || '👤'}</div>
+            <div style="flex:1;font-size:14px;font-weight:900">${_lbEsc(P.name)} (toi)</div>
+            <div style="font-size:15px;font-weight:900;color:var(--purple)">${me.xp} XP</div></div>`;
+        } else {
+          elMe.style.display = 'none';
+        }
+      } else if (data) {
+        elTop.innerHTML = '<div style="padding:6px 2px;font-size:13px;font-weight:800;color:var(--muted)">Aucun joueur classé pour l\'instant — sois le premier !</div>';
+      }
+      if (daily && daily.daily) {
+        elDaily.innerHTML = daily.daily.length
+          ? daily.daily.map((d, i) => `<div style="display:flex;align-items:center;gap:8px;padding:6px 10px;margin-bottom:6px;background:var(--card);border-radius:12px">
+              <div style="font-weight:900;min-width:34px">${i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : '#' + (i + 1)}</div>
+              <div style="font-size:18px">${_lbEsc(d.avatar) || '👤'}</div>
+              <div style="flex:1;font-size:13px;font-weight:900;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${_lbEsc(d.name)}</div>
+              <div style="font-weight:900;color:var(--green)">${d.correct}/${d.total}</div></div>`).join('')
+          : '<div style="font-size:13px;font-weight:800;color:var(--muted);padding:6px 2px">Personne n\'a encore joué le défi du jour.</div>';
+      }
+      if (cats && cats.categories) {
+        elCats.innerHTML = cats.categories.map(c => `<div style="display:inline-flex;align-items:center;gap:6px;background:var(--card);border-radius:10px;padding:6px 10px;margin:0 6px 6px 0;font-size:12px;font-weight:800">
+          <span style="color:var(--muted)">${_lbEsc(c.category)}</span>
+          <span style="font-size:15px">${_lbEsc(c.avatar) || '👤'}</span>
+          <span style="color:var(--purple)">${_lbEsc(c.name)} · ${c.xp} XP</span></div>`).join('');
+      }
+    }
+
+    async function renderClassement() {
+      if (_lbLoading) return;
+      _lbLoading = true;
+      const pid = (typeof P !== 'undefined' && P && P.idUnique) ? P.idUnique : null;
+      try {
+        const [data, cats, daily] = await Promise.all([
+          _lbFetch(pid ? `/rank/50/${encodeURIComponent(pid)}` : '/rank/50'),
+          _lbFetch('/skills'),
+          _lbFetch('/day'),
+        ]);
+        _lbRender(data, cats, daily);
+        try { localStorage.setItem('kq_lb_cache', JSON.stringify({ t: Date.now(), data, cats, daily })); } catch (_) {}
+      } catch (e) {
+        try {
+          const c = JSON.parse(localStorage.getItem('kq_lb_cache') || 'null');
+          if (!c) throw e;
+          _lbRender(c.data, c.cats, c.daily);
+          const el = document.getElementById('lbTop');
+          if (el) el.insertAdjacentHTML('beforeend', '<div style="font-size:11px;font-weight:800;color:var(--muted);margin-top:6px">📶 Hors-ligne — dernière version en cache</div>');
+        } catch (_) {
+          const el = document.getElementById('lbTop');
+          if (el) el.innerHTML = '<div style="font-size:13px;font-weight:800;color:var(--muted);padding:6px 2px">📶 Classement indisponible hors-ligne.</div>';
+        }
+      } finally { _lbLoading = false; }
+    }
+    window.renderClassement = renderClassement;
 
     // Flush au démarrage si on était hors-ligne avant
     flushOfflineQueue();

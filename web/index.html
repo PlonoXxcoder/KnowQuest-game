@@ -99,7 +99,7 @@
 
     .install-btn {
       position: fixed;
-      top: max(10px, env(safe-area-inset-top));
+      top: max(38px, calc(env(safe-area-inset-top) + 28px));
       right: 10px;
       z-index: 3000;
       background: var(--purple);
@@ -6153,6 +6153,8 @@
     <div class="screen" id="scrShop">
       <div class="scr">
         <h2 style="font-size:24px;font-weight:900;margin-top:10px">Boutique Tactique</h2>
+        <div class="section-divider">❤️ Vies</div>
+        <div id="shopLives"></div>
         <div class="section-divider">⚡ Power-ups Quiz</div>
         <div id="shopPowerups"></div>
         <div class="section-divider">🎨 Accessoires Avatar</div>
@@ -6180,6 +6182,11 @@
           <div style="font-size:24px;font-weight:900;color:var(--text)" id="profName">Joueur</div>
           <div id="profTitleBadge"
             style="font-size:12px;font-weight:800;color:var(--purple);background:var(--purple-bg);display:inline-block;padding:3px 10px;border-radius:10px;margin-top:4px">
+          </div>
+          <div id="profRankTitle"
+            style="font-size:13px;font-weight:900;color:var(--gold-d);display:none;margin-top:6px">
+          </div>
+          <div id="profHonors" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
           </div>
           <div style="font-size:14px;color:var(--muted);font-weight:700;margin-top:4px">Niveau <span
               id="profLvl">1</span></div>
@@ -6288,6 +6295,22 @@
         <button class="ob-btn"
           style="background:var(--bg);color:var(--red);box-shadow:0 5px 0 var(--border);border:2px solid var(--border);margin-top:12px"
           onclick="resetData()">Effacer les données</button>
+      </div>
+    </div>
+
+    <!-- MODALE FICHE JOUEUR PUBLIQUE -->
+    <div id="playerModal"
+      style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:2500;align-items:center;justify-content:center"
+      onclick="if(event.target===this) closePlayerModal()">
+      <div
+        style="background:var(--card);border-radius:20px;padding:24px 20px;max-width:340px;width:88%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.4)">
+        <div id="pmAvatar" style="font-size:54px;line-height:1">👤</div>
+        <div id="pmName" style="font-size:20px;font-weight:900;margin:8px 0 2px;color:var(--text)"></div>
+        <div id="pmTitle" style="font-size:13px;font-weight:900;color:var(--gold-d);min-height:16px"></div>
+        <div id="pmStats"
+          style="margin:14px 0 10px;display:grid;gap:6px;font-size:13px;font-weight:800;color:var(--text)"></div>
+        <div id="pmBadges" style="display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:14px"></div>
+        <button class="btn-action" style="width:100%" onclick="closePlayerModal()">Fermer</button>
       </div>
     </div>
 
@@ -6885,7 +6908,7 @@
 
   </div><!-- .app -->
 
-  <script src="js/game.js?v=c8c336c1"></script>
+  <script src="js/game.js?v=5d85051d"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
   <script src="data_loader.js?v=1c57f4be"></script>
 

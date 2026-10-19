@@ -3635,6 +3635,25 @@
       document.getElementById('valGems').textContent = P.gems;
       document.getElementById('valHearts').textContent = P.hearts;
       document.getElementById('profName').textContent = P.name;
+      // Titre de classement (rang actuel) + badges à vie
+      try {
+        const rt = document.getElementById('profRankTitle');
+        if (rt) {
+          const t = _kqTitle(_kqSavedRank());
+          rt.textContent = t;
+          rt.style.display = t ? 'block' : 'none';
+        }
+        const ph = document.getElementById('profHonors');
+        if (ph) {
+          const codes = P.honors || [];
+          ph.innerHTML = codes.length
+            ? codes.map(c => {
+                const b = KQ_BADGES[c] || { ico: '🏅', label: c, desc: '' };
+                return `<span title="${_lbEsc(b.desc)}" style="display:inline-flex;align-items:center;gap:4px;background:var(--purple-bg);border:1.5px solid var(--purple);border-radius:10px;padding:4px 9px;font-size:11px;font-weight:900">${b.ico} ${_lbEsc(b.label)}</span>`;
+              }).join('')
+            : '<span style="font-size:11px;font-weight:800;color:var(--muted)">Aucun badge à vie encore — vise le Top 10 mondial ! 🏆</span>';
+        }
+      } catch (_) {}
       document.getElementById('profAv').textContent = P.avatar;
       document.getElementById('profLvl').textContent = P.level;
       document.getElementById('profQ').textContent = P.totalQ;
@@ -3772,6 +3791,8 @@
     function buildShop() {
       if (_shopBuilt) { updateShopCounts(); return; }
       _shopBuilt = true;
+      const lDiv = document.getElementById('shopLives');
+      if (lDiv) { lDiv.innerHTML = `<div class="shop-item"><div class="shop-info"><div class="shop-ico">❤️</div><div class="shop-details"><div class="shop-name">1 cœur</div><div class="shop-desc">Récupère 1 vie immédiatement</div></div></div><button class="btn-buy" onclick="buyLives(1,10)">💎 10</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">💗</div><div class="shop-details"><div class="shop-name">Pack de 3 cœurs</div><div class="shop-desc">3 vies — 5 💎 d'économie</div></div></div><button class="btn-buy" onclick="buyLives(3,25)">💎 25</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">💖</div><div class="shop-details"><div class="shop-name">Pack de 5 cœurs</div><div class="shop-desc">5 vies — 10 💎 d'économie</div></div></div><button class="btn-buy" onclick="buyLives(5,40)">💎 40</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">⚡</div><div class="shop-details"><div class="shop-name">Recharge complète</div><div class="shop-desc">Remonte à 5 cœurs d'un coup</div></div></div><button class="btn-buy" onclick="buyLives(99,30)">💎 30</button></div>`; }
       const pDiv = document.getElementById('shopPowerups');
       if (pDiv) { pDiv.innerHTML = ''; POWERUP_SHOP.forEach(it => { pDiv.innerHTML += `<div class="shop-item"><div class="shop-info"><div class="shop-ico">${it.ico}</div><div class="shop-details"><div class="shop-name">${it.name}</div><div class="shop-desc">${it.desc}</div></div></div><button class="btn-buy" id="buyPu_${it.id}" onclick="buyPowerup('${it.id}',${it.cost})">💎 ${it.cost}</button></div>`; }); }
       const aDiv = document.getElementById('shopAccessories');
@@ -3863,6 +3884,22 @@
       if (type === 'heart') { P.hearts = P.hearts + 1; showToast('❤️ +1 cœur !'); }  // achat sans plafond
       if (type === 'xp') addXP(50);
       if (type === 'eventpack') showToast('🌟 Pack événementiel débloqué !');
+      save(); updateUI();
+    }
+
+    // Achat de vies (section ❤️ Vies de la boutique) — n=99 ⇒ recharge à 5
+    function buyLives(n, cost) {
+      if (P.gems < cost) { showToast('💎 Pas assez de gemmes !'); return; }
+      P.gems -= cost;
+      if (n >= 99) {
+        const missing = Math.max(0, 5 - P.hearts);
+        P.hearts = 5;
+        showToast(missing > 0 ? `⚡ Rechargé à 5 cœurs (+${missing}) !` : '⚡ Cœurs déjà au maximum !');
+      } else {
+        P.hearts = P.hearts + n;
+        showToast(`❤️ +${n} cœur${n > 1 ? 's' : ''} !`);
+      }
+      try { kqTrack('purchase', { item_type: 'lives', qty: n, cost_gems: cost, balance_after: P.gems }); } catch (_) {}
       save(); updateUI();
     }
 
@@ -7051,7 +7088,9 @@
       // Stats cohérentes avec le reste du jeu
       recordCatStat(q.cat, correct);
       if (correct) P.totalCorrect++;
-      if (q.atlasId && !P.atlas.includes(q.atlasId)) {
+      // Fiche atlas : uniquement sur bonne réponse (bug corrigé — elle se
+      // débloquait aussi en répondant faux)
+      if (correct && q.atlasId && !P.atlas.includes(q.atlasId)) {
         P.atlas.push(q.atlasId);
         setTimeout(() => triggerDiscovery(q.atlasId), 500);
       }
@@ -7876,11 +7915,11 @@
 
     // ═════════════════════════════════════════════════════════════════════════════
     // KnowQuest — Patch Collecte v3 : événements riches vers Oracle ORDS
-    // (POST /ords/admin/kq_v3/events). Corps en text/plain → requête « simple »
+    // (POST /ords/admin/kq_v4/events). Corps en text/plain → requête « simple »
     // sans préflight CORS, réponse ignorée (fire & forget). File locale
     // (localStorage) reflushée au retour du réseau. Échec = jamais bloquant.
     // ═════════════════════════════════════════════════════════════════════════════
-    const KQ_V3_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_v3/events';
+    const KQ_V3_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_v4/events';
     const KQ_V3_KEY = 'kq_v3_2026_collecte_max';
     const KQ_V3_VERSION = '3.0.0';
     let _kqCurrentMode = null;
@@ -8090,6 +8129,8 @@
           }
         }
       } catch (_) {}
+      // Récompenses de podium + badges à vie (throttlé 5 min en interne)
+      try { kqCheckRewards(); } catch (_) {}
     };
 
     // ── Flush de la file v3 au démarrage ────────────────────────────────────────
@@ -8124,7 +8165,8 @@
       const sub = (r.answers != null ? r.answers + ' réponses' : '') +
         (r.accuracy != null ? ' · ' + r.accuracy + '% précision' : '') +
         (r.streak ? ' · 🔥' + r.streak : '');
-      return `<div style="display:flex;align-items:center;gap:8px;padding:7px 10px;margin-bottom:6px;background:var(--card);border-radius:12px;${rank <= 3 ? 'border:2px solid var(--gold);' : ''}">
+      return `<div onclick="_lbOpenPlayer('${String(r.player_id || '').replace(/[^a-zA-Z0-9_-]/g, '')}')"
+        style="display:flex;align-items:center;gap:8px;padding:7px 10px;margin-bottom:6px;background:var(--card);border-radius:12px;cursor:pointer;${rank <= 3 ? 'border:2px solid var(--gold);' : ''}">
         <div style="font-size:16px;font-weight:900;min-width:38px;text-align:center">${medal}</div>
         <div style="font-size:22px">${_lbEsc(r.avatar) || '👤'}</div>
         <div style="flex:1;min-width:0">
@@ -8201,6 +8243,111 @@
       } finally { _lbLoading = false; }
     }
     window.renderClassement = renderClassement;
+
+    // ═════════════════════════════════════════════════════════════════════════════
+    // KnowQuest — Récompenses de podium, badges à vie et titres de classement
+    // ═════════════════════════════════════════════════════════════════════════════
+    const KQ_BADGES = {
+      n1:     { ico: '👑', label: 'N°1 Mondial',      desc: 'A un jour été N°1 du classement mondial' },
+      top10:  { ico: '🏆', label: 'Top 10 Mondial',   desc: 'A un jour atteint le Top 10 mondial' },
+      etoile: { ico: '⭐', label: 'Étoile Montante',  desc: 'Top 25 dans ses 14 premiers jours' },
+    };
+
+    function _kqTitle(rank) {
+      if (!rank) return '';
+      if (rank === 1) return '👑 N°1 Mondial';
+      if (rank <= 10) return '🏆 Top 10 Mondial';
+      return '';
+    }
+
+    function _kqSavedRank() {
+      if (typeof P !== 'undefined' && P && P._kqRank) return P._kqRank;
+      try { return parseInt(localStorage.getItem('kq_rank') || '0', 10) || null; }
+      catch (_) { return null; }
+    }
+
+    // Vérifie (5 min max) les gemmes de podium et nouveaux badges à vie
+    let _kqRewardsChecked = 0;
+    async function kqCheckRewards() {
+      try {
+        if (!P || !P.idUnique || !navigator.onLine) return;
+        const now = Date.now();
+        if (now - _kqRewardsChecked < 5 * 60000) return;
+        _kqRewardsChecked = now;
+        if (!P.honors) P.honors = [];
+        const info = await _lbFetch('/recompenses/' + encodeURIComponent(P.idUnique), 8000);
+
+        // Badges à vie (une fois obtenus, ils ne partent jamais)
+        (info.badges || []).forEach(code => {
+          if (!P.honors.includes(code)) {
+            P.honors.push(code);
+            const b = KQ_BADGES[code] || { ico: '🏅', label: code, desc: '' };
+            showToast(`${b.ico} Badge à vie débloqué : ${b.label} !`);
+            try { if (typeof spawnConfetti === 'function') spawnConfetti(); } catch (_) {}
+          }
+        });
+
+        // Gemmes de podium (réclamation serveur + crédit local)
+        let total = 0;
+        (info.rewards || []).forEach(r => {
+          total += (r.gems || 0);
+          const medal = r.rank === 1 ? '🥇' : r.rank === 2 ? '🥈' : r.rank === 3 ? '🥉' : '🏅';
+          showToast(`${medal} ${r.rank}${r.rank === 1 ? 'ᵉʳ' : 'ᵉ'} le ${r.day} — +${r.gems} 💎 !`);
+          try { kqTrack('claim_reward', { reward_id: r.id, gems: r.gems, day: r.day }); } catch (_) {}
+        });
+        if (total > 0) { P.gems += total; showToast(`💎 +${total} gemmes créditées !`); }
+
+        // Rang courant (pour le titre affiché en jeu)
+        if (info.rank) {
+          P._kqRank = info.rank;
+          try { localStorage.setItem('kq_rank', String(info.rank)); } catch (_) {}
+        }
+        if (total > 0 || (info.badges || []).length) save();
+        updateUI();
+      } catch (_) { /* hors-ligne : silencieux */ }
+    }
+    window.kqCheckRewards = kqCheckRewards;
+
+    // ── Modale fiche joueur publique ────────────────────────────────────────────
+    let _pmLoading = false;
+    async function _lbOpenPlayer(pid) {
+      if (!pid || _pmLoading) return;
+      _pmLoading = true;
+      const modal = document.getElementById('playerModal');
+      document.getElementById('pmAvatar').textContent = '⏳';
+      document.getElementById('pmName').textContent = '…';
+      document.getElementById('pmTitle').textContent = '';
+      document.getElementById('pmStats').innerHTML = '';
+      document.getElementById('pmBadges').innerHTML = '';
+      modal.style.display = 'flex';
+      try {
+        const data = await _lbFetch('/joueur/' + encodeURIComponent(pid), 8000);
+        const p = data.player;
+        if (!p) throw new Error('introuvable');
+        document.getElementById('pmAvatar').textContent = p.avatar || '👤';
+        document.getElementById('pmName').textContent = p.name || 'Joueur';
+        const t = _kqTitle(p.rank) || (p.days_n1 > 0 ? '👑 N°1 un jour' : '');
+        document.getElementById('pmTitle').textContent = t;
+        document.getElementById('pmStats').innerHTML =
+          `<div>🏅 ${p.xp} XP — ${p.rank ? '#' + p.rank : 'non classé'}</div>` +
+          `<div>📚 ${p.answers} réponses · ${p.accuracy}% précision</div>` +
+          (p.favorite ? `<div>🎓 Spécialité : ${_lbEsc(p.favorite)}</div>` : '') +
+          (p.first_day ? `<div>🗓️ Joueur depuis ${p.days} jour${p.days > 1 ? 's' : ''}</div>` : '');
+        const codes = data.badges || [];
+        document.getElementById('pmBadges').innerHTML = codes.map(c => {
+          const b = KQ_BADGES[c] || { ico: '🏅', label: c, desc: '' };
+          return `<span title="${_lbEsc(b.desc)}" style="display:inline-flex;align-items:center;gap:4px;background:var(--purple-bg);border:1.5px solid var(--purple);border-radius:10px;padding:4px 9px;font-size:11px;font-weight:900">${b.ico} ${_lbEsc(b.label)}</span>`;
+        }).join('');
+      } catch (_) {
+        document.getElementById('pmAvatar').textContent = '📵';
+        document.getElementById('pmName').textContent = 'Fiche indisponible';
+      } finally { _pmLoading = false; }
+    }
+    function closePlayerModal() {
+      const m = document.getElementById('playerModal');
+      if (m) m.style.display = 'none';
+    }
+    window.closePlayerModal = closePlayerModal;
 
     // Flush au démarrage si on était hors-ligne avant
     flushOfflineQueue();

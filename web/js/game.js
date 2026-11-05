@@ -17,6 +17,9 @@
     window.LITT_QB = [];
     window.MIXED_QB = [];
     window.EXTENDED_QB = [];
+  window.MUSIQUE_QB = [];
+  window.JV_QB = [];
+  window.SERIES_QB = [];
     window.IMG_QB = [];
     window.TF_QB = [];
     window.SCRAMBLE_QB = [];
@@ -493,7 +496,7 @@
     }
 
     function startGPQual() {
-      const rawPool = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB];
+      const rawPool = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB, ...window.MUSIQUE_QB, ...window.JV_QB, ...window.SERIES_QB];
       const pool = shuffle(filterSeenQuestions(rawPool)).slice(0, 15);
       Q = { mode: 'gp_qual', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
       document.getElementById('scrGP').classList.remove('active');
@@ -558,7 +561,7 @@
       });
       GP.drivers.push(...rivals);
 
-      const pool = shuffle([...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB]).slice(0, 15);
+      const pool = shuffle([...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB, ...window.MUSIQUE_QB, ...window.JV_QB, ...window.SERIES_QB]).slice(0, 15);
       Q = { mode: 'gp_race', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
 
       // Imprevus de course programmés (météo, safety car, incidents)
@@ -3497,6 +3500,9 @@
       if (bankKey === 'mytho') return window.MYTHO_QB || [];
       if (bankKey === 'chateaux') return window.CHATEAUX_QB || [];
       if (bankKey === 'litt') return window.LITT_QB || [];
+      if (bankKey === 'musique') return window.MUSIQUE_QB || [];
+      if (bankKey === 'jv') return window.JV_QB || [];
+      if (bankKey === 'series') return window.SERIES_QB || [];
       if (bankKey === 'extended') return window.EXTENDED_QB || [];
       if (bankKey === 'mixed' || bankKey === 'mixedAll') {
         const all = [
@@ -3733,6 +3739,9 @@
         { k: 'litt', label: '📖 Littérature', color: 'var(--litt)' },
         { k: 'extended', label: '🌟 Extra', color: 'var(--gold-d)' },
         { k: 'mixed', label: '🧠 Culture G', color: 'var(--purple-d)' },
+        { k: 'musique', label: '🎵 Musique', color: 'var(--cinema)' },
+        { k: 'jv', label: '🎮 Jeux vidéo', color: 'var(--sport)' },
+        { k: 'series', label: '📺 Séries', color: 'var(--orange)' },
       ];
       // Toute catégorie jouée mais absente de la liste ci-dessus est ajoutée
       // afin que la somme des barres corresponde aux stats globales du profil.
@@ -4721,7 +4730,7 @@
 
     // Chaine mode
     function startChaineMode() {
-      const allPool = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.ART_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.GASTRO_QB, ...window.MYTHO_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB];
+      const allPool = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.ART_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.GASTRO_QB, ...window.MYTHO_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB, ...window.MUSIQUE_QB, ...window.JV_QB, ...window.SERIES_QB];
       let chain = window.CHAINS && window.CHAINS.length ? shuffle(window.CHAINS)[0] : null;
       let qs;
       if (chain) {
@@ -6210,7 +6219,7 @@
     }
 
     // ===== STREAK PAR CATÉGORIE =====
-    const CAT_LABELS = { geo: '🗺️ Géographie', hist: '🏛️ Histoire', sci: '🔬 Sciences', art: '🎨 Art', cinema: '🎬 Cinéma', sport: '⚽ Sport', gastro: '🍽️ Gastronomie', mytho: '⚡ Mythologie', mixed: '🎲 Mixte', extended: '🌐 Culture', chateaux: '🏰 Châteaux' };
+    const CAT_LABELS = { geo: '🗺️ Géographie', hist: '🏛️ Histoire', sci: '🔬 Sciences', art: '🎨 Art', cinema: '🎬 Cinéma', sport: '⚽ Sport', gastro: '🍽️ Gastronomie', mytho: '⚡ Mythologie', mixed: '🎲 Mixte', extended: '🌐 Culture', chateaux: '🏰 Châteaux', musique: '🎵 Musique', jv: '🎮 Jeux vidéo', series: '📺 Séries' };
 
     function updateCatStreak(cat, isCorrect) {
       if (!cat) return;

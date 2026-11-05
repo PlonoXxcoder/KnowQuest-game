@@ -56,6 +56,9 @@
     litt:     'LITT_QB',
     mixed:    'MIXED_QB',
     extended: 'EXTENDED_QB',
+    musique:  'MUSIQUE_QB',
+    jv:       'JV_QB',
+    series:   'SERIES_QB',
     flag:     'MIXED_QB', // pas de banque FLAG_QB : les drapeaux vont dans MIXED_QB
   };
 

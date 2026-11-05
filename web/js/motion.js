@@ -49,7 +49,7 @@
     badge.append(star, text); host.prepend(badge);
     setTimeout(() => badge.remove(), 4000);
   }
-  const blockers = '#chestOverlay.show,#discoveryOverlay.show,#levelUpOverlay.show,#bonusPopupOverlay.open';
+  const blockers = '#chestOverlay.show,#discoveryOverlay.show,#levelUpOverlay.show,#bonusPopupOverlay.open,#adventureDialog[open],#bossOutcome,#scrQuiz.active:has(#bossScene)';
   function drain() {
     if (waiting || !celebrations.size) return;
     if (document.querySelector(blockers)) {
@@ -107,6 +107,7 @@
       road: '<div class="motion-demo-road"><span class="motion-demo-node">★</span></div><p>L’étape se valide et le parcours progresse.</p>',
     };
     stage.innerHTML = examples[type] || '';
+    stage.scrollIntoView({ block: 'nearest', behavior: reduced() ? 'instant' : 'smooth' });
     if (type === 'xp') countTo(stage.querySelector('[data-xp]'), 240);
     if (type === 'mastery') mastery(7, stage.querySelector('[data-mastery]'));
     if (type === 'mascot' && typeof window.renderMascot === 'function') window.renderMascot('motionDemoMascot', 'happy');
@@ -119,6 +120,12 @@
   }
   window.Motion = { reduced, sync, setPreference, countTo, mastery, celebrate, reading, confettiAllowed, openPreview, preview };
   media.addEventListener('change', sync);
+  document.addEventListener('keydown', event => {
+    if (event.defaultPrevented || event.repeat || !event.ctrlKey || !event.altKey || event.shiftKey || event.metaKey || event.key.toLowerCase() !== 'a') return;
+    if (event.target instanceof Element && event.target.closest('input,textarea,select,[contenteditable]:not([contenteditable="false"])')) return;
+    event.preventDefault();
+    if (!document.getElementById('motionPreview')?.open) openPreview();
+  });
   document.addEventListener('DOMContentLoaded', sync);
   document.addEventListener('visibilitychange', () => {
     if (!document.hidden) return;

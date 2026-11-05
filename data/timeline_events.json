@@ -1,5 +1,1545 @@
 [
  {
+  "y": -753,
+  "ico": "🏛️",
+  "t": "Fondation légendaire de Rome"
+ },
+ {
+  "y": -490,
+  "ico": "🏃",
+  "t": "Bataille de Marathon"
+ },
+ {
+  "y": -480,
+  "ico": "🚢",
+  "t": "Bataille de Salamine"
+ },
+ {
+  "y": -338,
+  "ico": "👑",
+  "t": "Philippe II domine la Grèce à Chéronée"
+ },
+ {
+  "y": -146,
+  "ico": "🔥",
+  "t": "Destruction de Carthage par Rome"
+ },
+ {
+  "y": 486,
+  "ico": "⚔️",
+  "t": "Victoire de Clovis à Soissons"
+ },
+ {
+  "y": 732,
+  "ico": "🛡️",
+  "t": "Charles Martel arrête les Arabes à Poitiers"
+ },
+ {
+  "y": 843,
+  "ico": "📜",
+  "t": "Traité de Verdun : partage de l'Empire"
+ },
+ {
+  "y": 987,
+  "ico": "👑",
+  "t": "Hugues Capet est élu roi de France"
+ },
+ {
+  "y": 1054,
+  "ico": "✝️",
+  "t": "Schisme entre Églises d'Orient et d'Occident"
+ },
+ {
+  "y": 1099,
+  "ico": "🏰",
+  "t": "Les croisés prennent Jérusalem"
+ },
+ {
+  "y": 1152,
+  "ico": "💍",
+  "t": "Mariage d'Aliénor d'Aquitaine et d'Henri Plantagenêt"
+ },
+ {
+  "y": 1214,
+  "ico": "🦁",
+  "t": "Victoire de Philippe Auguste à Bouvines"
+ },
+ {
+  "y": 1258,
+  "ico": "🕌",
+  "t": "Prise de Bagdad par les Mongols"
+ },
+ {
+  "y": 1306,
+  "ico": "⚔️",
+  "t": "Jacques de Molay devient grand maître du Temple"
+ },
+ {
+  "y": 1337,
+  "ico": "🏹",
+  "t": "Début de la guerre de Cent Ans"
+ },
+ {
+  "y": 1358,
+  "ico": "✊",
+  "t": "Grande jacquerie des paysans français"
+ },
+ {
+  "y": 1382,
+  "ico": "🔔",
+  "t": "Révolte des Maillotins à Paris"
+ },
+ {
+  "y": 1407,
+  "ico": "🗡️",
+  "t": "Assassinat de Louis d'Orléans"
+ },
+ {
+  "y": 1415,
+  "ico": "⚜️",
+  "t": "Défaite française d'Azincourt"
+ },
+ {
+  "y": 1431,
+  "ico": "🔥",
+  "t": "Jeanne d'Arc est brûlée à Rouen"
+ },
+ {
+  "y": 1440,
+  "ico": "🖨️",
+  "t": "Gutenberg met au point l'imprimerie"
+ },
+ {
+  "y": 1455,
+  "ico": "📕",
+  "t": "Impression de la Bible de Gutenberg"
+ },
+ {
+  "y": 1461,
+  "ico": "👑",
+  "t": "Louis XI devient roi de France"
+ },
+ {
+  "y": 1476,
+  "ico": "🎪",
+  "t": "Premières imprimeries à Paris"
+ },
+ {
+  "y": 1483,
+  "ico": "🎨",
+  "t": "Naissance de Raphaël"
+ },
+ {
+  "y": 1485,
+  "ico": "🚢",
+  "t": "Fin de la dynastie des Plantagenêt en Angleterre"
+ },
+ {
+  "y": 1494,
+  "ico": "📜",
+  "t": "Traité de Tordesillas"
+ },
+ {
+  "y": 1498,
+  "ico": "⛵",
+  "t": "Vasco de Gama atteint l'Inde"
+ },
+ {
+  "y": 1502,
+  "ico": "🗺️",
+  "t": "Le nom « America » apparaît sur une carte"
+ },
+ {
+  "y": 1519,
+  "ico": "⛵",
+  "t": "Début de l'expédition de Magellan"
+ },
+ {
+  "y": 1522,
+  "ico": "🌍",
+  "t": "Premier tour du monde achevé par Elcano"
+ },
+ {
+  "y": 1534,
+  "ico": "⚖️",
+  "t": "Acte de suprématie d'Henri VIII en Angleterre"
+ },
+ {
+  "y": 1543,
+  "ico": "🔭",
+  "t": "Copernic publie son système héliocentrique"
+ },
+ {
+  "y": 1558,
+  "ico": "👑",
+  "t": "Début du règne d'Élisabeth Ire d'Angleterre"
+ },
+ {
+  "y": 1562,
+  "ico": "⚔️",
+  "t": "Début des guerres de Religion en France"
+ },
+ {
+  "y": 1572,
+  "ico": "🔪",
+  "t": "Massacre de la Saint-Barthélemy"
+ },
+ {
+  "y": 1582,
+  "ico": "📅",
+  "t": "Réforme grégorienne du calendrier"
+ },
+ {
+  "y": 1588,
+  "ico": "🌊",
+  "t": "Destruction de l'Invincible Armada"
+ },
+ {
+  "y": 1598,
+  "ico": "🕊️",
+  "t": "Édit de Nantes signé par Henri IV"
+ },
+ {
+  "y": 1600,
+  "ico": "🏰",
+  "t": "Fondation de la Compagnie des Indes orientales"
+ },
+ {
+  "y": 1605,
+  "ico": "🖋️",
+  "t": "Publication de Don Quichotte"
+ },
+ {
+  "y": 1610,
+  "ico": "🪐",
+  "t": "Galilée observe les lunes de Jupiter"
+ },
+ {
+  "y": 1618,
+  "ico": "💥",
+  "t": "Début de la guerre de Trente Ans"
+ },
+ {
+  "y": 1623,
+  "ico": "🎭",
+  "t": "Premier folio de Shakespeare"
+ },
+ {
+  "y": 1632,
+  "ico": "⚔️",
+  "t": "Bataille de Lützen et mort de Gustave-Adolphe"
+ },
+ {
+  "y": 1643,
+  "ico": "👶",
+  "t": "Louis XIV devient roi à cinq ans"
+ },
+ {
+  "y": 1648,
+  "ico": "🕊️",
+  "t": "Traités de Westphalie"
+ },
+ {
+  "y": 1649,
+  "ico": "⚖️",
+  "t": "Exécution de Charles Ier d'Angleterre"
+ },
+ {
+  "y": 1653,
+  "ico": "⚓",
+  "t": "Début des guerres anglo-néerlandaises"
+ },
+ {
+  "y": 1661,
+  "ico": "💰",
+  "t": "Arrestation de Fouquet à Nantes"
+ },
+ {
+  "y": 1664,
+  "ico": "🎭",
+  "t": "Molière crée Le Tartuffe"
+ },
+ {
+  "y": 1672,
+  "ico": "🏝️",
+  "t": "Révolution d'Orange aux Provinces-Unies"
+ },
+ {
+  "y": 1685,
+  "ico": "✝️",
+  "t": "Révocation de l'édit de Nantes"
+ },
+ {
+  "y": 1687,
+  "ico": "⚛️",
+  "t": "Newton publie les Principia"
+ },
+ {
+  "y": 1698,
+  "ico": "🪵",
+  "t": "Pierre le Grand fonde Saint-Pétersbourg en 1703"
+ },
+ {
+  "y": 1701,
+  "ico": "👑",
+  "t": "Frédéric Ier devient roi de Prusse"
+ },
+ {
+  "y": 1704,
+  "ico": "⚔️",
+  "t": "Bataille de Blenheim"
+ },
+ {
+  "y": 1715,
+  "ico": "⚰️",
+  "t": "Mort de Louis XIV"
+ },
+ {
+  "y": 1721,
+  "ico": "🏳️",
+  "t": "Paix de Nystad : la Russie devient impériale"
+ },
+ {
+  "y": 1738,
+  "ico": "⚒️",
+  "t": "Invention de la machine à filer par John Kay"
+ },
+ {
+  "y": 1740,
+  "ico": "👑",
+  "t": "Marie-Thérèse d'Autriche monte sur le trône"
+ },
+ {
+  "y": 1751,
+  "ico": "📚",
+  "t": "Début de l'Encyclopédie de Diderot"
+ },
+ {
+  "y": 1756,
+  "ico": "🎭",
+  "t": "Naissance de Mozart"
+ },
+ {
+  "y": 1762,
+  "ico": "📖",
+  "t": "Rousseau publie Du contrat social"
+ },
+ {
+  "y": 1769,
+  "ico": "🚂",
+  "t": "Cugnot présente le fardier à vapeur"
+ },
+ {
+  "y": 1770,
+  "ico": "🎵",
+  "t": "Naissance de Beethoven"
+ },
+ {
+  "y": 1774,
+  "ico": "👑",
+  "t": "Louis XVI monte sur le trône"
+ },
+ {
+  "y": 1776,
+  "ico": "🇺🇸",
+  "t": "Déclaration d'indépendance des États-Unis"
+ },
+ {
+  "y": 1783,
+  "ico": "🎈",
+  "t": "Premier vol des frères Montgolfier"
+ },
+ {
+  "y": 1787,
+  "ico": "⚖️",
+  "t": "Convention constitutionnelle de Philadelphie"
+ },
+ {
+  "y": 1791,
+  "ico": "🎵",
+  "t": "Mort de Mozart"
+ },
+ {
+  "y": 1792,
+  "ico": "🇫🇷",
+  "t": "Proclamation de la Première République française"
+ },
+ {
+  "y": 1794,
+  "ico": "⚖️",
+  "t": "Exécution de Robespierre"
+ },
+ {
+  "y": 1796,
+  "ico": "💉",
+  "t": "Jenner pratique la première vaccination"
+ },
+ {
+  "y": 1799,
+  "ico": "📜",
+  "t": "Bonaparte prend le pouvoir au 18 Brumaire"
+ },
+ {
+  "y": 1801,
+  "ico": "🌐",
+  "t": "Union Act entre Grande-Bretagne et Irlande"
+ },
+ {
+  "y": 1802,
+  "ico": "🏆",
+  "t": "Création de la Légion d'honneur en 1802"
+ },
+ {
+  "y": 1803,
+  "ico": "🛒",
+  "t": "Vente de la Louisiane aux États-Unis"
+ },
+ {
+  "y": 1806,
+  "ico": "🏛️",
+  "t": "Construction de l'Arc de Triomphe décidée"
+ },
+ {
+  "y": 1808,
+  "ico": "🖼️",
+  "t": "Goya peint Tres de Mayo"
+ },
+ {
+  "y": 1810,
+  "ico": "🇲🇽",
+  "t": "Début de l'indépendance du Mexique"
+ },
+ {
+  "y": 1812,
+  "ico": "❄️",
+  "t": "Retraite de Russie de Napoléon"
+ },
+ {
+  "y": 1814,
+  "ico": "👑",
+  "t": "Restauration : retour de Louis XVIII"
+ },
+ {
+  "y": 1819,
+  "ico": "🖼️",
+  "t": "Goya peint le Tres de Mayo"
+ },
+ {
+  "y": 1820,
+  "ico": "🎵",
+  "t": "Naissance de Florence Nightingale"
+ },
+ {
+  "y": 1821,
+  "ico": "🏛️",
+  "t": "Indépendance de la Grèce proclamée"
+ },
+ {
+  "y": 1823,
+  "ico": "📜",
+  "t": "Doctrine Monroe"
+ },
+ {
+  "y": 1824,
+  "ico": "🖼️",
+  "t": "Décès de Byron en Grèce"
+ },
+ {
+  "y": 1825,
+  "ico": "🚂",
+  "t": "Première ligne ferroviaire publique (Stockton-Darlington)"
+ },
+ {
+  "y": 1829,
+  "ico": "🎼",
+  "t": "Mendelssohn redécouvre la Passion selon saint Matthieu"
+ },
+ {
+  "y": 1830,
+  "ico": "🇧🇪",
+  "t": "Indépendance de la Belgique"
+ },
+ {
+  "y": 1831,
+  "ico": "📖",
+  "t": "Victor Hugo publie Notre-Dame de Paris"
+ },
+ {
+  "y": 1832,
+  "ico": "💉",
+  "t": "Épidémie de choléra en Europe"
+ },
+ {
+  "y": 1836,
+  "ico": "⚔️",
+  "t": "Siège de l'Alamo au Texas"
+ },
+ {
+  "y": 1839,
+  "ico": "📷",
+  "t": "Daguerre présente le daguerréotype"
+ },
+ {
+  "y": 1840,
+  "ico": "✉️",
+  "t": "Premier timbre-poste (Penny Black)"
+ },
+ {
+  "y": 1841,
+  "ico": "📰",
+  "t": "Naissance du Daily Telegraph"
+ },
+ {
+  "y": 1842,
+  "ico": "🏛️",
+  "t": "Ouverture du British Museum au public élargi"
+ },
+ {
+  "y": 1845,
+  "ico": "🥔",
+  "t": "Grande famine en Irlande"
+ },
+ {
+  "y": 1846,
+  "ico": "⚔️",
+  "t": "Guerre américano-mexicaine"
+ },
+ {
+  "y": 1848,
+  "ico": "✊",
+  "t": "Printemps des peuples en Europe"
+ },
+ {
+  "y": 1849,
+  "ico": "🛡️",
+  "t": "Mort de Chopin"
+ },
+ {
+  "y": 1851,
+  "ico": "🔭",
+  "t": "Foucault démontre la rotation de la Terre"
+ },
+ {
+  "y": 1852,
+  "ico": "👑",
+  "t": "Napoléon III devient empereur"
+ },
+ {
+  "y": 1854,
+  "ico": "⚔️",
+  "t": "Guerre de Crimée"
+ },
+ {
+  "y": 1855,
+  "ico": "🌍",
+  "t": "Exposition universelle de Paris"
+ },
+ {
+  "y": 1857,
+  "ico": "💥",
+  "t": "Panique financière de 1857"
+ },
+ {
+  "y": 1860,
+  "ico": "🇮🇹",
+  "t": "Expédition des Mille de Garibaldi"
+ },
+ {
+  "y": 1861,
+  "ico": "🗽",
+  "t": "Victor Hugo s'exile à Guernesey"
+ },
+ {
+  "y": 1863,
+  "ico": "📜",
+  "t": "Proclamation d'émancipation de Lincoln"
+ },
+ {
+  "y": 1864,
+  "ico": "🩺",
+  "t": "Fondation de la Croix-Rouge"
+ },
+ {
+  "y": 1865,
+  "ico": "⚰️",
+  "t": "Assassinat de Lincoln"
+ },
+ {
+  "y": 1866,
+  "ico": "📡",
+  "t": "Premier câble télégraphique transatlantique"
+ },
+ {
+  "y": 1867,
+  "ico": "🇨🇦",
+  "t": "Confédération canadienne"
+ },
+ {
+  "y": 1868,
+  "ico": "⛩️",
+  "t": "Ère Meiji au Japon"
+ },
+ {
+  "y": 1870,
+  "ico": "⚔️",
+  "t": "Début de la guerre franco-prussienne"
+ },
+ {
+  "y": 1871,
+  "ico": "🔥",
+  "t": "Commune de Paris"
+ },
+ {
+  "y": 1873,
+  "ico": "📉",
+  "t": "Krach de Vienne"
+ },
+ {
+  "y": 1874,
+  "ico": "🖼️",
+  "t": "Première exposition impressionniste à Paris"
+ },
+ {
+  "y": 1875,
+  "ico": "⚖️",
+  "t": "Adoption des lois constitutionnelles de la IIIe République"
+ },
+ {
+  "y": 1876,
+  "ico": "📞",
+  "t": "Bell brevette le téléphone"
+ },
+ {
+  "y": 1877,
+  "ico": "🎥",
+  "t": "Edison invente le phonographe"
+ },
+ {
+  "y": 1879,
+  "ico": "💡",
+  "t": "Ampoule d'Edison durable"
+ },
+ {
+  "y": 1881,
+  "ico": "🦠",
+  "t": "Pasteur teste son vaccin contre le charbon"
+ },
+ {
+  "y": 1882,
+  "ico": "🧬",
+  "t": "Koch découvre la tuberculose"
+ },
+ {
+  "y": 1883,
+  "ico": "🌉",
+  "t": "Inauguration du pont de Brooklyn"
+ },
+ {
+  "y": 1884,
+  "ico": "🌍",
+  "t": "Conférence de Berlin sur l'Afrique"
+ },
+ {
+  "y": 1885,
+  "ico": "💉",
+  "t": "Premier vaccin antirabique de Pasteur"
+ },
+ {
+  "y": 1886,
+  "ico": "🗽",
+  "t": "Inauguration de la Statue de la Liberté"
+ },
+ {
+  "y": 1887,
+  "ico": "🔊",
+  "t": "Edison invente le phonographe à cylindres de cire"
+ },
+ {
+  "y": 1888,
+  "ico": "📷",
+  "t": "Premier appareil Kodak"
+ },
+ {
+  "y": 1890,
+  "ico": "🖼️",
+  "t": "Mort de Van Gogh"
+ },
+ {
+  "y": 1892,
+  "ico": "⚽",
+  "t": "Fondation du Newcastle United"
+ },
+ {
+  "y": 1893,
+  "ico": "🏭",
+  "t": "Ford construit sa première voiture"
+ },
+ {
+  "y": 1894,
+  "ico": "🥇",
+  "t": "Pierre de Coubertin relance les Jeux olympiques"
+ },
+ {
+  "y": 1895,
+  "ico": "🎬",
+  "t": "Première séance de cinéma payante des Lumière"
+ },
+ {
+  "y": 1896,
+  "ico": "🏅",
+  "t": "Premiers Jeux olympiques modernes à Athènes"
+ },
+ {
+  "y": 1897,
+  "ico": "📻",
+  "t": "Marconi dépose son brevet de radio"
+ },
+ {
+  "y": 1898,
+  "ico": "🌟",
+  "t": "Curie découvre le radium"
+ },
+ {
+  "y": 1899,
+  "ico": "🕊️",
+  "t": "Première Conférence de la paix de La Haye"
+ },
+ {
+  "y": 1900,
+  "ico": "🚇",
+  "t": "Première ligne du métro parisien"
+ },
+ {
+  "y": 1901,
+  "ico": "🏅",
+  "t": "Premiers prix Nobel décernés"
+ },
+ {
+  "y": 1902,
+  "ico": "🎬",
+  "t": "Le Voyage dans la Lune de Méliès"
+ },
+ {
+  "y": 1904,
+  "ico": "🗺️",
+  "t": "Entente cordiale franco-britannique"
+ },
+ {
+  "y": 1905,
+  "ico": "⚛️",
+  "t": "Einstein publie la relativité restreinte"
+ },
+ {
+  "y": 1906,
+  "ico": "🌋",
+  "t": "Éruption du Vésuve"
+ },
+ {
+  "y": 1907,
+  "ico": "🖼️",
+  "t": "Picasso peint Les Demoiselles d'Avignon"
+ },
+ {
+  "y": 1908,
+  "ico": "💥",
+  "t": "Événement de Toungouska"
+ },
+ {
+  "y": 1909,
+  "ico": "🛩️",
+  "t": "Blériot traverse la Manche"
+ },
+ {
+  "y": 1910,
+  "ico": "🎻",
+  "t": "Naissance de Django Reinhardt"
+ },
+ {
+  "y": 1911,
+  "ico": "🧊",
+  "t": "Amundsen atteint le pôle Sud en 1911"
+ },
+ {
+  "y": 1913,
+  "ico": "🖼️",
+  "t": "Arms Show de New York"
+ },
+ {
+  "y": 1915,
+  "ico": "🚢",
+  "t": "Naufrage du Lusitania"
+ },
+ {
+  "y": 1916,
+  "ico": "⚔️",
+  "t": "Bataille de Verdun"
+ },
+ {
+  "y": 1917,
+  "ico": "☭",
+  "t": "Révolution russe d'Octobre"
+ },
+ {
+  "y": 1919,
+  "ico": "📜",
+  "t": "Traité de Versailles signé"
+ },
+ {
+  "y": 1920,
+  "ico": "🏈",
+  "t": "Fondation de la NFL"
+ },
+ {
+  "y": 1921,
+  "ico": "💉",
+  "t": "Découverte de l'insuline thérapeutique"
+ },
+ {
+  "y": 1922,
+  "ico": "🏺",
+  "t": "Découverte de la tombe de Toutankhamon"
+ },
+ {
+  "y": 1923,
+  "ico": "🎬",
+  "t": "Fondation de la Disney Brothers"
+ },
+ {
+  "y": 1924,
+  "ico": "⛷️",
+  "t": "Premiers Jeux olympiques d'hiver à Chamonix"
+ },
+ {
+  "y": 1925,
+  "ico": "📺",
+  "t": "Baird démontre la télévision"
+ },
+ {
+  "y": 1926,
+  "ico": "🗺️",
+  "t": "Byrd survole le pôle Nord"
+ },
+ {
+  "y": 1927,
+  "ico": "🎬",
+  "t": "Le chanteur de jazz, premier film parlant"
+ },
+ {
+  "y": 1928,
+  "ico": "🦠",
+  "t": "Fleming découvre la pénicilline"
+ },
+ {
+  "y": 1930,
+  "ico": "🌌",
+  "t": "Découverte de Pluton"
+ },
+ {
+  "y": 1931,
+  "ico": "🏙️",
+  "t": "Achèvement de l'Empire State Building"
+ },
+ {
+  "y": 1932,
+  "ico": "🔬",
+  "t": "Découverte du neutron"
+ },
+ {
+  "y": 1933,
+  "ico": "🖊️",
+  "t": "Hitler devient chancelier"
+ },
+ {
+  "y": 1934,
+  "ico": "🐾",
+  "t": "Loch Ness : première photo du monstre"
+ },
+ {
+  "y": 1935,
+  "ico": "✈️",
+  "t": "Premier vol du DC-3"
+ },
+ {
+  "y": 1936,
+  "ico": "🏟️",
+  "t": "Jeux olympiques de Berlin"
+ },
+ {
+  "y": 1937,
+  "ico": "🌉",
+  "t": "Début des travaux du Golden Gate Bridge"
+ },
+ {
+  "y": 1938,
+  "ico": "⚛️",
+  "t": "Fission nucléaire découverte"
+ },
+ {
+  "y": 1940,
+  "ico": "🕸️",
+  "t": "Bataille d'Angleterre aérienne"
+ },
+ {
+  "y": 1941,
+  "ico": "💥",
+  "t": "Attaque de Pearl Harbor"
+ },
+ {
+  "y": 1942,
+  "ico": "🎯",
+  "t": "Bataille de Midway"
+ },
+ {
+  "y": 1943,
+  "ico": "🍖",
+  "t": "Fin de la bataille de Stalingrad"
+ },
+ {
+  "y": 1944,
+  "ico": "🎓",
+  "t": "Accords de Bretton Woods"
+ },
+ {
+  "y": 1946,
+  "ico": "💻",
+  "t": "Premier ordinateur ENIAC"
+ },
+ {
+  "y": 1947,
+  "ico": "✈️",
+  "t": "Chuck Yeager franchit le mur du son"
+ },
+ {
+  "y": 1948,
+  "ico": "🇮🇱",
+  "t": "Création de l'État d'Israël"
+ },
+ {
+  "y": 1949,
+  "ico": "🌍",
+  "t": "Création de l'OTAN"
+ },
+ {
+  "y": 1950,
+  "ico": "🇰🇷",
+  "t": "Début de la guerre de Corée"
+ },
+ {
+  "y": 1951,
+  "ico": "📡",
+  "t": "Première émission de TV couleur aux États-Unis"
+ },
+ {
+  "y": 1952,
+  "ico": "🇬🇧",
+  "t": "Avènement d'Élisabeth II"
+ },
+ {
+  "y": 1953,
+  "ico": "🧬",
+  "t": "Structure de l'ADN découverte"
+ },
+ {
+  "y": 1954,
+  "ico": "🎛️",
+  "t": "Première centrale nucléaire civile (Obninsk)"
+ },
+ {
+  "y": 1955,
+  "ico": "🚌",
+  "t": "Boycott des bus de Montgomery"
+ },
+ {
+  "y": 1956,
+  "ico": "📦",
+  "t": "Invention du conteneur maritime"
+ },
+ {
+  "y": 1958,
+  "ico": "🚀",
+  "t": "Création de la NASA"
+ },
+ {
+  "y": 1959,
+  "ico": "🌕",
+  "t": "Luna 3 photographie la face cachée de la Lune"
+ },
+ {
+  "y": 1960,
+  "ico": "💊",
+  "t": "Invention de la pilule contraceptive"
+ },
+ {
+  "y": 1962,
+  "ico": "📊",
+  "t": "Crise des missiles de Cuba"
+ },
+ {
+  "y": 1963,
+  "ico": "🗣️",
+  "t": "Discours « I have a dream » de MLK"
+ },
+ {
+  "y": 1964,
+  "ico": "🎬",
+  "t": "Goldfinger au cinéma"
+ },
+ {
+  "y": 1965,
+  "ico": "🌫️",
+  "t": "Débarquement américain au Vietnam"
+ },
+ {
+  "y": 1966,
+  "ico": "🏥",
+  "t": "Première greffe de cœur humain"
+ },
+ {
+  "y": 1967,
+  "ico": "🎶",
+  "t": "Summer of Love à San Francisco"
+ },
+ {
+  "y": 1968,
+  "ico": "🕊️",
+  "t": "assassinat de Martin Luther King"
+ },
+ {
+  "y": 1970,
+  "ico": "🌐",
+  "t": "Naissance d'Internet (ARPANET international)"
+ },
+ {
+  "y": 1971,
+  "ico": "📧",
+  "t": "Premier e-mail envoyé"
+ },
+ {
+  "y": 1972,
+  "ico": "🎮",
+  "t": "Fondation d'Atari"
+ },
+ {
+  "y": 1973,
+  "ico": "⛽",
+  "t": "Premier choc pétrolier"
+ },
+ {
+  "y": 1974,
+  "ico": "🦴",
+  "t": "Découverte de Lucy en Éthiopie"
+ },
+ {
+  "y": 1975,
+  "ico": "🇻🇳",
+  "t": "Fin de la guerre du Vietnam"
+ },
+ {
+  "y": 1976,
+  "ico": "🍎",
+  "t": "Fondation d'Apple par Jobs et Wozniak"
+ },
+ {
+  "y": 1977,
+  "ico": "🎬",
+  "t": "Sortie de Star Wars"
+ },
+ {
+  "y": 1978,
+  "ico": "👶",
+  "t": "Premier bébé né par FIV"
+ },
+ {
+  "y": 1979,
+  "ico": "☢️",
+  "t": "Accident nucléaire de Three Mile Island"
+ },
+ {
+  "y": 1980,
+  "ico": "🎮",
+  "t": "Pac-Man sort en arcade"
+ },
+ {
+  "y": 1981,
+  "ico": "🩺",
+  "t": "Premiers cas de sida identifiés"
+ },
+ {
+  "y": 1982,
+  "ico": "🎮",
+  "t": "Sortie de la console ColecoVision"
+ },
+ {
+  "y": 1983,
+  "ico": "📶",
+  "t": "Naissance du protocole TCP/IP public"
+ },
+ {
+  "y": 1984,
+  "ico": "🎮",
+  "t": "Super Mario Bros sort au Japon"
+ },
+ {
+  "y": 1985,
+  "ico": "🧊",
+  "t": "Découverte du trou d'ozone"
+ },
+ {
+  "y": 1986,
+  "ico": "☢️",
+  "t": "Catastrophe de Tchernobyl"
+ },
+ {
+  "y": 1987,
+  "ico": "📕",
+  "t": "Signature du traité INF Reagan-Gorbatchev"
+ },
+ {
+  "y": 1988,
+  "ico": "💬",
+  "t": "Sortie du premier SMS concept"
+ },
+ {
+  "y": 1990,
+  "ico": "🌐",
+  "t": "Tim Berners-Lee imagine le Web"
+ },
+ {
+  "y": 1992,
+  "ico": "📲",
+  "t": "Premier SMS réel envoyé"
+ },
+ {
+  "y": 1993,
+  "ico": "🧬",
+  "t": "Jurassic Park au cinéma"
+ },
+ {
+  "y": 1994,
+  "ico": "🇿🇦",
+  "t": "Mandela devient président sud-africain"
+ },
+ {
+  "y": 1995,
+  "ico": "💻",
+  "t": "Windows 95 sort"
+ },
+ {
+  "y": 1997,
+  "ico": "♟️",
+  "t": "Deep Blue bat Kasparov"
+ },
+ {
+  "y": 1998,
+  "ico": "🚀",
+  "t": "Premier module de l'ISS lancé"
+ },
+ {
+  "y": 1999,
+  "ico": "💶",
+  "t": "Création de l'euro monétaire"
+ },
+ {
+  "y": 2000,
+  "ico": "🎆",
+  "t": "Passage à l'an 2000"
+ },
+ {
+  "y": 2001,
+  "ico": "🗽",
+  "t": "Attentats du 11 septembre"
+ },
+ {
+  "y": 2003,
+  "ico": "🧬",
+  "t": "Séquençage du génome humain achevé"
+ },
+ {
+  "y": 2004,
+  "ico": "🌊",
+  "t": "Tsunami de l'océan Indien"
+ },
+ {
+  "y": 2005,
+  "ico": "📺",
+  "t": "Création de YouTube"
+ },
+ {
+  "y": 2006,
+  "ico": "🐦",
+  "t": "Création de Twitter"
+ },
+ {
+  "y": 2007,
+  "ico": "📱",
+  "t": "Lancement du premier iPhone"
+ },
+ {
+  "y": 2008,
+  "ico": "📉",
+  "t": "Crise financière de Lehman Brothers"
+ },
+ {
+  "y": 2009,
+  "ico": "🪙",
+  "t": "Naissance du Bitcoin (livre blanc)"
+ },
+ {
+  "y": 2010,
+  "ico": "📱",
+  "t": "Sortie de l'iPad"
+ },
+ {
+  "y": 2011,
+  "ico": "🌐",
+  "t": "Décès de Steve Jobs"
+ },
+ {
+  "y": 2012,
+  "ico": "🚀",
+  "t": "Curiosity se pose sur Mars"
+ },
+ {
+  "y": 2013,
+  "ico": "🎺",
+  "t": "Création de la snapchat lens"
+ },
+ {
+  "y": 2014,
+  "ico": "🎬",
+  "t": "Fusion Box-office Frozen et Interstellar"
+ },
+ {
+  "y": 2015,
+  "ico": "🌍",
+  "t": "Accord de Paris sur le climat"
+ },
+ {
+  "y": 2016,
+  "ico": "🤖",
+  "t": "AlphaGo bat Lee Sedol"
+ },
+ {
+  "y": 2017,
+  "ico": "🚗",
+  "t": "Tesla Model 3 en production"
+ },
+ {
+  "y": 2018,
+  "ico": "🏫",
+  "t": "Mouvement mondial des jeunes pour le climat"
+ },
+ {
+  "y": 2019,
+  "ico": "🇪🇺",
+  "t": "Première image d'un trou noir"
+ },
+ {
+  "y": 2021,
+  "ico": "🚀",
+  "t": "Premier vol habité spatial privé"
+ },
+ {
+  "y": 2022,
+  "ico": "⚔️",
+  "t": "Invasion russe de l'Ukraine"
+ },
+ {
+  "y": 2023,
+  "ico": "🤖",
+  "t": "Explosion de l'IA générative grand public"
+ },
+ {
+  "y": 2024,
+  "ico": "🥇",
+  "t": "Jeux olympiques de Paris"
+ },
+ {
+  "y": 1880,
+  "ico": "🍽️",
+  "t": "La ganache aurait-elle été inventée par accident par un apprenti pâtissier"
+ },
+ {
+  "y": 1364,
+  "ico": "📜",
+  "t": "Charles V a épousé Jeanne de Bourbon"
+ },
+ {
+  "y": 1692,
+  "ico": "🏰",
+  "t": "Le duc d'Antin acquiert le château de Bellegarde"
+ },
+ {
+  "y": 1733,
+  "ico": "🔬",
+  "t": "Jean-Charles de Borda est-il né"
+ },
+ {
+  "y": 1108,
+  "ico": "📜",
+  "t": "Louis VI fut-il investi du comté de Vexin et des villes de Mantes et de Pontoise"
+ },
+ {
+  "y": 1720,
+  "ico": "🖼️",
+  "t": "Pierre Rivalz est-il né à Toulouse"
+ },
+ {
+  "y": 268,
+  "ico": "📜",
+  "t": "Manius Acilius Aureolus a usurpé le titre impérial"
+ },
+ {
+  "y": 476,
+  "ico": "📜",
+  "t": "L'Empire romain d'Occident a officiellement disparu"
+ },
+ {
+  "y": 1392,
+  "ico": "👑",
+  "t": "Charles VI a été sacré roi de France"
+ },
+ {
+  "y": 1346,
+  "ico": "⚔️",
+  "t": "Édouard III fut-il vaincu lors de la bataille de Crécy"
+ },
+ {
+  "y": 1347,
+  "ico": "📜",
+  "t": "La peste noire a atteint l'Europe, en débarquant au port de Messine, en Sicile"
+ },
+ {
+  "y": 1163,
+  "ico": "📜",
+  "t": "La construction de Notre-Dame de Paris a commencé"
+ },
+ {
+  "y": 1307,
+  "ico": "📜",
+  "t": "Philippe le Bel a fait arrêter les templiers de France"
+ },
+ {
+  "y": 1594,
+  "ico": "👑",
+  "t": "La couronne d'Henri IV fut-elle officiellement créée"
+ },
+ {
+  "y": 1380,
+  "ico": "📜",
+  "t": "Charles V le Sage est-il décédé"
+ },
+ {
+  "y": 1370,
+  "ico": "🍽️",
+  "t": "La première mention du terme, sous la forme brençe, est-elle connue"
+ },
+ {
+  "y": 1731,
+  "ico": "⚰️",
+  "t": "L'œuvre intitulée « Nature morte à la raie et au panier d'oignons » a été réalisée"
+ },
+ {
+  "y": 1835,
+  "ico": "🎬",
+  "t": "Le roman qui a servi de base à l'histoire du film a été publié"
+ },
+ {
+  "y": 1709,
+  "ico": "🏰",
+  "t": "François de Chastellux vendit-il le manoir de Belombre"
+ },
+ {
+  "y": 1798,
+  "ico": "📜",
+  "t": "A été vendu le fermail de la chappe"
+ },
+ {
+  "y": 1856,
+  "ico": "🔬",
+  "t": "Joseph John Thomson est-il né"
+ },
+ {
+  "y": 392,
+  "ico": "📜",
+  "t": "Flavius Rufinus fut-il nommé magister officiorum"
+ },
+ {
+  "y": 395,
+  "ico": "📜",
+  "t": "L'Empire romain a été définitivement divisé entre Orient et Occident"
+ },
+ {
+  "y": 378,
+  "ico": "⚔️",
+  "t": "Flavius Valens est-il mort lors de la bataille d’Andrinople"
+ },
+ {
+  "y": 337,
+  "ico": "📜",
+  "t": "Constantin II accède à la tête de l'Empire romain"
+ },
+ {
+  "y": 1743,
+  "ico": "🥇",
+  "t": "Claire arrive lors de son premier voyage dans le passé dans Outlander"
+ },
+ {
+  "y": 1356,
+  "ico": "⚔️",
+  "t": "Jean II le Bon fut-il fait prisonnier à la bataille de Poitiers"
+ },
+ {
+  "y": 1785,
+  "ico": "🔬",
+  "t": "Est né William Prout"
+ },
+ {
+  "y": 1795,
+  "ico": "📜",
+  "t": "Le sceptre de Dagobert a disparu suite à la Révolution française"
+ },
+ {
+  "y": 1843,
+  "ico": "🔬",
+  "t": "Son frère a fait installer le moteur à air chaud qu'il avait inventé dans l'usine"
+ },
+ {
+  "y": 1456,
+  "ico": "📜",
+  "t": "Jeanne d'Arc a été réhabilitée par l'Église"
+ },
+ {
+  "y": 1191,
+  "ico": "🥇",
+  "t": "Historique se déroule l’essentiel des souvenirs d’Altaïr dans le premier Assassin’s Creed"
+ },
+ {
+  "y": 1809,
+  "ico": "🖼️",
+  "t": "Les fondateurs du mouvement nazaréen ont-ils établi la corporation basée à Vienne appelée Lukasbund"
+ },
+ {
+  "y": 1872,
+  "ico": "🏅",
+  "t": "William Larned est-il né"
+ },
+ {
+  "y": 1032,
+  "ico": "📜",
+  "t": "Georges Maniakès parvient-il à prendre la ville d’Édesse sous l’autorité des Seldjoukides"
+ },
+ {
+  "y": 1232,
+  "ico": "🏰",
+  "t": "Le domaine a été officiellement constitué"
+ },
+ {
+  "y": 1047,
+  "ico": "⚔️",
+  "t": "Henri Ier a participé à la bataille de Val-ès-Dunes"
+ },
+ {
+  "y": 1827,
+  "ico": "🔬",
+  "t": "Prout a proposé la classification des constituants de la nourriture"
+ },
+ {
+  "y": 294,
+  "ico": "📜",
+  "t": "Allectus assassine Carausius pour prendre la pourpre"
+ },
+ {
+  "y": 1781,
+  "ico": "🔬",
+  "t": "Jean-Charles de Borda publie son Mémoire sur le mouvement des projectiles"
+ },
+ {
+  "y": 1642,
+  "ico": "🏰",
+  "t": "Le comté de Rostaing a été créé par la réunion des terres de Bury et d'Onzain"
+ },
+ {
+  "y": 388,
+  "ico": "📜",
+  "t": "Flavius Victor est-il décédé"
+ },
+ {
+  "y": 1816,
+  "ico": "🔬",
+  "t": "Robert Stirling est-il crédité pour l'invention du moteur à combustion externe"
+ },
+ {
+  "y": 1584,
+  "ico": "📜",
+  "t": "Henri III de Navarre est-il devenu héritier présomptif du trône de France"
+ },
+ {
+  "y": 1607,
+  "ico": "👑",
+  "t": "Les fiefs français de la couronne de Navarre ont-ils été réunis au domaine royal"
+ },
+ {
+  "y": 1397,
+  "ico": "🏰",
+  "t": "Le duc Philippe le Hardi remet-il le château d'Autricourt à son maître d'hôtel, Guichard de Saint-Seine"
+ },
+ {
+  "y": 1850,
+  "ico": "🔬",
+  "t": "Est décédé William Prout"
+ },
+ {
+  "y": 1608,
+  "ico": "🏰",
+  "t": "La famille Feydeau a acquis le fief de Brou"
+ },
+ {
+  "y": 1311,
+  "ico": "📜",
+  "t": "Philippe V a reçu en apanage le comté de Poitou"
+ },
+ {
+  "y": 1713,
+  "ico": "💡",
+  "t": "Louis Lemery et Étienne-François Geoffroy ont-ils découvert expérimentalement que le fer est un constituant du sang"
+ },
+ {
+  "y": 1728,
+  "ico": "📖",
+  "t": "Les Fables de Phèdre, avec des notes critiques, morales et historiques, ont-elles été imprimées"
+ },
+ {
+  "y": 1682,
+  "ico": "📜",
+  "t": "La cour de Louis XIV s'installa définitivement à Versailles"
+ },
+ {
+  "y": 1031,
+  "ico": "📜",
+  "t": "Henri Ier a été investi du duché de Bourgogne"
+ },
+ {
+  "y": 305,
+  "ico": "📜",
+  "t": "Dioclétien a abdiqué volontairement son pouvoir et quitter le trône"
+ },
+ {
+  "y": 1547,
+  "ico": "🖼️",
+  "t": "Henri II nomme Germain Le Mannier peintre de ses enfants"
+ },
+ {
+  "y": 1183,
+  "ico": "🏰",
+  "t": "La première pierre du château d'Onzain aurait-elle été posée"
+ },
+ {
+  "y": 1338,
+  "ico": "📜",
+  "t": "Charles V est-il né"
+ },
+ {
   "y": -3500,
   "ico": "📝",
   "t": "Invention de l'écriture cunéiforme à Sumer"
@@ -908,11 +2448,6 @@
   "y": -495,
   "ico": "📜",
   "t": "Naissance de Socrate"
- },
- {
-  "y": -490,
-  "ico": "⚔️",
-  "t": "Bataille de Marathon"
  },
  {
   "y": -485,
@@ -4200,11 +5735,6 @@
   "t": "Zheng He part pour son premier voyage maritime"
  },
  {
-  "y": 1407,
-  "ico": "📜",
-  "t": "Assassinat de Louis d'Orléans"
- },
- {
   "y": 1408,
   "ico": "📜",
   "t": "Jan Hus prêche à Prague"
@@ -5130,11 +6660,6 @@
   "t": "La Méduse... non : Le tabac à priser décline"
  },
  {
-  "y": 1852,
-  "ico": "📜",
-  "t": "Napoléon III devient empereur"
- },
- {
   "y": 1855,
   "ico": "📜",
   "t": "Livingstone explore l'Afrique"
@@ -5178,11 +6703,6 @@
   "y": 1875,
   "ico": "📜",
   "t": "Bizet compose Carmen"
- },
- {
-  "y": 1877,
-  "ico": "📜",
-  "t": "Edison invente le phonographe"
  },
  {
   "y": 1880,
@@ -5235,11 +6755,6 @@
   "t": "Premier film de science-fiction (Voyage dans la Lune de Méliès)"
  },
  {
-  "y": 1905,
-  "ico": "📜",
-  "t": "Einstein publie la relativité restreinte"
- },
- {
   "y": 1907,
   "ico": "📜",
   "t": "Cubisme introduit par Picasso (Les Demoiselles d'Avignon)"
@@ -5260,34 +6775,14 @@
   "t": "Einstein publie la relativité générale"
  },
  {
-  "y": 1916,
-  "ico": "📜",
-  "t": "Bataille de Verdun"
- },
- {
-  "y": 1919,
-  "ico": "📜",
-  "t": "Traité de Versailles signé"
- },
- {
   "y": 1920,
   "ico": "📜",
   "t": "La 19e amendement accorde le vote aux Américaines"
  },
  {
-  "y": 1922,
-  "ico": "📜",
-  "t": "Découverte de la tombe de Toutânkhamon"
- },
- {
   "y": 1925,
   "ico": "📜",
   "t": "Heisenberg formule la mécanique quantique"
- },
- {
-  "y": 1927,
-  "ico": "📜",
-  "t": "Le Chanteur de jazz, premier film parlant"
  },
  {
   "y": 1930,
@@ -5313,11 +6808,6 @@
   "y": 1940,
   "ico": "📜",
   "t": "Bataille d'Angleterre"
- },
- {
-  "y": 1942,
-  "ico": "📜",
-  "t": "Bataille de Midway"
  },
  {
   "y": 1947,
@@ -5373,11 +6863,6 @@
   "y": 1973,
   "ico": "📜",
   "t": "Guerre du Kippour"
- },
- {
-  "y": 1975,
-  "ico": "📜",
-  "t": "Fin de la guerre du Vietnam"
  },
  {
   "y": 1978,
@@ -5455,19 +6940,9 @@
   "t": "Élection du pape François"
  },
  {
-  "y": 2015,
-  "ico": "📜",
-  "t": "Accord de Paris sur le climat"
- },
- {
   "y": 2018,
   "ico": "📜",
   "t": "France championne du monde de football"
- },
- {
-  "y": 2022,
-  "ico": "📜",
-  "t": "Invasion russe de l'Ukraine"
  },
  {
   "y": 2024,

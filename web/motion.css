@@ -1,4 +1,6 @@
 /* Ajustements des effets existants et aperçus isolés de la progression. */
+.story-error-status { margin:10px 0; text-align:center; color:var(--muted); font-size:12px; font-weight:700; }
+.story-gift-notice { margin:10px 0; padding:10px 14px; border-radius:12px; background:#fff0bf; color:#624300; font-weight:900; animation:motionBadge .35s ease-out both; }
 .btn-action.active-check,.btn-action.active-next { animation-iteration-count: 2; }
 .shake { animation-duration: .26s; }
 .lb-card .lb-title { color: #fff3c4; }
@@ -13,7 +15,7 @@
 .motion-mastery-star { display:inline-block; color:#9a6200; font-size:24px; animation:motionStar .65s ease-out both; }
 @keyframes motionBadge { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:none; } }
 @keyframes motionStar { 0% { transform:scale(.5) rotate(-25deg); } 65% { transform:scale(1.25) rotate(8deg); } 100% { transform:scale(1) rotate(0); } }
-#motionPreview { width:min(650px,calc(100% - 24px)); max-height:calc(100dvh - 32px); box-sizing:border-box; border:2px solid var(--border); border-radius:24px; background:var(--bg); color:var(--text); padding:22px; overflow:auto; }
+#motionPreview { width:min(650px,calc(100% - 24px)); max-height:calc(100dvh - 32px); margin:auto; box-sizing:border-box; border:2px solid var(--border); border-radius:24px; background:var(--bg); color:var(--text); padding:22px; overflow:auto; }
 #motionPreview::backdrop { background:rgba(16,15,35,.65); }
 .motion-preview-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
 .motion-preview-head h2 { font-size:21px; margin:0; }
@@ -42,4 +44,4 @@
 #resXP { font-variant-numeric:tabular-nums; }
 html[data-motion="reduced"] *,html[data-motion="reduced"] *::before,html[data-motion="reduced"] *::after { animation-duration:.01ms !important; animation-delay:0s !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
 html[data-motion="reduced"] .confetti-wrap { display:none !important; }
-@media(max-width:480px) { .motion-preview-buttons { grid-template-columns:repeat(2,minmax(0,1fr)); } #motionPreview { padding:16px; } .motion-setting select { max-width:100%; } }
+@media(max-width:480px) { .motion-preview-buttons { grid-template-columns:repeat(2,minmax(0,1fr)); } #motionPreview { padding:16px; } #motionPreview .motion-preview-buttons button { font-size:14px; min-height:44px; padding:8px; } .motion-setting select { max-width:100%; } }

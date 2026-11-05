@@ -1,0 +1,37 @@
+.adventure-panel { margin:12px 16px 20px; padding:18px 20px; border:1px solid var(--border); border-radius:18px; background:var(--card,var(--bg)); color:var(--text); }
+.adventure-main { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+.adventure-copy { min-width:0; }
+.adventure-panel h2 { font-size:20px; margin:4px 0; }
+.adventure-panel .adventure-label { margin:0; font-size:11px; text-transform:uppercase; letter-spacing:.7px; color:var(--muted); font-weight:800; }
+.adventure-panel p,.adventure-dialog p { line-height:1.6; font-size:14px; margin:8px 0; }
+.adventure-panel .adventure-count { margin:4px 0 0; font-size:12px; color:var(--muted); }
+.adventure-play { flex-shrink:0; min-width:120px; min-height:48px; padding:12px 24px; border:0; border-radius:13px; background:var(--purple); color:white; font:inherit; font-weight:900; cursor:pointer; }
+.adventure-details { margin-top:12px; }
+.adventure-details summary { width:fit-content; padding:8px 0; color:var(--muted); font-size:12px; font-weight:700; cursor:pointer; }
+.adventure-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:15px; }
+.adventure-actions button,.adventure-page { border:2px solid var(--border); border-radius:12px; padding:12px 15px; font:inherit; font-weight:800; cursor:pointer; background:var(--purple); color:white; min-height:44px; }
+.adventure-actions .adventure-secondary { background:var(--bg); color:var(--text); }
+.adventure-dialog { width:min(540px,calc(100% - 32px)); max-height:calc(100dvh - 40px); margin:auto; padding:24px; box-sizing:border-box; overflow:auto; background:var(--bg); color:var(--text); border:2px solid var(--border); border-radius:22px; }
+.adventure-dialog::backdrop { background:#101424aa; }
+.adventure-dialog h2 { font-size:22px; margin:12px 0; }
+.adventure-owl { color:var(--purple); font-weight:900; }
+.adventure-page { display:block; width:100%; text-align:left; margin:10px 0; background:var(--bg); color:var(--text); font-size:14px; }
+.adventure-page:disabled { opacity:.65; cursor:default; }
+.adventure-play:focus-visible,.adventure-details summary:focus-visible,.adventure-actions button:focus-visible,.adventure-page:focus-visible { outline:3px solid var(--blue); outline-offset:3px; }
+@media(max-width:480px){.adventure-panel{padding:15px;margin:12px 12px 18px}.adventure-actions button{flex:1 1 100%;font-size:14px}.adventure-dialog{padding:18px}}
+
+/* Accueil : le parcours reste la seule action au premier plan. */
+#scrHome .road-header { width:100%; max-width:700px; box-sizing:border-box; margin:16px auto 0; padding:16px 20px; border-radius:16px; flex-shrink:0; }
+#scrHome .road-title { font-size:20px; }
+#scrHome .road-sub { display:none; }
+#scrHome .road-progress-track { margin-top:10px; height:6px; }
+#scrHome .road-progress-label { font-size:10px; }
+#scrHome .nodes-wrap { padding-top:44px; }
+#scrHome .node-label { top:104px; }
+#scrHome #nodesContainer > .chapter-card:first-of-type { display:none; }
+#scrHome .road-node.current::after { content:'JOUER'; position:absolute; top:-32px; left:50%; transform:translateX(-50%); padding:6px 12px; border:2px solid var(--border); border-radius:10px; background:var(--bg-card); color:var(--purple); font:900 12px system-ui; white-space:nowrap; pointer-events:none; }
+#scrHome .road-node[role=button]:focus-visible { outline:3px solid var(--purple); outline-offset:8px; }
+#scrHome .road-node.done::after { content:'✓'; position:absolute; bottom:-4px; right:-4px; display:grid; place-items:center; width:23px; height:23px; border:2px solid var(--node-accent-d,var(--green-d)); border-radius:50%; background:var(--bg-card); color:var(--node-accent-d,var(--green-d)); font:900 15px system-ui; }
+.adventure-library { margin:16px 0; padding:12px; border:1px solid var(--border); border-radius:14px; }
+.adventure-library > summary { padding:8px; font-weight:800; font-size:14px; cursor:pointer; }
+@media(max-width:740px){#scrHome .road-header{width:calc(100% - 24px);margin-top:12px}#scrHome .road-title{font-size:18px}}

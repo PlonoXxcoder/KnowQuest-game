@@ -97,7 +97,9 @@
     for (const base of bases) {
       const url = base + file;
       try {
-        const resp = await fetch(url);
+        // Les questions peuvent vivre hors du scope du service worker.
+        // Demander la version publiée ; le cache ci-dessous sert hors ligne.
+        const resp = await fetch(url, { cache: 'no-store' });
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         cacheResponse(url, resp);
         _workingBase = base;
@@ -226,29 +228,24 @@
     log(`Événement "${BANK_EVENT}" émis pour ${name}`, 'ok');
   }
 
-  // ── Phase arrière-plan : TF + Scramble ─────────────────────────────────────
+  // ── Phase arrière-plan : TF + Scramble + Frise du Temps ───────────────────
   async function loadModeBanks() {
-    const [tfData, scrambleData] = await Promise.all([
+    const [tfData, scrambleData, timelineData] = await Promise.all([
       fetchJSONAny(TF_FILE, true),
-      fetchJSONAny(SCRAMBLE_FILE, true)
+      fetchJSONAny(SCRAMBLE_FILE, true),
+      fetchJSONAny('timeline_events.json', true)
     ]);
     const tfInjected = injectModeQuestions(tfData, 'TF_QB', q => q.r === true || q.r === false);
     const scrambleInjected = injectModeQuestions(scrambleData, 'SCRAMBLE_QB',
       q => Array.isArray(q.pool) && q.pool.length >= 4 && Array.isArray(q.correct) && q.correct.length >= 4);
+    // Frise du Temps : le pool d'événements étendu remplace les 33 événements codés en dur
+    if (timelineData && Array.isArray(timelineData) && timelineData.length > 0) {
+      window.TIMELINE_POOL = timelineData.filter(e => typeof e.y === 'number' && typeof e.t === 'string' && e.t.length > 0);
+      log(`Frise du Temps : ${window.TIMELINE_POOL.length} événements chargés`, 'ok');
+    }
     if (tfInjected > 0) emitBankLoaded('TF_QB');
     if (scrambleInjected > 0) emitBankLoaded('SCRAMBLE_QB');
     log(`Arrière-plan terminé — TF: ${tfInjected}, Scramble: ${scrambleInjected}`, 'ok');
-  }
-
-  // ── Frise du Temps : événements historiques (chargement en arrière-plan) ────
-  async function loadTimeline() {
-    const tl = await fetchJSONAny('timeline_events.json', true);
-    if (Array.isArray(tl) && tl.length > 0) {
-      window.TIMELINE_EVENTS = tl;
-      log(`Frise du Temps : ${tl.length} événements chargés`, 'ok');
-    } else {
-      log('Frise du Temps : fichier absent ou vide — événements intégrés conservés', 'warn');
-    }
   }
 
   // ── Point d'entrée principal ───────────────────────────────────────────────
@@ -267,7 +264,6 @@
     // Les modes TF / Scramble n'ont pas besoin d'être prêts au démarrage :
     // on les charge en arrière-plan pour libérer l'écran d'accueil plus vite.
     loadModeBanks();
-    loadTimeline();
 
     log(`Données principales prêtes en ${Math.round(performance.now() - t0)} ms`);
   }

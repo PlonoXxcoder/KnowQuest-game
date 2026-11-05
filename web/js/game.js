@@ -131,7 +131,7 @@
       });
 
       // Remplace l'ancienne route par la nouvelle générée par l'IA
-      window.ROAD = chapters;
+      window.ROAD = Adventure.decorate(chapters);
 
       // Force le rafraîchissement de la carte
       buildRoad();
@@ -2144,6 +2144,38 @@
       return filtered.length > 0 ? filtered : pool;
     }
 
+    // ===== HISTOIRE : VIES ET CADEAUX SURPRISES =====
+    // Les règles pures sont dans story-rules.js ; ces fonctions relient les
+    // résultats du quiz à la sauvegarde et aux éléments visibles du jeu.
+    function isStorySession() {
+      return StoryRules.isStory(Q.mode, window.ROAD);
+    }
+
+    function renderStoryStatus() {
+      const hud = document.getElementById('storyErrorStatus');
+      if (!hud) return;
+      hud.hidden = !isStorySession();
+      if (!hud.hidden) hud.textContent = `Erreurs : ${StoryRules.state(P).errors}/3 · une vie à la troisième erreur`;
+    }
+
+    function handleStoryMistake() {
+      const result = StoryRules.mistake(P);
+      if (result.costsHeart) deductHeart(); // conserve le bouclier et la régénération existants
+      renderStoryStatus();
+    }
+
+    function revealStoryGift(question) {
+      if (!isStorySession()) return;
+      const gift = StoryRules.surprise(P, question);
+      StoryRules.grant(P, gift);
+      const notice = document.getElementById('storyGiftNotice');
+      if (notice && gift) {
+        notice.textContent = '🎁 Surprise ! ' + gift.label;
+        notice.hidden = false;
+      }
+    }
+
+    // ===== CŒURS : DÉDUCTION ET RETOUR VISUEL COMMUNS AUX MODES =====
     // Déduction de cœur unifiée avec animations visuelles et physiques
     function deductHeart() {
       if (P.shieldActive) {
@@ -2320,8 +2352,8 @@
       while (keys.length > 120) delete P.dayLog[keys.shift()];
     }
 
-    function checkAchievements() {
-      window.ACHIEVEMENTS.forEach(a => { if (!P.achievements.includes(a.id) && a.check()) { P.achievements.push(a.id); showToast(`🏆 Succès : ${a.ico} ${a.name}`); } });
+    function checkAchievements(quiet = false) {
+      window.ACHIEVEMENTS.forEach(a => { if (!P.achievements.includes(a.id) && a.check()) { P.achievements.push(a.id); if (!quiet) showToast(`🏆 Succès : ${a.ico} ${a.name}`); } });
     }
 
     function showToast(msg, dur = 2500) {
@@ -2666,15 +2698,8 @@
         if (!P.companion) P.companion = {};
         const hour = new Date().getHours();
         const today = todayStr();
-        const away = P.lastPlayDate && P.lastPlayDate !== today;
-        let msg;
-        if (away && (P.streakDays || 0) >= 3) msg = pickOne(["Tu m'as manqué ! Ta série t'attend 🔥", 'Te revoilà ! On reprend la série ?']);
-        else if (hour < 12) msg = pickOne(['Bonjour ! Prêt pour quelques questions ? ☀️', 'Une petite session matinale ? J\'adore ça.']);
-        else if (hour >= 21) msg = pickOne(['Session nocturne ? Chouette choix 🦉', 'Encore debout ? Un dernier quiz puis dodo !']);
-        else msg = pickOne(['Content de te revoir ! 🦉', 'On est en forme aujourd\'hui ?', 'Ta route t\'attend — je te suis !']);
-        setTimeout(() => this.say(msg, { mood: 'wave', dur: 3800, force: true }), 900);
-        // Sur téléphone : après son accueil, elle va se cacher dans son coin
-        // (yeux qui dépassent) et ne sort que si on la touche
+        // Accueil calme : la mascotte reste présente, sans bulle à l'ouverture.
+        // Sur téléphone, elle rejoint ensuite son coin et réagit au toucher.
         if (this._isMobile()) this._scheduleRepeek(6500);
         const due = getDueSRSCount();
         if (due > 0 && P.companion._srsRemindOn !== today) {
@@ -3130,7 +3155,7 @@
     // ================================================================
     // FRISE DU TEMPS — classer les événements historiques
     // ================================================================
-    const TIMELINE_EVENTS_BASE = [
+    const TIMELINE_EVENTS = [
       { y: -52, ico: '🛡️', t: "Vercingétorix résiste à Alésia face à César" },
       { y: -44, ico: '🗡️', t: "Assassinat de Jules César" },
       { y: 800, ico: '👑', t: "Charlemagne est couronné empereur" },
@@ -3164,16 +3189,10 @@
       { y: 2002, ico: '💶', t: "L'euro entre en circulation" },
       { y: 2020, ico: '😷', t: "Pandémie mondiale de Covid-19" },
     ];
-    // La banque étendue (data/timeline_events.json) remplace les 32 événements
-    // intégrés si le chargeur l'a apportée (window.TIMELINE_EVENTS).
-    let TIMELINE_EVENTS = (window.TIMELINE_EVENTS && window.TIMELINE_EVENTS.length > 100)
-      ? window.TIMELINE_EVENTS : TIMELINE_EVENTS_BASE;
     let _tl = { events: [], picked: [], done: false };
 
     function openTimeline() {
-      // Le pool étendu (chargé en arrière-plan par data_loader) prime s'il est disponible
-      const pool = (Array.isArray(window.TIMELINE_EVENTS) && window.TIMELINE_EVENTS.length > 100)
-        ? window.TIMELINE_EVENTS : TIMELINE_EVENTS;
+      const pool = (Array.isArray(window.TIMELINE_POOL) && window.TIMELINE_POOL.length) ? window.TIMELINE_POOL : TIMELINE_EVENTS;
       _tl = {
         events: shuffle([...pool]).slice(0, 5).sort((a, b) => a.y - b.y),
         picked: [], done: false,
@@ -3806,6 +3825,7 @@
 
     // ===== UI UPDATE =====
     function updateUI() {
+      ensureHatInventory();
       Motion.sync();
       const at = document.getElementById('autoTtsToggle'); if (at) at.checked = !!P.autoTTS;
       document.getElementById('valStreak').textContent = P.streak;
@@ -3822,7 +3842,6 @@
           rt.textContent = t;
           rt.style.display = t ? 'block' : 'none';
         }
-        try { renderAccountSection(); } catch (_) {}
         const ph = document.getElementById('profHonors');
         if (ph) {
           const codes = P.honors || [];
@@ -3847,6 +3866,8 @@
 
       const acc = document.getElementById('profAccessory');
       if (acc) { acc.textContent = P.avatarStyle.hat || ''; acc.style.display = P.avatarStyle.hat ? 'block' : 'none'; }
+      AvatarRewards.profile(document.getElementById('profAvCont'), P.avatar, HAT_CATALOG.find(item => item.ico === P.avatarStyle.hat));
+      AvatarRewards.render(document.getElementById('avatarWardrobe'), P, HAT_CATALOG, buyOrEquipHat);
 
       const al = document.getElementById('achList');
       if (al) { al.innerHTML = ''; window.ACHIEVEMENTS.forEach(a => { const u = P.achievements.includes(a.id); al.innerHTML += `<div class="ach-card ${u ? 'unlocked' : ''}" title="${a.desc || ''}"><span class="ach-ico">${a.ico}</span><span class="ach-name">${a.name}</span></div>`; }); }
@@ -4010,23 +4031,24 @@
       { id: 'backpack', ico: '🎒', name: 'Cartable de Rentrée',   desc: 'Spécial Rentrée des Classes', cost: 35, event: 'rentree' },
       { id: 'santahat', ico: '🎅', name: 'Bonnet de Noël',        desc: 'Spécial Noël Culturel', cost: 40, event: 'noel' },
       { id: 'cupid',   ico: '💘', name: 'Diadème Cupidon',        desc: 'Spécial Saint-Valentin', cost: 35, event: 'saintval' },
+      ...AvatarRewards.items,
     ];
     function ensureHatInventory() {
       // Migration : un accessoire déjà porté devient la possession d'origine
       if (!P.ownedHats) P.ownedHats = [];
+      const previousCount = P.ownedHats.length;
+      P.avatarStyle ||= { hat:null };
+      AvatarRewards.unlock(P);
       if (P.avatarStyle && P.avatarStyle.hat) {
         const equipped = HAT_CATALOG.find(h => h.ico === P.avatarStyle.hat);
         if (equipped && !P.ownedHats.includes(equipped.id)) P.ownedHats.push(equipped.id);
       }
+      if (P.ownedHats.length !== previousCount) save();
     }
     function renderHatShop(aDiv) {
       ensureHatInventory();
       const activeEv = (getActiveEvent() || {}).id;
-      // Les chapeaux événementiels n'apparaissent que pendant leur événement
-      aDiv.innerHTML = HAT_CATALOG.filter(h => !h.event || h.event === activeEv).map(h => `
-        <div class="shop-item"><div class="shop-info"><div class="shop-ico">${h.ico}</div>
-        <div class="shop-details"><div class="shop-name">${h.name}</div><div class="shop-desc">${h.desc}</div></div></div>
-        <button class="btn-buy" id="buyHat_${h.id}" onclick="buyOrEquipHat('${h.id}')"></button></div>`).join('');
+      AvatarRewards.shop(aDiv, P, HAT_CATALOG, activeEv, buyOrEquipHat);
       updateShopCounts();
     }
     function buyOrEquipHat(id) {
@@ -4034,6 +4056,7 @@
       if (!hat) return;
       ensureHatInventory();
       if (!P.ownedHats.includes(id)) {
+        if (hat.chapter !== undefined) { showToast(hat.desc); return; }
         if (P.gems < hat.cost) { showToast('💎 Pas assez de gemmes !'); return; }
         P.gems -= hat.cost;
         P.ownedHats.push(id);
@@ -4052,9 +4075,9 @@
         const btn = document.getElementById('buyHat_' + h.id);
         if (!btn) return;
         const owned = (P.ownedHats || []).includes(h.id);
-        if (owned && P.avatarStyle.hat === h.ico) { btn.textContent = 'Équipé ✓'; btn.disabled = true; }
+        if (owned && P.avatarStyle.hat === h.ico) { btn.textContent = 'Retirer ✓'; btn.disabled = false; }
         else if (owned) { btn.textContent = 'Équiper'; btn.disabled = false; }
-        else { btn.textContent = `💎 ${h.cost}`; btn.disabled = false; }
+        else { btn.textContent = `💎 ${h.cost}`; btn.disabled = P.gems < h.cost; }
       });
     }
 
@@ -4100,6 +4123,7 @@
     // ===== POWER-UP USAGE =====
     function usePowerup(type) {
       if (Q.state !== 'selecting') return;
+      if (Q.mode === 'boss' && (Q.legend || type === 'shield')) return;
       if (P.powerups[type] <= 0) return;
       if (type === 'fiftyfifty') {
         const q = Q.qs[Q.idx];
@@ -4256,6 +4280,7 @@
     let _prevDoneNodeIds = new Set();
 
     function buildRoad() {
+      if (Array.isArray(window.ROAD)) Adventure.render(P, window.ROAD);
       const c = document.getElementById('nodesContainer'); if (!c) return;
       c.innerHTML = '';
       const offsets = ['calc(25%)', 'calc(50%)', 'calc(75%)', 'calc(50%)'];
@@ -4308,7 +4333,13 @@
           n.dataset.nodeId = node.id;
 
           if (node.type === 'chest') { n.textContent = done ? '✅' : '🎁'; if (!(!done && !curr)) n.onclick = () => openChest(node); }
-          else { n.textContent = done ? '✅' : node.ico; if (curr || done) n.onclick = () => openLessonPopup(node, ch); }
+          else { n.textContent = node.ico; if (curr || done) n.onclick = () => launchRoadLesson(node); }
+          if (n.onclick) {
+            n.setAttribute('role', 'button');
+            n.tabIndex = 0;
+            n.setAttribute('aria-label', `${curr ? 'Jouer' : done ? 'Rejouer' : 'Ouvrir'} : ${node.label}`);
+            n.onkeydown = event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); n.click(); } };
+          }
 
           const lbl = document.createElement('div'); lbl.className = 'node-label';
           lbl.style.left = offsets[i % offsets.length]; lbl.style.transform = 'translateX(-50%)'; lbl.textContent = node.label;
@@ -4334,7 +4365,7 @@
           const bn = document.createElement('div');
           bn.className = `road-node boss ${bossDefeated ? 'done' : ''}  ${(!allDone && !bossDefeated) ? 'locked' : ''}`;
           bn.style.left = 'calc(50%)'; bn.style.transform = 'translateX(-50%)';
-          bn.textContent = bossDefeated ? '💀' : '👾';
+          bn.textContent = bossForChapter(chIdx).ico;
           if (bossAvail || bossDefeated) bn.onclick = () => openBossModal(bossId, chIdx, ch);
           const bossLbl = document.createElement('div'); bossLbl.className = 'node-label';
           bossLbl.style.left = 'calc(50%)'; bossLbl.style.transform = 'translateX(-50%)';
@@ -4521,6 +4552,22 @@
       return (ROAD_VARIANTS && ROAD_VARIANTS[node.id]) || 'classic';
     }
 
+    // Le bouton Jouer utilise les mêmes étapes et garde le verrouillage du parcours.
+    function playAdventureStep(node, ch) {
+      const element = document.querySelector(`.road-node[data-node-id="${node.id}"]`);
+      if (!element || element.classList.contains('locked')) return;
+      if (node.type === 'chest') { openChest(node); return; }
+      launchRoadLesson(node);
+    }
+
+    function launchRoadLesson(node) {
+      const variant = roadNodeVariant(node);
+      if (variant === 'tf') startQuizFlow(Math.min(node.qCount, 8), node.id, 'tf');
+      else if (variant === 'scramble') startQuizFlow(Math.min(node.qCount, 5), node.id, 'scramble');
+      else if (variant === 'tour') startRoadTour(node);
+      else startQuizFlow(node.qCount, node.id, 'qcm', node.bank);
+    }
+
     function openLessonPopup(node, ch) {
       window._tutNode = node;
       const variant = roadNodeVariant(node);
@@ -4555,10 +4602,7 @@
       document.getElementById('nmBtn').textContent = variant === 'classic' ? "Commencer" : "Commencer l’édition spéciale ✨";
       document.getElementById('nmBtn').onclick = () => {
         document.getElementById('nodeModal').classList.remove('open');
-        if (variant === 'tf') startQuizFlow(Math.min(node.qCount, 8), node.id, 'tf');
-        else if (variant === 'scramble') startQuizFlow(Math.min(node.qCount, 5), node.id, 'scramble');
-        else if (variant === 'tour') startRoadTour(node);
-        else startQuizFlow(node.qCount, node.id, 'qcm', node.bank);
+        launchRoadLesson(node);
       };
     }
     function setNodeDifficulty(bank, diff) {
@@ -4903,8 +4947,10 @@
       ['GEO_QB', 'HIST_QB', 'SCI_QB', 'ART_QB', 'CINEMA_QB', 'SPORT_QB', 'GASTRO_QB',
        'MYTHO_QB', 'CHATEAUX_QB', 'LITT_QB', 'MUSIQUE_QB', 'JV_QB', 'SERIES_QB',
        'EXTENDED_QB', 'MIXED_QB'].forEach(b => (window[b] || []).forEach(q => {
-         if (q && q.id && !byId[q.id]) byId[q.id] = q;
+         if (q.id && !byId[q.id]) byId[q.id] = q;
        }));
+      const failById = {};
+      list.forEach(t => { failById[t.id] = t.fail_rate; });
       let qs = list.map(t => byId[t.id]).filter(Boolean);
       qs = shuffle(qs).slice(0, 10);
       if (qs.length < 5) {
@@ -4988,6 +5034,7 @@
       document.getElementById('topbar').style.display = 'none';
       document.getElementById('bnav').style.display = 'none';
       document.getElementById('scrQuiz').classList.add('active');
+      document.getElementById('bossOutcome')?.remove();
       applyOwlHat();
       // Le compagnon flottant laisse place au hibou du quiz pendant la partie
       const cf = document.getElementById('companionFloat');
@@ -5001,9 +5048,13 @@
       renderMascot('mascotQuiz', 'idle');
       updateCompanionVisibility();
       renderQ();
+      Bosses.scene(Q, true);
     }
 
     function renderQ() {
+      renderStoryStatus();
+      const giftNotice = document.getElementById('storyGiftNotice');
+      if (giftNotice) { giftNotice.hidden = true; giftNotice.textContent = ''; }
       Motion.reading(true);
       document.querySelectorAll('#vBanner .motion-mastery').forEach(el => el.remove());
       Companion._queue.length = 0;
@@ -5015,6 +5066,7 @@
         const more = shuffle(getPool('mixed')).slice(0, 20);
         Q.qs.push(...more);
       }
+      if (Q.mode === 'boss' && (Q.duelAiHP <= 0 || Q.duelPlayerHP <= 0)) { showResult(); return; }
       if (Q.mode !== 'survie' && Q.mode !== 'infinite' && Q.idx >= Q.qs.length) { showResult(); return; }
       if (Q.mode === 'survie' && Q.idx >= Q.qs.length) {
         const more = shuffle(getPool('mixed'));
@@ -5078,9 +5130,10 @@
         document.getElementById('duelAiHPVal').textContent = Q.duelAiHP + ' 🤖';
       }
       if (Q.mode === 'boss') {
-        document.getElementById('duelPlayerName').textContent = P.name;
-        document.getElementById('duelAiName').textContent = `${Q.bossIco || '👾'} ${Q.bossName || 'Boss'}`.slice(0, 24);
+        document.getElementById('duelPlayerName').textContent = 'Vies du combat';
+        document.getElementById('duelAiName').textContent = 'Gardien';
         updateBossHUD();
+        Bosses.scene(Q);
         if (Q.legend) {
           // Phases du boss légendaire : annonce au changement de difficulté
           if (Q.idx === 5) showToast('🔥 PHASE 2 — le boss enrage : questions moyennes !');
@@ -5138,7 +5191,8 @@
       Companion.react('wrong');
       srsOnResult(Q.qs[Q.idx], false);
       if (Q.mode !== 'flash' && Q.mode !== 'boss') {
-        deductHeart();
+        if (isStorySession()) handleStoryMistake();
+        else deductHeart();
       }
       if (Q.mode === 'survie') {
         if (hasTalent('t_survie_coeur') && !Q.survieForgiven) { Q.survieForgiven = true; showToast('💀 Cœur de survivant : erreur pardonnée !'); }
@@ -5146,11 +5200,8 @@
       }
       if (Q.mode === 'duel') { Q.duelAiHP = Math.max(0, Q.duelAiHP - 0); Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1); if (Q.duelPlayerHP <= 0) { showResult(); return; } }
       if (Q.mode === 'boss') {
-        // Temps écoulé = une erreur de combat (l'Archimage punit les lents)
-        Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1);
-        if (Q.bossPower === 'feed') Q.duelAiHP = Math.min(Q.bossMaxHP, Q.duelAiHP + 1);
-        updateBossHUD();
-        if (Q.duelPlayerHP <= 0) { setTimeout(() => showResult(), 400); return; }
+        resolveBossTurn(false);
+        if (Q.duelPlayerHP <= 0) { scheduleBossResult(400); return; }
       }
 
       const q = Q.qs[Q.idx];
@@ -5253,7 +5304,8 @@
         const atlasId = q.atlasId;
         if (atlasId && !P.atlas.includes(atlasId)) {
           P.atlas.push(atlasId); Q.newAtlasCards++;
-          setTimeout(() => triggerDiscovery(atlasId), 600);
+          // Pendant un combat, les découvertes sont réunies dans le résultat.
+          if (Q.mode !== 'boss') setTimeout(() => triggerDiscovery(atlasId), 600);
         }
         P.totalCorrect++;
         const today = new Date().toISOString().split('T')[0];
@@ -5275,14 +5327,8 @@
           }, 1200);
         }
         if (Q.mode === 'boss') {
-          // Chaque bonne réponse inflige 1 dégât au boss
-          Q.duelAiHP = Math.max(0, Q.duelAiHP - 1);
-          if (Q.bossPower === 'regen' && (Q.idx + 1) % 3 === 0 && Q.duelAiHP > 0) {
-            Q.duelAiHP = Math.min(Q.bossMaxHP, Q.duelAiHP + 1);
-            showToast(`👾 ${Q.bossName || 'Le boss'} régénère 1 HP !`);
-          }
-          updateBossHUD();
-          if (Q.duelAiHP <= 0) { setTimeout(() => showResult(), 700); }
+          resolveBossTurn(true);
+          if (Q.duelAiHP <= 0) { scheduleBossResult(700); }
         }
         let bonusTxt = '';
         if (speedBonus > 0) bonusTxt += `⚡+${speedBonus} vitesse `;
@@ -5314,8 +5360,8 @@
         // On appelle UNIQUEMENT deductHeart() qui gère les vies, le bouclier et les animations
         // (boss : les erreurs coûtent des HP de combat, pas des cœurs réels)
         if (!['infinite', 'Revision', 'scramble', 'boss'].includes(Q.mode)) {
-
-          deductHeart();
+          if (isStorySession()) handleStoryMistake();
+          else deductHeart();
         }
 
         if (Q.mode === 'survie') {
@@ -5324,11 +5370,8 @@
         }
         if (Q.mode === 'duel') { Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1); if (Q.duelPlayerHP <= 0) { audio.playGameOver(); setTimeout(() => showResult(), 400); return; } }
         if (Q.mode === 'boss') {
-          // Une erreur coûte 1 vie de combat ; le Seigneur des Erreurs en profite
-          Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1);
-          if (Q.bossPower === 'feed') Q.duelAiHP = Math.min(Q.bossMaxHP, Q.duelAiHP + 1);
-          updateBossHUD();
-          if (Q.duelPlayerHP <= 0) { audio.playGameOver(); setTimeout(() => showResult(), 400); return; }
+          resolveBossTurn(false);
+          if (Q.duelPlayerHP <= 0) { audio.playGameOver(); scheduleBossResult(400); return; }
         }
         if (!P.mistakes.find(m => m.question === q.question)) P.mistakes.push(q);
         Q.retryQueue.push(q);
@@ -5366,6 +5409,7 @@
       setBannerOpen(true);
       const vs = document.getElementById('vStatus'); vs.textContent = isCorrect ? '✔️ Correct !' : '❌ Incorrect'; vs.className = 'v-status ' + (isCorrect ? 'c' : 'w');
       document.getElementById('vFact').textContent = q.explanation || '';
+      if (isCorrect) revealStoryGift(q);
       save();
     }
 
@@ -5411,6 +5455,9 @@
     }
 
     function showResult() {
+      if (Q.mode === 'boss' && Q.resultShown) return;
+      if (Q.mode === 'boss') Q.resultShown = true;
+      document.getElementById('bossOutcome')?.remove();
       Motion.reading(false);
       stopTimer();
       document.getElementById('scrQuiz').classList.remove('active');
@@ -5427,7 +5474,7 @@
       document.getElementById('resAtlas').textContent = Q.newAtlasCards;
       claimWeeklyBonusIfApplicable(acc);
       renderMascot('mascotResult', acc >= 80 ? 'celebrate' : 'happy');
-      Companion.react('session_end', { acc });
+      if (Q.mode !== 'boss') Companion.react('session_end', { acc });
 
       // === BONUS CALCULATIONS ===
       let bonusGems = 0;
@@ -5440,14 +5487,14 @@
       if (Q.combo >= 8) updateMissionProgress('combo8', 1);
 
       // 1. Accuracy Bonus (>90% → gems)
-      const accBonus = calcAccuracyBonus(Q.correct, totalAnswered);
+      const accBonus = Q.mode === 'boss' ? 0 : calcAccuracyBonus(Q.correct, totalAnswered);
       if (accBonus > 0) {
         bonusGems += accBonus;
         bonusChips.push({ label: `🎯 Précision +${accBonus}💎`, color: 'var(--blue)', bg: 'var(--blue-bg)' });
       }
 
       // 2. Perfect Run (0 errors)
-      const isPerfect = Q.correct === totalAnswered && totalAnswered >= 5;
+      const isPerfect = Q.mode !== 'boss' && Q.correct === totalAnswered && totalAnswered >= 5;
       if (isPerfect) {
         bonusGems += 20;
         updateMissionProgress('perfect', 1);
@@ -5473,7 +5520,7 @@
 
       // 3. Streak Bonus (daily gems multiplier)
       const today = new Date().toISOString().split('T')[0];
-      if (P.streakDays >= 2) {
+      if (Q.mode !== 'boss' && P.streakDays >= 2) {
         const streakMult = getStreakGemMultiplier();
         const baseGems = 5; // base gems per session
         const streakGems = Math.round(baseGems * (streakMult - 1));
@@ -5544,12 +5591,20 @@
         resTitle.style.color = won ? 'var(--green)' : 'var(--red)';
         btnRes.textContent = 'Retour'; btnRes.onclick = () => finishQuiz();
       } else if (Q.mode === 'boss') {
-        // Victoire = barre de HP du boss vidée (ou assez de dégâts à la fin des 10 questions)
         const won = Q.duelAiHP <= 0;
-        resTitle.textContent = won ? '⚔️ Boss Vaincu !' : '💀 Défaite face au Boss...';
-        resTitle.style.color = won ? 'var(--purple)' : 'var(--red)';
-        btnRes.textContent = 'Continuer'; btnRes.onclick = () => { handleBossResult(won); finishQuiz(); };
-        if (won) { updateMissionProgress('boss', 1); updateMissionProgress('perfect', isPerfect ? 1 : 0); }
+        const conclusion = Q.legend ? 'Le défi du mois est accompli. Ton titre est ajouté à ton profil.' : Adventure.chapters[Q.bossChIdx]?.end || '';
+        // Réserver la place avant d'accorder l'XP : une montée de niveau
+        // attendra la fermeture du résultat au lieu de couvrir la page restaurée.
+        Bosses.result(Q, null, conclusion);
+        const receipt = handleBossResult(won);
+        resTitle.textContent = won ? 'Gardien vaincu !' : 'Une revanche ?';
+        resTitle.style.color = won ? 'var(--purple)' : 'var(--text)';
+        btnRes.textContent = 'Continuer'; btnRes.onclick = () => finishQuiz();
+        Bosses.result(Q, receipt, conclusion);
+        Motion.countTo(document.getElementById('resXP'), (hasTalent('t_polyglotte') ? Math.ceil(Q.totalXP * 1.05) : Q.totalXP) + receipt.xp);
+        document.getElementById('resGems').textContent = (Q.gemsEarned || 0) + receipt.gems;
+        document.getElementById('resAtlas').textContent = (Q.newAtlasCards || 0) + receipt.card;
+        if (receipt.awarded) updateMissionProgress('boss', 1);
       } else if (Q.mode === 'daily') {
         resTitle.textContent = `Défi du Jour — ${acc}% ! 🌍`;
         resTitle.style.color = 'var(--purple)';
@@ -5576,8 +5631,8 @@
       if (P.history.length > 20) P.history.shift();
 
       // totalQ est désormais compté question par question dans recordCatStat
-      addXP(Q.totalXP); checkAchievements();
-      if (acc >= 60 && !['infinite', 'tf', 'scramble', 'Revision', 'Mastery', 'duel', 'survie', 'chaine', 'flash', 'daily', 'weeklyBonus'].includes(Q.mode) && !Q.mode.startsWith('cat_')) {
+      addXP(Q.totalXP); checkAchievements(Q.mode === 'boss');
+      if (acc >= 60 && !['infinite', 'tf', 'scramble', 'Revision', 'Mastery', 'duel', 'survie', 'chaine', 'flash', 'daily', 'weeklyBonus', 'boss'].includes(Q.mode) && !Q.mode.startsWith('cat_')) {
         P.nodeProgress[Q.mode] = true;
         // Star rating: purely a visual/motivational layer on top of existing completion logic.
         const starsEarned = acc >= 100 ? 3 : acc >= 80 ? 2 : 1;
@@ -5613,7 +5668,7 @@
       save();
     }
 
-    function finishQuiz() { document.getElementById('scrResult').style.display = 'none'; startApp(); }
+    function finishQuiz() { document.getElementById('bossOutcome')?.remove(); document.getElementById('scrResult').style.display = 'none'; startApp(); }
     function goHomeFromHearts() { document.getElementById('scrNoHearts').style.display = 'none'; startApp(); }
     function resetData() { if (confirm('Tout effacer ?')) { localStorage.clear(); location.reload(); } }
 
@@ -5831,7 +5886,7 @@
       if (P.honors[id]) return;   // déjà obtenu
       P.honors[id] = badge;
       save();
-      setTimeout(() => showToast(`🏆 Trophée débloqué : ${badge.name}`), 700);
+      if (Q.mode !== 'boss') setTimeout(() => showToast(`🏆 Trophée débloqué : ${badge.name}`), 700);
       renderHonors();
     }
     function renderHonors() {
@@ -6268,6 +6323,13 @@
 
     // Show bonus popup
     function showBonusPopup(ico, title, sub, rewards) {
+      if (Q.mode === 'boss' && (document.querySelector('#scrQuiz.active') || document.getElementById('bossOutcome'))) {
+        Motion.celebrate('bonus-' + title, () => _showBonusPopup(ico, title, sub, rewards));
+        return;
+      }
+      _showBonusPopup(ico, title, sub, rewards);
+    }
+    function _showBonusPopup(ico, title, sub, rewards) {
       document.getElementById('bonusPopupIco').textContent = ico;
       document.getElementById('bonusPopupTitle').textContent = title;
       document.getElementById('bonusPopupSub').textContent = sub;
@@ -6281,24 +6343,8 @@
 
     // Chaque chapitre affronte un boss différent avec ses propres règles :
     // HP, difficultés du pool, chrono éventuel et pouvoir spécial.
-    const BOSSES = [
-      { ico: '🐉', name: 'Le Dragon de la Connaissance', hp: 5, pool: ['medium', 'hard'], timerSec: 0, power: null,
-        rules: 'Règles classiques : chaque bonne réponse lui inflige 1 dégât. 3 erreurs et tu es K.O.',
-        reward: '+200 XP · +100 💎 · Fiche Légendaire' },
-      { ico: '👾', name: 'Le Gardien des Étoiles', hp: 7, pool: ['easy', 'medium'], timerSec: 0, power: 'regen',
-        rules: '7 HP mais des questions plus faciles. Attention : il régénère 1 HP tous les 3 tours !',
-        reward: '+180 XP · +80 💎 · Coffre Mystère' },
-      { ico: '🧙', name: 'L\'Archimage du Savoir', hp: 5, pool: ['medium', 'hard'], timerSec: 10, power: 'timer',
-        rules: 'Sous sorts d\'accélération : seulement 10 secondes par question !',
-        reward: '+220 XP · +120 💎 · Fiche Rare' },
-      { ico: '💀', name: 'Le Seigneur des Erreurs', hp: 5, pool: ['medium', 'hard'], timerSec: 0, power: 'feed',
-        rules: 'Vampirisme : chaque erreur lui rend 1 HP (sans dépasser son maximum).',
-        reward: '+250 XP · +150 💎 · Super Coffre' },
-      { ico: '🦁', name: 'Le Roi des Défis', hp: 6, pool: ['hard'], timerSec: 0, power: null,
-        rules: 'Uniquement des questions difficiles, 6 HP. Réservé aux braves.',
-        reward: '+200 XP · +100 💎 · Fiche Atlas Rare' },
-    ];
-    const bossForChapter = (chIdx) => BOSSES[((chIdx % BOSSES.length) + BOSSES.length) % BOSSES.length];
+    const BOSSES = Bosses.chapters;
+    const bossForChapter = Bosses.forChapter;
     // Talent Chasseur de boss : -1 HP (jamais moins de 3)
     const bossHpFor = (chIdx) => Math.max(3, bossForChapter(chIdx).hp - (hasTalent('t_boss_hp') ? 1 : 0));
 
@@ -6318,20 +6364,25 @@
       document.getElementById('bossIco').textContent = defeated ? '💀' : boss.ico;
       document.getElementById('bossTitle').textContent = defeated ? 'Boss déjà vaincu !' : `Boss : ${boss.name}`;
       document.getElementById('bossSub').textContent = defeated ? 'Tu as déjà triomphé de ce gardien.' : 'Bats le boss pour débloquer la suite !';
-      document.getElementById('bossRewardDesc').textContent = boss.reward;
+      document.getElementById('bossRewardDesc').textContent = Bosses.rewardText(boss);
       // Règles dynamiques propres au boss (remplace le texte fixe)
       const rulesEl = document.querySelector('#bossModal .boss-warning + div');
-      if (rulesEl) rulesEl.innerHTML = `<div style="font-size:12px;color:#ce93d8;font-weight:900;margin-bottom:6px">⚔️ ${boss.name}</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:700;line-height:1.6">• ${boss.rules}<br>• ${boss.hp} HP à lui infliger en 10 questions</div>`;
+      if (rulesEl) rulesEl.textContent = boss.rule;
+      document.getElementById('bossSub').textContent = defeated ? 'Sa page est déjà restaurée.' : `${bossHpFor(chIdx)} points à retirer · ${boss.questions} questions maximum · 3 vies de combat`;
       document.getElementById('bossHPFill').style.width = '100%';
       document.getElementById('bossHPVal').textContent = String(bossHpFor(chIdx));
       const hpMax = document.getElementById('bossHPMax');
       if (hpMax) hpMax.textContent = String(bossHpFor(chIdx));
-      document.getElementById('bossFightBtn').style.display = defeated ? 'none' : 'block';
+      const fightBtn = document.getElementById('bossFightBtn');
+      fightBtn.style.display = defeated ? 'none' : 'block';
+      fightBtn.textContent = 'Affronter';
+      fightBtn.onclick = startBossFight;
       document.getElementById('bossModal').classList.add('open');
     }
 
     function startBossFight() {
+      if (!_bossCtx || !_bossCtx.ch?.nodes.every(node => P.nodeProgress[node.id])) { showToast('Termine les étapes du chapitre pour affronter son gardien.'); return; }
+      if (P.bossDefeated?.[_bossCtx.bossId]) return;
       document.getElementById('bossModal').classList.remove('open');
       const boss = bossForChapter(_bossCtx.chIdx);
       const allQ = [
@@ -6340,61 +6391,73 @@
         ...(window.GASTRO_QB || []), ...(window.MYTHO_QB || []),
         ...(window.CHATEAUX_QB || []), ...(window.LITT_QB || []), ...(window.EXTENDED_QB || []),
       ];
-      let pool = shuffle(allQ.filter(q => boss.pool.includes(q.difficulty))).slice(0, 10);
-      if (pool.length < 5) {
-        const fallback = shuffle(getPool('mixed')).slice(0, 10);
-        pool.push(...fallback.slice(0, 10 - pool.length));
+      // Le gardien reprend les catégories rencontrées dans son chapitre.
+      const chapter = window.ROAD && window.ROAD[_bossCtx.chIdx];
+      const banks = [...new Set((chapter?.nodes || []).map(node => node.bank))];
+      const chapterQuestions = [...new Map(banks.flatMap(getPool).map(q => [q.id, q])).values()];
+      const candidates = chapterQuestions.length >= 10 ? chapterQuestions : allQ;
+      let pool = shuffle(candidates.filter(q => boss.pool.includes(q.difficulty))).slice(0, boss.questions);
+      if (pool.length < boss.questions) {
+        const selected = new Set(pool.map(q => q.id));
+        const fallback = shuffle(candidates.filter(q => !selected.has(q.id))).slice(0, boss.questions);
+        pool.push(...fallback.slice(0, boss.questions - pool.length));
       }
       Q = {
-        mode: 'boss', type: 'qcm', qs: pool.slice(0, 10), idx: 0, correct: 0, totalXP: 0,
+        mode: 'boss', type: 'qcm', qs: pool.slice(0, boss.questions), idx: 0, correct: 0, totalXP: 0,
         state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
         retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
         duelPlayerHP: 3, duelAiHP: bossHpFor(_bossCtx.chIdx), duelAiDiff: 0, chain: null, chainIdx: 0, chainBroken: false,
         bossId: _bossCtx.bossId, bossChIdx: _bossCtx.chIdx, gemsEarned: 0,
-        bossMaxHP: boss.hp, bossPower: boss.power, bossTimerSec: boss.timerSec,
+        bossMaxHP: bossHpFor(_bossCtx.chIdx), bossPower: boss.power, bossTimerSec: boss.timerSec,
+        bossPhase:1, bossColor:boss.color,
         bossIco: boss.ico, bossName: boss.name,
       };
       launchQuizScreen();
     }
 
+    // Une victoire est enregistrée une seule fois, même si le résultat se rouvre.
     function handleBossResult(won) {
+      if (!won) return { awarded:false, xp:0, gems:0, card:0 };
       if (!P.bossDefeated) P.bossDefeated = {};
-      if (won && Q.legend) {
-        // Boss Légendaire mensuel : récompense exclusive + titre
+      if (Q.legend) {
         initLegendBoss();
+        if (P.legendBoss.defeated || Q.bossId !== 'legend_' + currentMonthKey()) return { awarded:false, xp:0, gems:0, card:0 };
         P.legendBoss.defeated = true;
-        P.gems += 150; P.xp += 300; logDay('xp', 300);
-        if (!P.titles) P.titles = {};
-        P.titles.legend_slayer = true;
-        addHonor('legend_' + currentMonthKey(), { ico: '👑', name: `Boss Légendaire : ${Q.bossName}`, cls: 'chapter-gold' });
-        save(); updateUI();
-        if (navigator.vibrate) navigator.vibrate([40, 60, 40, 60, 80]);
-        setTimeout(() => {
-          spawnConfetti(90);
-          showBonusPopup('👑', 'BOSS LÉGENDAIRE VAINCU !', `${Q.bossName} est tombé — tu entres dans la légende !`,
-            ['⭐ +300 XP', '💎 +150 Gemmes', '🏅 Titre : Tueur de Légende']);
-          Companion.say('Le boss du MOIS est vaincu !! Respect éternel 🐉👑', { mood: 'celebrate', force: true, dur: 4500 });
-        }, 400);
-        return;
-      }
-      if (won) {
+        P.titles ||= {}; P.titles.legend_slayer = true;
+        addHonor(Q.bossId, { ico:'👑', name:`Boss Légendaire : ${Q.bossName}`, cls:'chapter-gold' });
+      } else {
+        if (P.bossDefeated[Q.bossId]) return { awarded:false, xp:0, gems:0, card:0 };
         P.bossDefeated[Q.bossId] = true;
-        // Trophée « boss vaincu » (un par boss, badge violet)
-        addHonor(Q.bossId, { ico: '⚔️', name: `Boss ${(Q.bossChIdx || 0) + 1} vaincu`, cls: 'boss' });
-        P.gems += 100;
-        P.xp += 200;
-        // Unlock a rare atlas card
-        const allCards = Object.values(window.ATLAS_CARDS || {}).flat();
-        const locked = allCards.filter(c => !P.atlas.includes(c.id));
-        if (locked.length > 0) {
-          const rare = locked[Math.floor(Math.random() * locked.length)];
-          P.atlas.push(rare.id);
-          setTimeout(() => triggerDiscovery(rare.id), 800);
-        }
-        save(); updateUI(); buildRoad();
-        if (navigator.vibrate) navigator.vibrate([40, 60, 40, 60, 80]);
-        setTimeout(() => { spawnConfetti(70); showBonusPopup('🏆', 'Boss Vaincu !', `Tu as triomphé du gardien !`, ['🏆 +200 XP', '💎 +100 Gemmes', '📜 Fiche Légendaire !']); }, 400);
+        addHonor(Q.bossId, { ico:'⚔️', name:`${bossForChapter(Q.bossChIdx).name} vaincu`, cls:'boss' });
       }
+      const avatarReward = Q.legend ? null : AvatarRewards.items[Q.bossChIdx];
+      AvatarRewards.unlock(P);
+      const reward = Q.legend ? Bosses.legendary : bossForChapter(Q.bossChIdx);
+      const actualXP = hasTalent('t_polyglotte') ? Math.ceil(reward.xp * 1.05) : reward.xp;
+      P.gems += reward.gems;
+      addXP(reward.xp);
+      let card = 0;
+      if (!Q.legend) {
+        ensureAtlasCatalog();
+        const locked = Object.values(window.ATLAS_CARDS || {}).flat().filter(c => !P.atlas.includes(c.id));
+        if (locked.length) { P.atlas.push(locked[Math.floor(Math.random()*locked.length)].id); card = 1; }
+      }
+      save();
+      return { awarded:true, xp:actualXP, gems:reward.gems, card, avatar:avatarReward };
+    }
+
+    function resolveBossTurn(correct) {
+      const event = Bosses.turn(Q, correct);
+      updateBossHUD();
+      Bosses.animate(event.effect, event.message);
+    }
+
+    // Une animation de fin ne doit pas rouvrir un résultat après avoir quitté.
+    function scheduleBossResult(delay) {
+      const session = Q;
+      setTimeout(() => {
+        if (Q === session && !session.resultShown && document.querySelector('#scrQuiz.active')) showResult();
+      }, delay);
     }
 
     // ===== WEEKLY MISSIONS =====
@@ -8378,15 +8441,7 @@
       } catch (_) {}
       // Récompenses de podium + badges à vie (throttlé 5 min en interne)
       try { kqCheckRewards(); } catch (_) {}
-      // Synchro multi-appareils : restaure la progression si le serveur est
-      // plus récent, puis rafraîchit la section compte du profil
-      try { kqSyncFromServer(); } catch (_) {}
-      try { renderAccountSection(); } catch (_) {}
     };
-
-    // Wrapper de save() : toute sauvegarde programme un push (debounce 30 s)
-    const _kqOrigSave = save;
-    save = function () { _kqOrigSave(); try { kqMarkDirty(); } catch (_) {} };
 
     // ── Flush de la file v3 au démarrage ────────────────────────────────────────
     _kqFlush();
@@ -8604,183 +8659,6 @@
     }
     window.closePlayerModal = closePlayerModal;
 
-    // ═════════════════════════════════════════════════════════════════════════════
-    // KnowQuest — Compte & synchronisation multi-appareils
-    // (POST /ords/admin/kq_auth : signup / signin / sync-push / sync-pull)
-    // Token 30 jours stocké localement ; blob de progression slim (≤ 28 Ko)
-    // poussé après chaque partie, restauré à la connexion ou au démarrage.
-    // ═════════════════════════════════════════════════════════════════════════════
-    const KQ_AUTH_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_auth';
-    const KQ_SYNC_KEYS = ['idUnique', 'name', 'avatar', 'xp', 'xpMax', 'gems', 'hearts',
-      'level', 'streak', 'streakDays', 'lastPlayDate', 'totalQ', 'totalCorrect',
-      'atlas', 'ownedHats', 'avatarStyle', 'honors', 'achievements', 'titles',
-      'talents', 'skillPoints', 'nodeProgress', 'nodeStars', 'perfectCount',
-      'rallyeBest', 'catStats', 'catStreak', 'powerups', 'dailyChallengeDate',
-      'dailyChallengeDone', 'lastQuestDate', 'darkMode', 'autoTTS'];
-    let _kqSyncTimer = null;
-    let _kqSyncing = false;
-    let _kqLastSyncAt = 0;
-    let _authMode = 'login';
-
-    function kqAccount() {
-      try { return JSON.parse(localStorage.getItem('kq_account') || 'null'); } catch (_) { return null; }
-    }
-    function kqSetAccount(acc) {
-      try { acc ? localStorage.setItem('kq_account', JSON.stringify(acc)) : localStorage.removeItem('kq_account'); } catch (_) {}
-    }
-    async function _kqAuthPost(path, payload) {
-      const res = await fetch(KQ_AUTH_URL + path, { method: 'POST', body: JSON.stringify(payload) });
-      return await res.json();
-    }
-
-    function kqBuildSyncBlob() {
-      const blob = {};
-      KQ_SYNC_KEYS.forEach(k => { if (typeof P[k] !== 'undefined') blob[k] = P[k]; });
-      blob._savedAt = Date.now();
-      return blob;
-    }
-
-    function kqApplyServerProfile(blob) {
-      if (!blob) return;
-      KQ_SYNC_KEYS.forEach(k => { if (typeof blob[k] !== 'undefined') P[k] = blob[k]; });
-      P._savedAt = blob._savedAt || Date.now();
-      save();
-      showToast('☁️ Progression restaurée (' + new Date(P._savedAt).toLocaleString() + ')');
-      try { if (typeof spawnConfetti === 'function') spawnConfetti(); } catch (_) {}
-      updateUI(); buildRoad(); switchTab('Home');
-    }
-
-    async function kqUploadProfile() {
-      const acc = kqAccount();
-      if (!acc || _kqSyncing) return;
-      _kqSyncing = true;
-      try {
-        const blob = kqBuildSyncBlob();
-        const d = await _kqAuthPost('/sync-push', { token: acc.token, profile: blob });
-        if (d.status === 'ok') {
-          P._savedAt = blob._savedAt;
-          _kqLastSyncAt = Date.now();
-          renderAccountSection();
-        } else if (d.reason === 'bad_token') {
-          showToast('🔐 Session expirée — reconnecte-toi');
-          kqSetAccount(null); renderAccountSection();
-        }
-      } catch (_) {} finally { _kqSyncing = false; }
-    }
-
-    async function kqSyncFromServer() {
-      const acc = kqAccount();
-      if (!acc || _kqSyncing) return;
-      _kqSyncing = true;
-      try {
-        const d = await _kqAuthPost('/sync-pull', { token: acc.token });
-        if (d.status === 'ok') {
-          if (d.profile && d.profile._savedAt &&
-              (!P._savedAt || d.profile._savedAt > P._savedAt)) {
-            kqApplyServerProfile(d.profile);
-          }
-          _kqLastSyncAt = Date.now();
-          renderAccountSection();
-        } else if (d.reason === 'bad_token') {
-          showToast('🔐 Session expirée — reconnecte-toi');
-          kqSetAccount(null); renderAccountSection();
-        }
-      } catch (_) {} finally { _kqSyncing = false; }
-    }
-
-    function kqMarkDirty() {
-      if (!kqAccount()) return;
-      clearTimeout(_kqSyncTimer);
-      _kqSyncTimer = setTimeout(kqUploadProfile, 30000);
-    }
-    window.kqSyncNow = () => { kqSyncFromServer(); };
-
-    // ── Modale connexion / inscription ──────────────────────────────────────────
-    function openAuthModal(mode) {
-      _authMode = mode === 'register' ? 'register' : 'login';
-      document.getElementById('amTitle').textContent = _authMode === 'register' ? '✨ Créer un compte' : '🔐 Se connecter';
-      document.getElementById('amPass2').style.display = _authMode === 'register' ? 'block' : 'none';
-      document.getElementById('amBtn').textContent = _authMode === 'register' ? 'Créer mon compte' : 'Se connecter';
-      document.getElementById('amErr').textContent = '';
-      document.getElementById('amUser').value = '';
-      document.getElementById('amPass').value = '';
-      document.getElementById('amPass2').value = '';
-      document.getElementById('authModal').style.display = 'flex';
-      setTimeout(() => document.getElementById('amUser').focus(), 100);
-    }
-    function closeAuthModal() {
-      const m = document.getElementById('authModal');
-      if (m) m.style.display = 'none';
-    }
-    window.openAuthModal = openAuthModal;
-    window.closeAuthModal = closeAuthModal;
-
-    const KQ_AUTH_ERR = {
-      username_taken: 'Ce pseudo est déjà pris',
-      bad_username: 'Pseudo invalide (3-20 lettres, chiffres, - ou _)',
-      password_too_short: 'Mot de passe trop court (6 caractères min.)',
-      bad_credentials: 'Pseudo ou mot de passe incorrect',
-      rate_limited: 'Trop de tentatives — patiente une minute',
-      profile_too_large: 'Sauvegarde trop volumineuse',
-      bad_token: 'Session expirée',
-    };
-
-    async function kqSubmitAuth() {
-      const user = document.getElementById('amUser').value.trim().toLowerCase();
-      const pass = document.getElementById('amPass').value;
-      const err = document.getElementById('amErr');
-      if (!/^[a-z0-9_-]{3,20}$/.test(user)) { err.textContent = KQ_AUTH_ERR.bad_username; return; }
-      if (pass.length < 6) { err.textContent = KQ_AUTH_ERR.password_too_short; return; }
-      if (_authMode === 'register') {
-        const p2 = document.getElementById('amPass2').value;
-        if (pass !== p2) { err.textContent = 'Les mots de passe ne correspondent pas'; return; }
-      }
-      err.textContent = '⏳ Connexion au serveur…';
-      try {
-        const path = _authMode === 'register' ? '/signup' : '/signin';
-        const d = await _kqAuthPost(path, { username: user, password: pass });
-        if (d.status !== 'ok') { err.textContent = KQ_AUTH_ERR[d.reason] || 'Erreur — réessaie'; return; }
-        kqSetAccount({ username: user, token: d.token });
-        closeAuthModal();
-        showToast(_authMode === 'register' ? `✨ Compte créé — bienvenue ${P.name} !` : `🔐 Connecté : ${user}`);
-        if (_authMode === 'register') { kqUploadProfile(); }
-        else { kqSyncFromServer(); }
-        renderAccountSection();
-      } catch (_) {
-        err.textContent = 'Serveur injoignable — vérifie ta connexion';
-      }
-    }
-    window.kqSubmitAuth = kqSubmitAuth;
-
-    function kqLogout() {
-      kqSetAccount(null);
-      showToast('🔐 Déconnecté — ta progression reste sur cet appareil');
-      renderAccountSection();
-    }
-    window.kqLogout = kqLogout;
-
-    function renderAccountSection() {
-      const box = document.getElementById('accountBox');
-      if (!box) return;
-      const acc = kqAccount();
-      if (!acc) {
-        box.innerHTML = `<div style="font-size:12px;font-weight:800;color:var(--muted);margin-bottom:8px">Sauvegarde ta progression dans le cloud et retrouve-la sur tous tes appareils (PC, tablette…).</div>
-        <div style="display:flex;gap:8px;justify-content:center">
-          <button class="btn-action" style="max-width:160px" onclick="openAuthModal('login')">🔐 Se connecter</button>
-          <button class="btn-action" style="max-width:160px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)" onclick="openAuthModal('register')">✨ Créer un compte</button>
-        </div>`;
-      } else {
-        const syncTxt = _kqLastSyncAt ? 'il y a ' + Math.max(1, Math.round((Date.now() - _kqLastSyncAt) / 60000)) + ' min' : 'au démarrage';
-        box.innerHTML = `<div style="text-align:center;font-size:13px;font-weight:900;color:var(--text)">☁️ Connecté : ${_lbEsc(acc.username)}</div>
-        <div style="text-align:center;font-size:11px;font-weight:800;color:var(--muted);margin:4px 0 10px">Progression synchronisée ${syncTxt} · token 30 j</div>
-        <div style="display:flex;gap:8px;justify-content:center">
-          <button class="btn-action" style="max-width:180px" onclick="kqSyncNow()">☁️ Synchro maintenant</button>
-          <button class="btn-action" style="max-width:150px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)" onclick="kqLogout()">Se déconnecter</button>
-        </div>`;
-      }
-    }
-    window.renderAccountSection = renderAccountSection;
-
     // Flush au démarrage si on était hors-ligne avant
     flushOfflineQueue();
 
@@ -8893,21 +8771,24 @@
       document.getElementById('bossTitle').textContent = `Boss Légendaire : ${_legendBoss.name}`;
       document.getElementById('bossSub').textContent = 'Le combat le plus dur du jeu — réservé aux braves.';
       const rulesEl = document.querySelector('#bossModal .boss-warning + div');
-      if (rulesEl) rulesEl.innerHTML = `<div style="font-size:12px;color:#ffd700;font-weight:900;margin-bottom:6px">⚔️ ${_legendBoss.name}</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.7);font-weight:700;line-height:1.6">• 15 HP à infliger en 15 questions — chaque bonne réponse touche<br>• Phase 1 facile → Phase 2 moyenne → Phase 3 difficile<br>• ⛔ Power-ups interdits · ⏱️ 15 s par question · 3 vies</div>`;
+      if (rulesEl) rulesEl.textContent = 'Trois phases : facile, moyenne, difficile. 15 secondes par question, sans objets. Deux erreurs restent possibles.';
+      document.getElementById('bossSub').textContent = '12 points à retirer · 15 questions maximum · 3 vies de combat';
       document.getElementById('bossHPFill').style.width = '100%';
-      document.getElementById('bossHPVal').textContent = '15';
+      document.getElementById('bossHPVal').textContent = String(Bosses.legendary.hp);
       const hpMax = document.getElementById('bossHPMax');
-      if (hpMax) hpMax.textContent = '15';
+      if (hpMax) hpMax.textContent = String(Bosses.legendary.hp);
       const rewardEl = document.getElementById('bossRewardDesc');
-      if (rewardEl) rewardEl.textContent = '+300 XP · +150 💎 · 🏅 Titre exclusif';
+      if (rewardEl) rewardEl.textContent = Bosses.rewardText(Bosses.legendary, true);
       const btn = document.getElementById('bossFightBtn');
       btn.style.display = 'block';
+      btn.textContent = 'Affronter';
       btn.onclick = startLegendBoss;
       document.getElementById('bossModal').classList.add('open');
     }
 
     function startLegendBoss() {
+      initLegendBoss();
+      if (P.legendBoss.defeated) return;
       document.getElementById('bossModal').classList.remove('open');
       const b = _legendBoss || legendBossForMonth();
       const allQ = [
@@ -8924,9 +8805,9 @@
         mode: 'boss', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0,
         state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
         retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
-        duelPlayerHP: 3, duelAiHP: 15, duelAiDiff: 0, chain: null, chainIdx: 0, chainBroken: false,
+        duelPlayerHP: 3, duelAiHP: Bosses.legendary.hp, duelAiDiff: 0, chain: null, chainIdx: 0, chainBroken: false,
         bossId: 'legend_' + currentMonthKey(), bossChIdx: 99, gemsEarned: 0,
-        bossMaxHP: 15, bossPower: 'none', bossTimerSec: 15,
+        bossMaxHP: Bosses.legendary.hp, bossPower: 'none', bossTimerSec: Bosses.legendary.timerSec, bossColor:'#a37612',
         bossIco: b.ico, bossName: b.name, legend: true,
       };
       launchQuizScreen();
@@ -9091,7 +8972,7 @@
     // Modes où la barre de cœurs générique n'a pas sa place :
     // - infinite / scramble : n'utilisent aucun système de vie
     // - survie / duel : ont déjà leur propre affichage dédié (#survieHeader, #duelBar)
-    const HEART_BAR_HIDDEN_MODES = ['infinite', 'scramble', 'survie', 'duel'];
+    const HEART_BAR_HIDDEN_MODES = ['infinite', 'scramble', 'survie', 'duel', 'boss'];
 
     const _origRenderQElo = renderQ;
     renderQ = function (...args) {
@@ -9114,6 +8995,8 @@
       } else {
         if (powerupBar) powerupBar.style.display = '';
       }
+      if (Q.mode === 'boss') document.getElementById('puShield').disabled = true;
+      if (Q.mode === 'boss' && !Q.legend && powerupBar && P.powerups.fiftyfifty <= 0 && P.powerups.doubleXP <= 0) powerupBar.style.display = 'none';
       if (qHeartsEl) qHeartsEl.style.display = HEART_BAR_HIDDEN_MODES.includes(Q.mode) ? 'none' : '';
       if (qCounterEl) qCounterEl.style.display = (Q.mode === 'infinite') ? 'none' : '';
       return r;

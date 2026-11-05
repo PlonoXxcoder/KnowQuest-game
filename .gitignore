@@ -54,3 +54,10 @@ _js_check/
 Thumbs.db
 .idea/
 .vscode/
+
+# ── Ajouts fusion KnowQuest -> dev ───────────────────────────────────────────
+data-runtime/
+pipeline-questions/
+promo-src/
+separation.json
+data/questions/*.bak-*

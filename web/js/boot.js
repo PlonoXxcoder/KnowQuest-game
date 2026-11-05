@@ -1,52 +1,45 @@
-// KnowQuest — boot : service worker + installation PWA + bannière de mise à jour
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(reg => {
-          console.log('Service Worker enregistré !', reg);
-          // Nouveau service worker détecté : il attend (skipWaiting sur action
-          // utilisateur) → on propose à l'utilisateur de recharger.
-          reg.addEventListener('updatefound', () => {
-            const nw = reg.installing;
-            if (!nw) return;
-            nw.addEventListener('statechange', () => {
-              if (nw.state === 'installed' && navigator.serviceWorker.controller) {
-                showUpdateBanner();
-              }
-            });
-          });
-        })
-        .catch(err => console.log('Erreur de Service Worker :', err));
-
-      // ── Bannière « Nouvelle version disponible » ──────────────────────────
-      let _updateReady = false;
-      navigator.serviceWorker.addEventListener('controllerchange', () => {
-        // Le nouveau SW prend le contrôle après SKIP_WAITING → on recharge
-        // (une seule fois, et seulement si l'utilisateur a demandé la màj).
-        if (_updateReady) location.reload();
-      });
-
-      function showUpdateBanner() {
-        if (document.getElementById('kqUpdateBanner')) return;
-        _updateReady = true;
-        const b = document.createElement('div');
-        b.id = 'kqUpdateBanner';
-        b.style.cssText = 'position:fixed;bottom:max(16px, env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:12px 18px;border-radius:16px;font-size:13px;font-weight:800;z-index:99999;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,0.35);white-space:nowrap';
-        b.innerHTML = '<span>✨ Nouvelle version disponible</span>';
-        const btn = document.createElement('button');
-        btn.textContent = 'Recharger';
-        btn.style.cssText = 'background:var(--purple,#7c5cfc);color:#fff;border:none;border-radius:10px;padding:8px 14px;font-weight:900;font-size:13px;cursor:pointer';
-        btn.onclick = () => {
-          if (navigator.serviceWorker.controller) {
-            navigator.serviceWorker.controller.postMessage({ type: 'SKIP_WAITING' });
-          } else {
-            location.reload();
-          }
-        };
-        b.appendChild(btn);
-        document.body.appendChild(b);
-      }
+// Démarrage : dernière version publiée en ligne, sauvegarde du joueur conservée.
+if ('serviceWorker' in navigator) {
+  const controlledAtStart = !!navigator.serviceWorker.controller;
+  const startedAt = Date.now();
+  let reloading = false;
+  const playing = () => !!document.querySelector('#scrQuiz.active');
+  function refreshAtStart() {
+    if (reloading || playing() || Date.now() - startedAt > 10000) return false;
+    try {
+      const previous = Number(sessionStorage.getItem('kq-update-reload') || 0);
+      if (Date.now() - previous < 30000) return false;
+      sessionStorage.setItem('kq-update-reload', String(Date.now()));
+    } catch {}
+    reloading = true; location.reload(); return true;
+  }
+  function showUpdateBanner() {
+    if (document.getElementById('kqUpdateBanner')) return;
+    const banner = document.createElement('div'); banner.id = 'kqUpdateBanner';
+    banner.style.cssText = 'position:fixed;bottom:20px;left:12px;right:12px;max-width:550px;margin:auto;padding:14px;border-radius:14px;background:#241c40;color:white;z-index:99999;display:flex;align-items:center;gap:12px;font:700 13px system-ui';
+    const text = document.createElement('span'); text.textContent = 'Une nouvelle version est prête. Recharge après ta partie.';
+    const button = document.createElement('button'); button.textContent = 'Actualiser';
+    button.onclick = () => { if (!playing() || confirm('Quitter la question en cours pour actualiser le jeu ?')) location.reload(); };
+    banner.append(text, button); document.body.append(banner);
+  }
+  navigator.serviceWorker.addEventListener('controllerchange', () => {
+    if (!controlledAtStart) return;
+    if (!refreshAtStart()) {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', showUpdateBanner, {once:true});
+      else showUpdateBanner();
     }
+  });
+  navigator.serviceWorker.register('sw.js', {updateViaCache:'none'}).then(registration => {
+    if (registration.waiting) registration.waiting.postMessage({type:'SKIP_WAITING'});
+    registration.addEventListener('updatefound', () => {
+      const worker = registration.installing;
+      if (worker) worker.addEventListener('statechange', () => {
+        if (worker.state === 'installed' && registration.waiting) registration.waiting.postMessage({type:'SKIP_WAITING'});
+      });
+    });
+    if (navigator.onLine) registration.update().catch(() => {});
+  }).catch(error => console.info('Mode hors ligne :', error.message));
+}
 
     // ── Install PWA (bouton "Installer l'app") ──────────────────────────────
     let deferredInstallPrompt = null;

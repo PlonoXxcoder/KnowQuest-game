@@ -4,21 +4,28 @@
  *  - HTML (shell) : réseau d'abord, cache en secours → la page est toujours
  *    fraîche (elle référence des assets versionnés par hash) et le jeu
  *    s'ouvre quand même hors-ligne.
- *  - JS / CSS / data (même origine) : stale-while-revalidate → démarrage
- *    instantané ; la fraîcheur est garantie par le hash ?v= d'index.html
- *    (outils/bump_assets.py), pas besoin de re-télécharger game.js à chaque
- *    lancement.
+ *  - JS / CSS / data (même origine) : réseau d'abord sans cache HTTP,
+ *    puis cache hors ligne si le réseau est indisponible.
  *  - Ressources tierces autorisées (polices, textures du globe…) : réseau
  *    d'abord + cache d'exécution → disponibles hors-ligne au 2e passage.
  *
  * Les données (data/*.json) sont aussi mises en cache par data_loader.js
  * lui-même (Cache API côté page, 'kq-data-v3').
  */
-const CACHE = 'knowquest-v4';
+const CACHE = 'knowquest-v8-avatar';
 const SHELL = [
   './',
   './index.html',
   './data_loader.js',
+  './motion.css',
+  './adventure.css',
+  './bosses.css',
+  './avatar-rewards.css',
+  './js/avatar-rewards.js',
+  './js/bosses.js',
+  './js/adventure.js',
+  './js/motion.js',
+  './js/story-rules.js',
   './js/boot.js',
   './js/game.js',
   './js/data-ready.js',
@@ -43,7 +50,7 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k.startsWith('knowquest-') && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -63,7 +70,7 @@ self.addEventListener('fetch', (e) => {
     e.respondWith((async () => {
       const cache = await caches.open(CACHE);
       try {
-        const resp = await fetch(req);
+        const resp = await fetchFresh(req);
         if (resp && (resp.ok || resp.type === 'opaque')) cache.put(req, resp.clone());
         return resp;
       } catch (_) {
@@ -86,7 +93,7 @@ self.addEventListener('fetch', (e) => {
       // Réseau d'abord : un index.html frais suffit à tirer la nouvelle
       // version de l'app (assets versionnés par hash). Hors-ligne → cache.
       try {
-        const resp = await fetch(req);
+        const resp = await fetchFresh(req);
         if (resp && resp.ok) cache.put(req, resp.clone());
         return resp;
       } catch (_) {
@@ -95,13 +102,24 @@ self.addEventListener('fetch', (e) => {
       }
     }
 
-    // JS / CSS / data : stale-while-revalidate → démarrage instantané
-    const network = fetch(req)
+    // JS / CSS / data : réseau d'abord, cache en secours.
+    const network = fetchFresh(req)
       .then((resp) => {
         if (resp && resp.ok) cache.put(req, resp.clone());
         return resp;
       })
-      .catch(() => cached);
-    return cached || network;
+      // Le shell préchargé contient les chemins sans ?v=. En mode hors ligne,
+      // ces copies servent aussi les URL versionnées du HTML.
+      .catch(async () => cached || await cache.match(req, { ignoreSearch: true }));
+    // En ligne : demander le fichier courant, même si l’URL n’a pas changé.
+    // Hors ligne : le catch ci-dessus retrouve le fichier dans le cache.
+    return await network;
   })());
 });
+
+async function fetchFresh(request) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 6000);
+  try { return await fetch(request, { cache: 'no-store', signal: controller.signal }); }
+  finally { clearTimeout(timer); }
+}

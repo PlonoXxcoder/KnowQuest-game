@@ -1,0 +1,33 @@
+/* Une seule scène de combat ; les préférences de mouvement sont respectées. */
+.boss-scene { display:flex;align-items:center;gap:16px;margin:8px 16px 12px;padding:12px 16px;border-radius:18px;background:color-mix(in srgb,var(--guardian-color) 12%,var(--bg-card));border:1px solid var(--border);color:var(--text); }
+.boss-avatar { font-size:48px;line-height:1.2;flex-shrink:0; }
+.boss-scene strong { font-size:15px; }
+.boss-scene p { font-size:12px;line-height:1.5;margin:4px 0 0;color:var(--muted); }
+.boss-scene[data-effect=enter] .boss-avatar { animation:guardianEnter .4s ease-out; }
+.boss-scene[data-effect=hit] .boss-avatar { animation:guardianHit .3s ease; }
+.boss-scene[data-effect=attack] .boss-avatar { animation:guardianAttack .35s ease; }
+.boss-scene[data-effect=power] .boss-avatar,.boss-scene[data-effect=phase] .boss-avatar { animation:guardianPower .6s ease; }
+.boss-outcome { padding:18px;margin:12px 0;border:1px solid var(--border);border-radius:18px;max-width:480px;color:var(--text);background:var(--bg-card); }
+.boss-outcome strong { display:block;margin:8px 0; }
+.boss-outcome p { font-size:14px;line-height:1.6; }
+.boss-outcome small { color:var(--muted); }
+.boss-outcome[data-won=true] { background:color-mix(in srgb,var(--guardian-color) 14%,var(--bg-card));animation:guardianRestore .8s ease-out; }
+.boss-outcome[data-won=true] .boss-avatar { animation:guardianDefeat .6s ease-out; }
+#scrResult:has(#bossOutcome) { justify-content:flex-start;padding-top:max(22px,env(safe-area-inset-top)); }
+#scrResult:has(#bossOutcome) #mascotResult { display:none; }
+#scrResult:has(#bossOutcome) .res-title { font-size:26px; }
+#scrResult:has(#bossOutcome) > * { flex-shrink:0; }
+#bossModal .boss-warning { display:none; }
+#bossModal .boss-warning + div { color:#f4ecff;font-size:14px;line-height:1.6;text-align:center!important; }
+#bossModal .modal-content { max-width:480px; }
+#bossModal #bossIco { animation:guardianEnter .4s ease-out; }
+#scrQuiz:has(#bossScene) #puShield,#scrQuiz:has(#bossScene) #mascotQuiz { display:none; }
+@keyframes guardianEnter { from{opacity:0;transform:translateY(12px) scale(.85)}to{opacity:1;transform:none} }
+@keyframes guardianHit { 30%{transform:translateX(9px) rotate(8deg);filter:brightness(1.7)}70%{transform:translateX(-5px)} }
+@keyframes guardianAttack { 50%{transform:translateY(8px) scale(1.12)} }
+@keyframes guardianPower { 50%{transform:scale(1.15);filter:drop-shadow(0 0 12px var(--guardian-color))} }
+@keyframes guardianDefeat { from{transform:scale(1.2);filter:grayscale(1)}to{transform:none;filter:none} }
+@keyframes guardianRestore { from{filter:grayscale(1)}to{filter:none} }
+@media(max-width:480px){.boss-scene{margin:6px 12px 10px;padding:10px 12px;gap:12px}.boss-avatar{font-size:38px}.boss-outcome{padding:14px}}
+@media(prefers-reduced-motion:reduce){.boss-scene .boss-avatar,#bossModal #bossIco,.boss-outcome,.boss-outcome .boss-avatar{animation:none!important}}
+html[data-motion=reduced] .boss-scene .boss-avatar,html[data-motion=reduced] #bossModal #bossIco,html[data-motion=reduced] .boss-outcome,html[data-motion=reduced] .boss-outcome .boss-avatar {animation:none!important}

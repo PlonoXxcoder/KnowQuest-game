@@ -1,0 +1,35 @@
+/* Même composition pour le profil, la cabine d'essayage et les accessoires. */
+.avatar-look { --avatar-color:#8061ed;position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;width:88px;height:88px;margin:12px auto;border:3px solid var(--avatar-color);border-radius:28px;background:color-mix(in srgb,var(--avatar-color) 12%,var(--bg-card));box-shadow:0 5px 0 color-mix(in srgb,var(--avatar-color) 28%,var(--border));font-size:54px;line-height:1;flex-shrink:0; }
+.avatar-base { z-index:1; }
+.avatar-item,.avatar-look .avatar-accessory { position:absolute!important;top:-11px;left:50%;right:auto;bottom:auto;transform:translateX(-50%);font-size:34px;line-height:1;z-index:2;pointer-events:none; }
+.avatar-look[data-slot=badge] .avatar-item,.avatar-look[data-slot=badge] .avatar-accessory { top:auto;bottom:-6px;left:auto;right:-8px;transform:none;display:grid;place-items:center;width:36px;height:36px;border:2px solid var(--avatar-color);border-radius:13px;background:var(--bg-card);font-size:24px; }
+.avatar-look[data-slot=eyes] .avatar-item,.avatar-look[data-slot=eyes] .avatar-accessory { top:32%;font-size:42px; }
+.avatar-look[data-slot=neck] .avatar-item,.avatar-look[data-slot=neck] .avatar-accessory { top:auto;bottom:-3px;font-size:40px; }
+.avatar-look[data-slot=side] .avatar-item,.avatar-look[data-slot=side] .avatar-accessory { top:auto;bottom:0;left:auto;right:-15px;transform:none; }
+.avatar-look[data-slot=aura] .avatar-item,.avatar-look[data-slot=aura] .avatar-accessory { top:-17px;font-size:64px;z-index:-1; }
+#profAvCont.avatar-look { width:100px;height:100px;border-radius:32px;margin:16px auto 18px; }
+#avatarWardrobe { margin:20px 0;padding:18px;border:1px solid var(--border);border-radius:20px;background:var(--bg-card); }
+#avatarWardrobe h3 { font-size:19px;margin:0; }
+.avatar-collection-count { font-size:12px;line-height:1.6;color:var(--muted); }
+.avatar-fitting { display:flex;gap:24px;align-items:center;padding:16px;margin:16px 0 20px;border-radius:18px;background:var(--bg); }
+.avatar-fitting>.avatar-look { width:108px;height:108px;margin:12px;font-size:68px; }
+.avatar-fitting>div:last-child { min-width:0; }
+.avatar-fitting strong { font-size:17px; }
+.avatar-fitting p { font-size:13px;line-height:1.5;margin:8px 0; }
+.avatar-fitting small { display:block;font-size:11px;line-height:1.5;margin-top:10px;color:var(--muted); }
+.avatar-collection-grid,.avatar-shop-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px; }
+.avatar-card,.avatar-shop-card { min-width:0;padding:12px 10px;border:2px solid var(--border);border-radius:17px;background:var(--bg-card);color:var(--text);text-align:center;font:inherit; }
+.avatar-card { cursor:pointer; }
+.avatar-card[aria-pressed=true] { border-color:var(--purple);background:var(--purple-bg); }
+.avatar-card strong,.avatar-shop-card strong { display:block;font-size:13px;line-height:1.4; }
+.avatar-status { display:block;margin-top:8px;font-size:11px;font-weight:800;color:var(--muted); }
+.avatar-card[data-equipped=true] .avatar-status { color:var(--green-d); }
+.avatar-card[data-owned=false] .avatar-look { filter:grayscale(.7);opacity:.6; }
+.avatar-shop-card p { font-size:12px;color:var(--muted);line-height:1.4;min-height:34px; }
+.avatar-equip { min-height:44px;padding:10px 16px;border:0;border-radius:12px;background:var(--purple);color:#fff;font:inherit;font-size:13px;font-weight:900;cursor:pointer; }
+.avatar-equip:disabled { background:var(--border);color:var(--text);cursor:default; }
+.avatar-card:focus-visible,.avatar-equip:focus-visible { outline:3px solid var(--blue);outline-offset:3px; }
+.avatar-unlocked { margin-top:12px;padding:12px;border-radius:14px;background:var(--purple-bg);color:var(--text);font-size:14px; }
+.avatar-unlocked .avatar-equip { display:block;margin:10px auto 0; }
+@media(min-width:900px){#avatarWardrobe{max-width:900px;margin:20px auto}.avatar-shop-grid{grid-template-columns:repeat(auto-fit,minmax(175px,1fr))}}
+@media(max-width:480px){#avatarWardrobe{padding:12px}.avatar-fitting{gap:10px;padding:12px}.avatar-fitting>.avatar-look{width:80px;height:80px;font-size:52px;margin:6px}.avatar-fitting strong{font-size:15px}.avatar-collection-grid,.avatar-shop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.avatar-look{width:76px;height:76px;font-size:48px}.avatar-card{padding:10px 6px}}

@@ -5966,9 +5966,16 @@
   </style>
   <!-- globe.gl est chargé à la demande (js/vendor/globe.gl.min.js) au premier
        accès au mode Carte — il ne doit plus bloquer le premier rendu. -->
-  <link rel="stylesheet" href="motion.css?v=be22b610">
-  <script src="js/motion.js?v=b0f583b7"></script>
-  <script src="js/boot.js?v=779b5a70"></script>
+  <link rel="stylesheet" href="motion.css?v=c1e25900">
+  <script src="js/motion.js?v=a799464e"></script>
+  <link rel="stylesheet" href="adventure.css?v=98f3a058">
+  <link rel="stylesheet" href="avatar-rewards.css?v=307f9ae0">
+  <script src="js/avatar-rewards.js?v=c12dc1ea"></script>
+  <link rel="stylesheet" href="bosses.css?v=1eac3ba2">
+  <script src="js/bosses.js?v=6a75d96e"></script>
+  <script src="js/adventure.js?v=8ec856f3"></script>
+  <script src="js/boot.js?v=35d9c4c4"></script>
+  <script src="js/story-rules.js?v=45d1e428"></script>
 </head>
 
 <body>
@@ -6013,10 +6020,6 @@
         <div class="road-progress-label" id="roadProgressLabel">0 / 0 étapes</div>
       </div>
       <div class="scr" style="background:var(--bg)">
-        <div id="dailyQuestContainer"></div>
-        <div id="eventBannerContainer"></div>
-        <div id="legendBossCard"></div>
-        <div id="dailyMissionsCard"></div>
         <div class="nodes-wrap" id="roadWrap">
           <div id="nodesContainer" style="width:100%"></div>
         </div>
@@ -6090,7 +6093,16 @@
             <div class="dc-done-badge" id="dcDoneBadge" style="display:none">✅ Fait !</div>
           </div>
         </div>
+        <div class="section-divider">Défis et missions</div>
+        <div id="dailyQuestContainer"></div>
+        <div id="dailyMissionsCard"></div>
+        <div id="legendBossCard"></div>
+        <div id="eventBannerContainer"></div>
         <div id="weeklyBonusContainer"></div>
+        <details class="adventure-library">
+          <summary>Mon aventure et ses récits</summary>
+          <section id="adventurePanel" class="adventure-panel" aria-label="Progression de l’aventure"></section>
+        </details>
         <div class="section-divider">⚡ Modes Spéciaux <span class="badge-new">NEW</span></div>
         <!-- WEEKLY MISSIONS BUTTON -->
         <div id="weeklyMissionsBtn" onclick="openMissions()"
@@ -6224,8 +6236,6 @@
           </div>
           <div id="profHonors" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
           </div>
-          <div class="section-divider" style="margin-top:18px">🔐 Compte &amp; Synchronisation</div>
-          <div id="accountBox" style="padding:0 8px"></div>
           <div style="font-size:14px;color:var(--muted);font-weight:700;margin-top:4px">Niveau <span
               id="profLvl">1</span></div>
           <div style="display:flex;justify-content:center;gap:20px;margin-top:24px">
@@ -6243,6 +6253,7 @@
             </div>
           </div>
         </div>
+        <section id="avatarWardrobe" aria-label="Collection d’avatar"></section>
         <!-- 📊 PROGRESSION VISIBLE : heatmap, courbe d'XP, précision par catégorie -->
         <div class="section-divider" style="margin-top:16px">📊 Ta Progression</div>
         <div class="stats-card">
@@ -6294,18 +6305,6 @@
         <div class="section-divider">🏅 Titres débloqués</div>
         <div class="titles-grid" id="titlesGrid"></div>
         <div class="section-divider">⚙️ Paramètres</div>
-        <div class="settings-row motion-setting">
-          <label class="settings-label" for="motionPreference">✨ Animations</label>
-          <select id="motionPreference" data-motion-setting onchange="Motion.setPreference(this.value)">
-            <option value="system">Selon mon appareil</option>
-            <option value="full">Animations normales</option>
-            <option value="reduced">Animations réduites</option>
-          </select>
-        </div>
-        <div class="settings-row">
-          <div class="settings-label">🎬 Aperçu des animations</div>
-          <button type="button" class="nm-diff-btn" onclick="Motion.openPreview()">Voir et rejouer</button>
-        </div>
         <div class="settings-row">
           <div class="settings-label">🌙 Thème sombre</div>
           <label class="switch"><input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()"><span
@@ -6345,25 +6344,6 @@
         <button class="ob-btn"
           style="background:var(--bg);color:var(--red);box-shadow:0 5px 0 var(--border);border:2px solid var(--border);margin-top:12px"
           onclick="resetData()">Effacer les données</button>
-      </div>
-    </div>
-
-    <!-- MODALE AUTHENTIFICATION -->
-    <div id="authModal"
-      style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:2600;align-items:center;justify-content:center"
-      onclick="if(event.target===this) closeAuthModal()">
-      <div
-        style="background:var(--card);border-radius:20px;padding:24px 20px;max-width:320px;width:88%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.4)">
-        <div id="amTitle" style="font-size:19px;font-weight:900;color:var(--text);margin-bottom:14px">🔐 Se connecter</div>
-        <input id="amUser" maxlength="20" placeholder="Pseudo (3-20 caractères)"
-          style="width:100%;box-sizing:border-box;padding:11px 12px;border-radius:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-weight:800;font-size:14px;margin-bottom:8px">
-        <input id="amPass" type="password" placeholder="Mot de passe (6 min.)"
-          style="width:100%;box-sizing:border-box;padding:11px 12px;border-radius:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-weight:800;font-size:14px;margin-bottom:8px">
-        <input id="amPass2" type="password" placeholder="Confirmer le mot de passe" style="display:none;width:100%;box-sizing:border-box;padding:11px 12px;border-radius:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-weight:800;font-size:14px;margin-bottom:8px">
-        <div id="amErr" style="color:var(--red);font-size:12px;font-weight:800;min-height:16px;margin-bottom:6px"></div>
-        <button class="btn-action" style="width:100%" id="amBtn" onclick="kqSubmitAuth()">Valider</button>
-        <button class="btn-action" style="width:100%;margin-top:8px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)"
-          onclick="closeAuthModal()">Annuler</button>
       </div>
     </div>
 
@@ -6495,6 +6475,7 @@
           <button class="btn-tts" id="btnTts" onclick="speakCurrentQuestion()" aria-label="Lire la question à voix haute">🔊</button>
         </div>
         <div class="q-answers" id="qAnswers"></div>
+        <div id="storyErrorStatus" class="story-error-status" hidden></div>
       </div>
       <!-- CORRIGÉ : Utilisation de q-footer au lieu de q-body pour fixer le bouton en bas -->
       <div class="q-footer">
@@ -6503,6 +6484,7 @@
       <div class="vbanner" id="vBanner">
         <div class="v-status" id="vStatus">-</div>
         <div class="v-fact" id="vFact">-</div>
+        <div id="storyGiftNotice" class="story-gift-notice" role="status" hidden></div>
         <div id="xpBonus" style="font-size:13px;font-weight:800;color:var(--orange-d)"></div>
         <button class="btn-action active-next" style="width:100%;margin-top:10px" onclick="nextQuestion()">Continuer
           →</button>
@@ -6876,7 +6858,7 @@
         </div>
         <button class="modal-btn" id="bossFightBtn"
           style="background:linear-gradient(135deg,#9c27b0,#e91e8c);box-shadow:0 5px 0 #6a1b9a;"
-          onclick="startBossFight()">⚔️ Combattre !</button>
+          onclick="startBossFight()">Affronter</button>
         <button class="modal-btn-ghost" onclick="document.getElementById('bossModal').classList.remove('open')"
           style="color:rgba(255,255,255,0.4)">Plus tard</button>
       </div>
@@ -7030,12 +7012,12 @@
 
   </div><!-- .app -->
 
-  <script src="js/game.js?v=2d2ea139"></script>
+  <script src="js/game.js?v=d7b4c79d"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
-  <script src="data_loader.js?v=5e4cfc3a"></script>
+  <script src="data_loader.js?v=9a3b9ad9"></script>
 
   <!-- DÉCLENCHEUR DE SÉCURITÉ : relance startApp uniquement si les données n'étaient pas encore prêtes -->
-  <script src="js/data-ready.js?v=964c1c06"></script>
+  <script src="js/data-ready.js?v=891365bc"></script>
 </body>
 
 </html>

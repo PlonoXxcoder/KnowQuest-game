@@ -1,1548 +1,53 @@
 [
  {
-  "y": -753,
-  "ico": "🏛️",
-  "t": "Fondation légendaire de Rome"
- },
- {
-  "y": -490,
-  "ico": "🏃",
-  "t": "Bataille de Marathon"
- },
- {
-  "y": -480,
-  "ico": "🚢",
-  "t": "Bataille de Salamine"
- },
- {
-  "y": -338,
-  "ico": "👑",
-  "t": "Philippe II domine la Grèce à Chéronée"
- },
- {
-  "y": -146,
-  "ico": "🔥",
-  "t": "Destruction de Carthage par Rome"
- },
- {
-  "y": 486,
-  "ico": "⚔️",
-  "t": "Victoire de Clovis à Soissons"
- },
- {
-  "y": 732,
-  "ico": "🛡️",
-  "t": "Charles Martel arrête les Arabes à Poitiers"
- },
- {
-  "y": 843,
-  "ico": "📜",
-  "t": "Traité de Verdun : partage de l'Empire"
- },
- {
-  "y": 987,
-  "ico": "👑",
-  "t": "Hugues Capet est élu roi de France"
- },
- {
-  "y": 1054,
-  "ico": "✝️",
-  "t": "Schisme entre Églises d'Orient et d'Occident"
- },
- {
-  "y": 1099,
-  "ico": "🏰",
-  "t": "Les croisés prennent Jérusalem"
- },
- {
-  "y": 1152,
-  "ico": "💍",
-  "t": "Mariage d'Aliénor d'Aquitaine et d'Henri Plantagenêt"
- },
- {
-  "y": 1214,
-  "ico": "🦁",
-  "t": "Victoire de Philippe Auguste à Bouvines"
- },
- {
-  "y": 1258,
-  "ico": "🕌",
-  "t": "Prise de Bagdad par les Mongols"
- },
- {
-  "y": 1306,
-  "ico": "⚔️",
-  "t": "Jacques de Molay devient grand maître du Temple"
- },
- {
-  "y": 1337,
-  "ico": "🏹",
-  "t": "Début de la guerre de Cent Ans"
- },
- {
-  "y": 1358,
-  "ico": "✊",
-  "t": "Grande jacquerie des paysans français"
- },
- {
-  "y": 1382,
-  "ico": "🔔",
-  "t": "Révolte des Maillotins à Paris"
- },
- {
-  "y": 1407,
-  "ico": "🗡️",
-  "t": "Assassinat de Louis d'Orléans"
- },
- {
-  "y": 1415,
-  "ico": "⚜️",
-  "t": "Défaite française d'Azincourt"
- },
- {
-  "y": 1431,
-  "ico": "🔥",
-  "t": "Jeanne d'Arc est brûlée à Rouen"
- },
- {
-  "y": 1440,
-  "ico": "🖨️",
-  "t": "Gutenberg met au point l'imprimerie"
- },
- {
-  "y": 1455,
-  "ico": "📕",
-  "t": "Impression de la Bible de Gutenberg"
- },
- {
-  "y": 1461,
-  "ico": "👑",
-  "t": "Louis XI devient roi de France"
- },
- {
-  "y": 1476,
-  "ico": "🎪",
-  "t": "Premières imprimeries à Paris"
- },
- {
-  "y": 1483,
-  "ico": "🎨",
-  "t": "Naissance de Raphaël"
- },
- {
-  "y": 1485,
-  "ico": "🚢",
-  "t": "Fin de la dynastie des Plantagenêt en Angleterre"
- },
- {
-  "y": 1494,
-  "ico": "📜",
-  "t": "Traité de Tordesillas"
- },
- {
-  "y": 1498,
-  "ico": "⛵",
-  "t": "Vasco de Gama atteint l'Inde"
- },
- {
-  "y": 1502,
-  "ico": "🗺️",
-  "t": "Le nom « America » apparaît sur une carte"
- },
- {
-  "y": 1519,
-  "ico": "⛵",
-  "t": "Début de l'expédition de Magellan"
- },
- {
-  "y": 1522,
-  "ico": "🌍",
-  "t": "Premier tour du monde achevé par Elcano"
- },
- {
-  "y": 1534,
-  "ico": "⚖️",
-  "t": "Acte de suprématie d'Henri VIII en Angleterre"
- },
- {
-  "y": 1543,
-  "ico": "🔭",
-  "t": "Copernic publie son système héliocentrique"
- },
- {
-  "y": 1558,
-  "ico": "👑",
-  "t": "Début du règne d'Élisabeth Ire d'Angleterre"
- },
- {
-  "y": 1562,
-  "ico": "⚔️",
-  "t": "Début des guerres de Religion en France"
- },
- {
-  "y": 1572,
-  "ico": "🔪",
-  "t": "Massacre de la Saint-Barthélemy"
- },
- {
-  "y": 1582,
-  "ico": "📅",
-  "t": "Réforme grégorienne du calendrier"
- },
- {
-  "y": 1588,
-  "ico": "🌊",
-  "t": "Destruction de l'Invincible Armada"
- },
- {
-  "y": 1598,
-  "ico": "🕊️",
-  "t": "Édit de Nantes signé par Henri IV"
- },
- {
-  "y": 1600,
-  "ico": "🏰",
-  "t": "Fondation de la Compagnie des Indes orientales"
- },
- {
-  "y": 1605,
-  "ico": "🖋️",
-  "t": "Publication de Don Quichotte"
- },
- {
-  "y": 1610,
-  "ico": "🪐",
-  "t": "Galilée observe les lunes de Jupiter"
- },
- {
-  "y": 1618,
-  "ico": "💥",
-  "t": "Début de la guerre de Trente Ans"
- },
- {
-  "y": 1623,
-  "ico": "🎭",
-  "t": "Premier folio de Shakespeare"
- },
- {
-  "y": 1632,
-  "ico": "⚔️",
-  "t": "Bataille de Lützen et mort de Gustave-Adolphe"
- },
- {
-  "y": 1643,
-  "ico": "👶",
-  "t": "Louis XIV devient roi à cinq ans"
- },
- {
-  "y": 1648,
-  "ico": "🕊️",
-  "t": "Traités de Westphalie"
- },
- {
-  "y": 1649,
-  "ico": "⚖️",
-  "t": "Exécution de Charles Ier d'Angleterre"
- },
- {
-  "y": 1653,
-  "ico": "⚓",
-  "t": "Début des guerres anglo-néerlandaises"
- },
- {
-  "y": 1661,
-  "ico": "💰",
-  "t": "Arrestation de Fouquet à Nantes"
- },
- {
-  "y": 1664,
-  "ico": "🎭",
-  "t": "Molière crée Le Tartuffe"
- },
- {
-  "y": 1672,
-  "ico": "🏝️",
-  "t": "Révolution d'Orange aux Provinces-Unies"
- },
- {
-  "y": 1685,
-  "ico": "✝️",
-  "t": "Révocation de l'édit de Nantes"
- },
- {
-  "y": 1687,
-  "ico": "⚛️",
-  "t": "Newton publie les Principia"
- },
- {
-  "y": 1698,
-  "ico": "🪵",
-  "t": "Pierre le Grand fonde Saint-Pétersbourg en 1703"
- },
- {
-  "y": 1701,
-  "ico": "👑",
-  "t": "Frédéric Ier devient roi de Prusse"
- },
- {
-  "y": 1704,
-  "ico": "⚔️",
-  "t": "Bataille de Blenheim"
- },
- {
-  "y": 1715,
-  "ico": "⚰️",
-  "t": "Mort de Louis XIV"
- },
- {
-  "y": 1721,
-  "ico": "🏳️",
-  "t": "Paix de Nystad : la Russie devient impériale"
- },
- {
-  "y": 1738,
-  "ico": "⚒️",
-  "t": "Invention de la machine à filer par John Kay"
- },
- {
-  "y": 1740,
-  "ico": "👑",
-  "t": "Marie-Thérèse d'Autriche monte sur le trône"
- },
- {
-  "y": 1751,
-  "ico": "📚",
-  "t": "Début de l'Encyclopédie de Diderot"
- },
- {
-  "y": 1756,
-  "ico": "🎭",
-  "t": "Naissance de Mozart"
- },
- {
-  "y": 1762,
-  "ico": "📖",
-  "t": "Rousseau publie Du contrat social"
- },
- {
-  "y": 1769,
-  "ico": "🚂",
-  "t": "Cugnot présente le fardier à vapeur"
- },
- {
-  "y": 1770,
-  "ico": "🎵",
-  "t": "Naissance de Beethoven"
- },
- {
-  "y": 1774,
-  "ico": "👑",
-  "t": "Louis XVI monte sur le trône"
- },
- {
-  "y": 1776,
-  "ico": "🇺🇸",
-  "t": "Déclaration d'indépendance des États-Unis"
- },
- {
-  "y": 1783,
-  "ico": "🎈",
-  "t": "Premier vol des frères Montgolfier"
- },
- {
-  "y": 1787,
-  "ico": "⚖️",
-  "t": "Convention constitutionnelle de Philadelphie"
- },
- {
-  "y": 1791,
-  "ico": "🎵",
-  "t": "Mort de Mozart"
- },
- {
-  "y": 1792,
-  "ico": "🇫🇷",
-  "t": "Proclamation de la Première République française"
- },
- {
-  "y": 1794,
-  "ico": "⚖️",
-  "t": "Exécution de Robespierre"
- },
- {
-  "y": 1796,
-  "ico": "💉",
-  "t": "Jenner pratique la première vaccination"
- },
- {
-  "y": 1799,
-  "ico": "📜",
-  "t": "Bonaparte prend le pouvoir au 18 Brumaire"
- },
- {
-  "y": 1801,
-  "ico": "🌐",
-  "t": "Union Act entre Grande-Bretagne et Irlande"
- },
- {
-  "y": 1802,
-  "ico": "🏆",
-  "t": "Création de la Légion d'honneur en 1802"
- },
- {
-  "y": 1803,
-  "ico": "🛒",
-  "t": "Vente de la Louisiane aux États-Unis"
- },
- {
-  "y": 1806,
-  "ico": "🏛️",
-  "t": "Construction de l'Arc de Triomphe décidée"
- },
- {
-  "y": 1808,
-  "ico": "🖼️",
-  "t": "Goya peint Tres de Mayo"
- },
- {
-  "y": 1810,
-  "ico": "🇲🇽",
-  "t": "Début de l'indépendance du Mexique"
- },
- {
-  "y": 1812,
-  "ico": "❄️",
-  "t": "Retraite de Russie de Napoléon"
- },
- {
-  "y": 1814,
-  "ico": "👑",
-  "t": "Restauration : retour de Louis XVIII"
- },
- {
-  "y": 1819,
-  "ico": "🖼️",
-  "t": "Goya peint le Tres de Mayo"
- },
- {
-  "y": 1820,
-  "ico": "🎵",
-  "t": "Naissance de Florence Nightingale"
- },
- {
-  "y": 1821,
-  "ico": "🏛️",
-  "t": "Indépendance de la Grèce proclamée"
- },
- {
-  "y": 1823,
-  "ico": "📜",
-  "t": "Doctrine Monroe"
- },
- {
-  "y": 1824,
-  "ico": "🖼️",
-  "t": "Décès de Byron en Grèce"
- },
- {
-  "y": 1825,
-  "ico": "🚂",
-  "t": "Première ligne ferroviaire publique (Stockton-Darlington)"
- },
- {
-  "y": 1829,
-  "ico": "🎼",
-  "t": "Mendelssohn redécouvre la Passion selon saint Matthieu"
- },
- {
-  "y": 1830,
-  "ico": "🇧🇪",
-  "t": "Indépendance de la Belgique"
- },
- {
-  "y": 1831,
-  "ico": "📖",
-  "t": "Victor Hugo publie Notre-Dame de Paris"
- },
- {
-  "y": 1832,
-  "ico": "💉",
-  "t": "Épidémie de choléra en Europe"
- },
- {
-  "y": 1836,
-  "ico": "⚔️",
-  "t": "Siège de l'Alamo au Texas"
- },
- {
-  "y": 1839,
-  "ico": "📷",
-  "t": "Daguerre présente le daguerréotype"
- },
- {
-  "y": 1840,
-  "ico": "✉️",
-  "t": "Premier timbre-poste (Penny Black)"
- },
- {
-  "y": 1841,
-  "ico": "📰",
-  "t": "Naissance du Daily Telegraph"
- },
- {
-  "y": 1842,
-  "ico": "🏛️",
-  "t": "Ouverture du British Museum au public élargi"
- },
- {
-  "y": 1845,
-  "ico": "🥔",
-  "t": "Grande famine en Irlande"
- },
- {
-  "y": 1846,
-  "ico": "⚔️",
-  "t": "Guerre américano-mexicaine"
- },
- {
-  "y": 1848,
-  "ico": "✊",
-  "t": "Printemps des peuples en Europe"
- },
- {
-  "y": 1849,
-  "ico": "🛡️",
-  "t": "Mort de Chopin"
- },
- {
-  "y": 1851,
-  "ico": "🔭",
-  "t": "Foucault démontre la rotation de la Terre"
- },
- {
-  "y": 1852,
-  "ico": "👑",
-  "t": "Napoléon III devient empereur"
- },
- {
-  "y": 1854,
-  "ico": "⚔️",
-  "t": "Guerre de Crimée"
- },
- {
-  "y": 1855,
-  "ico": "🌍",
-  "t": "Exposition universelle de Paris"
- },
- {
-  "y": 1857,
-  "ico": "💥",
-  "t": "Panique financière de 1857"
- },
- {
-  "y": 1860,
-  "ico": "🇮🇹",
-  "t": "Expédition des Mille de Garibaldi"
- },
- {
-  "y": 1861,
-  "ico": "🗽",
-  "t": "Victor Hugo s'exile à Guernesey"
- },
- {
-  "y": 1863,
-  "ico": "📜",
-  "t": "Proclamation d'émancipation de Lincoln"
- },
- {
-  "y": 1864,
-  "ico": "🩺",
-  "t": "Fondation de la Croix-Rouge"
- },
- {
-  "y": 1865,
-  "ico": "⚰️",
-  "t": "Assassinat de Lincoln"
- },
- {
-  "y": 1866,
-  "ico": "📡",
-  "t": "Premier câble télégraphique transatlantique"
- },
- {
-  "y": 1867,
-  "ico": "🇨🇦",
-  "t": "Confédération canadienne"
- },
- {
-  "y": 1868,
-  "ico": "⛩️",
-  "t": "Ère Meiji au Japon"
- },
- {
-  "y": 1870,
-  "ico": "⚔️",
-  "t": "Début de la guerre franco-prussienne"
- },
- {
-  "y": 1871,
-  "ico": "🔥",
-  "t": "Commune de Paris"
- },
- {
-  "y": 1873,
-  "ico": "📉",
-  "t": "Krach de Vienne"
- },
- {
-  "y": 1874,
-  "ico": "🖼️",
-  "t": "Première exposition impressionniste à Paris"
- },
- {
-  "y": 1875,
-  "ico": "⚖️",
-  "t": "Adoption des lois constitutionnelles de la IIIe République"
- },
- {
-  "y": 1876,
-  "ico": "📞",
-  "t": "Bell brevette le téléphone"
- },
- {
-  "y": 1877,
-  "ico": "🎥",
-  "t": "Edison invente le phonographe"
- },
- {
-  "y": 1879,
-  "ico": "💡",
-  "t": "Ampoule d'Edison durable"
- },
- {
-  "y": 1881,
-  "ico": "🦠",
-  "t": "Pasteur teste son vaccin contre le charbon"
- },
- {
-  "y": 1882,
-  "ico": "🧬",
-  "t": "Koch découvre la tuberculose"
- },
- {
-  "y": 1883,
-  "ico": "🌉",
-  "t": "Inauguration du pont de Brooklyn"
- },
- {
-  "y": 1884,
-  "ico": "🌍",
-  "t": "Conférence de Berlin sur l'Afrique"
- },
- {
-  "y": 1885,
-  "ico": "💉",
-  "t": "Premier vaccin antirabique de Pasteur"
- },
- {
-  "y": 1886,
-  "ico": "🗽",
-  "t": "Inauguration de la Statue de la Liberté"
- },
- {
-  "y": 1887,
-  "ico": "🔊",
-  "t": "Edison invente le phonographe à cylindres de cire"
- },
- {
-  "y": 1888,
-  "ico": "📷",
-  "t": "Premier appareil Kodak"
- },
- {
-  "y": 1890,
-  "ico": "🖼️",
-  "t": "Mort de Van Gogh"
- },
- {
-  "y": 1892,
-  "ico": "⚽",
-  "t": "Fondation du Newcastle United"
- },
- {
-  "y": 1893,
-  "ico": "🏭",
-  "t": "Ford construit sa première voiture"
- },
- {
-  "y": 1894,
-  "ico": "🥇",
-  "t": "Pierre de Coubertin relance les Jeux olympiques"
- },
- {
-  "y": 1895,
-  "ico": "🎬",
-  "t": "Première séance de cinéma payante des Lumière"
- },
- {
-  "y": 1896,
-  "ico": "🏅",
-  "t": "Premiers Jeux olympiques modernes à Athènes"
- },
- {
-  "y": 1897,
-  "ico": "📻",
-  "t": "Marconi dépose son brevet de radio"
- },
- {
-  "y": 1898,
-  "ico": "🌟",
-  "t": "Curie découvre le radium"
- },
- {
-  "y": 1899,
-  "ico": "🕊️",
-  "t": "Première Conférence de la paix de La Haye"
- },
- {
-  "y": 1900,
-  "ico": "🚇",
-  "t": "Première ligne du métro parisien"
- },
- {
-  "y": 1901,
-  "ico": "🏅",
-  "t": "Premiers prix Nobel décernés"
- },
- {
-  "y": 1902,
-  "ico": "🎬",
-  "t": "Le Voyage dans la Lune de Méliès"
- },
- {
-  "y": 1904,
-  "ico": "🗺️",
-  "t": "Entente cordiale franco-britannique"
- },
- {
-  "y": 1905,
-  "ico": "⚛️",
-  "t": "Einstein publie la relativité restreinte"
- },
- {
-  "y": 1906,
-  "ico": "🌋",
-  "t": "Éruption du Vésuve"
- },
- {
-  "y": 1907,
-  "ico": "🖼️",
-  "t": "Picasso peint Les Demoiselles d'Avignon"
- },
- {
-  "y": 1908,
-  "ico": "💥",
-  "t": "Événement de Toungouska"
- },
- {
-  "y": 1909,
-  "ico": "🛩️",
-  "t": "Blériot traverse la Manche"
- },
- {
-  "y": 1910,
-  "ico": "🎻",
-  "t": "Naissance de Django Reinhardt"
- },
- {
-  "y": 1911,
-  "ico": "🧊",
-  "t": "Amundsen atteint le pôle Sud en 1911"
- },
- {
-  "y": 1913,
-  "ico": "🖼️",
-  "t": "Arms Show de New York"
- },
- {
-  "y": 1915,
-  "ico": "🚢",
-  "t": "Naufrage du Lusitania"
- },
- {
-  "y": 1916,
-  "ico": "⚔️",
-  "t": "Bataille de Verdun"
- },
- {
-  "y": 1917,
-  "ico": "☭",
-  "t": "Révolution russe d'Octobre"
- },
- {
-  "y": 1919,
-  "ico": "📜",
-  "t": "Traité de Versailles signé"
- },
- {
-  "y": 1920,
-  "ico": "🏈",
-  "t": "Fondation de la NFL"
- },
- {
-  "y": 1921,
-  "ico": "💉",
-  "t": "Découverte de l'insuline thérapeutique"
- },
- {
-  "y": 1922,
-  "ico": "🏺",
-  "t": "Découverte de la tombe de Toutankhamon"
- },
- {
-  "y": 1923,
-  "ico": "🎬",
-  "t": "Fondation de la Disney Brothers"
- },
- {
-  "y": 1924,
-  "ico": "⛷️",
-  "t": "Premiers Jeux olympiques d'hiver à Chamonix"
- },
- {
-  "y": 1925,
-  "ico": "📺",
-  "t": "Baird démontre la télévision"
- },
- {
-  "y": 1926,
-  "ico": "🗺️",
-  "t": "Byrd survole le pôle Nord"
- },
- {
-  "y": 1927,
-  "ico": "🎬",
-  "t": "Le chanteur de jazz, premier film parlant"
- },
- {
-  "y": 1928,
-  "ico": "🦠",
-  "t": "Fleming découvre la pénicilline"
- },
- {
-  "y": 1930,
-  "ico": "🌌",
-  "t": "Découverte de Pluton"
- },
- {
-  "y": 1931,
-  "ico": "🏙️",
-  "t": "Achèvement de l'Empire State Building"
- },
- {
-  "y": 1932,
-  "ico": "🔬",
-  "t": "Découverte du neutron"
- },
- {
-  "y": 1933,
-  "ico": "🖊️",
-  "t": "Hitler devient chancelier"
- },
- {
-  "y": 1934,
-  "ico": "🐾",
-  "t": "Loch Ness : première photo du monstre"
- },
- {
-  "y": 1935,
-  "ico": "✈️",
-  "t": "Premier vol du DC-3"
- },
- {
-  "y": 1936,
-  "ico": "🏟️",
-  "t": "Jeux olympiques de Berlin"
- },
- {
-  "y": 1937,
-  "ico": "🌉",
-  "t": "Début des travaux du Golden Gate Bridge"
- },
- {
-  "y": 1938,
-  "ico": "⚛️",
-  "t": "Fission nucléaire découverte"
- },
- {
-  "y": 1940,
-  "ico": "🕸️",
-  "t": "Bataille d'Angleterre aérienne"
- },
- {
-  "y": 1941,
-  "ico": "💥",
-  "t": "Attaque de Pearl Harbor"
- },
- {
-  "y": 1942,
-  "ico": "🎯",
-  "t": "Bataille de Midway"
- },
- {
-  "y": 1943,
-  "ico": "🍖",
-  "t": "Fin de la bataille de Stalingrad"
- },
- {
-  "y": 1944,
-  "ico": "🎓",
-  "t": "Accords de Bretton Woods"
- },
- {
-  "y": 1946,
-  "ico": "💻",
-  "t": "Premier ordinateur ENIAC"
- },
- {
-  "y": 1947,
-  "ico": "✈️",
-  "t": "Chuck Yeager franchit le mur du son"
- },
- {
-  "y": 1948,
-  "ico": "🇮🇱",
-  "t": "Création de l'État d'Israël"
- },
- {
-  "y": 1949,
-  "ico": "🌍",
-  "t": "Création de l'OTAN"
- },
- {
-  "y": 1950,
-  "ico": "🇰🇷",
-  "t": "Début de la guerre de Corée"
- },
- {
-  "y": 1951,
-  "ico": "📡",
-  "t": "Première émission de TV couleur aux États-Unis"
- },
- {
-  "y": 1952,
-  "ico": "🇬🇧",
-  "t": "Avènement d'Élisabeth II"
- },
- {
-  "y": 1953,
-  "ico": "🧬",
-  "t": "Structure de l'ADN découverte"
- },
- {
-  "y": 1954,
-  "ico": "🎛️",
-  "t": "Première centrale nucléaire civile (Obninsk)"
- },
- {
-  "y": 1955,
-  "ico": "🚌",
-  "t": "Boycott des bus de Montgomery"
- },
- {
-  "y": 1956,
-  "ico": "📦",
-  "t": "Invention du conteneur maritime"
- },
- {
-  "y": 1958,
-  "ico": "🚀",
-  "t": "Création de la NASA"
- },
- {
-  "y": 1959,
-  "ico": "🌕",
-  "t": "Luna 3 photographie la face cachée de la Lune"
- },
- {
-  "y": 1960,
-  "ico": "💊",
-  "t": "Invention de la pilule contraceptive"
- },
- {
-  "y": 1962,
-  "ico": "📊",
-  "t": "Crise des missiles de Cuba"
- },
- {
-  "y": 1963,
-  "ico": "🗣️",
-  "t": "Discours « I have a dream » de MLK"
- },
- {
-  "y": 1964,
-  "ico": "🎬",
-  "t": "Goldfinger au cinéma"
- },
- {
-  "y": 1965,
-  "ico": "🌫️",
-  "t": "Débarquement américain au Vietnam"
- },
- {
-  "y": 1966,
-  "ico": "🏥",
-  "t": "Première greffe de cœur humain"
- },
- {
-  "y": 1967,
-  "ico": "🎶",
-  "t": "Summer of Love à San Francisco"
- },
- {
-  "y": 1968,
-  "ico": "🕊️",
-  "t": "assassinat de Martin Luther King"
- },
- {
-  "y": 1970,
-  "ico": "🌐",
-  "t": "Naissance d'Internet (ARPANET international)"
- },
- {
-  "y": 1971,
-  "ico": "📧",
-  "t": "Premier e-mail envoyé"
- },
- {
-  "y": 1972,
-  "ico": "🎮",
-  "t": "Fondation d'Atari"
- },
- {
-  "y": 1973,
-  "ico": "⛽",
-  "t": "Premier choc pétrolier"
- },
- {
-  "y": 1974,
-  "ico": "🦴",
-  "t": "Découverte de Lucy en Éthiopie"
- },
- {
-  "y": 1975,
-  "ico": "🇻🇳",
-  "t": "Fin de la guerre du Vietnam"
- },
- {
-  "y": 1976,
-  "ico": "🍎",
-  "t": "Fondation d'Apple par Jobs et Wozniak"
- },
- {
-  "y": 1977,
-  "ico": "🎬",
-  "t": "Sortie de Star Wars"
- },
- {
-  "y": 1978,
-  "ico": "👶",
-  "t": "Premier bébé né par FIV"
- },
- {
-  "y": 1979,
-  "ico": "☢️",
-  "t": "Accident nucléaire de Three Mile Island"
- },
- {
-  "y": 1980,
-  "ico": "🎮",
-  "t": "Pac-Man sort en arcade"
- },
- {
-  "y": 1981,
-  "ico": "🩺",
-  "t": "Premiers cas de sida identifiés"
- },
- {
-  "y": 1982,
-  "ico": "🎮",
-  "t": "Sortie de la console ColecoVision"
- },
- {
-  "y": 1983,
-  "ico": "📶",
-  "t": "Naissance du protocole TCP/IP public"
- },
- {
-  "y": 1984,
-  "ico": "🎮",
-  "t": "Super Mario Bros sort au Japon"
- },
- {
-  "y": 1985,
-  "ico": "🧊",
-  "t": "Découverte du trou d'ozone"
- },
- {
-  "y": 1986,
-  "ico": "☢️",
-  "t": "Catastrophe de Tchernobyl"
- },
- {
-  "y": 1987,
-  "ico": "📕",
-  "t": "Signature du traité INF Reagan-Gorbatchev"
- },
- {
-  "y": 1988,
-  "ico": "💬",
-  "t": "Sortie du premier SMS concept"
- },
- {
-  "y": 1990,
-  "ico": "🌐",
-  "t": "Tim Berners-Lee imagine le Web"
- },
- {
-  "y": 1992,
-  "ico": "📲",
-  "t": "Premier SMS réel envoyé"
- },
- {
-  "y": 1993,
-  "ico": "🧬",
-  "t": "Jurassic Park au cinéma"
- },
- {
-  "y": 1994,
-  "ico": "🇿🇦",
-  "t": "Mandela devient président sud-africain"
- },
- {
-  "y": 1995,
-  "ico": "💻",
-  "t": "Windows 95 sort"
- },
- {
-  "y": 1997,
-  "ico": "♟️",
-  "t": "Deep Blue bat Kasparov"
- },
- {
-  "y": 1998,
-  "ico": "🚀",
-  "t": "Premier module de l'ISS lancé"
- },
- {
-  "y": 1999,
-  "ico": "💶",
-  "t": "Création de l'euro monétaire"
- },
- {
-  "y": 2000,
-  "ico": "🎆",
-  "t": "Passage à l'an 2000"
- },
- {
-  "y": 2001,
-  "ico": "🗽",
-  "t": "Attentats du 11 septembre"
- },
- {
-  "y": 2003,
-  "ico": "🧬",
-  "t": "Séquençage du génome humain achevé"
- },
- {
-  "y": 2004,
-  "ico": "🌊",
-  "t": "Tsunami de l'océan Indien"
- },
- {
-  "y": 2005,
-  "ico": "📺",
-  "t": "Création de YouTube"
- },
- {
-  "y": 2006,
-  "ico": "🐦",
-  "t": "Création de Twitter"
- },
- {
-  "y": 2007,
-  "ico": "📱",
-  "t": "Lancement du premier iPhone"
- },
- {
-  "y": 2008,
-  "ico": "📉",
-  "t": "Crise financière de Lehman Brothers"
- },
- {
-  "y": 2009,
-  "ico": "🪙",
-  "t": "Naissance du Bitcoin (livre blanc)"
- },
- {
-  "y": 2010,
-  "ico": "📱",
-  "t": "Sortie de l'iPad"
- },
- {
-  "y": 2011,
-  "ico": "🌐",
-  "t": "Décès de Steve Jobs"
- },
- {
-  "y": 2012,
-  "ico": "🚀",
-  "t": "Curiosity se pose sur Mars"
- },
- {
-  "y": 2013,
-  "ico": "🎺",
-  "t": "Création de la snapchat lens"
- },
- {
-  "y": 2014,
-  "ico": "🎬",
-  "t": "Fusion Box-office Frozen et Interstellar"
- },
- {
-  "y": 2015,
-  "ico": "🌍",
-  "t": "Accord de Paris sur le climat"
- },
- {
-  "y": 2016,
-  "ico": "🤖",
-  "t": "AlphaGo bat Lee Sedol"
- },
- {
-  "y": 2017,
-  "ico": "🚗",
-  "t": "Tesla Model 3 en production"
- },
- {
-  "y": 2018,
-  "ico": "🏫",
-  "t": "Mouvement mondial des jeunes pour le climat"
- },
- {
-  "y": 2019,
-  "ico": "🇪🇺",
-  "t": "Première image d'un trou noir"
- },
- {
-  "y": 2021,
-  "ico": "🚀",
-  "t": "Premier vol habité spatial privé"
- },
- {
-  "y": 2022,
-  "ico": "⚔️",
-  "t": "Invasion russe de l'Ukraine"
- },
- {
-  "y": 2023,
-  "ico": "🤖",
-  "t": "Explosion de l'IA générative grand public"
- },
- {
-  "y": 2024,
-  "ico": "🥇",
-  "t": "Jeux olympiques de Paris"
- },
- {
-  "y": 1880,
-  "ico": "🍽️",
-  "t": "La ganache aurait-elle été inventée par accident par un apprenti pâtissier"
- },
- {
-  "y": 1364,
-  "ico": "📜",
-  "t": "Charles V a épousé Jeanne de Bourbon"
- },
- {
-  "y": 1692,
-  "ico": "🏰",
-  "t": "Le duc d'Antin acquiert le château de Bellegarde"
- },
- {
-  "y": 1733,
-  "ico": "🔬",
-  "t": "Jean-Charles de Borda est-il né"
- },
- {
-  "y": 1108,
-  "ico": "📜",
-  "t": "Louis VI fut-il investi du comté de Vexin et des villes de Mantes et de Pontoise"
- },
- {
-  "y": 1720,
-  "ico": "🖼️",
-  "t": "Pierre Rivalz est-il né à Toulouse"
- },
- {
-  "y": 268,
-  "ico": "📜",
-  "t": "Manius Acilius Aureolus a usurpé le titre impérial"
- },
- {
-  "y": 476,
-  "ico": "📜",
-  "t": "L'Empire romain d'Occident a officiellement disparu"
- },
- {
-  "y": 1392,
-  "ico": "👑",
-  "t": "Charles VI a été sacré roi de France"
- },
- {
-  "y": 1346,
-  "ico": "⚔️",
-  "t": "Édouard III fut-il vaincu lors de la bataille de Crécy"
- },
- {
-  "y": 1347,
-  "ico": "📜",
-  "t": "La peste noire a atteint l'Europe, en débarquant au port de Messine, en Sicile"
- },
- {
-  "y": 1163,
-  "ico": "📜",
-  "t": "La construction de Notre-Dame de Paris a commencé"
- },
- {
-  "y": 1307,
-  "ico": "📜",
-  "t": "Philippe le Bel a fait arrêter les templiers de France"
- },
- {
-  "y": 1594,
-  "ico": "👑",
-  "t": "La couronne d'Henri IV fut-elle officiellement créée"
- },
- {
-  "y": 1380,
-  "ico": "📜",
-  "t": "Charles V le Sage est-il décédé"
- },
- {
-  "y": 1370,
-  "ico": "🍽️",
-  "t": "La première mention du terme, sous la forme brençe, est-elle connue"
- },
- {
-  "y": 1731,
-  "ico": "⚰️",
-  "t": "L'œuvre intitulée « Nature morte à la raie et au panier d'oignons » a été réalisée"
- },
- {
-  "y": 1835,
-  "ico": "🎬",
-  "t": "Le roman qui a servi de base à l'histoire du film a été publié"
- },
- {
-  "y": 1709,
-  "ico": "🏰",
-  "t": "François de Chastellux vendit-il le manoir de Belombre"
- },
- {
-  "y": 1798,
-  "ico": "📜",
-  "t": "A été vendu le fermail de la chappe"
- },
- {
-  "y": 1856,
-  "ico": "🔬",
-  "t": "Joseph John Thomson est-il né"
- },
- {
-  "y": 392,
-  "ico": "📜",
-  "t": "Flavius Rufinus fut-il nommé magister officiorum"
- },
- {
-  "y": 395,
-  "ico": "📜",
-  "t": "L'Empire romain a été définitivement divisé entre Orient et Occident"
- },
- {
-  "y": 378,
-  "ico": "⚔️",
-  "t": "Flavius Valens est-il mort lors de la bataille d’Andrinople"
- },
- {
-  "y": 337,
-  "ico": "📜",
-  "t": "Constantin II accède à la tête de l'Empire romain"
- },
- {
-  "y": 1743,
-  "ico": "🥇",
-  "t": "Claire arrive lors de son premier voyage dans le passé dans Outlander"
- },
- {
-  "y": 1356,
-  "ico": "⚔️",
-  "t": "Jean II le Bon fut-il fait prisonnier à la bataille de Poitiers"
- },
- {
-  "y": 1785,
-  "ico": "🔬",
-  "t": "Est né William Prout"
- },
- {
-  "y": 1795,
-  "ico": "📜",
-  "t": "Le sceptre de Dagobert a disparu suite à la Révolution française"
- },
- {
-  "y": 1843,
-  "ico": "🔬",
-  "t": "Son frère a fait installer le moteur à air chaud qu'il avait inventé dans l'usine"
- },
- {
-  "y": 1456,
-  "ico": "📜",
-  "t": "Jeanne d'Arc a été réhabilitée par l'Église"
- },
- {
-  "y": 1191,
-  "ico": "🥇",
-  "t": "Historique se déroule l’essentiel des souvenirs d’Altaïr dans le premier Assassin’s Creed"
- },
- {
-  "y": 1809,
-  "ico": "🖼️",
-  "t": "Les fondateurs du mouvement nazaréen ont-ils établi la corporation basée à Vienne appelée Lukasbund"
- },
- {
-  "y": 1872,
-  "ico": "🏅",
-  "t": "William Larned est-il né"
- },
- {
-  "y": 1032,
-  "ico": "📜",
-  "t": "Georges Maniakès parvient-il à prendre la ville d’Édesse sous l’autorité des Seldjoukides"
- },
- {
-  "y": 1232,
-  "ico": "🏰",
-  "t": "Le domaine a été officiellement constitué"
- },
- {
-  "y": 1047,
-  "ico": "⚔️",
-  "t": "Henri Ier a participé à la bataille de Val-ès-Dunes"
- },
- {
-  "y": 1827,
-  "ico": "🔬",
-  "t": "Prout a proposé la classification des constituants de la nourriture"
- },
- {
-  "y": 294,
-  "ico": "📜",
-  "t": "Allectus assassine Carausius pour prendre la pourpre"
- },
- {
-  "y": 1781,
-  "ico": "🔬",
-  "t": "Jean-Charles de Borda publie son Mémoire sur le mouvement des projectiles"
- },
- {
-  "y": 1642,
-  "ico": "🏰",
-  "t": "Le comté de Rostaing a été créé par la réunion des terres de Bury et d'Onzain"
- },
- {
-  "y": 388,
-  "ico": "📜",
-  "t": "Flavius Victor est-il décédé"
- },
- {
-  "y": 1816,
-  "ico": "🔬",
-  "t": "Robert Stirling est-il crédité pour l'invention du moteur à combustion externe"
- },
- {
-  "y": 1584,
-  "ico": "📜",
-  "t": "Henri III de Navarre est-il devenu héritier présomptif du trône de France"
- },
- {
-  "y": 1607,
-  "ico": "👑",
-  "t": "Les fiefs français de la couronne de Navarre ont-ils été réunis au domaine royal"
- },
- {
-  "y": 1397,
-  "ico": "🏰",
-  "t": "Le duc Philippe le Hardi remet-il le château d'Autricourt à son maître d'hôtel, Guichard de Saint-Seine"
- },
- {
-  "y": 1850,
-  "ico": "🔬",
-  "t": "Est décédé William Prout"
- },
- {
-  "y": 1608,
-  "ico": "🏰",
-  "t": "La famille Feydeau a acquis le fief de Brou"
- },
- {
-  "y": 1311,
-  "ico": "📜",
-  "t": "Philippe V a reçu en apanage le comté de Poitou"
- },
- {
-  "y": 1713,
-  "ico": "💡",
-  "t": "Louis Lemery et Étienne-François Geoffroy ont-ils découvert expérimentalement que le fer est un constituant du sang"
- },
- {
-  "y": 1728,
-  "ico": "📖",
-  "t": "Les Fables de Phèdre, avec des notes critiques, morales et historiques, ont-elles été imprimées"
- },
- {
-  "y": 1682,
-  "ico": "📜",
-  "t": "La cour de Louis XIV s'installa définitivement à Versailles"
- },
- {
-  "y": 1031,
-  "ico": "📜",
-  "t": "Henri Ier a été investi du duché de Bourgogne"
- },
- {
-  "y": 305,
-  "ico": "📜",
-  "t": "Dioclétien a abdiqué volontairement son pouvoir et quitter le trône"
- },
- {
-  "y": 1547,
-  "ico": "🖼️",
-  "t": "Henri II nomme Germain Le Mannier peintre de ses enfants"
- },
- {
-  "y": 1183,
-  "ico": "🏰",
-  "t": "La première pierre du château d'Onzain aurait-elle été posée"
- },
- {
-  "y": 1338,
-  "ico": "📜",
-  "t": "Charles V est-il né"
- },
- {
   "y": -3500,
   "ico": "📝",
   "t": "Invention de l'écriture cunéiforme à Sumer"
+ },
+ {
+  "y": -3490,
+  "ico": "🏺",
+  "t": "La culture de Nagada émerge en Haute-Égypte"
+ },
+ {
+  "y": -3480,
+  "ico": "🌾",
+  "t": "Domestication de l'olivier en Crète minoenne"
+ },
+ {
+  "y": -3470,
+  "ico": "📜",
+  "t": "Les tablettes de Kish comptabilisent le grain en Sumer"
+ },
+ {
+  "y": -3460,
+  "ico": "🏺",
+  "t": "La poterie peinte de Susa atteint son apogée"
+ },
+ {
+  "y": -3450,
+  "ico": "⚔️",
+  "t": "Les premières fortifications de Jéricho sont abandonnées"
+ },
+ {
+  "y": -3440,
+  "ico": "🌾",
+  "t": "Culture de la vigne en Transcaucasie"
+ },
+ {
+  "y": -3430,
+  "ico": "📜",
+  "t": "Les hiéroglyphes égyptiens s'écrivent aussi en cursive"
+ },
+ {
+  "y": -3420,
+  "ico": "🏗️",
+  "t": "Premiers temples en pierre sur le site de Médinet Habou"
+ },
+ {
+  "y": -3410,
+  "ico": "🌾",
+  "t": "Domestication du dromadaire en Arabie"
  },
  {
   "y": -3400,
@@ -1550,9 +55,99 @@
   "t": "Plus anciennes traces de brassage de bière en Mésopotamie"
  },
  {
+  "y": -3390,
+  "ico": "⚔️",
+  "t": "Guerres entre cités sumériennes d'Uruk et de Kish"
+ },
+ {
+  "y": -3380,
+  "ico": "🌾",
+  "t": "Domestication du chameau de Bactriane"
+ },
+ {
+  "y": -3370,
+  "ico": "📜",
+  "t": "Les tablettes d'Uruk III documentent les stocks de bière"
+ },
+ {
+  "y": -3360,
+  "ico": "🏛️",
+  "t": "Premiers temples monumentaux de la culture d'Uruk"
+ },
+ {
+  "y": -3350,
+  "ico": "🌾",
+  "t": "Domestication du ver à soie en Chine"
+ },
+ {
+  "y": -3340,
+  "ico": "🏺",
+  "t": "La céramique peinte de Halaf atteint son apogée"
+ },
+ {
+  "y": -3330,
+  "ico": "📜",
+  "t": "Les premières listes royales sumériennes"
+ },
+ {
+  "y": -3320,
+  "ico": "🌾",
+  "t": "Cultivation du coton dans la vallée de l'Indus"
+ },
+ {
+  "y": -3310,
+  "ico": "🏛️",
+  "t": "Les ziggourats sumériennes élévées en terrasses"
+ },
+ {
   "y": -3300,
   "ico": "🧊",
   "t": "L'Homme de glace Ötzi vivait à cette époque"
+ },
+ {
+  "y": -3290,
+  "ico": "⚔️",
+  "t": "Les premiers conflits pour le contrôle des canaux d'irrigation"
+ },
+ {
+  "y": -3280,
+  "ico": "🌾",
+  "t": "La métallurgie du cuivre se développe en Anatolie"
+ },
+ {
+  "y": -3270,
+  "ico": "📜",
+  "t": "Les premières écoles de scribes à Sumer (é-dub-ba)"
+ },
+ {
+  "y": -3260,
+  "ico": "🌾",
+  "t": "Domestication du pigeon en Mésopotamie"
+ },
+ {
+  "y": -3250,
+  "ico": "🏺",
+  "t": "Les sculptures de la culture de Maikop (Caucase)"
+ },
+ {
+  "y": -3240,
+  "ico": "📜",
+  "t": "Les sceaux-cylindres sumériens identifient leurs propriétaires"
+ },
+ {
+  "y": -3230,
+  "ico": "🌾",
+  "t": "Le lin cultivé pour le textile en Égypte"
+ },
+ {
+  "y": -3220,
+  "ico": "🏛️",
+  "t": "Le temple blanc d'Uruk (Anu ziggurat) construit"
+ },
+ {
+  "y": -3210,
+  "ico": "📜",
+  "t": "Les premières signatures de scribes sur tablettes"
  },
  {
   "y": -3200,
@@ -1560,9 +155,49 @@
   "t": "Unification de la Haute et de la Basse-Égypte par Narmer"
  },
  {
+  "y": -3190,
+  "ico": "🏺",
+  "t": "La culture de Varna (Bulgarie) produit les plus anciens objets en or"
+ },
+ {
+  "y": -3180,
+  "ico": "📜",
+  "t": "Les premières tablettes d'inventaire de biens"
+ },
+ {
+  "y": -3170,
+  "ico": "🌾",
+  "t": "Domestication de l'âne en Égypte"
+ },
+ {
+  "y": -3160,
+  "ico": "🏛️",
+  "t": "Le mur d'enceinte d'Uruk : 9 km de long"
+ },
+ {
   "y": -3150,
   "ico": "📜",
   "t": "Apparition des hiéroglyphes égyptiens"
+ },
+ {
+  "y": -3140,
+  "ico": "🌾",
+  "t": "La culture de l'orge domine l'agriculture sumérienne"
+ },
+ {
+  "y": -3130,
+  "ico": "🏺",
+  "t": "Les céramiques de Naqada II (Decorated Ware)"
+ },
+ {
+  "y": -3120,
+  "ico": "📜",
+  "t": "Le poème « Inanna et Enki » raconte le transfert des arts"
+ },
+ {
+  "y": -3110,
+  "ico": "🌾",
+  "t": "L'irrigation intensive permet les surplus alimentaires"
  },
  {
   "y": -3100,
@@ -1570,9 +205,99 @@
   "t": "Fondation de la première dynastie égyptienne (Menes)"
  },
  {
+  "y": -3090,
+  "ico": "🏺",
+  "t": "Les poteries de la culture Maadi (Égypte pré-dynastique)"
+ },
+ {
+  "y": -3080,
+  "ico": "📜",
+  "t": "Les premières tablettes administratives d'Abydos"
+ },
+ {
+  "y": -3070,
+  "ico": "🌾",
+  "t": "La bière de dattes consommée quotidiennement en Sumer"
+ },
+ {
+  "y": -3060,
+  "ico": "🏛️",
+  "t": "Le mastaba de Aha à Saqqarah (première tombe dynastique)"
+ },
+ {
+  "y": -3050,
+  "ico": "📜",
+  "t": "Les listes de victimes de guerre sumériennes"
+ },
+ {
+  "y": -3040,
+  "ico": "🌾",
+  "t": "Le lin et le lin cultivé dominent le textile égyptien"
+ },
+ {
+  "y": -3030,
+  "ico": "🏺",
+  "t": "Les poteries de la culture de Badari (pré-dynastique)"
+ },
+ {
+  "y": -3020,
+  "ico": "📜",
+  "t": "Les premières tablettes de comptabilité du grain"
+ },
+ {
+  "y": -3010,
+  "ico": "🌾",
+  "t": "La pêche au filet sur le Nil documentée"
+ },
+ {
   "y": -3000,
   "ico": "🧱",
   "t": "Construction des premières cités sumériennes fortifiées"
+ },
+ {
+  "y": -2990,
+  "ico": "📜",
+  "t": "Les tablettes de Jemdet Nasr (révision)"
+ },
+ {
+  "y": -2980,
+  "ico": "🌾",
+  "t": "Le bronze apparaît en Mésopotamie"
+ },
+ {
+  "y": -2970,
+  "ico": "🏺",
+  "t": "Les sceaux de la première dynastie égyptienne"
+ },
+ {
+  "y": -2960,
+  "ico": "📜",
+  "t": "Les listes de dieux sumériens"
+ },
+ {
+  "y": -2950,
+  "ico": "🌾",
+  "t": "L'or égyptien extrait du désert oriental"
+ },
+ {
+  "y": -2940,
+  "ico": "🏛️",
+  "t": "Le temple de Horus à Nekhen construit"
+ },
+ {
+  "y": -2930,
+  "ico": "📜",
+  "t": "Les premières listes de ressources de l'État"
+ },
+ {
+  "y": -2920,
+  "ico": "🌾",
+  "t": "La pêche au harpon sur le Nil (scènes gravées)"
+ },
+ {
+  "y": -2910,
+  "ico": "🏺",
+  "t": "La poterie de la culture de Naqada III (Decorated Ware II)"
  },
  {
   "y": -2900,
@@ -1580,9 +305,99 @@
   "t": "Premières guerres documentées entre cités-États sumériennes"
  },
  {
+  "y": -2890,
+  "ico": "🌾",
+  "t": "Le transport fluvial sur le Nil par bateau à voile"
+ },
+ {
+  "y": -2880,
+  "ico": "🏛️",
+  "t": "Le mastaba de Djet à Saqqarah"
+ },
+ {
+  "y": -2870,
+  "ico": "📜",
+  "t": "Les premières listes d'ennemis vaincus"
+ },
+ {
+  "y": -2860,
+  "ico": "🌾",
+  "t": "Le commerce de l'obsidienne de l'Éthiopie vers l'Égypte"
+ },
+ {
+  "y": -2850,
+  "ico": "🏺",
+  "t": "Les vases de pierre (albâtre) de la Ière dynastie"
+ },
+ {
+  "y": -2840,
+  "ico": "📜",
+  "t": "Les premières mesures de terrain (arpentage)"
+ },
+ {
+  "y": -2830,
+  "ico": "🌾",
+  "t": "L'orge brassée en bière par les brasseries d'État"
+ },
+ {
+  "y": -2820,
+  "ico": "🏛️",
+  "t": "Le mastaba de Den à Saqqarah"
+ },
+ {
+  "y": -2810,
+  "ico": "📜",
+  "t": "Les premiers papyrus égyptiens (rolle de Gebelein)"
+ },
+ {
   "y": -2800,
   "ico": "🚢",
   "t": "Navigation maritime égyptienne attestée vers Byblos"
+ },
+ {
+  "y": -2790,
+  "ico": "🏺",
+  "t": "Les vases à décor de navigation de la Ière dynastie"
+ },
+ {
+  "y": -2780,
+  "ico": "📜",
+  "t": "Les listes d'offrandes funéraires"
+ },
+ {
+  "y": -2770,
+  "ico": "🌾",
+  "t": "L'extraction du cuivre au Sinaï par les Égyptiens"
+ },
+ {
+  "y": -2760,
+  "ico": "🏛️",
+  "t": "Le temple funéraire de Khasekhemwy à Abydos"
+ },
+ {
+  "y": -2750,
+  "ico": "📜",
+  "t": "Les tablettes d'Uruk (période archaïque révisée)"
+ },
+ {
+  "y": -2740,
+  "ico": "🌾",
+  "t": "Le cèdre du Liban importé en Égypte par bateau"
+ },
+ {
+  "y": -2730,
+  "ico": "🏺",
+  "t": "Les vases de la IIe dynastie égyptienne"
+ },
+ {
+  "y": -2720,
+  "ico": "📜",
+  "t": "Les annales de la Pierre de Palerme commencent"
+ },
+ {
+  "y": -2710,
+  "ico": "🌾",
+  "t": "Le commerce de l'or de la Nubie"
  },
  {
   "y": -2700,
@@ -1590,9 +405,59 @@
   "t": "Fondation légendaire de la dynastie des Xia en Chine"
  },
  {
+  "y": -2690,
+  "ico": "📜",
+  "t": "Les hymnes aux temples égyptiens"
+ },
+ {
+  "y": -2686,
+  "ico": "📜",
+  "t": "Le papyrus de Palermo enregistre les pharaons de la Ve dynastie"
+ },
+ {
+  "y": -2680,
+  "ico": "🌾",
+  "t": "L'agriculture irriguée sur les bords du Nil"
+ },
+ {
+  "y": -2670,
+  "ico": "🏺",
+  "t": "Les reliefs du temple de Sahouré (expédition maritime)"
+ },
+ {
+  "y": -2660,
+  "ico": "📜",
+  "t": "Les annales administratives de la Ve dynastie"
+ },
+ {
   "y": -2650,
   "ico": "🔺",
   "t": "Construction de la pyramide à degrés de Djéser"
+ },
+ {
+  "y": -2640,
+  "ico": "🏛️",
+  "t": "Le temple solaire de Niouserrê à Abou Ghorab"
+ },
+ {
+  "y": -2630,
+  "ico": "📜",
+  "t": "Les premières biographies de fonctionnaires égyptiens"
+ },
+ {
+  "y": -2620,
+  "ico": "🌾",
+  "t": "L'orge et le blé cultivés en rotation"
+ },
+ {
+  "y": -2613,
+  "ico": "🔺",
+  "t": "Snéfrou construit la pyramide rhomboïdale de Dahchour"
+ },
+ {
+  "y": -2610,
+  "ico": "🏺",
+  "t": "Les reliefs du temple funéraire de Sahouré"
  },
  {
   "y": -2600,
@@ -1600,9 +465,59 @@
   "t": "Éruption minoenne préliminaire sur Santorin"
  },
  {
+  "y": -2590,
+  "ico": "🌾",
+  "t": "Le commerce égyptien avec Byblos (bois de cèdre)"
+ },
+ {
+  "y": -2580,
+  "ico": "🏛️",
+  "t": "Le temple funéraire de Khéphren (sphinx)"
+ },
+ {
+  "y": -2570,
+  "ico": "📜",
+  "t": "Les hymnes du Soleil (Rê)"
+ },
+ {
+  "y": -2566,
+  "ico": "⚰️",
+  "t": "Mort de Khéops, bâtisseur de la Grande Pyramide"
+ },
+ {
+  "y": -2560,
+  "ico": "🌾",
+  "t": "Le bois de cèdre du Liban transporté par bateau"
+ },
+ {
   "y": -2550,
   "ico": "🔺",
   "t": "Achèvement supposé de la Grande Pyramide de Gizeh"
+ },
+ {
+  "y": -2540,
+  "ico": "📜",
+  "t": "Les annales de la Ve dynastie (Pierre de Palerme)"
+ },
+ {
+  "y": -2532,
+  "ico": "🔺",
+  "t": "Khéphren construit la deuxième pyramide de Gizeh et le Sphinx"
+ },
+ {
+  "y": -2530,
+  "ico": "🌾",
+  "t": "Le transport des blocs de pierre sur des traîneaux"
+ },
+ {
+  "y": -2520,
+  "ico": "🏛️",
+  "t": "Le temple solaire de Niuserre (Abu Gurab)"
+ },
+ {
+  "y": -2510,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Rê"
  },
  {
   "y": -2500,
@@ -1610,9 +525,54 @@
   "t": "Âge d'or de la civilisation de l'Indus (Mohenjo-daro)"
  },
  {
+  "y": -2494,
+  "ico": "🔺",
+  "t": "Mykérinos construit la troisième pyramide de Gizeh"
+ },
+ {
+  "y": -2490,
+  "ico": "🏺",
+  "t": "Les reliefs du temple de Niuserre"
+ },
+ {
+  "y": -2480,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Ptah (Memphis)"
+ },
+ {
+  "y": -2470,
+  "ico": "🌾",
+  "t": "Le cuivre du Sinaï exporté vers la Crète"
+ },
+ {
+  "y": -2460,
+  "ico": "🏛️",
+  "t": "Le temple funéraire de Pepi Ier"
+ },
+ {
   "y": -2450,
   "ico": "📜",
   "t": "Le pyramidion d'Unas grave les Textes des pyramides"
+ },
+ {
+  "y": -2440,
+  "ico": "🌾",
+  "t": "Le commerce de l'encens avec le Pays de Pount"
+ },
+ {
+  "y": -2430,
+  "ico": "🏺",
+  "t": "Les reliefs de la chaussée de Pepi II"
+ },
+ {
+  "y": -2420,
+  "ico": "📜",
+  "t": "Les textes des pyramides de Téti gravés"
+ },
+ {
+  "y": -2410,
+  "ico": "🌾",
+  "t": "Le transport de l'obélisque par bateau"
  },
  {
   "y": -2400,
@@ -1620,9 +580,54 @@
   "t": "Apogée de la culture des Cyclades en mer Égée"
  },
  {
+  "y": -2390,
+  "ico": "📜",
+  "t": "Les autobiographies de Harkhuf (explorateur)"
+ },
+ {
+  "y": -2380,
+  "ico": "🌾",
+  "t": "Le commerce avec le Pays de Pount (encens, myrrhe)"
+ },
+ {
+  "y": -2375,
+  "ico": "📜",
+  "t": "Rédaction des Maximes de Ptahhotep"
+ },
+ {
+  "y": -2370,
+  "ico": "🏺",
+  "t": "Les reliefs du temple de Pepi II"
+ },
+ {
+  "y": -2360,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Osiris"
+ },
+ {
   "y": -2350,
   "ico": "⚔️",
   "t": "Sargon d'Akkad fonde le premier empire de l'histoire"
+ },
+ {
+  "y": -2340,
+  "ico": "⚔️",
+  "t": "Lugalzagesi unifie la Sumer sous un seul royaume"
+ },
+ {
+  "y": -2330,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Horus"
+ },
+ {
+  "y": -2320,
+  "ico": "🌾",
+  "t": "Le lin et les textiles de qualité égyptienne"
+ },
+ {
+  "y": -2310,
+  "ico": "⚔️",
+  "t": "Sargon d'Akkad fonde la première armée permanente"
  },
  {
   "y": -2300,
@@ -1630,9 +635,59 @@
   "t": "Premiers chars de guerre à roues en Mésopotamie"
  },
  {
+  "y": -2290,
+  "ico": "🌾",
+  "t": "Le transport de l'obélisque par bateau sur le Nil"
+ },
+ {
+  "y": -2280,
+  "ico": "📜",
+  "t": "Enkheduanna, première auteure nommée de l'histoire"
+ },
+ {
+  "y": -2270,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Sobek (crocodile)"
+ },
+ {
+  "y": -2260,
+  "ico": "🌾",
+  "t": "Le commerce avec le Sinaï (turquoise, cuivre)"
+ },
+ {
+  "y": -2255,
+  "ico": "📜",
+  "t": "Naram-Sin étend l'empire d'Akkad jusqu'en Anatolie"
+ },
+ {
   "y": -2250,
   "ico": "📜",
   "t": "Code d'Ur-Nammu, plus ancien code de lois connu"
+ },
+ {
+  "y": -2240,
+  "ico": "🗿",
+  "t": "Les statues de Gudea de Lagash sculptées"
+ },
+ {
+  "y": -2230,
+  "ico": "🌾",
+  "t": "Le bois de cèdre transporté depuis Byblos"
+ },
+ {
+  "y": -2220,
+  "ico": "🏛️",
+  "t": "Le temple de Sésostris Ier à Karnak"
+ },
+ {
+  "y": -2215,
+  "ico": "⚔️",
+  "t": "Invasions gutiennes déstabilisent l'empire d'Akkad"
+ },
+ {
+  "y": -2210,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Khnoum (potier créateur)"
  },
  {
   "y": -2200,
@@ -1640,9 +695,59 @@
   "t": "Grave sécheresse de l'Événement climatique de 2200 av. J.-C."
  },
  {
+  "y": -2190,
+  "ico": "🌾",
+  "t": "Révoltes et famines frappent la Mésopotamie"
+ },
+ {
+  "y": -2180,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Hathor (vache céleste)"
+ },
+ {
+  "y": -2160,
+  "ico": "👑",
+  "t": "La VIIe-VIIIe dynastie égyptienne s'effondre"
+ },
+ {
   "y": -2150,
   "ico": "🏯",
   "t": "Effondrement de l'Empire d'Akkad"
+ },
+ {
+  "y": -2144,
+  "ico": "👑",
+  "t": "Gudea, ensi de Lagash, érige des temples"
+ },
+ {
+  "y": -2140,
+  "ico": "🌾",
+  "t": "Le commerce avec le Sinaï (turquoise)"
+ },
+ {
+  "y": -2130,
+  "ico": "🏺",
+  "t": "Les reliefs du temple de Sésostris"
+ },
+ {
+  "y": -2120,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Neith (déesse de la guerre)"
+ },
+ {
+  "y": -2119,
+  "ico": "📜",
+  "t": "La table d'Ur-Nammu code les premières lois salariales"
+ },
+ {
+  "y": -2110,
+  "ico": "🌾",
+  "t": "Le lin égyptien exporté vers la Crète"
+ },
+ {
+  "y": -2104,
+  "ico": "⚔️",
+  "t": "Amorrites migrent vers la Mésopotamie"
  },
  {
   "y": -2100,
@@ -1650,9 +755,49 @@
   "t": "Ziggurat d'Ur construite sous Ur-Nammu"
  },
  {
+  "y": -2090,
+  "ico": "📜",
+  "t": "Les hymnes au dieu Ptah de Memphis"
+ },
+ {
+  "y": -2089,
+  "ico": "📜",
+  "t": "Les hymnes de Shulgi composés à Ur"
+ },
+ {
+  "y": -2080,
+  "ico": "🌾",
+  "t": "Le commerce égyptien avec le Pays de Pount"
+ },
+ {
+  "y": -2074,
+  "ico": "🌾",
+  "t": "Le système d'irrigation sumérien atteint son apogée"
+ },
+ {
+  "y": -2059,
+  "ico": "📜",
+  "t": "Rédaction de la liste royale sumérienne (version Ur III)"
+ },
+ {
   "y": -2050,
   "ico": "👑",
   "t": "Renaissance sumérienne sous la troisième dynastie d'Ur"
+ },
+ {
+  "y": -2044,
+  "ico": "⚔️",
+  "t": "Les Élamites pillent Ur et emmènent la statue de la lune"
+ },
+ {
+  "y": -2029,
+  "ico": "📜",
+  "t": "Rédaction des hymnes de Ibbi-Sin, dernier roi d'Ur"
+ },
+ {
+  "y": -2014,
+  "ico": "👑",
+  "t": "Ammurapi, dernier roi d'Ugarit, règne"
  },
  {
   "y": -2000,
@@ -1660,9 +805,44 @@
   "t": "Domestication du cheval dans les steppes eurasiennes"
  },
  {
+  "y": -1999,
+  "ico": "📜",
+  "t": "Les Hittites pénètrent en Anatolie centrale"
+ },
+ {
+  "y": -1984,
+  "ico": "📜",
+  "t": "Rédaction des prophéties d'Uruk"
+ },
+ {
+  "y": -1969,
+  "ico": "📜",
+  "t": "Les Assyriens établissent des colonies commerciales en Anatolie"
+ },
+ {
+  "y": -1954,
+  "ico": "⚔️",
+  "t": "Amenemhat Ier fonde la XIIe dynastie égyptienne"
+ },
+ {
   "y": -1950,
   "ico": "📜",
   "t": "Textes égyptiens du Moyen Empire (papyri de Lahun)"
+ },
+ {
+  "y": -1939,
+  "ico": "🌾",
+  "t": "Construction du canal du Nil à la mer Rouge (Sésostris)"
+ },
+ {
+  "y": -1924,
+  "ico": "📜",
+  "t": "Le Conte de Sinouhé, chef-d'œuvre de la littérature égyptienne"
+ },
+ {
+  "y": -1909,
+  "ico": "📜",
+  "t": "Rédaction des Textes des Sarcophages"
  },
  {
   "y": -1900,
@@ -1670,9 +850,44 @@
   "t": "Apogée de la cité de Mari sur l'Euphrate"
  },
  {
+  "y": -1894,
+  "ico": "👑",
+  "t": "Hammurabi devient roi de Babylone"
+ },
+ {
+  "y": -1879,
+  "ico": "⚔️",
+  "t": "Raid hittite contre Babylone"
+ },
+ {
+  "y": -1864,
+  "ico": "📜",
+  "t": "Rédaction des hymnes d'Ishtar"
+ },
+ {
   "y": -1850,
   "ico": "🔺",
   "t": "Construction des pyramides de la dynastie de Kerma (Nubie)"
+ },
+ {
+  "y": -1849,
+  "ico": "📜",
+  "t": "Les tables de Mari documentent le commerce d'étain"
+ },
+ {
+  "y": -1834,
+  "ico": "📜",
+  "t": "Alalakh : tablettes administratives du royaume du Yamkhad"
+ },
+ {
+  "y": -1819,
+  "ico": "📜",
+  "t": "Rédaction du Conte de l'Homme d'Éréch"
+ },
+ {
+  "y": -1804,
+  "ico": "📜",
+  "t": "Premiers contacts entre Minoens et Égyptiens"
  },
  {
   "y": -1800,
@@ -1680,9 +895,39 @@
   "t": "Rédaction de l'Épopée de Gilgamesh sur tablettes"
  },
  {
+  "y": -1789,
+  "ico": "📜",
+  "t": "Rédaction des Lettres de Mari"
+ },
+ {
+  "y": -1774,
+  "ico": "📜",
+  "t": "Rédaction du code de Lipit-Ishtar"
+ },
+ {
+  "y": -1759,
+  "ico": "📜",
+  "t": "Les tablettes de Kanesh documentent le commerce assyrien"
+ },
+ {
   "y": -1750,
   "ico": "⚖️",
   "t": "Code de Hammurabi gravé à Babylone"
+ },
+ {
+  "y": -1744,
+  "ico": "📜",
+  "t": "Hammurabi construit le temple Etemenanki"
+ },
+ {
+  "y": -1729,
+  "ico": "📜",
+  "t": "Rédaction du Conte de Sinouhé (copie d'école)"
+ },
+ {
+  "y": -1714,
+  "ico": "📜",
+  "t": "Premiers écrits hittites à Hattusa"
  },
  {
   "y": -1700,
@@ -1690,9 +935,44 @@
   "t": "Hyksos introduisent le char de guerre en Égypte"
  },
  {
+  "y": -1699,
+  "ico": "📜",
+  "t": "Rédaction des lois hittites"
+ },
+ {
+  "y": -1684,
+  "ico": "📜",
+  "t": "Les Kassites s'installent en Babylonie"
+ },
+ {
+  "y": -1669,
+  "ico": "📜",
+  "t": "Hyksos fondent la XVe dynastie d'Égypte"
+ },
+ {
+  "y": -1654,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Ebers (médecine égyptienne)"
+ },
+ {
   "y": -1650,
   "ico": "🌋",
   "t": "Éruption minoenne majeure de Santorin (Théra)"
+ },
+ {
+  "y": -1639,
+  "ico": "📜",
+  "t": "Le Papyrus Rhind copie les mathématiques égyptiennes"
+ },
+ {
+  "y": -1624,
+  "ico": "📜",
+  "t": "Rédaction du Conte des Deux Frères"
+ },
+ {
+  "y": -1609,
+  "ico": "📜",
+  "t": "Les Mycéniens construisent les citadelles de Mycènes et Tirynthe"
  },
  {
   "y": -1600,
@@ -1700,9 +980,44 @@
   "t": "Fondation de la dynastie Shang en Chine"
  },
  {
+  "y": -1594,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Westcar"
+ },
+ {
+  "y": -1579,
+  "ico": "📜",
+  "t": "Ahmose Nefertari, première Grande Épouse Royale divine"
+ },
+ {
+  "y": -1564,
+  "ico": "📜",
+  "t": "Rédaction des textes de Deir el-Bahari (Hatchepsout)"
+ },
+ {
   "y": -1550,
   "ico": "⚔️",
   "t": "Ahmose chasse les Hyksos : Nouvel Empire égyptien"
+ },
+ {
+  "y": -1549,
+  "ico": "📜",
+  "t": "Thoutmosis III bat les Cananéens à Megiddo"
+ },
+ {
+  "y": -1534,
+  "ico": "📜",
+  "t": "Premiers poèmes d'amour égyptiens"
+ },
+ {
+  "y": -1519,
+  "ico": "📜",
+  "t": "Amenhotep II campagne en Syrie"
+ },
+ {
+  "y": -1504,
+  "ico": "📜",
+  "t": "Thoutmosis IV dégage le Sphinx du sable"
  },
  {
   "y": -1500,
@@ -1710,9 +1025,39 @@
   "t": "Civilisation Mycénienne à son apogée en Grèce"
  },
  {
+  "y": -1489,
+  "ico": "📜",
+  "t": "Les Amarnas : tablettes diplomatiques du Moyen-Orient"
+ },
+ {
+  "y": -1474,
+  "ico": "📜",
+  "t": "Construction du temple d'Hatshepsout à Deir el-Bahari"
+ },
+ {
+  "y": -1459,
+  "ico": "📜",
+  "t": "Amenhotep III construit le temple de Louxor"
+ },
+ {
   "y": -1450,
   "ico": "📜",
   "t": "Linéaire B : plus ancien grec écrit à Cnossos"
+ },
+ {
+  "y": -1444,
+  "ico": "📜",
+  "t": "Le disque de Phaïstos est créé en Crète"
+ },
+ {
+  "y": -1429,
+  "ico": "📜",
+  "t": "Les Mycéniens adoptent l'écriture Linéaire B"
+ },
+ {
+  "y": -1414,
+  "ico": "📜",
+  "t": "Rédaction du traité entre Suppiluliuma et Shattiwaza"
  },
  {
   "y": -1400,
@@ -1720,9 +1065,44 @@
   "t": "Réforme d'Akhenaton : culte exclusif d'Aton"
  },
  {
+  "y": -1399,
+  "ico": "📜",
+  "t": "Les Kassites dirigent Babylone"
+ },
+ {
+  "y": -1384,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Bulaq (administration égyptienne)"
+ },
+ {
+  "y": -1369,
+  "ico": "📜",
+  "t": "Rédaction du traité de Kadesh (version hittite)"
+ },
+ {
+  "y": -1354,
+  "ico": "📜",
+  "t": "Le traité de Suppiluliuma et Tushratta"
+ },
+ {
   "y": -1350,
   "ico": "🏡",
   "t": "Lettres d'Amarna : correspondance diplomatique égyptienne"
+ },
+ {
+  "y": -1339,
+  "ico": "📜",
+  "t": "Rédaction des Lettres d'Amarna de Akhenaton"
+ },
+ {
+  "y": -1324,
+  "ico": "📜",
+  "t": "Mort de Toutânkhamon à 18 ans"
+ },
+ {
+  "y": -1309,
+  "ico": "📜",
+  "t": "Seti Ier construit le temple d'Abydos"
  },
  {
   "y": -1300,
@@ -1730,14 +1110,49 @@
   "t": "Rédaction supposée des tablettes d'Ugarit (alphabet)"
  },
  {
+  "y": -1294,
+  "ico": "📜",
+  "t": "Ramsès II lance la construction d'Abu Simbel"
+ },
+ {
+  "y": -1279,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Anastasi (littérature scolaire)"
+ },
+ {
   "y": -1275,
   "ico": "⚔️",
   "t": "Bataille de Qadesh entre Ramsès II et les Hittites"
  },
  {
+  "y": -1264,
+  "ico": "📜",
+  "t": "Traité de paix égypto-hittite (version finale)"
+ },
+ {
   "y": -1250,
   "ico": "🧱",
   "t": "Construction des murailles de Mycènes"
+ },
+ {
+  "y": -1249,
+  "ico": "📜",
+  "t": "Mort de Ramsès II après 66 ans de règne"
+ },
+ {
+  "y": -1234,
+  "ico": "📜",
+  "t": "Rédaction du Conte de Wenamoun"
+ },
+ {
+  "y": -1219,
+  "ico": "📜",
+  "t": "Le papyrus Harris Ier inventorié"
+ },
+ {
+  "y": -1204,
+  "ico": "📜",
+  "t": "Merneptah gravé sa stèle de victoire (mention d'Israël)"
  },
  {
   "y": -1200,
@@ -1755,6 +1170,11 @@
   "t": "Ramsès III repousse les Peuples de la mer"
  },
  {
+  "y": -1189,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Bremner-Rhind"
+ },
+ {
   "y": -1185,
   "ico": "🐴",
   "t": "Guerre de Troie supposée (datation traditionnelle)"
@@ -1768,6 +1188,11 @@
   "y": -1175,
   "ico": "📜",
   "t": "Le papyrus Harris Ier inventorie l'Égypte de Ramsès III"
+ },
+ {
+  "y": -1174,
+  "ico": "📜",
+  "t": "Le Conte de Deux Frères copié (révision)"
  },
  {
   "y": -1170,
@@ -1785,6 +1210,11 @@
   "t": "Famine documentée en Égypte sous Ramsès III"
  },
  {
+  "y": -1159,
+  "ico": "📜",
+  "t": "Le Papyrus Vandier copié"
+ },
+ {
   "y": -1155,
   "ico": "⚰️",
   "t": "Mort de Ramsès III, dernier grand pharaon"
@@ -1800,6 +1230,11 @@
   "t": "Tablettes de l'« âge obscur » grec (Lefkandi)"
  },
  {
+  "y": -1144,
+  "ico": "📜",
+  "t": "Rédaction du Conte de l'Oasien"
+ },
+ {
   "y": -1140,
   "ico": "⚔️",
   "t": "Assyriens et Babyloniens se disputent la Mésopotamie"
@@ -1813,6 +1248,11 @@
   "y": -1130,
   "ico": "🧱",
   "t": "Reconstruction de Babylone sous Nabuchodonosor Ier"
+ },
+ {
+  "y": -1129,
+  "ico": "📜",
+  "t": "Rédaction du Conte de Wenamoun (révision)"
  },
  {
   "y": -1125,
@@ -1845,6 +1285,11 @@
   "t": "Rédaction supposée des premiers textes védiques en Inde"
  },
  {
+  "y": -1099,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Chester Beatty IV"
+ },
+ {
   "y": -1095,
   "ico": "👑",
   "t": "Règne supposé de Saül, premier roi d'Israël"
@@ -1858,6 +1303,11 @@
   "y": -1085,
   "ico": "🏺",
   "t": "Expansion phénicienne en Méditerranée occidentale"
+ },
+ {
+  "y": -1084,
+  "ico": "📜",
+  "t": "Nabu-shum-lishir règne sur Babylone"
  },
  {
   "y": -1080,
@@ -1875,6 +1325,11 @@
   "t": "Assyrie : Nabu-shum-lishir contre les Sutéens"
  },
  {
+  "y": -1069,
+  "ico": "📜",
+  "t": "Rédaction du Papyrus Prisse (révision)"
+ },
+ {
   "y": -1065,
   "ico": "🏺",
   "t": "Apogée de la poterie proto-géométrique grecque"
@@ -1888,6 +1343,11 @@
   "y": -1055,
   "ico": "📜",
   "t": "Les Phéniciens diffusent leur alphabet en Méditerranée"
+ },
+ {
+  "y": -1054,
+  "ico": "📜",
+  "t": "Rédaction du Conte de Satni-Khamois"
  },
  {
   "y": -1050,
@@ -1905,6 +1365,11 @@
   "t": "Naissance supposée de David"
  },
  {
+  "y": -1039,
+  "ico": "📜",
+  "t": "Les Assyriens repoussent les Araméens"
+ },
+ {
   "y": -1035,
   "ico": "📜",
   "t": "Les Assyriens adoptent le char lourd à quatre chevaux"
@@ -1918,6 +1383,11 @@
   "y": -1025,
   "ico": "👑",
   "t": "Règne supposé de David sur Israël et Juda"
+ },
+ {
+  "y": -1024,
+  "ico": "📜",
+  "t": "Rédaction du Livre des Morts (version Theban)"
  },
  {
   "y": -1020,
@@ -1935,6 +1405,11 @@
   "t": "Conquêtes de David en Transjordanie"
  },
  {
+  "y": -1009,
+  "ico": "📜",
+  "t": "Rédaction du Conte de l'Oasien (révision)"
+ },
+ {
   "y": -1005,
   "ico": "👑",
   "t": "Salomon succède à David (datation traditionnelle)"
@@ -1948,6 +1423,11 @@
   "y": -995,
   "ico": "📜",
   "t": "Construction supposée du Premier Temple de Jérusalem"
+ },
+ {
+  "y": -994,
+  "ico": "📜",
+  "t": "Les Assyriens conquièrent la Babylonie"
  },
  {
   "y": -990,
@@ -1965,6 +1445,11 @@
   "t": "Les rois de Damas s'imposent en Syrie"
  },
  {
+  "y": -979,
+  "ico": "📜",
+  "t": "Rédaction du Conte de Prince Prédestiné"
+ },
+ {
   "y": -975,
   "ico": "⚔️",
   "t": "Guerres entre Israël et ses voisins araméens"
@@ -1978,6 +1463,11 @@
   "y": -965,
   "ico": "👑",
   "t": "Alliance de Salomon avec Hiram de Tyr"
+ },
+ {
+  "y": -964,
+  "ico": "📜",
+  "t": "Rédaction du Livre des Morts de Ani"
  },
  {
   "y": -960,
@@ -1995,6 +1485,11 @@
   "t": "Rédaction supposée des Proverbes"
  },
  {
+  "y": -949,
+  "ico": "📜",
+  "t": "Les Phéniciens fondent Gades (Cadix)"
+ },
+ {
   "y": -945,
   "ico": "👑",
   "t": "Sheshonq Ier fonde la XXIIe dynastie libyenne d'Égypte"
@@ -2008,6 +1503,11 @@
   "y": -935,
   "ico": "🏺",
   "t": "Apogée de la céramique géométrique à Athènes"
+ },
+ {
+  "y": -934,
+  "ico": "📜",
+  "t": "Rédaction du Conte de Setne Khamwas"
  },
  {
   "y": -930,
@@ -2025,6 +1525,11 @@
   "t": "Les Assyriens franchissent l'Euphrate sous Assur-dan II"
  },
  {
+  "y": -919,
+  "ico": "📜",
+  "t": "Les Assyriens sous Adad-nirari II"
+ },
+ {
   "y": -915,
   "ico": "👑",
   "t": "Fondation de Sparte (tradition : Eurysthénès et Proclès)"
@@ -2038,6 +1543,11 @@
   "y": -905,
   "ico": "📜",
   "t": "Les Chaldéens apparaissent au sud de la Babylonie"
+ },
+ {
+  "y": -904,
+  "ico": "📜",
+  "t": "Rédaction des annales de Tukulti-Ninurta II"
  },
  {
   "y": -900,
@@ -2055,6 +1565,11 @@
   "t": "Rédaction des premières lois grecques (Locres)"
  },
  {
+  "y": -889,
+  "ico": "📜",
+  "t": "Assurnasirpal II construit le palais de Calah"
+ },
+ {
   "y": -885,
   "ico": "👑",
   "t": "Assurnasirpal II fait de Nimrud sa capitale"
@@ -2068,6 +1583,11 @@
   "y": -875,
   "ico": "🏺",
   "t": "Fondation de Carthage selon la tradition (814-813 av. J.-C.)"
+ },
+ {
+  "y": -874,
+  "ico": "📜",
+  "t": "Achab, roi d'Israël"
  },
  {
   "y": -870,
@@ -2085,9 +1605,19 @@
   "t": "Les Assyriens détruisent Damas"
  },
  {
+  "y": -859,
+  "ico": "📜",
+  "t": "Salmanazar III campagne en Syrie"
+ },
+ {
   "y": -855,
   "ico": "🏛️",
   "t": "Assurnasirpal II inaugure le palais de Nimrud"
+ },
+ {
+  "y": -854,
+  "ico": "📜",
+  "t": "Bataille de Qarqar (première mention)"
  },
  {
   "y": -850,
@@ -2095,9 +1625,19 @@
   "t": "Homère compose l'Iliade (datation traditionnelle)"
  },
  {
+  "y": -849,
+  "ico": "📜",
+  "t": "Jéhu rend hommage à Salmanazar III (obélisque noir)"
+ },
+ {
   "y": -845,
   "ico": "👑",
   "t": "Jéhu devient roi d'Israël"
+ },
+ {
+  "y": -844,
+  "ico": "📜",
+  "t": "Les Urartéens sous Sarduri Ier"
  },
  {
   "y": -840,
@@ -2105,9 +1645,19 @@
   "t": "Salmanazar III campe au mont Liban"
  },
  {
+  "y": -839,
+  "ico": "📜",
+  "t": "Construction du temple d'Amon à Méroé"
+ },
+ {
   "y": -835,
   "ico": "🏛️",
   "t": "Les Phéniciens fondent Kition à Chypre"
+ },
+ {
+  "y": -834,
+  "ico": "📜",
+  "t": "Salmanazar III campagne contre les Urartéens"
  },
  {
   "y": -830,
@@ -2115,9 +1665,19 @@
   "t": "Rédaction supposée de la stèle de Kilamuwa"
  },
  {
+  "y": -829,
+  "ico": "📜",
+  "t": "Révolte de Yanziburia en Urartu"
+ },
+ {
   "y": -825,
   "ico": "⚔️",
   "t": "Les Urartéens s'imposent autour du lac de Van"
+ },
+ {
+  "y": -824,
+  "ico": "📜",
+  "t": "Mort de Salmanazar III"
  },
  {
   "y": -820,
@@ -2125,14 +1685,29 @@
   "t": "Carthage est fondée par Didon (tradition)"
  },
  {
+  "y": -819,
+  "ico": "📜",
+  "t": "Shamshi-Adad V règne sur l'Assyrie"
+ },
+ {
   "y": -815,
   "ico": "🏺",
   "t": "Les Grecs fondent Pithecusses en Italie"
  },
  {
+  "y": -814,
+  "ico": "📜",
+  "t": "Carthage fondée par les Phéniciens de Tyr"
+ },
+ {
   "y": -810,
   "ico": "⚔️",
   "t": "Adad-nirari III campagne en Syrie"
+ },
+ {
+  "y": -809,
+  "ico": "📜",
+  "t": "Sammuramat (Sémiramis) régente l'Assyrie"
  },
  {
   "y": -805,
@@ -2145,9 +1720,19 @@
   "t": "Fondation de Rome selon la tradition"
  },
  {
+  "y": -799,
+  "ico": "📜",
+  "t": "Les Argiens fondent leur tyrannie"
+ },
+ {
   "y": -795,
   "ico": "⚔️",
   "t": "Les Urartéens affrontent l'Assyrie"
+ },
+ {
+  "y": -794,
+  "ico": "📜",
+  "t": "Premiers records olympiques grecs"
  },
  {
   "y": -790,
@@ -2155,9 +1740,19 @@
   "t": "Hésiode compose la Théogonie"
  },
  {
+  "y": -789,
+  "ico": "📜",
+  "t": "Les Médies s'unifient sous Deiokès"
+ },
+ {
   "y": -785,
   "ico": "👑",
   "t": "Piânkhi conquiert l'Égypte pour la Nubie"
+ },
+ {
+  "y": -784,
+  "ico": "📜",
+  "t": "Premiers documents écrits en phénicien"
  },
  {
   "y": -780,
@@ -2165,9 +1760,19 @@
   "t": "Les Grecs fondent Al-Mina en Syrie"
  },
  {
+  "y": -779,
+  "ico": "📜",
+  "t": "Pépon de Cumes fonde Parthénope"
+ },
+ {
   "y": -775,
   "ico": "📜",
   "t": "La liste des vainqueurs olympiques commence (Corèbe)"
+ },
+ {
+  "y": -774,
+  "ico": "📜",
+  "t": "Premiers contacts entre Grecs et Phéniciens"
  },
  {
   "y": -770,
@@ -2175,9 +1780,19 @@
   "t": "Les Zhou déplacent leur capitale à Luoyang"
  },
  {
+  "y": -769,
+  "ico": "📜",
+  "t": "Les Assyriens affaiblis : guerre civile"
+ },
+ {
   "y": -765,
   "ico": "⚔️",
   "t": "Guerre de Lelante entre Érétrie et Chalcis"
+ },
+ {
+  "y": -764,
+  "ico": "📜",
+  "t": "Fondation de Chalcis sur l'Eubée"
  },
  {
   "y": -760,
@@ -2185,9 +1800,19 @@
   "t": "Les Grecs adoptent l'alphabet phénicien"
  },
  {
+  "y": -759,
+  "ico": "📜",
+  "t": "Les Lydiens fondent leur royaume"
+ },
+ {
   "y": -755,
   "ico": "⚔️",
   "t": "Tiglath-Pileser III monte sur le trône d'Assyrie"
+ },
+ {
+  "y": -754,
+  "ico": "📜",
+  "t": "Fondation de la colonie grecque de Cumae"
  },
  {
   "y": -750,
@@ -2195,9 +1820,19 @@
   "t": "Fondation de Syracuse par les Corinthiens"
  },
  {
+  "y": -749,
+  "ico": "📜",
+  "t": "Nabonassar règne sur Babylone"
+ },
+ {
   "y": -745,
   "ico": "⚔️",
   "t": "L'Assyrie se lance dans la conquête de la Syrie"
+ },
+ {
+  "y": -744,
+  "ico": "📜",
+  "t": "Tiglath-Pileser III réforme l'Assyrie"
  },
  {
   "y": -740,
@@ -2205,9 +1840,19 @@
   "t": "Le prophète Amos prédit la chute d'Israël"
  },
  {
+  "y": -739,
+  "ico": "📜",
+  "t": "Campagne de Tiglath-Pileser III en Phénicie"
+ },
+ {
   "y": -735,
   "ico": "⚔️",
   "t": "Guerre de Messénie entre Sparte et la Messénie"
+ },
+ {
+  "y": -734,
+  "ico": "📜",
+  "t": "Les Assyriens prennent Damas"
  },
  {
   "y": -730,
@@ -2215,9 +1860,19 @@
   "t": "Piânkhi fait la conquête de l'Égypte"
  },
  {
+  "y": -729,
+  "ico": "📜",
+  "t": "Tiglath-Pileser III prend Babylone"
+ },
+ {
   "y": -725,
   "ico": "📜",
   "t": "Homère et l'Odyssée circulent en Grèce"
+ },
+ {
+  "y": -724,
+  "ico": "📜",
+  "t": "Shalmaneser V assiège Samarie"
  },
  {
   "y": -720,
@@ -2225,9 +1880,19 @@
   "t": "Sargon II déporte les Israélites"
  },
  {
+  "y": -719,
+  "ico": "📜",
+  "t": "Sargon II fondé la dynastie des Sargonides"
+ },
+ {
   "y": -715,
   "ico": "👑",
   "t": "Règne de Numa Pompilius à Rome"
+ },
+ {
+  "y": -714,
+  "ico": "📜",
+  "t": "Sargon II campagne contre les Urartéens"
  },
  {
   "y": -710,
@@ -2235,14 +1900,29 @@
   "t": "Sargon II fonde Dur-Sharrukin"
  },
  {
+  "y": -709,
+  "ico": "📜",
+  "t": "Sargon II prend le titre de roi de Babylone"
+ },
+ {
   "y": -705,
   "ico": "⚔️",
   "t": "Sennachérib prend le pouvoir en Assyrie"
  },
  {
+  "y": -704,
+  "ico": "📜",
+  "t": "Sennachérib fait de Ninive sa capitale"
+ },
+ {
   "y": -700,
   "ico": "📜",
   "t": "Les premières lois écrites de Rome (Loi de Numaa)"
+ },
+ {
+  "y": -699,
+  "ico": "📜",
+  "t": "Les Grecs fondent des colonies en Sicile"
  },
  {
   "y": -695,
@@ -2255,9 +1935,19 @@
   "t": "Style orientalisant dans la céramique corinthienne"
  },
  {
+  "y": -689,
+  "ico": "📜",
+  "t": "Construction des jardins suspendus"
+ },
+ {
   "y": -685,
   "ico": "👑",
   "t": "Psammétique Ier libère l'Égypte des Assyriens"
+ },
+ {
+  "y": -684,
+  "ico": "📜",
+  "t": "Archiloque, premier poète lyrique grec"
  },
  {
   "y": -680,
@@ -2265,9 +1955,19 @@
   "t": "Eschyle le poète... non : naissance d'Archiloque, premier lyrique"
  },
  {
+  "y": -679,
+  "ico": "📜",
+  "t": "Esarhaddon règne sur l'Assyrie"
+ },
+ {
   "y": -675,
   "ico": "⚔️",
   "t": "Les Cimmériens ravagent l'Anatolie"
+ },
+ {
+  "y": -674,
+  "ico": "📜",
+  "t": "Esarhaddon campagne en Égypte"
  },
  {
   "y": -670,
@@ -2275,9 +1975,19 @@
   "t": "Taharqa couronné pharaon nubien"
  },
  {
+  "y": -669,
+  "ico": "📜",
+  "t": "Assurbanipal monte sur le trône"
+ },
+ {
   "y": -665,
   "ico": "📜",
   "t": "Les Cités grecques fondent Byzance"
+ },
+ {
+  "y": -664,
+  "ico": "📜",
+  "t": "Psammétique Ier fonde la XXVIe dynastie saïte"
  },
  {
   "y": -660,
@@ -2285,14 +1995,29 @@
   "t": "Fondation légendaire de l'Empire du Japon (Jimmu)"
  },
  {
+  "y": -659,
+  "ico": "📜",
+  "t": "Assurbanipal construit la bibliothèque de Ninive"
+ },
+ {
   "y": -655,
   "ico": "⚔️",
   "t": "Psammétique Ier chasse les Assyriens d'Égypte"
  },
  {
+  "y": -654,
+  "ico": "📜",
+  "t": "Les Lydiens frappent les premières monnaies"
+ },
+ {
   "y": -650,
   "ico": "📜",
   "t": "Les premières monnaies frappées à Lydie"
+ },
+ {
+  "y": -649,
+  "ico": "📜",
+  "t": "Révolte de Shamash-shum-ukin à Babylone"
  },
  {
   "y": -645,
@@ -2305,9 +2030,19 @@
   "t": "Sparte adopte sa constitution (Grande Rhètra)"
  },
  {
+  "y": -639,
+  "ico": "📜",
+  "t": "Bibliothèque d'Assurbanipal : 25 000 tablettes"
+ },
+ {
   "y": -635,
   "ico": "📜",
   "t": "Solon naît à Athènes"
+ },
+ {
+  "y": -634,
+  "ico": "📜",
+  "t": "Les Scythes envahissent l'Asie"
  },
  {
   "y": -630,
@@ -2315,9 +2050,19 @@
   "t": "Nabopolassar fonde l'Empire néo-babylonien"
  },
  {
+  "y": -629,
+  "ico": "📜",
+  "t": "Nabopolassar se révolte contre l'Assyrie"
+ },
+ {
   "y": -625,
   "ico": "⚔️",
   "t": "Cyaxare réorganise les Mèdes"
+ },
+ {
+  "y": -624,
+  "ico": "📜",
+  "t": "Naissance de Solon"
  },
  {
   "y": -620,
@@ -2325,9 +2070,19 @@
   "t": "Les Lois de Dracon à Athènes"
  },
  {
+  "y": -619,
+  "ico": "📜",
+  "t": "Cyaxare roi des Mèdes"
+ },
+ {
   "y": -615,
   "ico": "👑",
   "t": "Nabuchodonosor II succède à son père"
+ },
+ {
+  "y": -614,
+  "ico": "⚔️",
+  "t": "Les Mèdes sacent Assur"
  },
  {
   "y": -610,
@@ -2335,9 +2090,19 @@
   "t": "Naissance d'Anaximandre de Milet"
  },
  {
+  "y": -609,
+  "ico": "📜",
+  "t": "Fin de l'Empire assyrien"
+ },
+ {
   "y": -605,
   "ico": "⚔️",
   "t": "Nabuchodonosor II bat les Égyptiens à Karkemish"
+ },
+ {
+  "y": -604,
+  "ico": "📜",
+  "t": "Nabuchodonosor II commence à régner"
  },
  {
   "y": -600,
@@ -2345,9 +2110,19 @@
   "t": "Fondation de Marseille par les Phocéens"
  },
  {
+  "y": -599,
+  "ico": "📜",
+  "t": "Naissance de Mahavira (Jaïnisme)"
+ },
+ {
   "y": -595,
   "ico": "📜",
   "t": "Solon réforme Athènes"
+ },
+ {
+  "y": -594,
+  "ico": "📜",
+  "t": "Réformes de Solon à Athènes"
  },
  {
   "y": -590,
@@ -2355,9 +2130,19 @@
   "t": "Guerre entre Épidaure et Samos"
  },
  {
+  "y": -589,
+  "ico": "📜",
+  "t": "Siège de Jérusalem par Nabuchodonosor"
+ },
+ {
   "y": -585,
   "ico": "🌞",
   "t": "Éclipse de Thalès de Milet (28 mai)"
+ },
+ {
+  "y": -584,
+  "ico": "📜",
+  "t": "Thalès prédit une éclipse solaire"
  },
  {
   "y": -580,
@@ -2365,9 +2150,19 @@
   "t": "Cyrus II devient roi des Perses"
  },
  {
+  "y": -579,
+  "ico": "📜",
+  "t": "Naissance de Lao Tseu"
+ },
+ {
   "y": -575,
   "ico": "🏛️",
   "t": "Construction de la porte d'Ishtar à Babylone"
+ },
+ {
+  "y": -574,
+  "ico": "📜",
+  "t": "Le Temple de Jérusalem rebâti"
  },
  {
   "y": -570,
@@ -2375,9 +2170,19 @@
   "t": "Naissance de Pythagore à Samos"
  },
  {
+  "y": -569,
+  "ico": "📜",
+  "t": "Amasis II règne sur l'Égypte"
+ },
+ {
   "y": -565,
   "ico": "⚔️",
   "t": "Cyrus II soumet les Mèdes"
+ },
+ {
+  "y": -564,
+  "ico": "📜",
+  "t": "Les Phocéens fondent Alalia en Corse"
  },
  {
   "y": -560,
@@ -2385,9 +2190,19 @@
   "t": "Crésus règne sur la Lydie"
  },
  {
+  "y": -559,
+  "ico": "📜",
+  "t": "Cyrus II devient roi d'Anshan"
+ },
+ {
   "y": -555,
   "ico": "📜",
   "t": "Naissance de Bouddha (datation traditionnelle)"
+ },
+ {
+  "y": -554,
+  "ico": "📜",
+  "t": "Les Lydiens frappent les premières pièces d'or"
  },
  {
   "y": -550,
@@ -2395,9 +2210,19 @@
   "t": "Cyrus fonde l'Empire perse"
  },
  {
+  "y": -549,
+  "ico": "📜",
+  "t": "Cyrus II renverse Astyage des Mèdes"
+ },
+ {
   "y": -545,
   "ico": "📜",
   "t": "Mort de Thalès de Milet"
+ },
+ {
+  "y": -544,
+  "ico": "📜",
+  "t": "Mahavira fonde le jaïnisme"
  },
  {
   "y": -540,
@@ -2405,9 +2230,19 @@
   "t": "Cyrus prend Suse et l'Élam"
  },
  {
+  "y": -539,
+  "ico": "📜",
+  "t": "Cyrus prend Babylone sans combat"
+ },
+ {
   "y": -535,
   "ico": "📜",
   "t": "Naissance d'Eschyle à Éleusis"
+ },
+ {
+  "y": -534,
+  "ico": "📜",
+  "t": "Pièce de théâtre de Thespis à Athènes"
  },
  {
   "y": -530,
@@ -2415,9 +2250,19 @@
   "t": "Cambyse II succède à Cyrus"
  },
  {
+  "y": -529,
+  "ico": "📜",
+  "t": "Mort de Cyrus le Grand"
+ },
+ {
   "y": -525,
   "ico": "⚔️",
   "t": "Cambyse conquiert l'Égypte"
+ },
+ {
+  "y": -524,
+  "ico": "⚔️",
+  "t": "Cambyse II conquiert l'Égypte"
  },
  {
   "y": -520,
@@ -2425,9 +2270,19 @@
   "t": "Construction du Temple de Jérusalem recommence"
  },
  {
+  "y": -519,
+  "ico": "📜",
+  "t": "Darius Ier réorganise l'Empire perse"
+ },
+ {
   "y": -515,
   "ico": "🏛️",
   "t": "Darius Ier construit Persépolis"
+ },
+ {
+  "y": -514,
+  "ico": "📜",
+  "t": "Hippis et Aristagoras explorent l'Italie"
  },
  {
   "y": -510,
@@ -2435,9 +2290,19 @@
   "t": "Darius Ier soumet les Scythes"
  },
  {
+  "y": -509,
+  "ico": "📜",
+  "t": "Révolution de Cléisthène : démocratie athénienne"
+ },
+ {
   "y": -505,
   "ico": "📜",
   "t": "Naissance de Périclès"
+ },
+ {
+  "y": -504,
+  "ico": "📜",
+  "t": "Révolte de Milet contre les Perses"
  },
  {
   "y": -500,
@@ -2445,9 +2310,29 @@
   "t": "Révolte d'Ionie contre les Perses"
  },
  {
+  "y": -499,
+  "ico": "📜",
+  "t": "Les révoltes ioniennes contre la Perse"
+ },
+ {
   "y": -495,
   "ico": "📜",
   "t": "Naissance de Socrate"
+ },
+ {
+  "y": -494,
+  "ico": "📜",
+  "t": "Le Péloponnèse se soulève contre Sparte"
+ },
+ {
+  "y": -490,
+  "ico": "⚔️",
+  "t": "Bataille de Marathon"
+ },
+ {
+  "y": -489,
+  "ico": "📜",
+  "t": "Mort de Miltiade le Jeune"
  },
  {
   "y": -485,
@@ -2455,14 +2340,29 @@
   "t": "Xerxès Ier (Xerxès) devient roi des Perses"
  },
  {
+  "y": -484,
+  "ico": "📜",
+  "t": "Naissance d'Hérodote"
+ },
+ {
   "y": -480,
   "ico": "⚔️",
   "t": "Bataille des Thermopyles"
  },
  {
+  "y": -479,
+  "ico": "📜",
+  "t": "Bataille de Mycale : fin des guerres médiques"
+ },
+ {
   "y": -475,
   "ico": "🏛️",
   "t": "Athènes reconstruit ses murailles"
+ },
+ {
+  "y": -474,
+  "ico": "📜",
+  "t": "Les Syracusains battent les Étrusques à Cumes"
  },
  {
   "y": -470,
@@ -2475,9 +2375,19 @@
   "t": "Assassinat de Xerxès Ier"
  },
  {
+  "y": -464,
+  "ico": "📜",
+  "t": "Tremblement de terre à Sparte (révolte des Hilotes)"
+ },
+ {
   "y": -460,
   "ico": "📜",
   "t": "Naissance d'Hippocrate de Cos"
+ },
+ {
+  "y": -459,
+  "ico": "📜",
+  "t": "Athènes construit ses Longs Murs"
  },
  {
   "y": -455,
@@ -2485,9 +2395,19 @@
   "t": "Construction du Parthénon commence"
  },
  {
+  "y": -454,
+  "ico": "📜",
+  "t": "Expédition égyptienne : désastre athénien"
+ },
+ {
   "y": -450,
   "ico": "📜",
   "t": "Les XII Tables de Rome"
+ },
+ {
+  "y": -449,
+  "ico": "📜",
+  "t": "Paix de Callias entre la Grèce et la Perse"
  },
  {
   "y": -445,
@@ -2495,9 +2415,19 @@
   "t": "Paix de Callias entre Athènes et les Perses"
  },
  {
+  "y": -444,
+  "ico": "📜",
+  "t": "Fondation de la colonie de Thurium"
+ },
+ {
   "y": -440,
   "ico": "📜",
   "t": "Hérodote publie ses Histoires"
+ },
+ {
+  "y": -439,
+  "ico": "📜",
+  "t": "Le Parthénon est inauguré"
  },
  {
   "y": -435,
@@ -2505,14 +2435,29 @@
   "t": "Achèvement de la statue d'Athéna Parthénos"
  },
  {
+  "y": -434,
+  "ico": "📜",
+  "t": "Naissance de Xénophon"
+ },
+ {
   "y": -430,
   "ico": "🦠",
   "t": "Peste d'Athènes pendant la guerre du Péloponnèse"
  },
  {
+  "y": -429,
+  "ico": "📜",
+  "t": "Mort de Périclès pendant la peste"
+ },
+ {
   "y": -425,
   "ico": "📜",
   "t": "Thucydide écrit son Histoire de la guerre du Péloponnèse"
+ },
+ {
+  "y": -424,
+  "ico": "📜",
+  "t": "Bataille de Delium"
  },
  {
   "y": -420,
@@ -2525,9 +2470,19 @@
   "t": "Expédition athénienne en Sicile"
  },
  {
+  "y": -414,
+  "ico": "📜",
+  "t": "Siège de Syracuse"
+ },
+ {
   "y": -410,
   "ico": "📜",
   "t": "Naissance de Platon"
+ },
+ {
+  "y": -409,
+  "ico": "📜",
+  "t": "Carthage attaque Akragas en Sicile"
  },
  {
   "y": -405,
@@ -2535,9 +2490,19 @@
   "t": "Bataille d'Aigos Potamos : Sparte défait Athènes"
  },
  {
+  "y": -404,
+  "ico": "📜",
+  "t": "Capitulation d'Athènes : fin de la guerre du Péloponnèse"
+ },
+ {
   "y": -400,
   "ico": "📜",
   "t": "Mort de Socrate en 399 (condamné à boire la ciguë)"
+ },
+ {
+  "y": -399,
+  "ico": "📜",
+  "t": "Procès et mort de Socrate"
  },
  {
   "y": -395,
@@ -2545,9 +2510,19 @@
   "t": "Guerre de Corinthe"
  },
  {
+  "y": -394,
+  "ico": "📜",
+  "t": "Bataille de Cnide"
+ },
+ {
   "y": -390,
   "ico": "⚔️",
   "t": "Les Gaulois de Brennus pillent Rome"
+ },
+ {
+  "y": -389,
+  "ico": "📜",
+  "t": "Platon fonde l'Académie"
  },
  {
   "y": -385,
@@ -2555,9 +2530,19 @@
   "t": "Platon fonde l'Académie à Athènes"
  },
  {
+  "y": -384,
+  "ico": "📜",
+  "t": "Naissance d'Aristote"
+ },
+ {
   "y": -380,
   "ico": "⚔️",
   "t": "Paix du Roi (paix d'Antalcidas)"
+ },
+ {
+  "y": -379,
+  "ico": "📜",
+  "t": "Epaminondas réforme la phalange thébaine"
  },
  {
   "y": -375,
@@ -2565,14 +2550,24 @@
   "t": "Platon écrit le Phédon et la République"
  },
  {
+  "y": -374,
+  "ico": "📜",
+  "t": "Révolte des satrapies de Phrygie"
+ },
+ {
   "y": -370,
   "ico": "⚕️",
   "t": "Hippocrate développe la médecine rationnelle"
  },
  {
-  "y": -365,
-  "ico": "⚔️",
-  "t": "Épaminondas réforme la phalange thébaine"
+  "y": -369,
+  "ico": "📜",
+  "t": "Thèbes libère les Messéniens"
+ },
+ {
+  "y": -364,
+  "ico": "📜",
+  "t": "Bataille de Cynoscéphales (Thèbes vs Thessalie)"
  },
  {
   "y": -360,
@@ -2580,9 +2575,19 @@
   "t": "Philippe II devient roi de Macédoine"
  },
  {
+  "y": -359,
+  "ico": "📜",
+  "t": "Philippe II monte sur le trône de Macédoine"
+ },
+ {
   "y": -355,
   "ico": "📜",
   "t": "Xénophon écrit l'Anabase"
+ },
+ {
+  "y": -354,
+  "ico": "📜",
+  "t": "Bataille de Thèbes"
  },
  {
   "y": -350,
@@ -2590,9 +2595,19 @@
   "t": "Construction du Mausolée d'Halicarnasse"
  },
  {
+  "y": -349,
+  "ico": "📜",
+  "t": "Philippe II prend Olynthe"
+ },
+ {
   "y": -345,
   "ico": "📜",
   "t": "Naissance d'Aristote à Stagire"
+ },
+ {
+  "y": -344,
+  "ico": "📜",
+  "t": "Aristote devient précepteur d'Alexandre"
  },
  {
   "y": -340,
@@ -2600,9 +2615,19 @@
   "t": "Bataille de Chéronée : Philippe bat Athènes et Thèbes"
  },
  {
+  "y": -339,
+  "ico": "📜",
+  "t": "Bataille de Chéronée"
+ },
+ {
   "y": -335,
   "ico": "📜",
   "t": "Aristote fonde le Lycée à Athènes"
+ },
+ {
+  "y": -334,
+  "ico": "📜",
+  "t": "Alexandre traverse l'Hellespont"
  },
  {
   "y": -330,
@@ -2610,9 +2635,19 @@
   "t": "Alexandre bat Darius III à Gaugamèles"
  },
  {
+  "y": -329,
+  "ico": "📜",
+  "t": "Alexandre atteint la Bactriane"
+ },
+ {
   "y": -325,
   "ico": "⛵",
   "t": "Alexandre atteint l'Indus et la mer d'Arabie"
+ },
+ {
+  "y": -324,
+  "ico": "📜",
+  "t": "Alexandre atteint la mer d'Arabie"
  },
  {
   "y": -320,
@@ -2620,9 +2655,19 @@
   "t": "Ptolémée Ier fonde la dynastie lagide en Égypte"
  },
  {
+  "y": -319,
+  "ico": "📜",
+  "t": "Antipater meurt : guerres des Diadoques"
+ },
+ {
   "y": -315,
   "ico": "📜",
   "t": "Théophraste écrit ses Recherches sur les plantes"
+ },
+ {
+  "y": -314,
+  "ico": "📜",
+  "t": "Fondation d'Antioche par Séleucos"
  },
  {
   "y": -310,
@@ -2630,9 +2675,19 @@
   "t": "Guerres des Diadoques pour l'empire d'Alexandre"
  },
  {
+  "y": -309,
+  "ico": "📜",
+  "t": "Naissance de Démétrius Poliorcète"
+ },
+ {
   "y": -305,
   "ico": "🏛️",
   "t": "Fondation de la bibliothèque d'Alexandrie"
+ },
+ {
+  "y": -304,
+  "ico": "📜",
+  "t": "Ashoka couronné empereur Maurya"
  },
  {
   "y": -300,
@@ -2640,9 +2695,19 @@
   "t": "Euclide écrit les Éléments"
  },
  {
+  "y": -299,
+  "ico": "📜",
+  "t": "Fondation du royaume des Séleucides"
+ },
+ {
   "y": -295,
   "ico": "⚔️",
   "t": "Rome domine l'Italie centrale"
+ },
+ {
+  "y": -294,
+  "ico": "📜",
+  "t": "Fondation du royaume des Ptolémées"
  },
  {
   "y": -290,
@@ -2650,9 +2715,19 @@
   "t": "Fondation de la bibliothèque d'Alexandrie (révision)"
  },
  {
+  "y": -289,
+  "ico": "📜",
+  "t": "Mort de Ménandre, dramaturge grec"
+ },
+ {
   "y": -285,
   "ico": "🏛️",
   "t": "Le phare d'Alexandrie est conçu par Sostratos"
+ },
+ {
+  "y": -284,
+  "ico": "📜",
+  "t": "Naissance de Ptolémée II Philadelphe"
  },
  {
   "y": -280,
@@ -2660,9 +2735,19 @@
   "t": "Pyrrhus envahit l'Italie"
  },
  {
+  "y": -279,
+  "ico": "⚔️",
+  "t": "Invasion celtique en Macédoine"
+ },
+ {
   "y": -275,
   "ico": "📜",
   "t": "Naissance d'Archimède à Syracuse"
+ },
+ {
+  "y": -274,
+  "ico": "📜",
+  "t": "Première guerre de Syrie entre Séleucides et Ptolémées"
  },
  {
   "y": -270,
@@ -2670,9 +2755,19 @@
   "t": "Rome domine toute l'Italie du Sud"
  },
  {
+  "y": -269,
+  "ico": "📜",
+  "t": "Construction du Grand Autel de Pergame"
+ },
+ {
   "y": -265,
   "ico": "📜",
   "t": "Mort d'Épicure à Athènes"
+ },
+ {
+  "y": -264,
+  "ico": "⚔️",
+  "t": "Première guerre punique commence"
  },
  {
   "y": -260,
@@ -2680,9 +2775,19 @@
   "t": "Bataille de Mylae : Rome bat Carthage en mer"
  },
  {
+  "y": -259,
+  "ico": "📜",
+  "t": "Naissance de Séleucos II Callinicus"
+ },
+ {
   "y": -255,
   "ico": "📜",
   "t": "Eratosthène mesure la circonférence de la Terre"
+ },
+ {
+  "y": -254,
+  "ico": "📜",
+  "t": "Bataille de Panormus"
  },
  {
   "y": -250,
@@ -2690,9 +2795,19 @@
   "t": "Ashoka règne sur l'Inde (empire Maurya)"
  },
  {
+  "y": -249,
+  "ico": "📜",
+  "t": "Révolte des égyptiens contre les Ptolémées"
+ },
+ {
   "y": -245,
   "ico": "🏛️",
   "t": "La Grande Colonnade d'Alexandrie achevée"
+ },
+ {
+  "y": -244,
+  "ico": "📜",
+  "t": "Agis IV tente des réformes à Sparte"
  },
  {
   "y": -240,
@@ -2700,9 +2815,19 @@
   "t": "Naissance de Plaute à Sarsina"
  },
  {
+  "y": -239,
+  "ico": "📜",
+  "t": "Mort d'Antigone Gonatas"
+ },
+ {
   "y": -235,
   "ico": "⚔️",
   "t": "Fin de la première guerre punique"
+ },
+ {
+  "y": -234,
+  "ico": "📜",
+  "t": "Naissance de Hannibal Barca"
  },
  {
   "y": -230,
@@ -2710,9 +2835,19 @@
   "t": "Hannibal Barca prend le commandement en Espagne"
  },
  {
+  "y": -229,
+  "ico": "📜",
+  "t": "Les Illyriens s'empirent de la côte adriatique"
+ },
+ {
   "y": -225,
   "ico": "⚔️",
   "t": "Les Gaulois envahissent l'Italie"
+ },
+ {
+  "y": -224,
+  "ico": "🌊",
+  "t": "Séisme du Rhône (Colosse de Rhodes détruit)"
  },
  {
   "y": -220,
@@ -2720,9 +2855,19 @@
   "t": "Les Qin unifient la Chine"
  },
  {
+  "y": -219,
+  "ico": "📜",
+  "t": "Quatrième guerre de Syrie"
+ },
+ {
   "y": -215,
   "ico": "⚔️",
   "t": "Deuxième guerre punique : Hannibal en Italie"
+ },
+ {
+  "y": -214,
+  "ico": "📜",
+  "t": "Hannibal traverses les Alpes"
  },
  {
   "y": -210,
@@ -2730,9 +2875,19 @@
   "t": "Cannae : Hannibal écrase Rome"
  },
  {
+  "y": -209,
+  "ico": "📜",
+  "t": "Bataille de Baecula"
+ },
+ {
   "y": -205,
   "ico": "📜",
   "t": "Mort de Chanda Maurya, fondateur de l'empire Maurya"
+ },
+ {
+  "y": -204,
+  "ico": "📜",
+  "t": "Scipion débarque en Afrique"
  },
  {
   "y": -200,
@@ -2740,9 +2895,19 @@
   "t": "Bataille de la Metaure : Hasdrubal vaincu"
  },
  {
+  "y": -199,
+  "ico": "📜",
+  "t": "Bataille de Cynoscéphales (Maccée)"
+ },
+ {
   "y": -195,
   "ico": "📜",
   "t": "Naissance de Terence à Carthage"
+ },
+ {
+  "y": -194,
+  "ico": "📜",
+  "t": "Fondation de Colchis (Georgie antique)"
  },
  {
   "y": -190,
@@ -2750,14 +2915,24 @@
   "t": "Bataille de Magnésie : Rome défait Antiochos III"
  },
  {
+  "y": -189,
+  "ico": "📜",
+  "t": "Bataille de Magnésie"
+ },
+ {
   "y": -185,
   "ico": "📜",
   "t": "Mort de Han Wudi en Chine"
  },
  {
-  "y": -180,
-  "ico": "🏛️",
-  "t": "Construction du Grand Autel de Pergame"
+  "y": -184,
+  "ico": "📜",
+  "t": "Cato le Censeur"
+ },
+ {
+  "y": -179,
+  "ico": "📜",
+  "t": "Fondation de la Grande Colonnade de Rhodes"
  },
  {
   "y": -175,
@@ -2765,14 +2940,29 @@
   "t": "Antiochos IV Épiphane sacage Jérusalem"
  },
  {
+  "y": -174,
+  "ico": "📜",
+  "t": "Mithridate Ier de Parthie"
+ },
+ {
   "y": -170,
   "ico": "📜",
   "t": "Naissance de Polybe à Mégalopolis"
  },
  {
+  "y": -169,
+  "ico": "📜",
+  "t": "Bataille de Pydna"
+ },
+ {
   "y": -165,
   "ico": "⚔️",
   "t": "Révolte des Maccabées en Judée"
+ },
+ {
+  "y": -164,
+  "ico": "📜",
+  "t": "Purification du Temple de Jérusalem (Hanoukka)"
  },
  {
   "y": -160,
@@ -2785,6 +2975,11 @@
   "t": "Construction du pont du Gard commence"
  },
  {
+  "y": -154,
+  "ico": "📜",
+  "t": "Révolte celtibère en Espagne"
+ },
+ {
   "y": -150,
   "ico": "⚔️",
   "t": "Troisième guerre punique commence"
@@ -2795,9 +2990,19 @@
   "t": "Naissance de Posidonios d'Apamée"
  },
  {
+  "y": -144,
+  "ico": "📜",
+  "t": "Aqua Marcia, plus grand aqueduc de Rome"
+ },
+ {
   "y": -140,
   "ico": "⚔️",
   "t": "Rome domine la Grèce après Pydna"
+ },
+ {
+  "y": -139,
+  "ico": "📜",
+  "t": "Expulsion des astrologues chaldéens de Rome"
  },
  {
   "y": -135,
@@ -2805,9 +3010,19 @@
   "t": "Mort de Hipparchos d'Alexandrie"
  },
  {
+  "y": -134,
+  "ico": "📜",
+  "t": "Tibérius Gracchus tribun de la plèbe"
+ },
+ {
   "y": -130,
   "ico": "⚔️",
   "t": "Révolte servile en Sicile"
+ },
+ {
+  "y": -129,
+  "ico": "📜",
+  "t": "Mort de Attale III (héritage de Pergame à Rome)"
  },
  {
   "y": -125,
@@ -2815,9 +3030,19 @@
   "t": "Les Gracques tentent des réformes agraires"
  },
  {
+  "y": -124,
+  "ico": "📜",
+  "t": "Fondation de l'Université de Nalanda en Inde"
+ },
+ {
   "y": -120,
   "ico": "⚔️",
   "t": "Cimbre et Teutones envahissent la Gaule"
+ },
+ {
+  "y": -119,
+  "ico": "📜",
+  "t": "La route de la soie établie"
  },
  {
   "y": -115,
@@ -2825,9 +3050,19 @@
   "t": "Naissance de Cicéron"
  },
  {
+  "y": -114,
+  "ico": "📜",
+  "t": "Guerre cimbrique commence"
+ },
+ {
   "y": -110,
   "ico": "⚔️",
   "t": "Guerre de Jugurtha en Numidie"
+ },
+ {
+  "y": -109,
+  "ico": "📜",
+  "t": "Campagne de Jugurtha en Numidie"
  },
  {
   "y": -105,
@@ -2835,9 +3070,19 @@
   "t": "Bataille d'Arausio : désastre romain"
  },
  {
+  "y": -104,
+  "ico": "📜",
+  "t": "Marius réforme l'armée romaine"
+ },
+ {
   "y": -100,
   "ico": "📜",
   "t": "Naissance de Jules César"
+ },
+ {
+  "y": -99,
+  "ico": "📜",
+  "t": "Naissance de Pompée le Grand"
  },
  {
   "y": -95,
@@ -2845,9 +3090,19 @@
   "t": "Mithridate VI du Pont défie Rome"
  },
  {
+  "y": -94,
+  "ico": "📜",
+  "t": "Mithridate VI du Pont commence sa campagne"
+ },
+ {
   "y": -90,
   "ico": "⚔️",
   "t": "Guerre sociale : les alliés italiens se révoltent"
+ },
+ {
+  "y": -89,
+  "ico": "📜",
+  "t": "Guerre sociale en Italie"
  },
  {
   "y": -85,
@@ -2855,9 +3110,19 @@
   "t": "Naissance de Marc-Antoine"
  },
  {
+  "y": -84,
+  "ico": "📜",
+  "t": "Sylla devient dictateur"
+ },
+ {
   "y": -80,
   "ico": "⚔️",
   "t": "Sylla devient dictateur de Rome"
+ },
+ {
+  "y": -79,
+  "ico": "📜",
+  "t": "Pompée campagne en Espagne"
  },
  {
   "y": -75,
@@ -2865,9 +3130,19 @@
   "t": "Cicéron commence sa carrière politique"
  },
  {
+  "y": -74,
+  "ico": "📜",
+  "t": "Troisième guerre mithridatique"
+ },
+ {
   "y": -70,
   "ico": "⚔️",
   "t": "Pompée et Crassus consuls"
+ },
+ {
+  "y": -69,
+  "ico": "📜",
+  "t": "Bataille de Tigranocerte"
  },
  {
   "y": -65,
@@ -2875,9 +3150,19 @@
   "t": "Naissance de Horace"
  },
  {
+  "y": -64,
+  "ico": "📜",
+  "t": "Pompée annexe la Syrie"
+ },
+ {
   "y": -60,
   "ico": "⚔️",
   "t": "Premier triumvirat : César, Pompée, Crassus"
+ },
+ {
+  "y": -59,
+  "ico": "📜",
+  "t": "César devient consul"
  },
  {
   "y": -55,
@@ -2885,9 +3170,19 @@
   "t": "César débarque en Bretagne"
  },
  {
+  "y": -54,
+  "ico": "📜",
+  "t": "Crassus tué à Carrhes"
+ },
+ {
   "y": -50,
   "ico": "⚔️",
   "t": "César achève la conquête de la Gaule"
+ },
+ {
+  "y": -49,
+  "ico": "📜",
+  "t": "César franchit le Rubicon"
  },
  {
   "y": -45,
@@ -2895,9 +3190,19 @@
   "t": "Le calendrier julien introduit"
  },
  {
+  "y": -44,
+  "ico": "📜",
+  "t": "Assassinat de César aux ides de mars"
+ },
+ {
   "y": -40,
   "ico": "⚔️",
   "t": "Marc-Antoine et Octave se partagent le pouvoir"
+ },
+ {
+  "y": -39,
+  "ico": "📜",
+  "t": "Pacte de Brundisium entre Octave et Marc-Antoine"
  },
  {
   "y": -35,
@@ -2905,9 +3210,19 @@
   "t": "Mort de Sextus Pompée"
  },
  {
+  "y": -34,
+  "ico": "📜",
+  "t": "Conquête de l'Égypte par Octave"
+ },
+ {
   "y": -30,
   "ico": "📜",
   "t": "Mort de Cléopâtre : l'Égypte devient romaine"
+ },
+ {
+  "y": -29,
+  "ico": "📜",
+  "t": "Octave reçoit le titre d'Auguste"
  },
  {
   "y": -25,
@@ -2915,9 +3230,19 @@
   "t": "Vitruve écrit De Architectura"
  },
  {
+  "y": -24,
+  "ico": "📜",
+  "t": "Campagne d'Auguste en Hispanie"
+ },
+ {
   "y": -20,
   "ico": "📜",
   "t": "Horace compose l'Art poétique"
+ },
+ {
+  "y": -19,
+  "ico": "📜",
+  "t": "Mort de Virgile"
  },
  {
   "y": -15,
@@ -2925,9 +3250,24 @@
   "t": "Rome annexe la Rhétie et le Norique"
  },
  {
+  "y": -14,
+  "ico": "📜",
+  "t": "Achèvement du Théâtre de Marcellus"
+ },
+ {
   "y": -10,
   "ico": "📜",
   "t": "Naissance de Jésus (datation traditionnelle)"
+ },
+ {
+  "y": -9,
+  "ico": "📜",
+  "t": "Mort de Drusus le Vieux"
+ },
+ {
+  "y": -4,
+  "ico": "📜",
+  "t": "Mort d'Hérode le Grand"
  },
  {
   "y": 1,
@@ -2940,9 +3280,19 @@
   "t": "Tibère défait les Germains à la bataille de la Forêt"
  },
  {
+  "y": 6,
+  "ico": "📜",
+  "t": "Judée devient province romaine"
+ },
+ {
   "y": 10,
   "ico": "📜",
   "t": "Ovide écrit Les Métamorphoses"
+ },
+ {
+  "y": 11,
+  "ico": "📜",
+  "t": "Ovide écrit l'Art d'aimer"
  },
  {
   "y": 15,
@@ -2950,9 +3300,19 @@
   "t": "Germanicus campagne en Germanie"
  },
  {
+  "y": 16,
+  "ico": "📜",
+  "t": "Bataille du fleuve Weser"
+ },
+ {
   "y": 20,
   "ico": "📜",
   "t": "Strabon termine sa Géographie"
+ },
+ {
+  "y": 21,
+  "ico": "📜",
+  "t": "Révolte de Sacrovir en Gaule"
  },
  {
   "y": 25,
@@ -2960,9 +3320,19 @@
   "t": "Dynastie Han restaurée (Han orientaux)"
  },
  {
+  "y": 26,
+  "ico": "📜",
+  "t": "Ponce Pilate devient préfet de Judée"
+ },
+ {
   "y": 30,
   "ico": "✝️",
   "t": "Crucifixion de Jésus (datation traditionnelle)"
+ },
+ {
+  "y": 31,
+  "ico": "📜",
+  "t": "Chute de Séjan"
  },
  {
   "y": 35,
@@ -2970,9 +3340,19 @@
   "t": "Révolte de Tacfarinas en Numidie"
  },
  {
+  "y": 36,
+  "ico": "📜",
+  "t": "Pilote renvoyé à Rome"
+ },
+ {
   "y": 40,
   "ico": "📜",
   "t": "Naissance de Pétrone"
+ },
+ {
+  "y": 41,
+  "ico": "📜",
+  "t": "Caligula assassiné"
  },
  {
   "y": 45,
@@ -2980,14 +3360,29 @@
   "t": "Saint Paul commence ses missions"
  },
  {
+  "y": 46,
+  "ico": "📜",
+  "t": "Naissance de Plutarque"
+ },
+ {
   "y": 50,
   "ico": "🏛️",
   "t": "Londinium (Londres) fondée par les Romains"
  },
  {
+  "y": 51,
+  "ico": "📜",
+  "t": "Conquête de la Bretagne par Claude"
+ },
+ {
   "y": 55,
   "ico": "📜",
   "t": "Naissance de Tacite"
+ },
+ {
+  "y": 56,
+  "ico": "📜",
+  "t": "Paul écrit ses épîtres"
  },
  {
   "y": 60,
@@ -3000,9 +3395,19 @@
   "t": "Sénèque se suicide sur ordre de Néron"
  },
  {
+  "y": 66,
+  "ico": "📜",
+  "t": "Grande Révolte juive commence"
+ },
+ {
   "y": 70,
   "ico": "⚔️",
   "t": "Destruction du Second Temple de Jérusalem"
+ },
+ {
+  "y": 71,
+  "ico": "📜",
+  "t": "Arc de Titus construit à Rome"
  },
  {
   "y": 75,
@@ -3010,9 +3415,19 @@
   "t": "Achèvement du Colisée (inachevé : débuté en 72)"
  },
  {
+  "y": 76,
+  "ico": "📜",
+  "t": "Naissance d'Hadrien"
+ },
+ {
   "y": 80,
   "ico": "🏛️",
   "t": "Inauguration du Colisée par Titus"
+ },
+ {
+  "y": 81,
+  "ico": "📜",
+  "t": "Mort de Titus de fièvre"
  },
  {
   "y": 85,
@@ -3020,9 +3435,14 @@
   "t": "Pline le Jeune écrit ses Lettres"
  },
  {
-  "y": 90,
-  "ico": "⚔️",
+  "y": 86,
+  "ico": "📜",
   "t": "Guerre dacique de Domitien"
+ },
+ {
+  "y": 91,
+  "ico": "📜",
+  "t": "Martial publie ses épigrammes"
  },
  {
   "y": 95,
@@ -3030,9 +3450,19 @@
   "t": "Mort de Martial"
  },
  {
+  "y": 96,
+  "ico": "📜",
+  "t": "Assassinat de Domitien"
+ },
+ {
   "y": 100,
   "ico": "📜",
   "t": "Ptolémée écrit l'Almageste"
+ },
+ {
+  "y": 101,
+  "ico": "📜",
+  "t": "Première guerre dacique de Trajan"
  },
  {
   "y": 105,
@@ -3040,9 +3470,19 @@
   "t": "Cai Lun standardise le papier en Chine"
  },
  {
+  "y": 106,
+  "ico": "📜",
+  "t": "Annexion de la Nabatée (Arabie)"
+ },
+ {
   "y": 110,
   "ico": "⚔️",
   "t": "Trajan conquiert la Dacie"
+ },
+ {
+  "y": 111,
+  "ico": "📜",
+  "t": "Pline le Jeune gouverneur de Bithynie"
  },
  {
   "y": 115,
@@ -3050,9 +3490,19 @@
   "t": "Trajan campagne en Mésopotamie"
  },
  {
+  "y": 116,
+  "ico": "📜",
+  "t": "Apogée de l'Empire romain sous Trajan"
+ },
+ {
   "y": 120,
   "ico": "🏛️",
   "t": "Le Panthéon de Rome achevé sous Hadrien"
+ },
+ {
+  "y": 121,
+  "ico": "📜",
+  "t": "Naissance de Marc Aurèle"
  },
  {
   "y": 125,
@@ -3060,9 +3510,19 @@
   "t": "Mort de Suétone"
  },
  {
+  "y": 126,
+  "ico": "📜",
+  "t": "Hadrien termine son grand voyage"
+ },
+ {
   "y": 130,
   "ico": "📜",
   "t": "Naissance de Galien à Pergame"
+ },
+ {
+  "y": 131,
+  "ico": "📜",
+  "t": "Fondation de la ville d'Antinoopolis"
  },
  {
   "y": 135,
@@ -3070,9 +3530,19 @@
   "t": "Révolte de Bar Kokhba écrasée"
  },
  {
+  "y": 136,
+  "ico": "📜",
+  "t": "Révolte juive de Bar Kokhba"
+ },
+ {
   "y": 140,
   "ico": "📜",
   "t": "Le Mur d'Hadrien fortifié"
+ },
+ {
+  "y": 141,
+  "ico": "📜",
+  "t": "Antonin le Pieux construit le Mur d'Antonin"
  },
  {
   "y": 145,
@@ -3080,9 +3550,19 @@
   "t": "Naissance de Septime Sévère"
  },
  {
+  "y": 146,
+  "ico": "📜",
+  "t": "Mort de l'empereur Antonin le Pieux"
+ },
+ {
   "y": 150,
   "ico": "📜",
   "t": "Ptolémée publie la Géographie"
+ },
+ {
+  "y": 151,
+  "ico": "📜",
+  "t": "Pausanias écrit sa Description de la Grèce"
  },
  {
   "y": 155,
@@ -3090,9 +3570,19 @@
   "t": "Guerre marcomane commence"
  },
  {
+  "y": 156,
+  "ico": "📜",
+  "t": "Guerre marcomane de Marc Aurèle"
+ },
+ {
   "y": 160,
   "ico": "📜",
   "t": "Mort de Lucien de Samosate"
+ },
+ {
+  "y": 161,
+  "ico": "📜",
+  "t": "Marc Aurèle devient empereur"
  },
  {
   "y": 165,
@@ -3100,9 +3590,19 @@
   "t": "Peste antonine : épidémie mondiale"
  },
  {
+  "y": 166,
+  "ico": "📜",
+  "t": "Première peste antonine"
+ },
+ {
   "y": 170,
   "ico": "⚔️",
   "t": "Marc Aurèle défend le limes du Danube"
+ },
+ {
+  "y": 171,
+  "ico": "📜",
+  "t": "Marc Aurèle défait les Marcomans"
  },
  {
   "y": 175,
@@ -3110,9 +3610,19 @@
   "t": "Naissance de Septime Sévère à Leptis Magna"
  },
  {
+  "y": 176,
+  "ico": "📜",
+  "t": "Colonne de Marc Aurèle érigée"
+ },
+ {
   "y": 180,
   "ico": "📜",
   "t": "Mort de Marc Aurèle : fin des Antonins"
+ },
+ {
+  "y": 181,
+  "ico": "📜",
+  "t": "Commode devient empereur"
  },
  {
   "y": 185,
@@ -3120,9 +3630,19 @@
   "t": "Révolte des Turmes en Bretagne"
  },
  {
+  "y": 186,
+  "ico": "📜",
+  "t": "Assassinat de Perennius"
+ },
+ {
   "y": 190,
   "ico": "📜",
   "t": "Début de l'anarchie militaire à Rome"
+ },
+ {
+  "y": 191,
+  "ico": "📜",
+  "t": "Début de l'anarchie militaire"
  },
  {
   "y": 195,
@@ -3130,9 +3650,19 @@
   "t": "Septime Sévère campagne en Mésopotamie"
  },
  {
+  "y": 196,
+  "ico": "📜",
+  "t": "Septime Sévère sacage Byzance"
+ },
+ {
   "y": 200,
   "ico": "📜",
   "t": "Compilation du Mishna en Judée"
+ },
+ {
+  "y": 201,
+  "ico": "📜",
+  "t": "Compilation du Mishna"
  },
  {
   "y": 205,
@@ -3140,9 +3670,19 @@
   "t": "Caracalla et Géta rivaux"
  },
  {
+  "y": 206,
+  "ico": "📜",
+  "t": "Construction des murailles d'Aurélien"
+ },
+ {
   "y": 210,
   "ico": "📜",
   "t": "Constitution Antoniniane : citoyenneté pour tous"
+ },
+ {
+  "y": 211,
+  "ico": "📜",
+  "t": "Mort de Septime Sévère à York"
  },
  {
   "y": 215,
@@ -3150,9 +3690,19 @@
   "t": "Mort de Clément d'Alexandrie"
  },
  {
+  "y": 216,
+  "ico": "📜",
+  "t": "Constitution Antoniniane"
+ },
+ {
   "y": 220,
   "ico": "⚔️",
   "t": "Fin de la dynastie Han en Chine"
+ },
+ {
+  "y": 221,
+  "ico": "📜",
+  "t": "Dynastie Shu-Han en Chine"
  },
  {
   "y": 225,
@@ -3160,9 +3710,19 @@
   "t": "Fondation de l'Empire sassanide en Perse"
  },
  {
+  "y": 226,
+  "ico": "📜",
+  "t": "Fondation de l'Empire sassanide"
+ },
+ {
   "y": 230,
   "ico": "📜",
   "t": "Origène écrit Contre Celse"
+ },
+ {
+  "y": 231,
+  "ico": "📜",
+  "t": "Guerres romano-perses"
  },
  {
   "y": 235,
@@ -3170,9 +3730,19 @@
   "t": "Début de la crise du IIIe siècle"
  },
  {
+  "y": 236,
+  "ico": "📜",
+  "t": "Début de l'anarchie militaire romaine"
+ },
+ {
   "y": 240,
   "ico": "📜",
   "t": "Mani fonde le manichéisme en Perse"
+ },
+ {
+  "y": 241,
+  "ico": "📜",
+  "t": "Guerre des Goths"
  },
  {
   "y": 245,
@@ -3180,9 +3750,19 @@
   "t": "Goths envahissent l'Empire romain"
  },
  {
+  "y": 246,
+  "ico": "📜",
+  "t": "Mani commence à prêcher"
+ },
+ {
   "y": 250,
   "ico": "🦠",
   "t": "Peste de Cyprien : épidémie majeure"
+ },
+ {
+  "y": 251,
+  "ico": "🦠",
+  "t": "Peste de Cyprien à Rome"
  },
  {
   "y": 255,
@@ -3190,9 +3770,19 @@
   "t": "Mort de Plotin, père du néoplatonisme"
  },
  {
+  "y": 256,
+  "ico": "📜",
+  "t": "Goths envahissent l'Asie Mineure"
+ },
+ {
   "y": 260,
   "ico": "⚔️",
   "t": "L'Empire de Palmyre s'indépendise"
+ },
+ {
+  "y": 261,
+  "ico": "📜",
+  "t": "Postumus fonde l'Empire des Gaules"
  },
  {
   "y": 265,
@@ -3200,9 +3790,19 @@
   "t": "Les Wei dominent la Chine du Nord"
  },
  {
+  "y": 266,
+  "ico": "📜",
+  "t": "Zénobie, reine de Palmyre"
+ },
+ {
   "y": 270,
   "ico": "⚔️",
   "t": "Aurélien reconstruit l'unité romaine"
+ },
+ {
+  "y": 271,
+  "ico": "📜",
+  "t": "Aurélien construit les murailles de Rome"
  },
  {
   "y": 275,
@@ -3210,9 +3810,19 @@
   "t": "Assassinat d'Aurélien"
  },
  {
+  "y": 276,
+  "ico": "📜",
+  "t": "Probus empereur"
+ },
+ {
   "y": 280,
   "ico": "⚔️",
   "t": "Jin unifient la Chine"
+ },
+ {
+  "y": 281,
+  "ico": "📜",
+  "t": "Réforme monétaire de Dioclétien"
  },
  {
   "y": 285,
@@ -3220,9 +3830,19 @@
   "t": "Dioclétien devient empereur"
  },
  {
+  "y": 286,
+  "ico": "📜",
+  "t": "Dioclétien partage l'Empire (Tétrarchie)"
+ },
+ {
   "y": 290,
   "ico": "📜",
   "t": "Tétrarchie établie"
+ },
+ {
+  "y": 291,
+  "ico": "📜",
+  "t": "Dioclétien et Maximien Augustes"
  },
  {
   "y": 295,
@@ -3230,9 +3850,19 @@
   "t": "Dioclétien réforme l'armée romaine"
  },
  {
+  "y": 296,
+  "ico": "📜",
+  "t": "Révolte d'Allectus en Bretagne"
+ },
+ {
   "y": 300,
   "ico": "📜",
   "t": "Rédaction du Talmud de Jérusalem"
+ },
+ {
+  "y": 301,
+  "ico": "📜",
+  "t": "Édit du Prix Maximum de Dioclétien"
  },
  {
   "y": 305,
@@ -3240,9 +3870,19 @@
   "t": "Édit de Dioclétien contre les chrétiens"
  },
  {
+  "y": 306,
+  "ico": "📜",
+  "t": "Constantin proclamé empereur à York"
+ },
+ {
   "y": 310,
   "ico": "⚔️",
   "t": "Constantin devient empereur"
+ },
+ {
+  "y": 311,
+  "ico": "📜",
+  "t": "Édit de tolérance de Galerius"
  },
  {
   "y": 315,
@@ -3250,9 +3890,19 @@
   "t": "Arc de Constantin érigé à Rome"
  },
  {
+  "y": 316,
+  "ico": "📜",
+  "t": "Constantin et Licinius se disputent l'Empire"
+ },
+ {
   "y": 320,
   "ico": "📜",
   "t": "L'Empire Gupta fonde en Inde"
+ },
+ {
+  "y": 321,
+  "ico": "📜",
+  "t": "Dimanche devient jour de repos officiel"
  },
  {
   "y": 325,
@@ -3260,9 +3910,19 @@
   "t": "Concile de Nicée : les évêques définissent le Credo"
  },
  {
+  "y": 326,
+  "ico": "📜",
+  "t": "Constantinople devient la Nouvelle Rome"
+ },
+ {
   "y": 330,
   "ico": "🏛️",
   "t": "Constantinople devient capitale de l'Empire"
+ },
+ {
+  "y": 331,
+  "ico": "📜",
+  "t": "Arius condamné au concile de Nicée"
  },
  {
   "y": 335,
@@ -3270,9 +3930,19 @@
   "t": "Mort d'Arius"
  },
  {
+  "y": 336,
+  "ico": "📜",
+  "t": "Premières célébrations de Noël le 25 décembre"
+ },
+ {
   "y": 340,
   "ico": "⚔️",
   "t": "Guerres des Goths sur le Danube"
+ },
+ {
+  "y": 341,
+  "ico": "📜",
+  "t": "Mort de Constantin le Grand"
  },
  {
   "y": 345,
@@ -3280,9 +3950,19 @@
   "t": "Naissance de Saint Jérôme"
  },
  {
+  "y": 346,
+  "ico": "📜",
+  "t": "Julien l'Apostat naît à Constantinople"
+ },
+ {
   "y": 350,
   "ico": "⚔️",
   "t": "Les Huns apparaissent en Europe"
+ },
+ {
+  "y": 351,
+  "ico": "📜",
+  "t": "Bataille de Mursa entre Constantin et Magnence"
  },
  {
   "y": 355,
@@ -3290,9 +3970,19 @@
   "t": "Saint Augustin naît à Hippone"
  },
  {
+  "y": 356,
+  "ico": "📜",
+  "t": "Julien proclame la liberté religieuse"
+ },
+ {
   "y": 360,
   "ico": "⚔️",
   "t": "Julien l'Apostat campagne en Perse"
+ },
+ {
+  "y": 361,
+  "ico": "📜",
+  "t": "Julien l'Apostat empereur"
  },
  {
   "y": 365,
@@ -3300,9 +3990,19 @@
   "t": "Séisme et tsunami en Crète et Alexandrie"
  },
  {
+  "y": 366,
+  "ico": "📜",
+  "t": "Damasus Ier pape"
+ },
+ {
   "y": 370,
   "ico": "⚔️",
   "t": "Les Huns détruisent l'Empire ostrogoth"
+ },
+ {
+  "y": 371,
+  "ico": "📜",
+  "t": "Mort de Saint Hilarion"
  },
  {
   "y": 375,
@@ -3310,9 +4010,19 @@
   "t": "Les Wisigoths demandent l'asile dans l'Empire"
  },
  {
+  "y": 376,
+  "ico": "📜",
+  "t": "Les Goths traversent le Danube"
+ },
+ {
   "y": 380,
   "ico": "✝️",
   "t": "Édit de Thessalonique : christianisme religion d'État"
+ },
+ {
+  "y": 381,
+  "ico": "📜",
+  "t": "Concile de Constantinople I"
  },
  {
   "y": 385,
@@ -3320,9 +4030,19 @@
   "t": "Saint Augustin se convertit au christianisme"
  },
  {
+  "y": 386,
+  "ico": "📜",
+  "t": "Saint Augustin se convertit"
+ },
+ {
   "y": 390,
   "ico": "⚔️",
   "t": "Massacre de Thessalonique par Théodose"
+ },
+ {
+  "y": 391,
+  "ico": "📜",
+  "t": "Théodose interdit les cultes païens"
  },
  {
   "y": 395,
@@ -3330,9 +4050,19 @@
   "t": "Division définitive de l'Empire romain"
  },
  {
+  "y": 396,
+  "ico": "📜",
+  "t": "Alaric Ier roi des Wisigoths"
+ },
+ {
   "y": 400,
   "ico": "📜",
   "t": "Saint Jérôme traduit la Bible en latin (Vulgate)"
+ },
+ {
+  "y": 401,
+  "ico": "📜",
+  "t": "Première invasion visigothique de l'Italie"
  },
  {
   "y": 405,
@@ -3340,9 +4070,19 @@
   "t": "Invasions des Vandales, Suèves, Alains en Gaule"
  },
  {
+  "y": 406,
+  "ico": "📜",
+  "t": "Les Vandales traversent le Rhin gelé"
+ },
+ {
   "y": 410,
   "ico": "⚔️",
   "t": "Sacs de Rome par les Wisigoths d'Alaric"
+ },
+ {
+  "y": 411,
+  "ico": "📜",
+  "t": "Les Vandales s'installent en Espagne"
  },
  {
   "y": 415,
@@ -3350,9 +4090,19 @@
   "t": "Saint Patrick commence sa mission en Irlande"
  },
  {
+  "y": 416,
+  "ico": "📜",
+  "t": "Les Wisigoths combattent pour Rome"
+ },
+ {
   "y": 420,
   "ico": "📜",
   "t": "Rédaction de la littérature védique tardive"
+ },
+ {
+  "y": 421,
+  "ico": "📜",
+  "t": "Fondation de Venise (tradition alternative)"
  },
  {
   "y": 425,
@@ -3360,14 +4110,29 @@
   "t": "Fondation de l'Empire hunnique en Europe"
  },
  {
+  "y": 426,
+  "ico": "📜",
+  "t": "Saint Augustin écrit La Cité de Dieu"
+ },
+ {
   "y": 430,
   "ico": "📜",
   "t": "Mort de Saint Augustin à Hippone"
  },
  {
+  "y": 431,
+  "ico": "📜",
+  "t": "Concile d'Éphèse"
+ },
+ {
   "y": 435,
   "ico": "⚔️",
   "t": "Attila devient roi des Huns"
+ },
+ {
+  "y": 436,
+  "ico": "📜",
+  "t": "Aetius défait les Burgondes"
  },
  {
   "y": 440,
@@ -3378,6 +4143,11 @@
   "y": 445,
   "ico": "📜",
   "t": "Législation contre les hérétiques dans l'Empire"
+ },
+ {
+  "y": 446,
+  "ico": "📜",
+  "t": "Bretagne coupée de Rome"
  },
  {
   "y": 450,
@@ -3395,9 +4165,19 @@
   "t": "Vandales sacage Rome"
  },
  {
+  "y": 456,
+  "ico": "📜",
+  "t": "Les Suèves vaincus en Espagne"
+ },
+ {
   "y": 460,
   "ico": "📜",
   "t": "Mort de Saint Patrick"
+ },
+ {
+  "y": 461,
+  "ico": "📜",
+  "t": "Mort de Saint Léon le Grand"
  },
  {
   "y": 465,
@@ -3405,9 +4185,19 @@
   "t": "Fin de l'Empire hunnique (mort de Attila en 453)"
  },
  {
+  "y": 466,
+  "ico": "📜",
+  "t": "Euric roi des Wisigoths"
+ },
+ {
   "y": 470,
   "ico": "📜",
   "t": "Clovis naît à Tournai"
+ },
+ {
+  "y": 471,
+  "ico": "📜",
+  "t": "Naissance de Clovis"
  },
  {
   "y": 475,
@@ -3435,9 +4225,19 @@
   "t": "Clovis devient roi des Francs Salii"
  },
  {
+  "y": 486,
+  "ico": "📜",
+  "t": "Clovis bat Syagrius à Soissons"
+ },
+ {
   "y": 490,
   "ico": "⚔️",
   "t": "Clovis unit les Francs"
+ },
+ {
+  "y": 491,
+  "ico": "📜",
+  "t": "Anastase Ier empereur byzantin"
  },
  {
   "y": 495,
@@ -3455,9 +4255,19 @@
   "t": "Aryabhata écrit ses mathématiques en Inde"
  },
  {
+  "y": 501,
+  "ico": "📜",
+  "t": "Théodoric le Grand roi des Ostrogoths"
+ },
+ {
   "y": 505,
   "ico": "⚔️",
   "t": "Guerres de Clovis contre les Alamans"
+ },
+ {
+  "y": 506,
+  "ico": "📜",
+  "t": "Alaric II publie le Bréviaire d'Alaric"
  },
  {
   "y": 510,
@@ -3475,14 +4285,29 @@
   "t": "Rédaction de l'Anonyme de Valois (Itinéraire d'Alexandrie)"
  },
  {
+  "y": 516,
+  "ico": "📜",
+  "t": "Rédaction du Codex Argenteus (Gothique)"
+ },
+ {
   "y": 520,
   "ico": "📜",
   "t": "Benoît de Nursie fonde le monastère du Mont-Cassin"
  },
  {
+  "y": 521,
+  "ico": "📜",
+  "t": "Naissance de Saint Colomban"
+ },
+ {
   "y": 525,
   "ico": "⚔️",
   "t": "Bataille de Vézeronce : Francs en Bourgogne"
+ },
+ {
+  "y": 526,
+  "ico": "📜",
+  "t": "Mort de Théodoric le Grand"
  },
  {
   "y": 529,
@@ -3495,9 +4320,19 @@
   "t": "Compilation du Corpus Juris Civilis par Justinien"
  },
  {
+  "y": 531,
+  "ico": "📜",
+  "t": "Chosroès Ier roi de Perse"
+ },
+ {
   "y": 535,
   "ico": "⚔️",
   "t": "Justinien lance la reconquête de l'Italie (Goths)"
+ },
+ {
+  "y": 536,
+  "ico": "🌡️",
+  "t": "Événement climatique de 536 (obscurité globale)"
  },
  {
   "y": 537,
@@ -3510,9 +4345,19 @@
   "t": "Peste de Justinien commence"
  },
  {
+  "y": 541,
+  "ico": "🦠",
+  "t": "Peste de Justinien arrive en Égypte"
+ },
+ {
   "y": 545,
   "ico": "📜",
   "t": "Mort de Saint Benoît"
+ },
+ {
+  "y": 546,
+  "ico": "🦠",
+  "t": "Peste de Justinien à Rome"
  },
  {
   "y": 548,
@@ -3523,6 +4368,11 @@
   "y": 550,
   "ico": "📜",
   "t": "Procope de Césarée écrit ses Histoires secrètes"
+ },
+ {
+  "y": 551,
+  "ico": "📜",
+  "t": "Goths vaincus définitivement en Italie"
  },
  {
   "y": 552,
@@ -3538,6 +4388,11 @@
   "y": 555,
   "ico": "⚔️",
   "t": "Fin de la guerre gothique : Italie reprise"
+ },
+ {
+  "y": 556,
+  "ico": "📜",
+  "t": "Concile de Constantinople II"
  },
  {
   "y": 558,
@@ -3570,6 +4425,11 @@
   "t": "Naissance de Mahomet à La Mecque"
  },
  {
+  "y": 571,
+  "ico": "📜",
+  "t": "Les Avars apparaissent en Europe"
+ },
+ {
   "y": 572,
   "ico": "⚔️",
   "t": "Guerre entre Byzance et les Perses"
@@ -3600,6 +4460,11 @@
   "t": "Lombards installés en Italie du Nord"
  },
  {
+  "y": 586,
+  "ico": "📜",
+  "t": "Révolte des Gepides contre les Avars"
+ },
+ {
   "y": 587,
   "ico": "✝️",
   "t": "Conversion des Wisigoths au catholicisme"
@@ -3608,6 +4473,11 @@
   "y": 590,
   "ico": "🦠",
   "t": "Peste bubonique en Europe"
+ },
+ {
+  "y": 591,
+  "ico": "📜",
+  "t": "Chosroès II roi de Perse"
  },
  {
   "y": 592,
@@ -3620,6 +4490,11 @@
   "t": "Mort de Grégoire de Tours"
  },
  {
+  "y": 596,
+  "ico": "📜",
+  "t": "Saint Augustin de Canterbury arrive en Angleterre"
+ },
+ {
   "y": 597,
   "ico": "✝️",
   "t": "Saint Augustin de Canterbury évangélise l'Angleterre"
@@ -3628,6 +4503,11 @@
   "y": 600,
   "ico": "📜",
   "t": "Premiers poèmes en vieil anglais"
+ },
+ {
+  "y": 601,
+  "ico": "📜",
+  "t": "Rédaction de l'Isidore de Séville"
  },
  {
   "y": 602,
@@ -3640,6 +4520,11 @@
   "t": "Construction de la Grande Mosquée de Damas commence"
  },
  {
+  "y": 606,
+  "ico": "📜",
+  "t": "Mahomet commence à recevoir des révélations"
+ },
+ {
   "y": 607,
   "ico": "🏛️",
   "t": "Hanyu, premier temple bouddhiste du Japon"
@@ -3648,6 +4533,11 @@
   "y": 610,
   "ico": "✝️",
   "t": "Mahomet commence à prêcher à La Mecque"
+ },
+ {
+  "y": 611,
+  "ico": "📜",
+  "t": "Les Perses sacent Antioche"
  },
  {
   "y": 612,
@@ -3660,6 +4550,11 @@
   "t": "Mort de Saint Colomban"
  },
  {
+  "y": 616,
+  "ico": "📜",
+  "t": "Les Perses sacent Jérusalem"
+ },
+ {
   "y": 617,
   "ico": "📜",
   "t": "Les Sui s'effondrent en Chine"
@@ -3668,6 +4563,11 @@
   "y": 620,
   "ico": "📜",
   "t": "Mahomet fuit à Médine (Hégire en 622)"
+ },
+ {
+  "y": 621,
+  "ico": "📜",
+  "t": "Mahomet à Médine"
  },
  {
   "y": 622,
@@ -3680,6 +4580,11 @@
   "t": "Rédaction du Coran (compilation postérieure)"
  },
  {
+  "y": 626,
+  "ico": "⚔️",
+  "t": "Siège de Constantinople par les Avars et les Perses"
+ },
+ {
   "y": 627,
   "ico": "⚔️",
   "t": "Bataille de Ninive : Byzance bat les Perses"
@@ -3688,6 +4593,11 @@
   "y": 630,
   "ico": "✝️",
   "t": "Mahomet reprend La Mecque"
+ },
+ {
+  "y": 631,
+  "ico": "📜",
+  "t": "L'Arabie unifiée sous l'Islam"
  },
  {
   "y": 632,
@@ -3700,6 +4610,11 @@
   "t": "Mort de Saint Amand"
  },
  {
+  "y": 636,
+  "ico": "⚔️",
+  "t": "Bataille de Yarmouk : conquête arabe de la Syrie"
+ },
+ {
   "y": 637,
   "ico": "⚔️",
   "t": "Les Arabes prennent Ctésiphon"
@@ -3708,6 +4623,11 @@
   "y": 640,
   "ico": "📜",
   "t": "Rédaction du Livre des Morts égyptien (copie tardive)"
+ },
+ {
+  "y": 641,
+  "ico": "📜",
+  "t": "Conquête arabe de l'Égypte"
  },
  {
   "y": 642,
@@ -3720,6 +4640,11 @@
   "t": "Concile de Chalon-sur-Saône"
  },
  {
+  "y": 646,
+  "ico": "📜",
+  "t": "Réforme Taika au Japon"
+ },
+ {
   "y": 647,
   "ico": "📜",
   "t": "Expansion arabe en Afrique du Nord"
@@ -3728,6 +4653,11 @@
   "y": 650,
   "ico": "📜",
   "t": "Le Coran est compilé sous Othman"
+ },
+ {
+  "y": 651,
+  "ico": "📜",
+  "t": "Compilation du Coran sous Uthman"
  },
  {
   "y": 652,
@@ -3740,6 +4670,11 @@
   "t": "Bataille navale des Mâts contre Constantinople"
  },
  {
+  "y": 656,
+  "ico": "📜",
+  "t": "Meurtre d'Uthman : première fitna"
+ },
+ {
   "y": 657,
   "ico": "⚔️",
   "t": "Bataille de Siffin (schisme musulman)"
@@ -3748,6 +4683,11 @@
   "y": 660,
   "ico": "📜",
   "t": "Mort de Saint Chrodegang"
+ },
+ {
+  "y": 661,
+  "ico": "📜",
+  "t": "Meurtre d'Ali : début du califat omeyyade"
  },
  {
   "y": 662,
@@ -3760,6 +4700,11 @@
   "t": "Mort de Saint Firmin"
  },
  {
+  "y": 666,
+  "ico": "📜",
+  "t": "Les Arabes atteignent l'Afghanistan"
+ },
+ {
   "y": 667,
   "ico": "⚔️",
   "t": "Premier siège arabe de Constantinople"
@@ -3768,6 +4713,11 @@
   "y": 670,
   "ico": "📜",
   "t": "Fondation de Kairouan en Tunisie"
+ },
+ {
+  "y": 671,
+  "ico": "📜",
+  "t": "Les Arabes atteignent l'Asie centrale"
  },
  {
   "y": 672,
@@ -3780,14 +4730,19 @@
   "t": "Rédaction de l'Évangile de Lindisfarne"
  },
  {
-  "y": 677,
+  "y": 676,
   "ico": "📜",
-  "t": "Les Arabes atteignent l'Asie centrale"
+  "t": "Bulgarie devient un royaume indépendant"
  },
  {
   "y": 680,
   "ico": "⚔️",
   "t": "Bataille de Karbala (chiisme/sunnisme)"
+ },
+ {
+  "y": 681,
+  "ico": "📜",
+  "t": "Bulgarie reconnue par Byzance"
  },
  {
   "y": 682,
@@ -3800,6 +4755,11 @@
   "t": "Fondation du royaume de Silla unifié en Corée"
  },
  {
+  "y": 686,
+  "ico": "📜",
+  "t": "Construction du Dôme du Rocher"
+ },
+ {
   "y": 687,
   "ico": "📜",
   "t": "Pépin de Herstal, maire du palais unique"
@@ -3808,6 +4768,11 @@
   "y": 690,
   "ico": "📜",
   "t": "Construction de la Mosquée des Omeyyades à Damas"
+ },
+ {
+  "y": 691,
+  "ico": "📜",
+  "t": "Mosquée des Omeyyades à Damas"
  },
  {
   "y": 692,
@@ -3820,6 +4785,11 @@
   "t": "Fondation du royaume du Champa au Vietnam"
  },
  {
+  "y": 696,
+  "ico": "📜",
+  "t": "Réforme monétaire omeyyade"
+ },
+ {
   "y": 697,
   "ico": "📜",
   "t": "Fondation de Venise (tradition)"
@@ -3830,14 +4800,19 @@
   "t": "L'empire du Ghana naît en Afrique de l'Ouest"
  },
  {
-  "y": 702,
+  "y": 701,
   "ico": "📜",
-  "t": "Réforme monétaire omeyyade"
+  "t": "Fondation de Kairouan"
  },
  {
   "y": 705,
   "ico": "📜",
   "t": "Mort de Saint Willibrord"
+ },
+ {
+  "y": 706,
+  "ico": "📜",
+  "t": "Mosquée des Omeyyades de Damas achevée"
  },
  {
   "y": 707,
@@ -3850,6 +4825,11 @@
   "t": "Nara devient capitale du Japon"
  },
  {
+  "y": 711,
+  "ico": "📜",
+  "t": "Tarik ibn Ziyad traverse Gibraltar"
+ },
+ {
   "y": 712,
   "ico": "📜",
   "t": "Les Arabes envahissent l'Espagne wisigothe"
@@ -3858,6 +4838,11 @@
   "y": 715,
   "ico": "📜",
   "t": "Mort de Saint Boniface... (en 754 réellement)"
+ },
+ {
+  "y": 716,
+  "ico": "📜",
+  "t": "Les Arabes prennent Lisbonne"
  },
  {
   "y": 717,
@@ -3870,6 +4855,11 @@
   "t": "Compilation du Nihon Shoki (chronique japonaise)"
  },
  {
+  "y": 721,
+  "ico": "⚔️",
+  "t": "Bataille de Toulouse : Eudes bat les Arabes"
+ },
+ {
   "y": 722,
   "ico": "📜",
   "t": "Bataille de Covadonga (Reconquista)"
@@ -3878,6 +4868,11 @@
   "y": 725,
   "ico": "📜",
   "t": "Les Beatus copient l'Apocalypse"
+ },
+ {
+  "y": 726,
+  "ico": "📜",
+  "t": "Léon III commence l'iconoclasme"
  },
  {
   "y": 727,
@@ -3890,6 +4885,11 @@
   "t": "Rédaction du Livre des Miracles de Saint James"
  },
  {
+  "y": 731,
+  "ico": "📜",
+  "t": "Bède le Vénérable achève son Histoire ecclésiastique"
+ },
+ {
   "y": 732,
   "ico": "⚔️",
   "t": "Bataille de Poitiers : Charles Martel arrête les Arabes"
@@ -3898,6 +4898,11 @@
   "y": 735,
   "ico": "📜",
   "t": "Mort de Bède le Vénérable"
+ },
+ {
+  "y": 736,
+  "ico": "📜",
+  "t": "Les Arabes atteignent l'Asie centrale et l'Inde"
  },
  {
   "y": 737,
@@ -3910,6 +4915,11 @@
   "t": "Rédaction du Livre des Morts éthiopien"
  },
  {
+  "y": 741,
+  "ico": "📜",
+  "t": "Mort de Charles Martel"
+ },
+ {
   "y": 742,
   "ico": "👑",
   "t": "Naissance de Charlemagne"
@@ -3920,7 +4930,7 @@
   "t": "Les Abbasides déplacent la capitale à Bagdad"
  },
  {
-  "y": 747,
+  "y": 746,
   "ico": "📜",
   "t": "Révolte abbasside en Perse"
  },
@@ -5735,6 +6745,11 @@
   "t": "Zheng He part pour son premier voyage maritime"
  },
  {
+  "y": 1407,
+  "ico": "📜",
+  "t": "Assassinat de Louis d'Orléans"
+ },
+ {
   "y": 1408,
   "ico": "📜",
   "t": "Jan Hus prêche à Prague"
@@ -6660,6 +7675,11 @@
   "t": "La Méduse... non : Le tabac à priser décline"
  },
  {
+  "y": 1852,
+  "ico": "📜",
+  "t": "Napoléon III devient empereur"
+ },
+ {
   "y": 1855,
   "ico": "📜",
   "t": "Livingstone explore l'Afrique"
@@ -6703,6 +7723,11 @@
   "y": 1875,
   "ico": "📜",
   "t": "Bizet compose Carmen"
+ },
+ {
+  "y": 1877,
+  "ico": "📜",
+  "t": "Edison invente le phonographe"
  },
  {
   "y": 1880,
@@ -6755,6 +7780,11 @@
   "t": "Premier film de science-fiction (Voyage dans la Lune de Méliès)"
  },
  {
+  "y": 1905,
+  "ico": "📜",
+  "t": "Einstein publie la relativité restreinte"
+ },
+ {
   "y": 1907,
   "ico": "📜",
   "t": "Cubisme introduit par Picasso (Les Demoiselles d'Avignon)"
@@ -6775,14 +7805,34 @@
   "t": "Einstein publie la relativité générale"
  },
  {
+  "y": 1916,
+  "ico": "📜",
+  "t": "Bataille de Verdun"
+ },
+ {
+  "y": 1919,
+  "ico": "📜",
+  "t": "Traité de Versailles signé"
+ },
+ {
   "y": 1920,
   "ico": "📜",
   "t": "La 19e amendement accorde le vote aux Américaines"
  },
  {
+  "y": 1922,
+  "ico": "📜",
+  "t": "Découverte de la tombe de Toutânkhamon"
+ },
+ {
   "y": 1925,
   "ico": "📜",
   "t": "Heisenberg formule la mécanique quantique"
+ },
+ {
+  "y": 1927,
+  "ico": "📜",
+  "t": "Le Chanteur de jazz, premier film parlant"
  },
  {
   "y": 1930,
@@ -6808,6 +7858,11 @@
   "y": 1940,
   "ico": "📜",
   "t": "Bataille d'Angleterre"
+ },
+ {
+  "y": 1942,
+  "ico": "📜",
+  "t": "Bataille de Midway"
  },
  {
   "y": 1947,
@@ -6863,6 +7918,11 @@
   "y": 1973,
   "ico": "📜",
   "t": "Guerre du Kippour"
+ },
+ {
+  "y": 1975,
+  "ico": "📜",
+  "t": "Fin de la guerre du Vietnam"
  },
  {
   "y": 1978,
@@ -6940,9 +8000,19 @@
   "t": "Élection du pape François"
  },
  {
+  "y": 2015,
+  "ico": "📜",
+  "t": "Accord de Paris sur le climat"
+ },
+ {
   "y": 2018,
   "ico": "📜",
   "t": "France championne du monde de football"
+ },
+ {
+  "y": 2022,
+  "ico": "📜",
+  "t": "Invasion russe de l'Ukraine"
  },
  {
   "y": 2024,
@@ -6953,5 +8023,1480 @@
   "y": 2025,
   "ico": "📜",
   "t": "IA générative omniprésente dans la société"
+ },
+ {
+  "y": -753,
+  "ico": "🏛️",
+  "t": "Fondation légendaire de Rome"
+ },
+ {
+  "y": -480,
+  "ico": "🚢",
+  "t": "Bataille de Salamine"
+ },
+ {
+  "y": -338,
+  "ico": "👑",
+  "t": "Philippe II domine la Grèce à Chéronée"
+ },
+ {
+  "y": -146,
+  "ico": "🔥",
+  "t": "Destruction de Carthage par Rome"
+ },
+ {
+  "y": 486,
+  "ico": "⚔️",
+  "t": "Victoire de Clovis à Soissons"
+ },
+ {
+  "y": 732,
+  "ico": "🛡️",
+  "t": "Charles Martel arrête les Arabes à Poitiers"
+ },
+ {
+  "y": 843,
+  "ico": "📜",
+  "t": "Traité de Verdun : partage de l'Empire"
+ },
+ {
+  "y": 987,
+  "ico": "👑",
+  "t": "Hugues Capet est élu roi de France"
+ },
+ {
+  "y": 1054,
+  "ico": "✝️",
+  "t": "Schisme entre Églises d'Orient et d'Occident"
+ },
+ {
+  "y": 1099,
+  "ico": "🏰",
+  "t": "Les croisés prennent Jérusalem"
+ },
+ {
+  "y": 1152,
+  "ico": "💍",
+  "t": "Mariage d'Aliénor d'Aquitaine et d'Henri Plantagenêt"
+ },
+ {
+  "y": 1214,
+  "ico": "🦁",
+  "t": "Victoire de Philippe Auguste à Bouvines"
+ },
+ {
+  "y": 1258,
+  "ico": "🕌",
+  "t": "Prise de Bagdad par les Mongols"
+ },
+ {
+  "y": 1306,
+  "ico": "⚔️",
+  "t": "Jacques de Molay devient grand maître du Temple"
+ },
+ {
+  "y": 1337,
+  "ico": "🏹",
+  "t": "Début de la guerre de Cent Ans"
+ },
+ {
+  "y": 1358,
+  "ico": "✊",
+  "t": "Grande jacquerie des paysans français"
+ },
+ {
+  "y": 1382,
+  "ico": "🔔",
+  "t": "Révolte des Maillotins à Paris"
+ },
+ {
+  "y": 1415,
+  "ico": "⚜️",
+  "t": "Défaite française d'Azincourt"
+ },
+ {
+  "y": 1431,
+  "ico": "🔥",
+  "t": "Jeanne d'Arc est brûlée à Rouen"
+ },
+ {
+  "y": 1440,
+  "ico": "🖨️",
+  "t": "Gutenberg met au point l'imprimerie"
+ },
+ {
+  "y": 1455,
+  "ico": "📕",
+  "t": "Impression de la Bible de Gutenberg"
+ },
+ {
+  "y": 1461,
+  "ico": "👑",
+  "t": "Louis XI devient roi de France"
+ },
+ {
+  "y": 1476,
+  "ico": "🎪",
+  "t": "Premières imprimeries à Paris"
+ },
+ {
+  "y": 1483,
+  "ico": "🎨",
+  "t": "Naissance de Raphaël"
+ },
+ {
+  "y": 1485,
+  "ico": "🚢",
+  "t": "Fin de la dynastie des Plantagenêt en Angleterre"
+ },
+ {
+  "y": 1494,
+  "ico": "📜",
+  "t": "Traité de Tordesillas"
+ },
+ {
+  "y": 1498,
+  "ico": "⛵",
+  "t": "Vasco de Gama atteint l'Inde"
+ },
+ {
+  "y": 1502,
+  "ico": "🗺️",
+  "t": "Le nom « America » apparaît sur une carte"
+ },
+ {
+  "y": 1519,
+  "ico": "⛵",
+  "t": "Début de l'expédition de Magellan"
+ },
+ {
+  "y": 1522,
+  "ico": "🌍",
+  "t": "Premier tour du monde achevé par Elcano"
+ },
+ {
+  "y": 1534,
+  "ico": "⚖️",
+  "t": "Acte de suprématie d'Henri VIII en Angleterre"
+ },
+ {
+  "y": 1543,
+  "ico": "🔭",
+  "t": "Copernic publie son système héliocentrique"
+ },
+ {
+  "y": 1558,
+  "ico": "👑",
+  "t": "Début du règne d'Élisabeth Ire d'Angleterre"
+ },
+ {
+  "y": 1562,
+  "ico": "⚔️",
+  "t": "Début des guerres de Religion en France"
+ },
+ {
+  "y": 1572,
+  "ico": "🔪",
+  "t": "Massacre de la Saint-Barthélemy"
+ },
+ {
+  "y": 1582,
+  "ico": "📅",
+  "t": "Réforme grégorienne du calendrier"
+ },
+ {
+  "y": 1588,
+  "ico": "🌊",
+  "t": "Destruction de l'Invincible Armada"
+ },
+ {
+  "y": 1598,
+  "ico": "🕊️",
+  "t": "Édit de Nantes signé par Henri IV"
+ },
+ {
+  "y": 1600,
+  "ico": "🏰",
+  "t": "Fondation de la Compagnie des Indes orientales"
+ },
+ {
+  "y": 1605,
+  "ico": "🖋️",
+  "t": "Publication de Don Quichotte"
+ },
+ {
+  "y": 1610,
+  "ico": "🪐",
+  "t": "Galilée observe les lunes de Jupiter"
+ },
+ {
+  "y": 1618,
+  "ico": "💥",
+  "t": "Début de la guerre de Trente Ans"
+ },
+ {
+  "y": 1623,
+  "ico": "🎭",
+  "t": "Premier folio de Shakespeare"
+ },
+ {
+  "y": 1632,
+  "ico": "⚔️",
+  "t": "Bataille de Lützen et mort de Gustave-Adolphe"
+ },
+ {
+  "y": 1643,
+  "ico": "👶",
+  "t": "Louis XIV devient roi à cinq ans"
+ },
+ {
+  "y": 1648,
+  "ico": "🕊️",
+  "t": "Traités de Westphalie"
+ },
+ {
+  "y": 1649,
+  "ico": "⚖️",
+  "t": "Exécution de Charles Ier d'Angleterre"
+ },
+ {
+  "y": 1653,
+  "ico": "⚓",
+  "t": "Début des guerres anglo-néerlandaises"
+ },
+ {
+  "y": 1661,
+  "ico": "💰",
+  "t": "Arrestation de Fouquet à Nantes"
+ },
+ {
+  "y": 1664,
+  "ico": "🎭",
+  "t": "Molière crée Le Tartuffe"
+ },
+ {
+  "y": 1672,
+  "ico": "🏝️",
+  "t": "Révolution d'Orange aux Provinces-Unies"
+ },
+ {
+  "y": 1685,
+  "ico": "✝️",
+  "t": "Révocation de l'édit de Nantes"
+ },
+ {
+  "y": 1687,
+  "ico": "⚛️",
+  "t": "Newton publie les Principia"
+ },
+ {
+  "y": 1698,
+  "ico": "🪵",
+  "t": "Pierre le Grand fonde Saint-Pétersbourg en 1703"
+ },
+ {
+  "y": 1701,
+  "ico": "👑",
+  "t": "Frédéric Ier devient roi de Prusse"
+ },
+ {
+  "y": 1704,
+  "ico": "⚔️",
+  "t": "Bataille de Blenheim"
+ },
+ {
+  "y": 1715,
+  "ico": "⚰️",
+  "t": "Mort de Louis XIV"
+ },
+ {
+  "y": 1721,
+  "ico": "🏳️",
+  "t": "Paix de Nystad : la Russie devient impériale"
+ },
+ {
+  "y": 1738,
+  "ico": "⚒️",
+  "t": "Invention de la machine à filer par John Kay"
+ },
+ {
+  "y": 1740,
+  "ico": "👑",
+  "t": "Marie-Thérèse d'Autriche monte sur le trône"
+ },
+ {
+  "y": 1751,
+  "ico": "📚",
+  "t": "Début de l'Encyclopédie de Diderot"
+ },
+ {
+  "y": 1756,
+  "ico": "🎭",
+  "t": "Naissance de Mozart"
+ },
+ {
+  "y": 1762,
+  "ico": "📖",
+  "t": "Rousseau publie Du contrat social"
+ },
+ {
+  "y": 1769,
+  "ico": "🚂",
+  "t": "Cugnot présente le fardier à vapeur"
+ },
+ {
+  "y": 1770,
+  "ico": "🎵",
+  "t": "Naissance de Beethoven"
+ },
+ {
+  "y": 1774,
+  "ico": "👑",
+  "t": "Louis XVI monte sur le trône"
+ },
+ {
+  "y": 1776,
+  "ico": "🇺🇸",
+  "t": "Déclaration d'indépendance des États-Unis"
+ },
+ {
+  "y": 1783,
+  "ico": "🎈",
+  "t": "Premier vol des frères Montgolfier"
+ },
+ {
+  "y": 1787,
+  "ico": "⚖️",
+  "t": "Convention constitutionnelle de Philadelphie"
+ },
+ {
+  "y": 1791,
+  "ico": "🎵",
+  "t": "Mort de Mozart"
+ },
+ {
+  "y": 1792,
+  "ico": "🇫🇷",
+  "t": "Proclamation de la Première République française"
+ },
+ {
+  "y": 1794,
+  "ico": "⚖️",
+  "t": "Exécution de Robespierre"
+ },
+ {
+  "y": 1796,
+  "ico": "💉",
+  "t": "Jenner pratique la première vaccination"
+ },
+ {
+  "y": 1799,
+  "ico": "📜",
+  "t": "Bonaparte prend le pouvoir au 18 Brumaire"
+ },
+ {
+  "y": 1801,
+  "ico": "🌐",
+  "t": "Union Act entre Grande-Bretagne et Irlande"
+ },
+ {
+  "y": 1802,
+  "ico": "🏆",
+  "t": "Création de la Légion d'honneur en 1802"
+ },
+ {
+  "y": 1803,
+  "ico": "🛒",
+  "t": "Vente de la Louisiane aux États-Unis"
+ },
+ {
+  "y": 1806,
+  "ico": "🏛️",
+  "t": "Construction de l'Arc de Triomphe décidée"
+ },
+ {
+  "y": 1808,
+  "ico": "🖼️",
+  "t": "Goya peint Tres de Mayo"
+ },
+ {
+  "y": 1810,
+  "ico": "🇲🇽",
+  "t": "Début de l'indépendance du Mexique"
+ },
+ {
+  "y": 1812,
+  "ico": "❄️",
+  "t": "Retraite de Russie de Napoléon"
+ },
+ {
+  "y": 1814,
+  "ico": "👑",
+  "t": "Restauration : retour de Louis XVIII"
+ },
+ {
+  "y": 1819,
+  "ico": "🖼️",
+  "t": "Goya peint le Tres de Mayo"
+ },
+ {
+  "y": 1820,
+  "ico": "🎵",
+  "t": "Naissance de Florence Nightingale"
+ },
+ {
+  "y": 1821,
+  "ico": "🏛️",
+  "t": "Indépendance de la Grèce proclamée"
+ },
+ {
+  "y": 1823,
+  "ico": "📜",
+  "t": "Doctrine Monroe"
+ },
+ {
+  "y": 1824,
+  "ico": "🖼️",
+  "t": "Décès de Byron en Grèce"
+ },
+ {
+  "y": 1825,
+  "ico": "🚂",
+  "t": "Première ligne ferroviaire publique (Stockton-Darlington)"
+ },
+ {
+  "y": 1829,
+  "ico": "🎼",
+  "t": "Mendelssohn redécouvre la Passion selon saint Matthieu"
+ },
+ {
+  "y": 1830,
+  "ico": "🇧🇪",
+  "t": "Indépendance de la Belgique"
+ },
+ {
+  "y": 1831,
+  "ico": "📖",
+  "t": "Victor Hugo publie Notre-Dame de Paris"
+ },
+ {
+  "y": 1832,
+  "ico": "💉",
+  "t": "Épidémie de choléra en Europe"
+ },
+ {
+  "y": 1836,
+  "ico": "⚔️",
+  "t": "Siège de l'Alamo au Texas"
+ },
+ {
+  "y": 1839,
+  "ico": "📷",
+  "t": "Daguerre présente le daguerréotype"
+ },
+ {
+  "y": 1840,
+  "ico": "✉️",
+  "t": "Premier timbre-poste (Penny Black)"
+ },
+ {
+  "y": 1841,
+  "ico": "📰",
+  "t": "Naissance du Daily Telegraph"
+ },
+ {
+  "y": 1842,
+  "ico": "🏛️",
+  "t": "Ouverture du British Museum au public élargi"
+ },
+ {
+  "y": 1845,
+  "ico": "🥔",
+  "t": "Grande famine en Irlande"
+ },
+ {
+  "y": 1846,
+  "ico": "⚔️",
+  "t": "Guerre américano-mexicaine"
+ },
+ {
+  "y": 1848,
+  "ico": "✊",
+  "t": "Printemps des peuples en Europe"
+ },
+ {
+  "y": 1849,
+  "ico": "🛡️",
+  "t": "Mort de Chopin"
+ },
+ {
+  "y": 1851,
+  "ico": "🔭",
+  "t": "Foucault démontre la rotation de la Terre"
+ },
+ {
+  "y": 1854,
+  "ico": "⚔️",
+  "t": "Guerre de Crimée"
+ },
+ {
+  "y": 1855,
+  "ico": "🌍",
+  "t": "Exposition universelle de Paris"
+ },
+ {
+  "y": 1857,
+  "ico": "💥",
+  "t": "Panique financière de 1857"
+ },
+ {
+  "y": 1860,
+  "ico": "🇮🇹",
+  "t": "Expédition des Mille de Garibaldi"
+ },
+ {
+  "y": 1861,
+  "ico": "🗽",
+  "t": "Victor Hugo s'exile à Guernesey"
+ },
+ {
+  "y": 1863,
+  "ico": "📜",
+  "t": "Proclamation d'émancipation de Lincoln"
+ },
+ {
+  "y": 1864,
+  "ico": "🩺",
+  "t": "Fondation de la Croix-Rouge"
+ },
+ {
+  "y": 1865,
+  "ico": "⚰️",
+  "t": "Assassinat de Lincoln"
+ },
+ {
+  "y": 1866,
+  "ico": "📡",
+  "t": "Premier câble télégraphique transatlantique"
+ },
+ {
+  "y": 1867,
+  "ico": "🇨🇦",
+  "t": "Confédération canadienne"
+ },
+ {
+  "y": 1868,
+  "ico": "⛩️",
+  "t": "Ère Meiji au Japon"
+ },
+ {
+  "y": 1870,
+  "ico": "⚔️",
+  "t": "Début de la guerre franco-prussienne"
+ },
+ {
+  "y": 1871,
+  "ico": "🔥",
+  "t": "Commune de Paris"
+ },
+ {
+  "y": 1873,
+  "ico": "📉",
+  "t": "Krach de Vienne"
+ },
+ {
+  "y": 1874,
+  "ico": "🖼️",
+  "t": "Première exposition impressionniste à Paris"
+ },
+ {
+  "y": 1875,
+  "ico": "⚖️",
+  "t": "Adoption des lois constitutionnelles de la IIIe République"
+ },
+ {
+  "y": 1876,
+  "ico": "📞",
+  "t": "Bell brevette le téléphone"
+ },
+ {
+  "y": 1879,
+  "ico": "💡",
+  "t": "Ampoule d'Edison durable"
+ },
+ {
+  "y": 1881,
+  "ico": "🦠",
+  "t": "Pasteur teste son vaccin contre le charbon"
+ },
+ {
+  "y": 1882,
+  "ico": "🧬",
+  "t": "Koch découvre la tuberculose"
+ },
+ {
+  "y": 1883,
+  "ico": "🌉",
+  "t": "Inauguration du pont de Brooklyn"
+ },
+ {
+  "y": 1884,
+  "ico": "🌍",
+  "t": "Conférence de Berlin sur l'Afrique"
+ },
+ {
+  "y": 1885,
+  "ico": "💉",
+  "t": "Premier vaccin antirabique de Pasteur"
+ },
+ {
+  "y": 1886,
+  "ico": "🗽",
+  "t": "Inauguration de la Statue de la Liberté"
+ },
+ {
+  "y": 1887,
+  "ico": "🔊",
+  "t": "Edison invente le phonographe à cylindres de cire"
+ },
+ {
+  "y": 1888,
+  "ico": "📷",
+  "t": "Premier appareil Kodak"
+ },
+ {
+  "y": 1890,
+  "ico": "🖼️",
+  "t": "Mort de Van Gogh"
+ },
+ {
+  "y": 1892,
+  "ico": "⚽",
+  "t": "Fondation du Newcastle United"
+ },
+ {
+  "y": 1893,
+  "ico": "🏭",
+  "t": "Ford construit sa première voiture"
+ },
+ {
+  "y": 1894,
+  "ico": "🥇",
+  "t": "Pierre de Coubertin relance les Jeux olympiques"
+ },
+ {
+  "y": 1895,
+  "ico": "🎬",
+  "t": "Première séance de cinéma payante des Lumière"
+ },
+ {
+  "y": 1896,
+  "ico": "🏅",
+  "t": "Premiers Jeux olympiques modernes à Athènes"
+ },
+ {
+  "y": 1897,
+  "ico": "📻",
+  "t": "Marconi dépose son brevet de radio"
+ },
+ {
+  "y": 1898,
+  "ico": "🌟",
+  "t": "Curie découvre le radium"
+ },
+ {
+  "y": 1899,
+  "ico": "🕊️",
+  "t": "Première Conférence de la paix de La Haye"
+ },
+ {
+  "y": 1900,
+  "ico": "🚇",
+  "t": "Première ligne du métro parisien"
+ },
+ {
+  "y": 1901,
+  "ico": "🏅",
+  "t": "Premiers prix Nobel décernés"
+ },
+ {
+  "y": 1902,
+  "ico": "🎬",
+  "t": "Le Voyage dans la Lune de Méliès"
+ },
+ {
+  "y": 1904,
+  "ico": "🗺️",
+  "t": "Entente cordiale franco-britannique"
+ },
+ {
+  "y": 1906,
+  "ico": "🌋",
+  "t": "Éruption du Vésuve"
+ },
+ {
+  "y": 1907,
+  "ico": "🖼️",
+  "t": "Picasso peint Les Demoiselles d'Avignon"
+ },
+ {
+  "y": 1908,
+  "ico": "💥",
+  "t": "Événement de Toungouska"
+ },
+ {
+  "y": 1909,
+  "ico": "🛩️",
+  "t": "Blériot traverse la Manche"
+ },
+ {
+  "y": 1910,
+  "ico": "🎻",
+  "t": "Naissance de Django Reinhardt"
+ },
+ {
+  "y": 1911,
+  "ico": "🧊",
+  "t": "Amundsen atteint le pôle Sud en 1911"
+ },
+ {
+  "y": 1913,
+  "ico": "🖼️",
+  "t": "Arms Show de New York"
+ },
+ {
+  "y": 1915,
+  "ico": "🚢",
+  "t": "Naufrage du Lusitania"
+ },
+ {
+  "y": 1917,
+  "ico": "☭",
+  "t": "Révolution russe d'Octobre"
+ },
+ {
+  "y": 1920,
+  "ico": "🏈",
+  "t": "Fondation de la NFL"
+ },
+ {
+  "y": 1921,
+  "ico": "💉",
+  "t": "Découverte de l'insuline thérapeutique"
+ },
+ {
+  "y": 1923,
+  "ico": "🎬",
+  "t": "Fondation de la Disney Brothers"
+ },
+ {
+  "y": 1924,
+  "ico": "⛷️",
+  "t": "Premiers Jeux olympiques d'hiver à Chamonix"
+ },
+ {
+  "y": 1925,
+  "ico": "📺",
+  "t": "Baird démontre la télévision"
+ },
+ {
+  "y": 1926,
+  "ico": "🗺️",
+  "t": "Byrd survole le pôle Nord"
+ },
+ {
+  "y": 1928,
+  "ico": "🦠",
+  "t": "Fleming découvre la pénicilline"
+ },
+ {
+  "y": 1930,
+  "ico": "🌌",
+  "t": "Découverte de Pluton"
+ },
+ {
+  "y": 1931,
+  "ico": "🏙️",
+  "t": "Achèvement de l'Empire State Building"
+ },
+ {
+  "y": 1932,
+  "ico": "🔬",
+  "t": "Découverte du neutron"
+ },
+ {
+  "y": 1933,
+  "ico": "🖊️",
+  "t": "Hitler devient chancelier"
+ },
+ {
+  "y": 1934,
+  "ico": "🐾",
+  "t": "Loch Ness : première photo du monstre"
+ },
+ {
+  "y": 1935,
+  "ico": "✈️",
+  "t": "Premier vol du DC-3"
+ },
+ {
+  "y": 1936,
+  "ico": "🏟️",
+  "t": "Jeux olympiques de Berlin"
+ },
+ {
+  "y": 1937,
+  "ico": "🌉",
+  "t": "Début des travaux du Golden Gate Bridge"
+ },
+ {
+  "y": 1938,
+  "ico": "⚛️",
+  "t": "Fission nucléaire découverte"
+ },
+ {
+  "y": 1940,
+  "ico": "🕸️",
+  "t": "Bataille d'Angleterre aérienne"
+ },
+ {
+  "y": 1941,
+  "ico": "💥",
+  "t": "Attaque de Pearl Harbor"
+ },
+ {
+  "y": 1943,
+  "ico": "🍖",
+  "t": "Fin de la bataille de Stalingrad"
+ },
+ {
+  "y": 1944,
+  "ico": "🎓",
+  "t": "Accords de Bretton Woods"
+ },
+ {
+  "y": 1946,
+  "ico": "💻",
+  "t": "Premier ordinateur ENIAC"
+ },
+ {
+  "y": 1947,
+  "ico": "✈️",
+  "t": "Chuck Yeager franchit le mur du son"
+ },
+ {
+  "y": 1948,
+  "ico": "🇮🇱",
+  "t": "Création de l'État d'Israël"
+ },
+ {
+  "y": 1949,
+  "ico": "🌍",
+  "t": "Création de l'OTAN"
+ },
+ {
+  "y": 1950,
+  "ico": "🇰🇷",
+  "t": "Début de la guerre de Corée"
+ },
+ {
+  "y": 1951,
+  "ico": "📡",
+  "t": "Première émission de TV couleur aux États-Unis"
+ },
+ {
+  "y": 1952,
+  "ico": "🇬🇧",
+  "t": "Avènement d'Élisabeth II"
+ },
+ {
+  "y": 1953,
+  "ico": "🧬",
+  "t": "Structure de l'ADN découverte"
+ },
+ {
+  "y": 1954,
+  "ico": "🎛️",
+  "t": "Première centrale nucléaire civile (Obninsk)"
+ },
+ {
+  "y": 1955,
+  "ico": "🚌",
+  "t": "Boycott des bus de Montgomery"
+ },
+ {
+  "y": 1956,
+  "ico": "📦",
+  "t": "Invention du conteneur maritime"
+ },
+ {
+  "y": 1958,
+  "ico": "🚀",
+  "t": "Création de la NASA"
+ },
+ {
+  "y": 1959,
+  "ico": "🌕",
+  "t": "Luna 3 photographie la face cachée de la Lune"
+ },
+ {
+  "y": 1960,
+  "ico": "💊",
+  "t": "Invention de la pilule contraceptive"
+ },
+ {
+  "y": 1962,
+  "ico": "📊",
+  "t": "Crise des missiles de Cuba"
+ },
+ {
+  "y": 1963,
+  "ico": "🗣️",
+  "t": "Discours « I have a dream » de MLK"
+ },
+ {
+  "y": 1964,
+  "ico": "🎬",
+  "t": "Goldfinger au cinéma"
+ },
+ {
+  "y": 1965,
+  "ico": "🌫️",
+  "t": "Débarquement américain au Vietnam"
+ },
+ {
+  "y": 1966,
+  "ico": "🏥",
+  "t": "Première greffe de cœur humain"
+ },
+ {
+  "y": 1967,
+  "ico": "🎶",
+  "t": "Summer of Love à San Francisco"
+ },
+ {
+  "y": 1968,
+  "ico": "🕊️",
+  "t": "assassinat de Martin Luther King"
+ },
+ {
+  "y": 1970,
+  "ico": "🌐",
+  "t": "Naissance d'Internet (ARPANET international)"
+ },
+ {
+  "y": 1971,
+  "ico": "📧",
+  "t": "Premier e-mail envoyé"
+ },
+ {
+  "y": 1972,
+  "ico": "🎮",
+  "t": "Fondation d'Atari"
+ },
+ {
+  "y": 1973,
+  "ico": "⛽",
+  "t": "Premier choc pétrolier"
+ },
+ {
+  "y": 1974,
+  "ico": "🦴",
+  "t": "Découverte de Lucy en Éthiopie"
+ },
+ {
+  "y": 1976,
+  "ico": "🍎",
+  "t": "Fondation d'Apple par Jobs et Wozniak"
+ },
+ {
+  "y": 1977,
+  "ico": "🎬",
+  "t": "Sortie de Star Wars"
+ },
+ {
+  "y": 1978,
+  "ico": "👶",
+  "t": "Premier bébé né par FIV"
+ },
+ {
+  "y": 1979,
+  "ico": "☢️",
+  "t": "Accident nucléaire de Three Mile Island"
+ },
+ {
+  "y": 1980,
+  "ico": "🎮",
+  "t": "Pac-Man sort en arcade"
+ },
+ {
+  "y": 1981,
+  "ico": "🩺",
+  "t": "Premiers cas de sida identifiés"
+ },
+ {
+  "y": 1982,
+  "ico": "🎮",
+  "t": "Sortie de la console ColecoVision"
+ },
+ {
+  "y": 1983,
+  "ico": "📶",
+  "t": "Naissance du protocole TCP/IP public"
+ },
+ {
+  "y": 1984,
+  "ico": "🎮",
+  "t": "Super Mario Bros sort au Japon"
+ },
+ {
+  "y": 1985,
+  "ico": "🧊",
+  "t": "Découverte du trou d'ozone"
+ },
+ {
+  "y": 1986,
+  "ico": "☢️",
+  "t": "Catastrophe de Tchernobyl"
+ },
+ {
+  "y": 1987,
+  "ico": "📕",
+  "t": "Signature du traité INF Reagan-Gorbatchev"
+ },
+ {
+  "y": 1988,
+  "ico": "💬",
+  "t": "Sortie du premier SMS concept"
+ },
+ {
+  "y": 1990,
+  "ico": "🌐",
+  "t": "Tim Berners-Lee imagine le Web"
+ },
+ {
+  "y": 1992,
+  "ico": "📲",
+  "t": "Premier SMS réel envoyé"
+ },
+ {
+  "y": 1993,
+  "ico": "🧬",
+  "t": "Jurassic Park au cinéma"
+ },
+ {
+  "y": 1994,
+  "ico": "🇿🇦",
+  "t": "Mandela devient président sud-africain"
+ },
+ {
+  "y": 1995,
+  "ico": "💻",
+  "t": "Windows 95 sort"
+ },
+ {
+  "y": 1997,
+  "ico": "♟️",
+  "t": "Deep Blue bat Kasparov"
+ },
+ {
+  "y": 1998,
+  "ico": "🚀",
+  "t": "Premier module de l'ISS lancé"
+ },
+ {
+  "y": 1999,
+  "ico": "💶",
+  "t": "Création de l'euro monétaire"
+ },
+ {
+  "y": 2000,
+  "ico": "🎆",
+  "t": "Passage à l'an 2000"
+ },
+ {
+  "y": 2001,
+  "ico": "🗽",
+  "t": "Attentats du 11 septembre"
+ },
+ {
+  "y": 2003,
+  "ico": "🧬",
+  "t": "Séquençage du génome humain achevé"
+ },
+ {
+  "y": 2004,
+  "ico": "🌊",
+  "t": "Tsunami de l'océan Indien"
+ },
+ {
+  "y": 2005,
+  "ico": "📺",
+  "t": "Création de YouTube"
+ },
+ {
+  "y": 2006,
+  "ico": "🐦",
+  "t": "Création de Twitter"
+ },
+ {
+  "y": 2007,
+  "ico": "📱",
+  "t": "Lancement du premier iPhone"
+ },
+ {
+  "y": 2008,
+  "ico": "📉",
+  "t": "Crise financière de Lehman Brothers"
+ },
+ {
+  "y": 2009,
+  "ico": "🪙",
+  "t": "Naissance du Bitcoin (livre blanc)"
+ },
+ {
+  "y": 2010,
+  "ico": "📱",
+  "t": "Sortie de l'iPad"
+ },
+ {
+  "y": 2011,
+  "ico": "🌐",
+  "t": "Décès de Steve Jobs"
+ },
+ {
+  "y": 2012,
+  "ico": "🚀",
+  "t": "Curiosity se pose sur Mars"
+ },
+ {
+  "y": 2013,
+  "ico": "🎺",
+  "t": "Création de la snapchat lens"
+ },
+ {
+  "y": 2014,
+  "ico": "🎬",
+  "t": "Fusion Box-office Frozen et Interstellar"
+ },
+ {
+  "y": 2016,
+  "ico": "🤖",
+  "t": "AlphaGo bat Lee Sedol"
+ },
+ {
+  "y": 2017,
+  "ico": "🚗",
+  "t": "Tesla Model 3 en production"
+ },
+ {
+  "y": 2018,
+  "ico": "🏫",
+  "t": "Mouvement mondial des jeunes pour le climat"
+ },
+ {
+  "y": 2019,
+  "ico": "🇪🇺",
+  "t": "Première image d'un trou noir"
+ },
+ {
+  "y": 2021,
+  "ico": "🚀",
+  "t": "Premier vol habité spatial privé"
+ },
+ {
+  "y": 2023,
+  "ico": "🤖",
+  "t": "Explosion de l'IA générative grand public"
+ },
+ {
+  "y": 2024,
+  "ico": "🥇",
+  "t": "Jeux olympiques de Paris"
+ },
+ {
+  "y": 1880,
+  "ico": "🍽️",
+  "t": "La ganache aurait-elle été inventée par accident par un apprenti pâtissier"
+ },
+ {
+  "y": 1364,
+  "ico": "📜",
+  "t": "Charles V a épousé Jeanne de Bourbon"
+ },
+ {
+  "y": 1692,
+  "ico": "🏰",
+  "t": "Le duc d'Antin acquiert le château de Bellegarde"
+ },
+ {
+  "y": 1733,
+  "ico": "🔬",
+  "t": "Jean-Charles de Borda est-il né"
+ },
+ {
+  "y": 1108,
+  "ico": "📜",
+  "t": "Louis VI fut-il investi du comté de Vexin et des villes de Mantes et de Pontoise"
+ },
+ {
+  "y": 1720,
+  "ico": "🖼️",
+  "t": "Pierre Rivalz est-il né à Toulouse"
+ },
+ {
+  "y": 268,
+  "ico": "📜",
+  "t": "Manius Acilius Aureolus a usurpé le titre impérial"
+ },
+ {
+  "y": 476,
+  "ico": "📜",
+  "t": "L'Empire romain d'Occident a officiellement disparu"
+ },
+ {
+  "y": 1392,
+  "ico": "👑",
+  "t": "Charles VI a été sacré roi de France"
+ },
+ {
+  "y": 1346,
+  "ico": "⚔️",
+  "t": "Édouard III fut-il vaincu lors de la bataille de Crécy"
+ },
+ {
+  "y": 1347,
+  "ico": "📜",
+  "t": "La peste noire a atteint l'Europe, en débarquant au port de Messine, en Sicile"
+ },
+ {
+  "y": 1163,
+  "ico": "📜",
+  "t": "La construction de Notre-Dame de Paris a commencé"
+ },
+ {
+  "y": 1307,
+  "ico": "📜",
+  "t": "Philippe le Bel a fait arrêter les templiers de France"
+ },
+ {
+  "y": 1594,
+  "ico": "👑",
+  "t": "La couronne d'Henri IV fut-elle officiellement créée"
+ },
+ {
+  "y": 1380,
+  "ico": "📜",
+  "t": "Charles V le Sage est-il décédé"
+ },
+ {
+  "y": 1370,
+  "ico": "🍽️",
+  "t": "La première mention du terme, sous la forme brençe, est-elle connue"
+ },
+ {
+  "y": 1731,
+  "ico": "⚰️",
+  "t": "L'œuvre intitulée « Nature morte à la raie et au panier d'oignons » a été réalisée"
+ },
+ {
+  "y": 1835,
+  "ico": "🎬",
+  "t": "Le roman qui a servi de base à l'histoire du film a été publié"
+ },
+ {
+  "y": 1709,
+  "ico": "🏰",
+  "t": "François de Chastellux vendit-il le manoir de Belombre"
+ },
+ {
+  "y": 1798,
+  "ico": "📜",
+  "t": "A été vendu le fermail de la chappe"
+ },
+ {
+  "y": 1856,
+  "ico": "🔬",
+  "t": "Joseph John Thomson est-il né"
+ },
+ {
+  "y": 392,
+  "ico": "📜",
+  "t": "Flavius Rufinus fut-il nommé magister officiorum"
+ },
+ {
+  "y": 395,
+  "ico": "📜",
+  "t": "L'Empire romain a été définitivement divisé entre Orient et Occident"
+ },
+ {
+  "y": 378,
+  "ico": "⚔️",
+  "t": "Flavius Valens est-il mort lors de la bataille d’Andrinople"
+ },
+ {
+  "y": 337,
+  "ico": "📜",
+  "t": "Constantin II accède à la tête de l'Empire romain"
+ },
+ {
+  "y": 1743,
+  "ico": "🥇",
+  "t": "Claire arrive lors de son premier voyage dans le passé dans Outlander"
+ },
+ {
+  "y": 1356,
+  "ico": "⚔️",
+  "t": "Jean II le Bon fut-il fait prisonnier à la bataille de Poitiers"
+ },
+ {
+  "y": 1785,
+  "ico": "🔬",
+  "t": "Est né William Prout"
+ },
+ {
+  "y": 1795,
+  "ico": "📜",
+  "t": "Le sceptre de Dagobert a disparu suite à la Révolution française"
+ },
+ {
+  "y": 1843,
+  "ico": "🔬",
+  "t": "Son frère a fait installer le moteur à air chaud qu'il avait inventé dans l'usine"
+ },
+ {
+  "y": 1456,
+  "ico": "📜",
+  "t": "Jeanne d'Arc a été réhabilitée par l'Église"
+ },
+ {
+  "y": 1191,
+  "ico": "🥇",
+  "t": "Historique se déroule l’essentiel des souvenirs d’Altaïr dans le premier Assassin’s Creed"
+ },
+ {
+  "y": 1809,
+  "ico": "🖼️",
+  "t": "Les fondateurs du mouvement nazaréen ont-ils établi la corporation basée à Vienne appelée Lukasbund"
+ },
+ {
+  "y": 1872,
+  "ico": "🏅",
+  "t": "William Larned est-il né"
+ },
+ {
+  "y": 1032,
+  "ico": "📜",
+  "t": "Georges Maniakès parvient-il à prendre la ville d’Édesse sous l’autorité des Seldjoukides"
+ },
+ {
+  "y": 1232,
+  "ico": "🏰",
+  "t": "Le domaine a été officiellement constitué"
+ },
+ {
+  "y": 1047,
+  "ico": "⚔️",
+  "t": "Henri Ier a participé à la bataille de Val-ès-Dunes"
+ },
+ {
+  "y": 1827,
+  "ico": "🔬",
+  "t": "Prout a proposé la classification des constituants de la nourriture"
+ },
+ {
+  "y": 294,
+  "ico": "📜",
+  "t": "Allectus assassine Carausius pour prendre la pourpre"
+ },
+ {
+  "y": 1781,
+  "ico": "🔬",
+  "t": "Jean-Charles de Borda publie son Mémoire sur le mouvement des projectiles"
+ },
+ {
+  "y": 1642,
+  "ico": "🏰",
+  "t": "Le comté de Rostaing a été créé par la réunion des terres de Bury et d'Onzain"
+ },
+ {
+  "y": 388,
+  "ico": "📜",
+  "t": "Flavius Victor est-il décédé"
+ },
+ {
+  "y": 1816,
+  "ico": "🔬",
+  "t": "Robert Stirling est-il crédité pour l'invention du moteur à combustion externe"
+ },
+ {
+  "y": 1584,
+  "ico": "📜",
+  "t": "Henri III de Navarre est-il devenu héritier présomptif du trône de France"
+ },
+ {
+  "y": 1607,
+  "ico": "👑",
+  "t": "Les fiefs français de la couronne de Navarre ont-ils été réunis au domaine royal"
+ },
+ {
+  "y": 1397,
+  "ico": "🏰",
+  "t": "Le duc Philippe le Hardi remet-il le château d'Autricourt à son maître d'hôtel, Guichard de Saint-Seine"
+ },
+ {
+  "y": 1850,
+  "ico": "🔬",
+  "t": "Est décédé William Prout"
+ },
+ {
+  "y": 1608,
+  "ico": "🏰",
+  "t": "La famille Feydeau a acquis le fief de Brou"
+ },
+ {
+  "y": 1311,
+  "ico": "📜",
+  "t": "Philippe V a reçu en apanage le comté de Poitou"
+ },
+ {
+  "y": 1713,
+  "ico": "💡",
+  "t": "Louis Lemery et Étienne-François Geoffroy ont-ils découvert expérimentalement que le fer est un constituant du sang"
+ },
+ {
+  "y": 1728,
+  "ico": "📖",
+  "t": "Les Fables de Phèdre, avec des notes critiques, morales et historiques, ont-elles été imprimées"
+ },
+ {
+  "y": 1682,
+  "ico": "📜",
+  "t": "La cour de Louis XIV s'installa définitivement à Versailles"
+ },
+ {
+  "y": 1031,
+  "ico": "📜",
+  "t": "Henri Ier a été investi du duché de Bourgogne"
+ },
+ {
+  "y": 305,
+  "ico": "📜",
+  "t": "Dioclétien a abdiqué volontairement son pouvoir et quitter le trône"
+ },
+ {
+  "y": 1547,
+  "ico": "🖼️",
+  "t": "Henri II nomme Germain Le Mannier peintre de ses enfants"
+ },
+ {
+  "y": 1183,
+  "ico": "🏰",
+  "t": "La première pierre du château d'Onzain aurait-elle été posée"
+ },
+ {
+  "y": 1338,
+  "ico": "📜",
+  "t": "Charles V est-il né"
  }
 ]

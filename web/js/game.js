@@ -2992,7 +2992,7 @@
     // ================================================================
     // FRISE DU TEMPS — classer les événements historiques
     // ================================================================
-    const TIMELINE_EVENTS = [
+    const TIMELINE_EVENTS_BASE = [
       { y: -52, ico: '🛡️', t: "Vercingétorix résiste à Alésia face à César" },
       { y: -44, ico: '🗡️', t: "Assassinat de Jules César" },
       { y: 800, ico: '👑', t: "Charlemagne est couronné empereur" },
@@ -3026,6 +3026,10 @@
       { y: 2002, ico: '💶', t: "L'euro entre en circulation" },
       { y: 2020, ico: '😷', t: "Pandémie mondiale de Covid-19" },
     ];
+    // La banque étendue (data/timeline_events.json) remplace les 32 événements
+    // intégrés si le chargeur l'a apportée (window.TIMELINE_EVENTS).
+    let TIMELINE_EVENTS = (window.TIMELINE_EVENTS && window.TIMELINE_EVENTS.length > 100)
+      ? window.TIMELINE_EVENTS : TIMELINE_EVENTS_BASE;
     let _tl = { events: [], picked: [], done: false };
 
     function openTimeline() {
@@ -3666,6 +3670,7 @@
           rt.textContent = t;
           rt.style.display = t ? 'block' : 'none';
         }
+        try { renderAccountSection(); } catch (_) {}
         const ph = document.getElementById('profHonors');
         if (ph) {
           const codes = P.honors || [];
@@ -8175,7 +8180,15 @@
       } catch (_) {}
       // Récompenses de podium + badges à vie (throttlé 5 min en interne)
       try { kqCheckRewards(); } catch (_) {}
+      // Synchro multi-appareils : restaure la progression si le serveur est
+      // plus récent, puis rafraîchit la section compte du profil
+      try { kqSyncFromServer(); } catch (_) {}
+      try { renderAccountSection(); } catch (_) {}
     };
+
+    // Wrapper de save() : toute sauvegarde programme un push (debounce 30 s)
+    const _kqOrigSave = save;
+    save = function () { _kqOrigSave(); try { kqMarkDirty(); } catch (_) {} };
 
     // ── Flush de la file v3 au démarrage ────────────────────────────────────────
     _kqFlush();
@@ -8392,6 +8405,183 @@
       if (m) m.style.display = 'none';
     }
     window.closePlayerModal = closePlayerModal;
+
+    // ═════════════════════════════════════════════════════════════════════════════
+    // KnowQuest — Compte & synchronisation multi-appareils
+    // (POST /ords/admin/kq_auth : signup / signin / sync-push / sync-pull)
+    // Token 30 jours stocké localement ; blob de progression slim (≤ 28 Ko)
+    // poussé après chaque partie, restauré à la connexion ou au démarrage.
+    // ═════════════════════════════════════════════════════════════════════════════
+    const KQ_AUTH_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_auth';
+    const KQ_SYNC_KEYS = ['idUnique', 'name', 'avatar', 'xp', 'xpMax', 'gems', 'hearts',
+      'level', 'streak', 'streakDays', 'lastPlayDate', 'totalQ', 'totalCorrect',
+      'atlas', 'ownedHats', 'avatarStyle', 'honors', 'achievements', 'titles',
+      'talents', 'skillPoints', 'nodeProgress', 'nodeStars', 'perfectCount',
+      'rallyeBest', 'catStats', 'catStreak', 'powerups', 'dailyChallengeDate',
+      'dailyChallengeDone', 'lastQuestDate', 'darkMode', 'autoTTS'];
+    let _kqSyncTimer = null;
+    let _kqSyncing = false;
+    let _kqLastSyncAt = 0;
+    let _authMode = 'login';
+
+    function kqAccount() {
+      try { return JSON.parse(localStorage.getItem('kq_account') || 'null'); } catch (_) { return null; }
+    }
+    function kqSetAccount(acc) {
+      try { acc ? localStorage.setItem('kq_account', JSON.stringify(acc)) : localStorage.removeItem('kq_account'); } catch (_) {}
+    }
+    async function _kqAuthPost(path, payload) {
+      const res = await fetch(KQ_AUTH_URL + path, { method: 'POST', body: JSON.stringify(payload) });
+      return await res.json();
+    }
+
+    function kqBuildSyncBlob() {
+      const blob = {};
+      KQ_SYNC_KEYS.forEach(k => { if (typeof P[k] !== 'undefined') blob[k] = P[k]; });
+      blob._savedAt = Date.now();
+      return blob;
+    }
+
+    function kqApplyServerProfile(blob) {
+      if (!blob) return;
+      KQ_SYNC_KEYS.forEach(k => { if (typeof blob[k] !== 'undefined') P[k] = blob[k]; });
+      P._savedAt = blob._savedAt || Date.now();
+      save();
+      showToast('☁️ Progression restaurée (' + new Date(P._savedAt).toLocaleString() + ')');
+      try { if (typeof spawnConfetti === 'function') spawnConfetti(); } catch (_) {}
+      updateUI(); buildRoad(); switchTab('Home');
+    }
+
+    async function kqUploadProfile() {
+      const acc = kqAccount();
+      if (!acc || _kqSyncing) return;
+      _kqSyncing = true;
+      try {
+        const blob = kqBuildSyncBlob();
+        const d = await _kqAuthPost('/sync-push', { token: acc.token, profile: blob });
+        if (d.status === 'ok') {
+          P._savedAt = blob._savedAt;
+          _kqLastSyncAt = Date.now();
+          renderAccountSection();
+        } else if (d.reason === 'bad_token') {
+          showToast('🔐 Session expirée — reconnecte-toi');
+          kqSetAccount(null); renderAccountSection();
+        }
+      } catch (_) {} finally { _kqSyncing = false; }
+    }
+
+    async function kqSyncFromServer() {
+      const acc = kqAccount();
+      if (!acc || _kqSyncing) return;
+      _kqSyncing = true;
+      try {
+        const d = await _kqAuthPost('/sync-pull', { token: acc.token });
+        if (d.status === 'ok') {
+          if (d.profile && d.profile._savedAt &&
+              (!P._savedAt || d.profile._savedAt > P._savedAt)) {
+            kqApplyServerProfile(d.profile);
+          }
+          _kqLastSyncAt = Date.now();
+          renderAccountSection();
+        } else if (d.reason === 'bad_token') {
+          showToast('🔐 Session expirée — reconnecte-toi');
+          kqSetAccount(null); renderAccountSection();
+        }
+      } catch (_) {} finally { _kqSyncing = false; }
+    }
+
+    function kqMarkDirty() {
+      if (!kqAccount()) return;
+      clearTimeout(_kqSyncTimer);
+      _kqSyncTimer = setTimeout(kqUploadProfile, 30000);
+    }
+    window.kqSyncNow = () => { kqSyncFromServer(); };
+
+    // ── Modale connexion / inscription ──────────────────────────────────────────
+    function openAuthModal(mode) {
+      _authMode = mode === 'register' ? 'register' : 'login';
+      document.getElementById('amTitle').textContent = _authMode === 'register' ? '✨ Créer un compte' : '🔐 Se connecter';
+      document.getElementById('amPass2').style.display = _authMode === 'register' ? 'block' : 'none';
+      document.getElementById('amBtn').textContent = _authMode === 'register' ? 'Créer mon compte' : 'Se connecter';
+      document.getElementById('amErr').textContent = '';
+      document.getElementById('amUser').value = '';
+      document.getElementById('amPass').value = '';
+      document.getElementById('amPass2').value = '';
+      document.getElementById('authModal').style.display = 'flex';
+      setTimeout(() => document.getElementById('amUser').focus(), 100);
+    }
+    function closeAuthModal() {
+      const m = document.getElementById('authModal');
+      if (m) m.style.display = 'none';
+    }
+    window.openAuthModal = openAuthModal;
+    window.closeAuthModal = closeAuthModal;
+
+    const KQ_AUTH_ERR = {
+      username_taken: 'Ce pseudo est déjà pris',
+      bad_username: 'Pseudo invalide (3-20 lettres, chiffres, - ou _)',
+      password_too_short: 'Mot de passe trop court (6 caractères min.)',
+      bad_credentials: 'Pseudo ou mot de passe incorrect',
+      rate_limited: 'Trop de tentatives — patiente une minute',
+      profile_too_large: 'Sauvegarde trop volumineuse',
+      bad_token: 'Session expirée',
+    };
+
+    async function kqSubmitAuth() {
+      const user = document.getElementById('amUser').value.trim().toLowerCase();
+      const pass = document.getElementById('amPass').value;
+      const err = document.getElementById('amErr');
+      if (!/^[a-z0-9_-]{3,20}$/.test(user)) { err.textContent = KQ_AUTH_ERR.bad_username; return; }
+      if (pass.length < 6) { err.textContent = KQ_AUTH_ERR.password_too_short; return; }
+      if (_authMode === 'register') {
+        const p2 = document.getElementById('amPass2').value;
+        if (pass !== p2) { err.textContent = 'Les mots de passe ne correspondent pas'; return; }
+      }
+      err.textContent = '⏳ Connexion au serveur…';
+      try {
+        const path = _authMode === 'register' ? '/signup' : '/signin';
+        const d = await _kqAuthPost(path, { username: user, password: pass });
+        if (d.status !== 'ok') { err.textContent = KQ_AUTH_ERR[d.reason] || 'Erreur — réessaie'; return; }
+        kqSetAccount({ username: user, token: d.token });
+        closeAuthModal();
+        showToast(_authMode === 'register' ? `✨ Compte créé — bienvenue ${P.name} !` : `🔐 Connecté : ${user}`);
+        if (_authMode === 'register') { kqUploadProfile(); }
+        else { kqSyncFromServer(); }
+        renderAccountSection();
+      } catch (_) {
+        err.textContent = 'Serveur injoignable — vérifie ta connexion';
+      }
+    }
+    window.kqSubmitAuth = kqSubmitAuth;
+
+    function kqLogout() {
+      kqSetAccount(null);
+      showToast('🔐 Déconnecté — ta progression reste sur cet appareil');
+      renderAccountSection();
+    }
+    window.kqLogout = kqLogout;
+
+    function renderAccountSection() {
+      const box = document.getElementById('accountBox');
+      if (!box) return;
+      const acc = kqAccount();
+      if (!acc) {
+        box.innerHTML = `<div style="font-size:12px;font-weight:800;color:var(--muted);margin-bottom:8px">Sauvegarde ta progression dans le cloud et retrouve-la sur tous tes appareils (PC, tablette…).</div>
+        <div style="display:flex;gap:8px;justify-content:center">
+          <button class="btn-action" style="max-width:160px" onclick="openAuthModal('login')">🔐 Se connecter</button>
+          <button class="btn-action" style="max-width:160px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)" onclick="openAuthModal('register')">✨ Créer un compte</button>
+        </div>`;
+      } else {
+        const syncTxt = _kqLastSyncAt ? 'il y a ' + Math.max(1, Math.round((Date.now() - _kqLastSyncAt) / 60000)) + ' min' : 'au démarrage';
+        box.innerHTML = `<div style="text-align:center;font-size:13px;font-weight:900;color:var(--text)">☁️ Connecté : ${_lbEsc(acc.username)}</div>
+        <div style="text-align:center;font-size:11px;font-weight:800;color:var(--muted);margin:4px 0 10px">Progression synchronisée ${syncTxt} · token 30 j</div>
+        <div style="display:flex;gap:8px;justify-content:center">
+          <button class="btn-action" style="max-width:180px" onclick="kqSyncNow()">☁️ Synchro maintenant</button>
+          <button class="btn-action" style="max-width:150px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)" onclick="kqLogout()">Se déconnecter</button>
+        </div>`;
+      }
+    }
+    window.renderAccountSection = renderAccountSection;
 
     // Flush au démarrage si on était hors-ligne avant
     flushOfflineQueue();

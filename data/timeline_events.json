@@ -1,0 +1,4937 @@
+[
+  {
+    "y": -52,
+    "ico": "🛡️",
+    "t": "Vercingétorix résiste à Alésia face à César"
+  },
+  {
+    "y": -44,
+    "ico": "🗡️",
+    "t": "Assassinat de Jules César"
+  },
+  {
+    "y": 800,
+    "ico": "👑",
+    "t": "Charlemagne est couronné empereur"
+  },
+  {
+    "y": 1066,
+    "ico": "🏹",
+    "t": "Bataille de Hastings"
+  },
+  {
+    "y": 1096,
+    "ico": "✝️",
+    "t": "Départ de la première croisade"
+  },
+  {
+    "y": 1215,
+    "ico": "📜",
+    "t": "Signature de la Magna Carta en Angleterre"
+  },
+  {
+    "y": 1348,
+    "ico": "🐀",
+    "t": "La Peste noire décime l'Europe"
+  },
+  {
+    "y": 1429,
+    "ico": "⚔️",
+    "t": "Jeanne d'Arc délivre Orléans"
+  },
+  {
+    "y": 1453,
+    "ico": "🏰",
+    "t": "Chute de Constantinople"
+  },
+  {
+    "y": 1492,
+    "ico": "⛵",
+    "t": "Christophe Colomb atteint l'Amérique"
+  },
+  {
+    "y": 1517,
+    "ico": "⛪",
+    "t": "Luther affiche ses 95 thèses"
+  },
+  {
+    "y": 1789,
+    "ico": "🇫🇷",
+    "t": "Prise de la Bastille"
+  },
+  {
+    "y": 1793,
+    "ico": "⚖️",
+    "t": "Exécution de Louis XVI"
+  },
+  {
+    "y": 1804,
+    "ico": "🎖️",
+    "t": "Napoléon est couronné empereur"
+  },
+  {
+    "y": 1815,
+    "ico": "🐎",
+    "t": "Défaite de Waterloo"
+  },
+  {
+    "y": 1859,
+    "ico": "🐢",
+    "t": "Darwin publie L'Origine des espèces"
+  },
+  {
+    "y": 1869,
+    "ico": "🚢",
+    "t": "Inauguration du canal de Suez"
+  },
+  {
+    "y": 1889,
+    "ico": "🗼",
+    "t": "Inauguration de la Tour Eiffel"
+  },
+  {
+    "y": 1903,
+    "ico": "✈️",
+    "t": "Premier vol des frères Wright"
+  },
+  {
+    "y": 1912,
+    "ico": "🧊",
+    "t": "Naufrage du Titanic"
+  },
+  {
+    "y": 1914,
+    "ico": "💥",
+    "t": "Début de la Première Guerre mondiale"
+  },
+  {
+    "y": 1918,
+    "ico": "🕊️",
+    "t": "Armistice de la Première Guerre mondiale"
+  },
+  {
+    "y": 1929,
+    "ico": "📉",
+    "t": "Crise économique de 1929"
+  },
+  {
+    "y": 1939,
+    "ico": "🌍",
+    "t": "Début de la Seconde Guerre mondiale"
+  },
+  {
+    "y": 1945,
+    "ico": "☢️",
+    "t": "Hiroshima et fin de la Seconde Guerre mondiale"
+  },
+  {
+    "y": 1957,
+    "ico": "🛰️",
+    "t": "Spoutnik, premier satellite artificiel"
+  },
+  {
+    "y": 1961,
+    "ico": "👨‍🚀",
+    "t": "Youri Gagarine, premier homme dans l'espace"
+  },
+  {
+    "y": 1969,
+    "ico": "🌕",
+    "t": "Apollo 11 : l'homme marche sur la Lune"
+  },
+  {
+    "y": 1989,
+    "ico": "🧱",
+    "t": "Chute du Mur de Berlin"
+  },
+  {
+    "y": 1991,
+    "ico": "🌐",
+    "t": "Le World Wide Web devient public"
+  },
+  {
+    "y": 2002,
+    "ico": "💶",
+    "t": "L'euro entre en circulation"
+  },
+  {
+    "y": 2020,
+    "ico": "😷",
+    "t": "Pandémie mondiale de Covid-19"
+  },
+  {
+    "y": -753,
+    "ico": "🏛️",
+    "t": "Fondation légendaire de Rome"
+  },
+  {
+    "y": -490,
+    "ico": "🏃",
+    "t": "Bataille de Marathon"
+  },
+  {
+    "y": -480,
+    "ico": "🚢",
+    "t": "Bataille de Salamine"
+  },
+  {
+    "y": -146,
+    "ico": "🔥",
+    "t": "Destruction de Carthage par Rome"
+  },
+  {
+    "y": 486,
+    "ico": "⚔️",
+    "t": "Victoire de Clovis à Soissons"
+  },
+  {
+    "y": 732,
+    "ico": "🛡️",
+    "t": "Charles Martel arrête les Arabes à Poitiers"
+  },
+  {
+    "y": 843,
+    "ico": "📜",
+    "t": "Traité de Verdun : partage de l'Empire"
+  },
+  {
+    "y": 987,
+    "ico": "👑",
+    "t": "Hugues Capet est élu roi de France"
+  },
+  {
+    "y": 1054,
+    "ico": "✝️",
+    "t": "Schisme entre Églises d'Orient et d'Occident"
+  },
+  {
+    "y": 1099,
+    "ico": "🏰",
+    "t": "Les croisés prennent Jérusalem"
+  },
+  {
+    "y": 1214,
+    "ico": "🦁",
+    "t": "Victoire de Philippe Auguste à Bouvines"
+  },
+  {
+    "y": 1258,
+    "ico": "🕌",
+    "t": "Prise de Bagdad par les Mongols"
+  },
+  {
+    "y": 1307,
+    "ico": "⛓️",
+    "t": "Arrestation des Templiers en France"
+  },
+  {
+    "y": 1337,
+    "ico": "🏹",
+    "t": "Début de la guerre de Cent Ans"
+  },
+  {
+    "y": 1358,
+    "ico": "✊",
+    "t": "Grande jacquerie des paysans français"
+  },
+  {
+    "y": 1415,
+    "ico": "⚜️",
+    "t": "Défaite française d'Azincourt"
+  },
+  {
+    "y": 1431,
+    "ico": "🔥",
+    "t": "Jeanne d'Arc est brûlée à Rouen"
+  },
+  {
+    "y": 1440,
+    "ico": "🖨️",
+    "t": "Gutenberg met au point l'imprimerie"
+  },
+  {
+    "y": 1455,
+    "ico": "📕",
+    "t": "Impression de la Bible de Gutenberg"
+  },
+  {
+    "y": 1461,
+    "ico": "👑",
+    "t": "Louis XI devient roi de France"
+  },
+  {
+    "y": 1470,
+    "ico": "📖",
+    "t": "Installation de la première imprimerie à Paris"
+  },
+  {
+    "y": 1485,
+    "ico": "⚜️",
+    "t": "Richard III défait à Bosworth"
+  },
+  {
+    "y": 1494,
+    "ico": "📜",
+    "t": "Traité de Tordesillas"
+  },
+  {
+    "y": 1519,
+    "ico": "⛵",
+    "t": "Départ de l'expédition de Magellan"
+  },
+  {
+    "y": 1522,
+    "ico": "🌍",
+    "t": "Premier tour du monde achevé par Elcano"
+  },
+  {
+    "y": 1534,
+    "ico": "⚖️",
+    "t": "Acte de suprématie d'Henri VIII en Angleterre"
+  },
+  {
+    "y": 1558,
+    "ico": "👑",
+    "t": "Début du règne d'Élisabeth Ire d'Angleterre"
+  },
+  {
+    "y": 1562,
+    "ico": "⚔️",
+    "t": "Début des guerres de Religion en France"
+  },
+  {
+    "y": 1572,
+    "ico": "🔪",
+    "t": "Massacre de la Saint-Barthélemy"
+  },
+  {
+    "y": 1582,
+    "ico": "📅",
+    "t": "Réforme grégorienne du calendrier"
+  },
+  {
+    "y": 1588,
+    "ico": "🌊",
+    "t": "Destruction de l'Invincible Armada"
+  },
+  {
+    "y": 1598,
+    "ico": "🕊️",
+    "t": "Édit de Nantes signé par Henri IV"
+  },
+  {
+    "y": 1600,
+    "ico": "🏗️",
+    "t": "Fondation de la Compagnie des Indes orientales"
+  },
+  {
+    "y": 1605,
+    "ico": "🖋️",
+    "t": "Publication de Don Quichotte"
+  },
+  {
+    "y": 1618,
+    "ico": "💥",
+    "t": "Début de la guerre de Trente Ans"
+  },
+  {
+    "y": 1623,
+    "ico": "🎭",
+    "t": "Premier folio de Shakespeare"
+  },
+  {
+    "y": 1632,
+    "ico": "⚔️",
+    "t": "Bataille de Lützen et mort de Gustave-Adolphe"
+  },
+  {
+    "y": 1643,
+    "ico": "👶",
+    "t": "Louis XIV devient roi à cinq ans"
+  },
+  {
+    "y": 1648,
+    "ico": "🕊️",
+    "t": "Traités de Westphalie"
+  },
+  {
+    "y": 1649,
+    "ico": "⚖️",
+    "t": "Exécution de Charles Ier d'Angleterre"
+  },
+  {
+    "y": 1661,
+    "ico": "💰",
+    "t": "Arrestation de Fouquet"
+  },
+  {
+    "y": 1664,
+    "ico": "🎭",
+    "t": "Molière crée Le Tartuffe"
+  },
+  {
+    "y": 1685,
+    "ico": "✝️",
+    "t": "Révocation de l'édit de Nantes"
+  },
+  {
+    "y": 1687,
+    "ico": "⚛️",
+    "t": "Newton publie les Principia"
+  },
+  {
+    "y": 1701,
+    "ico": "👑",
+    "t": "Frédéric Ier devient roi de Prusse"
+  },
+  {
+    "y": 1704,
+    "ico": "⚔️",
+    "t": "Bataille de Blenheim"
+  },
+  {
+    "y": 1715,
+    "ico": "⚰️",
+    "t": "Mort de Louis XIV"
+  },
+  {
+    "y": 1721,
+    "ico": "🏳️",
+    "t": "Paix de Nystad : la Russie devient impériale"
+  },
+  {
+    "y": 1733,
+    "ico": "⚒️",
+    "t": "John Kay invente la navette volante"
+  },
+  {
+    "y": 1740,
+    "ico": "👑",
+    "t": "Marie-Thérèse d'Autriche monte sur le trône"
+  },
+  {
+    "y": 1751,
+    "ico": "📚",
+    "t": "Début de l'Encyclopédie de Diderot"
+  },
+  {
+    "y": 1756,
+    "ico": "🎵",
+    "t": "Naissance de Mozart"
+  },
+  {
+    "y": 1762,
+    "ico": "📖",
+    "t": "Rousseau publie Du contrat social"
+  },
+  {
+    "y": 1769,
+    "ico": "🚂",
+    "t": "Cugnot présente le fardier à vapeur"
+  },
+  {
+    "y": 1770,
+    "ico": "🎵",
+    "t": "Naissance de Beethoven"
+  },
+  {
+    "y": 1774,
+    "ico": "👑",
+    "t": "Louis XVI monte sur le trône"
+  },
+  {
+    "y": 1776,
+    "ico": "🇺🇸",
+    "t": "Déclaration d'indépendance des États-Unis"
+  },
+  {
+    "y": 1783,
+    "ico": "🎈",
+    "t": "Premier vol des frères Montgolfier"
+  },
+  {
+    "y": 1787,
+    "ico": "⚖️",
+    "t": "Convention constitutionnelle de Philadelphie"
+  },
+  {
+    "y": 1791,
+    "ico": "🎵",
+    "t": "Mort de Mozart"
+  },
+  {
+    "y": 1792,
+    "ico": "🇫🇷",
+    "t": "Proclamation de la Première République française"
+  },
+  {
+    "y": 1794,
+    "ico": "⚖️",
+    "t": "Exécution de Robespierre"
+  },
+  {
+    "y": 1796,
+    "ico": "💉",
+    "t": "Jenner pratique la première vaccination"
+  },
+  {
+    "y": 1799,
+    "ico": "📜",
+    "t": "Bonaparte prend le pouvoir au 18 Brumaire"
+  },
+  {
+    "y": 1801,
+    "ico": "🌐",
+    "t": "Union Act entre Grande-Bretagne et Irlande"
+  },
+  {
+    "y": 1802,
+    "ico": "🏆",
+    "t": "Création de la Légion d'honneur"
+  },
+  {
+    "y": 1803,
+    "ico": "🛒",
+    "t": "Vente de la Louisiane aux États-Unis"
+  },
+  {
+    "y": 1806,
+    "ico": "🏛️",
+    "t": "Construction de l'Arc de Triomphe décidée"
+  },
+  {
+    "y": 1810,
+    "ico": "🇲🇽",
+    "t": "Début de l'indépendance du Mexique"
+  },
+  {
+    "y": 1812,
+    "ico": "❄️",
+    "t": "Retraite de Russie de Napoléon"
+  },
+  {
+    "y": 1814,
+    "ico": "🖼️",
+    "t": "Goya peint Les Fusillades du Dos de Mayo"
+  },
+  {
+    "y": 1814,
+    "ico": "👑",
+    "t": "Restauration : retour de Louis XVIII"
+  },
+  {
+    "y": 1821,
+    "ico": "🏛️",
+    "t": "Indépendance de la Grèce proclamée"
+  },
+  {
+    "y": 1823,
+    "ico": "📜",
+    "t": "Doctrine Monroe"
+  },
+  {
+    "y": 1824,
+    "ico": "⚰️",
+    "t": "Mort de Byron en Grèce"
+  },
+  {
+    "y": 1825,
+    "ico": "🚂",
+    "t": "Première ligne ferroviaire publique (Stockton-Darlington)"
+  },
+  {
+    "y": 1830,
+    "ico": "🇧🇪",
+    "t": "Indépendance de la Belgique"
+  },
+  {
+    "y": 1831,
+    "ico": "📖",
+    "t": "Victor Hugo publie Notre-Dame de Paris"
+  },
+  {
+    "y": 1832,
+    "ico": "💉",
+    "t": "Épidémie de choléra en Europe"
+  },
+  {
+    "y": 1836,
+    "ico": "⚔️",
+    "t": "Siège de l'Alamo au Texas"
+  },
+  {
+    "y": 1839,
+    "ico": "📷",
+    "t": "Daguerre présente le daguerréotype"
+  },
+  {
+    "y": 1840,
+    "ico": "✉️",
+    "t": "Premier timbre-poste (Penny Black)"
+  },
+  {
+    "y": 1844,
+    "ico": "📡",
+    "t": "Première ligne de télégraphe électrique"
+  },
+  {
+    "y": 1845,
+    "ico": "🥔",
+    "t": "Grande famine en Irlande"
+  },
+  {
+    "y": 1846,
+    "ico": "⚔️",
+    "t": "Guerre américano-mexicaine"
+  },
+  {
+    "y": 1848,
+    "ico": "✊",
+    "t": "Printemps des peuples en Europe"
+  },
+  {
+    "y": 1849,
+    "ico": "🎹",
+    "t": "Mort de Chopin"
+  },
+  {
+    "y": 1851,
+    "ico": "🔭",
+    "t": "Foucault démontre la rotation de la Terre"
+  },
+  {
+    "y": 1852,
+    "ico": "👑",
+    "t": "Napoléon III devient empereur"
+  },
+  {
+    "y": 1854,
+    "ico": "⚔️",
+    "t": "Guerre de Crimée"
+  },
+  {
+    "y": 1855,
+    "ico": "🌍",
+    "t": "Exposition universelle de Paris"
+  },
+  {
+    "y": 1857,
+    "ico": "📉",
+    "t": "Panique financière de 1857"
+  },
+  {
+    "y": 1859,
+    "ico": "⛏️",
+    "t": "Premier puits de pétrole moderne (Drake)"
+  },
+  {
+    "y": 1860,
+    "ico": "🇮🇹",
+    "t": "Expédition des Mille de Garibaldi"
+  },
+  {
+    "y": 1861,
+    "ico": "🇷🇺",
+    "t": "Abolition du servage en Russie"
+  },
+  {
+    "y": 1863,
+    "ico": "📜",
+    "t": "Proclamation d'émancipation de Lincoln"
+  },
+  {
+    "y": 1864,
+    "ico": "🩺",
+    "t": "Fondation de la Croix-Rouge"
+  },
+  {
+    "y": 1865,
+    "ico": "⚰️",
+    "t": "Assassinat de Lincoln"
+  },
+  {
+    "y": 1866,
+    "ico": "📡",
+    "t": "Premier câble télégraphique transatlantique permanent"
+  },
+  {
+    "y": 1867,
+    "ico": "🇨🇦",
+    "t": "Confédération canadienne"
+  },
+  {
+    "y": 1868,
+    "ico": "⛩️",
+    "t": "Début de l'ère Meiji au Japon"
+  },
+  {
+    "y": 1870,
+    "ico": "⚔️",
+    "t": "Début de la guerre franco-prussienne"
+  },
+  {
+    "y": 1871,
+    "ico": "🔥",
+    "t": "Commune de Paris"
+  },
+  {
+    "y": 1873,
+    "ico": "📉",
+    "t": "Krach de Vienne"
+  },
+  {
+    "y": 1874,
+    "ico": "🖼️",
+    "t": "Première exposition impressionniste à Paris"
+  },
+  {
+    "y": 1875,
+    "ico": "⚖️",
+    "t": "Adoption des lois constitutionnelles de la IIIe République"
+  },
+  {
+    "y": 1876,
+    "ico": "📞",
+    "t": "Bell brevette le téléphone"
+  },
+  {
+    "y": 1877,
+    "ico": "🎙️",
+    "t": "Edison invente le phonographe"
+  },
+  {
+    "y": 1879,
+    "ico": "💡",
+    "t": "Ampoule électrique durable d'Edison"
+  },
+  {
+    "y": 1881,
+    "ico": "🦠",
+    "t": "Pasteur teste son vaccin contre le charbon"
+  },
+  {
+    "y": 1882,
+    "ico": "🦠",
+    "t": "Koch isole le bacille de la tuberculose"
+  },
+  {
+    "y": 1883,
+    "ico": "🌉",
+    "t": "Inauguration du pont de Brooklyn"
+  },
+  {
+    "y": 1884,
+    "ico": "🌍",
+    "t": "Conférence de Berlin sur l'Afrique"
+  },
+  {
+    "y": 1885,
+    "ico": "💉",
+    "t": "Premier vaccin antirabique de Pasteur"
+  },
+  {
+    "y": 1886,
+    "ico": "🗽",
+    "t": "Inauguration de la Statue de la Liberté"
+  },
+  {
+    "y": 1890,
+    "ico": "🖼️",
+    "t": "Mort de Van Gogh"
+  },
+  {
+    "y": 1891,
+    "ico": "🏀",
+    "t": "Naissance du basket-ball par James Naismith"
+  },
+  {
+    "y": 1892,
+    "ico": "⚽",
+    "t": "Fondation du Newcastle United"
+  },
+  {
+    "y": 1893,
+    "ico": "🏙️",
+    "t": "Exposition universelle de Chicago"
+  },
+  {
+    "y": 1894,
+    "ico": "🥇",
+    "t": "Coubertin relance les Jeux olympiques"
+  },
+  {
+    "y": 1895,
+    "ico": "📡",
+    "t": "Röntgen découvre les rayons X"
+  },
+  {
+    "y": 1895,
+    "ico": "🎬",
+    "t": "Première séance de cinéma payante des Lumière"
+  },
+  {
+    "y": 1896,
+    "ico": "🏅",
+    "t": "Premiers Jeux olympiques modernes à Athènes"
+  },
+  {
+    "y": 1896,
+    "ico": "🚗",
+    "t": "Henry Ford construit son premier quadricycle"
+  },
+  {
+    "y": 1897,
+    "ico": "⚛️",
+    "t": "Thomson découvre l'électron"
+  },
+  {
+    "y": 1898,
+    "ico": "🌟",
+    "t": "Curie découvre le radium"
+  },
+  {
+    "y": 1899,
+    "ico": "🕊️",
+    "t": "Première Conférence de la paix de La Haye"
+  },
+  {
+    "y": 1900,
+    "ico": "🚇",
+    "t": "Première ligne du métro parisien"
+  },
+  {
+    "y": 1900,
+    "ico": "⚽",
+    "t": "Le football entre aux Jeux olympiques"
+  },
+  {
+    "y": 1901,
+    "ico": "🏅",
+    "t": "Premiers prix Nobel décernés"
+  },
+  {
+    "y": 1902,
+    "ico": "🎬",
+    "t": "Le Voyage dans la Lune de Méliès"
+  },
+  {
+    "y": 1902,
+    "ico": "🎼",
+    "t": "Pelléas et Mélisande de Debussy"
+  },
+  {
+    "y": 1904,
+    "ico": "🗺️",
+    "t": "Entente cordiale franco-britannique"
+  },
+  {
+    "y": 1904,
+    "ico": "⚽",
+    "t": "Fondation de la FIFA"
+  },
+  {
+    "y": 1905,
+    "ico": "⚛️",
+    "t": "Einstein publie la relativité restreinte"
+  },
+  {
+    "y": 1906,
+    "ico": "🌋",
+    "t": "Éruption du Vésuve"
+  },
+  {
+    "y": 1906,
+    "ico": "🏎️",
+    "t": "Premier Grand Prix automobile de l'ACF"
+  },
+  {
+    "y": 1908,
+    "ico": "💥",
+    "t": "Événement de Toungouska"
+  },
+  {
+    "y": 1908,
+    "ico": "🎬",
+    "t": "Fantasmagorie, premier dessin animé d'Émile Cohl"
+  },
+  {
+    "y": 1909,
+    "ico": "🛩️",
+    "t": "Blériot traverse la Manche"
+  },
+  {
+    "y": 1909,
+    "ico": "🧭",
+    "t": "Expédition de Peary au pôle Nord"
+  },
+  {
+    "y": 1910,
+    "ico": "🎸",
+    "t": "Naissance de Django Reinhardt"
+  },
+  {
+    "y": 1911,
+    "ico": "⚛️",
+    "t": "Rutherford découvre le noyau atomique"
+  },
+  {
+    "y": 1911,
+    "ico": "🏔️",
+    "t": "Amundsen atteint le pôle Sud"
+  },
+  {
+    "y": 1913,
+    "ico": "🖼️",
+    "t": "Armory Show à New York"
+  },
+  {
+    "y": 1913,
+    "ico": "🎼",
+    "t": "Le Sacre du printemps fait scandale à Paris"
+  },
+  {
+    "y": 1915,
+    "ico": "🎬",
+    "t": "Naissance d'une nation de Griffith"
+  },
+  {
+    "y": 1915,
+    "ico": "🚢",
+    "t": "Naufrage du Lusitania"
+  },
+  {
+    "y": 1916,
+    "ico": "⚔️",
+    "t": "Bataille de Verdun"
+  },
+  {
+    "y": 1917,
+    "ico": "☭",
+    "t": "Révolution russe d'Octobre"
+  },
+  {
+    "y": 1917,
+    "ico": "🖼️",
+    "t": "Duchamp expose Fontaine (ready-made)"
+  },
+  {
+    "y": 1919,
+    "ico": "📜",
+    "t": "Traité de Versailles signé"
+  },
+  {
+    "y": 1919,
+    "ico": "🔭",
+    "t": "Eddington confirme la relativité générale"
+  },
+  {
+    "y": 1920,
+    "ico": "🏈",
+    "t": "Fondation de la NFL"
+  },
+  {
+    "y": 1921,
+    "ico": "🎬",
+    "t": "Le Kid de Charlie Chaplin"
+  },
+  {
+    "y": 1921,
+    "ico": "💉",
+    "t": "Découverte de l'insuline thérapeutique"
+  },
+  {
+    "y": 1922,
+    "ico": "🏺",
+    "t": "Découverte de la tombe de Toutankhamon"
+  },
+  {
+    "y": 1923,
+    "ico": "🏁",
+    "t": "Premier 24 Heures du Mans"
+  },
+  {
+    "y": 1924,
+    "ico": "⛷️",
+    "t": "Premiers Jeux olympiques d'hiver à Chamonix"
+  },
+  {
+    "y": 1924,
+    "ico": "⚛️",
+    "t": "De Broglie propose les ondes de matière"
+  },
+  {
+    "y": 1925,
+    "ico": "📺",
+    "t": "Baird démontre la télévision"
+  },
+  {
+    "y": 1925,
+    "ico": "🎬",
+    "t": "Le Mécano de la General de Buster Keaton"
+  },
+  {
+    "y": 1926,
+    "ico": "🗺️",
+    "t": "Byrd survole le pôle Nord"
+  },
+  {
+    "y": 1927,
+    "ico": "🎬",
+    "t": "Le chanteur de jazz, premier film parlant"
+  },
+  {
+    "y": 1927,
+    "ico": "⚛️",
+    "t": "Principe d'incertitude de Heisenberg"
+  },
+  {
+    "y": 1928,
+    "ico": "🦠",
+    "t": "Fleming découvre la pénicilline"
+  },
+  {
+    "y": 1928,
+    "ico": "🎼",
+    "t": "Boléro de Ravel"
+  },
+  {
+    "y": 1930,
+    "ico": "🌌",
+    "t": "Découverte de Pluton"
+  },
+  {
+    "y": 1930,
+    "ico": "⚽",
+    "t": "Première Coupe du monde de football en Uruguay"
+  },
+  {
+    "y": 1931,
+    "ico": "🏙️",
+    "t": "Achèvement de l'Empire State Building"
+  },
+  {
+    "y": 1931,
+    "ico": "🎬",
+    "t": "M le Maudit de Fritz Lang"
+  },
+  {
+    "y": 1932,
+    "ico": "🔬",
+    "t": "Découverte du neutron"
+  },
+  {
+    "y": 1933,
+    "ico": "🖊️",
+    "t": "Hitler devient chancelier"
+  },
+  {
+    "y": 1935,
+    "ico": "✈️",
+    "t": "Premier vol du DC-3"
+  },
+  {
+    "y": 1935,
+    "ico": "🎼",
+    "t": "Gershwin compose Porgy and Bess"
+  },
+  {
+    "y": 1936,
+    "ico": "🏟️",
+    "t": "Jeux olympiques de Berlin"
+  },
+  {
+    "y": 1937,
+    "ico": "🌉",
+    "t": "Inauguration du Golden Gate Bridge"
+  },
+  {
+    "y": 1937,
+    "ico": "🖼️",
+    "t": "Picasso peint Guernica"
+  },
+  {
+    "y": 1938,
+    "ico": "⚛️",
+    "t": "Découverte de la fission nucléaire"
+  },
+  {
+    "y": 1940,
+    "ico": "✈️",
+    "t": "Bataille d'Angleterre"
+  },
+  {
+    "y": 1941,
+    "ico": "💥",
+    "t": "Attaque de Pearl Harbor"
+  },
+  {
+    "y": 1941,
+    "ico": "🎬",
+    "t": "Citizen Kane d'Orson Welles"
+  },
+  {
+    "y": 1942,
+    "ico": "🎯",
+    "t": "Bataille de Midway"
+  },
+  {
+    "y": 1943,
+    "ico": "🍖",
+    "t": "Fin de la bataille de Stalingrad"
+  },
+  {
+    "y": 1944,
+    "ico": "🎓",
+    "t": "Accords de Bretton Woods"
+  },
+  {
+    "y": 1946,
+    "ico": "💻",
+    "t": "Premier ordinateur ENIAC"
+  },
+  {
+    "y": 1947,
+    "ico": "✈️",
+    "t": "Chuck Yeager franchit le mur du son"
+  },
+  {
+    "y": 1948,
+    "ico": "🇮🇱",
+    "t": "Création de l'État d'Israël"
+  },
+  {
+    "y": 1949,
+    "ico": "🌍",
+    "t": "Création de l'OTAN"
+  },
+  {
+    "y": 1950,
+    "ico": "🇰🇷",
+    "t": "Début de la guerre de Corée"
+  },
+  {
+    "y": 1950,
+    "ico": "🏁",
+    "t": "Premier championnat du monde de Formule 1"
+  },
+  {
+    "y": 1952,
+    "ico": "🇬🇧",
+    "t": "Avènement d'Élisabeth II"
+  },
+  {
+    "y": 1952,
+    "ico": "🩺",
+    "t": "Première greffe de rein réussie"
+  },
+  {
+    "y": 1953,
+    "ico": "🧬",
+    "t": "Structure de l'ADN découverte"
+  },
+  {
+    "y": 1955,
+    "ico": "🚌",
+    "t": "Boycott des bus de Montgomery"
+  },
+  {
+    "y": 1956,
+    "ico": "📦",
+    "t": "Invention du conteneur maritime"
+  },
+  {
+    "y": 1956,
+    "ico": "🎸",
+    "t": "Elvis entre dans les charts avec Heartbreak Hotel"
+  },
+  {
+    "y": 1958,
+    "ico": "🚀",
+    "t": "Création de la NASA"
+  },
+  {
+    "y": 1958,
+    "ico": "⚽",
+    "t": "Le Brésil remporte sa première Coupe du monde"
+  },
+  {
+    "y": 1959,
+    "ico": "🌕",
+    "t": "Luna 3 photographie la face cachée de la Lune"
+  },
+  {
+    "y": 1959,
+    "ico": "🎺",
+    "t": "Miles Davis enregistre Kind of Blue"
+  },
+  {
+    "y": 1960,
+    "ico": "💊",
+    "t": "Invention de la pilule contraceptive"
+  },
+  {
+    "y": 1960,
+    "ico": "🌊",
+    "t": "Première plongée dans la fosse des Mariannes (Bathyscaphe Trieste)"
+  },
+  {
+    "y": 1962,
+    "ico": "📊",
+    "t": "Crise des missiles de Cuba"
+  },
+  {
+    "y": 1962,
+    "ico": "📶",
+    "t": "Telstar, premier satellite de télécommunications"
+  },
+  {
+    "y": 1963,
+    "ico": "🗣️",
+    "t": "Discours « I have a dream » de Martin Luther King"
+  },
+  {
+    "y": 1963,
+    "ico": "🎵",
+    "t": "Sortie du premier album des Beatles, Please Please Me"
+  },
+  {
+    "y": 1964,
+    "ico": "🎬",
+    "t": "Goldfinger au cinéma"
+  },
+  {
+    "y": 1964,
+    "ico": "🎵",
+    "t": "Première tournée américaine des Beatles"
+  },
+  {
+    "y": 1965,
+    "ico": "🌫️",
+    "t": "Débarquement américain au Vietnam"
+  },
+  {
+    "y": 1966,
+    "ico": "🎬",
+    "t": "La Bataille d'Alger de Pontecorvo"
+  },
+  {
+    "y": 1966,
+    "ico": "⚽",
+    "t": "L'Angleterre remporte la Coupe du monde à domicile"
+  },
+  {
+    "y": 1967,
+    "ico": "🩺",
+    "t": "Première greffe de cœur humain par Barnard"
+  },
+  {
+    "y": 1968,
+    "ico": "🕊️",
+    "t": "Assassinat de Martin Luther King"
+  },
+  {
+    "y": 1968,
+    "ico": "🎵",
+    "t": "Sortie de l'Album blanc des Beatles"
+  },
+  {
+    "y": 1969,
+    "ico": "🎸",
+    "t": "Festival de Woodstock"
+  },
+  {
+    "y": 1970,
+    "ico": "🌐",
+    "t": "ARPANET devient international"
+  },
+  {
+    "y": 1971,
+    "ico": "📧",
+    "t": "Premier e-mail envoyé"
+  },
+  {
+    "y": 1971,
+    "ico": "🎬",
+    "t": "Orange mécanique de Kubrick"
+  },
+  {
+    "y": 1972,
+    "ico": "🎮",
+    "t": "Sortie commerciale de Pong d'Atari"
+  },
+  {
+    "y": 1973,
+    "ico": "⛽",
+    "t": "Premier choc pétrolier"
+  },
+  {
+    "y": 1974,
+    "ico": "🦴",
+    "t": "Découverte de Lucy en Éthiopie"
+  },
+  {
+    "y": 1974,
+    "ico": "⚽",
+    "t": "L'Allemagne remporte la Coupe du monde à domicile"
+  },
+  {
+    "y": 1975,
+    "ico": "🇻🇳",
+    "t": "Fin de la guerre du Vietnam"
+  },
+  {
+    "y": 1975,
+    "ico": "🎬",
+    "t": "Les Dents de la mer de Spielberg"
+  },
+  {
+    "y": 1976,
+    "ico": "🍎",
+    "t": "Fondation d'Apple par Jobs et Wozniak"
+  },
+  {
+    "y": 1977,
+    "ico": "🎬",
+    "t": "Sortie de Star Wars"
+  },
+  {
+    "y": 1977,
+    "ico": "🚀",
+    "t": "Lancement des sondes Voyager"
+  },
+  {
+    "y": 1978,
+    "ico": "👶",
+    "t": "Premier bébé né par FIV"
+  },
+  {
+    "y": 1979,
+    "ico": "☢️",
+    "t": "Accident nucléaire de Three Mile Island"
+  },
+  {
+    "y": 1980,
+    "ico": "🎮",
+    "t": "Pac-Man sort en arcade"
+  },
+  {
+    "y": 1981,
+    "ico": "🩺",
+    "t": "Premiers cas de sida identifiés"
+  },
+  {
+    "y": 1981,
+    "ico": "🚀",
+    "t": "Premier vol de la navette spatiale Columbia"
+  },
+  {
+    "y": 1982,
+    "ico": "🎵",
+    "t": "Sortie de Thriller de Michael Jackson"
+  },
+  {
+    "y": 1983,
+    "ico": "📶",
+    "t": "Naissance du protocole TCP/IP public"
+  },
+  {
+    "y": 1983,
+    "ico": "🎮",
+    "t": "Sortie de Mario Bros de Nintendo"
+  },
+  {
+    "y": 1984,
+    "ico": "🎮",
+    "t": "Sortie de Super Mario Bros au Japon"
+  },
+  {
+    "y": 1984,
+    "ico": "🏅",
+    "t": "Jeux olympiques de Los Angeles"
+  },
+  {
+    "y": 1985,
+    "ico": "🧊",
+    "t": "Découverte du trou d'ozone"
+  },
+  {
+    "y": 1985,
+    "ico": "🎬",
+    "t": "Retour vers le futur de Zemeckis"
+  },
+  {
+    "y": 1986,
+    "ico": "☢️",
+    "t": "Catastrophe de Tchernobyl"
+  },
+  {
+    "y": 1987,
+    "ico": "🧨",
+    "t": "Traité INF Reagan-Gorbatchev"
+  },
+  {
+    "y": 1988,
+    "ico": "🧨",
+    "t": "Attentat de Lockerbie"
+  },
+  {
+    "y": 1988,
+    "ico": "🏅",
+    "t": "Jeux olympiques de Séoul"
+  },
+  {
+    "y": 1990,
+    "ico": "🌐",
+    "t": "Tim Berners-Lee imagine le Web"
+  },
+  {
+    "y": 1991,
+    "ico": "⚔️",
+    "t": "Guerre du Golfe"
+  },
+  {
+    "y": 1991,
+    "ico": "🎮",
+    "t": "Sonic the Hedgehog sort sur Mega Drive"
+  },
+  {
+    "y": 1992,
+    "ico": "📲",
+    "t": "Premier SMS réel envoyé"
+  },
+  {
+    "y": 1992,
+    "ico": "🪐",
+    "t": "Première exoplanète confirmée"
+  },
+  {
+    "y": 1993,
+    "ico": "🎬",
+    "t": "Jurassic Park de Spielberg"
+  },
+  {
+    "y": 1993,
+    "ico": "🎮",
+    "t": "Sortie de Doom sur PC"
+  },
+  {
+    "y": 1994,
+    "ico": "🇿🇦",
+    "t": "Mandela devient président sud-africain"
+  },
+  {
+    "y": 1994,
+    "ico": "🎬",
+    "t": "Pulp Fiction et Forrest Gump au cinéma"
+  },
+  {
+    "y": 1995,
+    "ico": "💻",
+    "t": "Sortie de Windows 95"
+  },
+  {
+    "y": 1995,
+    "ico": "🏉",
+    "t": "Coupe du monde de rugby en Afrique du Sud"
+  },
+  {
+    "y": 1996,
+    "ico": "🐑",
+    "t": "Clonage de la brebis Dolly"
+  },
+  {
+    "y": 1996,
+    "ico": "🎮",
+    "t": "Pokémon Rouge et Vert sortent au Japon"
+  },
+  {
+    "y": 1997,
+    "ico": "♟️",
+    "t": "Deep Blue bat Kasparov aux échecs"
+  },
+  {
+    "y": 1997,
+    "ico": "🎬",
+    "t": "Titanic de James Cameron"
+  },
+  {
+    "y": 1998,
+    "ico": "🚀",
+    "t": "Premier module de l'ISS lancé"
+  },
+  {
+    "y": 1998,
+    "ico": "⚽",
+    "t": "La France remporte la Coupe du monde à domicile"
+  },
+  {
+    "y": 1999,
+    "ico": "💶",
+    "t": "Création de l'euro monétaire"
+  },
+  {
+    "y": 2000,
+    "ico": "🚀",
+    "t": "Premiers habitants de l'ISS"
+  },
+  {
+    "y": 2000,
+    "ico": "🎮",
+    "t": "Sortie de The Sims"
+  },
+  {
+    "y": 2001,
+    "ico": "🗽",
+    "t": "Attentats du 11 septembre"
+  },
+  {
+    "y": 2001,
+    "ico": "🎮",
+    "t": "Sortie de Halo: Combat Evolved sur Xbox"
+  },
+  {
+    "y": 2002,
+    "ico": "🎮",
+    "t": "Sortie de Kingdom Hearts"
+  },
+  {
+    "y": 2003,
+    "ico": "🧬",
+    "t": "Séquençage du génome humain achevé"
+  },
+  {
+    "y": 2003,
+    "ico": "🎬",
+    "t": "Le Seigneur des anneaux : Le Retour du roi au cinéma"
+  },
+  {
+    "y": 2004,
+    "ico": "🚀",
+    "t": "SpaceShipOne franchit la ligne de Kármán"
+  },
+  {
+    "y": 2004,
+    "ico": "🌊",
+    "t": "Tsunami de l'océan Indien"
+  },
+  {
+    "y": 2004,
+    "ico": "🎮",
+    "t": "Sortie de World of Warcraft"
+  },
+  {
+    "y": 2005,
+    "ico": "📺",
+    "t": "Création de YouTube"
+  },
+  {
+    "y": 2005,
+    "ico": "🏁",
+    "t": "Fernando Alonso champion du monde de F1"
+  },
+  {
+    "y": 2006,
+    "ico": "🐦",
+    "t": "Création de Twitter"
+  },
+  {
+    "y": 2007,
+    "ico": "📱",
+    "t": "Lancement du premier iPhone"
+  },
+  {
+    "y": 2008,
+    "ico": "📉",
+    "t": "Crise financière de Lehman Brothers"
+  },
+  {
+    "y": 2008,
+    "ico": "🎬",
+    "t": "The Dark Knight de Christopher Nolan"
+  },
+  {
+    "y": 2009,
+    "ico": "🪙",
+    "t": "Premier bloc miné du Bitcoin"
+  },
+  {
+    "y": 2009,
+    "ico": "🎮",
+    "t": "Sortie de League of Legends"
+  },
+  {
+    "y": 2010,
+    "ico": "📱",
+    "t": "Sortie de l'iPad"
+  },
+  {
+    "y": 2010,
+    "ico": "🎬",
+    "t": "Inception de Christopher Nolan"
+  },
+  {
+    "y": 2011,
+    "ico": "🚀",
+    "t": "Sortie officielle de Minecraft"
+  },
+  {
+    "y": 2012,
+    "ico": "⚛️",
+    "t": "Découverte du boson de Higgs au CERN"
+  },
+  {
+    "y": 2013,
+    "ico": "📱",
+    "t": "Snapchat introduit les stories"
+  },
+  {
+    "y": 2014,
+    "ico": "🎮",
+    "t": "Sortie de Flappy Bird et boom du mobile gaming"
+  },
+  {
+    "y": 2014,
+    "ico": "⚽",
+    "t": "L'Allemagne remporte la Coupe du monde au Brésil"
+  },
+  {
+    "y": 2015,
+    "ico": "🌍",
+    "t": "Accord de Paris sur le climat"
+  },
+  {
+    "y": 2015,
+    "ico": "🔭",
+    "t": "Première détection d'ondes gravitationnelles (LIGO)"
+  },
+  {
+    "y": 2015,
+    "ico": "🎮",
+    "t": "Sortie de The Witcher 3 : Wild Hunt"
+  },
+  {
+    "y": 2016,
+    "ico": "🤖",
+    "t": "AlphaGo bat Lee Sedol au jeu de go"
+  },
+  {
+    "y": 2016,
+    "ico": "🏅",
+    "t": "Premiers Jeux olympiques en Amérique du Sud (Rio)"
+  },
+  {
+    "y": 2018,
+    "ico": "🎮",
+    "t": "Fortnite Battle Royale devient un phénomène mondial"
+  },
+  {
+    "y": 2018,
+    "ico": "⚽",
+    "t": "La France remporte la Coupe du monde en Russie"
+  },
+  {
+    "y": 2019,
+    "ico": "🌌",
+    "t": "Première image d'un trou noir"
+  },
+  {
+    "y": 2019,
+    "ico": "🎬",
+    "t": "Parasite remporte la Palme d'or à Cannes"
+  },
+  {
+    "y": 2021,
+    "ico": "🚀",
+    "t": "Lancement du télescope James Webb"
+  },
+  {
+    "y": 2021,
+    "ico": "🎮",
+    "t": "Among Us devient un phénomène mondial"
+  },
+  {
+    "y": 2022,
+    "ico": "⚔️",
+    "t": "Invasion russe de l'Ukraine"
+  },
+  {
+    "y": 2023,
+    "ico": "🤖",
+    "t": "Explosion de l'IA générative grand public"
+  },
+  {
+    "y": 2024,
+    "ico": "🥇",
+    "t": "Jeux olympiques de Paris"
+  },
+  {
+    "y": 1742,
+    "ico": "🎶",
+    "t": "Le Messie de Haendel créé à Dublin"
+  },
+  {
+    "y": 1788,
+    "ico": "🎼",
+    "t": "Les trois dernières symphonies de Mozart"
+  },
+  {
+    "y": 1808,
+    "ico": "🎼",
+    "t": "Création de la Cinquième Symphonie de Beethoven"
+  },
+  {
+    "y": 1813,
+    "ico": "🎼",
+    "t": "Naissance de Richard Wagner"
+  },
+  {
+    "y": 1838,
+    "ico": "🎹",
+    "t": "Frédéric Chopin s'installe à Paris"
+  },
+  {
+    "y": 1865,
+    "ico": "🎭",
+    "t": "Création de Tristan et Isolde de Wagner"
+  },
+  {
+    "y": 1876,
+    "ico": "🎭",
+    "t": "Première du Ring de Wagner à Bayreuth"
+  },
+  {
+    "y": 1896,
+    "ico": "🎼",
+    "t": "Création de La Bohème de Puccini"
+  },
+  {
+    "y": 1928,
+    "ico": "🎼",
+    "t": "Création du Boléro de Ravel"
+  },
+  {
+    "y": 1954,
+    "ico": "🎸",
+    "t": "Elvis Presley enregistre That's All Right"
+  },
+  {
+    "y": 1959,
+    "ico": "🎺",
+    "t": "Enregistrement de Kind of Blue de Miles Davis"
+  },
+  {
+    "y": 1963,
+    "ico": "🎵",
+    "t": "Sortie de l'album Please Please Me des Beatles"
+  },
+  {
+    "y": 1965,
+    "ico": "🎵",
+    "t": "Bob Dylan passe à la guitare électrique à Newport"
+  },
+  {
+    "y": 1969,
+    "ico": "🎸",
+    "t": "Festival de Woodstock dans l'État de New York"
+  },
+  {
+    "y": 1977,
+    "ico": "🎧",
+    "t": "Sortie des premiers baladeurs Sony Walkman au Japon"
+  },
+  {
+    "y": 1981,
+    "ico": "📺",
+    "t": "Lancement de la chaîne MTV"
+  },
+  {
+    "y": 1982,
+    "ico": "💿",
+    "t": "Sony et Philips lancent le disque compact"
+  },
+  {
+    "y": 1985,
+    "ico": "🎤",
+    "t": "Concert mondial Live Aid"
+  },
+  {
+    "y": 1987,
+    "ico": "🎤",
+    "t": "Sortie de l'album Bad de Michael Jackson"
+  },
+  {
+    "y": 1991,
+    "ico": "🎤",
+    "t": "Sortie de Nevermind de Nirvana"
+  },
+  {
+    "y": 1994,
+    "ico": "🎤",
+    "t": "Mort de Kurt Cobain"
+  },
+  {
+    "y": 1998,
+    "ico": "🎤",
+    "t": "Sortie de Ray of Light de Madonna"
+  },
+  {
+    "y": 2000,
+    "ico": "🎤",
+    "t": "Premier festival Coachella"
+  },
+  {
+    "y": 2001,
+    "ico": "🎤",
+    "t": "Sortie de Discovery de Daft Punk"
+  },
+  {
+    "y": 2008,
+    "ico": "🎤",
+    "t": "Sortie de l'album Death Magnetic de Metallica"
+  },
+  {
+    "y": 2009,
+    "ico": "🎤",
+    "t": "Décès de Michael Jackson"
+  },
+  {
+    "y": 2011,
+    "ico": "🎤",
+    "t": "Décès d'Amy Winehouse"
+  },
+  {
+    "y": 2012,
+    "ico": "🎤",
+    "t": "Gangnam Style dépasse le milliard de vues sur YouTube"
+  },
+  {
+    "y": 2013,
+    "ico": "🎤",
+    "t": "Daft Punk remporte cinq Grammy Awards"
+  },
+  {
+    "y": 2014,
+    "ico": "🎤",
+    "t": "Sortie de 1989 de Taylor Swift"
+  },
+  {
+    "y": 2016,
+    "ico": "🎤",
+    "t": "Mort de David Bowie"
+  },
+  {
+    "y": 1957,
+    "ico": "🔬",
+    "t": "Fritz Bopp a été élu à l'Académie Leopoldina"
+  },
+  {
+    "y": 2004,
+    "ico": "👨‍🍳",
+    "t": "Catherine Hill a été nommée chef du service de biostatistiques et d'épidémiologie à l'Institut Gustave-Roussy"
+  },
+  {
+    "y": 1954,
+    "ico": "📜",
+    "t": "La défaite française de Diên Biên Phu a eu lieu"
+  },
+  {
+    "y": 2006,
+    "ico": "🔬",
+    "t": "Sergueï Kovalev a reçu le Prix Victor-Gollancz"
+  },
+  {
+    "y": 1956,
+    "ico": "🍽️",
+    "t": "A été créé le fromage Caprice des Dieux"
+  },
+  {
+    "y": 1913,
+    "ico": "🏅",
+    "t": "Harold Hackett a remporté la Coupe Davis en tant que capitaine"
+  },
+  {
+    "y": 2010,
+    "ico": "📺",
+    "t": "La série Sherlock de la BBC a débuté"
+  },
+  {
+    "y": 1905,
+    "ico": "🔬",
+    "t": "Carl Harries a publié sa principale étude sur l'ozonolyse"
+  },
+  {
+    "y": 1964,
+    "ico": "🔬",
+    "t": "Gideon Davies est-il né"
+  },
+  {
+    "y": 1893,
+    "ico": "🔬",
+    "t": "Walter Noddack est-il né"
+  },
+  {
+    "y": 2012,
+    "ico": "🔬",
+    "t": "Meave Leakey a découvert des fossiles d'Homo rudolfensis"
+  },
+  {
+    "y": 2017,
+    "ico": "🎮",
+    "t": "Cuphead est-il sorti initialement"
+  },
+  {
+    "y": 1783,
+    "ico": "🌍",
+    "t": "Une mention de cette pratique est-elle trouvée dans un écrit haïtien"
+  },
+  {
+    "y": 1992,
+    "ico": "👑",
+    "t": "Henri Leconte a atteint les demi-finales de Roland-Garros pour la troisième fois"
+  },
+  {
+    "y": 1912,
+    "ico": "🏅",
+    "t": "Carl Harries a reçu la Médaille Liebig"
+  },
+  {
+    "y": 1949,
+    "ico": "🎬",
+    "t": "Le film a été officiellement sorti en France"
+  },
+  {
+    "y": 2004,
+    "ico": "🏅",
+    "t": "Le joueur a remporté son deuxième titre en simple professionnel"
+  },
+  {
+    "y": 1956,
+    "ico": "📺",
+    "t": "Joseph Cates a produit la série télévisée 'The $64,000 Question'"
+  },
+  {
+    "y": 1983,
+    "ico": "🏅",
+    "t": "Younis Mahmoud est-il né"
+  },
+  {
+    "y": 1952,
+    "ico": "📖",
+    "t": "Sylvère Monod a obtenu son doctorat"
+  },
+  {
+    "y": 1927,
+    "ico": "🎲",
+    "t": "Théo Bergerat a lancé sa chronique sur les ondes de la TSF"
+  },
+  {
+    "y": 1869,
+    "ico": "🥇",
+    "t": "Le premier chemin de fer transcontinental américain a été achevé"
+  },
+  {
+    "y": 1959,
+    "ico": "💿",
+    "t": "L’album Kind of Blue est-il sorti"
+  },
+  {
+    "y": 1991,
+    "ico": "🏅",
+    "t": "Leander Paes est-il devenu professionnel dans le tennis"
+  },
+  {
+    "y": 2014,
+    "ico": "📖",
+    "t": "François Boulay a publié son ouvrage Pique rouge, Cœur noir"
+  },
+  {
+    "y": 1922,
+    "ico": "🏗️",
+    "t": "L'URSS a été fondée"
+  },
+  {
+    "y": 1939,
+    "ico": "🖼️",
+    "t": "Edmond Leroy est-il décédé"
+  },
+  {
+    "y": 2013,
+    "ico": "🏅",
+    "t": "Gianluigi Quinzi a atteint la 1re place mondiale du classement junior"
+  },
+  {
+    "y": 987,
+    "ico": "👑",
+    "t": "Hugues Capet est-il devenu roi de France"
+  },
+  {
+    "y": 1876,
+    "ico": "🖼️",
+    "t": "Eugène Delâtre a commencé à travailler dans l'imprimerie de son père"
+  },
+  {
+    "y": 1906,
+    "ico": "🏅",
+    "t": "Joseph John Thomson a reçu le prix Nobel de physique"
+  },
+  {
+    "y": 2003,
+    "ico": "🎬",
+    "t": "Le long métrage d'animation basé sur l'adaptation de l'histoire a été finalement sorti"
+  },
+  {
+    "y": 2013,
+    "ico": "🏅",
+    "t": "A remporté le tournoi de Wimbledon à deux reprises"
+  },
+  {
+    "y": 1962,
+    "ico": "📜",
+    "t": "L'élection présidentielle française est-elle passée au suffrage universel direct"
+  },
+  {
+    "y": 1992,
+    "ico": "🔬",
+    "t": "Mina Bissell a reçu la bourse Guggenheim"
+  },
+  {
+    "y": 1905,
+    "ico": "🖼️",
+    "t": "André Derain a exposé avec Matisse et d'autres peintres le Fauvisme au Salon d'automne"
+  },
+  {
+    "y": 2015,
+    "ico": "🔬",
+    "t": "A été reconnu officier de l'ordre des Arts et des Lettres"
+  },
+  {
+    "y": 2013,
+    "ico": "🏅",
+    "t": "A Mario Frick disputé son 100ème match international"
+  },
+  {
+    "y": 2021,
+    "ico": "🎮",
+    "t": "It Takes Two est-il sorti initialement"
+  },
+  {
+    "y": 2008,
+    "ico": "🔬",
+    "t": "A reçu Mayana Zatz le prix de science et technologie du Mexique"
+  },
+  {
+    "y": 1880,
+    "ico": "🍽️",
+    "t": "La ganache aurait-elle été inventée par accident par un apprenti pâtissier"
+  },
+  {
+    "y": 1969,
+    "ico": "📖",
+    "t": "Alain Didier-Weill a reçu le prix de L'Évolution psychiatrique"
+  },
+  {
+    "y": 1364,
+    "ico": "📜",
+    "t": "Charles V a épousé Jeanne de Bourbon"
+  },
+  {
+    "y": 1692,
+    "ico": "🏰",
+    "t": "Le duc d'Antin acquiert le château de Bellegarde"
+  },
+  {
+    "y": 1969,
+    "ico": "🎬",
+    "t": "Séverin Blanchet a été interprète principal d'un film de fiction"
+  },
+  {
+    "y": 1992,
+    "ico": "🎬",
+    "t": "Jean Claudio est-il décédé"
+  },
+  {
+    "y": 1885,
+    "ico": "👑",
+    "t": "La Chambre des députés a décidé de vendre la plupart des joyaux de la couronne française"
+  },
+  {
+    "y": 1970,
+    "ico": "🌍",
+    "t": "L'île de Touzla fut-elle administrativement rattachée à l'Ukraine"
+  },
+  {
+    "y": 2011,
+    "ico": "🎮",
+    "t": "Terraria est-il sorti initialement sur Windows"
+  },
+  {
+    "y": 1966,
+    "ico": "📖",
+    "t": "A publié la 2e édition mise à jour de l'ouvrage « Histoire de l'Inde »"
+  },
+  {
+    "y": 1842,
+    "ico": "🔬",
+    "t": "A mis au point le procédé d'argente et de dore par électrolyse"
+  },
+  {
+    "y": 1973,
+    "ico": "🎬",
+    "t": "Tristan Aurouet est-il né"
+  },
+  {
+    "y": 1733,
+    "ico": "🔬",
+    "t": "Jean-Charles de Borda est-il né"
+  },
+  {
+    "y": 1953,
+    "ico": "🔬",
+    "t": "La structure en double hélice de l'ADN a été découverte"
+  },
+  {
+    "y": 1977,
+    "ico": "🌍",
+    "t": "Raymond Aron a publié son ouvrage intitulé « Plaidoyer pour l'Europe décadente »"
+  },
+  {
+    "y": 1932,
+    "ico": "🍽️",
+    "t": "La famille Donck-Spruytte a commencé l'activité de production de fromage dans la région"
+  },
+  {
+    "y": 1921,
+    "ico": "🍽️",
+    "t": "La marque a été déposée à l'Office national de la propriété industrielle"
+  },
+  {
+    "y": 1986,
+    "ico": "🏅",
+    "t": "Henri Leconte a remporté le Grand Prix Championship Series de Hambourg"
+  },
+  {
+    "y": 1945,
+    "ico": "📜",
+    "t": "Les femmes françaises ont-elles voté pour la première fois"
+  },
+  {
+    "y": 1108,
+    "ico": "📜",
+    "t": "Louis VI fut-il investi du comté de Vexin et des villes de Mantes et de Pontoise"
+  },
+  {
+    "y": 1932,
+    "ico": "🎬",
+    "t": "Ce film a été sorti en France"
+  },
+  {
+    "y": 1997,
+    "ico": "📺",
+    "t": "Stargate SG-1 a débuté à la télévision"
+  },
+  {
+    "y": 1720,
+    "ico": "🖼️",
+    "t": "Pierre Rivalz est-il né à Toulouse"
+  },
+  {
+    "y": 1968,
+    "ico": "🎲",
+    "t": "Ce documentaire a été réalisé"
+  },
+  {
+    "y": 1980,
+    "ico": "🎬",
+    "t": "Tze Chun est-il né"
+  },
+  {
+    "y": 2016,
+    "ico": "📖",
+    "t": "L'auteur a publié le recueil de nouvelles 'Bazooka, in Un petit noir'"
+  },
+  {
+    "y": 1993,
+    "ico": "🔬",
+    "t": "Ernst Bamberg a été nommé professeur titulaire de chimie biophysique"
+  },
+  {
+    "y": 1981,
+    "ico": "🏗️",
+    "t": "Mayana Zatz a fondé l'Association brésilienne de la dystrophie musculaire"
+  },
+  {
+    "y": 1715,
+    "ico": "📖",
+    "t": "Jean-Claude Fabre a rejoint la congrégation de l’Oratoire de France"
+  },
+  {
+    "y": 1919,
+    "ico": "🔬",
+    "t": "Ishihara Jun a obtenu le prix de l'Académie impériale des sciences"
+  },
+  {
+    "y": 1799,
+    "ico": "📜",
+    "t": "La pierre de Rosette a été découverte"
+  },
+  {
+    "y": 1994,
+    "ico": "🌍",
+    "t": "La commune de Taba était-elle dirigée par un bourgmestre nommé par le gouvernement central"
+  },
+  {
+    "y": 1989,
+    "ico": "🎬",
+    "t": "Howard Brookner est-il décédé"
+  },
+  {
+    "y": 268,
+    "ico": "📜",
+    "t": "Manius Acilius Aureolus a usurpé le titre impérial"
+  },
+  {
+    "y": 1962,
+    "ico": "⚔️",
+    "t": "Les accords d'Évian ont-ils mis fin à la guerre d'Algérie"
+  },
+  {
+    "y": 2018,
+    "ico": "🎵",
+    "t": "El mal querer de Rosalía est-il sorti"
+  },
+  {
+    "y": 1980,
+    "ico": "🏗️",
+    "t": "Séverin Blanchet a fondé les Ateliers Varan en France"
+  },
+  {
+    "y": 2015,
+    "ico": "🎮",
+    "t": "Vasek Pospisil a remporté son premier titre majeur en double"
+  },
+  {
+    "y": 2015,
+    "ico": "🔬",
+    "t": "Françoise Winnik est-elle devenue la 2e femme récipiendaire du prix Acfas Urgel-Archambault"
+  },
+  {
+    "y": 1905,
+    "ico": "👑",
+    "t": "Harold Hackett atteint-il la finale en double avec Fred Alexander trois fois"
+  },
+  {
+    "y": 2021,
+    "ico": "🏅",
+    "t": "L'écurie Red Bull Racing a réalisé son record historique d'arrêt au stand en 1,80 seconde"
+  },
+  {
+    "y": 2004,
+    "ico": "🔬",
+    "t": "L'Institut des sciences du pays a été créé"
+  },
+  {
+    "y": 1992,
+    "ico": "🔬",
+    "t": "Angie Turner King a reçu son doctorat honorifique de l'école"
+  },
+  {
+    "y": 1966,
+    "ico": "🍽️",
+    "t": "L'entreprise a repris l'usine de L'Hermitage"
+  },
+  {
+    "y": 1992,
+    "ico": "🎬",
+    "t": "Klaus Biedermann a réalisé le téléfilm « Sniper »"
+  },
+  {
+    "y": 1928,
+    "ico": "🏅",
+    "t": "Hughie Ferguson a rejoint le club de Cardiff City"
+  },
+  {
+    "y": 1960,
+    "ico": "🏅",
+    "t": "Co Prins obtient-il sa première cape internationale"
+  },
+  {
+    "y": 1943,
+    "ico": "🔬",
+    "t": "Susanna Samuels Epp est-elle née"
+  },
+  {
+    "y": 2016,
+    "ico": "🎬",
+    "t": "Le film consacré à son neveu a été réalisé"
+  },
+  {
+    "y": 2005,
+    "ico": "🍽️",
+    "t": "La course a dû être retardée"
+  },
+  {
+    "y": 1947,
+    "ico": "🔬",
+    "t": "Le transistor a été inventé aux Bell Labs"
+  },
+  {
+    "y": 2005,
+    "ico": "🎬",
+    "t": "John Badham a commencé à enseigner le cinéma à l'université"
+  },
+  {
+    "y": 2000,
+    "ico": "🏆",
+    "t": "Sergueï Kovalev a reçu le Prix Olof-Palme"
+  },
+  {
+    "y": 2007,
+    "ico": "🔬",
+    "t": "Jean-Pierre Luminet a publié son ouvrage de synthèse sur les sept approches différentes en gravitation quantique"
+  },
+  {
+    "y": 1967,
+    "ico": "🎬",
+    "t": "William Conrad a réalisé le film Objectif Lune en collaboration avec Robert Altman"
+  },
+  {
+    "y": 1981,
+    "ico": "🍽️",
+    "t": "Bridel SA a absorbé la marque Lanquetot"
+  },
+  {
+    "y": 2002,
+    "ico": "🎬",
+    "t": "Louis-Robinson Stévenin a été nommé au César du meilleur espoir masculin"
+  },
+  {
+    "y": 1997,
+    "ico": "🏅",
+    "t": "Patrick Galbraith a disputé la finale de Roland-Garros en double"
+  },
+  {
+    "y": 1997,
+    "ico": "🎬",
+    "t": "Le film Jeunesse a été officiellement distribué en France"
+  },
+  {
+    "y": 2000,
+    "ico": "📖",
+    "t": "Dominique Rey a été nommé évêque du diocèse de Fréjus-Toulon"
+  },
+  {
+    "y": 476,
+    "ico": "📜",
+    "t": "L'Empire romain d'Occident a officiellement disparu"
+  },
+  {
+    "y": 2011,
+    "ico": "🏅",
+    "t": "A Vasek Pospisil atteint la finale du tournoi Challenger de Rimouski"
+  },
+  {
+    "y": 1392,
+    "ico": "👑",
+    "t": "Charles VI a été sacré roi de France"
+  },
+  {
+    "y": 1346,
+    "ico": "⚔️",
+    "t": "Édouard III fut-il vaincu lors de la bataille de Crécy"
+  },
+  {
+    "y": 1932,
+    "ico": "🔬",
+    "t": "Paul John Flory a obtenu son diplôme de l'université d'État de l'Ohio"
+  },
+  {
+    "y": 1347,
+    "ico": "📜",
+    "t": "La peste noire a atteint l'Europe, en débarquant au port de Messine, en Sicile"
+  },
+  {
+    "y": 2002,
+    "ico": "🎬",
+    "t": "Louis-Robinson Stévenin a remporté le César du meilleur espoir masculin"
+  },
+  {
+    "y": 2005,
+    "ico": "🎬",
+    "t": "Olivier Azam a réalisé le documentaire 'Désentubages cathodiques'"
+  },
+  {
+    "y": 1927,
+    "ico": "🔬",
+    "t": "John Alfred Valentine Butler a obtenu sa thèse à l'Université de Birmingham"
+  },
+  {
+    "y": 2000,
+    "ico": "🏅",
+    "t": "L'Italie a rejoint le Tournoi pour créer l'actuel Tournoi des Six Nations"
+  },
+  {
+    "y": 2001,
+    "ico": "🍽️",
+    "t": "Cette marque commerciale a été créée"
+  },
+  {
+    "y": 1163,
+    "ico": "📜",
+    "t": "La construction de Notre-Dame de Paris a commencé"
+  },
+  {
+    "y": 2020,
+    "ico": "🎮",
+    "t": "Animal Crossing: New Horizons est-il sorti initialement"
+  },
+  {
+    "y": 1307,
+    "ico": "📜",
+    "t": "Philippe le Bel a fait arrêter les templiers de France"
+  },
+  {
+    "y": 2023,
+    "ico": "🏅",
+    "t": "Fernando Muslera a annoncé sa retraite internationale"
+  },
+  {
+    "y": 2007,
+    "ico": "🥇",
+    "t": "Le premier Mass Effect est-il sorti initialement sur Xbox 360"
+  },
+  {
+    "y": 1932,
+    "ico": "🏅",
+    "t": "Law Adam a marqué ses deux doublés en sélection nationale"
+  },
+  {
+    "y": 1594,
+    "ico": "👑",
+    "t": "La couronne d'Henri IV fut-elle officiellement créée"
+  },
+  {
+    "y": 2012,
+    "ico": "🏅",
+    "t": "Atiba Hutchinson a remporté le titre de joueur de l'année en Superliga"
+  },
+  {
+    "y": 1998,
+    "ico": "🏅",
+    "t": "Le club Renato Curi est-il fusionné avec le Renato Curi Angolana"
+  },
+  {
+    "y": 1922,
+    "ico": "📜",
+    "t": "L'archéologue Howard Carter a découvert le tombeau de Toutankhamon"
+  },
+  {
+    "y": 1517,
+    "ico": "📜",
+    "t": "Martin Luther a affiché ses 95 thèses"
+  },
+  {
+    "y": 1900,
+    "ico": "🎮",
+    "t": "Reginald Doherty a remporté la médaille d'or en double mixte aux Jeux olympiques"
+  },
+  {
+    "y": 2005,
+    "ico": "🏅",
+    "t": "Waleed Ali a remporté la Coupe Al-Kurafi avec son club"
+  },
+  {
+    "y": 1963,
+    "ico": "🌍",
+    "t": "Est né le président actuel du CIFE"
+  },
+  {
+    "y": 2022,
+    "ico": "🏅",
+    "t": "Eliakim Coulibaly a remporté son succès Challenger en Côte d'Ivoire"
+  },
+  {
+    "y": 2020,
+    "ico": "🔬",
+    "t": "A été nommée à l'Académie des Sciences"
+  },
+  {
+    "y": 1909,
+    "ico": "🎬",
+    "t": "Ce film a été présenté au public en France"
+  },
+  {
+    "y": 1998,
+    "ico": "🍽️",
+    "t": "La confrérie du bleu du Vercors-Sassenage a été créée"
+  },
+  {
+    "y": 1934,
+    "ico": "📝",
+    "t": "Arnold Beckman a déposé le brevet pour son instrument mesurant l'acidité"
+  },
+  {
+    "y": 1979,
+    "ico": "🏛️",
+    "t": "Régis Boyer a publié sa traduction de « La Saga de Harald l'impitoyable »"
+  },
+  {
+    "y": 1915,
+    "ico": "📐",
+    "t": "Einstein a publié sa théorie de la relativité générale"
+  },
+  {
+    "y": 2000,
+    "ico": "🏅",
+    "t": "A remporté la médaille d'or olympique en simple"
+  },
+  {
+    "y": 1969,
+    "ico": "🥇",
+    "t": "Le réseau ARPANET, ancêtre d'Internet, a transmis son premier message"
+  },
+  {
+    "y": 1952,
+    "ico": "🎬",
+    "t": "Ce film a été officiellement sorti en France"
+  },
+  {
+    "y": 2009,
+    "ico": "📺",
+    "t": "A vu Robinson Stévenin dans la série Les Petits Meurtres d'Agatha Christie"
+  },
+  {
+    "y": 1971,
+    "ico": "💿",
+    "t": "L’album Blue de Joni Mitchell est-il sorti"
+  },
+  {
+    "y": 1947,
+    "ico": "🖼️",
+    "t": "Henri Goetz a obtenu la nationalité française"
+  },
+  {
+    "y": 1380,
+    "ico": "📜",
+    "t": "Charles V le Sage est-il décédé"
+  },
+  {
+    "y": 1996,
+    "ico": "🏅",
+    "t": "Jan Apell a remporté la plupart de ses titres en double messieurs"
+  },
+  {
+    "y": 1992,
+    "ico": "🖼️",
+    "t": "L'œuvre a été acquise pour faire partie d'une collection"
+  },
+  {
+    "y": 1370,
+    "ico": "🍽️",
+    "t": "La première mention du terme, sous la forme brençe, est-elle connue"
+  },
+  {
+    "y": 2003,
+    "ico": "🏅",
+    "t": "A Tomáš Berdych débuté comme joueur de tennis professionnel"
+  },
+  {
+    "y": 1986,
+    "ico": "📜",
+    "t": "La catastrophe nucléaire de Tchernobyl a eu lieu"
+  },
+  {
+    "y": 1972,
+    "ico": "🏗️",
+    "t": "Jean Bourdier a été impliqué dans la fondation du Front national"
+  },
+  {
+    "y": 1986,
+    "ico": "🍽️",
+    "t": "La marque Petit Billy a été lancée sur le marché"
+  },
+  {
+    "y": 1974,
+    "ico": "🎬",
+    "t": "Joseph Cates a produit la comédie musicale \"The Canterville Ghost\""
+  },
+  {
+    "y": 1804,
+    "ico": "📖",
+    "t": "Dureau de la Malle a été nommé membre de l'Académie française"
+  },
+  {
+    "y": 1996,
+    "ico": "🏅",
+    "t": "Jérôme Golmard a remporté un tournoi Challenger en Colombie"
+  },
+  {
+    "y": 1996,
+    "ico": "🏅",
+    "t": "Jérôme Golmard a remporté le tournoi Challenger de Ségovie"
+  },
+  {
+    "y": 1731,
+    "ico": "⚰️",
+    "t": "L'œuvre intitulée « Nature morte à la raie et au panier d'oignons » a été réalisée"
+  },
+  {
+    "y": 1881,
+    "ico": "🖼️",
+    "t": "L'Union des femmes peintres et sculpteurs a été créée"
+  },
+  {
+    "y": 1989,
+    "ico": "🏅",
+    "t": "La rivalité entre Alain Prost et Ayrton Senna a-telle atteint son paroxysme avec le choc à Suzuka"
+  },
+  {
+    "y": 800,
+    "ico": "👑",
+    "t": "Charlemagne a été couronné empereur"
+  },
+  {
+    "y": 1889,
+    "ico": "🎯",
+    "t": "La tour Eiffel a été inaugurée"
+  },
+  {
+    "y": 1835,
+    "ico": "🎬",
+    "t": "Le roman qui a servi de base à l'histoire du film a été publié"
+  },
+  {
+    "y": 1709,
+    "ico": "🏰",
+    "t": "François de Chastellux vendit-il le manoir de Belombre"
+  },
+  {
+    "y": 1946,
+    "ico": "🎬",
+    "t": "William Conrad a débuté sa carrière cinématographique avec le film Les Tueurs"
+  },
+  {
+    "y": 1810,
+    "ico": "🎵",
+    "t": "Frédéric Chopin est-il né"
+  },
+  {
+    "y": 1996,
+    "ico": "🥇",
+    "t": "Le premier Resident Evil est-il sorti"
+  },
+  {
+    "y": 1929,
+    "ico": "🎬",
+    "t": "Jean Brérault a réalisé son premier film muet d'enseignement"
+  },
+  {
+    "y": 1939,
+    "ico": "🏅",
+    "t": "Jean Even a reçu la médaille d'or au Salon des artistes français"
+  },
+  {
+    "y": 1994,
+    "ico": "🏰",
+    "t": "Les graffitis représentant des navires ont-ils été relevés sur l'enduit du logis seigneurial"
+  },
+  {
+    "y": 1804,
+    "ico": "👑",
+    "t": "Napoléon Ier a reçu sa nouvelle couronne impériale"
+  },
+  {
+    "y": 1969,
+    "ico": "🏗️",
+    "t": "Gérard Fourez a fondé le département de sciences, philosophies et sociétés à l'université de Namur"
+  },
+  {
+    "y": 2016,
+    "ico": "🔬",
+    "t": "Gilberte Chambaud a été élue membre de l'Academia Europaea"
+  },
+  {
+    "y": 1973,
+    "ico": "🎵",
+    "t": "The Dark Side of the Moon est-il sorti"
+  },
+  {
+    "y": 1929,
+    "ico": "💡",
+    "t": "Tintin est-il apparu pour la première fois dans Le Petit Vingtième"
+  },
+  {
+    "y": 2001,
+    "ico": "🏅",
+    "t": "Olof Mellberg a rejoint le club d'Aston Villa"
+  },
+  {
+    "y": 2020,
+    "ico": "🎮",
+    "t": "La version 1.0 de Hades est-elle sortie, après son accès anticipé"
+  },
+  {
+    "y": 1981,
+    "ico": "📖",
+    "t": "Michel Jobert a été nommé ministre du Commerce extérieur"
+  },
+  {
+    "y": 1968,
+    "ico": "🏅",
+    "t": "Lars Onsager a reçu le prix Nobel de chimie"
+  },
+  {
+    "y": 1906,
+    "ico": "📜",
+    "t": "Alfred Dreyfus a été définitivement réhabilité"
+  },
+  {
+    "y": 2005,
+    "ico": "🔬",
+    "t": "Kaplan a été nommé Hertz Fellow"
+  },
+  {
+    "y": 2002,
+    "ico": "🏅",
+    "t": "Mark Knowles est-il devenu numéro 1 mondial dans la catégorie du double"
+  },
+  {
+    "y": 1840,
+    "ico": "📝",
+    "t": "Le brevet pour l'argente et le dore par électrolyse a été déposé simultanément"
+  },
+  {
+    "y": 1821,
+    "ico": "🍽️",
+    "t": "La méthode de fabrication de l'emmental a été introduite dans l'Allgäu"
+  },
+  {
+    "y": 1970,
+    "ico": "🔬",
+    "t": "John R. Platt a participé au Club de Rome"
+  },
+  {
+    "y": 1983,
+    "ico": "🎲",
+    "t": "Séverin Blanchet a exporté des ateliers initiation à la réalisation documentaire en Papouasie-Nouvelle-Guinée"
+  },
+  {
+    "y": 1992,
+    "ico": "🎬",
+    "t": "Pierre Beccu passe au long métrage avec le film La dernière saison"
+  },
+  {
+    "y": 2011,
+    "ico": "🔬",
+    "t": "Sylvie Roke a rejoint l'EPFL"
+  },
+  {
+    "y": 1912,
+    "ico": "🏗️",
+    "t": "Ion Vinea a fondé le magazine littéraire Simbolul avec ses condisciples Marcel Janco et Tristan Tzara"
+  },
+  {
+    "y": 1969,
+    "ico": "🎲",
+    "t": "Serge Bard se convertit à l'Islam et se renomma Abdullah Siradj"
+  },
+  {
+    "y": 1978,
+    "ico": "🏗️",
+    "t": "Gabriel Auer a fondé sa propre société de production"
+  },
+  {
+    "y": 1985,
+    "ico": "🏅",
+    "t": "Andrés Gómez a atteint la demi-finale des Masters"
+  },
+  {
+    "y": 1938,
+    "ico": "💡",
+    "t": "Superman est-il apparu dans Action Comics #1"
+  },
+  {
+    "y": 2001,
+    "ico": "🔬",
+    "t": "Françoise Winnik a publié son article concernant l'assemblage des globules rouges humains"
+  },
+  {
+    "y": 1956,
+    "ico": "🔬",
+    "t": "Jeffrey Weeks est-il né"
+  },
+  {
+    "y": 1998,
+    "ico": "🏅",
+    "t": "Le club Renato Curi est fusionné avec le Renato Curi Angolana"
+  },
+  {
+    "y": 2000,
+    "ico": "🏅",
+    "t": "Ievgueni Kafelnikov a remporté la médaille d'or olympique en simple"
+  },
+  {
+    "y": 2021,
+    "ico": "🏅",
+    "t": "Jannik Sinner a atteint le statut de numéro 1 mondial en simple"
+  },
+  {
+    "y": 1925,
+    "ico": "🌍",
+    "t": "L'île de Touzla faisait-elle partie d'un cordon littoral de la péninsule de Taman"
+  },
+  {
+    "y": 2023,
+    "ico": "🎮",
+    "t": "Dredge est-il sorti initialement"
+  },
+  {
+    "y": 2014,
+    "ico": "🌍",
+    "t": "A eu lieu la délibération des représentants des cinquante-quatre pays membres de l'Union africaine"
+  },
+  {
+    "y": 2005,
+    "ico": "🏅",
+    "t": "Donald Young remporte l'Open d'Australie junior"
+  },
+  {
+    "y": 1798,
+    "ico": "📜",
+    "t": "A été vendu le fermail de la chappe"
+  },
+  {
+    "y": 1842,
+    "ico": "🥇",
+    "t": "Les premiers projets d'union douanière et de colonisation germanique en Europe centrale ont-ils été formalisés"
+  },
+  {
+    "y": 2012,
+    "ico": "🔬",
+    "t": "Theodore Gordon Shepherd est-il retourné au Royaume-Uni"
+  },
+  {
+    "y": 1856,
+    "ico": "🔬",
+    "t": "Joseph John Thomson est-il né"
+  },
+  {
+    "y": 1981,
+    "ico": "🏅",
+    "t": "Est né le joueur de tennis David Martin"
+  },
+  {
+    "y": 1958,
+    "ico": "📜",
+    "t": "De Gaulle est-il devenu président de la Ve République"
+  },
+  {
+    "y": 1932,
+    "ico": "🏅",
+    "t": "Law Adam a marqué deux doublés en sélection nationale"
+  },
+  {
+    "y": 392,
+    "ico": "📜",
+    "t": "Flavius Rufinus fut-il nommé magister officiorum"
+  },
+  {
+    "y": 2004,
+    "ico": "🥇",
+    "t": "Est apparu le premier titre de champion du Honduras de Maynor Figueroa"
+  },
+  {
+    "y": 2023,
+    "ico": "🎲",
+    "t": "A été diffusé le documentaire dans l'émission Le Monde en face"
+  },
+  {
+    "y": 1429,
+    "ico": "📜",
+    "t": "Jeanne d'Arc a délivré Orléans"
+  },
+  {
+    "y": 1983,
+    "ico": "🏅",
+    "t": "Maynor Figueroa est-il né"
+  },
+  {
+    "y": 1973,
+    "ico": "🌍",
+    "t": "La Conférence des régions périphériques maritimes d'Europe a été créée"
+  },
+  {
+    "y": 1993,
+    "ico": "🥇",
+    "t": "A Mario Frick disputé son premier match en équipe nationale"
+  },
+  {
+    "y": 1976,
+    "ico": "🖼️",
+    "t": "Kitaj a été inclus dans l'exposition Pop Art en Angleterre"
+  },
+  {
+    "y": 1904,
+    "ico": "🔬",
+    "t": "Moritz Weber devient professeur de la mécanique"
+  },
+  {
+    "y": 2020,
+    "ico": "🎬",
+    "t": "Tristan Aurouet réalise le clip 'Concorde de Gregory Porter'"
+  },
+  {
+    "y": 1932,
+    "ico": "💡",
+    "t": "Ce court métrage a été produit"
+  },
+  {
+    "y": 1965,
+    "ico": "💡",
+    "t": "L'Organisation commune africaine et malgache a été officiellement créée"
+  },
+  {
+    "y": 1916,
+    "ico": "⚔️",
+    "t": "S'est déroulée la bataille de Verdun"
+  },
+  {
+    "y": 2005,
+    "ico": "🥇",
+    "t": "Tomáš Berdych a remporté son premier titre sur le circuit ATP"
+  },
+  {
+    "y": 1979,
+    "ico": "🔬",
+    "t": "A obtenu un poste de recherche permanent au CNRS"
+  },
+  {
+    "y": 1789,
+    "ico": "📜",
+    "t": "A eu lieu la Révolution française"
+  },
+  {
+    "y": 1861,
+    "ico": "⚔️",
+    "t": "La guerre de Sécession a éclaté aux États-Unis"
+  },
+  {
+    "y": 1997,
+    "ico": "🎬",
+    "t": "John Badham a réalisé son dernier long métrage mentionné dans la filmographie"
+  },
+  {
+    "y": 1972,
+    "ico": "🏅",
+    "t": "Ian Goodison est-il né"
+  },
+  {
+    "y": 1954,
+    "ico": "🍽️",
+    "t": "Cette association a été officiellement créée"
+  },
+  {
+    "y": 1793,
+    "ico": "📜",
+    "t": "La patène de serpentine a été acquise par le musée du Louvre"
+  },
+  {
+    "y": 1978,
+    "ico": "🍽️",
+    "t": "Est lancé le fromage Groot Hof — La Grand'Ferme"
+  },
+  {
+    "y": 1935,
+    "ico": "🎬",
+    "t": "Ralph-Merton a réussi à dupliquer des réseaux de diffraction sans perte en utilisant un film d'ester de cellulose"
+  },
+  {
+    "y": 1915,
+    "ico": "🖼️",
+    "t": "Dora Carrington rencontre Lytton Strachey"
+  },
+  {
+    "y": 2003,
+    "ico": "🔬",
+    "t": "Le séquençage complet du génome humain a été annoncé"
+  },
+  {
+    "y": 2007,
+    "ico": "🏅",
+    "t": "Est Odil Ahmedov sélectionné pour la première fois en équipe d'Ouzbékistan"
+  },
+  {
+    "y": 2004,
+    "ico": "📖",
+    "t": "Christian Blanchard a quitté l'Éducation nationale pour se consacrer à l'écriture"
+  },
+  {
+    "y": 2013,
+    "ico": "🎬",
+    "t": "Tze Chun a réalisé le documentaire intitulé 'Document'"
+  },
+  {
+    "y": 1991,
+    "ico": "🎮",
+    "t": "Street Fighter II est-il arrivé en arcade"
+  },
+  {
+    "y": 1910,
+    "ico": "🎲",
+    "t": "Henri Calef est-il né"
+  },
+  {
+    "y": 1983,
+    "ico": "⚔️",
+    "t": "Le barrage de Lomaum a été détruit pendant la guerre civile angolaise"
+  },
+  {
+    "y": 1935,
+    "ico": "💡",
+    "t": "Le Monopoly a été commercialisé"
+  },
+  {
+    "y": 1994,
+    "ico": "🍽️",
+    "t": "La marque a été déposée officiellement"
+  },
+  {
+    "y": 2015,
+    "ico": "🎬",
+    "t": "A pu voir le film en Italie"
+  },
+  {
+    "y": 1922,
+    "ico": "🎬",
+    "t": "Théo Bergerat a réalisé le film intitulé 'Mimi Pinson'"
+  },
+  {
+    "y": 1954,
+    "ico": "🌍",
+    "t": "Les Américains et les Britanniques ont-ils décidé de coopérer pour le développement des missiles balistiques"
+  },
+  {
+    "y": 1988,
+    "ico": "🏅",
+    "t": "Marcelo Balboa a débuté avec l'équipe nationale"
+  },
+  {
+    "y": 1919,
+    "ico": "🏅",
+    "t": "Hughie Ferguson a marqué 43 buts en championnat"
+  },
+  {
+    "y": 2003,
+    "ico": "🏅",
+    "t": "Cristiano Júnior a été élu meilleur buteur du championnat indien"
+  },
+  {
+    "y": 1969,
+    "ico": "🥇",
+    "t": "Le Concorde, avion supersonique, a effectué son premier vol"
+  },
+  {
+    "y": 2013,
+    "ico": "📺",
+    "t": "Brooklyn Nine-Nine a débuté à la télévision"
+  },
+  {
+    "y": 395,
+    "ico": "📜",
+    "t": "L'Empire romain a été définitivement divisé entre Orient et Occident"
+  },
+  {
+    "y": 1974,
+    "ico": "🔬",
+    "t": "Helmut Schwarz a obtenu son habilitation"
+  },
+  {
+    "y": 1517,
+    "ico": "📜",
+    "t": "Martin Luther a publié ses 95 thèses"
+  },
+  {
+    "y": 2004,
+    "ico": "🎬",
+    "t": "Eraserhead a été sélectionné pour la préservation par le National Film Registry"
+  },
+  {
+    "y": 378,
+    "ico": "⚔️",
+    "t": "Flavius Valens est-il mort lors de la bataille d’Andrinople"
+  },
+  {
+    "y": 1951,
+    "ico": "🌍",
+    "t": "Les forces canadiennes ont-elles déployé un contingent dans la région, avant de le réduire à moins de 3 000 hommes"
+  },
+  {
+    "y": 1935,
+    "ico": "🍽️",
+    "t": "Le système des Appellations d'Origine Contrôlée (AOC) a été créé en France"
+  },
+  {
+    "y": 1996,
+    "ico": "🎮",
+    "t": "Tomb Raider a fait de Lara Croft une icône du jeu d'action-aventure"
+  },
+  {
+    "y": 1986,
+    "ico": "🏅",
+    "t": "Andrés Gómez est-il devenu le numéro un mondial en double"
+  },
+  {
+    "y": 1917,
+    "ico": "🎬",
+    "t": "Ce film a été diffusé en France"
+  },
+  {
+    "y": 1982,
+    "ico": "🔬",
+    "t": "Marie-Thérèse Assiga Ahanda a publié son ouvrage intitulé *Je suis raciste*"
+  },
+  {
+    "y": 1969,
+    "ico": "🏅",
+    "t": "Hans Kary fait-il partie de l'équipe d'Autriche de Coupe Davis"
+  },
+  {
+    "y": 1979,
+    "ico": "👑",
+    "t": "La ligne à trois points a été adoptée de manière permanente en NBA"
+  },
+  {
+    "y": 1928,
+    "ico": "🎬",
+    "t": "Le film « The Albany Night Boat » a été diffusé pour la première fois"
+  },
+  {
+    "y": 1975,
+    "ico": "📜",
+    "t": "Les derniers Américains ont-ils quitté Saïgon"
+  },
+  {
+    "y": 2015,
+    "ico": "🏅",
+    "t": "Henri Anier a rejoint Dundee United"
+  },
+  {
+    "y": 1986,
+    "ico": "🎯",
+    "t": "The Legend of Zelda a inauguré son univers ouvert sur NES"
+  },
+  {
+    "y": 2003,
+    "ico": "🔬",
+    "t": "Jean-Marie Basset est-il devenu membre de l'Académie des sciences"
+  },
+  {
+    "y": 1959,
+    "ico": "📖",
+    "t": "Alain Marc est-il né"
+  },
+  {
+    "y": 1883,
+    "ico": "🖼️",
+    "t": "Marie Adrien Lavieille a obtenu une mention honorable au Salon"
+  },
+  {
+    "y": 2016,
+    "ico": "🎮",
+    "t": "Stardew Valley est-il sorti pour la première fois sur PC"
+  },
+  {
+    "y": 1848,
+    "ico": "📜",
+    "t": "A commencé la ruée vers l'or en Californie"
+  },
+  {
+    "y": 2001,
+    "ico": "🔬",
+    "t": "A reçu Mayana Zatz le prix L'Oréal-UNESCO"
+  },
+  {
+    "y": 2022,
+    "ico": "⚽",
+    "t": "Lionel Messi a enfin remporté la Coupe du monde de football avec l'Argentine"
+  },
+  {
+    "y": 2008,
+    "ico": "🏅",
+    "t": "Khairul Amri a été considéré comme le meilleur espoir du championnat de Singapour"
+  },
+  {
+    "y": 2012,
+    "ico": "🌍",
+    "t": "Le montant des subventions pour les promotions du CHEE est-il tombé à zéro"
+  },
+  {
+    "y": 2009,
+    "ico": "🏅",
+    "t": "A remporté la Supercoupe d'Estonie"
+  },
+  {
+    "y": 2021,
+    "ico": "🎲",
+    "t": "Martin Bourboulon a réalisé le long-métrage *Eiffel*"
+  },
+  {
+    "y": 1997,
+    "ico": "🎮",
+    "t": "Final Fantasy VII est-il sorti initialement au Japon"
+  },
+  {
+    "y": 1970,
+    "ico": "🏅",
+    "t": "Hans Kary remporte le tournoi de Cannes en simple messieurs"
+  },
+  {
+    "y": 1946,
+    "ico": "🎬",
+    "t": "Le film « Le Baiser de la mort » a été tourné"
+  },
+  {
+    "y": 2011,
+    "ico": "🌍",
+    "t": "Les Éléments français au Sénégal ont-ils été officiellement créés"
+  },
+  {
+    "y": 1861,
+    "ico": "📜",
+    "t": "L'Italie a été unifiée"
+  },
+  {
+    "y": 1950,
+    "ico": "🎬",
+    "t": "Ce film a été sorti aux États-Unis"
+  },
+  {
+    "y": 337,
+    "ico": "📜",
+    "t": "Constantin II accède à la tête de l'Empire romain"
+  },
+  {
+    "y": 1921,
+    "ico": "🔬",
+    "t": "Thérèse Tréfouël et Jacques Tréfouël se sont-ils mariés"
+  },
+  {
+    "y": 1975,
+    "ico": "🏅",
+    "t": "Oleg Blokhine a été récompensé par le Ballon d'or pour avoir été le meilleur footballeur européen de l'année"
+  },
+  {
+    "y": 1974,
+    "ico": "🥇",
+    "t": "John Newcombe a atteint le premier rang du classement ATP en tant que joueur mondial"
+  },
+  {
+    "y": 2023,
+    "ico": "🎲",
+    "t": "L'ONU a condamné la France pour son refus de rapatrier les enfants"
+  },
+  {
+    "y": 2020,
+    "ico": "📺",
+    "t": "La série Ted Lasso a été lancée"
+  },
+  {
+    "y": 1912,
+    "ico": "📜",
+    "t": "Le Titanic a coulé"
+  },
+  {
+    "y": 2004,
+    "ico": "🎮",
+    "t": "Le trampoline a fait ses débuts aux Jeux olympiques"
+  },
+  {
+    "y": 1743,
+    "ico": "🥇",
+    "t": "Claire arrive lors de son premier voyage dans le passé dans Outlander"
+  },
+  {
+    "y": 1955,
+    "ico": "🌍",
+    "t": "Le Royaume-Uni a procédé à l'annexion officielle de l'île de Rockall"
+  },
+  {
+    "y": 1648,
+    "ico": "🖼️",
+    "t": "Henri Testelin a été reçu académicien avec son tableau de 1648"
+  },
+  {
+    "y": 1975,
+    "ico": "🖼️",
+    "t": "L'École de Khartoum a été dissoute"
+  },
+  {
+    "y": 1945,
+    "ico": "🔬",
+    "t": "Mildred Rebstock a obtenu son doctorat en biochimie"
+  },
+  {
+    "y": 2018,
+    "ico": "🥇",
+    "t": "Andrey Rublev a remporté son premier titre en simple professionnel"
+  },
+  {
+    "y": 1933,
+    "ico": "🎬",
+    "t": "Merian C. Cooper, aventurier et cinéaste, est-il apparu en tant que pilote abattant Kong dans le film culte"
+  },
+  {
+    "y": 1895,
+    "ico": "🏛️",
+    "t": "Est découvert l'astéroïde de la ceinture principale (388) Charybde"
+  },
+  {
+    "y": 2003,
+    "ico": "🔬",
+    "t": "Stefan Schuster a été nommé professeur ordinaire en bio-informatique"
+  },
+  {
+    "y": 1999,
+    "ico": "🔬",
+    "t": "A Thomas Ebbesen rejoint l'Institut de Science et d'Ingénierie Supramoléculaires (ISIS)"
+  },
+  {
+    "y": 1997,
+    "ico": "💿",
+    "t": "L’album OK Computer est-il sorti"
+  },
+  {
+    "y": 2015,
+    "ico": "🏅",
+    "t": "Matteo Berrettini a commencé sa carrière professionnelle en tennis"
+  },
+  {
+    "y": 2013,
+    "ico": "🎮",
+    "t": "Papers, Please est-il sorti initialement"
+  },
+  {
+    "y": 1997,
+    "ico": "🎵",
+    "t": "L’École du micro d’argent est-il sorti"
+  },
+  {
+    "y": 1903,
+    "ico": "🏗️",
+    "t": "A participé à la fondation du Salon d'automne"
+  },
+  {
+    "y": 1498,
+    "ico": "📜",
+    "t": "Louis XII a épousé Anne de Bretagne"
+  },
+  {
+    "y": 2020,
+    "ico": "📜",
+    "t": "Le Royaume-Uni a officiellement quitté l'Union européenne"
+  },
+  {
+    "y": 1356,
+    "ico": "⚔️",
+    "t": "Jean II le Bon fut-il fait prisonnier à la bataille de Poitiers"
+  },
+  {
+    "y": 2001,
+    "ico": "🎮",
+    "t": "Dōbutsu no Mori est-il sorti initialement au Japon"
+  },
+  {
+    "y": 1996,
+    "ico": "🍽️",
+    "t": "L'Indication Géographique Protégée pour la tomme des Pyrénées a été créée"
+  },
+  {
+    "y": 1903,
+    "ico": "🍽️",
+    "t": "Ce court métrage documentaire a été produit"
+  },
+  {
+    "y": 1991,
+    "ico": "🏅",
+    "t": "Henri Leconte a remporté la Coupe Davis avec l'équipe de France"
+  },
+  {
+    "y": 2006,
+    "ico": "🏅",
+    "t": "Makoto Hasebe a fait sa première sélection avec l'équipe nationale du Japon"
+  },
+  {
+    "y": 1951,
+    "ico": "🎲",
+    "t": "Sidney Dancoff est-il décédé"
+  },
+  {
+    "y": 1923,
+    "ico": "📖",
+    "t": "André Guimbretière est-il né"
+  },
+  {
+    "y": 1976,
+    "ico": "🔬",
+    "t": "Edward L. Wright a obtenu son doctorat"
+  },
+  {
+    "y": 1972,
+    "ico": "🔬",
+    "t": "Mina Bissell a rejoint le Lawrence Berkeley National Laboratory"
+  },
+  {
+    "y": 1954,
+    "ico": "🖼️",
+    "t": "André Derain est-il décédé"
+  },
+  {
+    "y": 1785,
+    "ico": "🔬",
+    "t": "Est né William Prout"
+  },
+  {
+    "y": 2009,
+    "ico": "🎬",
+    "t": "Gaspard Manesse a joué le rôle d'Antoine dans le film Un transport en commun"
+  },
+  {
+    "y": 2007,
+    "ico": "🎬",
+    "t": "Le film a été réalisé"
+  },
+  {
+    "y": 1959,
+    "ico": "🔬",
+    "t": "Helen Dunsmore a commencé à enseigner à l'université de Glasgow"
+  },
+  {
+    "y": 1795,
+    "ico": "📜",
+    "t": "Le sceptre de Dagobert a disparu suite à la Révolution française"
+  },
+  {
+    "y": 2011,
+    "ico": "🏅",
+    "t": "Jefferson Farfán a remporté la Coupe d'Allemagne de football avec le club de la Ruhr"
+  },
+  {
+    "y": 1977,
+    "ico": "🔬",
+    "t": "Théophile Cahn a épousé Jeannine Yon-Kahn"
+  },
+  {
+    "y": 1990,
+    "ico": "🚀",
+    "t": "Le télescope spatial Hubble a été lancé"
+  },
+  {
+    "y": 2023,
+    "ico": "🎲",
+    "t": "Le documentaire « Daech, les enfants fantômes » a été produit et sorti"
+  },
+  {
+    "y": 1977,
+    "ico": "🔬",
+    "t": "John Alfred Valentine Butler est-il décédé"
+  },
+  {
+    "y": 2008,
+    "ico": "🏅",
+    "t": "Nenad Zimonjić a atteint la première place mondiale en double"
+  },
+  {
+    "y": 1986,
+    "ico": "🔬",
+    "t": "Stephanie Kwolek a pris sa retraite en tant que chercheuse associée chez DuPont"
+  },
+  {
+    "y": 1804,
+    "ico": "👑",
+    "t": "Napoléon s'est-il couronné empereur"
+  },
+  {
+    "y": 2015,
+    "ico": "🎬",
+    "t": "Olivier Azam a réalisé le film La Cigale, le Corbeau et les Poulets"
+  },
+  {
+    "y": 1976,
+    "ico": "🎯",
+    "t": "La voie de l'Inconscient a été officiellement inaugurée"
+  },
+  {
+    "y": 1960,
+    "ico": "📖",
+    "t": "André Bercoff a commencé sa carrière de journaliste au Liban"
+  },
+  {
+    "y": 1846,
+    "ico": "🍽️",
+    "t": "Jean-Louis Bridel a ouvert une beurrerie"
+  },
+  {
+    "y": 2000,
+    "ico": "🏅",
+    "t": "Marcelo Balboa a fait sa dernière sélection avec l'équipe nationale"
+  },
+  {
+    "y": 1913,
+    "ico": "🏅",
+    "t": "Rabindranath Tagore a reçu le prix Nobel de littérature"
+  },
+  {
+    "y": 1978,
+    "ico": "🏗️",
+    "t": "La Fondation Jean Monnet pour l’Europe a été officiellement créée"
+  },
+  {
+    "y": 2000,
+    "ico": "🏅",
+    "t": "Marcelo Balboa a effectué sa dernière sélection avec l'équipe nationale"
+  },
+  {
+    "y": 1986,
+    "ico": "🍽️",
+    "t": "A été lancée la marque Petit Billy"
+  },
+  {
+    "y": 1997,
+    "ico": "💿",
+    "t": "L’album Buena Vista Social Club est-il sorti"
+  },
+  {
+    "y": 1843,
+    "ico": "🔬",
+    "t": "Son frère a fait installer le moteur à air chaud qu'il avait inventé dans l'usine"
+  },
+  {
+    "y": 1999,
+    "ico": "🥇",
+    "t": "Le premier Silent Hill est-il sorti"
+  },
+  {
+    "y": 1846,
+    "ico": "🔬",
+    "t": "L'éther a été utilisé pour la première anesthésie chirurgicale publique"
+  },
+  {
+    "y": 1456,
+    "ico": "📜",
+    "t": "Jeanne d'Arc a été réhabilitée par l'Église"
+  },
+  {
+    "y": 1990,
+    "ico": "🍽️",
+    "t": "La marque P'tit Louis a été lancée sur le marché"
+  },
+  {
+    "y": 2023,
+    "ico": "📺",
+    "t": "La première saison de One Piece en prises de vues réelles est-elle sortie sur Netflix"
+  },
+  {
+    "y": 1944,
+    "ico": "🔬",
+    "t": "Françoise Brochard-Wyart est-elle née"
+  },
+  {
+    "y": 1994,
+    "ico": "🔬",
+    "t": "Claudio Bunster a été nommé conseiller scientifique du président"
+  },
+  {
+    "y": 1191,
+    "ico": "🥇",
+    "t": "Historique se déroule l’essentiel des souvenirs d’Altaïr dans le premier Assassin’s Creed"
+  },
+  {
+    "y": 1809,
+    "ico": "🖼️",
+    "t": "Les fondateurs du mouvement nazaréen ont-ils établi la corporation basée à Vienne appelée Lukasbund"
+  },
+  {
+    "y": 1932,
+    "ico": "🏗️",
+    "t": "La famille Donck-Spruytte a fondé l'activité de production de fromage"
+  },
+  {
+    "y": 1893,
+    "ico": "🎬",
+    "t": "Merian C. Cooper naît-il à Jacksonville"
+  },
+  {
+    "y": 2009,
+    "ico": "🏅",
+    "t": "Makoto Hasebe a remporté le championnat d'Allemagne avec VfL Wolfsburg"
+  },
+  {
+    "y": 2010,
+    "ico": "🏅",
+    "t": "Waleed Ali a remporté la Supercoupe du Koweït"
+  },
+  {
+    "y": 1987,
+    "ico": "🔬",
+    "t": "Louis Plack Hammett est-il décédé"
+  },
+  {
+    "y": 2019,
+    "ico": "🏅",
+    "t": "Andy Murray a atteint le rang de vingt-sixième numéro 1 mondial à l'ATP World Tour"
+  },
+  {
+    "y": 1999,
+    "ico": "🏗️",
+    "t": "Euractiv a été fondée"
+  },
+  {
+    "y": 1872,
+    "ico": "🏅",
+    "t": "William Larned est-il né"
+  },
+  {
+    "y": 1998,
+    "ico": "🎮",
+    "t": "Le snowboard a fait sa première apparition aux Jeux olympiques d'hiver"
+  },
+  {
+    "y": 1963,
+    "ico": "🏰",
+    "t": "Le Docteur Pierre Marre est-il devenu propriétaire du domaine et du Château"
+  },
+  {
+    "y": 2011,
+    "ico": "📜",
+    "t": "La catastrophe nucléaire de Fukushima a eu lieu"
+  },
+  {
+    "y": 2001,
+    "ico": "🎵",
+    "t": "Apple a lancé l'iPod, synonyme de « 1 000 chansons dans la poche »"
+  },
+  {
+    "y": 1986,
+    "ico": "🏅",
+    "t": "Charles McKinley a été membre du International Tennis Hall of Fame"
+  },
+  {
+    "y": 2012,
+    "ico": "🔬",
+    "t": "Meave Leakey a publié une découverte concernant les lignées du milieu du pliocène"
+  },
+  {
+    "y": 1215,
+    "ico": "👑",
+    "t": "Les barons anglais ont-ils imposé la Magna Carta au roi Jean"
+  },
+  {
+    "y": 1032,
+    "ico": "📜",
+    "t": "Georges Maniakès parvient-il à prendre la ville d’Édesse sous l’autorité des Seldjoukides"
+  },
+  {
+    "y": 2007,
+    "ico": "🥇",
+    "t": "Le premier Assassin’s Creed est-il sorti"
+  },
+  {
+    "y": 2004,
+    "ico": "🥇",
+    "t": "Mohammad Khairul Amri a marqué son premier but avec l'équipe nationale"
+  },
+  {
+    "y": 2001,
+    "ico": "🎮",
+    "t": "Halo: Combat Evolved est-il sorti initialement"
+  },
+  {
+    "y": 1997,
+    "ico": "🏅",
+    "t": "Jürgen Kohler a remporté la Ligue des Champions avec le Borussia Dortmund"
+  },
+  {
+    "y": 1685,
+    "ico": "🎵",
+    "t": "Jean-Sébastien Bach est-il né"
+  },
+  {
+    "y": 1972,
+    "ico": "🌍",
+    "t": "Mongo Beti a publié son essai concernant la décolonisation du Cameroun"
+  },
+  {
+    "y": 1900,
+    "ico": "🏅",
+    "t": "A Reginald Doherty remporté Wimbledon pour la première fois en simple messieurs"
+  },
+  {
+    "y": 1998,
+    "ico": "🏅",
+    "t": "Le curling est-il devenu officiellement une discipline olympique à part entière avec remise de médailles"
+  },
+  {
+    "y": 2020,
+    "ico": "🎬",
+    "t": "Tristan Aurouet a réalisé le clip 'Concorde de Gregory Porter'"
+  },
+  {
+    "y": 2016,
+    "ico": "🎮",
+    "t": "Le rugby à sept a fait sa première apparition aux Jeux olympiques"
+  },
+  {
+    "y": 1983,
+    "ico": "🎲",
+    "t": "Alain Didier-Weill est-il devenu cofondateur du Mouvement du coût freudien"
+  },
+  {
+    "y": 1895,
+    "ico": "🎬",
+    "t": "Les frères Lumière ont-ils présenté le premier cinéma payant au Grand Café de Paris"
+  },
+  {
+    "y": 1983,
+    "ico": "🍽️",
+    "t": "Les quotas laitiers sont-ils mis en place"
+  },
+  {
+    "y": 1951,
+    "ico": "🔬",
+    "t": "Moritz Weber est-il décédé"
+  },
+  {
+    "y": 1903,
+    "ico": "🏗️",
+    "t": "Ignacy Mościcki a fondé la Société des condensateurs de Fribourg"
+  },
+  {
+    "y": 1933,
+    "ico": "🔬",
+    "t": "Théophile Cahn a publié son étude sur les phénomènes biologiques dans le cadre des sciences exactes"
+  },
+  {
+    "y": 2000,
+    "ico": "🥇",
+    "t": "Simon Stadler a remporté son premier match dans un tournoi Challenger"
+  },
+  {
+    "y": 1948,
+    "ico": "🎬",
+    "t": "Le film « L'aventure commence demain » a été diffusé en France"
+  },
+  {
+    "y": 2006,
+    "ico": "🏅",
+    "t": "Blokhine a été nommé sélectionneur de l'équipe d'Ukraine"
+  },
+  {
+    "y": 1963,
+    "ico": "🔬",
+    "t": "A été publié le livre *Fundamental Particles* par K Nishijima"
+  },
+  {
+    "y": 2016,
+    "ico": "🔬",
+    "t": "Azzedine Bousseksou a obtenu sa classe exceptionnelle au sein du CNRS"
+  },
+  {
+    "y": 1966,
+    "ico": "📖",
+    "t": "A été publié le livre « Le Problème du Cachemire, Orient »"
+  },
+  {
+    "y": 2004,
+    "ico": "🥇",
+    "t": "Goodison a effectué son transfert vers Seba United en Premier League Jamaïcaine"
+  },
+  {
+    "y": 1997,
+    "ico": "🎮",
+    "t": "Tekken 3 est-il sorti initialement en arcade"
+  },
+  {
+    "y": 2015,
+    "ico": "📺",
+    "t": "Le Bureau des légendes a débuté sur Canal+"
+  },
+  {
+    "y": 1994,
+    "ico": "📜",
+    "t": "L'apartheid a officiellement pris fin en Afrique du Sud"
+  },
+  {
+    "y": 1978,
+    "ico": "🍽️",
+    "t": "Le fromage a été lancé sous le nom de Groot Hof — La Grand'Ferme"
+  },
+  {
+    "y": 1232,
+    "ico": "🏰",
+    "t": "Le domaine a été officiellement constitué"
+  },
+  {
+    "y": 1986,
+    "ico": "🔬",
+    "t": "Est décédé Théophile Cahn"
+  },
+  {
+    "y": 1937,
+    "ico": "🔬",
+    "t": "Fritz Bopp a obtenu le statut de privat-docent"
+  },
+  {
+    "y": 2009,
+    "ico": "🌍",
+    "t": "Franklin Epape s'est-il installé au Canada"
+  },
+  {
+    "y": 1984,
+    "ico": "📖",
+    "t": "Meurt Yves Barrec"
+  },
+  {
+    "y": 1999,
+    "ico": "🎲",
+    "t": "Sélim Azzazi a obtenu son diplôme de l'École nationale supérieure Louis-Lumière"
+  },
+  {
+    "y": 843,
+    "ico": "📜",
+    "t": "Le traité de Verdun a divisé l'Empire carolingien"
+  },
+  {
+    "y": 2022,
+    "ico": "📺",
+    "t": "La série The Bear a débuté"
+  },
+  {
+    "y": 2016,
+    "ico": "📺",
+    "t": "La série Fleabag a été diffusée pour la première fois"
+  },
+  {
+    "y": 1970,
+    "ico": "🏅",
+    "t": "Hans Kary a remporté le tournoi de Cannes en simple messieurs"
+  },
+  {
+    "y": 2008,
+    "ico": "🎬",
+    "t": "Frédéric Balekdjian a réalisé son second film"
+  },
+  {
+    "y": 1774,
+    "ico": "🖼️",
+    "t": "Joseph Melling s'est-il établi à Strasbourg"
+  },
+  {
+    "y": 1967,
+    "ico": "🎲",
+    "t": "Sutherland a développé une solution exacte pour le modèle à huit sommets"
+  },
+  {
+    "y": 1047,
+    "ico": "⚔️",
+    "t": "Henri Ier a participé à la bataille de Val-ès-Dunes"
+  },
+  {
+    "y": 1827,
+    "ico": "🔬",
+    "t": "Prout a proposé la classification des constituants de la nourriture"
+  },
+  {
+    "y": 2017,
+    "ico": "🏅",
+    "t": "Joachim Frank a été récompensé par le prix Nobel de chimie"
+  },
+  {
+    "y": 1975,
+    "ico": "🍽️",
+    "t": "Le Rustique Camembert a été créé"
+  },
+  {
+    "y": 2020,
+    "ico": "🎬",
+    "t": "Isidore Bethel a été nommé l'un des « 25 nouveaux visages du cinéma indépendant » par Filmmaker Magazine"
+  },
+  {
+    "y": 2002,
+    "ico": "🏅",
+    "t": "Joey Beauchamp a mis fin à sa carrière professionnelle"
+  },
+  {
+    "y": 1990,
+    "ico": "🔬",
+    "t": "Gideon Davies a obtenu son doctorat en recherche"
+  },
+  {
+    "y": 1965,
+    "ico": "🏅",
+    "t": "A participé à son match nul contre la Suisse"
+  },
+  {
+    "y": 1985,
+    "ico": "🔬",
+    "t": "Gilberte Chambaud a été recrutée comme professeure au Département de chimie de l'ENS"
+  },
+  {
+    "y": 1977,
+    "ico": "🥇",
+    "t": "Le premier Star Wars est-il sorti"
+  },
+  {
+    "y": 2023,
+    "ico": "🔬",
+    "t": "Paolo Samorì a été élu membre de l'Académie des Technologies"
+  },
+  {
+    "y": 294,
+    "ico": "📜",
+    "t": "Allectus assassine Carausius pour prendre la pourpre"
+  },
+  {
+    "y": 2010,
+    "ico": "🏅",
+    "t": "Gerard Piqué a réalisé un sextuplé inédit dans l'histoire du football avec son club"
+  },
+  {
+    "y": 1974,
+    "ico": "🔬",
+    "t": "Françoise Brochard-Wyart a obtenu son doctorat"
+  },
+  {
+    "y": 1781,
+    "ico": "🔬",
+    "t": "Jean-Charles de Borda publie son Mémoire sur le mouvement des projectiles"
+  },
+  {
+    "y": 1923,
+    "ico": "🔬",
+    "t": "Suzanne Veil a traduit les travaux fondateurs sur les isotopes"
+  },
+  {
+    "y": 1920,
+    "ico": "📖",
+    "t": "Simon Arbellot a commencé sa carrière de journaliste au Figaro"
+  },
+  {
+    "y": 1984,
+    "ico": "🔬",
+    "t": "Mary R. Albert a obtenu son doctorat en ingénierie"
+  },
+  {
+    "y": 1999,
+    "ico": "🌍",
+    "t": "S'est tenue la déclaration de Syrte"
+  },
+  {
+    "y": 2006,
+    "ico": "🎬",
+    "t": "Naïm Aït-Sidhoum a obtenu son diplôme en architecture"
+  },
+  {
+    "y": 1642,
+    "ico": "🏰",
+    "t": "Le comté de Rostaing a été créé par la réunion des terres de Bury et d'Onzain"
+  },
+  {
+    "y": 2005,
+    "ico": "🏅",
+    "t": "Clifford Johnson a reçu la Médaille Maxwell de l'Institute of Physics"
+  },
+  {
+    "y": 2010,
+    "ico": "🏅",
+    "t": "Waleed Ali a remporté la Coupe du Golfe en tant que sélection nationale"
+  },
+  {
+    "y": 1890,
+    "ico": "📖",
+    "t": "François Picavet obtient-il son doctorat ès lettres"
+  },
+  {
+    "y": 1928,
+    "ico": "🔬",
+    "t": "Les savants ont-ils pu extraire une gramme de rhénium en utilisant la molybdénite"
+  },
+  {
+    "y": 1961,
+    "ico": "📜",
+    "t": "Le mur de Berlin a été construit"
+  },
+  {
+    "y": 2007,
+    "ico": "🏅",
+    "t": "Leander Paes a formé une équipe avec son compatriote Mahesh Bhupathi"
+  },
+  {
+    "y": 1998,
+    "ico": "🎬",
+    "t": "Klaus Biedermann a réalisé le film « Stringer avec Burt Reynolds, Élie Semoun »"
+  },
+  {
+    "y": 1970,
+    "ico": "🏅",
+    "t": "Magnus Larsson est-il né"
+  },
+  {
+    "y": 1949,
+    "ico": "🏅",
+    "t": "Hans Kary est-il né"
+  },
+  {
+    "y": 1793,
+    "ico": "📜",
+    "t": "Marie-Antoinette a été guillotinée"
+  },
+  {
+    "y": 1808,
+    "ico": "📖",
+    "t": "Démeunier a été créé comte de l'Empire"
+  },
+  {
+    "y": 2005,
+    "ico": "🎬",
+    "t": "Frédéric Balekdjian a réalisé son premier film primé"
+  },
+  {
+    "y": 1920,
+    "ico": "🎬",
+    "t": "Le film A Beggar in Purple a été distribué aux États-Unis"
+  },
+  {
+    "y": 1900,
+    "ico": "🔬",
+    "t": "Max Planck a introduit le quantum d'énergie, fondant la physique quantique"
+  },
+  {
+    "y": 1927,
+    "ico": "🎬",
+    "t": "Ce film muet a été réalisé par Jean Renoir"
+  },
+  {
+    "y": 1957,
+    "ico": "🔬",
+    "t": "Hazime Mori a obtenu son doctorat"
+  },
+  {
+    "y": 2010,
+    "ico": "🏅",
+    "t": "Cedrik-Marcel Stebe est-il devenu joueur professionnel"
+  },
+  {
+    "y": 1979,
+    "ico": "🎲",
+    "t": "Martin Bourboulon est-il né"
+  },
+  {
+    "y": 1923,
+    "ico": "🎬",
+    "t": "Le film Romain Kalbris a été officiellement sorti en France"
+  },
+  {
+    "y": 1789,
+    "ico": "📜",
+    "t": "La prise de la Bastille a eu lieu"
+  },
+  {
+    "y": 2012,
+    "ico": "🏅",
+    "t": "Gerard Piqué a remporté le Championnat d'Espagne avec son club"
+  },
+  {
+    "y": 388,
+    "ico": "📜",
+    "t": "Flavius Victor est-il décédé"
+  },
+  {
+    "y": 2022,
+    "ico": "🏅",
+    "t": "Makoto Hasebe a prolongé son contrat d'une saison avec l'Eintracht Francfort"
+  },
+  {
+    "y": 2006,
+    "ico": "🎲",
+    "t": "Le Forum féministe africain a eu lieu pour la première fois"
+  },
+  {
+    "y": 1912,
+    "ico": "🍽️",
+    "t": "A été revendue cette œuvre"
+  },
+  {
+    "y": 2019,
+    "ico": "🎮",
+    "t": "Disco Elysium est-il sorti initialement"
+  },
+  {
+    "y": 2009,
+    "ico": "🎲",
+    "t": "Ce moyen métrage a été réalisé"
+  },
+  {
+    "y": 2006,
+    "ico": "🏅",
+    "t": "Grzegorz Panfil remporte l'Open d'Australie junior en double"
+  },
+  {
+    "y": 1816,
+    "ico": "🔬",
+    "t": "Robert Stirling est-il crédité pour l'invention du moteur à combustion externe"
+  },
+  {
+    "y": 2009,
+    "ico": "🥇",
+    "t": "A Fernando Muslera joué son premier match avec l'équipe d'Uruguay"
+  },
+  {
+    "y": 1969,
+    "ico": "🏅",
+    "t": "Jan Apell est-il né"
+  },
+  {
+    "y": 1928,
+    "ico": "🏅",
+    "t": "Pancho Gonzales est-il né"
+  },
+  {
+    "y": 1967,
+    "ico": "🎬",
+    "t": "Est le film sorti en Italie"
+  },
+  {
+    "y": 1962,
+    "ico": "📜",
+    "t": "L'Algérie a obtenu son indépendance"
+  },
+  {
+    "y": 2006,
+    "ico": "🏅",
+    "t": "Ferit Orhan Pamuk a reçu le prix Nobel de littérature"
+  },
+  {
+    "y": 2021,
+    "ico": "🥇",
+    "t": "Matteo Berrettini a remporté son premier titre sur le circuit ATP"
+  },
+  {
+    "y": 1984,
+    "ico": "📖",
+    "t": "Est décédé Robert Ruhlmann"
+  },
+  {
+    "y": 1584,
+    "ico": "📜",
+    "t": "Henri III de Navarre est-il devenu héritier présomptif du trône de France"
+  },
+  {
+    "y": 1889,
+    "ico": "🔬",
+    "t": "Gustave Lyon a été distingué par un grand prix d'honneur lors de l'exposition universelle"
+  },
+  {
+    "y": 2021,
+    "ico": "🏅",
+    "t": "Gianluigi Quinzi a décidé de mettre fin à sa carrière professionnelle sur le circuit ATP"
+  },
+  {
+    "y": 1989,
+    "ico": "🎬",
+    "t": "A t-il joué dans le film Dieu vomit les tièdes de Robert Guédiguian"
+  },
+  {
+    "y": 1895,
+    "ico": "🏅",
+    "t": "Le rugby à XIII s'est-il séparé du rugby à XV suite à une querelle sur le rémunération des joueurs"
+  },
+  {
+    "y": 1976,
+    "ico": "🌍",
+    "t": "Le Réseau européen de réserves biogénétiques a été créé"
+  },
+  {
+    "y": 1969,
+    "ico": "🏅",
+    "t": "Hans Kary a fait partie de l'équipe d'Autriche de Coupe Davis"
+  },
+  {
+    "y": 2005,
+    "ico": "🌍",
+    "t": "Le Cycle des hautes études européennes a été officiellement créé"
+  },
+  {
+    "y": 2021,
+    "ico": "🏅",
+    "t": "Est décédé Tremaine Stewart"
+  },
+  {
+    "y": 1946,
+    "ico": "🔬",
+    "t": "Tsevi Mazeh est-il né"
+  },
+  {
+    "y": 1916,
+    "ico": "🎬",
+    "t": "Le film « Max et la Main-qui-étreint » a été présenté au public"
+  },
+  {
+    "y": 2005,
+    "ico": "🏅",
+    "t": "Ali Hussein Rehema Al-Ka'abi a remporté le championnat d'Irak avec Al-Quwa Al-Jawiya"
+  },
+  {
+    "y": 1852,
+    "ico": "🖼️",
+    "t": "Marie Adrien Lavieille est-elle née"
+  },
+  {
+    "y": 1924,
+    "ico": "🎬",
+    "t": "Le film a été diffusé en France"
+  },
+  {
+    "y": 2002,
+    "ico": "📺",
+    "t": "Benoît d'Aubert a réalisé la série télévisée 'PJ'"
+  },
+  {
+    "y": 2007,
+    "ico": "🏅",
+    "t": "Tremaine Stewart a remporté le championnat de la D2 jamaïcaine"
+  },
+  {
+    "y": 1871,
+    "ico": "📜",
+    "t": "La Commune de Paris a existé"
+  },
+  {
+    "y": 1928,
+    "ico": "🎬",
+    "t": "Le film Maldone a été diffusé en France"
+  },
+  {
+    "y": 2008,
+    "ico": "🎬",
+    "t": "Frédéric Balekdjian a réalisé son deuxième long-métrage"
+  },
+  {
+    "y": 2022,
+    "ico": "🍽️",
+    "t": "La baguette a été inscrite au patrimoine immatériel de l'UNESCO"
+  },
+  {
+    "y": 1981,
+    "ico": "🎲",
+    "t": "Séverin Blanchet a collaboré avec l'ambassade de France à Kaboul pour ses ateliers de réalisation documentaires"
+  },
+  {
+    "y": 1997,
+    "ico": "🌍",
+    "t": "Hong Kong a été rétrocédée à la Chine"
+  },
+  {
+    "y": 2015,
+    "ico": "🏅",
+    "t": "Khairul Amri a marqué sa 100e sélection officielle en équipe de Singapour"
+  },
+  {
+    "y": 1930,
+    "ico": "🎬",
+    "t": "Ce film a été produit"
+  },
+  {
+    "y": 1974,
+    "ico": "🏅",
+    "t": "John Newcombe a remporté sa dernière victoire en tant que joueur de l'ère Open"
+  },
+  {
+    "y": 1992,
+    "ico": "⚔️",
+    "t": "La guerre de Bosnie a commencé avec le siège de Sarajevo"
+  },
+  {
+    "y": 1905,
+    "ico": "🖼️",
+    "t": "Edith Kiss est-elle née"
+  },
+  {
+    "y": 2009,
+    "ico": "🎲",
+    "t": "Le moyen métrage 'Enterrez nos chiens' a été réalisé"
+  },
+  {
+    "y": 1944,
+    "ico": "🎬",
+    "t": "A le film été filmé"
+  },
+  {
+    "y": 1962,
+    "ico": "🎬",
+    "t": "Le film est sorti aux États-Unis"
+  },
+  {
+    "y": 1900,
+    "ico": "🍽️",
+    "t": "Le guide Michelin est-il né"
+  },
+  {
+    "y": 1986,
+    "ico": "💡",
+    "t": "Le Code de la famille, combinant le Code civil et les usages coutumiers, a été promulgué"
+  },
+  {
+    "y": 1964,
+    "ico": "🔬",
+    "t": "Curtis Callan a obtenu son doctorat"
+  },
+  {
+    "y": 1607,
+    "ico": "👑",
+    "t": "Les fiefs français de la couronne de Navarre ont-ils été réunis au domaine royal"
+  },
+  {
+    "y": 1991,
+    "ico": "🏅",
+    "t": "Marc-Kevin Goellner a commencé sa carrière professionnelle en tennis"
+  },
+  {
+    "y": 1905,
+    "ico": "🎮",
+    "t": "Leroy-Dionet a marqué le début de sa période de peintre paysagiste, suite à une exposition majeure"
+  },
+  {
+    "y": 2013,
+    "ico": "📺",
+    "t": "La série Vikings a été diffusée pour la première fois"
+  },
+  {
+    "y": 1946,
+    "ico": "📜",
+    "t": "Winston Churchill a prononcé son fameux discours sur le \"rideau de fer\""
+  },
+  {
+    "y": 1924,
+    "ico": "🔬",
+    "t": "Arthur Lamb est-il devenu membre de l'Académie nationale des sciences"
+  },
+  {
+    "y": 1969,
+    "ico": "🥇",
+    "t": "Raphaël Bassan a réalisé son premier court-métrage"
+  },
+  {
+    "y": 2011,
+    "ico": "🏅",
+    "t": "A Cedrik-Marcel Stebe atteint les quarts de finale du tournoi de Stuttgart"
+  },
+  {
+    "y": 1942,
+    "ico": "🎲",
+    "t": "Lanczos a publié son article fondamental concernant la transformée de Fourier rapide (FFT)"
+  },
+  {
+    "y": 1915,
+    "ico": "🖼️",
+    "t": "Dora Carrington a rencontré Lytton Strachey"
+  },
+  {
+    "y": 1964,
+    "ico": "🖼️",
+    "t": "Ronald B. Kitaj a été présenté à la Biennale de Venise"
+  },
+  {
+    "y": 1776,
+    "ico": "📜",
+    "t": "Les États-Unis ont-ils proclamé leur indépendance"
+  },
+  {
+    "y": 1886,
+    "ico": "🖼️",
+    "t": "George-Daniel de Monfreid a rejoint l'Académie Colarossi"
+  },
+  {
+    "y": 1911,
+    "ico": "🔬",
+    "t": "Ishihara Jun est-il devenu professeur de physique"
+  },
+  {
+    "y": 1988,
+    "ico": "🔬",
+    "t": "Elizabeth Gardner est-elle décédée"
+  },
+  {
+    "y": 1924,
+    "ico": "🔬",
+    "t": "Geoffrey Chew est-il né"
+  },
+  {
+    "y": 1823,
+    "ico": "🔬",
+    "t": "William Prout a proposé la classification des constituants de la nourriture"
+  },
+  {
+    "y": 1960,
+    "ico": "🏅",
+    "t": "John Newcombe a commencé sa carrière en tant que joueur amateur"
+  },
+  {
+    "y": 1990,
+    "ico": "🍽️",
+    "t": "Cette marque de fromage a été lancée sur le marché"
+  },
+  {
+    "y": 1998,
+    "ico": "🏅",
+    "t": "Mario Frick a marqué sa première victoire en équipe nationale"
+  },
+  {
+    "y": 1947,
+    "ico": "🎵",
+    "t": "Édith Piaf a enregistré La Vie en rose"
+  },
+  {
+    "y": 1976,
+    "ico": "🌍",
+    "t": "Le Réseau européen de réserves biogénétiques a été officiellement créé"
+  },
+  {
+    "y": 2021,
+    "ico": "🏅",
+    "t": "Diego Godín a signé son contrat avec l'Inter Milan"
+  },
+  {
+    "y": 2007,
+    "ico": "🏅",
+    "t": "Makoto Hasebe a été nommé capitaine de l'équipe nationale du Japon"
+  },
+  {
+    "y": 1984,
+    "ico": "💿",
+    "t": "L’album Purple Rain est-il sorti"
+  },
+  {
+    "y": 1966,
+    "ico": "🔬",
+    "t": "John R. Platt a publié l'article intitulé « Diversity » dans la revue *Science*"
+  },
+  {
+    "y": 1986,
+    "ico": "🏗️",
+    "t": "Le mouvement Slow Food a été fondé en Italie par Carlo Petrini"
+  },
+  {
+    "y": 1946,
+    "ico": "🎬",
+    "t": "Le film A Boy, a Girl and a Dog a été officiellement sorti au public"
+  },
+  {
+    "y": 2012,
+    "ico": "🎮",
+    "t": "La natation en eau libre (10 km) a fait son entrée au programme des Jeux olympiques"
+  },
+  {
+    "y": 2019,
+    "ico": "🏅",
+    "t": "Andy Murray a annoncé sa première retraite sportive"
+  },
+  {
+    "y": 2015,
+    "ico": "🏅",
+    "t": "Yaya Touré a remporté la première Coupe d'Afrique des nations en sa carrière"
+  },
+  {
+    "y": 1914,
+    "ico": "🎬",
+    "t": "Ce court métrage fut-il réalisé"
+  },
+  {
+    "y": 1976,
+    "ico": "🔬",
+    "t": "Stuart Rice a reçu le prix Wolf"
+  },
+  {
+    "y": 2004,
+    "ico": "🏅",
+    "t": "Donald Young est-il passé au statut de joueur professionnel"
+  },
+  {
+    "y": 2000,
+    "ico": "🎮",
+    "t": "Le taekwondo a fait son apparition officielle comme sport à part entière aux Jeux olympiques"
+  },
+  {
+    "y": 1947,
+    "ico": "📜",
+    "t": "L'Inde a accédé à l'indépendance"
+  },
+  {
+    "y": 2007,
+    "ico": "🥇",
+    "t": "Le premier BioShock est-il sorti"
+  },
+  {
+    "y": 1969,
+    "ico": "🎲",
+    "t": "Un homme a marché pour la première fois sur la Lune"
+  },
+  {
+    "y": 2009,
+    "ico": "🏅",
+    "t": "Patrick Ekeng a rejoint le club du Mans FC"
+  },
+  {
+    "y": 2006,
+    "ico": "🔬",
+    "t": "Gilberte Chambaud a créé le réseau français de chimie théorique"
+  },
+  {
+    "y": 1948,
+    "ico": "🔬",
+    "t": "John Peter Huchra est-il né"
+  },
+  {
+    "y": 2019,
+    "ico": "🎮",
+    "t": "Outer Wilds est-il sorti commercialement pour la première fois"
+  },
+  {
+    "y": 1397,
+    "ico": "🏰",
+    "t": "Le duc Philippe le Hardi remet-il le château d'Autricourt à son maître d'hôtel, Guichard de Saint-Seine"
+  },
+  {
+    "y": 2021,
+    "ico": "🥇",
+    "t": "Matteo Berrettini remporte son premier titre sur le circuit ATP"
+  },
+  {
+    "y": 2007,
+    "ico": "🎲",
+    "t": "A vu les Guignols de l'info sur les écrans"
+  },
+  {
+    "y": 1921,
+    "ico": "🔬",
+    "t": "Thérèse Tréfouël a épousé son collègue, Jacques Tréfouël"
+  },
+  {
+    "y": 1850,
+    "ico": "🔬",
+    "t": "Est décédé William Prout"
+  },
+  {
+    "y": 1954,
+    "ico": "🏗️",
+    "t": "Le Centre international de formation européenne a été fondé"
+  },
+  {
+    "y": 1969,
+    "ico": "🎵",
+    "t": "Le festival de Woodstock a réuni environ 400 000 spectateurs"
+  },
+  {
+    "y": 2012,
+    "ico": "🏅",
+    "t": "Sergio Busquets a remporté le Championnat d'Europe avec l'équipe nationale espagnole"
+  },
+  {
+    "y": 1793,
+    "ico": "📜",
+    "t": "L'objet a été déposé au Louvre"
+  },
+  {
+    "y": 1950,
+    "ico": "🍽️",
+    "t": "Ce fromage a été créé"
+  },
+  {
+    "y": 1965,
+    "ico": "🏅",
+    "t": "Co Prins obtient-il sa dixième et dernière sélection"
+  },
+  {
+    "y": 1996,
+    "ico": "🌍",
+    "t": "Le Forum européen des personnes handicapées est-il devenu une structure indépendante"
+  },
+  {
+    "y": 1917,
+    "ico": "🔬",
+    "t": "Dmitri Zoubarev est-il né"
+  },
+  {
+    "y": 1608,
+    "ico": "🏰",
+    "t": "La famille Feydeau a acquis le fief de Brou"
+  },
+  {
+    "y": 1972,
+    "ico": "🎮",
+    "t": "Oleg Blokhine participe aux Jeux olympiques pour la première fois"
+  },
+  {
+    "y": 1965,
+    "ico": "🎵",
+    "t": "A Love Supreme est-il sorti"
+  },
+  {
+    "y": 2011,
+    "ico": "🎬",
+    "t": "Pierre Beccu reçoit-il un prix d'interprétation pour son atelier théâtre au festival Ciak Junior de Trévise (Italie)"
+  },
+  {
+    "y": 2018,
+    "ico": "🎮",
+    "t": "Claudia de Rham a reçu le prix Blavatnik pour les jeunes chercheurs"
+  },
+  {
+    "y": 1989,
+    "ico": "🎵",
+    "t": "Disintegration de The Cure est-il sorti"
+  },
+  {
+    "y": 1963,
+    "ico": "🔬",
+    "t": "Clara von Simson a été habilitée en physique"
+  },
+  {
+    "y": 2014,
+    "ico": "🥇",
+    "t": "A Vasek Pospisil remporté son premier titre en double"
+  },
+  {
+    "y": 1984,
+    "ico": "🏅",
+    "t": "Björn Borg a annoncé officiellement sa retraite sportive"
+  },
+  {
+    "y": 1967,
+    "ico": "🎵",
+    "t": "La version internationale de Pata Pata par Miriam Makeba est-elle sortie"
+  },
+  {
+    "y": 1311,
+    "ico": "📜",
+    "t": "Philippe V a reçu en apanage le comté de Poitou"
+  },
+  {
+    "y": 1987,
+    "ico": "🏅",
+    "t": "Est né le footballeur Odil Ahmedov"
+  },
+  {
+    "y": 2012,
+    "ico": "🎮",
+    "t": "Journey est-il sorti pour la première fois"
+  },
+  {
+    "y": 2004,
+    "ico": "🎬",
+    "t": "Le film Eraserhead a été sélectionné pour la préservation par le National Film Registry"
+  },
+  {
+    "y": 1607,
+    "ico": "📜",
+    "t": "La Navarre a été réunie à son tour par l'Édit de Pau"
+  },
+  {
+    "y": 2018,
+    "ico": "🎮",
+    "t": "Subnautica est-il sorti en version complète sur Windows, après l’accès anticipé"
+  },
+  {
+    "y": 1648,
+    "ico": "🖼️",
+    "t": "Henri Testelin a été reconnu comme académicien de l'Académie royale de peinture et de sculpture"
+  },
+  {
+    "y": 1998,
+    "ico": "🎬",
+    "t": "Joseph Cates est-il décédé"
+  },
+  {
+    "y": 1713,
+    "ico": "💡",
+    "t": "Louis Lemery et Étienne-François Geoffroy ont-ils découvert expérimentalement que le fer est un constituant du sang"
+  },
+  {
+    "y": 1841,
+    "ico": "🔬",
+    "t": "Ludvig Colding a obtenu son diplôme à l'Institut Polytechnique de Copenhague"
+  },
+  {
+    "y": 2015,
+    "ico": "🏅",
+    "t": "Khairul Amri a honoré sa 100e sélection en équipe de Singapour"
+  },
+  {
+    "y": 2013,
+    "ico": "📖",
+    "t": "Christian Blanchard a publié le roman noir 'Les Loups Gris'"
+  },
+  {
+    "y": 1920,
+    "ico": "🎬",
+    "t": "Merian C. Cooper quitte Moscou pour gagner Londres"
+  },
+  {
+    "y": 1989,
+    "ico": "📜",
+    "t": "Le mur de Berlin est-il tombé"
+  },
+  {
+    "y": 1985,
+    "ico": "💡",
+    "t": "Mohamed Ibrahim Egal a été emprisonné par le régime de Siad Barre"
+  },
+  {
+    "y": 1974,
+    "ico": "🏅",
+    "t": "Paul John Flory a reçu le prix Nobel de chimie"
+  },
+  {
+    "y": 1998,
+    "ico": "🏅",
+    "t": "Jürgen Kohler a arrêté sa carrière internationale"
+  },
+  {
+    "y": 2006,
+    "ico": "📖",
+    "t": "L'auteur a publié son ouvrage Traces"
+  },
+  {
+    "y": 1913,
+    "ico": "🎬",
+    "t": "Ce film muet français a été réalisé"
+  },
+  {
+    "y": 1824,
+    "ico": "⚰️",
+    "t": "Louis XVIII est-il mort"
+  },
+  {
+    "y": 1997,
+    "ico": "🏅",
+    "t": "Le groupe TIGR a reçu la médaille d'honneur de la liberté de Slovénie d'or"
+  },
+  {
+    "y": 1728,
+    "ico": "📖",
+    "t": "Les Fables de Phèdre, avec des notes critiques, morales et historiques, ont-elles été imprimées"
+  },
+  {
+    "y": 2003,
+    "ico": "🎬",
+    "t": "Le film a été lancé sur le marché américain"
+  },
+  {
+    "y": 1933,
+    "ico": "📜",
+    "t": "Hitler est-il devenu chancelier d'Allemagne"
+  },
+  {
+    "y": 1903,
+    "ico": "🥇",
+    "t": "Le premier Tour de France cycliste a eu lieu"
+  },
+  {
+    "y": 1682,
+    "ico": "📜",
+    "t": "La cour de Louis XIV s'installa définitivement à Versailles"
+  },
+  {
+    "y": 1991,
+    "ico": "📜",
+    "t": "L'URSS s'est-elle dissoute"
+  },
+  {
+    "y": 1031,
+    "ico": "📜",
+    "t": "Henri Ier a été investi du duché de Bourgogne"
+  },
+  {
+    "y": 1898,
+    "ico": "📖",
+    "t": "François Picavet a été nommé directeur de la Bibliothèque internationale de l'enseignement supérieur"
+  },
+  {
+    "y": 1892,
+    "ico": "🔬",
+    "t": "Thérèse Boyer est-elle née"
+  },
+  {
+    "y": 1998,
+    "ico": "📺",
+    "t": "Cowboy Bebop a été diffusée pour la première fois au Japon"
+  },
+  {
+    "y": 305,
+    "ico": "📜",
+    "t": "Dioclétien a abdiqué volontairement son pouvoir et quitter le trône"
+  },
+  {
+    "y": 1519,
+    "ico": "🏰",
+    "t": "François Ier a donné commission pour le début du chantier de construction du château de Chambord"
+  },
+  {
+    "y": 2015,
+    "ico": "📺",
+    "t": "Mr. Robot a débuté à la télévision"
+  },
+  {
+    "y": 1972,
+    "ico": "📖",
+    "t": "Max Genève a obtenu son doctorat en sociologie"
+  },
+  {
+    "y": 2023,
+    "ico": "🎬",
+    "t": "Bob Balaban a été impliqué dans le projet cinématographique intitulé « Asteroid City »"
+  },
+  {
+    "y": 2008,
+    "ico": "🔬",
+    "t": "Mayana Zatz a reçu le prix de science et technologie du Mexique"
+  },
+  {
+    "y": 1311,
+    "ico": "📜",
+    "t": "Philippe V le Long a reçu en apanage le comté de Poitou"
+  },
+  {
+    "y": 1984,
+    "ico": "🏅",
+    "t": "Henri Leconte a remporté le double de Roland-Garros"
+  },
+  {
+    "y": 1947,
+    "ico": "📜",
+    "t": "L'Inde a obtenu son indépendance"
+  },
+  {
+    "y": 1976,
+    "ico": "🎵",
+    "t": "Songs in the Key of Life est-il sorti"
+  },
+  {
+    "y": 1843,
+    "ico": "🔬",
+    "t": "Karl Emil von Schafhäutl a décrit la paragonite, une variété de mica"
+  },
+  {
+    "y": 2009,
+    "ico": "🍽️",
+    "t": "Le fromage blanc Kidiboo a été enrichi en calcium"
+  },
+  {
+    "y": 1973,
+    "ico": "🔬",
+    "t": "Claudio Bunster a obtenu son doctorat en physique"
+  },
+  {
+    "y": 1927,
+    "ico": "🎬",
+    "t": "Le film « Le Bonheur du jour » a été réalisé"
+  },
+  {
+    "y": 1952,
+    "ico": "🎲",
+    "t": "André Lagarrigue a soutenu sa thèse de doctorat"
+  },
+  {
+    "y": 2014,
+    "ico": "🏅",
+    "t": "Goodison a pris sa retraite"
+  },
+  {
+    "y": 2012,
+    "ico": "🎬",
+    "t": "Le deuxième film de la série a été sorti"
+  },
+  {
+    "y": 2017,
+    "ico": "🥇",
+    "t": "Le premier Little Nightmares est-il sorti"
+  },
+  {
+    "y": 1974,
+    "ico": "💿",
+    "t": "L’album Autobahn de Kraftwerk est-il sorti"
+  },
+  {
+    "y": 1857,
+    "ico": "🔬",
+    "t": "Ludwig Colding a été promu ingénieur, lui permettant de superviser divers projets d'aménagement"
+  },
+  {
+    "y": 1940,
+    "ico": "🔬",
+    "t": "Geoffrey West est-il né"
+  },
+  {
+    "y": 1984,
+    "ico": "🍽️",
+    "t": "Cette marque et le fromage ont-ils été inventés"
+  },
+  {
+    "y": 1933,
+    "ico": "🔬",
+    "t": "Théophile Cahn a publié son ouvrage traitant des phénomènes biologiques dans le cadre des sciences exactes"
+  },
+  {
+    "y": 2005,
+    "ico": "📺",
+    "t": "La série Engrenages a été lancée"
+  },
+  {
+    "y": 1547,
+    "ico": "🖼️",
+    "t": "Henri II nomme Germain Le Mannier peintre de ses enfants"
+  },
+  {
+    "y": 1827,
+    "ico": "🏅",
+    "t": "William Prout a reçu la prestigieuse Médaille Copley"
+  },
+  {
+    "y": 2007,
+    "ico": "🌍",
+    "t": "Le télescope Aristarque a été mis en service"
+  },
+  {
+    "y": 1954,
+    "ico": "📺",
+    "t": "A Joseph Cates produit la série télévisée \"The $64,000 Question\""
+  },
+  {
+    "y": 1994,
+    "ico": "🎵",
+    "t": "Definitely Maybe d’Oasis est-il sorti"
+  },
+  {
+    "y": 1994,
+    "ico": "🏰",
+    "t": "Le château de Bontin a été inscrit partiellement au titre des monuments historiques"
+  },
+  {
+    "y": 1974,
+    "ico": "👑",
+    "t": "S'est déroulé le « Thrilla in Manila », le troisième et dernier combat légendaire entre Muhammad Ali et Joe Frazier"
+  },
+  {
+    "y": 1183,
+    "ico": "🏰",
+    "t": "La première pierre du château d'Onzain aurait-elle été posée"
+  },
+  {
+    "y": 1338,
+    "ico": "📜",
+    "t": "Charles V est-il né"
+  },
+  {
+    "y": 1871,
+    "ico": "📜",
+    "t": "La Commune de Paris a eu lieu"
+  }
+]

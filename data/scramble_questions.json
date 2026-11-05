@@ -324,6 +324,481 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Katmandou",
       "atlasId": "geo_monde"
+    },
+    {
+      "id": "sc_geo_zq001",
+      "cat": "geo",
+      "question": "Classe ces pays du plus petit au plus grand en superficie :",
+      "pool": [
+        "Vatican",
+        "Monaco",
+        "Malte",
+        "Luxembourg"
+      ],
+      "correct": [
+        "Vatican",
+        "Monaco",
+        "Malte",
+        "Luxembourg"
+      ],
+      "explanation": "Vatican (0,44 km²), Monaco (2 km²), Malte (315 km²), Luxembourg (2 586 km²).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_États_par_superficie"
+    },
+    {
+      "id": "sc_geo_zq002",
+      "cat": "geo",
+      "question": "Classe ces océans du plus grand au plus petit :",
+      "pool": [
+        "Pacifique",
+        "Atlantique",
+        "Indien",
+        "Arctique"
+      ],
+      "correct": [
+        "Pacifique",
+        "Atlantique",
+        "Indien",
+        "Arctique"
+      ],
+      "explanation": "Pacifique (~165 M km²), Atlantique (~85 M), Indien (~70 M), Arctique (~14 M).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Océan"
+    },
+    {
+      "id": "sc_geo_zq003",
+      "cat": "geo",
+      "question": "Classe ces montagnes de la plus haute à la moins haute :",
+      "pool": [
+        "Everest",
+        "K2",
+        "Mont Blanc",
+        "Mont Ventoux"
+      ],
+      "correct": [
+        "Everest",
+        "K2",
+        "Mont Blanc",
+        "Mont Ventoux"
+      ],
+      "explanation": "8 849 m, 8 611 m, 4 808 m, 1 910 m.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_sommets_de_plus_de_huit_mille_mètres"
+    },
+    {
+      "id": "sc_geo_zq004",
+      "cat": "geo",
+      "question": "Classe ces fleuves du plus long au plus court :",
+      "pool": [
+        "Nil",
+        "Yangtsé",
+        "Danube",
+        "Seine"
+      ],
+      "correct": [
+        "Nil",
+        "Yangtsé",
+        "Danube",
+        "Seine"
+      ],
+      "explanation": "6 650 km, 6 300 km, 2 860 km, 777 km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_de_fleuves_du_monde"
+    },
+    {
+      "id": "sc_geo_zq005",
+      "cat": "geo",
+      "question": "Classe ces capitales de l'ouest vers l'est :",
+      "pool": [
+        "Lisbonne",
+        "Madrid",
+        "Rome",
+        "Athènes"
+      ],
+      "correct": [
+        "Lisbonne",
+        "Madrid",
+        "Rome",
+        "Athènes"
+      ],
+      "explanation": "L'ordre suit la longitude croissante sur le bassin méditerranéen.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Europe"
+    },
+    {
+      "id": "sc_geo_zq006",
+      "cat": "geo",
+      "question": "Classe ces déserts du plus grand au plus petit (hors déserts polaires) :",
+      "pool": [
+        "Sahara",
+        "Arabique",
+        "Gobi",
+        "Kalahari"
+      ],
+      "correct": [
+        "Sahara",
+        "Arabique",
+        "Gobi",
+        "Kalahari"
+      ],
+      "explanation": "9,2 M km², 2,3 M, 1,3 M, 0,9 M.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_de_déserts"
+    },
+    {
+      "id": "sc_geo_zq007",
+      "cat": "geo",
+      "question": "Classe ces lacs du plus grand au plus petit en superficie :",
+      "pool": [
+        "Caspienne",
+        "Supérieur",
+        "Victoria",
+        "Baïkal"
+      ],
+      "correct": [
+        "Caspienne",
+        "Supérieur",
+        "Victoria",
+        "Baïkal"
+      ],
+      "explanation": "371 000 km², 82 100, 68 800, 31 500.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_de_lacs_par_superficie"
+    },
+    {
+      "id": "sc_geo_zq008",
+      "cat": "geo",
+      "question": "Classe ces pays du plus peuplé au moins peuplé :",
+      "pool": [
+        "Inde",
+        "États-Unis",
+        "Allemagne",
+        "Islande"
+      ],
+      "correct": [
+        "Inde",
+        "États-Unis",
+        "Allemagne",
+        "Islande"
+      ],
+      "explanation": "1,4 Md, 335 M, 84 M, 375 000 habitants.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_pays_par_population"
+    },
+    {
+      "id": "sc_geo_zq009",
+      "cat": "geo",
+      "question": "Classe ces villes du nord au sud :",
+      "pool": [
+        "Reykjavík",
+        "Stockholm",
+        "Vienne",
+        "Le Caire"
+      ],
+      "correct": [
+        "Reykjavík",
+        "Stockholm",
+        "Vienne",
+        "Le Caire"
+      ],
+      "explanation": "64°, 59°, 48°, 30° de latitude nord.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Latitude"
+    },
+    {
+      "id": "sc_geo_zq010",
+      "cat": "geo",
+      "question": "Classe ces îles de la plus grande à la plus petite :",
+      "pool": [
+        "Groenland",
+        "Madagascar",
+        "Corse",
+        "Oléron"
+      ],
+      "correct": [
+        "Groenland",
+        "Madagascar",
+        "Corse",
+        "Oléron"
+      ],
+      "explanation": "2,17 M km², 587 000 km², 8 680 km², 175 km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_d'îles_par_superficie"
+    },
+    {
+      "id": "sc_geo_zq011",
+      "cat": "geo",
+      "question": "Classe ces monuments du plus ancien au plus récent :",
+      "pool": [
+        "Pyramide de Khéops",
+        "Colisée",
+        "Tour Eiffel",
+        "Burj Khalifa"
+      ],
+      "correct": [
+        "Pyramide de Khéops",
+        "Colisée",
+        "Tour Eiffel",
+        "Burj Khalifa"
+      ],
+      "explanation": "~2560 av. J.-C., 80 ap. J.-C., 1889, 2010.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_plus_hautes_constructions"
+    },
+    {
+      "id": "sc_geo_zq012",
+      "cat": "geo",
+      "question": "Classe ces villes du plus peuplé au moins peuplé (agglomération) :",
+      "pool": [
+        "Tokyo",
+        "Delhi",
+        "Paris",
+        "Nice"
+      ],
+      "correct": [
+        "Tokyo",
+        "Delhi",
+        "Paris",
+        "Nice"
+      ],
+      "explanation": "~37 M, ~32 M, ~11 M, ~1 M habitants.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_villes_par_population"
+    },
+    {
+      "id": "sc_geo_zq013",
+      "cat": "geo",
+      "question": "Classe ces mers du plus salé au moins salé :",
+      "pool": [
+        "Mer Rouge",
+        "Méditerranée",
+        "Atlantique",
+        "Baltique"
+      ],
+      "correct": [
+        "Mer Rouge",
+        "Méditerranée",
+        "Atlantique",
+        "Baltique"
+      ],
+      "explanation": "41, 38, 35, 2-15 g de sel par litre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Salinité"
+    },
+    {
+      "id": "sc_geo_zq014",
+      "cat": "geo",
+      "question": "Classe ces canaux du plus long au plus court :",
+      "pool": [
+        "Canal de Suez",
+        "Canal de Panama",
+        "Canal de Corinthe",
+        "Canal de Carlsund"
+      ],
+      "correct": [
+        "Canal de Suez",
+        "Canal de Panama",
+        "Canal de Corinthe",
+        "Canal de Carlsund"
+      ],
+      "explanation": "193 km, 82 km, 6,4 km, ~490 m (petit canal suédois).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Canal_(voie_d'eau)"
+    },
+    {
+      "id": "sc_geo_zq015",
+      "cat": "geo",
+      "question": "Classe ces sommets d'Europe de l'ouest de la plus haute à la plus basse altitude :",
+      "pool": [
+        "Mont Blanc",
+        "Puy de Sancy",
+        "Grand Ballon",
+        "Mont des Cats"
+      ],
+      "correct": [
+        "Mont Blanc",
+        "Puy de Sancy",
+        "Grand Ballon",
+        "Mont des Cats"
+      ],
+      "explanation": "4 808 m, 1 885 m, 1 424 m, 132 m (Flandre).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_massifs_et_sommets_d'Europe"
+    },
+    {
+      "id": "sc_geo_zq016",
+      "cat": "geo",
+      "question": "Classe ces pays du plus grand au plus petit en population (Europe) :",
+      "pool": [
+        "Allemagne",
+        "France",
+        "Suède",
+        "Malte"
+      ],
+      "correct": [
+        "Allemagne",
+        "France",
+        "Suède",
+        "Malte"
+      ],
+      "explanation": "84 M, 68 M, 10,5 M, 520 000 habitants.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_pays_par_population"
+    },
+    {
+      "id": "sc_geo_zq017",
+      "cat": "geo",
+      "question": "Classe ces continents du plus grand au plus petit :",
+      "pool": [
+        "Asie",
+        "Amérique du Nord",
+        "Europe",
+        "Océanie"
+      ],
+      "correct": [
+        "Asie",
+        "Amérique du Nord",
+        "Europe",
+        "Océanie"
+      ],
+      "explanation": "44 M km², 24 M, 10 M, 8,5 M km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Continent"
+    },
+    {
+      "id": "sc_geo_zq018",
+      "cat": "geo",
+      "question": "Classe ces rivières françaises de la plus longue à la plus courte :",
+      "pool": [
+        "Loire",
+        "Seine",
+        "Garonne",
+        "Somme"
+      ],
+      "correct": [
+        "Loire",
+        "Seine",
+        "Garonne",
+        "Somme"
+      ],
+      "explanation": "1 012 km, 777 km, 524 km, 245 km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_fleuves_de_France"
+    },
+    {
+      "id": "sc_geo_zq019",
+      "cat": "geo",
+      "question": "Classe ces villes de l'est vers l'ouest :",
+      "pool": [
+        "Moscou",
+        "Berlin",
+        "Paris",
+        "New York"
+      ],
+      "correct": [
+        "Moscou",
+        "Berlin",
+        "Paris",
+        "New York"
+      ],
+      "explanation": "37°, 13°, 2°, -74° de longitude (est positif).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Longitude"
+    },
+    {
+      "id": "sc_geo_zq020",
+      "cat": "geo",
+      "question": "Classe ces phénomènes géologiques du plus lent au plus rapide :",
+      "pool": [
+        "Dérive des continents",
+        "Érosion d'une montagne",
+        "Éruption volcanique",
+        "Séisme"
+      ],
+      "correct": [
+        "Dérive des continents",
+        "Érosion d'une montagne",
+        "Éruption volcanique",
+        "Séisme"
+      ],
+      "explanation": "Quelques cm/an, des millénaires, des heures, quelques secondes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tectonique_des_plaques"
+    },
+    {
+      "id": "sc_geo_zq021",
+      "cat": "geo",
+      "question": "Classe ces cascades de la plus haute à la moins haute :",
+      "pool": [
+        "Salto Ángel",
+        "Victoria",
+        "Niagara",
+        "Cascade du Fudzisan (Japon)"
+      ],
+      "correct": [
+        "Salto Ángel",
+        "Victoria",
+        "Niagara",
+        "Cascade du Fudzisan (Japon)"
+      ],
+      "explanation": "979 m, 108 m, 51 m, ~150 m (Falljökull... cascade islandaise).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_de_cascades"
+    },
+    {
+      "id": "sc_geo_zq022",
+      "cat": "geo",
+      "question": "Classe ces pays du plus tardif au plus précoce pour le passage à 2024 :",
+      "pool": [
+        "États-Unis (New York)",
+        "France",
+        "Japon",
+        "Nouvelle-Zélande"
+      ],
+      "correct": [
+        "États-Unis (New York)",
+        "France",
+        "Japon",
+        "Nouvelle-Zélande"
+      ],
+      "explanation": "UTC-5, UTC+1, UTC+9, UTC+13 : plus l'UTC est grand, plus le jour arrive tôt.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fuseau_horaire"
+    },
+    {
+      "id": "sc_geo_zq023",
+      "cat": "geo",
+      "question": "Classe ces étendues d'eau salée de la plus chaude à la plus froide (moyenne) :",
+      "pool": [
+        "Mer Rouge",
+        "Golfe Persique (été)",
+        "Baltique",
+        "Arctique"
+      ],
+      "correct": [
+        "Mer Rouge",
+        "Golfe Persique (été)",
+        "Baltique",
+        "Arctique"
+      ],
+      "explanation": "Mer Rouge ~28 °C en moyenne, Golfe Persique jusqu'à 35 °C en été, Baltique ~5 °C, Arctique proche de 0.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Température_de_la_mer"
+    },
+    {
+      "id": "sc_geo_zq024",
+      "cat": "geo",
+      "question": "Classe ces pays du sud vers le nord :",
+      "pool": [
+        "Afrique du Sud",
+        "Égypte",
+        "Allemagne",
+        "Islande"
+      ],
+      "correct": [
+        "Afrique du Sud",
+        "Égypte",
+        "Allemagne",
+        "Islande"
+      ],
+      "explanation": "-30°, 26°, 51°, 65° de latitude nord (Afrique du Sud au sud).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Latitude"
+    },
+    {
+      "id": "sc_geo_zq025",
+      "cat": "geo",
+      "question": "Classe ces îles françaises de la plus grande à la plus petite :",
+      "pool": [
+        "Nouvelle-Calédonie (Grande Terre)",
+        "Corse",
+        "Réunion",
+        "Oléron"
+      ],
+      "correct": [
+        "Nouvelle-Calédonie (Grande Terre)",
+        "Corse",
+        "Réunion",
+        "Oléron"
+      ],
+      "explanation": "16 372 km², 8 680 km², 2 512 km², 175 km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_d'îles_de_France"
     }
   ],
   "sci": [
@@ -607,6 +1082,386 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_l%27informatique",
       "atlasId": "sci_univers"
+    },
+    {
+      "id": "sc_sci_zq001",
+      "cat": "sci",
+      "question": "Classe ces planètes du plus proche au plus éloigné du Soleil :",
+      "pool": [
+        "Mercure",
+        "Terre",
+        "Jupiter",
+        "Neptune"
+      ],
+      "correct": [
+        "Mercure",
+        "Terre",
+        "Jupiter",
+        "Neptune"
+      ],
+      "explanation": "58 M km, 150 M km, 778 M km, 4,5 milliards km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Système_solaire"
+    },
+    {
+      "id": "sc_sci_zq002",
+      "cat": "sci",
+      "question": "Classe ces animaux du plus rapide au plus lent (pointe) :",
+      "pool": [
+        "Faucon pèlerin (piqué)",
+        "Guépard",
+        "Lion",
+        "Paresseux"
+      ],
+      "correct": [
+        "Faucon pèlerin (piqué)",
+        "Guépard",
+        "Lion",
+        "Paresseux"
+      ],
+      "explanation": "320 km/h, 110 km/h, 80 km/h, 0,2 km/h.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Speed"
+    },
+    {
+      "id": "sc_sci_zq003",
+      "cat": "sci",
+      "question": "Classe ces organes du plus grand au plus petit :",
+      "pool": [
+        "Peau",
+        "Foie",
+        "Cerveau",
+        "Glande thyroïde"
+      ],
+      "correct": [
+        "Peau",
+        "Foie",
+        "Cerveau",
+        "Glande thyroïde"
+      ],
+      "explanation": "2 m², 1,5 kg, 1,4 kg, ~25 g.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Anatomie_humaine"
+    },
+    {
+      "id": "sc_sci_zq004",
+      "cat": "sci",
+      "question": "Classe ces ondes du plus long au plus court en longueur d'onde :",
+      "pool": [
+        "Ondes radio",
+        "Infrarouge",
+        "Lumière visible",
+        "Rayons X"
+      ],
+      "correct": [
+        "Ondes radio",
+        "Infrarouge",
+        "Lumière visible",
+        "Rayons X"
+      ],
+      "explanation": "Km à mètres, micromètres, 380-780 nanomètres, picomètres.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Spectre_électromagnétique"
+    },
+    {
+      "id": "sc_sci_zq005",
+      "cat": "sci",
+      "question": "Classe ces états de la matière du moins au plus energétique :",
+      "pool": [
+        "Solide",
+        "Liquide",
+        "Gaz",
+        "Plasma"
+      ],
+      "correct": [
+        "Solide",
+        "Liquide",
+        "Gaz",
+        "Plasma"
+      ],
+      "explanation": "Ordre d'énergie croissante des particules.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/État_de_la_matière"
+    },
+    {
+      "id": "sc_sci_zq006",
+      "cat": "sci",
+      "question": "Classe ces êtres vivants du plus grand au plus petit génome :",
+      "pool": [
+        "Amibe (Polychaos)",
+        "Humain",
+        "Souris",
+        "Bactérie E. coli"
+      ],
+      "correct": [
+        "Amibe (Polychaos)",
+        "Humain",
+        "Souris",
+        "Bactérie E. coli"
+      ],
+      "explanation": "L'amibe Polychaos dubium aurait un génome géant (200× l'humain) ; l'humain 3,2 Gbp, la souris 2,7 Gbp, E. coli 4,6 Mbp.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Génome"
+    },
+    {
+      "id": "sc_sci_zq007",
+      "cat": "sci",
+      "question": "Classe ces particules du plus lourd au plus léger :",
+      "pool": [
+        "Neutron",
+        "Proton",
+        "Électron",
+        "Neutrino"
+      ],
+      "correct": [
+        "Neutron",
+        "Proton",
+        "Électron",
+        "Neutrino"
+      ],
+      "explanation": "939 MeV/c², 938 MeV/c², 0,511 MeV/c², quasi nulle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Particule_élémentaire"
+    },
+    {
+      "id": "sc_sci_zq008",
+      "cat": "sci",
+      "question": "Classe ces animaux du plus grand au plus petit :",
+      "pool": [
+        "Baleine bleue",
+        "Éléphant d'Afrique",
+        "Humain",
+        "Fourmi"
+      ],
+      "correct": [
+        "Baleine bleue",
+        "Éléphant d'Afrique",
+        "Humain",
+        "Fourmi"
+      ],
+      "explanation": "30 m, 7 m, 1,7 m, quelques mm.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Record_de_taille_animal"
+    },
+    {
+      "id": "sc_sci_zq009",
+      "cat": "sci",
+      "question": "Classe ces sciences de la plus ancienne à la plus récente (institutionnalisation) :",
+      "pool": [
+        "Astronomie",
+        "Physique moderne",
+        "Génétique",
+        "Informatique"
+      ],
+      "correct": [
+        "Astronomie",
+        "Physique moderne",
+        "Génétique",
+        "Informatique"
+      ],
+      "explanation": "Antiquité (Babylone), XVIIe (Newton), 1900 (Mendel redécouvert), 1936 (Turing).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_sciences"
+    },
+    {
+      "id": "sc_sci_zq010",
+      "cat": "sci",
+      "question": "Classe ces températures du plus froid au plus chaud :",
+      "pool": [
+        "Zéro absolu",
+        "Antarctique (record)",
+        "Corps humain",
+        "Surface du Soleil"
+      ],
+      "correct": [
+        "Zéro absolu",
+        "Antarctique (record)",
+        "Corps humain",
+        "Surface du Soleil"
+      ],
+      "explanation": "-273,15 °C, -89,2 °C, 37 °C, 5 500 °C.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Température"
+    },
+    {
+      "id": "sc_sci_zq011",
+      "cat": "sci",
+      "question": "Classe ces éléments chimiques du plus léger au plus lourd (numéro atomique) :",
+      "pool": [
+        "Hydrogène",
+        "Carbone",
+        "Fer",
+        "Or"
+      ],
+      "correct": [
+        "Hydrogène",
+        "Carbone",
+        "Fer",
+        "Or"
+      ],
+      "explanation": "Z=1, Z=6, Z=26, Z=79.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tableau_périodique_des_éléments"
+    },
+    {
+      "id": "sc_sci_zq012",
+      "cat": "sci",
+      "question": "Classe ces grandes étapes de l'évolution de la vie de la plus ancienne à la plus récente :",
+      "pool": [
+        "Premières bactéries",
+        "Premiers poissons",
+        "Dinosaures",
+        "Humains"
+      ],
+      "correct": [
+        "Premières bactéries",
+        "Premiers poissons",
+        "Dinosaures",
+        "Humains"
+      ],
+      "explanation": "~3,5 Ga, ~530 Ma (Cambrien), ~230 Ma, ~300 ka (Homo sapiens).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_évolutive_du_vivant"
+    },
+    {
+      "id": "sc_sci_zq013",
+      "cat": "sci",
+      "question": "Classe ces voyages spatiaux du plus ancien au plus récent :",
+      "pool": [
+        "Sputnik 1",
+        "Gagarine",
+        "Apollo 11",
+        "Station spatiale ISS (habitation permanente)"
+      ],
+      "correct": [
+        "Sputnik 1",
+        "Gagarine",
+        "Apollo 11",
+        "Station spatiale ISS (habitation permanente)"
+      ],
+      "explanation": "1957, 1961, 1969, 2000 (première équipe résidente).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chronologie_du_programme_spatial"
+    },
+    {
+      "id": "sc_sci_zq014",
+      "cat": "sci",
+      "question": "Classe ces étapes du cycle de l'eau dans l'ordre :",
+      "pool": [
+        "Évaporation",
+        "Condensation",
+        "Précipitation",
+        "Ruissellement"
+      ],
+      "correct": [
+        "Évaporation",
+        "Condensation",
+        "Précipitation",
+        "Ruissellement"
+      ],
+      "explanation": "L'eau s'évapore, se condense en nuages, tombe, s'écoule.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cycle_de_l'eau"
+    },
+    {
+      "id": "sc_sci_zq015",
+      "cat": "sci",
+      "question": "Classe ces unités du plus grand au plus petit :",
+      "pool": [
+        "Kilomètre",
+        "Mètre",
+        "Centimètre",
+        "Millimètre"
+      ],
+      "correct": [
+        "Kilomètre",
+        "Mètre",
+        "Centimètre",
+        "Millimètre"
+      ],
+      "explanation": "1 km = 1 000 m = 100 000 cm = 1 000 000 mm.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Système_international_d'unités"
+    },
+    {
+      "id": "sc_sci_zq016",
+      "cat": "sci",
+      "question": "Classe ces distances de la plus petite à la plus grande :",
+      "pool": [
+        "Diamètre d'un atome",
+        "Diamètre d'un virus",
+        "Diamètre d'un cheveu",
+        "Hauteur de la tour Eiffel"
+      ],
+      "correct": [
+        "Diamètre d'un atome",
+        "Diamètre d'un virus",
+        "Diamètre d'un cheveu",
+        "Hauteur de la tour Eiffel"
+      ],
+      "explanation": "~0,1 nm, ~100 nm, ~70 micromètres, 330 m.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordres_de_grandeur"
+    },
+    {
+      "id": "sc_sci_zq017",
+      "cat": "sci",
+      "question": "Classe ces animaux selon leur gestation de la plus longue à la plus courte :",
+      "pool": [
+        "Éléphant",
+        "Baleine à bosse",
+        "Humaine",
+        "Souris"
+      ],
+      "correct": [
+        "Éléphant",
+        "Baleine à bosse",
+        "Humaine",
+        "Souris"
+      ],
+      "explanation": "22 mois, ~11 mois, 9 mois, 20 jours.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gestation"
+    },
+    {
+      "id": "sc_sci_zq018",
+      "cat": "sci",
+      "question": "Classe ces sciences du plus « macro » au plus « micro » :",
+      "pool": [
+        "Astronomie",
+        "Biologie",
+        "Chimie",
+        "Physique quantique"
+      ],
+      "correct": [
+        "Astronomie",
+        "Biologie",
+        "Chimie",
+        "Physique quantique"
+      ],
+      "explanation": "Des galaxies aux atomes, chaque science étudie une échelle de plus en plus petite.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sciences"
+    },
+    {
+      "id": "sc_sci_zq019",
+      "cat": "sci",
+      "question": "Classe ces organes de digestion dans l'ordre du transit :",
+      "pool": [
+        "Estomac",
+        "Intestin grêle",
+        "Côlon",
+        "Rectum"
+      ],
+      "correct": [
+        "Estomac",
+        "Intestin grêle",
+        "Côlon",
+        "Rectum"
+      ],
+      "explanation": "Le bol alimentaire suit ce trajet après l'œsophage.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Appareil_digestif"
+    },
+    {
+      "id": "sc_sci_zq020",
+      "cat": "sci",
+      "question": "Classe ces inventeurs du plus ancien au plus récent :",
+      "pool": [
+        "Gutenberg",
+        "Watt",
+        "Edison",
+        "Tim Berners-Lee"
+      ],
+      "correct": [
+        "Gutenberg",
+        "Watt",
+        "Edison",
+        "Tim Berners-Lee"
+      ],
+      "explanation": "Imprimerie 1450, machine à vapeur 1769, phonographe 1877, Web 1989.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Inventeur"
     }
   ],
   "hist": [
@@ -934,6 +1789,443 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Seconde_Guerre_mondiale",
       "atlasId": "hist_fr"
+    },
+    {
+      "id": "sc_hist_zq001",
+      "cat": "hist",
+      "question": "Classe ces civilisations de la plus ancienne à la plus récente :",
+      "pool": [
+        "Sumer",
+        "Égypte antique",
+        "Rome antique",
+        "Empire byzantin"
+      ],
+      "correct": [
+        "Sumer",
+        "Égypte antique",
+        "Rome antique",
+        "Empire byzantin"
+      ],
+      "explanation": "~3500 av. J.-C., ~3100 av. J.-C., 753 av. J.-C., 330 ap. J.-C. (Constantinople).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mésopotamie"
+    },
+    {
+      "id": "sc_hist_zq002",
+      "cat": "hist",
+      "question": "Classe ces empereurs romains du premier au dernier :",
+      "pool": [
+        "Auguste",
+        "Néron",
+        "Trajan",
+        "Constantin"
+      ],
+      "correct": [
+        "Auguste",
+        "Néron",
+        "Trajan",
+        "Constantin"
+      ],
+      "explanation": "27 av. J.-C., 54-68, 98-117, 306-337.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Empire_romain"
+    },
+    {
+      "id": "sc_hist_zq003",
+      "cat": "hist",
+      "question": "Classe ces rois de France du plus ancien au plus récent :",
+      "pool": [
+        "Charlemagne",
+        "Philippe Auguste",
+        "Louis XIV",
+        "Napoléon"
+      ],
+      "correct": [
+        "Charlemagne",
+        "Philippe Auguste",
+        "Louis XIV",
+        "Napoléon"
+      ],
+      "explanation": "800, 1180-1223, 1643-1715, 1804-1815 (Empereur).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_monarques_de_France"
+    },
+    {
+      "id": "sc_hist_zq004",
+      "cat": "hist",
+      "question": "Classe ces guerres de la plus ancienne à la plus récente :",
+      "pool": [
+        "Guerres puniques",
+        "Guerre de Cent Ans",
+        "Guerre de Trente Ans",
+        "Première Guerre mondiale"
+      ],
+      "correct": [
+        "Guerres puniques",
+        "Guerre de Cent Ans",
+        "Guerre de Trente Ans",
+        "Première Guerre mondiale"
+      ],
+      "explanation": "264-146 av. J.-C., 1337-1453, 1618-1648, 1914-1918.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre"
+    },
+    {
+      "id": "sc_hist_zq005",
+      "cat": "hist",
+      "question": "Classe ces inventions du plus ancien au plus récent :",
+      "pool": [
+        "Roue",
+        "Papier",
+        "Imprimerie de Gutenberg",
+        "Internet"
+      ],
+      "correct": [
+        "Roue",
+        "Papier",
+        "Imprimerie de Gutenberg",
+        "Internet"
+      ],
+      "explanation": "~3500 av. J.-C., ~105 (Chine), 1450, 1969 (ARPANET).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_techniques"
+    },
+    {
+      "id": "sc_hist_zq006",
+      "cat": "hist",
+      "question": "Classe ces révolutions de la plus ancienne à la plus récente :",
+      "pool": [
+        "Révolution américaine",
+        "Révolution française",
+        "Révolution russe",
+        "Révolution iranienne"
+      ],
+      "correct": [
+        "Révolution américaine",
+        "Révolution française",
+        "Révolution russe",
+        "Révolution iranienne"
+      ],
+      "explanation": "1776, 1789, 1917, 1979.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution"
+    },
+    {
+      "id": "sc_hist_zq007",
+      "cat": "hist",
+      "question": "Classe ces batailles du plus ancien au plus récent :",
+      "pool": [
+        "Marathon",
+        "Hastings",
+        "Austerlitz",
+        "Normandie (D-Day)"
+      ],
+      "correct": [
+        "Marathon",
+        "Hastings",
+        "Austerlitz",
+        "Normandie (D-Day)"
+      ],
+      "explanation": "490 av. J.-C., 1066, 1805, 1944.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_de_batailles"
+    },
+    {
+      "id": "sc_hist_zq008",
+      "cat": "hist",
+      "question": "Classe ces pharaons du plus ancien au plus récent :",
+      "pool": [
+        "Khéops",
+        "Hatchepsout",
+        "Toutânkhamon",
+        "Cléopâtre VII"
+      ],
+      "correct": [
+        "Khéops",
+        "Hatchepsout",
+        "Toutânkhamon",
+        "Cléopâtre VII"
+      ],
+      "explanation": "~2560, ~1479, ~1332, ~51-30 av. J.-C.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pharaon"
+    },
+    {
+      "id": "sc_hist_zq009",
+      "cat": "hist",
+      "question": "Classe ces traités du plus ancien au plus récent :",
+      "pool": [
+        "Traité de Verdun",
+        "Traité de Westphalie",
+        "Traité de Versailles",
+        "Traité de Maastricht"
+      ],
+      "correct": [
+        "Traité de Verdun",
+        "Traité de Westphalie",
+        "Traité de Versailles",
+        "Traité de Maastricht"
+      ],
+      "explanation": "843, 1648, 1919, 1992.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Traité"
+    },
+    {
+      "id": "sc_hist_zq010",
+      "cat": "hist",
+      "question": "Classe ces religions du plus ancien au plus récent (fondation) :",
+      "pool": [
+        "Hindouisme",
+        "Judaïsme",
+        "Christianisme",
+        "Islam"
+      ],
+      "correct": [
+        "Hindouisme",
+        "Judaïsme",
+        "Christianisme",
+        "Islam"
+      ],
+      "explanation": "~2000 av. J.-C. (Rig-Veda), ~1800 av. J.-C. (Abraham), ~30, 622.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_religions"
+    },
+    {
+      "id": "sc_hist_zq011",
+      "cat": "hist",
+      "question": "Classe ces présidents/rois français du plus ancien au plus récent :",
+      "pool": [
+        "Napoléon III",
+        "Adolphe Thiers",
+        "Charles de Gaulle",
+        "Emmanuel Macron"
+      ],
+      "correct": [
+        "Napoléon III",
+        "Adolphe Thiers",
+        "Charles de Gaulle",
+        "Emmanuel Macron"
+      ],
+      "explanation": "1852-1870, 1871-1873, 1959-1969, 2017-...",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Président_de_la_République_française"
+    },
+    {
+      "id": "sc_hist_zq012",
+      "cat": "hist",
+      "question": "Classe ces découvertes scientifiques du plus ancien au plus récent :",
+      "pool": [
+        "Gravitation (Newton)",
+        "Électricité (Volta)",
+        "Radioactivité (Becquerel)",
+        "ADN (double hélice)"
+      ],
+      "correct": [
+        "Gravitation (Newton)",
+        "Électricité (Volta)",
+        "Radioactivité (Becquerel)",
+        "ADN (double hélice)"
+      ],
+      "explanation": "1687, 1800, 1896, 1953.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_sciences"
+    },
+    {
+      "id": "sc_hist_zq013",
+      "cat": "hist",
+      "question": "Classe ces empires du plus étendu au moins étendu :",
+      "pool": [
+        "Empire britannique",
+        "Empire mongol",
+        "Empire russe",
+        "Empire romain"
+      ],
+      "correct": [
+        "Empire britannique",
+        "Empire mongol",
+        "Empire russe",
+        "Empire romain"
+      ],
+      "explanation": "35,5 M km², 24 M, 22,8 M, 5 M km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_d'empires"
+    },
+    {
+      "id": "sc_hist_zq014",
+      "cat": "hist",
+      "question": "Classe ces artistes du plus ancien au plus récent :",
+      "pool": [
+        "Léonard de Vinci",
+        "Rembrandt",
+        "Van Gogh",
+        "Picasso"
+      ],
+      "correct": [
+        "Léonard de Vinci",
+        "Rembrandt",
+        "Van Gogh",
+        "Picasso"
+      ],
+      "explanation": "1452-1519, 1606-1669, 1853-1890, 1881-1973.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_l'art"
+    },
+    {
+      "id": "sc_hist_zq015",
+      "cat": "hist",
+      "question": "Classe ces événements de 1968 du plus ancien au plus récent :",
+      "pool": [
+        "Offensive du Têt",
+        "Mai 68 français",
+        "Assassinat de Martin Luther King",
+        "Printemps de Prague"
+      ],
+      "correct": [
+        "Offensive du Têt",
+        "Assassinat de Martin Luther King",
+        "Mai 68 français",
+        "Printemps de Prague"
+      ],
+      "explanation": "Janvier-février, 4 avril, mai-juin, août 1968.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Année_1968"
+    },
+    {
+      "id": "sc_hist_zq017",
+      "cat": "hist",
+      "question": "Classe ces découvreurs/explorateurs du plus ancien au plus récent :",
+      "pool": [
+        "Marco Polo",
+        "Christophe Colomb",
+        "James Cook",
+        "Amundsen (Pôle Sud)"
+      ],
+      "correct": [
+        "Marco Polo",
+        "Christophe Colomb",
+        "James Cook",
+        "Amundsen (Pôle Sud)"
+      ],
+      "explanation": "1271-1295, 1492, 1768-1779, 1911.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Explorateur"
+    },
+    {
+      "id": "sc_hist_zq018",
+      "cat": "hist",
+      "question": "Classe ces conflits du Moyen-Orient du plus ancien au plus récent :",
+      "pool": [
+        "Guerres de l'opium (avec la Chine)",
+        "Guerre des Six Jours",
+        "Guerre du Golfe",
+        "Guerre en Syrie"
+      ],
+      "correct": [
+        "Guerres de l'opium (avec la Chine)",
+        "Guerre des Six Jours",
+        "Guerre du Golfe",
+        "Guerre en Syrie"
+      ],
+      "explanation": "1839-1860, 1967, 1990-1991, depuis 2011.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Moyen-Orient"
+    },
+    {
+      "id": "sc_hist_zq019",
+      "cat": "hist",
+      "question": "Classe ces dynasties chinoises de la plus ancienne à la plus récente :",
+      "pool": [
+        "Qin",
+        "Han",
+        "Ming",
+        "Qing"
+      ],
+      "correct": [
+        "Qin",
+        "Han",
+        "Ming",
+        "Qing"
+      ],
+      "explanation": "-221 à -206, -206 à 220, 1368-1644, 1644-1912.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_la_Chine"
+    },
+    {
+      "id": "sc_hist_zq020",
+      "cat": "hist",
+      "question": "Classe ces personnalités du plus ancien au plus récent :",
+      "pool": [
+        "Cléopâtre",
+        "Jeanne d'Arc",
+        "Napoléon",
+        "Winston Churchill"
+      ],
+      "correct": [
+        "Cléopâtre",
+        "Jeanne d'Arc",
+        "Napoléon",
+        "Winston Churchill"
+      ],
+      "explanation": "-69/-30, 1412-1431, 1769-1821, 1874-1965.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Personnalité_historique"
+    },
+    {
+      "id": "sc_hist_zq021",
+      "cat": "hist",
+      "question": "Classe ces châteaux/architectures du plus ancien au plus récent :",
+      "pool": [
+        "Colisée romain",
+        "Château de Chambord",
+        "Palais de Versailles",
+        "Opéra Garnier"
+      ],
+      "correct": [
+        "Colisée romain",
+        "Château de Chambord",
+        "Palais de Versailles",
+        "Opéra Garnier"
+      ],
+      "explanation": "80, 1519-1547, 1661-1710, 1861-1875.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Architecture"
+    },
+    {
+      "id": "sc_hist_zq022",
+      "cat": "hist",
+      "question": "Classe ces épidémies/pandémies du plus ancien au plus récent :",
+      "pool": [
+        "Peste de Justinien",
+        "Peste noire",
+        "Grippe espagnole",
+        "Covid-19"
+      ],
+      "correct": [
+        "Peste de Justinien",
+        "Peste noire",
+        "Grippe espagnole",
+        "Covid-19"
+      ],
+      "explanation": "541-549, 1347-1352, 1918-1920, 2020-2023.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pandémie"
+    },
+    {
+      "id": "sc_hist_zq023",
+      "cat": "hist",
+      "question": "Classe ces événements de la Révolution française du plus ancien au plus récent :",
+      "pool": [
+        "États généraux",
+        "Prise de la Bastille",
+        "Exécution de Louis XVI",
+        "Coup d'État du 18 Brumaire"
+      ],
+      "correct": [
+        "États généraux",
+        "Prise de la Bastille",
+        "Exécution de Louis XVI",
+        "Coup d'État du 18 Brumaire"
+      ],
+      "explanation": "Mai 1789, 14 juillet 1789, janvier 1793, 9 novembre 1799.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution_française"
+    },
+    {
+      "id": "sc_hist_zq024",
+      "cat": "hist",
+      "question": "Classe ces grandes dates du suffrage français du plus ancien au plus récent :",
+      "pool": [
+        "Suffrage universel masculin",
+        "Lois Ferry (école)",
+        "Vote des femmes",
+        "Majorité à 18 ans"
+      ],
+      "correct": [
+        "Suffrage universel masculin",
+        "Lois Ferry (école)",
+        "Vote des femmes",
+        "Majorité à 18 ans"
+      ],
+      "explanation": "1848, 1881-1882, 1944, 1974.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Suffrage_universel"
     }
   ],
   "art": [
@@ -1261,6 +2553,234 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Art_italien",
       "atlasId": "art_joconde"
+    },
+    {
+      "id": "sc_art_zq001",
+      "cat": "art",
+      "question": "Classe ces peintres du plus ancien au plus récent :",
+      "pool": [
+        "Botticelli",
+        "Caravage",
+        "Monet",
+        "Picasso"
+      ],
+      "correct": [
+        "Botticelli",
+        "Caravage",
+        "Monet",
+        "Picasso"
+      ],
+      "explanation": "1445, 1571, 1840, 1881.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_la_peinture"
+    },
+    {
+      "id": "sc_art_zq002",
+      "cat": "art",
+      "question": "Classe ces tableaux du plus ancien au plus récent :",
+      "pool": [
+        "La Joconde",
+        "Le Radeau de la Méduse",
+        "Impression, soleil levant",
+        "Guernica"
+      ],
+      "correct": [
+        "La Joconde",
+        "Le Radeau de la Méduse",
+        "Impression, soleil levant",
+        "Guernica"
+      ],
+      "explanation": "1503, 1819, 1872, 1937.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_la_peinture"
+    },
+    {
+      "id": "sc_art_zq003",
+      "cat": "art",
+      "question": "Classe ces mouvements artistiques du plus ancien au plus récent :",
+      "pool": [
+        "Renaissance",
+        "Baroque",
+        "Impressionnisme",
+        "Cubisme"
+      ],
+      "correct": [
+        "Renaissance",
+        "Baroque",
+        "Impressionnisme",
+        "Cubisme"
+      ],
+      "explanation": "XVe, XVIIe, 1870, 1907.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mouvements_dans_l'art"
+    },
+    {
+      "id": "sc_art_zq004",
+      "cat": "art",
+      "question": "Classe ces musées du plus grand au plus petit (visiteurs/an) :",
+      "pool": [
+        "Louvre",
+        "British Museum",
+        "Orsay",
+        "Musée Rodin"
+      ],
+      "correct": [
+        "Louvre",
+        "British Museum",
+        "Orsay",
+        "Musée Rodin"
+      ],
+      "explanation": "9 M, 6 M, 3,2 M, 700 000 visiteurs.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_musées_d'art_les_plus_fréquentés"
+    },
+    {
+      "id": "sc_art_zq005",
+      "cat": "art",
+      "question": "Classe ces couleurs primaires en peinture traditionnelle :",
+      "pool": [
+        "Rouge",
+        "Jaune",
+        "Bleu",
+        "Vert (secondaire)"
+      ],
+      "correct": [
+        "Rouge",
+        "Jaune",
+        "Bleu",
+        "Vert (secondaire)"
+      ],
+      "explanation": "Rouge, jaune, bleu sont primaires ; le vert s'obtient en mélangeant bleu et jaune.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Couleur_primaire"
+    },
+    {
+      "id": "sc_art_zq006",
+      "cat": "art",
+      "question": "Classe ces sculptures du plus ancien au plus récent :",
+      "pool": [
+        "Vénus de Milo",
+        "David (Donatello)",
+        "Le Penseur",
+        "Cloud Gate (Chicago)"
+      ],
+      "correct": [
+        "Vénus de Milo",
+        "David (Donatello)",
+        "Le Penseur",
+        "Cloud Gate (Chicago)"
+      ],
+      "explanation": "-130, 1440, 1880, 2006.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sculpture"
+    },
+    {
+      "id": "sc_art_zq007",
+      "cat": "art",
+      "question": "Classe ces cathédrales gothiques du plus ancien chantier au plus récent :",
+      "pool": [
+        "Saint-Denis",
+        "Notre-Dame de Paris",
+        "Chartres (incendie de 1194)",
+        "Amiens"
+      ],
+      "correct": [
+        "Saint-Denis",
+        "Notre-Dame de Paris",
+        "Chartres (incendie de 1194)",
+        "Amiens"
+      ],
+      "explanation": "1140, 1163, 1194, 1220.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Architecture_gothique"
+    },
+    {
+      "id": "sc_art_zq008",
+      "cat": "art",
+      "question": "Classe ces techniques picturales du plus ancien au plus récent :",
+      "pool": [
+        "Fresque",
+        "Huile",
+        "Aquarelle industrielle",
+        "Acrylique"
+      ],
+      "correct": [
+        "Fresque",
+        "Huile",
+        "Aquarelle industrielle",
+        "Acrylique"
+      ],
+      "explanation": "Antiquité, XVe (Flandres), XVIIIe, années 1950.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Technique_de_peinture"
+    },
+    {
+      "id": "sc_art_zq009",
+      "cat": "art",
+      "question": "Classe ces artistes femmes du plus ancien au plus récent :",
+      "pool": [
+        "Artemisia Gentileschi",
+        "Élisabeth Vigée Le Brun",
+        "Camille Claudel",
+        "Frida Kahlo"
+      ],
+      "correct": [
+        "Artemisia Gentileschi",
+        "Élisabeth Vigée Le Brun",
+        "Camille Claudel",
+        "Frida Kahlo"
+      ],
+      "explanation": "1593, 1755, 1864, 1907.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Femmes_artistes"
+    },
+    {
+      "id": "sc_art_zq010",
+      "cat": "art",
+      "question": "Classe ces prix/récompenses artistiques du plus ancien au plus récent :",
+      "pool": [
+        "Prix de Rome",
+        "Prix Goncourt (peinture non — Goncourt littérature)",
+        "Palme d'or",
+        "Prix Pictet (photo)"
+      ],
+      "correct": [
+        "Prix de Rome",
+        "Prix Goncourt (peinture non — Goncourt littérature)",
+        "Palme d'or",
+        "Prix Pictet (photo)"
+      ],
+      "explanation": "1663, 1903 (littérature), 1975 (cinéma), 2008 (photographie).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Prix_d'art"
+    },
+    {
+      "id": "sc_art_zq011",
+      "cat": "art",
+      "question": "Classe ces époques de l'art égyptien de la plus ancienne à la plus récente :",
+      "pool": [
+        "Ancien Empire",
+        "Moyen Empire",
+        "Nouvel Empire",
+        "Époque ptolémaïque"
+      ],
+      "correct": [
+        "Ancien Empire",
+        "Moyen Empire",
+        "Nouvel Empire",
+        "Époque ptolémaïque"
+      ],
+      "explanation": "-2700 à -2200, -2033 à -1680, -1550 à -1069, -305 à -30.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Art_de_l'Égypte_antique"
+    },
+    {
+      "id": "sc_art_zq012",
+      "cat": "art",
+      "question": "Classe ces architectes du plus ancien au plus récent :",
+      "pool": [
+        "Bramante",
+        "Viollet-le-Duc",
+        "Le Corbusier",
+        "Zaha Hadid"
+      ],
+      "correct": [
+        "Bramante",
+        "Viollet-le-Duc",
+        "Le Corbusier",
+        "Zaha Hadid"
+      ],
+      "explanation": "1444, 1814, 1887, 1950.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Architecture"
     }
   ],
   "cinema": [
@@ -1501,6 +3021,139 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Western_spaghetti",
       "atlasId": "cin_oscar"
+    },
+    {
+      "id": "sc_cinema_zq001",
+      "cat": "cinema",
+      "question": "Classe ces films du plus ancien au plus récent :",
+      "pool": [
+        "Le Voyage dans la Lune",
+        "Autant en emporte le vent",
+        "Star Wars",
+        "Avatar"
+      ],
+      "correct": [
+        "Le Voyage dans la Lune",
+        "Autant en emporte le vent",
+        "Star Wars",
+        "Avatar"
+      ],
+      "explanation": "1902, 1939, 1977, 2009.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_du_cinéma"
+    },
+    {
+      "id": "sc_cinema_zq002",
+      "cat": "cinema",
+      "question": "Classe ces réalisateurs du plus ancien au plus récent (naissance) :",
+      "pool": [
+        "Alfred Hitchcock",
+        "Akira Kurosawa",
+        "Steven Spielberg",
+        "Christopher Nolan"
+      ],
+      "correct": [
+        "Alfred Hitchcock",
+        "Akira Kurosawa",
+        "Steven Spielberg",
+        "Christopher Nolan"
+      ],
+      "explanation": "1899, 1910, 1946, 1970.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Réalisateur"
+    },
+    {
+      "id": "sc_cinema_zq003",
+      "cat": "cinema",
+      "question": "Classe ces technologies de cinéma du plus ancien au plus récent :",
+      "pool": [
+        "Cinéma muet",
+        "Cinéma sonore",
+        "Cinéma couleur (largement diffusé)",
+        "Cinéma numérique"
+      ],
+      "correct": [
+        "Cinéma muet",
+        "Cinéma sonore",
+        "Cinéma couleur (largement diffusé)",
+        "Cinéma numérique"
+      ],
+      "explanation": "1895, 1927, 1935-1960, 2000s.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_techniques_de_cinéma"
+    },
+    {
+      "id": "sc_cinema_zq004",
+      "cat": "cinema",
+      "question": "Classe ces actrices du plus ancien au plus récent (naissance) :",
+      "pool": [
+        "Greta Garbo",
+        "Marilyn Monroe",
+        "Meryl Streep",
+        "Jennifer Lawrence"
+      ],
+      "correct": [
+        "Greta Garbo",
+        "Marilyn Monroe",
+        "Meryl Streep",
+        "Jennifer Lawrence"
+      ],
+      "explanation": "1905, 1926, 1949, 1990.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_d'actrices_de_cinéma"
+    },
+    {
+      "id": "sc_cinema_zq005",
+      "cat": "cinema",
+      "question": "Classe ces studios du plus ancien au plus récent :",
+      "pool": [
+        "Paramount",
+        "Disney",
+        "Pixar",
+        "Netflix (séries originales)"
+      ],
+      "correct": [
+        "Paramount",
+        "Disney",
+        "Pixar",
+        "Netflix (séries originales)"
+      ],
+      "explanation": "1912, 1923, 1986, 2013 (House of Cards).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Studio_de_cinéma"
+    },
+    {
+      "id": "sc_cinema_zq006",
+      "cat": "cinema",
+      "question": "Classe ces prix de cinéma du plus ancien au plus récent :",
+      "pool": [
+        "Oscar",
+        "Prix Louis-Delluc",
+        "César",
+        "Prix Lumières"
+      ],
+      "correct": [
+        "Oscar",
+        "Prix Louis-Delluc",
+        "César",
+        "Prix Lumières"
+      ],
+      "explanation": "1929, 1937, 1976, 1996.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Récompense_de_cinéma"
+    },
+    {
+      "id": "sc_cinema_zq007",
+      "cat": "cinema",
+      "question": "Classe ces films de la saga Star Wars du plus ancien au plus récent (sortie) :",
+      "pool": [
+        "Un nouvel espoir",
+        "L'Empire contre-attaque",
+        "La Menace fantôme",
+        "Le Réveil de la Force"
+      ],
+      "correct": [
+        "Un nouvel espoir",
+        "L'Empire contre-attaque",
+        "La Menace fantôme",
+        "Le Réveil de la Force"
+      ],
+      "explanation": "1977, 1980, 1999, 2015.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Star_Wars"
     }
   ],
   "sport": [
@@ -1828,6 +3481,234 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Championnat_d%27Europe_de_football",
       "atlasId": "spt_football"
+    },
+    {
+      "id": "sc_sport_zq001",
+      "cat": "sport",
+      "question": "Classe ces JO d'été du plus ancien au plus récent :",
+      "pool": [
+        "Athènes 1896",
+        "Paris 1924",
+        "Barcelone 1992",
+        "Paris 2024"
+      ],
+      "correct": [
+        "Athènes 1896",
+        "Paris 1924",
+        "Barcelone 1992",
+        "Paris 2024"
+      ],
+      "explanation": "Les premiers JO modernes, puis la deuxième olympiade parisienne, Barcelone, et le retour à Paris après 100 ans.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jeux_olympiques_d'été"
+    },
+    {
+      "id": "sc_sport_zq002",
+      "cat": "sport",
+      "question": "Classe ces sportifs du plus ancien au plus récent (naissance) :",
+      "pool": [
+        "Suzanne Lenglen",
+        "Pelé",
+        "Michael Jordan",
+        "Lionel Messi"
+      ],
+      "correct": [
+        "Suzanne Lenglen",
+        "Pelé",
+        "Michael Jordan",
+        "Lionel Messi"
+      ],
+      "explanation": "1899, 1940, 1963, 1987.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sportifs_et_sportives_célèbres"
+    },
+    {
+      "id": "sc_sport_zq003",
+      "cat": "sport",
+      "question": "Classe ces records de vitesse du plus lent au plus rapide :",
+      "pool": [
+        "Usain Bolt (100 m)",
+        "Guépard",
+        "TGV (commercial)",
+        "Faucon pèlerin (piqué)"
+      ],
+      "correct": [
+        "Usain Bolt (100 m)",
+        "Guépard",
+        "TGV (commercial)",
+        "Faucon pèlerin (piqué)"
+      ],
+      "explanation": "44,7 km/h (moyenne), 110 km/h, 320 km/h, 320+ km/h (piqué en chute).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Records_de_vitesse"
+    },
+    {
+      "id": "sc_sport_zq004",
+      "cat": "sport",
+      "question": "Classe ces coupes du monde de football du plus ancien au plus récent :",
+      "pool": [
+        "Uruguay 1930",
+        "France 1998",
+        "Afrique du Sud 2010",
+        "Qatar 2022"
+      ],
+      "correct": [
+        "Uruguay 1930",
+        "France 1998",
+        "Afrique du Sud 2010",
+        "Qatar 2022"
+      ],
+      "explanation": "Première CDM, Zidane, première en Afrique, première en hiver.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_football"
+    },
+    {
+      "id": "sc_sport_zq005",
+      "cat": "sport",
+      "question": "Classe ces équipes du plus grand nombre de Ligues des champions au plus petit :",
+      "pool": [
+        "Real Madrid",
+        "Milan AC",
+        "Bayern Munich",
+        "Manchester City"
+      ],
+      "correct": [
+        "Real Madrid",
+        "Milan AC",
+        "Bayern Munich",
+        "Manchester City"
+      ],
+      "explanation": "15, 7, 6, 1 (2023).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ligue_des_champions_de_l'UEFA"
+    },
+    {
+      "id": "sc_sport_zq006",
+      "cat": "sport",
+      "question": "Classe ces sports olympiques du plus ancien (JO modernes) au plus récent :",
+      "pool": [
+        "Athlétisme",
+        "Basket-ball",
+        "Snowboard",
+        "Breaking"
+      ],
+      "correct": [
+        "Athlétisme",
+        "Basket-ball",
+        "Snowboard",
+        "Breaking"
+      ],
+      "explanation": "1896, 1936, 1998, 2024.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sports_olympiques"
+    },
+    {
+      "id": "sc_sport_zq007",
+      "cat": "sport",
+      "question": "Classe ces distances de course du plus court au plus long :",
+      "pool": [
+        "100 m",
+        "800 m",
+        "10 000 m",
+        "Marathon"
+      ],
+      "correct": [
+        "100 m",
+        "800 m",
+        "10 000 m",
+        "Marathon"
+      ],
+      "explanation": "Sprint, demi-fond, fond, hors stade (42,195 km).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Athlétisme"
+    },
+    {
+      "id": "sc_sport_zq008",
+      "cat": "sport",
+      "question": "Classe ces grands chelems de tennis du plus ancien au plus récent dans l'année :",
+      "pool": [
+        "Open d'Australie",
+        "Roland-Garros",
+        "Wimbledon",
+        "US Open"
+      ],
+      "correct": [
+        "Open d'Australie",
+        "Roland-Garros",
+        "Wimbledon",
+        "US Open"
+      ],
+      "explanation": "Janvier, mai-juin, juin-juillet, août-septembre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Chelem_(tennis)"
+    },
+    {
+      "id": "sc_sport_zq009",
+      "cat": "sport",
+      "question": "Classe ces cyclistes du plus ancien au plus récent (première victoire du Tour) :",
+      "pool": [
+        "Maurice Garin",
+        "Fausto Coppi",
+        "Bernard Hinault",
+        "Tadej Pogačar"
+      ],
+      "correct": [
+        "Maurice Garin",
+        "Fausto Coppi",
+        "Bernard Hinault",
+        "Tadej Pogačar"
+      ],
+      "explanation": "1903, 1949, 1978, 2020.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_France"
+    },
+    {
+      "id": "sc_sport_zq010",
+      "cat": "sport",
+      "question": "Classe ces sports de raquette du plus ancien au plus récent (codification) :",
+      "pool": [
+        "Tennis",
+        "Badminton",
+        "Tennis de table",
+        "Pickleball"
+      ],
+      "correct": [
+        "Tennis",
+        "Badminton",
+        "Tennis de table",
+        "Pickleball"
+      ],
+      "explanation": "1874, 1877 (officiel), 1926, 1965.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sport_de_raquette"
+    },
+    {
+      "id": "sc_sport_zq011",
+      "cat": "sport",
+      "question": "Classe ces circuits de F1 du plus ancien au plus récent (premier GP) :",
+      "pool": [
+        "Monza",
+        "Monaco",
+        "Abu Dhabi",
+        "Miami"
+      ],
+      "correct": [
+        "Monza",
+        "Monaco",
+        "Abu Dhabi",
+        "Miami"
+      ],
+      "explanation": "1922, 1929, 2009, 2022.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Circuits_de_Formule_1"
+    },
+    {
+      "id": "sc_sport_zq012",
+      "cat": "sport",
+      "question": "Classe ces tailleurs/costumiers du sport du plus ancien au plus récent (fondation) :",
+      "pool": [
+        "Adidas",
+        "Nike",
+        "Under Armour",
+        "On Running"
+      ],
+      "correct": [
+        "Adidas",
+        "Nike",
+        "Under Armour",
+        "On Running"
+      ],
+      "explanation": "1949 (héritage 1924), 1964, 1996, 2010.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Équipementier_sportif"
     }
   ],
   "gastro": [
@@ -2155,6 +4036,196 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/Condiment",
       "atlasId": "gst_epices"
+    },
+    {
+      "id": "sc_gastro_zq001",
+      "cat": "gastro",
+      "question": "Classe ces fromages français du plus doux au plus fort (goût) :",
+      "pool": [
+        "Brie",
+        "Comté",
+        "Roquefort",
+        "Époisses"
+      ],
+      "correct": [
+        "Brie",
+        "Comté",
+        "Roquefort",
+        "Époisses"
+      ],
+      "explanation": "L'époisses, lavé au marc de Bourgogne, est réputé le plus odorant de France.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fromage_français"
+    },
+    {
+      "id": "sc_gastro_zq002",
+      "cat": "gastro",
+      "question": "Classe ces étapes de la fabrication du pain :",
+      "pool": [
+        "Pétrissage",
+        "Pointage",
+        "Façonnage",
+        "Cuisson"
+      ],
+      "correct": [
+        "Pétrissage",
+        "Pointage",
+        "Façonnage",
+        "Cuisson"
+      ],
+      "explanation": "Mélanger, laisser lever, former, enfourner.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pain"
+    },
+    {
+      "id": "sc_gastro_zq003",
+      "cat": "gastro",
+      "question": "Classe ces vins français du plus sucré au plus sec :",
+      "pool": [
+        "Sauternes",
+        "Champagne demi-sec",
+        "Bordeaux rouge",
+        "Chablis"
+      ],
+      "correct": [
+        "Sauternes",
+        "Champagne demi-sec",
+        "Bordeaux rouge",
+        "Chablis"
+      ],
+      "explanation": "Le sauternes (moelleux) est très sucré ; le chablis est sec.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vin_français"
+    },
+    {
+      "id": "sc_gastro_zq004",
+      "cat": "gastro",
+      "question": "Classe ces viandes selon leur cuisson de la plus saignante à la plus cuite :",
+      "pool": [
+        "Bleu",
+        "Saignant",
+        "À point",
+        "Bien cuit"
+      ],
+      "correct": [
+        "Bleu",
+        "Saignant",
+        "À point",
+        "Bien cuit"
+      ],
+      "explanation": "Les degrés de cuisson français, du plus cru au plus cuit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cuisson_de_la_viande"
+    },
+    {
+      "id": "sc_gastro_zq005",
+      "cat": "gastro",
+      "question": "Classe ces boissons du moins au plus alcoolisé (en %) :",
+      "pool": [
+        "Bière (5 %)",
+        "Vin (12 %)",
+        "Whisky (40 %)",
+        "Rhum overproof (75 %)"
+      ],
+      "correct": [
+        "Bière (5 %)",
+        "Vin (12 %)",
+        "Whisky (40 %)",
+        "Rhum overproof (75 %)"
+      ],
+      "explanation": "Degrés alcooliques typiques.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Boisson_alcoolisée"
+    },
+    {
+      "id": "sc_gastro_zq006",
+      "cat": "gastro",
+      "question": "Classe ces épices du plus doux au plus piquant (Scoville) :",
+      "pool": [
+        "Paprika doux",
+        "Poivre noir",
+        "Jalapeño",
+        "Carolina Reaper"
+      ],
+      "correct": [
+        "Paprika doux",
+        "Poivre noir",
+        "Jalapeño",
+        "Carolina Reaper"
+      ],
+      "explanation": "Le paprika doux est quasi nul en capsaïcine ; le Carolina Reaper dépasse 2 M SHU.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Échelle_de_Scoville"
+    },
+    {
+      "id": "sc_gastro_zq007",
+      "cat": "gastro",
+      "question": "Classe ces pâtisseries du plus ancien au plus récent (invention) :",
+      "pool": [
+        "Macaron simple",
+        "Éclair",
+        "Macaron à ganache",
+        "Cronut"
+      ],
+      "correct": [
+        "Macaron simple",
+        "Éclair",
+        "Macaron à ganache",
+        "Cronut"
+      ],
+      "explanation": "VIIIe siècle (arabe), 1850, 1862-1930, 2013.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pâtisserie"
+    },
+    {
+      "id": "sc_gastro_zq008",
+      "cat": "gastro",
+      "question": "Classe ces repas de la journée dans l'ordre :",
+      "pool": [
+        "Petit-déjeuner",
+        "Déjeuner",
+        "Goûter",
+        "Dîner"
+      ],
+      "correct": [
+        "Petit-déjeuner",
+        "Déjeuner",
+        "Goûter",
+        "Dîner"
+      ],
+      "explanation": "Les quatre repas traditionnels français.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Repas"
+    },
+    {
+      "id": "sc_gastro_zq009",
+      "cat": "gastro",
+      "question": "Classe ces cuissons de l'œuf de la plus courte à la plus longue :",
+      "pool": [
+        "À la coque",
+        "Poché",
+        "Mollet",
+        "Dur"
+      ],
+      "correct": [
+        "À la coque",
+        "Poché",
+        "Mollet",
+        "Dur"
+      ],
+      "explanation": "3 min, 3-4 min, 6 min, 9-10 min.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Œuf_(aliment)"
+    },
+    {
+      "id": "sc_gastro_zq010",
+      "cat": "gastro",
+      "question": "Classe ces plats régionaux du plus au nord au plus au sud de la France :",
+      "pool": [
+        "Choucroute",
+        "Bœuf bourguignon",
+        "Cassoulet",
+        "Bouillabaisse"
+      ],
+      "correct": [
+        "Choucroute",
+        "Bœuf bourguignon",
+        "Cassoulet",
+        "Bouillabaisse"
+      ],
+      "explanation": "Alsace, Bourgogne, Toulouse, Marseille.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cuisine_française"
     }
   ],
   "mytho": [
@@ -2503,6 +4574,82 @@
       "xp": 20,
       "wikipedia": "https://fr.wikipedia.org/wiki/M%C3%A9tamorphoses_(Ovide)",
       "atlasId": "mytho_metamorphoses"
+    },
+    {
+      "id": "sc_mytho_zq001",
+      "cat": "mytho",
+      "question": "Classe ces dieux grecs du plus ancien (génération) au plus récent :",
+      "pool": [
+        "Cronos",
+        "Zeus",
+        "Athéna",
+        "Hercule (demi-dieu)"
+      ],
+      "correct": [
+        "Cronos",
+        "Zeus",
+        "Athéna",
+        "Hercule (demi-dieu)"
+      ],
+      "explanation": "Titan, fils de Cronos, fille de Zeus, fils de Zeus.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Théogonie"
+    },
+    {
+      "id": "sc_mytho_zq002",
+      "cat": "mytho",
+      "question": "Classe ces créatures du plus grand au plus petit :",
+      "pool": [
+        "Kraken",
+        "Dragon européen",
+        "Minotaure",
+        "Leprechaun"
+      ],
+      "correct": [
+        "Kraken",
+        "Dragon européen",
+        "Minotaure",
+        "Leprechaun"
+      ],
+      "explanation": "Du monstre marin de taille légendaire au lutin de 60 cm.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Créature_légendaire"
+    },
+    {
+      "id": "sc_mytho_zq003",
+      "cat": "mytho",
+      "question": "Classe ces dieux égyptiens du plus important au moins important (panthéon classique) :",
+      "pool": [
+        "Râ",
+        "Osiris",
+        "Anubis",
+        "Bès"
+      ],
+      "correct": [
+        "Râ",
+        "Osiris",
+        "Anubis",
+        "Bès"
+      ],
+      "explanation": "Le dieu solaire créateur, le roi des morts, l'embaumeur, le nain protecteur des foyers.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Divinités_égyptiennes"
+    },
+    {
+      "id": "sc_mytho_zq004",
+      "cat": "mytho",
+      "question": "Classe ces travaux d'Héraclès dans l'ordre traditionnel :",
+      "pool": [
+        "Lion de Némée",
+        "Hydre de Lerne",
+        "Cerbère (capture)",
+        "Pommes d'or"
+      ],
+      "correct": [
+        "Lion de Némée",
+        "Hydre de Lerne",
+        "Cerbère (capture)",
+        "Pommes d'or"
+      ],
+      "explanation": "Le premier, le deuxième, la onzième (pommes), le douzième (Cerbère).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Travaux_d'Héraclès"
     }
   ],
   "chateaux": [
@@ -2681,6 +4828,63 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Palais_de_Versailles",
       "atlasId": "chateaux_france",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_chateaux_zq001",
+      "cat": "chateaux",
+      "question": "Classe ces châteaux de la Loire du plus ancien au plus récent :",
+      "pool": [
+        "Château de Langeais",
+        "Château de Chambord",
+        "Château de Cheverny",
+        "Château de Châtenay (modernes)"
+      ],
+      "correct": [
+        "Château de Langeais",
+        "Château de Chambord",
+        "Château de Cheverny",
+        "Château de Châtenay (modernes)"
+      ],
+      "explanation": "XVe, 1519, 1624-1634, XIXe.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Châteaux_de_la_Loire"
+    },
+    {
+      "id": "sc_chateaux_zq002",
+      "cat": "chateaux",
+      "question": "Classe ces parties d'un château fort du plus haut au plus bas :",
+      "pool": [
+        "Donjon",
+        "Créneaux",
+        "Meurtrières",
+        "Fosses (à ras du sol)"
+      ],
+      "correct": [
+        "Donjon",
+        "Créneaux",
+        "Meurtrières",
+        "Fosses (à ras du sol)"
+      ],
+      "explanation": "La tour maîtresse domine tout ; les fosses sont au niveau du sol.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Château_fort"
+    },
+    {
+      "id": "sc_chateaux_zq003",
+      "cat": "chateaux",
+      "question": "Classe ces résidences royales françaises du plus au moins utilisé par la cour :",
+      "pool": [
+        "Versailles (Louis XIV)",
+        "Fontainebleau (François Ier)",
+        "Blois (Louis XII)",
+        "Compiègne (Napoléon III)"
+      ],
+      "correct": [
+        "Versailles (Louis XIV)",
+        "Fontainebleau (François Ier)",
+        "Blois (Louis XII)",
+        "Compiègne (Napoléon III)"
+      ],
+      "explanation": "Chaque monarque avait sa résidence de prédilection, chronologiquement.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Châteaux_de_la_Loire"
     }
   ],
   "extended": [
@@ -2903,6 +5107,101 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Le_Corbusier",
       "atlasId": "ext_philo",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_extended_zq001",
+      "cat": "extended",
+      "question": "Classe ces sources d'énergie du plus ancien usage au plus récent :",
+      "pool": [
+        "Bois",
+        "Charbon",
+        "Pétrole",
+        "Solaire photovoltaïque"
+      ],
+      "correct": [
+        "Bois",
+        "Charbon",
+        "Pétrole",
+        "Solaire photovoltaïque"
+      ],
+      "explanation": "Préhistoire, Antiquité/XIXe, XIXe, XXe.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_l'énergie"
+    },
+    {
+      "id": "sc_extended_zq002",
+      "cat": "extended",
+      "question": "Classe ces moyens de transport du plus lent au plus rapide :",
+      "pool": [
+        "Cheval",
+        "Voiture",
+        "Avion",
+        "Fusée"
+      ],
+      "correct": [
+        "Cheval",
+        "Voiture",
+        "Avion",
+        "Fusée"
+      ],
+      "explanation": "~40, ~120, ~900, ~28 000 km/h.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Moyen_de_transport"
+    },
+    {
+      "id": "sc_extended_zq003",
+      "cat": "extended",
+      "question": "Classe ces chiffres romains par valeur croissante :",
+      "pool": [
+        "I",
+        "V",
+        "X",
+        "L"
+      ],
+      "correct": [
+        "I",
+        "V",
+        "X",
+        "L"
+      ],
+      "explanation": "1, 5, 10, 50.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Numération_romaine"
+    },
+    {
+      "id": "sc_extended_zq004",
+      "cat": "extended",
+      "question": "Classe ces matériaux du plus ancien (usage humain) au plus récent :",
+      "pool": [
+        "Pierre",
+        "Bronze",
+        "Fer",
+        "Plastique"
+      ],
+      "correct": [
+        "Pierre",
+        "Bronze",
+        "Fer",
+        "Plastique"
+      ],
+      "explanation": "Âges de la pierre, du bronze (~-3300), du fer (~-1200), bakélite 1907.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Âge_du_bronze"
+    },
+    {
+      "id": "sc_extended_zq005",
+      "cat": "extended",
+      "question": "Classe ces planètes de la plus grosse à la plus petite :",
+      "pool": [
+        "Jupiter",
+        "Uranus",
+        "Terre",
+        "Mars"
+      ],
+      "correct": [
+        "Jupiter",
+        "Uranus",
+        "Terre",
+        "Mars"
+      ],
+      "explanation": "11×, 4×, 1×, 0,53× la taille de la Terre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Planète"
     }
   ],
   "litt": [
@@ -3081,6 +5380,120 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Pablo_Neruda",
       "atlasId": "litt_hugo",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_litt_zq001",
+      "cat": "litt",
+      "question": "Classe ces romans de Victor Hugo du plus ancien au plus récent :",
+      "pool": [
+        "Notre-Dame de Paris",
+        "Les Misérables",
+        "Quatrevingt-treize",
+        "L'Homme qui rit"
+      ],
+      "correct": [
+        "Notre-Dame de Paris",
+        "Les Misérables",
+        "L'Homme qui rit",
+        "Quatrevingt-treize"
+      ],
+      "explanation": "1831, 1862, 1869, 1874.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Victor_Hugo"
+    },
+    {
+      "id": "sc_litt_zq002",
+      "cat": "litt",
+      "question": "Classe ces prix Nobel de littérature français du plus ancien au plus récent :",
+      "pool": [
+        "Sully Prudhomme",
+        "Camus",
+        "Sartre (refusé)",
+        "Ernaux"
+      ],
+      "correct": [
+        "Sully Prudhomme",
+        "Camus",
+        "Sartre (refusé)",
+        "Ernaux"
+      ],
+      "explanation": "1901, 1957, 1964 (refusé), 2022.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Prix_Nobel_de_littérature"
+    },
+    {
+      "id": "sc_litt_zq003",
+      "cat": "litt",
+      "question": "Classe ces fables de La Fontaine par numéro de livre (ordre de publication) :",
+      "pool": [
+        "La Cigale et la Fourmi (I)",
+        "Le Corbeau et le Renard (I)",
+        "Le Lièvre et la Tortue (VI)",
+        "Le Chêne et le Roseau (IV)"
+      ],
+      "correct": [
+        "La Cigale et la Fourmi (I)",
+        "Le Corbeau et le Renard (I)",
+        "Le Chêne et le Roseau (IV)",
+        "Le Lièvre et la Tortue (VI)"
+      ],
+      "explanation": "Les fables du livre I ouvrent le recueil de 1668.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fables_de_La_Fontaine"
+    },
+    {
+      "id": "sc_litt_zq004",
+      "cat": "litt",
+      "question": "Classe ces livres du Harry Potter du plus ancien au plus récent :",
+      "pool": [
+        "À l'école des sorciers",
+        "La Chambre des secrets",
+        "Le Prisonnier d'Azkaban",
+        "Les Reliques de la Mort"
+      ],
+      "correct": [
+        "À l'école des sorciers",
+        "La Chambre des secrets",
+        "Le Prisonnier d'Azkaban",
+        "Les Reliques de la Mort"
+      ],
+      "explanation": "1997, 1998, 1999, 2007.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Harry_Potter"
+    },
+    {
+      "id": "sc_litt_zq005",
+      "cat": "litt",
+      "question": "Classe ces auteurs du plus ancien au plus récent (naissance) :",
+      "pool": [
+        "Homère",
+        "Dante",
+        "Molière",
+        "Camus"
+      ],
+      "correct": [
+        "Homère",
+        "Dante",
+        "Molière",
+        "Camus"
+      ],
+      "explanation": "~VIIIe av. J.-C., 1265, 1622, 1913.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Littérature"
+    },
+    {
+      "id": "sc_litt_zq006",
+      "cat": "litt",
+      "question": "Classe ces livres du plus vendu au moins vendu :",
+      "pool": [
+        "Don Quichotte",
+        "Le Petit Prince",
+        "Harry Potter (tome 1)",
+        "L'Étranger"
+      ],
+      "correct": [
+        "Don Quichotte",
+        "Le Petit Prince",
+        "Harry Potter (tome 1)",
+        "L'Étranger"
+      ],
+      "explanation": "500 M, 200 M, 120 M, 12 M exemplaires estimés.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_livres_les_plus_vendus"
     }
   ],
   "mixed": [
@@ -3281,6 +5694,102 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Latitude",
       "atlasId": "ext_philo",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_mixed_zq001",
+      "cat": "mixed",
+      "question": "Classe ces planètes du système solaire par taille décroissante :",
+      "pool": [
+        "Jupiter",
+        "Saturne",
+        "Terre",
+        "Mercure"
+      ],
+      "correct": [
+        "Jupiter",
+        "Saturne",
+        "Terre",
+        "Mercure"
+      ],
+      "explanation": "139 820 km, 116 460 km, 12 742 km, 4 879 km de diamètre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Système_solaire"
+    },
+    {
+      "id": "sc_mixed_zq002",
+      "cat": "mixed",
+      "question": "Classe ces couleurs de l'arc-en-ciel dans l'ordre (rouge vers violet) :",
+      "pool": [
+        "Rouge",
+        "Jaune",
+        "Vert",
+        "Violet"
+      ],
+      "correct": [
+        "Rouge",
+        "Jaune",
+        "Vert",
+        "Violet"
+      ],
+      "explanation": "Rouge, orange, jaune, vert, bleu, indigo, violet (ROJVBIV).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Arc-en-ciel"
+    },
+    {
+      "id": "sc_mixed_zq004",
+      "cat": "mixed",
+      "question": "Classe ces montagnes russes par vitesse croissante :",
+      "pool": [
+        "Montagnes russes en bois classiques",
+        "Grand Eight moderne",
+        "Formula Rossa (Abu Dhabi)",
+        "Fusée spatiale (décollage)"
+      ],
+      "correct": [
+        "Montagnes russes en bois classiques",
+        "Grand Eight moderne",
+        "Formula Rossa (Abu Dhabi)",
+        "Fusée spatiale (décollage)"
+      ],
+      "explanation": "~40, ~100, 240 km/h, 28 000 km/h (orbite).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Montagnes_russes"
+    },
+    {
+      "id": "sc_mixed_zq005",
+      "cat": "mixed",
+      "question": "Classe ces unités de temps de la plus longue à la plus courte :",
+      "pool": [
+        "Millénaire",
+        "Siècle",
+        "Décennie",
+        "An"
+      ],
+      "correct": [
+        "Millénaire",
+        "Siècle",
+        "Décennie",
+        "An"
+      ],
+      "explanation": "1 000 ans, 100 ans, 10 ans, 1 an.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Unités_de_temps"
+    },
+    {
+      "id": "sc_mixed_zq006",
+      "cat": "mixed",
+      "question": "Classe ces empereurs Napoléon du premier au second :",
+      "pool": [
+        "Napoléon Ier",
+        "Napoléon II",
+        "Napoléon III"
+      ],
+      "correct": [
+        "Napoléon Ier",
+        "Napoléon II",
+        "Napoléon III"
+      ],
+      "explanation": "1804-1814/15, l'Aiglon (jamais régnant), 1852-1870.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Napoléon"
     }
-  ]
+  ],
+  "musique": [],
+  "jv": [],
+  "series": []
 }

@@ -240,6 +240,17 @@
     log(`Arrière-plan terminé — TF: ${tfInjected}, Scramble: ${scrambleInjected}`, 'ok');
   }
 
+  // ── Frise du Temps : événements historiques (chargement en arrière-plan) ────
+  async function loadTimeline() {
+    const tl = await fetchJSONAny('timeline_events.json', true);
+    if (Array.isArray(tl) && tl.length > 0) {
+      window.TIMELINE_EVENTS = tl;
+      log(`Frise du Temps : ${tl.length} événements chargés`, 'ok');
+    } else {
+      log('Frise du Temps : fichier absent ou vide — événements intégrés conservés', 'warn');
+    }
+  }
+
   // ── Point d'entrée principal ───────────────────────────────────────────────
   async function init() {
     log('Démarrage du chargeur de données…');
@@ -256,6 +267,7 @@
     // Les modes TF / Scramble n'ont pas besoin d'être prêts au démarrage :
     // on les charge en arrière-plan pour libérer l'écran d'accueil plus vite.
     loadModeBanks();
+    loadTimeline();
 
     log(`Données principales prêtes en ${Math.round(performance.now() - t0)} ms`);
   }

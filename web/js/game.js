@@ -4709,6 +4709,7 @@
         }
         startQuizFlow(Math.min(3, window.SCRAMBLE_QB.length), mode, 'scramble');
       }
+      else if (mode === 'pieges') startPiegesMode();
       else if (mode === 'infinite') startQuizFlow(999, mode, 'qcm', 'mixed');
       else if (mode === 'chrono') startChronoMode();
       else if (mode === 'survie') startSurvieMode();
@@ -4727,6 +4728,44 @@
     function startRevision() {
       if (P.mistakes.length === 0) { showToast('Aucune erreur à réviser !'); return; }
       startQuizFlow(Math.min(10, P.mistakes.length), 'Revision', 'mistakes');
+    }
+
+    // ===== MODE QUESTIONS PIÈGES (communauté) =====
+    // Le serveur liste les questions les plus ratées par tous les joueurs
+    // (id + stats) ; le jeu les retrouve dans ses banques locales — aucun
+    // contenu dupliqué. XP ×2 sur toute la session.
+    async function startPiegesMode() {
+      showToast('⏳ Chargement des questions pièges…');
+      let traps = null;
+      try {
+        traps = await _lbFetch('/pieges', 8000);
+        try { localStorage.setItem('kq_pieges_cache', JSON.stringify({ t: Date.now(), traps: traps.traps })); } catch (_) {}
+      } catch (_) {
+        try {
+          const c = JSON.parse(localStorage.getItem('kq_pieges_cache') || 'null');
+          if (c && c.traps) { traps = { traps: c.traps }; showToast('📶 Hors-ligne — dernière liste en cache'); }
+        } catch (_) {}
+      }
+      const list = (traps && traps.traps) ? traps.traps : [];
+      const byId = {};
+      ['GEO_QB', 'HIST_QB', 'SCI_QB', 'ART_QB', 'CINEMA_QB', 'SPORT_QB', 'GASTRO_QB',
+       'MYTHO_QB', 'CHATEAUX_QB', 'LITT_QB', 'MUSIQUE_QB', 'JV_QB', 'SERIES_QB',
+       'EXTENDED_QB', 'MIXED_QB'].forEach(b => (window[b] || []).forEach(q => {
+         if (q && q.id && !byId[q.id]) byId[q.id] = q;
+       }));
+      let qs = list.map(t => byId[t.id]).filter(Boolean);
+      qs = shuffle(qs).slice(0, 10);
+      if (qs.length < 5) {
+        showToast('🎯 Pas encore assez de questions pièges — la communauté doit jouer plus !');
+        return;
+      }
+      startSession('pieges');
+      Q = { mode: 'pieges', type: 'qcm', qs, idx: 0, correct: 0, totalXP: 0,
+            state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
+            retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
+            duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null,
+            chainIdx: 0, chainBroken: false };
+      launchQuizScreen();
     }
 
     // Chrono mode
@@ -5047,6 +5086,7 @@
         const day = new Date().getDay();
         if ((day === 0 || day === 6) && q.cat === 'hist') xpGain *= 2;
         if (q.isEvent) xpGain *= 2;   // les questions d'événement saisonnier rapportent double
+        if (Q.mode === 'pieges') xpGain *= 2;   // 🎯 Questions Pièges : XP doublé
         // Talents Érudit : +15% XP par spécialité
         if (hasTalent('t_savant_geo') && q.cat === 'geo') xpGain = Math.round(xpGain * 1.15);
         if (hasTalent('t_savant_hist') && q.cat === 'hist') xpGain = Math.round(xpGain * 1.15);

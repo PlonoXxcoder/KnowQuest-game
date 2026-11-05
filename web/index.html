@@ -5955,8 +5955,8 @@
   </style>
   <!-- globe.gl est chargé à la demande (js/vendor/globe.gl.min.js) au premier
        accès au mode Carte — il ne doit plus bloquer le premier rendu. -->
-  <link rel="stylesheet" href="motion.css?v=d665e8a9">
-  <script src="js/motion.js?v=fd0de929"></script>
+  <link rel="stylesheet" href="motion.css?v=be22b610">
+  <script src="js/motion.js?v=b0f583b7"></script>
   <script src="js/boot.js?v=779b5a70"></script>
 </head>
 
@@ -6042,6 +6042,21 @@
           <div class="mode-card" style="border-color:var(--red)" onclick="startRevision()">
             <div style="font-size:40px;margin-bottom:10px">📚</div>
             <div style="font-weight:900;color:var(--red)">Révision</div>
+          </div>
+        </div>
+        <!-- QUESTIONS PIÈGES -->
+        <div class="daily-challenge-card" id="piegesCard" onclick="startMode('pieges')">
+          <div class="dc-left">
+            <div class="dc-badge" style="background:var(--red)">🎯 QUESTIONS PIÈGES</div>
+            <div class="dc-title">Là où tout le monde se trompe !</div>
+            <div class="dc-desc">Les questions les plus ratées par la communauté, en direct depuis la base.</div>
+            <div class="dc-rewards">
+              <span>⚡ XP ×2</span>
+              <span>🌍 Communauté</span>
+            </div>
+          </div>
+          <div class="dc-right">
+            <div class="dc-clock">🎯</div>
           </div>
         </div>
         <!-- DAILY CHALLENGE -->
@@ -6198,6 +6213,8 @@
           </div>
           <div id="profHonors" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:4px;justify-content:center">
           </div>
+          <div class="section-divider" style="margin-top:18px">🔐 Compte &amp; Synchronisation</div>
+          <div id="accountBox" style="padding:0 8px"></div>
           <div style="font-size:14px;color:var(--muted);font-weight:700;margin-top:4px">Niveau <span
               id="profLvl">1</span></div>
           <div style="display:flex;justify-content:center;gap:20px;margin-top:24px">
@@ -6317,6 +6334,25 @@
         <button class="ob-btn"
           style="background:var(--bg);color:var(--red);box-shadow:0 5px 0 var(--border);border:2px solid var(--border);margin-top:12px"
           onclick="resetData()">Effacer les données</button>
+      </div>
+    </div>
+
+    <!-- MODALE AUTHENTIFICATION -->
+    <div id="authModal"
+      style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:2600;align-items:center;justify-content:center"
+      onclick="if(event.target===this) closeAuthModal()">
+      <div
+        style="background:var(--card);border-radius:20px;padding:24px 20px;max-width:320px;width:88%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.4)">
+        <div id="amTitle" style="font-size:19px;font-weight:900;color:var(--text);margin-bottom:14px">🔐 Se connecter</div>
+        <input id="amUser" maxlength="20" placeholder="Pseudo (3-20 caractères)"
+          style="width:100%;box-sizing:border-box;padding:11px 12px;border-radius:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-weight:800;font-size:14px;margin-bottom:8px">
+        <input id="amPass" type="password" placeholder="Mot de passe (6 min.)"
+          style="width:100%;box-sizing:border-box;padding:11px 12px;border-radius:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-weight:800;font-size:14px;margin-bottom:8px">
+        <input id="amPass2" type="password" placeholder="Confirmer le mot de passe" style="display:none;width:100%;box-sizing:border-box;padding:11px 12px;border-radius:12px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-weight:800;font-size:14px;margin-bottom:8px">
+        <div id="amErr" style="color:var(--red);font-size:12px;font-weight:800;min-height:16px;margin-bottom:6px"></div>
+        <button class="btn-action" style="width:100%" id="amBtn" onclick="kqSubmitAuth()">Valider</button>
+        <button class="btn-action" style="width:100%;margin-top:8px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)"
+          onclick="closeAuthModal()">Annuler</button>
       </div>
     </div>
 
@@ -6930,9 +6966,9 @@
 
   </div><!-- .app -->
 
-  <script src="js/game.js?v=81928978"></script>
+  <script src="js/game.js?v=31a912cb"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
-  <script src="data_loader.js?v=e885604e"></script>
+  <script src="data_loader.js?v=5e4cfc3a"></script>
 
   <!-- DÉCLENCHEUR DE SÉCURITÉ : relance startApp uniquement si les données n'étaient pas encore prêtes -->
   <script src="js/data-ready.js?v=964c1c06"></script>

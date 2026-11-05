@@ -2123,6 +2123,150 @@
       "xp": 10,
       "explanation": "Le Panama est proche de l'équateur : pas de changement d'heure saisonnier.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Panama"
+    },
+    {
+      "id": "tf_geo_d001",
+      "cat": "geo",
+      "question": "La mer Morte est située entre Israël et la Jordanie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "À 430 m sous le niveau de la mer, le point émergé le plus bas de la planète.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mer_Morte"
+    },
+    {
+      "id": "tf_geo_d002",
+      "cat": "geo",
+      "question": "Le fleuve Mékong traverse 6 pays.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Chine, Myanmar, Thaïlande, Laos, Cambodge et Vietnam.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mékong"
+    },
+    {
+      "id": "tf_geo_d003",
+      "cat": "geo",
+      "question": "Le Grand Canyon est situé en Arizona.",
+      "r": true,
+      "xp": 10,
+      "explanation": "446 km de long, jusqu'à 1 800 m de profondeur.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Canyon"
+    },
+    {
+      "id": "tf_geo_d004",
+      "cat": "geo",
+      "question": "L'Ouganda est bordé par le lac Victoria.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Ouganda, le Kenya et la Tanzanie bordent le lac Victoria.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ouganda"
+    },
+    {
+      "id": "tf_geo_d005",
+      "cat": "geo",
+      "question": "L'Islande est volcaniquement inactive.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Islande compte ~130 volcans dont ~30 actifs (Eyjafjallajökull 2010).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Volcanisme_en_Islande"
+    },
+    {
+      "id": "tf_geo_d006",
+      "cat": "geo",
+      "question": "Le Rwanda est surnommé le Pays des mille collines.",
+      "r": true,
+      "xp": 10,
+      "explanation": "« Pays des mille collines » en kinyarwanda.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rwanda"
+    },
+    {
+      "id": "tf_geo_d007",
+      "cat": "geo",
+      "question": "Le plus grand désert d'Amérique du Nord est le désert de Sonora.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Grand Bassin aride (~400 000 km²) est plus grand que le Sonora (~260 000 km²).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grand_Bassin"
+    },
+    {
+      "id": "tf_geo_d008",
+      "cat": "geo",
+      "question": "La Corée du Nord a une frontière avec la Russie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Courte frontière (~19 km) entre la Corée du Nord et la Russie (Primorie).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Frontière_entre_la_Corée_du_Nord_et_la_Russie"
+    },
+    {
+      "id": "tf_geo_d009",
+      "cat": "geo",
+      "question": "Le mont Kilimandjaro a trois cônes volcaniques.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Kibo, Mawenzi et Shira — trois volcans fusionnés.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Kilimandjaro"
+    },
+    {
+      "id": "tf_geo_d010",
+      "cat": "geo",
+      "question": "Le lac Chad se partage entre 4 pays.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Tchad, Niger, Nigeria et Cameroun.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Tchad"
+    },
+    {
+      "id": "tf_geo_d011",
+      "cat": "geo",
+      "question": "La Turquie est plus peuplée que l'Allemagne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Turquie ~85 M ; Allemagne ~84 M. Très proches mais la Turquie dépasse.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Démographie_de_la_Turquie"
+    },
+    {
+      "id": "tf_geo_d012",
+      "cat": "geo",
+      "question": "Le canal de Suez permet le passage de la Méditerranée à la mer Rouge.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1869, 193 km, sans écluse (mer de même niveau).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Canal_de_Suez"
+    },
+    {
+      "id": "tf_geo_d013",
+      "cat": "geo",
+      "question": "Le Chili est le pays le plus long du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "4 300 km du nord au sud, 180 km en moyenne d'est en ouest.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chili"
+    },
+    {
+      "id": "tf_geo_d014",
+      "cat": "geo",
+      "question": "L'île de Pâques fait partie de la Polynésie française.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'île de Pâques appartient au CHILI, pas à la Polynésie française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Île_de_Pâques"
+    },
+    {
+      "id": "tf_geo_d015",
+      "cat": "geo",
+      "question": "Le Sénégal a une frontière avec la Guinée-Bissau.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Sénégal a 5 voisins : Mauritanie, Mali, Guinée, Guinée-Bissau et Gambie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sénégal"
+    },
+    {
+      "id": "tf_geo_d016",
+      "cat": "geo",
+      "question": "Le Mont K2 est situé au Pakistan.",
+      "r": true,
+      "xp": 10,
+      "explanation": "K2 (8 611 m) est sur la frontière Pakistan-Chine (Karakoram).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/K2"
     }
   ],
   "hist": [
@@ -4510,6 +4654,186 @@
       "xp": 10,
       "explanation": "La première chaîne TV régulière est la WGY de Schenectady (États-Unis, 1928) — ou la BBC (1936) pour la haute définition.",
       "wikipedia": "https://fr.wikipedia.org/wiki/Télévision"
+    },
+    {
+      "id": "tf_hist_d001",
+      "cat": "hist",
+      "question": "Le magnétoscope a été inventé par Sony.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le magnétoscope (VHS) a été lancé par JVC en 1976 ; Sony avait le Betamax.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Magnétoscope"
+    },
+    {
+      "id": "tf_hist_d002",
+      "cat": "hist",
+      "question": "La Révolution industrielle a vu naître le télégraphe.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Samuel Morse (1837) et le premier télégraphe électrique pendant la révolution industrielle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Télégraphe"
+    },
+    {
+      "id": "tf_hist_d003",
+      "cat": "hist",
+      "question": "L'Empire mongol a été le plus grand empire contigu de l'histoire.",
+      "r": true,
+      "xp": 10,
+      "explanation": "24 millions de km² au XIIIe siècle (de la Corée à la Pologne).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Empire_mongol"
+    },
+    {
+      "id": "tf_hist_d004",
+      "cat": "hist",
+      "question": "La première greffe de cœur a eu lieu en France.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La première greffe de cœur a été réalisée par Christiaan Barnard au Cap (Afrique du Sud, 1967).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Greffe_de_cœur"
+    },
+    {
+      "id": "tf_hist_d005",
+      "cat": "hist",
+      "question": "Le mont Saint-Michel a été une prison pendant la Révolution.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Utilisé comme prison pour opposants politiques de 1793 à 1863.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont-Saint-Michel"
+    },
+    {
+      "id": "tf_hist_d006",
+      "cat": "hist",
+      "question": "La tour Eiffel a servi de station météo.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Depuis 1889, la tour Eiffel héberge un observatoire météorologique au sommet.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_Eiffel"
+    },
+    {
+      "id": "tf_hist_d007",
+      "cat": "hist",
+      "question": "La première femme pilote d'avion était française.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Raymonde de Laroche, brevet de pilote n° 36 en 1910.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Raymonde_de_Laroche"
+    },
+    {
+      "id": "tf_hist_d008",
+      "cat": "hist",
+      "question": "Le premier tunnel ferroviaire alpin relie la France à l'Italie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le tunnel du Fréjus (1871), 13,7 km, relie Modane (France) à Bardonecchia (Italie).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tunnel_du_Fréjus"
+    },
+    {
+      "id": "tf_hist_d009",
+      "cat": "hist",
+      "question": "La tour de Londres a servi de zoo.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le premier zoo de Londres était dans la tour (1235-1832), avec des lions offerts par des rois.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_Londres"
+    },
+    {
+      "id": "tf_hist_d010",
+      "cat": "hist",
+      "question": "La première femme à avoir gagné un prix Nobel était Marie Curie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Prix Nobel de physique 1903 (partagé avec Pierre Curie et Henri Becquerel).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Marie_Curie"
+    },
+    {
+      "id": "tf_hist_d011",
+      "cat": "hist",
+      "question": "La première chaîne de télévision française est TF1.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Créée en 1935 (Radiodiffusion française télévision), devenue TF1 en 1975.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/TF1"
+    },
+    {
+      "id": "tf_hist_d012",
+      "cat": "hist",
+      "question": "Le premier président français élu au suffrage universel direct est Charles de Gaulle.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier président élu au suffrage universel direct est... non, le premier est Adolphe Thiers (1871, élu par l'Assemblée). Au suffrage direct : de Gaulle en 1965.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Élection_présidentielle_française"
+    },
+    {
+      "id": "tf_hist_d013",
+      "cat": "hist",
+      "question": "La première carte bancaire française s'appelait la carte bleue.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La carte bleue (1967) — première carte bancaire française, créée par 6 banques françaises.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Carte_bleue"
+    },
+    {
+      "id": "tf_hist_d014",
+      "cat": "hist",
+      "question": "La première machine à coudre a été inventée en France.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Barthélemy Thimonnier (1830) brevète la première machine à coudre fonctionnelle à Saint-Étienne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Machine_à_coudre"
+    },
+    {
+      "id": "tf_hist_d015",
+      "cat": "hist",
+      "question": "Le premier cinéma a ouvert à New York.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier cinéma (salle dédiée) ouvre à Paris : le Cinéma Eden (La Ciotat, 1895) ou le Grand Café (1895).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_du_cinéma"
+    },
+    {
+      "id": "tf_hist_d016",
+      "cat": "hist",
+      "question": "La première Coupe du monde de football a été diffusée à la radio.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La CDM 1930 en Uruguay a été couverte par la radio (pas de TV commerciale à l'époque).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Coupe_du_monde_de_football_1930"
+    },
+    {
+      "id": "tf_hist_d017",
+      "cat": "hist",
+      "question": "Le premier satellite français s'appelle Astérix.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Astérix (1965), lancé depuis Hammaguir (Algérie française).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Astérix_(satellite)"
+    },
+    {
+      "id": "tf_hist_d018",
+      "cat": "hist",
+      "question": "La première femme chef d'État au monde a été Sirimavo Bandaranaike (Sri Lanka).",
+      "r": true,
+      "xp": 10,
+      "explanation": "Première femme Premier ministre au monde (Sri Lanka, 1960).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sirimavo_Bandaranaike"
+    },
+    {
+      "id": "tf_hist_d019",
+      "cat": "hist",
+      "question": "Le premier puits de pétrole commercial a été foré en Arabie saoudite.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier puits de pétrole commercial est de Titusville, Pennsylvanie (1859, Edwin Drake).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Puits_de_pétrole"
+    },
+    {
+      "id": "tf_hist_d020",
+      "cat": "hist",
+      "question": "La première femme avocate en France est Jeanne Chauvin.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Jeanne Chauvin, première avocate française (1900), deuxième femme diplômée en droit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jeanne_Chauvin"
     }
   ],
   "sci": [

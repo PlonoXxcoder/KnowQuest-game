@@ -883,6 +883,7 @@
       <div class="v-status" id="gpVStatus">-</div>
       <div class="v-fact" id="gpVFact">-</div>
       <button class="btn-action active-next" style="width:100%;" onclick="nextGPQuestion()">Poursuivre la course →</button>
+      <button class="modal-btn-ghost" style="width:100%;margin-top:6px;padding:7px;font-size:13px" onclick="openReportModal()">⚠️ Signaler cette question</button>
     </div>
   `;
       checkDRS();
@@ -999,6 +1000,7 @@
       const q = Q.qs[Q.idx];
       const isCorrect = (Q.selectedIdx === q.correctAnswer);
       const isDRS = GP.drsActive;
+      Q._lastShown = q; Q._lastShownCorrect = isCorrect;
 
       // Comptabilise la réponse GP dans les stats globales et par catégorie
       recordCatStat(q.cat, isCorrect);
@@ -1098,6 +1100,7 @@
 
       const q = Q.qs[Q.idx];
       const player = GP.drivers.find(d => d.isPlayer);
+      Q._lastShown = q; Q._lastShownCorrect = false;
       player.targetProgress += 0.002 + tirePenalty(); // Presque aucun mouvement (pénalités pneus incluses)
       GP.tireWear = Math.min(100, GP.tireWear + TIRE_STATS[GP.selectedTire].wear);
 
@@ -2230,7 +2233,7 @@
     }
     // Version du schéma du profil : incrémenter à chaque changement de
     // structure de P et ajouter la migration correspondante dans migrateProfile().
-    const SCHEMA_VERSION = 3;
+    const SCHEMA_VERSION = 4;
 
     function migrateProfile(p) {
       const v = p._schema || 0;
@@ -2257,6 +2260,11 @@
         if (!p.legendBoss) p.legendBoss = { month: '', defeated: false };
         if (!p.ownedRoadThemes) p.ownedRoadThemes = [];
         if (!p.ownedOwlHats) p.ownedOwlHats = [];
+      }
+      if (v < 4) {
+        // Signalements de questions (bouton ⚠️ du bandeau) + webhook Discord
+        if (!p.reports) p.reports = [];
+        if (p.discordWebhook === undefined) p.discordWebhook = '';
       }
       p._schema = SCHEMA_VERSION;
       return p;
@@ -2331,6 +2339,136 @@
       return String(s == null ? '' : s)
         .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
         .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    // ================================================================
+    // SIGNALEMENT DE QUESTIONS — bouton ⚠️ du bandeau de réponse
+    // Copie locale toujours sauvegardée (P.reports, plafonné à 50) +
+    // envoi optionnel vers un webhook Discord (P.discordWebhook).
+    // ================================================================
+    const REPORT_REASONS = {
+      erreur:    { label: '❌ Erreur de réponse',   color: 0xE74C3C },
+      ambiguite: { label: '🔀 Ambiguïté',           color: 0xE67E22 },
+      faute:     { label: '✏️ Faute (orthographe)', color: 0xF1C40F },
+      doublon:   { label: '👯 Doublon',             color: 0x9B59B6 },
+    };
+
+    function openReportModal() {
+      const q = Q._lastShown;
+      if (!q) { showToast('⚠️ Aucune question à signaler'); return; }
+      const preview = document.getElementById('reportPreview');
+      let html = '<b>' + escapeHtml((q.question || '').substring(0, 220)) + '</b>';
+      if (q.choices) {
+        html += '<div style="margin-top:6px;font-size:12px;color:var(--muted)">' +
+          q.choices.map((c, i) => (i === q.correctAnswer ? '✔️ ' : '') + escapeHtml(c)).join('<br>') + '</div>';
+      }
+      preview.innerHTML = html;
+      document.getElementById('reportComment').value = '';
+      const send = document.getElementById('reportSendBtn');
+      send.disabled = false;
+      send.textContent = 'Envoyer le signalement';
+      send.dataset.reason = '';
+      document.querySelectorAll('#reportModal .report-reason').forEach(b => b.classList.remove('selected'));
+      document.getElementById('reportModal').classList.add('open');
+    }
+
+    function selectReportReason(reason) {
+      document.querySelectorAll('#reportModal .report-reason').forEach(b => b.classList.remove('selected'));
+      const btn = document.querySelector('#reportModal .report-reason[data-reason="' + reason + '"]');
+      if (btn) btn.classList.add('selected');
+      document.getElementById('reportSendBtn').dataset.reason = reason;
+    }
+
+    function closeReportModal() {
+      document.getElementById('reportModal').classList.remove('open');
+    }
+
+    function submitReport() {
+      const q = Q._lastShown;
+      if (!q) return;
+      const reason = document.getElementById('reportSendBtn').dataset.reason;
+      if (!reason) { showToast('Choisissez d\'abord une raison'); return; }
+      // Texte lisible de la bonne réponse selon le type de question (QCM / TF / Scramble)
+      const correctText = q.choices ? String(q.choices[q.correctAnswer])
+        : (q.r !== undefined ? (q.r ? 'Vrai' : 'Faux')
+          : (Array.isArray(q.correct) ? q.correct.join(' → ') : ''));
+      const report = {
+        id: q.id || ('gen_' + (Q.idx || 0)),
+        cat: q.cat || '',
+        question: String(q.question || '').substring(0, 1024),
+        raison: reason,
+        comment: (document.getElementById('reportComment').value || '').trim().substring(0, 1024),
+        mode: Q.mode || '',
+        correct: !!Q._lastShownCorrect,
+        correctAnswer: correctText,
+        date: new Date().toISOString(),
+        joueur: P.name || P.idUnique || ''
+      };
+      // Copie locale plafonnée : rien ne se perd, même sans réseau ni webhook
+      P.reports = (P.reports || []).filter(r => r.id !== report.id);
+      P.reports.push(report);
+      if (P.reports.length > 50) P.reports = P.reports.slice(-50);
+      save();
+      closeReportModal();
+      const btn = document.getElementById('btnReportQ');
+      if (btn) btn.disabled = true;
+      sendDiscordWebhook(report);
+    }
+
+    function sendDiscordWebhook(report) {
+      const url = P.discordWebhook;
+      const meta = REPORT_REASONS[report.raison] || { label: report.raison, color: 0xE74C3C };
+      const fields = [
+        { name: 'Raison', value: meta.label, inline: true },
+        { name: 'ID', value: '`' + (report.id || '?') + '`', inline: true },
+        { name: 'Cat. / Mode', value: (report.cat || '?') + ' / ' + (report.mode || '?'), inline: true },
+        { name: 'Question', value: report.question || '—' },
+        { name: 'Réponse correcte', value: report.correctAnswer || '—', inline: true },
+        { name: 'Réponse du joueur', value: report.correct ? '✅ Correcte' : '❌ Incorrecte', inline: true }
+      ];
+      if (report.comment) fields.push({ name: 'Commentaire', value: report.comment });
+      const payload = { embeds: [{ title: '🚩 Signalement de question', color: meta.color, fields: fields, timestamp: report.date }] };
+      if (!url) { showToast('💾 Signalement gardé localement — configurez Discord (⚙️)'); return; }
+      fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(r => showToast(r.ok ? '✅ Signalement envoyé sur Discord — merci !' : '⚠️ Discord a refusé — signalement gardé localement'))
+        .catch(() => showToast('📴 Hors-ligne : signalement gardé localement'));
+    }
+
+    function openWebhookModal() {
+      document.getElementById('webhookUrl').value = P.discordWebhook || '';
+      document.getElementById('reportModal').classList.remove('open');
+      document.getElementById('webhookModal').classList.add('open');
+    }
+
+    function saveWebhook() {
+      const v = (document.getElementById('webhookUrl').value || '').trim();
+      if (v && !/^https:\/\/(discord|discordapp)\.com\/api\/webhooks\//.test(v)) {
+        showToast('⚠️ URL invalide : doit commencer par https://discord.com/api/webhooks/');
+        return;
+      }
+      P.discordWebhook = v;
+      save();
+      document.getElementById('webhookModal').classList.remove('open');
+      showToast(v ? '✅ Webhook Discord enregistré' : 'Webhook effacé');
+    }
+
+    function testWebhook() {
+      const v = (document.getElementById('webhookUrl').value || '').trim();
+      if (!v) { showToast('Collez d\'abord l\'URL du webhook'); return; }
+      fetch(v, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: '✅ KnowQuest : webhook configuré !' }) })
+        .then(r => showToast(r.ok ? '✅ Message de test envoyé sur Discord' : '⚠️ Discord a refusé le test'))
+        .catch(() => showToast('📴 Réseau indisponible'));
+    }
+
+    function exportReports() {
+      try {
+        const blob = new Blob([JSON.stringify(P.reports || [], null, 2)], { type: 'application/json' });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'knowquest_signalements.json';
+        a.click();
+        setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      } catch (e) { showToast('Export impossible'); }
     }
 
     // ================================================================
@@ -3033,8 +3171,11 @@
     let _tl = { events: [], picked: [], done: false };
 
     function openTimeline() {
+      // Le pool étendu (chargé en arrière-plan par data_loader) prime s'il est disponible
+      const pool = (Array.isArray(window.TIMELINE_EVENTS) && window.TIMELINE_EVENTS.length > 100)
+        ? window.TIMELINE_EVENTS : TIMELINE_EVENTS;
       _tl = {
-        events: shuffle([...TIMELINE_EVENTS]).slice(0, 5).sort((a, b) => a.y - b.y),
+        events: shuffle([...pool]).slice(0, 5).sort((a, b) => a.y - b.y),
         picked: [], done: false,
       };
       renderTimeline();
@@ -3051,6 +3192,7 @@
         const d = document.createElement('div');
         d.className = 'tl-item';
         d.dataset.y = ev.y;
+        d.dataset.uid = _tl.events.indexOf(ev);
         d.innerHTML = `<div class="tl-num"></div><div class="tl-ico">${ev.ico}</div><div style="flex:1"><div>${escapeHtml(ev.t)}</div><div class="tl-year">${ev.y < 0 ? Math.abs(ev.y) + ' av. J.-C.' : ev.y}</div></div>`;
         d.onclick = () => pickTimeline(ev, d);
         list.appendChild(d);
@@ -3071,13 +3213,23 @@
 
     function validateTimeline() {
       _tl.done = true;
+      // Un item est correct si aucun événement cliqué avant lui n'est plus
+      // récent, et aucun événement cliqué après lui n'est plus ancien. Deux
+      // événements de même année (indiscernables) sont donc acceptés dans
+      // n'importe quel ordre de clic.
       let score = 0;
       document.querySelectorAll('#tlList .tl-item').forEach(item => {
-        const y = +item.dataset.y;
-        const pos = _tl.picked.findIndex(e => e.y === y);   // position choisie
-        const want = _tl.events.findIndex(e => e.y === y);  // position chronologique réelle
+        const uid = +item.dataset.uid;
+        const y = _tl.events[uid].y;
+        let ok = true;
+        for (let i = 0; i < _tl.picked.length; i++) {
+          const otherY = _tl.picked[i].y;
+          const otherPos = _tl.events.indexOf(_tl.picked[i]);
+          if (otherPos < uid && otherY > y) ok = false;
+          if (otherPos > uid && otherY < y) ok = false;
+        }
         item.classList.add('tl-revealed');
-        if (pos === want) { score++; item.classList.add('ok'); }
+        if (ok) { score++; item.classList.add('ok'); }
         else item.classList.add('ko');
       });
       const xp = score * 8;
@@ -5007,6 +5159,7 @@
       document.getElementById('btnCheck').style.display = 'none';
       const vb = document.getElementById('vBanner'); vb.className = 'vbanner show w';
       setBannerOpen(true);
+      Q._lastShown = q; Q._lastShownCorrect = false;
       document.getElementById('vStatus').textContent = '⏰ Temps écoulé !'; document.getElementById('vStatus').className = 'v-status w';
       document.getElementById('vFact').textContent = q.explanation || '';
       document.getElementById('xpBonus').textContent = '';
@@ -5208,6 +5361,7 @@
 
 
       document.getElementById('btnCheck').style.display = 'none';
+      Q._lastShown = q; Q._lastShownCorrect = isCorrect;
       const vb = document.getElementById('vBanner'); vb.className = 'vbanner show ' + (isCorrect ? 'c' : 'w');
       setBannerOpen(true);
       const vs = document.getElementById('vStatus'); vs.textContent = isCorrect ? '✔️ Correct !' : '❌ Incorrect'; vs.className = 'v-status ' + (isCorrect ? 'c' : 'w');
@@ -5217,6 +5371,8 @@
 
     function nextQuestion() {
       document.getElementById('btnCheck').style.display = '';
+      const reportBtn = document.getElementById('btnReportQ');
+      if (reportBtn) reportBtn.disabled = false;
       Q.idx++;
       renderQ();
     }
@@ -7173,6 +7329,7 @@
       const round = RALLYE.rounds[RALLYE.idx];
       const q = round.q;
       const correct = i === q.correctAnswer;
+      Q._lastShown = q; Q._lastShownCorrect = correct;
 
       // Stats cohérentes avec le reste du jeu
       recordCatStat(q.cat, correct);
@@ -7215,7 +7372,8 @@
       fb.className = 'map-feedback ' + (correct ? 'correct' : 'wrong');
       fb.innerHTML = `<div style="font-weight:900;margin-bottom:4px">${correct ? '✅ Pays conquis !' : '❌ Raté — pays perdu !'}</div>
       <div style="font-size:12px">${q.explanation || ''}</div>
-      <div style="margin-top:10px"><button class="btn-action active-next" style="width:100%;max-width:240px" onclick="rallyeNext()">Poursuivre le rallye →</button></div>`;
+      <div style="margin-top:10px"><button class="btn-action active-next" style="width:100%;max-width:240px" onclick="rallyeNext()">Poursuivre le rallye →</button></div>
+      <div style="margin-top:6px"><button class="modal-btn-ghost" style="width:100%;max-width:240px;padding:7px;font-size:13px" onclick="openReportModal()">⚠️ Signaler cette question</button></div>`;
       save();
     }
 

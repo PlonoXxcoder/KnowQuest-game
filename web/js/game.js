@@ -2216,6 +2216,7 @@
     // Ouvre/ferme l'espace réservé à la bannière de correction (mobile : évite
     // que les réponses du bas soient masquées) et défile vers la bonne réponse.
     function setBannerOpen(open) {
+      if (open) Motion.reading(false);
       const scr = document.getElementById('scrQuiz');
       if (scr) scr.classList.toggle('banner-open', open);
       if (open) {
@@ -2417,9 +2418,11 @@
       say(text, opts = {}) {
         if (!text) return;
         const inQuiz = this._inQuiz();
+        if (inQuiz && Q.state === 'selecting' && !opts.force) return;
+        if (inQuiz && opts.force) Motion.reading(false);
         if (!this.enabled(inQuiz)) return;
         if (!opts.force && this._queue.length >= 2) return; // anti-spam : file courte
-        this._queue.push({ text, mood: opts.mood || 'idle', dur: opts.dur || 3400 });
+        this._queue.push({ text, mood: opts.mood || 'idle', dur: opts.dur || (inQuiz ? 2800 : 2400) });
         if (this._queue.length > 3) this._queue.shift();
         this._drain();
       },
@@ -2809,7 +2812,11 @@
       else if (rw.type === 'pu') P.powerups[rw.value]++;
     }
 
+    let _chestFXSerial = 0;
     function showChestSequence(rewards, rarity, onDone) {
+      Motion.celebrate('chest-' + (++_chestFXSerial), () => _showChestSequence(rewards, rarity, onDone));
+    }
+    function _showChestSequence(rewards, rarity, onDone) {
       const ov = document.getElementById('chestOverlay');
       const emoji = document.getElementById('chestEmoji');
       const rEl = document.getElementById('chestRarity');
@@ -2860,12 +2867,19 @@
     // ================================================================
     // LEVEL UP plein écran
     // ================================================================
+    let _pendingLevelFX = 0;
     function playLevelUpFX() {
+      _pendingLevelFX++;
+      Motion.celebrate('level-up', _playLevelUpFX);
+    }
+    function _playLevelUpFX() {
+      const bonus = _pendingLevelFX * 25;
+      _pendingLevelFX = 0;
       audio.playFanfare();
       if (window.navigator.vibrate) window.navigator.vibrate([15, 30, 15, 30, 25]);
       spawnConfetti(26);
       document.getElementById('levelUpText').textContent = 'NIVEAU ' + P.level;
-      document.getElementById('levelUpSub').textContent = '+25 💎 · Continue comme ça !';
+      document.getElementById('levelUpSub').textContent = '+' + bonus + ' 💎 · Continue comme ça !';
       const ov = document.getElementById('levelUpOverlay');
       ov.classList.add('show');
       Companion.react('level_up', { level: P.level });
@@ -2889,8 +2903,10 @@
       if (ok) {
         const e = P.srs[q.id];
         if (!e) return; // seulement les questions déjà marquées
+        const oldBox = e.box || 1;
         e.box = Math.min(5, (e.box || 1) + 1);
         e.due = todayStr(SRS_INTERVALS[e.box - 1]);
+        if (oldBox < 3 && e.box >= 3) Motion.mastery(SRS_INTERVALS[e.box - 1]);
       } else {
         P.srs[q.id] = { box: 1, due: todayStr(1) }; // toute erreur devient une fiche à revoir
       }
@@ -3634,6 +3650,7 @@
 
     // ===== UI UPDATE =====
     function updateUI() {
+      Motion.sync();
       const at = document.getElementById('autoTtsToggle'); if (at) at.checked = !!P.autoTTS;
       document.getElementById('valStreak').textContent = P.streak;
       const xf = document.getElementById('valXpFill');
@@ -3791,6 +3808,9 @@
         { k: 'chateaux', label: '🏰 Châteaux', color: 'var(--litt)' },
         { k: 'litt', label: '📖 Littérature', color: 'var(--litt)' },
         { k: 'extended', label: '🌟 Extra', color: 'var(--gold-d)' },
+        { k: 'musique', label: '🎵 Musique', color: 'var(--cinema)' },
+        { k: 'jv', label: '🎮 Jeux vidéo', color: 'var(--sport)' },
+        { k: 'series', label: '📺 Séries', color: 'var(--orange)' },
         { k: 'seasonal', label: '🎪 Événement', color: 'var(--red)' },
       ];
       div.innerHTML = cats.map(c => `<span class="cat-chip" style="background:${c.color}20;color:${c.color};border:2px solid ${c.color}" onclick="startMode('cat_${c.k}')">${c.label}</span>`).join('');
@@ -3949,6 +3969,7 @@
 
     // ===== NAVIGATION =====
     function switchTab(t) {
+      Motion.reading(false);
       ['Home', 'Learn', 'Classement', 'Shop', 'Profile'].forEach(s => {
         const el = document.getElementById('scr' + s); if (el) el.classList.remove('active');
         const btn = document.getElementById('tab' + s); if (btn) btn.classList.remove('on');
@@ -3978,6 +3999,9 @@
       litt: { key: 'litt', label: 'Littérature', ico: '📖', c1: '#7986cb', c2: '#3949ab', accent: 'var(--litt)', accentD: '#3949ab', bg: 'var(--litt-bg)', particle: '🖋️' },
       extended: { key: 'extended', label: 'Extra', ico: '🌟', c1: '#ffd23d', c2: '#e5b400', accent: 'var(--orange)', accentD: 'var(--orange-d)', bg: 'var(--orange-bg)', particle: '⭐' },
       mixed: { key: 'mixed', label: 'Culture Générale', ico: '🧠', c1: '#9c7bfd', c2: '#5345c7', accent: 'var(--purple)', accentD: 'var(--purple-d)', bg: 'var(--purple-bg)', particle: '💡' },
+      musique: { key: 'musique', label: 'Musique', ico: '🎵', c1: '#f06292', c2: '#c2185b', accent: 'var(--cinema)', accentD: '#b3156a', bg: 'var(--cinema-bg)', particle: '🎶' },
+      jv: { key: 'jv', label: 'Jeux vidéo', ico: '🎮', c1: '#26c6da', c2: '#00838f', accent: 'var(--sport)', accentD: '#00a17a', bg: 'var(--sport-bg)', particle: '🕹️' },
+      series: { key: 'series', label: 'Séries', ico: '📺', c1: '#ffb74d', c2: '#ef6c00', accent: 'var(--orange)', accentD: 'var(--orange-d)', bg: 'var(--orange-bg)', particle: '🍿' },
     };
     // Minimalist single-color SVG line-art per world, echoing each chapter's identity
     // (nature for geography, ruins for history, molecules for science, etc.)
@@ -4518,7 +4542,7 @@
       // Précision globale quasi parfaite → le compteur passe en arc-en-ciel
       if (P.totalQ >= 100 && (P.totalCorrect / P.totalQ) >= 0.85) hdrCount.classList.add('rainbow-text');
       else hdrCount.classList.remove('rainbow-text');
-      const sections = { geo: '🗺️ Géographie', hist: '🏛️ Histoire', sci: '🧪 Sciences', art: '🎨 Arts', cinema: '🎬 Cinéma', sport: '⚽ Sport', gastro: '🍽️ Gastronomie', mytho: '⚡ Mythologie', chateaux: '🏰 Châteaux', litt: '📖 Littérature', extended: '🌟 Extra', mixed: '🧠 Culture Générale', divers: '🎲 Autres trésors' };
+      const sections = { geo: '🗺️ Géographie', hist: '🏛️ Histoire', sci: '🧪 Sciences', art: '🎨 Arts', cinema: '🎬 Cinéma', sport: '⚽ Sport', gastro: '🍽️ Gastronomie', mytho: '⚡ Mythologie', chateaux: '🏰 Châteaux', litt: '📖 Littérature', extended: '🌟 Extra', mixed: '🧠 Culture Générale', musique: '🎵 Musique', jv: '🎮 Jeux vidéo', series: '📺 Séries', divers: '🎲 Autres trésors' };
       Object.entries(window.ATLAS_CARDS).forEach(([cat, cards]) => {
         const filtered = cards.filter(card => {
           if (!query) return true;
@@ -4572,6 +4596,9 @@
 
     // ===== DISCOVERY =====
     function triggerDiscovery(cardId) {
+      Motion.celebrate('discovery-' + cardId, () => _triggerDiscovery(cardId));
+    }
+    function _triggerDiscovery(cardId) {
       ensureAtlasCatalog();
       const allCards = Object.values(window.ATLAS_CARDS).flat();
       const card = allCards.find(c => c.id === cardId);
@@ -4600,6 +4627,7 @@
     }
 
     function spawnConfetti(count = 40) {
+      if (!Motion.confettiAllowed()) return;
       const wrap = document.getElementById('confettiWrap');
       wrap.innerHTML = '';
       const colors = ['#FFD700', '#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#7c5cfc'];
@@ -4780,6 +4808,11 @@
     }
 
     function renderQ() {
+      Motion.reading(true);
+      document.querySelectorAll('#vBanner .motion-mastery').forEach(el => el.remove());
+      Companion._queue.length = 0;
+      clearTimeout(Companion._hideTimer);
+      Companion._busy = false;
       if (Q.qs.length === 0) { showResult(); return; }
       renderQuizHearts();
       if (Q.mode === 'infinite' && Q.idx >= Q.qs.length) {
@@ -5144,6 +5177,7 @@
     }
 
     function exitQuiz() {
+      Motion.reading(false);
       stopTimer();
       document.getElementById('scrQuiz').classList.remove('active');
       document.getElementById('topbar').style.display = 'flex';
@@ -5176,6 +5210,7 @@
     }
 
     function showResult() {
+      Motion.reading(false);
       stopTimer();
       document.getElementById('scrQuiz').classList.remove('active');
       document.getElementById('scrResult').style.display = 'flex';
@@ -5184,7 +5219,7 @@
         resStarsRowEl.classList.remove('show');
         [1, 2, 3].forEach(s => { const el = document.getElementById('resStar' + s); if (el) el.className = 'res-star'; });
       }
-      document.getElementById('resXP').textContent = Q.totalXP;
+      Motion.countTo(document.getElementById('resXP'), Q.totalXP);
       const totalAnswered = Math.min(Q.idx + 1, Q.qs.length);
       const acc = Q.qs.length > 0 ? Math.round((Q.correct / totalAnswered) * 100) : 0;
       document.getElementById('resAcc').textContent = acc + '%';

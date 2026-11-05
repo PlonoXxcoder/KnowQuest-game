@@ -5955,6 +5955,8 @@
   </style>
   <!-- globe.gl est chargé à la demande (js/vendor/globe.gl.min.js) au premier
        accès au mode Carte — il ne doit plus bloquer le premier rendu. -->
+  <link rel="stylesheet" href="motion.css?v=d665e8a9">
+  <script src="js/motion.js?v=fd0de929"></script>
   <script src="js/boot.js?v=779b5a70"></script>
 </head>
 
@@ -6264,6 +6266,18 @@
         <div class="section-divider">🏅 Titres débloqués</div>
         <div class="titles-grid" id="titlesGrid"></div>
         <div class="section-divider">⚙️ Paramètres</div>
+        <div class="settings-row motion-setting">
+          <label class="settings-label" for="motionPreference">✨ Animations</label>
+          <select id="motionPreference" data-motion-setting onchange="Motion.setPreference(this.value)">
+            <option value="system">Selon mon appareil</option>
+            <option value="full">Animations normales</option>
+            <option value="reduced">Animations réduites</option>
+          </select>
+        </div>
+        <div class="settings-row">
+          <div class="settings-label">🎬 Aperçu des animations</div>
+          <button type="button" class="nm-diff-btn" onclick="Motion.openPreview()">Voir et rejouer</button>
+        </div>
         <div class="settings-row">
           <div class="settings-label">🌙 Thème sombre</div>
           <label class="switch"><input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()"><span
@@ -6916,9 +6930,9 @@
 
   </div><!-- .app -->
 
-  <script src="js/game.js?v=5d85051d"></script>
+  <script src="js/game.js?v=81928978"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
-  <script src="data_loader.js?v=1c57f4be"></script>
+  <script src="data_loader.js?v=e885604e"></script>
 
   <!-- DÉCLENCHEUR DE SÉCURITÉ : relance startApp uniquement si les données n'étaient pas encore prêtes -->
   <script src="js/data-ready.js?v=964c1c06"></script>

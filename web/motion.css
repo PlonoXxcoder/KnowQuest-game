@@ -1,0 +1,45 @@
+/* Ajustements des effets existants et aperçus isolés de la progression. */
+.btn-action.active-check,.btn-action.active-next { animation-iteration-count: 2; }
+.shake { animation-duration: .26s; }
+.lb-card .lb-title { color: #fff3c4; }
+.lb-card .lb-sub { color: #e0d9ef; }
+.lb-card.defeated .lb-title { color: var(--text); }
+.motion-reading #mascotQuiz *, .motion-reading #mascotQuiz { animation-play-state: paused !important; }
+.motion-reading #companionBubble { opacity: 0 !important; }
+.motion-reading .confetti-wrap { display: none; }
+/* Les mouvements de la route et de ses icônes deviennent ponctuels. */
+.road-title-ico,.streak-cal-flame,.road-node.current,.road-node.current::before,.road-progress-fill::after,.road-path-progress { animation-iteration-count: 2; }
+.motion-mastery { display:flex; align-items:center; justify-content:center; gap:8px; padding:8px 10px; margin:4px 0 8px; border-radius:12px; background:#fff4cb; color:#624300; font-size:12px; font-weight:800; animation:motionBadge .4s ease-out both; }
+.motion-mastery-star { display:inline-block; color:#9a6200; font-size:24px; animation:motionStar .65s ease-out both; }
+@keyframes motionBadge { from { opacity:0; transform:translateY(7px); } to { opacity:1; transform:none; } }
+@keyframes motionStar { 0% { transform:scale(.5) rotate(-25deg); } 65% { transform:scale(1.25) rotate(8deg); } 100% { transform:scale(1) rotate(0); } }
+#motionPreview { width:min(650px,calc(100% - 24px)); max-height:calc(100dvh - 32px); box-sizing:border-box; border:2px solid var(--border); border-radius:24px; background:var(--bg); color:var(--text); padding:22px; overflow:auto; }
+#motionPreview::backdrop { background:rgba(16,15,35,.65); }
+.motion-preview-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.motion-preview-head h2 { font-size:21px; margin:0; }
+#motionPreview p { font-size:14px; line-height:1.5; }
+#motionPreview button,.motion-setting select,#motionPreview select { font:inherit; font-weight:800; border:2px solid var(--border); border-radius:12px; padding:10px 12px; background:var(--bg); color:var(--text); cursor:pointer; }
+.motion-preview-head button { min-width:44px; min-height:44px; }
+.motion-preview-setting { display:flex; flex-wrap:wrap; align-items:center; gap:12px; font-weight:800; }
+.motion-setting { gap:12px; flex-wrap:wrap; }
+.motion-preview-buttons { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px; margin:18px 0; }
+#motionPreview button { transition:transform .13s ease,background .15s; }
+#motionPreview button:active { transform:translateY(2px); }
+#motionPreview button:focus-visible,#motionPreview select:focus-visible { outline:3px solid var(--purple); outline-offset:3px; }
+.motion-preview-stage { min-height:190px; border:2px dashed var(--border); border-radius:18px; padding:20px; text-align:center; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; overflow:hidden; }
+.motion-preview-stage .ans-btn { width:100%; box-sizing:border-box; padding-right:45px; }
+.motion-demo-xp { font-size:40px; font-weight:900; color:var(--orange); font-variant-numeric:tabular-nums; }
+.motion-demo-atlas { display:grid; gap:12px; font-size:42px; padding:15px 25px; border-radius:18px; background:var(--blue-bg); animation:atlasUnlock .6s ease-out both; }
+.motion-demo-atlas strong { font-size:17px; color:var(--text); }
+.motion-demo-chest { font-size:70px; animation:chestShakeBig .5s ease-in-out 2; }
+.motion-demo-level { display:grid; gap:8px; font-size:58px; animation:levelUpIn .6s ease-out both; }
+.motion-demo-level strong { font-size:22px; }
+.motion-demo-road { width:80%; position:relative; height:70px; display:grid; place-items:center; }
+.motion-demo-road::before { content:''; height:8px; width:100%; background:var(--green); border-radius:8px; transform-origin:left; animation:motionRoad .6s ease-out both; }
+.motion-demo-node { position:absolute; display:grid; place-items:center; width:54px; height:54px; border-radius:50%; color:white; background:var(--green); font-size:26px; animation:nodeCompleteZoom .7s ease-out both; }
+@keyframes motionRoad { from { transform:scaleX(0); } to { transform:scaleX(1); } }
+#motionDemoMascot { min-height:110px; min-width:110px; display:grid; place-items:center; }
+#resXP { font-variant-numeric:tabular-nums; }
+html[data-motion="reduced"] *,html[data-motion="reduced"] *::before,html[data-motion="reduced"] *::after { animation-duration:.01ms !important; animation-delay:0s !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+html[data-motion="reduced"] .confetti-wrap { display:none !important; }
+@media(max-width:480px) { .motion-preview-buttons { grid-template-columns:repeat(2,minmax(0,1fr)); } #motionPreview { padding:16px; } .motion-setting select { max-width:100%; } }

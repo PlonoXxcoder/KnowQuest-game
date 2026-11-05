@@ -1493,6 +1493,636 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/New_York",
       "atlasId": "geo_monde",
       "difficulty": "hard"
+    },
+    {
+      "id": "tf_geo_b201",
+      "cat": "geo",
+      "question": "Le mont K2 est plus haut que le Kangchenjunga.",
+      "r": true,
+      "xp": 10,
+      "explanation": "K2 : 8 611 m, Kangchenjunga : 8 586 m — deuxième et troisième plus hauts sommets du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/K2"
+    },
+    {
+      "id": "tf_geo_b202",
+      "cat": "geo",
+      "question": "Le Niger traverse le Mali, le Niger et le Nigeria.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le fleuve Niger traverse ou borde 11 pays d'Afrique de l'Ouest.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Niger_(fleuve)"
+    },
+    {
+      "id": "tf_geo_b203",
+      "cat": "geo",
+      "question": "La Patagonie se trouve au nord de l'Argentine.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Patagonie est au SUD de l'Argentine et du Chili, entre le Colorado et le détroit de Magellan.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Patagonie"
+    },
+    {
+      "id": "tf_geo_b204",
+      "cat": "geo",
+      "question": "Le Japon a une frontière terrestre avec la Corée du Sud.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Japon est un archipel insulaire : aucune frontière terrestre avec aucun pays.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Japon"
+    },
+    {
+      "id": "tf_geo_b205",
+      "cat": "geo",
+      "question": "La mer d'Aral s'est presque entièrement asséchée.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Divisée par 4 depuis 1960 à cause du détournement des fleuves pour l'irrigation du coton.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mer_d'Aral"
+    },
+    {
+      "id": "tf_geo_b206",
+      "cat": "geo",
+      "question": "Le Kilimandjaro se trouve au Kenya.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Kilimandjaro (5 895 m) est en TANZANIE, près de la frontière kényane.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Kilimandjaro"
+    },
+    {
+      "id": "tf_geo_b207",
+      "cat": "geo",
+      "question": "Le Brésil est plus peuplé que la Russie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Brésil : ~215 M ; Russie : ~144 M.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_pays_par_population"
+    },
+    {
+      "id": "tf_geo_b208",
+      "cat": "geo",
+      "question": "L'Atlas est une chaîne de montagnes d'Afrique du Nord.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'Atlas traverse le Maroc, l'Algérie et la Tunisie sur 2 500 km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Atlas_(massif)"
+    },
+    {
+      "id": "tf_geo_b209",
+      "cat": "geo",
+      "question": "Le Danube se jette dans la mer Noire.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Danube se jette dans la mer Noire au Delta du Danube, en Roumanie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Danube"
+    },
+    {
+      "id": "tf_geo_b210",
+      "cat": "geo",
+      "question": "La Nouvelle-Zélande est plus proche de l'Australie que du Chili.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~2 000 km de l'Australie contre ~9 000 km du Chili.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nouvelle-Zélande"
+    },
+    {
+      "id": "tf_geo_b211",
+      "cat": "geo",
+      "question": "Le fleuve Amazone traverse 3 pays.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Amazone traverse ou borde 7 pays : Pérou, Colombie, Équateur, Venezuela, Brésil, Bolivie, Guyana.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Amazone"
+    },
+    {
+      "id": "tf_geo_b212",
+      "cat": "geo",
+      "question": "L'Everest est le seul sommet de plus de 8 000 m au monde.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Il y a 14 sommets de plus de 8 000 m, tous dans l'Himalaya et le Karakoram.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sommets_de_plus_de_huit_mille_mètres"
+    },
+    {
+      "id": "tf_geo_b213",
+      "cat": "geo",
+      "question": "Le canal de Panama relie l'Atlantique au Pacifique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Inauguré en 1914, 82 km de long, évite le contournement du cap Horn.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Canal_de_Panama"
+    },
+    {
+      "id": "tf_geo_b214",
+      "cat": "geo",
+      "question": "L'Équateur est le seul pays nommé d'une ligne géographique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "« Équateur » vient de equator (latin) : le pays est traversé par la ligne éponyme.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Équateur_(pays)"
+    },
+    {
+      "id": "tf_geo_b215",
+      "cat": "geo",
+      "question": "Le Sri Lanka est séparé de l'Inde par le canal de Panama.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le détroit de Palk et le golfe de Mannar séparent le Sri Lanka de l'Inde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Détroit_de_Palk"
+    },
+    {
+      "id": "tf_geo_b216",
+      "cat": "geo",
+      "question": "La Mongolie a une frontière avec la Russie et la Chine seulement.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Mongolie est enclavée entre ces deux géants, sans autre voisin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mongolie"
+    },
+    {
+      "id": "tf_geo_b217",
+      "cat": "geo",
+      "question": "Le mont Everest est plus haut que le mont McKinley (Denali).",
+      "r": true,
+      "xp": 10,
+      "explanation": "8 849 m contre 6 190 m pour le Denali (Amérique du Nord).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Denali"
+    },
+    {
+      "id": "tf_geo_b218",
+      "cat": "geo",
+      "question": "Le fleuve Colorado traverse le Grand Canyon.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Colorado a creusé le Grand Canyon sur 446 km pendant 6 millions d'années.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Colorado"
+    },
+    {
+      "id": "tf_geo_b219",
+      "cat": "geo",
+      "question": "L'Indonésie a une frontière terrestre avec la Papouasie-Nouvelle-Guinée.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La frontière indonésio-papouane divise l'île de Nouvelle-Guinée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Frontière_entre_l'Indonésie_et_la_Papouasie-Nouvelle-Guinée"
+    },
+    {
+      "id": "tf_geo_b220",
+      "cat": "geo",
+      "question": "Le lac Victoria est le plus grand lac d'Afrique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "68 800 km², partagé entre Ouganda, Kenya et Tanzanie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Victoria"
+    },
+    {
+      "id": "tf_geo_b221",
+      "cat": "geo",
+      "question": "La mer Noire est bordée par la Grèce.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Grèce borde la mer Égée et la mer Méditerranée, pas la mer Noire.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mer_Noire"
+    },
+    {
+      "id": "tf_geo_b222",
+      "cat": "geo",
+      "question": "Le Zambèze traverse le Zimbabwe.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Zambèze borde ou traverse 6 pays dont la Zambie, le Zimbabwe et le Mozambique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Zambèze"
+    },
+    {
+      "id": "tf_geo_b223",
+      "cat": "geo",
+      "question": "La Finlande partage une frontière avec la Norvège.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Finlande a 3 voisins : la Suède, la Norvège et la Russie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Finlande"
+    },
+    {
+      "id": "tf_geo_b224",
+      "cat": "geo",
+      "question": "Le Bosphore relie la mer Noire à la mer Égée directement.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Bosphore relie la mer Noire à la mer de Marmara, qui rejoint la mer Égée via les Dardanelles.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bosphore"
+    },
+    {
+      "id": "tf_geo_b225",
+      "cat": "geo",
+      "question": "Le Venezuela a la plus grande chute d'eau du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Salto Ángel (979 m) au Venezuela est la plus haute chute d'eau du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Salto_Ángel"
+    },
+    {
+      "id": "tf_geo_b226",
+      "cat": "geo",
+      "question": "Le Bhoutan est le seul pays au monde à mesurer le Bonheur National Brut.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le BNB remplace le PIB depuis 1972 au Bhoutan.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bonheur_national_brut"
+    },
+    {
+      "id": "tf_geo_b227",
+      "cat": "geo",
+      "question": "Le plus grand désert d'Asie est le désert de Gobi.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le désert d'Arabie (2,33 M km²) est plus grand que le Gobi (1,3 M km²).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Désert_d'Arabie"
+    },
+    {
+      "id": "tf_geo_b228",
+      "cat": "geo",
+      "question": "Le pays le plus jeune du monde est le Soudan du Sud (2011).",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Soudan du Sud est indépendant depuis le 9 juillet 2011.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Soudan_du_Sud"
+    },
+    {
+      "id": "tf_geo_b229",
+      "cat": "geo",
+      "question": "La mer Baltique est bordée par 9 pays.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Danemark, Allemagne, Pologne, Lituanie, Lettonie, Estonie, Russie, Finlande, Suède.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mer_Baltique"
+    },
+    {
+      "id": "tf_geo_b230",
+      "cat": "geo",
+      "question": "Le mont Fuji est un volcan actif.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Dernière éruption en 1707. Considéré actif avec risque de réveil.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mont_Fuji"
+    },
+    {
+      "id": "tf_geo_b231",
+      "cat": "geo",
+      "question": "Le fleuve Yangtsé est le plus long fleuve d'Asie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "6 300 km, le 3e plus long du monde après le Nil et l'Amazone.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Yangtsé"
+    },
+    {
+      "id": "tf_geo_b232",
+      "cat": "geo",
+      "question": "Le Pakistan a une frontière avec l'Iran.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Pakistan a 4 voisins : Inde, Afghanistan, Iran et Chine.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pakistan"
+    },
+    {
+      "id": "tf_geo_b233",
+      "cat": "geo",
+      "question": "L'Irlande fait partie du Royaume-Uni.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Irlande du Nord appartient au Royaume-Uni ; la République d'Irlande est indépendante depuis 1922.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Irlande_(pays)"
+    },
+    {
+      "id": "tf_geo_b234",
+      "cat": "geo",
+      "question": "Le détroit de Malacca relie l'océan Indien à la mer de Chine méridionale.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Détroit stratégique entre la Malaisie et l'Indonésie (Sumatra), 800 km de long.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Détroit_de_Malacca"
+    },
+    {
+      "id": "tf_geo_b235",
+      "cat": "geo",
+      "question": "L'Elbrouz est le plus haut sommet du Caucase.",
+      "r": true,
+      "xp": 10,
+      "explanation": "5 642 m, plus haut sommet d'Europe si on inclut le Caucase.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Elbrouz"
+    },
+    {
+      "id": "tf_geo_b236",
+      "cat": "geo",
+      "question": "Le parc national de Yellowstone est au Canada.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Yellowstone est aux ÉTATS-UNIS (Wyoming, Montana, Idaho), créé en 1872.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Parc_national_de_Yellowstone"
+    },
+    {
+      "id": "tf_geo_b237",
+      "cat": "geo",
+      "question": "Le pays le plus densément peuplé est Monaco.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~19 000 hab/km², loin devant Singapour (~8 000) et Malte.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Monaco"
+    },
+    {
+      "id": "tf_geo_b238",
+      "cat": "geo",
+      "question": "Le lac Baïkal contient environ 20 % de l'eau douce de surface de la planète.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1 642 m de profondeur, 23 000 km³ d'eau : la plus grande réserve d'eau douce liquide.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Baïkal"
+    },
+    {
+      "id": "tf_geo_b239",
+      "cat": "geo",
+      "question": "La Cordillère des Andes traverse 7 pays.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Venezuela, Colombie, Équateur, Pérou, Bolivie, Chili, Argentine — 7 000 km de long.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cordillère_des_Andes"
+    },
+    {
+      "id": "tf_geo_b240",
+      "cat": "geo",
+      "question": "Le Sahara est traversé par le tropique du Capricorne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Sahara est traversé par le TROPIQUE DU CANCER (au nord de l'équateur).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tropique_du_Cancer"
+    },
+    {
+      "id": "tf_geo_b241",
+      "cat": "geo",
+      "question": "La Réunion est plus proche de Madagascar que de Maurice.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~700 km de Madagascar contre ~200 km de Maurice... non, ~200 km de Maurice et ~700 km de Madagascar : Maurice est PLUS PROCHE.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Réunion"
+    },
+    {
+      "id": "tf_geo_b242",
+      "cat": "geo",
+      "question": "L'Éthiopie est le pays le plus peuplé d'Afrique.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Nigéria (~220 M) est le plus peuplé ; l'Éthiopie est deuxième (~120 M).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Démographie_du_Nigéria"
+    },
+    {
+      "id": "tf_geo_b243",
+      "cat": "geo",
+      "question": "Le Costa Rica n'a pas d'armée permanente.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Aboli en 1948, le Costa Rica est un pays neutre sans armée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Costa_Rica"
+    },
+    {
+      "id": "tf_geo_b244",
+      "cat": "geo",
+      "question": "L'Oural sépare l'Europe de l'Asie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les monts Oural, orientés nord-sud sur 2 500 km, marquent la frontière conventionnelle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Oural"
+    },
+    {
+      "id": "tf_geo_b245",
+      "cat": "geo",
+      "question": "Le plus grand lac d'Amérique du Sud est le lac Titicaca.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le lac Titicaca est le plus haut lac navigable ; le plus grand en surface est le lac de Maracaibo (Venezuela).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_de_Maracaibo"
+    },
+    {
+      "id": "tf_geo_b246",
+      "cat": "geo",
+      "question": "Le Panama a des frontières avec le Costa Rica et la Colombie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Deux voisins seulement : Costa Rica (nord) et Colombie (sud).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Panama"
+    },
+    {
+      "id": "tf_geo_b247",
+      "cat": "geo",
+      "question": "Le fleuve Saint-Laurent relie les Grands Lacs à l'océan Atlantique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1 197 km, du lac Ontario au golfe du Saint-Laurent.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fleuve_Saint-Laurent"
+    },
+    {
+      "id": "tf_geo_b248",
+      "cat": "geo",
+      "question": "L'Arctique est un continent comme l'Antarctique.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Arctique est un OCÉAN recouvert de banquise ; l'Antarctique est un continent couvert de glace.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Arctique"
+    },
+    {
+      "id": "tf_geo_b249",
+      "cat": "geo",
+      "question": "L'Oman possède une enclave entourée par les Émirats arabes unis.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Madha, enclave omanaise dans les Émirats, contient elle-même Nahwa, enclave émirienne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Madha"
+    },
+    {
+      "id": "tf_geo_b250",
+      "cat": "geo",
+      "question": "Le Détroit de Béring sépare la Russie de l'Alaska.",
+      "r": true,
+      "xp": 10,
+      "explanation": "82 km de large entre le cap Dejnev (Russie) et le cap Prince-de-Galles (Alaska).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Détroit_de_Béring"
+    },
+    {
+      "id": "tf_geo_c001",
+      "cat": "geo",
+      "question": "La tour Eiffel perd environ 15 cm de hauteur en été.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le fer se dilate avec la chaleur : la tour peut gagner ou perdre jusqu'à 15 cm selon la saison.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_Eiffel"
+    },
+    {
+      "id": "tf_geo_c002",
+      "cat": "geo",
+      "question": "Le Canada a plus d'îles que la Suède.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La Suède compte ~267 570 îles (record mondial) ; le Canada en a ~52 455.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_de_îles_par_pays"
+    },
+    {
+      "id": "tf_geo_c003",
+      "cat": "geo",
+      "question": "Le point le plus éloigné de tout océan est en Chine.",
+      "r": false,
+      "xp": 10,
+      "explanation": "C'est le désert de Gobi, à 2 648 km de la côte la plus proche.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pôle_d'inaccessibilité"
+    },
+    {
+      "id": "tf_geo_c004",
+      "cat": "geo",
+      "question": "Le Népal a une forme de feuille.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Népal a une forme de RECTANGLE allongé, pas de feuille. Le pays en forme de feuille est le... non, c'est une fausse croyance.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Népal"
+    },
+    {
+      "id": "tf_geo_c005",
+      "cat": "geo",
+      "question": "Le plus grand pays insulaire du monde est l'Indonésie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Australie (7,69 M km²) est techniquement la plus grande île-habitable ; l'Indonésie est le plus grand ARCHIPEL.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Indonésie"
+    },
+    {
+      "id": "tf_geo_c006",
+      "cat": "geo",
+      "question": "Le glacier Lambert en Antarctique est plus grand que la France.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le glacier Lambert (8 000 km², 100 km de large, 400 km de long) est le plus grand glacier du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Glacier_Lambert"
+    },
+    {
+      "id": "tf_geo_c007",
+      "cat": "geo",
+      "question": "Le plus grand désert de sel du monde est le Salar de Uyuni.",
+      "r": true,
+      "xp": 10,
+      "explanation": "10 582 km² en Bolivie, visible depuis l'espace, sert de calibrage aux satellites.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Salar_de_Uyuni"
+    },
+    {
+      "id": "tf_geo_c008",
+      "cat": "geo",
+      "question": "La Russie possède 11 % des terres émergées du monde.",
+      "r": true,
+      "xp": 10,
+      "explanation": "17,1 millions de km² sur ~149 millions de km² de terres émergées.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Russie"
+    },
+    {
+      "id": "tf_geo_c009",
+      "cat": "geo",
+      "question": "Le Pakistan a plus de 7 000 m de dénivelé entre son point culminant et le niveau de la mer.",
+      "r": true,
+      "xp": 10,
+      "explanation": "K2 : 8 611 m ; niveau de la mer (mer d'Oman) : 0 m.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/K2"
+    },
+    {
+      "id": "tf_geo_c010",
+      "cat": "geo",
+      "question": "La Norvège a plus de 45 000 km de côtes (îles comprises).",
+      "r": true,
+      "xp": 10,
+      "explanation": "Avec ses fjords et ses 240 000 îles, la Norvège a l'une des plus longues côtes au monde (~100 915 km avec les îles).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Norvège"
+    },
+    {
+      "id": "tf_geo_c011",
+      "cat": "geo",
+      "question": "Le lac Titicaca est plus grand que le lac Genève.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Titicaca : 8 372 km² ; Léman : 582 km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lac_Titicaca"
+    },
+    {
+      "id": "tf_geo_c012",
+      "cat": "geo",
+      "question": "Le désert du Kalahari s'étend sur 3 pays.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Botswana, Namibie et Afrique du Sud.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Kalahari"
+    },
+    {
+      "id": "tf_geo_c013",
+      "cat": "geo",
+      "question": "Le plus petit pays d'Asie est le Bangladesh.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le plus petit pays d'Asie est les MALDIVES (298 km²).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Maldives"
+    },
+    {
+      "id": "tf_geo_c014",
+      "cat": "geo",
+      "question": "L'Afrique du Sud a 3 capitales officielles.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Pretoria (exécutive), Le Cap (législative), Bloemfontein (judiciaire).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Afrique_du_Sud"
+    },
+    {
+      "id": "tf_geo_c015",
+      "cat": "geo",
+      "question": "Le plus grand pays sans littoral maritime est le Kazakhstan.",
+      "r": true,
+      "xp": 10,
+      "explanation": "2,72 millions de km², entièrement enclavé en Asie centrale.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Kazakhstan"
+    },
+    {
+      "id": "tf_geo_c016",
+      "cat": "geo",
+      "question": "Le Zimbabwe a plus de chutes d'eau que la Zambie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La ZAMBIE (côté nord du Zambèze) a plus de chutes nommées, notamment les Victoria.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Zambie"
+    },
+    {
+      "id": "tf_geo_c017",
+      "cat": "geo",
+      "question": "Le plus haut village habité en permanence est au Pérou.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Rinconada (5 100 m d'altitude), ville minière de la cordillère des Andes.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Rinconada"
+    },
+    {
+      "id": "tf_geo_c018",
+      "cat": "geo",
+      "question": "La Grèce compte plus de 6 000 îles.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~6 000 îles et îlots, dont ~227 habitées.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grèce"
+    },
+    {
+      "id": "tf_geo_c019",
+      "cat": "geo",
+      "question": "Le point culminant des Pays-Bas est sous le niveau de la mer.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Vaalserberg (322 m) est au-dessus du niveau de la mer. Le point le plus BAS (-6,7 m) est sous le niveau.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vaalserberg"
+    },
+    {
+      "id": "tf_geo_c020",
+      "cat": "geo",
+      "question": "Le Panama a des horaires d'été et d'hiver.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Panama est proche de l'équateur : pas de changement d'heure saisonnier.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Panama"
     }
   ],
   "hist": [
@@ -2980,6 +3610,906 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Caligula",
       "atlasId": "hist_fr",
       "difficulty": "medium"
+    },
+    {
+      "id": "tf_hist_b201",
+      "cat": "hist",
+      "question": "Napoléon III était le neveu de Napoléon Ier.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Louis-Napoléon Bonaparte, fils de Louis Bonaparte (frère de Napoléon Ier).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Napoléon_III"
+    },
+    {
+      "id": "tf_hist_b202",
+      "cat": "hist",
+      "question": "La Révolution française a aboli la monarchie en 1789.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La monarchie fut abolie le 21 septembre 1792, trois ans après le début de la Révolution.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution_française"
+    },
+    {
+      "id": "tf_hist_b203",
+      "cat": "hist",
+      "question": "Les Vikings ont fondé la Normandie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Rollon, chef viking, reçoit la Normandie en 911 par le traité de Saint-Clair-sur-Epte.",
+      "wikipedia": "https://fr.wikipedia.orgwiki/Duché_de_Normandie"
+    },
+    {
+      "id": "tf_hist_b204",
+      "cat": "hist",
+      "question": "La Seconde Guerre mondiale a commencé avec l'invasion de la Pologne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le 1er septembre 1939, l'Allemagne nazie envahit la Pologne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Seconde_Guerre_mondiale"
+    },
+    {
+      "id": "tf_hist_b205",
+      "cat": "hist",
+      "question": "La reine Victoria a régné pendant 63 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1837-1901 : 63 ans et 216 jours, record britannique jusqu'à Élisabeth II.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Victoria_(reine)"
+    },
+    {
+      "id": "tf_hist_b206",
+      "cat": "hist",
+      "question": "L'Empire byzantin est tombé aux mains des Arabes.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Empire byzantin est tombé aux mains des OTTOMANS en 1453.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chute_de_Constantinople"
+    },
+    {
+      "id": "tf_hist_b207",
+      "cat": "hist",
+      "question": "Le pape a déménagé à Avignon au XIVe siècle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1309-1377 : les papes résident à Avignon sous influence française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Papauté_d'Avignon"
+    },
+    {
+      "id": "tf_hist_b208",
+      "cat": "hist",
+      "question": "La Grande-Bretagne a été envahie par les Normands en 1066.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Guillaume le Conquérant bat Harold à Hastings le 14 octobre 1066.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Conquête_normande_de_l'Angleterre"
+    },
+    {
+      "id": "tf_hist_b209",
+      "cat": "hist",
+      "question": "Le premier empereur romain s'appelait Julius.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Jules César fut dictateur ; le premier EMPEREUR est Auguste (Octave).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Auguste"
+    },
+    {
+      "id": "tf_hist_b210",
+      "cat": "hist",
+      "question": "La Renaissance a commencé en Italie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Renaissance italienne commence au XIVe siècle avec Giotto et Pétrarque.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Renaissance"
+    },
+    {
+      "id": "tf_hist_b211",
+      "cat": "hist",
+      "question": "La Révolution industrielle a commencé au XIXe siècle.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Elle a commencé à la fin du XVIIIe siècle (~1760) en Grande-Bretagne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution_industrielle"
+    },
+    {
+      "id": "tf_hist_b212",
+      "cat": "hist",
+      "question": "Le mur de Berlin a été construit en 1961.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Nuit du 12 au 13 août 1961, par la RDA pour stopper l'exode vers l'Ouest.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mur_de_Berlin"
+    },
+    {
+      "id": "tf_hist_b213",
+      "cat": "hist",
+      "question": "Nelson Mandela a été président de l'Afrique du Sud pendant 20 ans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Mandela a été président de 1994 à 1999 (5 ans), après 27 ans de prison.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Nelson_Mandela"
+    },
+    {
+      "id": "tf_hist_b214",
+      "cat": "hist",
+      "question": "La tour de Londres a été construite par Guillaume le Conquérant.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La Tour blanche commencée en 1078, quelques années après la conquête de 1066.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_Londres"
+    },
+    {
+      "id": "tf_hist_b215",
+      "cat": "hist",
+      "question": "La peste noire a atteint l'Europe par la route de la soie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Arrivée à Messine (Sicile) en 1347 par les navires génois venant de Crimée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Peste_noire"
+    },
+    {
+      "id": "tf_hist_b216",
+      "cat": "hist",
+      "question": "Alexandre le Grand a conquis l'Égypte.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Alexandre conquiert l'Égypte en 332 av. J.-C., fonde Alexandrie en 331.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Alexandre_le_Grand"
+    },
+    {
+      "id": "tf_hist_b217",
+      "cat": "hist",
+      "question": "La France a été occupée par les Alliés pendant la Seconde Guerre mondiale.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La France a été OCCUPÉE PAR L'ALLEMAGHE NAZIE (1940-1944), puis libérée par les Alliés.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/France_pendant_la_Seconde_Guerre_mondiale"
+    },
+    {
+      "id": "tf_hist_b218",
+      "cat": "hist",
+      "question": "L'Espagne a été unifiée par Isabelle de Castille et Ferdinand d'Aragon.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Mariage en 1469, unification progressive, chute de Grenade en 1492.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rois_catholiques"
+    },
+    {
+      "id": "tf_hist_b219",
+      "cat": "hist",
+      "question": "La Révolution française a institué l'école obligatoire.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'école obligatoire date des lois Ferry (1881-1882), pas de la Révolution.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Lois_Ferry"
+    },
+    {
+      "id": "tf_hist_b220",
+      "cat": "hist",
+      "question": "La Chine a été le premier pays à utiliser le papier-monnaie.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Dynastie Song (Xe-XIIIe siècle) : les premiers billets (jiaozi) apparaissent en Chine.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Papier-monnaie"
+    },
+    {
+      "id": "tf_hist_b221",
+      "cat": "hist",
+      "question": "Le Vieux Mon désigne l'Amérique du Nord avant Christophe Colomb.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Vieux Monde = l'Europe/Afrique/Asie ; le Nouveau Monde = les Amériques.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vieux_Monde"
+    },
+    {
+      "id": "tf_hist_b222",
+      "cat": "hist",
+      "question": "L'Arménie a été le premier État à adopter le christianisme comme religion d'État.",
+      "r": true,
+      "xp": 10,
+      "explanation": "301 ap. J.-C. sous Tiridate III, avant l'Empire romain (380).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Arménie"
+    },
+    {
+      "id": "tf_hist_b223",
+      "cat": "hist",
+      "question": "La Révolution américaine a précédé la Révolution française.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1776 contre 1789 : 13 ans d'écart.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution_américaine"
+    },
+    {
+      "id": "tf_hist_b224",
+      "cat": "hist",
+      "question": "Le château de Chambord a été construit par Louis XIV.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Chambord fut construit par FRANÇOIS Ier (1519-1547).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Château_de_Chambord"
+    },
+    {
+      "id": "tf_hist_b225",
+      "cat": "hist",
+      "question": "L'Égypte a été conquise par les Ottomans en 1517.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Selim Ier bat les Mamelouks à la bataille de Ridanieh en 1517.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Egypte_ottomane"
+    },
+    {
+      "id": "tf_hist_b226",
+      "cat": "hist",
+      "question": "La ligue hanséatique était une alliance de villes marchandes.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Ligue de villes du nord de l'Europe (Lübeck, Hambourg...) pour le commerce baltique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ligue_hanséatique"
+    },
+    {
+      "id": "tf_hist_b227",
+      "cat": "hist",
+      "question": "Napoléon a vendu la Louisiane aux États-Unis en 1803.",
+      "r": true,
+      "xp": 10,
+      "explanation": "80 millions de francs (15 M $) pour 2,1 millions de km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vente_de_la_Louisiane"
+    },
+    {
+      "id": "tf_hist_b228",
+      "cat": "hist",
+      "question": "La Révolution industrielle a commencé en Allemagne.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Elle a commencé en GRANDE-BRETAGNE à la fin du XVIIIe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution_industrielle"
+    },
+    {
+      "id": "tf_hist_b229",
+      "cat": "hist",
+      "question": "La guerre froide a opposé l'URSS et les États-Unis.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1947-1991 : confrontation idéologique sans affrontement direct (par procuration).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_froide"
+    },
+    {
+      "id": "tf_hist_b230",
+      "cat": "hist",
+      "question": "Le pape Urbain II a lancé la première croisade en 1095.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Concile de Clermont, 27 novembre 1095 : « Deus lo volt ! »",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Première_croisade"
+    },
+    {
+      "id": "tf_hist_b231",
+      "cat": "hist",
+      "question": "L'Allemagne était unifiée avant 1870.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'Allemagne était fragmentée en royaumes et principautés jusqu'à l'unification de 1871.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Unification_allemande"
+    },
+    {
+      "id": "tf_hist_b232",
+      "cat": "hist",
+      "question": "La Révolution industrielle a introduit le chemin de fer.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Stephenson et la Rocket (1829), réseau ferroviaire rapide au XIXe siècle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_chemins_de_fer"
+    },
+    {
+      "id": "tf_hist_b233",
+      "cat": "hist",
+      "question": "La Ligue des Nations a précédé l'ONU.",
+      "r": true,
+      "xp": 10,
+      "explanation": "SDN créée en 1920, ONU en 1945 après la Seconde Guerre mondiale.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Société_des_Nations"
+    },
+    {
+      "id": "tf_hist_b234",
+      "cat": "hist",
+      "question": "L'Empire romain a duré plus de 1 000 ans (toutes périodes).",
+      "r": true,
+      "xp": 10,
+      "explanation": "De -27 à 1453 (Empire byzantin inclus) : près de 1 500 ans.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Empire_romain"
+    },
+    {
+      "id": "tf_hist_b235",
+      "cat": "hist",
+      "question": "Le Shogunat Tokugawa a dirigé le Japon jusqu'en 1868.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1603-1868, 265 ans d'isolement et de paix relative (ère Edo).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Shogunat_Tokugawa"
+    },
+    {
+      "id": "tf_hist_b236",
+      "cat": "hist",
+      "question": "La Révolution française a introduit le Code civil.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Code civil date de 1804, sous Napoléon Bonaparte (consulat/empire).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Code_civil_(France)"
+    },
+    {
+      "id": "tf_hist_b237",
+      "cat": "hist",
+      "question": "La Grande Muraille de Chine a été construite en une seule fois.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Construite par étapes sur 2 000 ans, de la dynastie Qin (221 av. J.-C.) aux Ming (XVIIe).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Grande_Muraille"
+    },
+    {
+      "id": "tf_hist_b238",
+      "cat": "hist",
+      "question": "L'attentat du 11 septembre 2001 a détruit le World Trade Center.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Deux avions détournés ont frappé les tours jumelles de New York.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Attentats_du_11_septembre_2001"
+    },
+    {
+      "id": "tf_hist_b239",
+      "cat": "hist",
+      "question": "L'Empire ottoman a duré plus de 600 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1299-1922 : 623 ans, de Osman Ier à Mustafa Kemal Atatürk.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Empire_ottoman"
+    },
+    {
+      "id": "tf_hist_b240",
+      "cat": "hist",
+      "question": "Le scandale du Watergate a mené à la démission de Kennedy.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Watergate a mené à la démission de Richard NIXON en 1974 (Kennedy assassiné en 1963).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Scandale_du_Watergate"
+    },
+    {
+      "id": "tf_hist_b241",
+      "cat": "hist",
+      "question": "La Renaissance a vu l'invention de l'imprimerie en Europe.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Gutenberg (~1450), en pleine Renaissance italienne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Renaissance"
+    },
+    {
+      "id": "tf_hist_b242",
+      "cat": "hist",
+      "question": "La Chine a découvert l'Amérique avant Christophe Colomb.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Théorie controversée (flotte de Zheng He) mais non prouvée archéologiquement.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Zheng_He"
+    },
+    {
+      "id": "tf_hist_b243",
+      "cat": "hist",
+      "question": "L'Empire austro-hongrois s'est dissous après la Première Guerre mondiale.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Dissous en 1918 : naissance de l'Autriche, la Hongrie, la Tchécoslovaquie, la Yougoslavie...",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Autriche-Hongrie"
+    },
+    {
+      "id": "tf_hist_b244",
+      "cat": "hist",
+      "question": "Le mmuraille d'Hadrien marque la frontière nord de l'Empire romain en Bretagne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "122 ap. J.-C., 117 km de long entre l'Angleterre et l'Écosse.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mur_d'Hadrien"
+    },
+    {
+      "id": "tf_hist_b245",
+      "cat": "hist",
+      "question": "La première bombe atomique a été larguée sur Nagasaki.",
+      "r": false,
+      "xp": 10,
+      "explanation": "HIROSHIMA le 6 août 1945 ; Nagasaki le 9 août 1945 (3 jours plus tard).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bombardements_atomiques_d'Hiroshima_et_de_Nagasaki"
+    },
+    {
+      "id": "tf_hist_b246",
+      "cat": "hist",
+      "question": "La Renaissance a vu naître le théâtre de Shakespeare.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Shakespeare (1564-1616), élisabéthain, période de la Renaissance anglaise tardive.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/William_Shakespeare"
+    },
+    {
+      "id": "tf_hist_b247",
+      "cat": "hist",
+      "question": "L'Inde a été colonisée par les Portugais avant les Britanniques.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Vasco de Gama (1498) précède la Compagnie anglaise des Indes (1600).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Inde_portugaise"
+    },
+    {
+      "id": "tf_hist_b248",
+      "cat": "hist",
+      "question": "La chute de Constantinople a eu lieu en 1453.",
+      "r": true,
+      "xp": 10,
+      "explanation": "29 mai 1453, Mehmed II prend Constantinople après 53 jours de siège.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chute_de_Constantinople"
+    },
+    {
+      "id": "tf_hist_b249",
+      "cat": "hist",
+      "question": "La traite atlantique a duré plus de 400 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "XVe-XIXe siècle : ~12 millions d'Africains déportés vers les Amériques.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Traite_transatlantique"
+    },
+    {
+      "id": "tf_hist_b250",
+      "cat": "hist",
+      "question": "L'Allemagne de l'Est a existé pendant 41 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1949-1990, RDA (République démocratique allemande).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/République_démocratique_allemande"
+    },
+    {
+      "id": "tf_hist_c001",
+      "cat": "hist",
+      "question": "Le premier empereur de Chine a fait brûler des livres.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Qin Shi Huang (-259 à -210) a ordonné la «燃烧 des livres et l'enterrement des savants » en -213.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Qin_Shi_Huang"
+    },
+    {
+      "id": "tf_hist_c002",
+      "cat": "hist",
+      "question": "La tour de Pise a penché dès le début de sa construction.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Elle penchait déjà du côté nord dès le 2e étage (1173), avant même la fin des fondations.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_de_Pise"
+    },
+    {
+      "id": "tf_hist_c003",
+      "cat": "hist",
+      "question": "Napoléon a vendu la Louisiane pour financer ses guerres.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La vente de 1803 (15 M $) a financé les campagnes napoléoniennes en Europe.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vente_de_la_Louisiane"
+    },
+    {
+      "id": "tf_hist_c004",
+      "cat": "hist",
+      "question": "Le premier hôtel de ville de Paris s'appelait la Maison aux Piliers.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Maison aux Piliers (1357), sur la place de Grève (devenue place de l'Hôtel-de-Ville).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Hôtel_de_ville_de_Paris"
+    },
+    {
+      "id": "tf_hist_c005",
+      "cat": "hist",
+      "question": "La Reine d'Angleterre Élisabeth Ière n'a jamais été mariée.",
+      "r": true,
+      "xp": 10,
+      "explanation": "« The Virgin Queen » — elle a refusé tous les prétendants pour préserver son indépendance politique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Élisabeth_Ière"
+    },
+    {
+      "id": "tf_hist_c006",
+      "cat": "hist",
+      "question": "Le Traité de Tordesillas a divisé le Nouveau Monde entre Espagne et Portugal.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1494 : une ligne à 370 lieues à l'ouest du Cap-Vert séparait les zones d'influence.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Traité_de_Tordesillas"
+    },
+    {
+      "id": "tf_hist_c007",
+      "cat": "hist",
+      "question": "La Révolution française a institué le calendrier républicain.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Calendrier républicain utilisé de 1793 à 1806 (an I à an XIV).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Calendrier_républicain"
+    },
+    {
+      "id": "tf_hist_c008",
+      "cat": "hist",
+      "question": "La guerre de Sécession américaine a duré 4 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1861-1865, plus de 620 000 morts (plus que toutes les autres guerres américaines combinées).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_de_Sécession"
+    },
+    {
+      "id": "tf_hist_c009",
+      "cat": "hist",
+      "question": "L'ancien Égyptien Ptolémée a créé une carte du monde en 150 ap. J.-C.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Sa Géographie (150 ap. J.-C.) a influencé la cartographie pendant 1 400 ans.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ptolémée"
+    },
+    {
+      "id": "tf_hist_c010",
+      "cat": "hist",
+      "question": "Le premier sultan ottoman s'appelait Osman.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Osman Ier (1258-1326), fondateur de la dynastie ottomane (Osmanlı = Ottoman).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Osman_Ier"
+    },
+    {
+      "id": "tf_hist_c011",
+      "cat": "hist",
+      "question": "La première femme présidente d'un pays était en Islande.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Vigdís Finnbogadóttir, élue en 1980, présidente de l'Islande 1980-1996.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vigdís_Finnbogadóttir"
+    },
+    {
+      "id": "tf_hist_c012",
+      "cat": "hist",
+      "question": "La Grande Armée de Napoléon comptait plus de 600 000 hommes en 1812.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Invasion de la Russie : ~685 000 hommes au départ, ~25 000 au retour.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Campagne_de_Russie"
+    },
+    {
+      "id": "tf_hist_c013",
+      "cat": "hist",
+      "question": "La Bastille avait 7 prisonniers le jour de sa prise.",
+      "r": true,
+      "xp": 10,
+      "explanation": "14 juillet 1789 : seulement 7 prisonniers (4 faussaires, 2 fous, 1 aristocrate).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Prise_de_la_Bastille"
+    },
+    {
+      "id": "tf_hist_c014",
+      "cat": "hist",
+      "question": "Le premier ordinateur Apple a été construit dans un garage.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Apple I (1976), garage de Steve Jobs à Los Altos, Californie.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Apple_I"
+    },
+    {
+      "id": "tf_hist_c015",
+      "cat": "hist",
+      "question": "La guillotine a été utilisée pour la dernière fois en 1977.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Hamida Djandoubi, exécuté le 10 septembre 1977 à Marseille, dernier guillotiné de France.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guillotine"
+    },
+    {
+      "id": "tf_hist_c016",
+      "cat": "hist",
+      "question": "Le premier radio-téléscope a été construit aux États-Unis.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Karl Jansky (Bell Labs, 1932) a découvert les ondes radio cosmiques aux USA, mais le premier radio-télescope dédié est de Grote Reber (1937, dans son jardin).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Radiotélescope"
+    },
+    {
+      "id": "tf_hist_c017",
+      "cat": "hist",
+      "question": "La première ligne de métro au monde relie Paddington à Farringdon.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Metropolitan Railway (1863), Londres, à vapeur, 6 km de long.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Metropolitan_Railway"
+    },
+    {
+      "id": "tf_hist_c018",
+      "cat": "hist",
+      "question": "Le premier prix Nobel de physique a été attribué à Marie Curie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier Nobel de physique (1901) est de WILHELM RÖNTGEN (rayons X). Marie Curie l'a reçu en 1903.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Wilhelm_Röntgen"
+    },
+    {
+      "id": "tf_hist_c019",
+      "cat": "hist",
+      "question": "La première grève documentée de l'histoire a eu lieu en Égypte antique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~1155 av. J.-C. : les ouvriers de Deir el-Médineh cessent le travail faute de rations de grain.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Deir_el-Médineh"
+    },
+    {
+      "id": "tf_hist_c020",
+      "cat": "hist",
+      "question": "Le mot « salaire » vient du sel que les soldats romains recevaient.",
+      "r": true,
+      "xp": 10,
+      "explanation": "« Salarium » (latin) : allocation de sel pour les soldats romains — d'où « salaire » et l'expression « ne pas valoir son sel ».",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Salaire"
+    },
+    {
+      "id": "tf_hist_c021",
+      "cat": "hist",
+      "question": "Le plus ancien restaurant encore en activité est à Paris.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Sobrino de Botín (Madrid, 1725) est le plus vieux restaurant du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sobrino_de_Botín"
+    },
+    {
+      "id": "tf_hist_c022",
+      "cat": "hist",
+      "question": "La reine Cléopâtre parlait 9 langues.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Cléopâtre VII (grecque de naissance) parlait égyptien, araméen, éthiopien, hébreu, arabe, syriaque, médique, perse et latin.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cléopâtre"
+    },
+    {
+      "id": "tf_hist_c023",
+      "cat": "hist",
+      "question": "Le premier tunnel sous-marin du monde relie la France à l'Angleterre.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le tunnel sous la Tamise (1843, Marc Brunel) est le premier tunnel sous-marin ; le tunnel sous la Manche date de 1994.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tunnel_de_la_Tamise"
+    },
+    {
+      "id": "tf_hist_c024",
+      "cat": "hist",
+      "question": "La première bourse du monde a été créée à Amsterdam.",
+      "r": true,
+      "xp": 10,
+      "explanation": "1602 : la Bourse d'Amsterdam (VOC) pour échanger les actions de la Compagnie des Indes orientales.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bourse_d'Amsterdam"
+    },
+    {
+      "id": "tf_hist_c025",
+      "cat": "hist",
+      "question": "La moitié de la population européenne est morte pendant la guerre de Trente Ans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La guerre de Trente Ans (1618-1648) a tué ~8 M (un tiers de la population allemande, pas de toute l'Europe).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Guerre_de_Trente_Ans"
+    },
+    {
+      "id": "tf_hist_c026",
+      "cat": "hist",
+      "question": "Le premier club de football au monde a été fondé à Sheffield.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Sheffield FC (1857), le plus vieux club de football encore en activité.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sheffield_Football_Club"
+    },
+    {
+      "id": "tf_hist_c027",
+      "cat": "hist",
+      "question": "L'Alphabet phonétique de l'OTAN utilise des prénoms.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'alphabet phonétique OTAN utilise des MOTS communs (Alpha, Bravo, Charlie, Delta...), pas des prénoms.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Alphabet_phonétique_de_l'OTAN"
+    },
+    {
+      "id": "tf_hist_c028",
+      "cat": "hist",
+      "question": "La première femme élue au Parlement britannique était Constance Markievicz.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Élue en 1918 (Sinn Féin), elle n'a jamais pris son siège par protestation.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Constance_Markievicz"
+    },
+    {
+      "id": "tf_hist_c029",
+      "cat": "hist",
+      "question": "Le plus ancien journal encore publié est le Post-och Inrikes Tidningar suédois.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Fondé en 1645, il est le plus ancien journal encore publié (Guinness des records).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Post-och_Inrikes_Tidningar"
+    },
+    {
+      "id": "tf_hist_c030",
+      "cat": "hist",
+      "question": "La Révolution française a inventé la carte d'identité.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La carte d'identité française moderne date de 1921 (sous la IIIe République).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Carte_nationale_d'identité_en_France"
+    },
+    {
+      "id": "tf_hist_c031",
+      "cat": "hist",
+      "question": "Le premier pont de pierre de Paris s'appelle le Pont Neuf.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Pont Neuf (1578-1607), malgré son nom, est le plus ancien pont de Paris encore debout.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pont_Neuf"
+    },
+    {
+      "id": "tf_hist_c032",
+      "cat": "hist",
+      "question": "Le 1er Avril vient d'un changement de calendrier en France.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'édit de Roussillon (1564) déplace le Nouvel An au 1er janvier ; ceux qui continuent au 1er avril sont moqués.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Poisson_d'avril"
+    },
+    {
+      "id": "tf_hist_c033",
+      "cat": "hist",
+      "question": "La première exécution par électrocution a eu lieu aux États-Unis.",
+      "r": true,
+      "xp": 10,
+      "explanation": "William Kemmler, 1890, prison d'Auburn, New York — la chaise électrique.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chaise_électrique"
+    },
+    {
+      "id": "tf_hist_c034",
+      "cat": "hist",
+      "question": "Le premier atlas du monde a été créé par Mercator.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Gerardus Mercator publie son atlas en 1595 (posthume), avec la projection qui porte son nom.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gerardus_Mercator"
+    },
+    {
+      "id": "tf_hist_c035",
+      "cat": "hist",
+      "question": "La première femme à avoir obtenu un doctorat en France est Marie Curie.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La première femme docteure en France est Sophie Germain (mathématicienne, 1816... non, elle n'a pas eu de doctorat officiel). Marie Curie a eu son doctorat en 1903.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Marie_Curie"
+    },
+    {
+      "id": "tf_hist_c036",
+      "cat": "hist",
+      "question": "Le premier aéroport du monde est College Park (États-Unis).",
+      "r": true,
+      "xp": 10,
+      "explanation": "College Park Airport (Maryland, 1909), le plus ancien aéroport en activité continue.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/College_Park_Airport"
+    },
+    {
+      "id": "tf_hist_c037",
+      "cat": "hist",
+      "question": "La première banque centrale au monde est la Banque de Suède.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Sveriges Riksbank (1668), la plus ancienne banque centrale au monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sveriges_Riksbank"
+    },
+    {
+      "id": "tf_hist_c038",
+      "cat": "hist",
+      "question": "Le premier numéro de téléphone attribué à un particulier est le « 1 ».",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les premiers numéros de téléphone étaient des noms et adresses, pas des chiffres.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Téléphone"
+    },
+    {
+      "id": "tf_hist_c039",
+      "cat": "hist",
+      "question": "Le premier快餐 restaurant (fast food) est White Castle.",
+      "r": true,
+      "xp": 10,
+      "explanation": "White Castle (Wichita, 1921) : le premier fast-food de hamburgers en chaîne.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/White_Castle"
+    },
+    {
+      "id": "tf_hist_c040",
+      "cat": "hist",
+      "question": "La première caisse enregistreuse a été inventée pour éviter le vol des employés.",
+      "r": true,
+      "xp": 10,
+      "explanation": "James Ritty (1879) a inventé la « Incorruptible Cashier » après avoir soupçonné ses barmaids de voler.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Caisse_enregistreuse"
+    },
+    {
+      "id": "tf_hist_c041",
+      "cat": "hist",
+      "question": "Le premier code-barres a été scanné sur un paquet de chewing-gum.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Wrigley's Juicy Fruit, 26 juin 1974, supermarché Marsh de Troy (Ohio).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Code-barres"
+    },
+    {
+      "id": "tf_hist_c042",
+      "cat": "hist",
+      "question": "La première carte de crédit a été créée par un restaurant.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Diners Club (1950) : Frank McNamara oublie son portefeuille dans un restaurant de New York.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Diners_Club"
+    },
+    {
+      "id": "tf_hist_c043",
+      "cat": "hist",
+      "question": "Le premier supermarché au monde s'appelait Piggly Wiggly.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Piggly Wiggly (Memphis, 1916) : premier magasin en libre-service avec caddies.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Piggly_Wiggly"
+    },
+    {
+      "id": "tf_hist_c044",
+      "cat": "hist",
+      "question": "Le premier ascenseur a été installé dans un hôtel.",
+      "r": true,
+      "xp": 10,
+      "explanation": "L'hôtel Haughton (New York, 1857) : premier ascenseur à vapeur d'Elisha Otis.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ascenseur"
+    },
+    {
+      "id": "tf_hist_c045",
+      "cat": "hist",
+      "question": "Le premier parking couvert du monde était à Détroit.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier parking couvert était le « Motor Parking Garage » de... en fait, il y a débat. Le garage de Détroit (1906) est un des premiers.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Parking"
+    },
+    {
+      "id": "tf_hist_c046",
+      "cat": "hist",
+      "question": "Le premier feu tricolore a explosé.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Londres, 1868 : le feu au gaz a explosé, blessant le policier qui le manipulait.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Feux_tricolores"
+    },
+    {
+      "id": "tf_hist_c047",
+      "cat": "hist",
+      "question": "La première montre-bracelet a été offerte à une reine.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Abraham-Louis Breguet crée une montre-bracelet pour la reine Caroline Murat de Naples (1810).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Montre_bracelet"
+    },
+    {
+      "id": "tf_hist_c048",
+      "cat": "hist",
+      "question": "Le premier ticket de loterie national date de la Chine antique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "La dynastie Han (~205 av. J.-C.) : le keno, ancêtre de la loterie, finançait la Grande Muraille.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Loterie"
+    },
+    {
+      "id": "tf_hist_c049",
+      "cat": "hist",
+      "question": "Le premier chewing-gum commercial était à base de pin.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le « State of Maine Pure Spruce Gum » (1848) était fabriqué à partir de résine d'épinette.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chewing-gum"
+    },
+    {
+      "id": "tf_hist_c050",
+      "cat": "hist",
+      "question": "La première chaîne de télévision du monde est la BBC.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La première chaîne TV régulière est la WGY de Schenectady (États-Unis, 1928) — ou la BBC (1936) pour la haute définition.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Télévision"
     }
   ],
   "sci": [
@@ -4487,6 +6017,276 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Claudia_de_Rham",
       "atlasId": "sci_univers",
       "difficulty": "medium"
+    },
+    {
+      "id": "tf_sci_b201",
+      "cat": "sci",
+      "question": "La lumière du Soleil met 8 minutes à atteindre la Terre.",
+      "r": true,
+      "xp": 10,
+      "explanation": "149,6 millions de km à 300 000 km/s = 8 min 20 s.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Soleil"
+    },
+    {
+      "id": "tf_sci_b202",
+      "cat": "sci",
+      "question": "Les atomes sont visibles à l'œil nu.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Un atome mesure ~0,1 nanomètre : 10 millionième de mm. Il faut un microscope à effet tunnel.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Atome"
+    },
+    {
+      "id": "tf_sci_b203",
+      "cat": "sci",
+      "question": "Le son ne se propage pas dans le vide.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le son a besoin d'un medium (air, eau, métal) pour se propager.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Son_(physique)"
+    },
+    {
+      "id": "tf_sci_b204",
+      "cat": "sci",
+      "question": "Les pieuvres peuvent changer de couleur.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les chromatophores permettent de changer de couleur et de texture en moins d'une seconde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Pieuvre"
+    },
+    {
+      "id": "tf_sci_b205",
+      "cat": "sci",
+      "question": "Le fer est l'élément le plus abondant de la croûte terrestre.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'oxygène (46 %) et le silicium (28 %) dominent la croûte terrestre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Croûte_terrestre"
+    },
+    {
+      "id": "tf_sci_b206",
+      "cat": "sci",
+      "question": "La foudre peut atteindre 30 000 °C.",
+      "r": true,
+      "xp": 10,
+      "explanation": "5 fois la température de la surface du Soleil.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Foudre"
+    },
+    {
+      "id": "tf_sci_b207",
+      "cat": "sci",
+      "question": "Les humains ont le même nombre de neurones que les chimpanzés.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Humain : ~86 milliards de neurones ; chimpanzé : ~6,2 milliards.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Neurone"
+    },
+    {
+      "id": "tf_sci_b208",
+      "cat": "sci",
+      "question": "Le carbone 14 permet de dater des objets de plus de 100 000 ans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le C14 est fiable jusqu'à ~50 000 ans ; au-delà, la radioactivité résiduelle est trop faible.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Datation_au_carbone_14"
+    },
+    {
+      "id": "tf_sci_b209",
+      "cat": "sci",
+      "question": "L'Antarctique est le continent le plus froid, le plus sec et le plus venteux.",
+      "r": true,
+      "xp": 10,
+      "explanation": "-89,2 °C record, <50 mm de précipitation/an, vents jusqu'à 300 km/h.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Antarctique"
+    },
+    {
+      "id": "tf_sci_b210",
+      "cat": "sci",
+      "question": "Le premier vaccin était contre la rage.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le premier vaccin était contre la VARIOLE (Jenner, 1796) ; Pasteur a créé le vaccin antirabique en 1885.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vaccination"
+    },
+    {
+      "id": "tf_sci_b211",
+      "cat": "sci",
+      "question": "La Terre est le seul corps du système solaire avec de l'eau liquide en surface.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Titan a du méthane liquide ; Mars avait de l'eau il y a des milliards d'années.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Eau_sur_Terre"
+    },
+    {
+      "id": "tf_sci_b212",
+      "cat": "sci",
+      "question": "Les hormones sont transportées par le système nerveux.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les hormones sont transportées par le SYSTÈME SANGUIN (endocrine).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Hormone"
+    },
+    {
+      "id": "tf_sci_b213",
+      "cat": "sci",
+      "question": "Le corail est un animal, pas une plante.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le corail est un cnidaire (animal) vivant en symbiose avec des algues (zooxanthelles).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Corail"
+    },
+    {
+      "id": "tf_sci_b214",
+      "cat": "sci",
+      "question": "Le satellite naturel le plus gros du système solaire est Ganymède.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Ganymède (Jupiter) : 5 268 km de diamètre, plus grand que Mercure.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ganymède_(lune)"
+    },
+    {
+      "id": "tf_sci_b215",
+      "cat": "sci",
+      "question": "Le plomb est plus dense que l'or.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Or : 19,3 g/cm³ ; plomb : 11,3 g/cm³. L'or est plus dense.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Densité"
+    },
+    {
+      "id": "tf_sci_b216",
+      "cat": "sci",
+      "question": "La respiration cellulaire produit du dioxyde de carbone.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Glucose + O2 → CO2 + H2O + énergie (ATP).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Respiration_cellulaire"
+    },
+    {
+      "id": "tf_sci_b217",
+      "cat": "sci",
+      "question": "Les étoiles filantes sont des étoiles qui tombent.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les étoiles filantes sont des MÉTÉORITES (poussières de comètes) qui brûlent dans l'atmosphère.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Étoile_filante"
+    },
+    {
+      "id": "tf_sci_b218",
+      "cat": "sci",
+      "question": "Le soleil est une étoile de taille moyenne.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Naine jaune de type G2V, parmi des milliards de stars similaires dans la Voie lactée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Soleil"
+    },
+    {
+      "id": "tf_sci_b219",
+      "cat": "sci",
+      "question": "Les virus sont considérés comme vivants.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Les virus ne peuvent pas se reproduire seuls : ils ont besoin d'une cellule hôte. Statut débattu.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Virus_(biologie)"
+    },
+    {
+      "id": "tf_sci_b220",
+      "cat": "sci",
+      "question": "L'ADN humain a une longueur totale de 2 mètres par cellule.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Déroulé, l'ADN d'une cellule mesure ~2 m. Multiplié par 37 000 milliards de cellules...",
+      "wikipedia": "https://fr.wikipedia.org/wiki/ADN"
+    },
+    {
+      "id": "tf_sci_b221",
+      "cat": "sci",
+      "question": "L'eau de mer gèle à 0 °C.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'eau de mer gèle vers -1,9 °C à cause du sel (abaissement du point de congélation).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Point_de_congélation"
+    },
+    {
+      "id": "tf_sci_b222",
+      "cat": "sci",
+      "question": "La théorie de l'évolution a été publiée avant la découverte de l'ADN.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Darwin 1859, Watson et Crick 1953 : 94 ans d'écart.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Théorie_de_l'évolution"
+    },
+    {
+      "id": "tf_sci_b223",
+      "cat": "sci",
+      "question": "Le gaz le plus abondant de l'atmosphère est l'oxygène.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'AZOTE (78 %) domine l'atmosphère ; l'oxygène n'est qu'à 21 %.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Atmosphère_terrestre"
+    },
+    {
+      "id": "tf_sci_b224",
+      "cat": "sci",
+      "question": "Le miellat produit par les pucerons est récolté par les fourmis.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Les fourmis « traitent » les pucerons comme des vaches pour récolter leur miellat sucré.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Puceron"
+    },
+    {
+      "id": "tf_sci_b225",
+      "cat": "sci",
+      "question": "Le son se déplace plus vite dans l'acier que dans l'air.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~5 960 m/s dans l'acier contre 340 m/s dans l'air.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vitesse_du_son"
+    },
+    {
+      "id": "tf_sci_b226",
+      "cat": "sci",
+      "question": "L'or est un métal ferromagnétique.",
+      "r": false,
+      "xp": 10,
+      "explanation": "L'or n'est PAS attiré par les aimants. Seuls fer, nickel et cobalt sont ferromagnétiques.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ferromagnétisme"
+    },
+    {
+      "id": "tf_sci_b227",
+      "cat": "sci",
+      "question": "Les sismographes peuvent détecter les explosions nucléaires souterraines.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Le Traités d'interdiction complète des essais nucléaires repose sur le réseau sismique mondial.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sismographe"
+    },
+    {
+      "id": "tf_sci_b228",
+      "cat": "sci",
+      "question": "La Terre tourne sur elle-même en 24 heures exactement.",
+      "r": false,
+      "xp": 10,
+      "explanation": "23 h 56 min 4 s (jour sidéral) ; le jour solaire de 24 h inclut le déplacement orbital.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rotation_de_la_Terre"
+    },
+    {
+      "id": "tf_sci_b229",
+      "cat": "sci",
+      "question": "L'échelle de Richter est logarithmique.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Chaque degré = ×10 en amplitude et ×32 en énergie libérée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Échelle_de_Richter"
+    },
+    {
+      "id": "tf_sci_b230",
+      "cat": "sci",
+      "question": "Les baleines bleues ont un cœur de la taille d'une voiture.",
+      "r": true,
+      "xp": 10,
+      "explanation": "~600 kg, de la taille d'une Mini Cooper. Bat 2 fois par minute en plongée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Rorqual_bleu"
     }
   ],
   "art": [
@@ -14799,6 +16599,132 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Les_Baisers_de_secours",
       "atlasId": "ext_philo",
       "difficulty": "hard"
+    },
+    {
+      "id": "tf_ext_b201",
+      "cat": "extended",
+      "question": "La tour Eiffel a été peinte 18 fois depuis sa construction.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Repeinte tous les 7 ans, ~60 tonnes de peinture par cycle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Tour_Eiffel"
+    },
+    {
+      "id": "tf_ext_b203",
+      "cat": "extended",
+      "question": "Le mot « robot » vient du tchèque.",
+      "r": true,
+      "xp": 10,
+      "explanation": "« Robota » = travail forcé, inventé par Karel Čapek dans R.U.R. (1920).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Robot"
+    },
+    {
+      "id": "tf_ext_b204",
+      "cat": "extended",
+      "question": "La banane est botaniquement un fruit sec.",
+      "r": false,
+      "xp": 10,
+      "explanation": "La banane est une BAIE botaniquement parlant.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Banane"
+    },
+    {
+      "id": "tf_ext_b205",
+      "cat": "extended",
+      "question": "Le plus grand musée du monde est le Louvre.",
+      "r": true,
+      "xp": 10,
+      "explanation": "73 000 m² d'exposition, le plus grand musée du monde par surface d'exposition.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Musée_du_Louvre"
+    },
+    {
+      "id": "tf_ext_b207",
+      "cat": "extended",
+      "question": "Le kodak a été inventé par George Eastman.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Eastman (1854-1932) a fondé Kodak en 1888 et lancé le « vous appuyez sur le bouton, on fait le reste ».",
+      "wikipedia": "https://fr.wikipedia.org/wiki/George_Eastman"
+    },
+    {
+      "id": "tf_ext_b208",
+      "cat": "extended",
+      "question": "La Suisse compte plus de banques que de dentistes.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Plus de DENTISTES (~5 000) que de banques (~250) en Suisse.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Banque_en_Suisse"
+    },
+    {
+      "id": "tf_ext_b209",
+      "cat": "extended",
+      "question": "Le point d'exclamation s'appelait « signe d'admiration » historiquement.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Terme utilisé jusqu'au XXe siècle en typographie française.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Point_d'exclamation"
+    },
+    {
+      "id": "tf_ext_b212",
+      "cat": "extended",
+      "question": "Le nom « dollar » vient du mot néerlandais « daalder ».",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le dollar vient du THALER (Joachimsthaler, Bohême, 1519), pas du néerlandais.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dollar_États-Unis"
+    },
+    {
+      "id": "tf_ext_b214",
+      "cat": "extended",
+      "question": "Le terme « Wi-Fi » signifie « Wireless Fidelity ».",
+      "r": false,
+      "xp": 10,
+      "explanation": "Nom marketing inventé par l'agence Interbrand, sans signification réelle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Wi-Fi"
+    },
+    {
+      "id": "tf_ext_b215",
+      "cat": "extended",
+      "question": "Le Vatican a son propre train.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Gare du Vatican, ligne unique vers Rome, inaugurée en 1934.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chemin_de_fer_du_Vatican"
+    },
+    {
+      "id": "tf_ext_b216",
+      "cat": "extended",
+      "question": "Les escargots peuvent dormir jusqu'à 3 ans.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Estivation (sécheresse) : certains escargots survivent 3 ans sans se réveiller.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Escargot"
+    },
+    {
+      "id": "tf_ext_b217",
+      "cat": "extended",
+      "question": "Le mot « dollar » vient du thaler autrichien.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Joachimsthaler, pièce d'argent frappée à Joachimsthal (Bohême, 1519).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Dollar_États-Unis"
+    },
+    {
+      "id": "tf_ext_b219",
+      "cat": "extended",
+      "question": "Le dernier empereur chinois a été jardinier.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Puyi, dernier empereur (abdiqué 1912), est devenu jardinier botanique sous le régime communiste.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Puyi"
+    },
+    {
+      "id": "tf_ext_b220",
+      "cat": "extended",
+      "question": "Le plus grand aquarium du monde est aux États-Unis.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Chimelong Ocean Kingdom (Chine, 48,75 M litres) est le plus grand.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Chimelong_Ocean_Kingdom"
     }
   ],
   "litt": [
@@ -16106,6 +18032,186 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Fictions",
       "atlasId": "litt_borges",
       "difficulty": "hard"
+    },
+    {
+      "id": "tf_litt_b201",
+      "cat": "litt",
+      "question": "Le roman Madame Bovary a été publié en 1857.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Publié en 1856 en revue, en 1857 en volume, avec procès pour outrage aux mœurs.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Madame_Bovary"
+    },
+    {
+      "id": "tf_litt_b202",
+      "cat": "litt",
+      "question": "Les Contes de Canterbury ont été écrits en français.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Geoffrey Chaucer a écrit en moyen anglais, pas en français.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Les_Contes_de_Canterbury"
+    },
+    {
+      "id": "tf_litt_b203",
+      "cat": "litt",
+      "question": "L'écrivain Gabriel García Márquez est colombien.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Né à Aracataca, Colombie, en 1927. Prix Nobel 1982.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Gabriel_García_Márquez"
+    },
+    {
+      "id": "tf_litt_b204",
+      "cat": "litt",
+      "question": "Le roman Bel-Ami a été écrit par Émile Zola.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Bel-Ami (1885) est de GUY DE MAUPASSANT, pas de Zola.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Bel-Ami"
+    },
+    {
+      "id": "tf_litt_b205",
+      "cat": "litt",
+      "question": "La Divine Comédie est composée de 100 chants.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Introduction (1) + Enfer (34) + Purgatoire (33) + Paradis (33) = 100 chants.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/La_Divine_Comédie"
+    },
+    {
+      "id": "tf_litt_b206",
+      "cat": "litt",
+      "question": "L'écrivain Agatha Christie a créé le détective Hercule Poirot.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Poirot apparaît dans 33 romans et 51 nouvelles de 1920 à 1975.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Hercule_Poirot"
+    },
+    {
+      "id": "tf_litt_b207",
+      "cat": "litt",
+      "question": "Le Comte de Monte-Cristo raconte l'histoire d'un homme injustement emprisonné.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Edmond Dantès, emprisonné au château d'If, s'évade et se venge sous le nom de comte.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Comte_de_Monte-Cristo"
+    },
+    {
+      "id": "tf_litt_b208",
+      "cat": "litt",
+      "question": "L'auteur de Le Petit Prince est mort pendant la Seconde Guerre mondiale.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Saint-Exupéry disparaît en vol le 31 juillet 1944 au-dessus de la Méditerranée.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Antoine_de_Saint-Exupéry"
+    },
+    {
+      "id": "tf_litt_b209",
+      "cat": "litt",
+      "question": "Le roman Le Joueur de Dostoïevski a été écrit en 26 jours.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Dostoïevski, acculé par ses dettes, écrit Le Joueur en 26 jours (octobre 1866).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Joueur_(Dostoïevski)"
+    },
+    {
+      "id": "tf_litt_b210",
+      "cat": "litt",
+      "question": "La première femme à avoir reçu le prix Nobel de littérature est Selma Lagerlöf.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Selma Lagerlöf (Suède), prix Nobel 1909.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Selma_Lagerlöf"
+    },
+    {
+      "id": "tf_litt_b211",
+      "cat": "litt",
+      "question": "Le livre Le Meilleur des mondes a été écrit par George Orwell.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Le Meilleur des mondes est d'ALDOUS HUXLEY (1932) ; 1984 est d'Orwell.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Meilleur_des_mondes"
+    },
+    {
+      "id": "tf_litt_b212",
+      "cat": "litt",
+      "question": "L'écrivain Molière s'appelait Jean-Baptiste Poquelin.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Molière est le pseudonyme de Jean-Baptiste Poquelin (1622-1673).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Molière"
+    },
+    {
+      "id": "tf_litt_b213",
+      "cat": "litt",
+      "question": "Le livre Cent ans de solitude a été écrit en français.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Cien años de soledad (1967) a été écrit en ESPAGNOL par García Márquez.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cent_ans_de_solitude"
+    },
+    {
+      "id": "tf_litt_b214",
+      "cat": "litt",
+      "question": "L'écrivain Jorge Luis Borges était argentin.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Né à Buenos Aires en 1899, mort à Genève en 1986.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Jorge_Luis_Borges"
+    },
+    {
+      "id": "tf_litt_b215",
+      "cat": "litt",
+      "question": "Le personnage de Sherlock Holmes est apparu dans 4 romans.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Sherlock Holmes apparaît dans 4 romans ET 56 nouvelles de Conan Doyle.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Sherlock_Holmes"
+    },
+    {
+      "id": "tf_litt_b216",
+      "cat": "litt",
+      "question": "Le roman Les Misérables a été publié en 1862.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Publié chez Pagnerre (Bruxelles) et Lacroix (Paris) en 1862.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Les_Misérables"
+    },
+    {
+      "id": "tf_litt_b217",
+      "cat": "litt",
+      "question": "L'écrivain Mary Shelley a créé le personnage de Dracula.",
+      "r": false,
+      "xp": 10,
+      "explanation": "Mary Shelley a créé FRANKENSTEIN ; Dracula est de Bram Stoker (1897).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mary_Shelley"
+    },
+    {
+      "id": "tf_litt_b218",
+      "cat": "litt",
+      "question": "Le livre Le Vieil Homme et la Mer a gagné le prix Pulitzer.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Prix Pulitzer de la fiction 1953 pour Hemingway.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Le_Vieil_Homme_et_la_Mer"
+    },
+    {
+      "id": "tf_litt_b219",
+      "cat": "litt",
+      "question": "L'écrivain Mark Twain s'appelait Samuel Clemens.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Samuel Langhorne Clemens (1835-1910), pseudonyme « Mark Twain » = sonner les deux (jauge de profondeur).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Mark_Twain"
+    },
+    {
+      "id": "tf_litt_b220",
+      "cat": "litt",
+      "question": "Le roman L'Amant de Marguerite Duras a remporté le prix Goncourt.",
+      "r": true,
+      "xp": 10,
+      "explanation": "Prix Goncourt 1984, adapté au cinéma par Jean-Jacques Annaud (1992).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/L'Amant"
     }
   ],
   "mixed": [

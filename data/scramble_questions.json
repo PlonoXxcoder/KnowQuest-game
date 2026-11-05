@@ -3263,6 +3263,177 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Svécofennides",
       "atlasId": "geo_monde",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_geo_b001",
+      "cat": "geo",
+      "question": "Classe ces villes d'Afrique du nord de l'ouest vers l'est :",
+      "pool": [
+        "Casablanca",
+        "Alger",
+        "Tunis",
+        "Le Caire"
+      ],
+      "correct": [
+        "Casablanca",
+        "Alger",
+        "Tunis",
+        "Le Caire"
+      ],
+      "explanation": "Longitude croissante : Casablanca (-7°), Alger (3°), Tunis (10°), Le Caire (31°).",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Afrique_du_Nord"
+    },
+    {
+      "id": "sc_geo_b002",
+      "cat": "gastro",
+      "question": "Classe ces fromages par affinage croissant (doux à fort) :",
+      "pool": [
+        "Mozzarella",
+        "Emmental",
+        "Comté",
+        "Roquefort"
+      ],
+      "correct": [
+        "Mozzarella",
+        "Emmental",
+        "Comté",
+        "Roquefort"
+      ],
+      "explanation": "Mozzarella fraîche, emmental 3 mois, comté 12 mois, roquefort 3 mois de pénicillium.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fromage"
+    },
+    {
+      "id": "sc_geo_b004",
+      "cat": "geo",
+      "question": "Classe ces pays du plus grand PIB au plus petit :",
+      "pool": [
+        "États-Unis",
+        "Japon",
+        "Brésil",
+        "Pérou"
+      ],
+      "correct": [
+        "États-Unis",
+        "Japon",
+        "Brésil",
+        "Pérou"
+      ],
+      "explanation": "~27 000 Md$, ~4 200 Md$, ~2 100 Md$, ~270 Md$.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Liste_des_pays_par_PIB"
+    },
+    {
+      "id": "sc_geo_b005",
+      "cat": "geo",
+      "question": "Classe ces chaînes de montagnes du plus long au plus court :",
+      "pool": [
+        "Cordillère des Andes",
+        "Himalaya",
+        "Alpes",
+        "Pyrénées"
+      ],
+      "correct": [
+        "Cordillère des Andes",
+        "Himalaya",
+        "Alpes",
+        "Pyrénées"
+      ],
+      "explanation": "7 000 km, 2 400 km, 1 200 km, 430 km.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Montagne"
+    },
+    {
+      "id": "sc_geo_b006",
+      "cat": "geo",
+      "question": "Classe ces pays du plus grand taux de natalité au plus petit :",
+      "pool": [
+        "Niger",
+        "Inde",
+        "Brésil",
+        "Japon"
+      ],
+      "correct": [
+        "Niger",
+        "Inde",
+        "Brésil",
+        "Japon"
+      ],
+      "explanation": "Niger ~47 naissances/1000, Inde ~17, Brésil ~12, Japon ~6.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Taux_de_natalité"
+    },
+    {
+      "id": "sc_geo_b007",
+      "cat": "geo",
+      "question": "Classe ces cascades du plus large au moins large :",
+      "pool": [
+        "Victoria (1 708 m)",
+        "Niagara (Horseshoe, 792 m)",
+        "Iguaçu (2 700 m total)",
+        "Gavarnie (0 m)"
+      ],
+      "correct": [
+        "Iguaçu (2 700 m total)",
+        "Victoria (1 708 m)",
+        "Niagara (Horseshoe, 792 m)",
+        "Gavarnie (0 m)"
+      ],
+      "explanation": "Iguaçu est le plus large en cumul, Niagara le plus puissant en débit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Cascade"
+    },
+    {
+      "id": "sc_geo_b008",
+      "cat": "geo",
+      "question": "Classe ces péninsules de la plus grande à la plus petite :",
+      "pool": [
+        "Arabique",
+        "Inde",
+        "Ibérique",
+        "Bretagne (France)"
+      ],
+      "correct": [
+        "Arabique",
+        "Inde",
+        "Ibérique",
+        "Bretagne (France)"
+      ],
+      "explanation": "3,2 M km², 1,4 M, 58 000, 27 000 km².",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Péninsule"
+    },
+    {
+      "id": "sc_geo_b009",
+      "cat": "geo",
+      "question": "Classe ces fuseaux horaires du plus grand décalage UTC au plus petit :",
+      "pool": [
+        "UTC+14 (Kiritimati)",
+        "UTC+1 (Paris)",
+        "UTC-5 (New York)",
+        "UTC-11 (Samoa américaines)"
+      ],
+      "correct": [
+        "UTC+14 (Kiritimati)",
+        "UTC+1 (Paris)",
+        "UTC-5 (New York)",
+        "UTC-11 (Samoa américaines)"
+      ],
+      "explanation": "De +14 à -11, l'écart total entre les deux extrêmes est de 25 heures.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fuseau_horaire"
+    },
+    {
+      "id": "sc_geo_b010",
+      "cat": "geo",
+      "question": "Classe ces pays par altitude moyenne décroissante :",
+      "pool": [
+        "Népal",
+        "Suisse",
+        "France",
+        "Pays-Bas"
+      ],
+      "correct": [
+        "Népal",
+        "Suisse",
+        "France",
+        "Pays-Bas"
+      ],
+      "explanation": "Népal ~3 200 m, Suisse ~1 300 m, France ~340 m, Pays-Bas ~30 m.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Altitude"
     }
   ],
   "sci": [
@@ -6478,6 +6649,196 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Susanna_S._Epp",
       "atlasId": "sci_univers",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_sci_b001",
+      "cat": "sci",
+      "question": "Classe ces grandeurs physiques de la plus petite à la plus grande :",
+      "pool": [
+        "Nanomètre (nm)",
+        "Micromètre (µm)",
+        "Millimètre (mm)",
+        "Mètre (m)"
+      ],
+      "correct": [
+        "Nanomètre (nm)",
+        "Micromètre (µm)",
+        "Millimètre (mm)",
+        "Mètre (m)"
+      ],
+      "explanation": "10⁻⁹, 10⁻⁶, 10⁻³, 10⁰ mètre.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Ordre_de_grandeur"
+    },
+    {
+      "id": "sc_sci_b002",
+      "cat": "sci",
+      "question": "Classe ces animaux selon leur espérance de vie :",
+      "pool": [
+        "Tortue géante",
+        "Éléphant",
+        "Chien",
+        "Souris"
+      ],
+      "correct": [
+        "Tortue géante",
+        "Éléphant",
+        "Chien",
+        "Souris"
+      ],
+      "explanation": "150+ ans, 70 ans, 13 ans, 2 ans.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Espérance_de_vie"
+    },
+    {
+      "id": "sc_sci_b003",
+      "cat": "sci",
+      "question": "Classe ces gaz atmosphériques du plus abondant au moins abondant :",
+      "pool": [
+        "Azote (N₂)",
+        "Oxygène (O₂)",
+        "Argon (Ar)",
+        "CO₂"
+      ],
+      "correct": [
+        "Azote (N₂)",
+        "Oxygène (O₂)",
+        "Argon (Ar)",
+        "CO₂"
+      ],
+      "explanation": "78 %, 21 %, 0,93 %, 0,04 %.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Atmosphère_terrestre"
+    },
+    {
+      "id": "sc_sci_b004",
+      "cat": "sci",
+      "question": "Classe ces étapes de la vie d'une étoile :",
+      "pool": [
+        "Nébuleuse",
+        "Étoile de la séquence principale",
+        "Géante rouge",
+        "Naine blanche"
+      ],
+      "correct": [
+        "Nébuleuse",
+        "Étoile de la séquence principale",
+        "Géante rouge",
+        "Naine blanche"
+      ],
+      "explanation": "Cycle de vie d'une étoile comme le Soleil.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Évolution_stellaire"
+    },
+    {
+      "id": "sc_sci_b005",
+      "cat": "sci",
+      "question": "Classe ces os du plus long au plus court (corps humain) :",
+      "pool": [
+        "Fémur",
+        "Tibia",
+        "Radius",
+        "Étrier (oreille)"
+      ],
+      "correct": [
+        "Fémur",
+        "Tibia",
+        "Radius",
+        "Étrier (oreille)"
+      ],
+      "explanation": "Le fémur (~48 cm) est le plus long ; l'étrier (~3 mm) le plus petit.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Squelette_humain"
+    },
+    {
+      "id": "sc_sci_b006",
+      "cat": "sci",
+      "question": "Classe ces unités de données informatiques du plus petit au plus grand :",
+      "pool": [
+        "Octet",
+        "Kilooctet",
+        "Mégaoctet",
+        "Gigaoctet"
+      ],
+      "correct": [
+        "Octet",
+        "Kilooctet",
+        "Mégaoctet",
+        "Gigaoctet"
+      ],
+      "explanation": "1 Go = 1 024 Mo = 1 048 576 Ko = 1 073 741 824 octets.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Octet"
+    },
+    {
+      "id": "sc_sci_b007",
+      "cat": "sci",
+      "question": "Classe ces couleurs du spectre visible par longueur d'onde décroissante :",
+      "pool": [
+        "Rouge",
+        "Jaune",
+        "Vert",
+        "Violet"
+      ],
+      "correct": [
+        "Rouge",
+        "Jaune",
+        "Vert",
+        "Violet"
+      ],
+      "explanation": "Rouge ~700 nm, jaune ~570 nm, vert ~530 nm, violet ~400 nm.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Spectre_visible"
+    },
+    {
+      "id": "sc_sci_b008",
+      "cat": "sci",
+      "question": "Classe ces vitesses du plus lent au plus rapide :",
+      "pool": [
+        "Marche à pied",
+        "Vélo",
+        "Voiture en ville",
+        "Avion de ligne"
+      ],
+      "correct": [
+        "Marche à pied",
+        "Vélo",
+        "Voiture en ville",
+        "Avion de ligne"
+      ],
+      "explanation": "~5 km/h, ~20 km/h, ~50 km/h, ~900 km/h.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Vitesse"
+    },
+    {
+      "id": "sc_sci_b009",
+      "cat": "sci",
+      "question": "Classe ces fréquences d'ondes du plus grave au plus aigu :",
+      "pool": [
+        "Infrasons",
+        "Sons audibles",
+        "Ultrasons",
+        "Ondes radio"
+      ],
+      "correct": [
+        "Infrasons",
+        "Sons audibles",
+        "Ultrasons",
+        "Ondes radio"
+      ],
+      "explanation": "<20 Hz (infrasons), 20-20 000 Hz (audible), >20 000 Hz (ultrasons). Les ondes radio sont EM, pas sonores.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Fréquence"
+    },
+    {
+      "id": "sc_sci_b010",
+      "cat": "sci",
+      "question": "Classe ces étapes de la respiration dans l'ordre :",
+      "pool": [
+        "Inhalation",
+        "Échange alvéolaire",
+        "Transport sanguin",
+        "Utilisation cellulaire"
+      ],
+      "correct": [
+        "Inhalation",
+        "Échange alvéolaire",
+        "Transport sanguin",
+        "Utilisation cellulaire"
+      ],
+      "explanation": "L'air entre, l'O2 passe dans le sang, est transporté, puis utilisé par les cellules.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Respiration"
     }
   ],
   "hist": [
@@ -10718,6 +11079,118 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Claude_(empereur_romain)",
       "atlasId": "hist_fr",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_hist_b001",
+      "cat": "hist",
+      "question": "Classe ces empereurs Napoléon dans l'ordre chronologique de leur règne :",
+      "pool": [
+        "Napoléon Ier (1804)",
+        "Napoléon II (1815, symbolique)",
+        "Napoléon III (1852)"
+      ],
+      "correct": [
+        "Napoléon Ier (1804)",
+        "Napoléon II (1815, symbolique)",
+        "Napoléon III (1852)"
+      ],
+      "explanation": "Napoléon Ier couronné en 1804 ; l'Aiglon n'a jamais régné ; Napoléon III en 1852.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Napoléon"
+    },
+    {
+      "id": "sc_hist_b002",
+      "cat": "hist",
+      "question": "Classe ces traités de paix du plus ancien au plus récent :",
+      "pool": [
+        "Traité de Tordesillas (1494)",
+        "Traité de Westphalie (1648)",
+        "Congrès de Vienne (1815)",
+        "Traité de Rome (1957)"
+      ],
+      "correct": [
+        "Traité de Tordesillas (1494)",
+        "Traité de Westphalie (1648)",
+        "Congrès de Vienne (1815)",
+        "Traité de Rome (1957)"
+      ],
+      "explanation": "Chaque traité redessine la carte de l'Europe ou du monde.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Traité"
+    },
+    {
+      "id": "sc_hist_b003",
+      "cat": "hist",
+      "question": "Classe ces inventions de transport du plus ancien au plus récent :",
+      "pool": [
+        "Montgolfière (1783)",
+        "Locomotive (1829)",
+        "Automobile (1886)",
+        "Avion (1903)"
+      ],
+      "correct": [
+        "Montgolfière (1783)",
+        "Locomotive (1829)",
+        "Automobile (1886)",
+        "Avion (1903)"
+      ],
+      "explanation": "Chaque invention révolutionne les déplacements.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_des_transports"
+    },
+    {
+      "id": "sc_hist_b004",
+      "cat": "hist",
+      "question": "Classe ces révolutions industrielles par ordre chronologique :",
+      "pool": [
+        "Vapeur (1re révolution)",
+        "Électricité (2e)",
+        "Informatique (3e)",
+        "IA et numériquee (4e)"
+      ],
+      "correct": [
+        "Vapeur (1re révolution)",
+        "Électricité (2e)",
+        "Informatique (3e)",
+        "IA et numériquee (4e)"
+      ],
+      "explanation": "~1780, ~1870, ~1970, ~2010.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Révolution_industrielle"
+    },
+    {
+      "id": "sc_hist_b005",
+      "cat": "hist",
+      "question": "Classe ces dynasties britanniques du plus ancien au plus récent :",
+      "pool": [
+        "Plantagenêt",
+        "Tudor",
+        "Stuart",
+        "Windsor"
+      ],
+      "correct": [
+        "Plantagenêt",
+        "Tudor",
+        "Stuart",
+        "Windsor"
+      ],
+      "explanation": "1154, 1485, 1603, 1917.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Monarchie_britannique"
+    },
+    {
+      "id": "sc_hist_b007",
+      "cat": "hist",
+      "question": "Classe ces présidents américains du plus ancien au plus récent :",
+      "pool": [
+        "George Washington",
+        "Abraham Lincoln",
+        "Franklin D. Roosevelt",
+        "Barack Obama"
+      ],
+      "correct": [
+        "George Washington",
+        "Abraham Lincoln",
+        "Franklin D. Roosevelt",
+        "Barack Obama"
+      ],
+      "explanation": "1789, 1861, 1933, 2009.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Président_des_États-Unis"
     }
   ],
   "art": [
@@ -24430,6 +24903,44 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Les_Baisers_de_secours",
       "atlasId": "ext_philo",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_ext_b001",
+      "cat": "extended",
+      "question": "Classe ces découvertes médicales du plus ancien au plus récent :",
+      "pool": [
+        "Anesthésie (1846)",
+        "Vaccin (1796)",
+        "Pénicilline (1928)",
+        "Vaccin contre la polio (1955)"
+      ],
+      "correct": [
+        "Vaccin (1796)",
+        "Anesthésie (1846)",
+        "Pénicilline (1928)",
+        "Vaccin contre la polio (1955)"
+      ],
+      "explanation": "Jenner (variole), Morton (éther), Fleming, Salk.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Histoire_de_la_médecine"
+    },
+    {
+      "id": "sc_ext_b002",
+      "cat": "extended",
+      "question": "Classe ces réseaux sociaux du plus ancien au plus récent (lancement) :",
+      "pool": [
+        "Facebook (2004)",
+        "Twitter (2006)",
+        "Instagram (2010)",
+        "TikTok (2016)"
+      ],
+      "correct": [
+        "Facebook (2004)",
+        "Twitter (2006)",
+        "Instagram (2010)",
+        "TikTok (2016)"
+      ],
+      "explanation": "12 ans séparent Facebook de TikTok.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Réseaux_sociaux"
     }
   ],
   "litt": [
@@ -25624,6 +26135,63 @@
       "wikipedia": "https://fr.wikipedia.org/wiki/Jacques_Brel",
       "atlasId": "lit_roman",
       "difficulty": "medium"
+    },
+    {
+      "id": "sc_litt_b001",
+      "cat": "litt",
+      "question": "Classe ces œuvres de Victor Hugo du plus ancien au plus récent :",
+      "pool": [
+        "Hernani (1830)",
+        "Notre-Dame de Paris (1831)",
+        "Les Misérables (1862)",
+        "Quatrevingt-treize (1874)"
+      ],
+      "correct": [
+        "Hernani (1830)",
+        "Notre-Dame de Paris (1831)",
+        "Les Misérables (1862)",
+        "Quatrevingt-treize (1874)"
+      ],
+      "explanation": "Hernani déclenche la bataille romantique ; Quatrevingt-treize est son dernier roman.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Victor_Hugo"
+    },
+    {
+      "id": "sc_litt_b002",
+      "cat": "litt",
+      "question": "Classe ces écrivains américains du plus ancien au plus récent (naissance) :",
+      "choices": [
+        "Mark Twain (1835)",
+        "Hemingway (1899)",
+        "Kerouac (1922)",
+        "Stephen King (1947)"
+      ],
+      "correct": [
+        "Mark Twain (1835)",
+        "Hemingway (1899)",
+        "Kerouac (1922)",
+        "Stephen King (1947)"
+      ],
+      "explanation": "Quatre siècles de littérature américaine.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/Littérature_américaine"
+    },
+    {
+      "id": "sc_litt_b003",
+      "cat": "litt",
+      "question": "Classe ces œuvres shakespeariennes du plus ancien au plus récent (création estimée) :",
+      "pool": [
+        "Roméo et Juliette (~1595)",
+        "Hamlet (~1600)",
+        "Macbeth (~1606)",
+        "La Tempête (~1611)"
+      ],
+      "correct": [
+        "Roméo et Juliette (~1595)",
+        "Hamlet (~1600)",
+        "Macbeth (~1606)",
+        "La Tempête (~1611)"
+      ],
+      "explanation": "Shakespeare écrit ses grandes tragédies entre 1595 et 1611.",
+      "wikipedia": "https://fr.wikipedia.org/wiki/William_Shakespeare"
     }
   ],
   "mixed": [

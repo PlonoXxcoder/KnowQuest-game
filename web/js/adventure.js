@@ -14,6 +14,15 @@
     { title:'La Bibliothèque oubliée',icon:'📖',icons:['🐉','🧩','📖','💎','🌐'],color:'#6951a8',banks:['mytho','mixed','litt','extended','mixed'],intro:'Toutes les pistes convergent vers la bibliothèque. Les pages retrouvées doivent maintenant former un seul Atlas pour dissiper la Brume de l’Oubli.',mission:'Assembler le Grand Atlas et retrouver les liens entre les savoirs.',steps:['Les portes des légendes','Les savoirs reliés','La salle des récits','Les derniers fragments','Le Grand Atlas'],lines:['Les mythes donnent une première clé.','Relions les connaissances rencontrées pendant le voyage.','Les récits rendent un sens aux fragments.','Une dernière exploration complète nos repères.','Le dernier gardien protège l’assemblage de l’Atlas.'],end:'Les huit pages se rejoignent. La Brume se dissipe et les destinations retrouvent leurs couleurs. Chouette sourit : l’Atlas est restauré, et chaque découverte peut désormais ouvrir un nouveau voyage.' },
   ];
 
+  const themes = [["mer port ocean cote navire ile", "carte continent capitale frontiere latitude longitude", "lumiere lentille optique photon miroir laser", "electricite energie courant tension mecanique", "etoile soleil phare astronomie constellation"], ["antiquite medieval empire dynastie siecle", "rempart fortification tour siege muraille", "roi reine revolution traite couronnement", "chateau palais demeure residence", "archive ecriture manuscrit charte imprimerie"], ["graine plante vegetal fleur photosynthese", "eau riviere evaporation pluie molecule", "paysage foret montagne desert climat", "animal cellule espece organisme biodiversite", "arbre racine ecosysteme botanique"], ["tableau peinture peintre musee", "ecrivain poesie poeme mot langue", "sculpture statue architecture art", "roman livre auteur recit litterature", "oeuvre peintre toile mouvement"], ["marche ingredient fruit legume epice", "pays region capitale ville", "recette plat sauce cuisine cuisson", "produit origine culture region", "gastronomie fromage pain specialite"], ["stade regle sport discipline", "jeu console nintendo sega sony", "champion athlete record olympique", "jeu studio developpeur personnage", "finale coupe tournoi olympique"], ["musique note chanson chanteur", "film realisateur cinema acteur", "serie episode saison television", "instrument orchestre album compositeur", "film festival oscar palme"], ["mythe dieu deesse legende", "science histoire geographie culture", "roman livre auteur ecrivain", "philosophie invention langage civilisation", "monde savoir decouverte culture"]];
+  const normalize=text=>String(text||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+  function questionsForNode(node,road,pool) {
+    const chapter=locate(node,road),step=road[chapter]?.nodes.findIndex(item=>item.id===node.id);
+    const words=themes[chapter]?.[step]?.split(' ');if(!words)return pool;
+    const related=pool.filter(question=>{const tokens=normalize(question.question).split(/[^a-z0-9]+/);return words.some(word=>tokens.some(token=>token.startsWith(word)));});
+    return related.length>=Math.min(node.qCount||5,5)?related:pool;
+  }
+
   // ── Adaptation du parcours : mêmes identifiants, mêmes récompenses ──
   function decorate(road) {
     road.forEach((chapter,index)=>{
@@ -78,6 +87,6 @@
     const dialog=document.getElementById('adventureDialog');
     chapters.forEach((story,i)=>{const row=document.createElement('button');row.className='adventure-page';const p=progress(profile,road,i);row.textContent=`${p.restored?'📖':'🔒'} ${i+1}. ${story.title} — ${p.restored?'restaurée':p.fragments+'/'+p.total+' fragments'}`;row.disabled=!p.restored;row.onclick=()=>dialogue(story.title,story.end,()=>showPages(profile,road),'Retour à l’Atlas');dialog.insertBefore(row,dialog.lastElementChild);});
   }
-  const api={chapters,decorate,progress,locate,start,render,showPages};
+  const api={chapters,themes,questionsForNode,decorate,progress,locate,start,render,showPages};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.Adventure=api;
 })(typeof window!=='undefined'?window:globalThis);

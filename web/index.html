@@ -5966,16 +5966,32 @@
   </style>
   <!-- globe.gl est chargé à la demande (js/vendor/globe.gl.min.js) au premier
        accès au mode Carte — il ne doit plus bloquer le premier rendu. -->
-  <link rel="stylesheet" href="motion.css?v=c1e25900">
+  <link rel="stylesheet" href="motion.css?v=03024ab4">
+  <script src="js/local-config.js?v=aeca07a4"></script>
   <script src="js/motion.js?v=a799464e"></script>
-  <link rel="stylesheet" href="adventure.css?v=98f3a058">
-  <link rel="stylesheet" href="avatar-rewards.css?v=307f9ae0">
-  <script src="js/avatar-rewards.js?v=c12dc1ea"></script>
-  <link rel="stylesheet" href="bosses.css?v=1eac3ba2">
-  <script src="js/bosses.js?v=6a75d96e"></script>
-  <script src="js/adventure.js?v=8ec856f3"></script>
-  <script src="js/boot.js?v=35d9c4c4"></script>
-  <script src="js/story-rules.js?v=45d1e428"></script>
+  <link rel="stylesheet" href="adventure.css?v=b11aa7b9">
+  <link rel="stylesheet" href="avatar-rewards.css?v=ade094ee">
+  <link rel="stylesheet" href="experience.css?v=1ddd0690">
+  <script src="js/experience.js?v=4fc48899"></script>
+  <link rel="stylesheet" href="destinations.css?v=6f872995">
+  <script src="js/destinations.js?v=59adaabb"></script>
+  <script src="js/bank-readiness.js?v=a3ac37fe"></script>
+  <script src="js/modal-focus.js?v=948dd650"></script>
+  <script src="js/session-state.js?v=cc5fa095"></script>
+  <script src="js/race-rules.js?v=76423a4b"></script>
+  <script src="js/task-scope.js?v=bf17da3a"></script>
+  <script src="js/economy.js?v=1f6a1359"></script>
+  <script src="js/game-rules.js?v=918d9d9d"></script>
+  <script src="js/profile-store.js?v=6d06fe26"></script>
+  <link rel="stylesheet" href="account.css?v=78dc18bd">
+  <script src="js/account-sync.js?v=d4e03187"></script>
+  <script src="js/account-ui.js?v=d94fb87c"></script>
+  <script src="js/avatar-rewards.js?v=b463924b"></script>
+  <link rel="stylesheet" href="bosses.css?v=85915710">
+  <script src="js/bosses.js?v=53321dff"></script>
+  <script src="js/adventure.js?v=c923624d"></script>
+  <script src="js/boot.js?v=f57b905b"></script>
+  <script src="js/story-rules.js?v=e6aca861"></script>
 </head>
 
 <body>
@@ -5987,6 +6003,12 @@
       <div class="mascot-wrap mascot-wave" id="mascotOnboard" style="width:130px;height:140px;margin:0 auto 6px"></div>
       <div class="ob-title">KnowQuest</div>
       <div class="ob-sub">Bienvenue🚀</div>
+      <div class="onboard-account-actions">
+        <button class="account-button onboard-create" onclick="openAuthModal('register')">Créer mon compte</button>
+        <button class="account-onboard" onclick="openAuthModal('login')">Déjà un compte ? Se connecter</button>
+        <p class="onboard-account-hint">Retrouve ta progression sur tes appareils.</p>
+      </div>
+      <p class="onboard-guest-label">Ou joue sans compte</p>
       <input type="text" class="ob-input" id="obName" placeholder="Ton pseudo" maxlength="15">
       <div class="av-grid" id="obAvGrid"></div>
       <button class="ob-btn" onclick="finishOnboard()">Démarrer l'aventure</button>
@@ -6253,6 +6275,8 @@
             </div>
           </div>
         </div>
+        <h3>Compte et progression</h3>
+        <section id="accountBox" aria-label="Compte et synchronisation"></section>
         <section id="avatarWardrobe" aria-label="Collection d’avatar"></section>
         <!-- 📊 PROGRESSION VISIBLE : heatmap, courbe d'XP, précision par catégorie -->
         <div class="section-divider" style="margin-top:16px">📊 Ta Progression</div>
@@ -6333,6 +6357,8 @@
               class="switch-slider"></span></label>
         </div>
         <div id="remindersHint" class="settings-hint"></div>
+        <p id="saveStatus" class="settings-hint">Sauvegarde locale sur cet appareil.</p>
+        <button class="nm-diff-btn" onclick="restoreProfileBackup()">Restaurer la copie précédente</button>
         <div style="display:flex;gap:8px;margin-top:20px">
           <button class="ob-btn" style="flex:1;font-size:13px;background:var(--bg);color:var(--blue);box-shadow:0 5px 0 var(--border);border:2px solid var(--border)"
             onclick="exportSave()">💾 Exporter</button>
@@ -6712,7 +6738,7 @@
           <button class="btn-hint" id="hintRadar" onclick="mapHint('radar')">💎5 📡 Zone</button>
         </div>
         <!-- Score + multiplicateur + bouton suivant -->
-        <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+        <div id="mapScoreSummary" style="display:flex;gap:8px;align-items:center;justify-content:space-between">
           <div style="color:rgba(255,255,255,0.6);font-size:12px;font-weight:800;line-height:1.4">
             Score<br>
             <span id="mapTotalScore" style="color:var(--gold);font-size:18px;font-weight:900">0</span>
@@ -7012,9 +7038,30 @@
 
   </div><!-- .app -->
 
-  <script src="js/game.js?v=d7b4c79d"></script>
+  <div class="modal-bg" id="authModal" role="dialog" aria-labelledby="amTitle">
+    <div class="modal-content">
+      <h2 id="amTitle">Se connecter</h2>
+      <p>Un compte pour retrouver ta progression sur tes appareils.</p>
+      <form id="authForm">
+        <label for="amUser">Pseudo du compte</label>
+        <input id="amUser" name="username" autocomplete="username" maxlength="20" required>
+        <label for="amPass">Mot de passe</label>
+        <input id="amPass" name="password" type="password" autocomplete="current-password" minlength="6" required>
+        <div id="amConfirmWrap" hidden>
+          <label for="amPass2">Confirmer le mot de passe</label>
+          <input id="amPass2" type="password" autocomplete="new-password">
+        </div>
+        <p id="amErr" role="status" aria-live="polite"></p>
+        <div class="account-actions">
+          <button class="account-button" id="amBtn" type="submit">Se connecter</button>
+          <button class="account-button" id="amCancel" type="button">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/game.js?v=821b7b53"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
-  <script src="data_loader.js?v=9a3b9ad9"></script>
+  <script src="data_loader.js?v=4d33af32"></script>
 
   <!-- DÉCLENCHEUR DE SÉCURITÉ : relance startApp uniquement si les données n'étaient pas encore prêtes -->
   <script src="js/data-ready.js?v=891365bc"></script>

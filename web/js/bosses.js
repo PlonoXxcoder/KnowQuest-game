@@ -50,7 +50,7 @@
     if(!host){host=document.createElement('section');host.id='bossScene';host.className='boss-scene';document.getElementById('duelBar').after(host);}
     host.style.setProperty('--guardian-color',state.bossColor||'#6951a8');
     host.replaceChildren();
-    const avatar=document.createElement('div');avatar.className='boss-avatar';avatar.textContent=state.bossIco;avatar.setAttribute('aria-hidden','true');
+    const avatar=document.createElement('div');avatar.className='boss-avatar';if(state.legend)avatar.textContent=state.bossIco;else avatar.append(root.Destinations.graphic(state.bossChIdx));avatar.setAttribute('aria-hidden','true');
     const info=document.createElement('div');const name=document.createElement('strong');name.textContent=state.bossName;
     const note=document.createElement('p');note.id='bossSceneNote';note.setAttribute('aria-live','polite');
     note.textContent=state.legend?`Phase ${state.idx<5?1:state.idx<10?2:3}/3 · 12 coups pour gagner`:
@@ -69,7 +69,7 @@
     document.getElementById('bossOutcome')?.remove();
     const host=document.createElement('section');host.id='bossOutcome';host.className='boss-outcome';
     host.dataset.won=String(state.duelAiHP<=0);host.style.setProperty('--guardian-color',state.bossColor||'#6951a8');
-    const avatar=document.createElement('div');avatar.className='boss-avatar';avatar.textContent=state.bossIco;
+    const avatar=document.createElement('div');avatar.className='boss-avatar';if(state.legend)avatar.textContent=state.bossIco;else avatar.append(root.Destinations.graphic(state.bossChIdx));
     const title=document.createElement('strong');title.textContent=state.duelAiHP<=0?(state.legend?'Défi mensuel remporté !':'La page retrouve ses couleurs !'):'Le gardien attend ta revanche';
     const text=document.createElement('p');text.textContent=state.duelAiHP<=0?conclusion:'Tes étapes restent acquises. Tes trois vies de combat seront rétablies au prochain essai.';
     const note=document.createElement('small');note.textContent=receipt?.awarded?'Récompense de première victoire reçue.':state.duelAiHP<=0?'Récompense déjà reçue.':'Les cœurs de l’histoire sont conservés.';

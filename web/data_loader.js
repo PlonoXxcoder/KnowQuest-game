@@ -101,9 +101,11 @@
         // Demander la version publiée ; le cache ci-dessous sert hors ligne.
         const resp = await fetch(url, { cache: 'no-store' });
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-        cacheResponse(url, resp);
+        const data = await resp.clone().json();
+        if (!data || typeof data !== 'object') throw new Error('Données JSON invalides');
+        await cacheResponse(url, resp);
         _workingBase = base;
-        return await resp.json();
+        return data;
       } catch (e) {
         if (!quiet) log(`Chargement impossible ${url}: ${e.message}`, 'warn');
         const cached = await fromDataCache(url);
@@ -121,7 +123,7 @@
       const merged = {};
       let files = 0;
       results.forEach(obj => { if (obj && typeof obj === 'object') { Object.assign(merged, obj); files++; } });
-      if (files > 0) {
+      if (files === index.categories.length) {
         log(`Questions chargées depuis ${files} fichier(s) par catégorie`, 'ok');
         return merged;
       }

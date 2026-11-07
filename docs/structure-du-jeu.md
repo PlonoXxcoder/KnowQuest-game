@@ -14,6 +14,11 @@
 |---|---|
 | `web/js/story-rules.js` | Règles pures de l’Histoire : compteur d’erreurs, éligibilité et tirage des cadeaux, attribution. Constantes d’équilibrage et commentaires de section regroupés. |
 | `web/js/game.js` | Orchestration existante : lancement des parties, réponses, cœurs, sauvegarde, interface et autres modes. Une section Histoire relie l’interface aux règles séparées. |
+| `web/js/session-state.js` | État neuf commun aux parties, compteurs et tableaux indépendants. |
+| `web/js/race-rules.js` | Pneus, classement, bonus de dépassement et gain de vitesse. |
+| `web/js/task-scope.js` | Annulation des tâches différées lorsqu'une course ou un arrêt est quitté. |
+| `web/js/economy.js` | Catalogues, prix et règles d'achat ou de soin. |
+| `web/js/destinations.js` | Silhouettes des gardiens et décor discret du chapitre. |
 | `web/js/motion.js` | Animations et préférences de mouvement, aperçus, file de célébrations. |
 | `web/motion.css` | Présentation des effets et des informations Histoire. |
 | `web/data_loader.js` | Chargement des banques de questions et du parcours. |

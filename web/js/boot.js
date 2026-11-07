@@ -3,7 +3,8 @@ if ('serviceWorker' in navigator) {
   const controlledAtStart = !!navigator.serviceWorker.controller;
   const startedAt = Date.now();
   let reloading = false;
-  const playing = () => !!document.querySelector('#scrQuiz.active');
+  // Le globe, le rallye et le tour utilisent un autre écran que les quiz.
+  const playing = () => !!document.querySelector('#scrQuiz.active, #scrMapQuiz.active');
   function refreshAtStart() {
     if (reloading || playing() || Date.now() - startedAt > 10000) return false;
     try {

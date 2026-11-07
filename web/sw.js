@@ -12,15 +12,31 @@
  * Les données (data/*.json) sont aussi mises en cache par data_loader.js
  * lui-même (Cache API côté page, 'kq-data-v3').
  */
-const CACHE = 'knowquest-v8-avatar';
+const CACHE = 'knowquest-v10-refonte';
 const SHELL = [
   './',
   './index.html',
   './data_loader.js',
+  './js/local-config.js',
   './motion.css',
   './adventure.css',
   './bosses.css',
   './avatar-rewards.css',
+  './experience.css',
+  './js/experience.js',
+  './js/profile-store.js',
+  './js/account-sync.js',
+  './js/account-ui.js',
+  './account.css',
+  './js/game-rules.js',
+  './js/economy.js',
+  './js/task-scope.js',
+  './js/race-rules.js',
+  './js/session-state.js',
+  './js/bank-readiness.js',
+  './js/modal-focus.js',
+  './js/destinations.js',
+  './destinations.css',
   './js/avatar-rewards.js',
   './js/bosses.js',
   './js/adventure.js',
@@ -94,7 +110,8 @@ self.addEventListener('fetch', (e) => {
       // version de l'app (assets versionnés par hash). Hors-ligne → cache.
       try {
         const resp = await fetchFresh(req);
-        if (resp && resp.ok) cache.put(req, resp.clone());
+        if (!resp || !resp.ok) throw new Error('HTTP indisponible');
+        cache.put(req, resp.clone());
         return resp;
       } catch (_) {
         if (cached) return cached;
@@ -105,7 +122,8 @@ self.addEventListener('fetch', (e) => {
     // JS / CSS / data : réseau d'abord, cache en secours.
     const network = fetchFresh(req)
       .then((resp) => {
-        if (resp && resp.ok) cache.put(req, resp.clone());
+        if (!resp || !resp.ok) throw new Error('HTTP indisponible');
+        cache.put(req, resp.clone());
         return resp;
       })
       // Le shell préchargé contient les chemins sans ?v=. En mode hors ligne,

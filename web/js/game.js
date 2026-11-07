@@ -91,12 +91,7 @@
     const STORAGE_KEY = 'knowquest_v2_0';
     const AVATARS = ['🦁', '🦊', '🦅', '🐉', '🐬', '🦋', '🐻', '🦉', '🦈', '🐯'];
 
-    const POWERUP_SHOP = [
-      { id: 'fiftyfifty', name: '50/50', ico: '✂️', desc: 'Élimine 2 mauvaises réponses', cost: 30 },
-      { id: 'shield', name: 'Bouclier', ico: '🛡️', desc: 'Protège ton prochain cœur', cost: 50 },
-      { id: 'doubleXP', name: 'Double XP', ico: '⚡', desc: '×2 XP pour la prochaine session', cost: 40 },
-      { id: 'streakFreeze', name: 'Gel de série', ico: '🧊', desc: 'Protège ta série si tu rates un jour', cost: 45 },
-    ];
+    const POWERUP_SHOP = Economy.powerups;
 
     // ===== STATE =====
     // ===== ADAPTATEUR IA -> JEU =====
@@ -203,14 +198,16 @@
       },
     };
 
-    let Q = {
-      mode: '', type: '', qs: [], idx: 0, correct: 0, totalXP: 0, state: 'selecting',
-      selectedIdx: null, combo: 0, userSel: [],
-      retryQueue: [], newAtlasCards: 0,
-      survieErrors: 0, survieScore: 0,
-      duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7,
-      chainIdx: 0, chainBroken: false, chain: null,
-    };
+    const PROFILE_DEFAULTS = JSON.parse(JSON.stringify(P));
+    const profileStorage = ProfileStore.create(localStorage, STORAGE_KEY);
+    let accountSync = null;
+
+    const quizTasks = TaskScope.create();
+    const modeStarts = TaskScope.create();
+    const resultTasks = TaskScope.create();
+    const mapTasks = TaskScope.create();
+    let Q = SessionState.create({
+      mode: '', type: '', qs: [], });
 
     let GP = {
       phase: 'select_team', // select_team -> select_circuit -> select_tire -> qual_intro -> qual_play -> race_intro -> race_play -> results
@@ -315,7 +312,12 @@
       { name: 'Sainz', car: '🟡', ai: 0.55 },
     ];
 
+    const raceTasks = TaskScope.create();
+    const pitstopTasks = TaskScope.create();
+
     function startGrandPrix() {
+      raceTasks.cancel();
+      cancelPitstop();
       GP = { phase: 'select_team', qualScore: 0, position: 8, selectedConstructor: null, selectedCircuit: null, drivers: [], animFrameId: null };
       document.getElementById('gpPhaseBadge').textContent = 'Écurie';
       document.getElementById('gpTitle').textContent = '🏎️ Grand Prix — Sélection';
@@ -498,7 +500,7 @@
     function startGPQual() {
       const rawPool = [...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB, ...window.MUSIQUE_QB, ...window.JV_QB, ...window.SERIES_QB];
       const pool = shuffle(filterSeenQuestions(rawPool)).slice(0, 15);
-      Q = { mode: 'gp_qual', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'gp_qual', type: 'qcm', qs: pool, chainBroken: false });
       document.getElementById('scrGP').classList.remove('active');
       document.getElementById('scrQuiz').classList.add('active');
       renderQ();
@@ -562,7 +564,7 @@
       GP.drivers.push(...rivals);
 
       const pool = shuffle([...window.GEO_QB, ...window.HIST_QB, ...window.SCI_QB, ...window.CINEMA_QB, ...window.SPORT_QB, ...window.MIXED_QB, ...window.EXTENDED_QB, ...window.CHATEAUX_QB, ...window.LITT_QB, ...window.MUSIQUE_QB, ...window.JV_QB, ...window.SERIES_QB]).slice(0, 15);
-      Q = { mode: 'gp_race', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'gp_race', type: 'qcm', qs: pool, chainBroken: false });
 
       // Imprevus de course programmés (météo, safety car, incidents)
       GP.tireWear = 0;
@@ -599,6 +601,8 @@
 
     // Séquence des 5 feux rouges avant le lancement de la course
     function startGPLights() {
+      if (GP.phase !== 'race_intro') return;
+      GP.phase = 'race_lights';
       const modal = document.querySelector('.gp-qual-intro .modal-btn');
       if (modal) {
         modal.disabled = true;
@@ -609,7 +613,7 @@
         const intro = document.querySelector('.gp-qual-intro');
         if (intro) intro.insertAdjacentHTML('beforeend', lightsHTML);
         [0, 1, 2, 3, 4].forEach((i, idx) => {
-          setTimeout(() => {
+          raceTasks.later(() => {
             const l = document.getElementById('gpLight' + i);
             if (l) { l.style.background = '#cc0000'; l.style.boxShadow = '0 0 12px rgba(200,0,0,0.8)'; }
             audio._beep(180, 0.3, 'sine', 0.4);
@@ -814,6 +818,7 @@
 
     // Rendu des questions actives directement dans l'interface F1
     function renderGPActiveQuestion() {
+      if (GP.phase !== 'race_play') return;
       if (Q.idx >= Q.qs.length) {
         if (GP.animFrameId) cancelAnimationFrame(GP.animFrameId);
         showGPResult();
@@ -823,7 +828,8 @@
       // Pitstop : demandé via le bouton Box, ou forcé au tour 7 si jamais effectué
       if (GP.boxRequested || (Q.idx >= 6 && GP.pitstopDone.length === 0)) {
         GP.boxRequested = false;
-        triggerPitstop(Q.idx).then(() => renderGPActiveQuestion());
+        const race = GP;
+        triggerPitstop(Q.idx).then(result => { if (result !== null && GP === race && GP.phase === 'race_play') renderGPActiveQuestion(); });
         return;
       }
 
@@ -837,6 +843,7 @@
       stopTimer();
       let timerSecs = q.difficulty === 'hard' ? 10 : q.difficulty === 'medium' ? 12 : 15;
       if (GP.drsActive) timerSecs = Math.max(4, Math.floor(timerSecs / 2)); // DRS réduit le temps de moitié
+      Q.gpTimerMax = timerSecs;
       startTimer(timerSecs, () => handleGPTimeExpired());
 
       let choicesHTML = '';
@@ -887,6 +894,7 @@
     </div>
   `;
       checkDRS();
+      Experience.accessible();
     }
 
     function requestBox() {
@@ -916,12 +924,7 @@
     function radio(msg) { showToast('📻 ' + msg, 3400); }
 
     // Vitesse et usure par tour selon le composé de pneu
-    const TIRE_STATS = {
-      soft:   { speed: 1.00, wear: 15 },
-      medium: { speed: 0.92, wear: 10 },
-      hard:   { speed: 0.85, wear: 6 },
-      rain:   { speed: 0.80, wear: 9 },
-    };
+    const TIRE_STATS = RaceRules.tires;
 
     function tirePenalty() {
       let pen = 0;
@@ -995,6 +998,7 @@
     }
 
     function checkGPAnswer() {
+      if (GP.phase !== 'race_play' || Q.state !== 'selecting' || !Number.isInteger(Q.selectedIdx) || !Q.qs[Q.idx]) return;
       stopTimer();
       Q.state = 'checked';
       const q = Q.qs[Q.idx];
@@ -1033,15 +1037,11 @@
       if (isCorrect) {
         audio.playCorrect();
         Q.correct++; Q.combo++;
+        Q.totalXP += q.xp ?? 10;
+        srsOnResult(q, true);
         // R&D : chaque bonne réponse en championnat nourrit le développement
         if (GP._champMode) { ensureChampExtras(); P.championship.rd.pts++; GP._rdEarned = (GP._rdEarned || 0) + 1; }
-        const comboBonus = Q.combo >= 3 ? 0.02 : 0.0;
-        const timeBonus = (_timerSec / 15) * 0.02; // Bonus de rapidité de trajectoire
-
-        let gain = (0.07 + comboBonus + timeBonus) * TIRE_STATS[GP.selectedTire].speed;
-        if (GP.tireWear >= 100) gain *= 0.5;          // pneus à plat
-        if (GP.scLapsLeft > 0) gain *= 1.6;           // relance : occasion de dépasser
-        if (GP._champMode && P.championship.rd) gain *= (1 + 0.04 * (P.championship.rd.speed || 0)); // moteur R&D
+        const gain = RaceRules.gain({tire:GP.selectedTire,combo:Q.combo,remaining:_timerSec,duration:Q.gpTimerMax||15,wear:GP.tireWear,safetyCar:GP.scLapsLeft>0,development:GP._champMode?P.championship.rd?.speed||0:0});
         player.targetProgress += gain;
         if (isDRS) { player.targetProgress += 0.07; radio('⚡ DRS + bonne réponse : dépassement réussi !'); }
         if (GP.pitstopBoost > 0) { player.targetProgress += GP.pitstopBoost; GP.pitstopBoost = 0; }
@@ -1057,6 +1057,8 @@
       } else {
         audio.playWrong();
         Q.combo = 0;
+        srsOnResult(q, false);
+        if (!P.mistakes.some(item => item.id === q.id)) P.mistakes.push(q);
         let loss = Math.min(0.02, 0.005 + tirePenalty()); // pénalités pneus/météo
         if (GP.pitstopBoost < 0) { loss += GP.pitstopBoost; GP.pitstopBoost = 0; }
         player.targetProgress += loss;
@@ -1093,12 +1095,16 @@
     }
 
     function handleGPTimeExpired() {
-      if (Q.state !== 'selecting') return;
+      if (GP.phase !== 'race_play' || Q.state !== 'selecting' || !Q.qs[Q.idx]) return;
+      stopTimer();
       Q.state = 'checked';
       audio.playWrong();
       Q.combo = 0;
 
       const q = Q.qs[Q.idx];
+      recordCatStat(q.cat, false);
+      srsOnResult(q, false);
+      if (!P.mistakes.some(item => item.id === q.id)) P.mistakes.push(q);
       const player = GP.drivers.find(d => d.isPlayer);
       Q._lastShown = q; Q._lastShownCorrect = false;
       player.targetProgress += 0.002 + tirePenalty(); // Presque aucun mouvement (pénalités pneus incluses)
@@ -1126,15 +1132,19 @@
     }
 
     function nextGPQuestion() {
+      if (GP.phase !== 'race_play' || Q.state !== 'checked') return;
+      Q.state = 'transitioning';
       document.getElementById('gpVBanner').classList.remove('show');
       Q.idx++;
       renderGPActiveQuestion();
     }
 
     function showGPResult() {
+      stopTimer();
+      GP.phase = 'results';
       const pos = GP.position;
       const podium = pos <= 3;
-      if (podium) P.gpWins++;
+      if (pos === 1) P.gpWins++;
       audio.playRaceGo();
       if (pos === 1) { setTimeout(() => spawnConfetti(), 200); setTimeout(() => spawnConfetti(), 800); }
 
@@ -1188,6 +1198,9 @@
     }
 
     function finishGP() {
+      raceTasks.cancel();
+      cancelPitstop();
+      stopTimer();
       audioF1.stopEngine();
       if (GP.animFrameId) cancelAnimationFrame(GP.animFrameId);
       GP.phase = 'select_team';
@@ -1203,6 +1216,9 @@
     }
 
     function restartGP() {
+      raceTasks.cancel();
+      cancelPitstop();
+      stopTimer();
       if (GP.animFrameId) cancelAnimationFrame(GP.animFrameId);
       document.getElementById('confettiWrap').innerHTML = '';
       startGrandPrix();
@@ -1224,7 +1240,7 @@
       // Moteur désactivé — pas de son continu
       startEngine(rpm = 0.5) { GP.rpmLevel = rpm; },
       setRPM(rpm) { GP.rpmLevel = Math.max(0.1, Math.min(1.0, rpm)); },
-      boostRPM() { GP.rpmLevel = Math.min(1.0, GP.rpmLevel + 0.3); setTimeout(() => { GP.rpmLevel = Math.max(0.1, GP.rpmLevel - 0.1); }, 400); },
+      boostRPM() { GP.rpmLevel = Math.min(1.0, GP.rpmLevel + 0.3); raceTasks.later(() => { GP.rpmLevel = Math.max(0.1, GP.rpmLevel - 0.1); }, 400); },
       brakeRPM() { GP.rpmLevel = Math.max(0.1, GP.rpmLevel - 0.2); },
       stopEngine() { /* rien à arrêter */ },
       // Séquence des feux de départ F1 (5 bips graves puis bip aigu)
@@ -1240,9 +1256,9 @@
             o.start(ctx.currentTime + start); o.stop(ctx.currentTime + start + dur);
           };
           // 5 feux rouges — bips graves
-          [0, 0.6, 1.2, 1.8, 2.4].forEach((t) => beep(180, t, 0.4, 0.4));
+          [0, 0.6, 1.2, 1.8, 2.4].forEach(t => raceTasks.later(() => beep(180, 0, 0.4, 0.4), t * 1000));
           // Extinction des feux — bip aigu départ
-          setTimeout(() => { beep(880, 0, 0.15, 0.5); beep(1100, 0.12, 0.2, 0.5); if (onGo) onGo(); }, 3200);
+          raceTasks.later(() => { beep(880, 0, 0.15, 0.5); beep(1100, 0.12, 0.2, 0.5); if (onGo) onGo(); }, 3200);
         } catch (e) { if (onGo) onGo(); }
       },
       // G-Force vibration
@@ -1267,8 +1283,21 @@
     // ===== PITSTOP MINI-JEU (avec choix du nouveau composé) =====
     let _pitstopState = { nuts: 0, target: 3, timeLimit: 2500, startTime: 0, timer: null, resolve: null, newTire: 'medium' };
 
+    function cancelPitstop() {
+      pitstopTasks.cancel();
+      _pitstopState.timer = null;
+      _pitstopState.active = false;
+      const resolve = _pitstopState.resolve;
+      _pitstopState.resolve = null;
+      document.getElementById('pitstopOverlay')?.classList.remove('show');
+      if (resolve) resolve(null);
+    }
     function triggerPitstop(questionIndex) {
+      cancelPitstop();
+      stopTimer();
       return new Promise(resolve => {
+        _pitstopState.active = true;
+        _pitstopState.race = GP;
         _pitstopState.nuts = 0;
         _pitstopState.target = hasTalent('t_pitstop') ? 2 : 3;
         _pitstopState.startTime = Date.now();
@@ -1296,23 +1325,25 @@
         overlay.classList.add('show');
         // Compte à rebours visuel
         let c = 3;
-        const ci = setInterval(() => {
+        const ci = pitstopTasks.every(() => {
           c--;
           if (c > 0) countdown.textContent = c;
-          else { clearInterval(ci); countdown.textContent = '🔧 GO !'; startPitstopTimer(); }
+          else { pitstopTasks.clear(ci); countdown.textContent = '🔧 GO !'; startPitstopTimer(); }
         }, 600);
       });
     }
 
     function pickPitstopTire(id) {
+      if (!_pitstopState.active || !Object.hasOwn(TIRE_STATS, id)) return;
       _pitstopState.newTire = id;
       document.querySelectorAll('.pitstop-tire-btn').forEach(b => b.classList.toggle('sel', b.dataset.tire === id));
     }
 
     function startPitstopTimer() {
+      if (!_pitstopState.active || _pitstopState.race !== GP || GP.phase !== 'race_play') return;
       const fill = document.getElementById('pitstopTimerFill');
       _pitstopState.startTime = Date.now();
-      _pitstopState.timer = setInterval(() => {
+      _pitstopState.timer = pitstopTasks.every(() => {
         const elapsed = Date.now() - _pitstopState.startTime;
         const pct = Math.max(0, 100 - (elapsed / _pitstopState.timeLimit) * 100);
         if (fill) fill.style.width = pct + '%';
@@ -1324,13 +1355,15 @@
       if (!_pitstopState.timer) return;
       _pitstopState.nuts++;
       const nut = document.getElementById('pitstopNut');
-      if (nut) { nut.className = 'pitstop-nut clicked'; setTimeout(() => { nut.className = 'pitstop-nut'; }, 200); }
+      if (nut) { nut.className = 'pitstop-nut clicked'; pitstopTasks.later(() => { nut.className = 'pitstop-nut'; }, 200); }
       audio._beep(440 + _pitstopState.nuts * 80, 0.08, 'square', 0.2);
       if (_pitstopState.nuts >= _pitstopState.target) finishPitstop(true);
     }
 
     function finishPitstop(success) {
-      clearInterval(_pitstopState.timer);
+      if (!_pitstopState.active || _pitstopState.race !== GP) return;
+      _pitstopState.active = false;
+      pitstopTasks.cancel();
       _pitstopState.timer = null;
       const elapsed = Date.now() - _pitstopState.startTime;
       const result = document.getElementById('pitstopResult');
@@ -1356,23 +1389,18 @@
         if (player) player.targetProgress -= 0.04;
         showToast('🔧 Arrêt aux stands raté ! Tu perds du terrain !');
       }
-      setTimeout(() => {
+      pitstopTasks.later(() => {
         document.getElementById('pitstopOverlay').classList.remove('show');
         startGPAnimation(); // Relance l'animation
-        if (_pitstopState.resolve) _pitstopState.resolve(success);
+        const resolve = _pitstopState.resolve;
+        _pitstopState.resolve = null;
+        if (resolve) resolve(success);
       }, 1500);
     }
 
     // ===== DRS SYSTEM (règle F1 : à moins d'1 seconde de la voiture devant) =====
     function checkDRS() {
-      const player = GP.drivers.find(d => d.isPlayer);
-      if (!player) return;
-      const playerIdx = GP.drivers.findIndex(d => d.isPlayer);
-      if (playerIdx <= 0) { GP.drsAvailable = false; updateDRSButton(); return; }
-      const carAhead = GP.drivers[playerIdx - 1];
-      if (carAhead && carAhead.out) { GP.drsAvailable = false; updateDRSButton(); return; }
-      const gapTime = (carAhead.progress - player.progress) * 1.5;
-      GP.drsAvailable = gapTime < 1.0 && gapTime >= 0 && (GP.drsUsesLeft === undefined || GP.drsUsesLeft > 0);
+      GP.drsAvailable = RaceRules.drs(GP.drivers, GP.drsUsesLeft ?? 1);
       updateDRSButton();
     }
 
@@ -1393,7 +1421,7 @@
       if (GP.drsUsesLeft !== undefined) GP.drsUsesLeft--;
       const btn = document.getElementById('gpDrsBtn');
       if (btn) btn.classList.remove('show');
-      showToast('🏎️ DRS activé ! Double progression — mais temps réduit de moitié !');
+      showToast('🏎️ DRS activé ! Bonus de dépassement — temps réduit de moitié !');
       audioF1.boostRPM();
     }
 
@@ -1517,9 +1545,10 @@
       return drivers;
     }
 
-    function initChampStandings() {
+    function initChampStandings(preservePoints = false) {
+      const previous = new Map((P.championship.standings || []).map(driver => [driver.id, driver.pts]));
       P.championship.standings = buildChampDrivers().map(d => ({
-        id: d.id, constructorId: d.constructorId, pilot: d.pilot, car: d.car, tag: d.tag, pts: 0,
+        id: d.id, constructorId: d.constructorId, pilot: d.pilot, car: d.car, tag: d.tag, pts: preservePoints ? previous.get(d.id) || 0 : 0,
       }));
     }
 
@@ -1562,6 +1591,7 @@
     }
 
     function champUpgradeRD(key) {
+      if (!['speed','rel'].includes(key)) return;
       ensureChampExtras();
       const rd = P.championship.rd;
       if (rd[key] >= 5) { showToast('Niveau maximum atteint !'); return; }
@@ -1574,6 +1604,7 @@
     }
 
     function setChampDifficulty(diff) {
+      if (!['easy','normal','hard'].includes(diff)) return;
       P.championship.difficulty = diff;
       save();
       renderChampionshipScreen();
@@ -1586,7 +1617,7 @@
       if (P.championship.active && P.championship.currentRace < CHAMP_CIRCUITS.length) {
         // Garde-fou : sauvegarde d'une ancienne version (8 entrées) → réinitialise
         if (!P.championship.standings || P.championship.standings.length !== GP_CONSTRUCTORS.length * 2) {
-          initChampStandings();
+          initChampStandings(true);
         }
         showChampionshipScreen();
         return;
@@ -1773,7 +1804,7 @@
         <div style="font-size:48px">${isChamp ? '🏆' : '🎖️'}</div>
         <div style="font-size:20px;font-weight:900;color:var(--gold);margin:8px 0">${isChamp ? '🎊 CHAMPION DU MONDE !' : 'Saison Terminée'}</div>
         <div style="font-size:13px;color:rgba(255,255,255,0.6);font-weight:700;margin-bottom:8px">
-          ${isChamp ? `Bravo ${P.name} ! Titre de la Saison ${ch.season} décroché !` : `Champion : ${champDriver.pilot} (${champDriver.pts} pts) — Toi : P${meFinal} avec ${mePts} pts`}
+          ${isChamp ? `Bravo ${P.name} ! Titre de la Saison ${ch.career?.at(-1)?.season || ch.season} décroché !` : `Champion : ${champDriver.pilot} (${champDriver.pts} pts) — Toi : P${meFinal} avec ${mePts} pts`}
         </div>
         <div style="font-size:12px;color:rgba(255,255,255,0.5);font-weight:700;margin-bottom:14px">
           🏭 Constructeur champion : ${champCons.car} ${champCons.name} (${champCons.pts} pts)
@@ -1843,6 +1874,7 @@
     }
 
     function acceptCareerOffer(teamId) {
+      if (P.championship.active || !GP_CONSTRUCTORS.some(team => team.id === teamId)) return;
       P.championship.nextTeamId = teamId;
       const t = GP_CONSTRUCTORS.find(x => x.id === teamId);
       save();
@@ -1851,6 +1883,7 @@
     }
 
     function selectChampTeam(id) {
+      if (!GP_CONSTRUCTORS.some(team => team.id === id) || P.championship.currentRace > 0) return;
       P.championship.constructorId = id;
       initChampStandings();
       // Rival après le choix d'écurie
@@ -1861,7 +1894,10 @@
     }
 
     function launchChampRace(raceIdx) {
+      if (!P.championship.active || !Number.isInteger(raceIdx) || raceIdx !== P.championship.currentRace || raceIdx < 0 || raceIdx >= CHAMP_CIRCUITS.length) return;
       if (!P.championship.constructorId) { showToast('Choisis d\'abord ton écurie !'); return; }
+      raceTasks.cancel();
+      cancelPitstop();
       const circuitId = CHAMP_CIRCUITS[raceIdx];
       const circuit = GP_CIRCUITS.find(c => c.id === circuitId);
       const team = GP_CONSTRUCTORS.find(t => t.id === P.championship.constructorId) || GP_CONSTRUCTORS[0];
@@ -1926,6 +1962,9 @@
     // constructeurs, point du meilleur tour) et trophées de fin de saison.
     const _origShowGPResult = showGPResult;
     showGPResult = function () {
+      if (GP.resultShown) return;
+      if (GP._champMode && (!P.championship.active || GP._champRaceIdx !== P.championship.currentRace || !GP.drivers.some(driver => driver.id === 'player'))) return;
+      GP.resultShown = true;
       _origShowGPResult();
       if (GP._champMode && P.championship.active) {
         const ch = P.championship;
@@ -1962,7 +2001,7 @@
             if (GP.fastestLap && p > 0 && s.id === 'player') p += 1;
             s.pts += p;
           } else {
-            s.pts += CHAMP_POINTS[Math.floor(Math.random() * 12)] || 0; // sécurité (pilote non en grille)
+            s.pts += 0; // Un pilote absent de la grille ne reçoit pas de points inventés.
           }
         });
 
@@ -2016,7 +2055,9 @@
         save();
         GP._champMode = false;
         // Bouton retour au championnat
+        const completedGP = GP;
         setTimeout(() => {
+          if (GP !== completedGP) return;
           const gpBody = document.getElementById('gpBody');
           if (gpBody) {
             const champBtn = document.createElement('button');
@@ -2029,6 +2070,7 @@
               showChampionshipScreen();
             };
             const target = gpBody.querySelector('[style*="text-align:center"]');
+            if (!target) return;
             if (GP._raceGemLines && GP._raceGemLines.length) {
               const gemsDiv = document.createElement('div');
               gemsDiv.style.cssText = 'background:#1e1e2f;border:2px solid var(--gold);border-radius:12px;padding:10px 12px;margin-top:8px;font-size:12px;font-weight:800;color:var(--gold);text-align:center';
@@ -2043,6 +2085,8 @@
 
     function newChampSeason() {
       const ch = P.championship;
+      if (ch.active) return;
+      ch._seasonNotes = [];
       ch.active = true;
       ch.currentRace = 0;
       ch.races = [];
@@ -2078,6 +2122,10 @@
     showResult = function () {
       stopTimer();
       if (Q.mode === 'gp_qual') {
+        if (Q.resultShown) return;
+        Q.resultShown = true;
+      quizTasks.cancel();
+        addXP(Q.totalXP);
         const score = Q.correct;
         const qualPos = Math.max(1, 8 - score); // Score de 5 = P3, score de 5 super rapide = P1
         document.getElementById('scrQuiz').classList.remove('active');
@@ -2282,6 +2330,7 @@
         // Les profils existants (déjà lancés) ne repassent pas le tuto ;
         // les nouveaux joueurs le découvrent au premier démarrage.
         if (!p.tutorial) p.tutorial = { done: (p.totalQ || 0) > 0 };
+        if ((p.totalQ || 0) > 0) p.tutorial.done = true;
       }
       if (v < 3) {
         // P3/P4 — progression visible & monde vivant
@@ -2302,18 +2351,34 @@
       return p;
     }
 
+    function showSaveProblem(result) {
+      let banner = document.getElementById('saveProblem');
+      if (!banner) { banner = document.createElement('aside'); banner.id = 'saveProblem'; banner.setAttribute('role','alert'); document.body.append(banner); }
+      banner.replaceChildren();
+      const text = document.createElement('p');
+      text.textContent = result.conflict ? 'La progression a changé dans un autre onglet. Exporte cette session avant de recharger la dernière sauvegarde.' : 'La sauvegarde locale est indisponible. Les données précédentes sont conservées : exporte ta session ou restaure une copie.';
+      const backup = document.createElement('button'); backup.textContent = 'Exporter cette session'; backup.onclick = exportSave;
+      const restore = document.createElement('button'); restore.textContent = 'Restaurer une copie'; restore.onclick = restoreProfileBackup;
+      const reload = document.createElement('button'); reload.textContent = 'Recharger'; reload.onclick = () => location.reload();
+      banner.append(text,backup,restore,reload);
+    }
     function save() {
-      try { localStorage.setItem(STORAGE_KEY, JSON.stringify(P)); }
-      catch (e) {
-        console.warn('[KnowQuest] Sauvegarde impossible (quota localStorage ?) :', e);
-        showToast('⚠️ Sauvegarde impossible — la progression de cette session risque d\'être perdue');
-      }
+      const result = profileStorage.write(P);
+      if (!result.ok) showSaveProblem(result);
+      const status = document.getElementById('saveStatus');
+      if (status) status.textContent = result.ok ? 'Sauvegardé sur cet appareil à ' + new Date(result.at).toLocaleTimeString('fr-FR') : 'Sauvegarde à vérifier';
+      if (result.ok) accountSync?.markDirty();
+      return result.ok;
+    }
+    function restoreProfileBackup() {
+      if (!confirm('Restaurer la copie précédente ? Exporte d’abord ta session si tu souhaites la conserver.')) return;
+      try { profileStorage.restore(); location.reload(); }
+      catch (e) { showToast(e.message); }
     }
     function loadData() {
-      try {
-        const d = localStorage.getItem(STORAGE_KEY);
-        if (d) { P = migrateProfile(Object.assign(P, JSON.parse(d))); return true; }
-      } catch (e) { console.warn('[KnowQuest] Profil illisible, reprise à zéro :', e); }
+      const result = profileStorage.load(PROFILE_DEFAULTS, migrateProfile);
+      if (result.error) setTimeout(() => showSaveProblem(result), 0);
+      if (result.profile) { P = result.profile; return true; }
       return false;
     }
     function shuffle(a) { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1));[b[i], b[j]] = [b[j], b[i]]; } return b; }
@@ -2971,7 +3036,7 @@
     function applyChestReward(rw) {
       if (rw.type === 'gems') P.gems += rw.value;
       else if (rw.type === 'xp') addXP(rw.value);
-      else if (rw.type === 'heart') P.hearts = Math.min(5, P.hearts + 1);
+      else if (rw.type === 'heart') Economy.freeHeart(P);
       else if (rw.type === 'pu') P.powerups[rw.value]++;
     }
 
@@ -3057,7 +3122,7 @@
     function todayStr(offsetDays = 0) {
       const d = new Date();
       d.setDate(d.getDate() + offsetDays);
-      return d.toISOString().split('T')[0];
+      return GameRules.day(d);
     }
 
     function srsOnResult(q, ok) {
@@ -3077,11 +3142,11 @@
 
     function getDueSRSCount() {
       const t = todayStr();
-      return Object.values(P.srs || {}).filter(e => e.due <= t).length;
+      return Object.entries(P.srs || {}).filter(([id,e]) => e && e.due <= t && findQuestionById(id)).length;
     }
 
     function findQuestionById(id) {
-      const banks = ['GEO_QB', 'HIST_QB', 'SCI_QB', 'ART_QB', 'CINEMA_QB', 'SPORT_QB', 'GASTRO_QB', 'MYTHO_QB', 'CHATEAUX_QB', 'LITT_QB', 'MIXED_QB', 'EXTENDED_QB', 'TF_QB', 'FLASH_QB'];
+      const banks = [...Object.values(GameRules.banks), 'TF_QB', 'SCRAMBLE_QB', 'FLASH_QB'];
       for (const b of banks) {
         const arr = window[b];
         if (!arr) continue;
@@ -3201,7 +3266,7 @@
       document.getElementById('timelineModal').classList.add('show');
     }
 
-    function closeTimeline() { document.getElementById('timelineModal').classList.remove('show'); }
+    function closeTimeline() { document.getElementById('timelineModal').classList.remove('show'); accountSync?.resume(); }
 
     function renderTimeline() {
       document.getElementById('tlInstruction').textContent = "Classe ces événements du plus ancien 🏛️ au plus récent 🚀 — clique dans l'ordre !";
@@ -3273,7 +3338,7 @@
       { ico: '⚡', label: '+40 XP', color: '#58cc02', w: 18, apply: () => addXP(40) },
       { ico: '✂️', label: '50/50', color: '#7c5cfc', w: 15, apply: () => { P.powerups.fiftyfifty++; } },
       { ico: '💎', label: '+30 💎', color: '#1899d6', w: 14, apply: () => { P.gems += 30; } },
-      { ico: '❤️', label: 'Cœur', color: '#ff4b4b', w: 12, apply: () => { P.hearts = Math.min(5, P.hearts + 1); } },
+      { ico: '❤️', label: 'Cœur', color: '#ff4b4b', w: 12, apply: () => { Economy.freeHeart(P); } },
       { ico: '💎', label: '+60 💎', color: '#0d84c2', w: 9, apply: () => { P.gems += 60; } },
       { ico: '2×', label: 'XP ×2', color: '#e5b400', w: 8, apply: () => { P.doubleXPActive = true; } },
       { ico: '🎁', label: 'Coffre', color: '#b25ce0', w: 4, apply: () => { const rr = rollRarity('rare'); showChestSequence(buildChestRewards(rr), rr, null); } },
@@ -3300,7 +3365,7 @@
       { ico: '⚡', label: '+25 XP', w: 18, apply: () => addXP(25) },
       { ico: '✂️', label: '50/50', w: 12, apply: () => { P.powerups.fiftyfifty++; } },
       { ico: '💎', label: '+40 💎', w: 14, apply: () => { P.gems += 40; } },
-      { ico: '❤️', label: '+1 cœur', w: 12, apply: () => { P.hearts = Math.min(5, P.hearts + 1); } },
+      { ico: '❤️', label: '+1 cœur', w: 12, apply: () => { Economy.freeHeart(P); } },
       { ico: '🛡️', label: 'Bouclier', w: 8, apply: () => { P.powerups.shield++; } },
       { ico: '⚡', label: '+60 XP', w: 8, apply: () => addXP(60) },
       { ico: '💎', label: '+120 💎', w: 5, apply: () => { P.gems += 120; } },
@@ -3649,34 +3714,17 @@
     // Les banques sont déjà dans window.X_QB (injectées par data_loader.js).
     // Ce système ajoute un chargement à la demande : on ne résout la banque
     // que quand elle est réellement nécessaire, et on trace les banques déjà prêtes.
-    const _loadedBanks = new Set();
 
     async function ensureBankLoaded(bankKey) {
-      if (_loadedBanks.has(bankKey)) return; // déjà prête
       const winKey = {
         geo: 'GEO_QB', hist: 'HIST_QB', sci: 'SCI_QB', art: 'ART_QB',
         cinema: 'CINEMA_QB', sport: 'SPORT_QB', gastro: 'GASTRO_QB',
-        mytho: 'MYTHO_QB', chateaux: 'CHATEAUX_QB', litt: 'LITT_QB', mixed: null,
+        mytho: 'MYTHO_QB', chateaux: 'CHATEAUX_QB', litt: 'LITT_QB',
+        musique: 'MUSIQUE_QB', jv: 'JV_QB', series: 'SERIES_QB',
         tf: 'TF_QB', scramble: 'SCRAMBLE_QB', extended: 'EXTENDED_QB'
       }[bankKey];
-      if (winKey && window[winKey] && window[winKey].length > 0) {
-        _loadedBanks.add(bankKey);
-        return; // data_loader.js l'a déjà injectée
-      }
-      // Banque pas encore prête : on attend l'injection. Attention, les banques
-      // "secondaires" (TF, Scramble) arrivent en arrière-plan APRÈS le signal
-      // kq:data-loaded — d'où l'écoute dédiée de kq:bank-loaded.
-      await new Promise(resolve => {
-        const finish = () => { window.removeEventListener('kq:bank-loaded', onBank); _loadedBanks.add(bankKey); resolve(); };
-        const onBank = (e) => { if (!winKey || (e.detail && e.detail.name === winKey)) check(); };
-        const check = () => {
-          if (!winKey || (window[winKey] && window[winKey].length > 0)) finish();
-        };
-        check();
-        window.addEventListener('kq:data-loaded', check, { once: true });
-        window.addEventListener('kq:bank-loaded', onBank);
-        setTimeout(finish, 10000); // filet de sécurité : fichier définitivement absent
-      });
+      const ready = () => winKey ? !!window[winKey]?.length : !!getPool(bankKey).length;
+      return BankReadiness.wait(ready);
     }
 
     function getPool(bankKey) {
@@ -3695,15 +3743,7 @@
       if (bankKey === 'jv') return window.JV_QB || [];
       if (bankKey === 'series') return window.SERIES_QB || [];
       if (bankKey === 'extended') return window.EXTENDED_QB || [];
-      if (bankKey === 'mixed' || bankKey === 'mixedAll') {
-        const all = [
-          ...(window.GEO_QB || []), ...(window.HIST_QB || []), ...(window.SCI_QB || []),
-          ...(window.ART_QB || []), ...(window.CINEMA_QB || []), ...(window.SPORT_QB || []),
-          ...(window.GASTRO_QB || []), ...(window.MYTHO_QB || []),
-          ...(window.EXTENDED_QB || []), ...(window.CHATEAUX_QB || [])
-        ];
-        return shuffle(all);
-      }
+      if (bankKey === 'mixed' || bankKey === 'mixedAll') return shuffle(GameRules.combine(window));
       if (bankKey === 'tf') return window.TF_QB || [];
       if (bankKey === 'scramble') return window.SCRAMBLE_QB || [];
       return window.GEO_QB || [];
@@ -3712,7 +3752,9 @@
     // Adaptive difficulty
     function getDifficultyPool(bankKey) {
       const pool = getPool(bankKey);
-      return filterSeenQuestions(pool);
+      const target = P.difficultyOverride?.[bankKey] || P.adventureDifficulty || 'easy';
+      const selected = pool.filter(q => q.difficulty === target);
+      return filterSeenQuestions(selected.length >= 5 ? selected : pool);
     }
 
     // ===== MASTERY TREE PAR CATÉGORIE =====
@@ -3796,7 +3838,7 @@
         if (P.hearts < 5) {
           const elapsed = Date.now() - P.lastHeartTime;
           if (elapsed >= (hasTalent('t_heart_fast') ? 1800000 : 3600000)) {
-            P.hearts = Math.min(5, P.hearts + 1);
+            Economy.freeHeart(P);
             P.lastHeartTime = Date.now();
             save(); updateUI();
             showHeartNotif();
@@ -3867,7 +3909,8 @@
       const acc = document.getElementById('profAccessory');
       if (acc) { acc.textContent = P.avatarStyle.hat || ''; acc.style.display = P.avatarStyle.hat ? 'block' : 'none'; }
       AvatarRewards.profile(document.getElementById('profAvCont'), P.avatar, HAT_CATALOG.find(item => item.ico === P.avatarStyle.hat));
-      AvatarRewards.render(document.getElementById('avatarWardrobe'), P, HAT_CATALOG, buyOrEquipHat);
+      if (document.getElementById('scrProfile').classList.contains('active')) AvatarRewards.render(document.getElementById('avatarWardrobe'), P, HAT_CATALOG, buyOrEquipHat);
+      Experience.profilePicker(AVATARS);
 
       const al = document.getElementById('achList');
       if (al) { al.innerHTML = ''; window.ACHIEVEMENTS.forEach(a => { const u = P.achievements.includes(a.id); al.innerHTML += `<div class="ach-card ${u ? 'unlocked' : ''}" title="${a.desc || ''}"><span class="ach-ico">${a.ico}</span><span class="ach-name">${a.name}</span></div>`; }); }
@@ -3887,7 +3930,7 @@
       buildHistoryLog();
 
       const dq = document.getElementById('dailyQuestContainer');
-      if (dq) { const today = new Date().toISOString().split('T')[0]; dq.innerHTML = P.lastQuestDate === today ? `<div class="daily-quest-card"><div class="dq-info"><div class="dq-title">Quête Quotidienne</div><div class="dq-status">✅ Terminé !</div></div><div style="font-size:20px">🎁</div></div>` : `<div class="daily-quest-card"><div class="dq-info"><div class="dq-title">Quête Quotidienne</div><div class="dq-status">Réponds à 15 questions → 10 💎</div></div><div style="font-size:20px">🎯</div></div>`; }
+      if (dq) { const today = todayStr(); dq.innerHTML = P.lastQuestDate === today ? `<div class="daily-quest-card"><div class="dq-info"><div class="dq-title">Quête Quotidienne</div><div class="dq-status">✅ Terminé !</div></div><div style="font-size:20px">🎁</div></div>` : `<div class="daily-quest-card"><div class="dq-info"><div class="dq-title">Quête Quotidienne</div><div class="dq-status">Réponds à 15 questions → 10 💎</div></div><div style="font-size:20px">🎯</div></div>`; }
 
       buildEventBanner();
       renderDailyMissionsCard();
@@ -4005,7 +4048,7 @@
       const aDiv = document.getElementById('shopAccessories');
       if (aDiv) renderHatShop(aDiv);
       const cDiv = document.getElementById('shopConsumables');
-      if (cDiv) { cDiv.innerHTML = `<div class="shop-item"><div class="shop-info"><div class="shop-ico">❤️</div><div class="shop-details"><div class="shop-name">Cœur de vie</div><div class="shop-desc">Récupère 1 cœur</div></div></div><button class="btn-buy" onclick="buyItem('heart',10)">💎 10</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">💰</div><div class="shop-details"><div class="shop-name">Boost XP</div><div class="shop-desc">+50 XP instantané</div></div></div><button class="btn-buy" onclick="buyItem('xp',15)">💎 15</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">💰</div><div class="shop-details"><div class="shop-name">Pack Questions</div><div class="shop-desc">Débloque 30 questions événementielles</div></div></div><button class="btn-buy" onclick="buyItem('eventpack',50)">💎 50</button></div>`; }
+      if (cDiv) { cDiv.innerHTML = `<div class="shop-item"><div class="shop-info"><div class="shop-ico">❤️</div><div class="shop-details"><div class="shop-name">Cœur de vie</div><div class="shop-desc">Récupère 1 cœur</div></div></div><button class="btn-buy" onclick="buyItem('heart',10)">💎 10</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">💰</div><div class="shop-details"><div class="shop-name">Boost XP</div><div class="shop-desc">+50 XP instantané</div></div></div><button class="btn-buy" onclick="buyItem('xp',15)">💎 15</button></div>`; }
       const chDiv = document.getElementById('shopChance');
       if (chDiv) { chDiv.innerHTML = `<div class="shop-item"><div class="shop-info"><div class="shop-ico">🎡</div><div class="shop-details"><div class="shop-name">Roue de la Chance</div><div class="shop-desc">Un tour = 40 💎 — un prix garanti à chaque tour !</div></div></div><button class="btn-buy" onclick="openWheel()">Jouer</button></div><div class="shop-item"><div class="shop-info"><div class="shop-ico">🎟️</div><div class="shop-details"><div class="shop-name">Carte à Gratter</div><div class="shop-desc">25 💎 la carte — gratte la zone argentée pour découvrir ton lot !</div></div></div><button class="btn-buy" onclick="openScratch()">Jouer</button></div>`; }
       renderCosmeticsShop();
@@ -4014,25 +4057,7 @@
 
     // ===== COSMÉTIQUES (accessoires avatar) =====
     // Achetés UNE SEULE FOIS (P.ownedHats), puis on s'équipe / se déséquipe gratuitement.
-    const HAT_CATALOG = [
-      { id: 'cap',     ico: '🧢', name: 'Casquette décontractée', desc: 'Style détente',     cost: 10 },
-      { id: 'scarf',   ico: '🧣', name: 'Écharpe chaleureuse',    desc: 'Pour les révisions d\'hiver', cost: 12 },
-      { id: 'cool',    ico: '🕶️', name: 'Lunettes cool',          desc: 'Impossible de te distraire', cost: 15 },
-      { id: 'chic',    ico: '👒', name: 'Chapeau chic',           desc: 'Élégance absolue',   cost: 18 },
-      { id: 'tophat',  ico: '🎩', name: 'Chapeau haut-de-forme',  desc: 'Style classique',    cost: 25 },
-      { id: 'cowboy',  ico: '🤠', name: 'Chapeau de cowboy',      desc: 'Sherif du quiz',     cost: 25 },
-      { id: 'grad',    ico: '🎓', name: 'Diplôme de savoir',      desc: 'La science en plus', cost: 30 },
-      { id: 'hat',     ico: '👑', name: 'Couronne royale',        desc: 'Accessoire avatar',  cost: 30 },
-      { id: 'pumpkin', ico: '🎃', name: 'Citrouille festive',     desc: 'Spécial Halloween',  cost: 30, event: 'halloween' },
-      { id: 'star',    ico: '✨', name: 'Étoile filante',         desc: 'Brille sous les confettis', cost: 45 },
-      { id: 'wizard',  ico: '🧙', name: 'Chapeau de sorcier',     desc: 'Magie des connaissances', cost: 50 },
-      { id: 'rainbow', ico: '🌈', name: 'Arc-en-ciel',            desc: 'L\'accessoire ultime', cost: 80 },
-      // Chapeaux événementiels : visibles uniquement pendant leur événement (P4)
-      { id: 'backpack', ico: '🎒', name: 'Cartable de Rentrée',   desc: 'Spécial Rentrée des Classes', cost: 35, event: 'rentree' },
-      { id: 'santahat', ico: '🎅', name: 'Bonnet de Noël',        desc: 'Spécial Noël Culturel', cost: 40, event: 'noel' },
-      { id: 'cupid',   ico: '💘', name: 'Diadème Cupidon',        desc: 'Spécial Saint-Valentin', cost: 35, event: 'saintval' },
-      ...AvatarRewards.items,
-    ];
+    const HAT_CATALOG = [...Economy.cosmetics, ...AvatarRewards.items];
     function ensureHatInventory() {
       // Migration : un accessoire déjà porté devient la possession d'origine
       if (!P.ownedHats) P.ownedHats = [];
@@ -4082,12 +4107,18 @@
     }
 
     function buyPowerup(id, cost) {
+      const item = POWERUP_SHOP.find(item => item.id === id);
+      if (!item) return;
+      cost = item.cost;
       if (P.gems < cost) { showToast('💎 Pas assez de gemmes !'); return; }
       P.gems -= cost; P.powerups[id]++;
       save(); updateUI(); showToast(`${id === 'fiftyfifty' ? '✂️' : id === 'shield' ? '🛡️' : id === 'streakFreeze' ? '🧊' : '⚡'} Power-up acheté !`);
     }
 
     function buyItem(type, cost) {
+      const prices = {heart:10,xp:15};
+      if (!Object.hasOwn(prices,type)) { showToast('Cet article est indisponible.'); return; }
+      cost = prices[type];
       if (P.gems < cost) { showToast('💎 Pas assez de gemmes !'); return; }
       P.gems -= cost;
       if (type === 'heart') { P.hearts = P.hearts + 1; showToast('❤️ +1 cœur !'); }  // achat sans plafond
@@ -4098,17 +4129,13 @@
 
     // Achat de vies (section ❤️ Vies de la boutique) — n=99 ⇒ recharge à 5
     function buyLives(n, cost) {
-      if (P.gems < cost) { showToast('💎 Pas assez de gemmes !'); return; }
-      P.gems -= cost;
-      if (n >= 99) {
-        const missing = Math.max(0, 5 - P.hearts);
-        P.hearts = 5;
-        showToast(missing > 0 ? `⚡ Rechargé à 5 cœurs (+${missing}) !` : '⚡ Cœurs déjà au maximum !');
-      } else {
-        P.hearts = P.hearts + n;
-        showToast(`❤️ +${n} cœur${n > 1 ? 's' : ''} !`);
-      }
-      try { kqTrack('purchase', { item_type: 'lives', qty: n, cost_gems: cost, balance_after: P.gems }); } catch (_) {}
+      if (!Object.hasOwn(Economy.lives, n)) return;
+      cost = Economy.lives[n];
+      const before = P.hearts;
+      const result = n === 99 ? Economy.refill(P) : Economy.spend(P, cost, () => { P.hearts += n; });
+      if (!result.ok) { showToast(result.reason === 'full' ? '❤️ Cœurs déjà au maximum : aucun achat nécessaire.' : '💎 Pas assez de gemmes !'); return; }
+      showToast(`❤️ +${P.hearts-before} cœur${P.hearts-before>1?'s':''} !`);
+      try { kqTrack('purchase', { item_type:'lives', qty:n, cost_gems:cost, balance_after:P.gems }); } catch (_) {}
       save(); updateUI();
     }
 
@@ -4150,6 +4177,7 @@
 
     // ===== NAVIGATION =====
     function switchTab(t) {
+      modeStarts.cancel();
       Motion.reading(false);
       ['Home', 'Learn', 'Classement', 'Shop', 'Profile'].forEach(s => {
         const el = document.getElementById('scr' + s); if (el) el.classList.remove('active');
@@ -4162,6 +4190,8 @@
       if (t === 'Classement') renderClassement();
       if (t === 'Profile' || t === 'Shop') { _shopBuilt = false; updateUI(); }
       updateCompanionVisibility();
+      Experience.accessible();
+      Experience.progress(P, window.ROAD || []);
     }
 
     // ===== ROADMAP — CHAPTER THEMES =====
@@ -4401,6 +4431,8 @@
         setTimeout(() => showChapterUnlock(ch, activeTheme), 350);
       }
 
+      Experience.progress(P, roadData);
+      Destinations.road(P, roadData);
       _prevCurrentNodeId = newlyCurrentNodeId;
       _roadRenderedOnce = true;
     }
@@ -4526,6 +4558,7 @@
         (window.SCRAMBLE_QB || []).length >= 5);
       if (types.length === 0) return;
       road.forEach((ch, ci) => {
+        if (ci === 0) return;
         const rng = mulberry32(hashStr(ch.name || 'ch' + ci) + ci * 7919);
         const nodes = ch.nodes.filter(n => n.type !== 'chest');
         if (nodes.length < 3) return;
@@ -4542,7 +4575,9 @@
           [pool[i], pool[j]] = [pool[j], pool[i]];
         }
         positions.slice(0, 2).forEach((nodeIdx, k) => {
-          ROAD_VARIANTS[nodes[nodeIdx].id] = pool[k % pool.length];
+          const node = nodes[nodeIdx];
+          const eligible = pool.filter(type => type !== 'tour' || node.bank === 'geo');
+          if (eligible.length) ROAD_VARIANTS[node.id] = eligible[k % eligible.length];
         });
       });
     }
@@ -4562,8 +4597,8 @@
 
     function launchRoadLesson(node) {
       const variant = roadNodeVariant(node);
-      if (variant === 'tf') startQuizFlow(Math.min(node.qCount, 8), node.id, 'tf');
-      else if (variant === 'scramble') startQuizFlow(Math.min(node.qCount, 5), node.id, 'scramble');
+      if (variant === 'tf') startQuizFlow(Math.min(node.qCount, 8), node.id, 'tf', node.bank);
+      else if (variant === 'scramble') startQuizFlow(Math.min(node.qCount, 5), node.id, 'scramble', node.bank);
       else if (variant === 'tour') startRoadTour(node);
       else startQuizFlow(node.qCount, node.id, 'qcm', node.bank);
     }
@@ -4604,6 +4639,14 @@
         document.getElementById('nodeModal').classList.remove('open');
         launchRoadLesson(node);
       };
+    }
+    function setAdventureDifficulty(level) {
+      if (!['easy','medium','hard'].includes(level)) return;
+      P.adventureDifficulty = level; save(); Experience.progress(P, window.ROAD || []);
+    }
+    function setPlayerAvatar(avatar) {
+      if (!AVATARS.includes(avatar)) return;
+      P.avatar = avatar; save(); updateUI(); Experience.progress(P, window.ROAD || []);
     }
     function setNodeDifficulty(bank, diff) {
       if (!P.difficultyOverride) P.difficultyOverride = {};
@@ -4814,10 +4857,10 @@
       triggerAtlasUnlockAnimation(cardId);
       // 🌍 Mode Atlas animé : zoom + ring sur le globe si la carte a des coords
       if (card.lat !== undefined && card.lng !== undefined && GLOBE) {
-        setTimeout(() => {
+        mapTasks.later(() => {
           GLOBE.pointOfView({ lat: card.lat, lng: card.lng, altitude: 1.4 }, 1200);
           GLOBE.ringsData([{ lat: card.lat, lng: card.lng, color: 'rgba(255,215,0,0.8)' }]);
-          setTimeout(() => GLOBE.ringsData([]), 3000);
+          mapTasks.later(() => GLOBE.ringsData([]), 3000);
         }, 400);
       }
     }
@@ -4883,6 +4926,12 @@
 
     // ===== QUIZ ENGINE =====
     async function startMode(mode) {
+      modeStarts.cancel();
+      const stillWanted = modeStarts.checkpoint();
+      if (!['tf', 'scramble'].includes(mode) && !getPool('mixed').length) {
+        showToast('Les questions sont en cours de chargement. Réessaie dans un instant.');
+        return false;
+      }
       Tutorial.notify('mode_started');
       if (mode === 'tf') {
         if (!window.TF_QB || window.TF_QB.length === 0) {
@@ -4890,6 +4939,7 @@
           showToast('⏳ Chargement des questions Vrai/Faux…');
           await ensureBankLoaded('tf');
         }
+        if (!stillWanted()) return false;
         if (!window.TF_QB || window.TF_QB.length === 0) {
           showToast('❌ Vrai/Faux indisponible (tf_questions.json manquant dans data/)'); return;
         }
@@ -4900,6 +4950,7 @@
           showToast('⏳ Chargement du Méli-Mélo…');
           await ensureBankLoaded('scramble');
         }
+        if (!stillWanted()) return false;
         if (!window.SCRAMBLE_QB || window.SCRAMBLE_QB.length === 0) {
           showToast('❌ Méli-Mélo indisponible (scramble_questions.json manquant dans data/)'); return;
         }
@@ -4922,8 +4973,12 @@
     }
 
     function startRevision() {
-      if (P.mistakes.length === 0) { showToast('Aucune erreur à réviser !'); return; }
-      startQuizFlow(Math.min(10, P.mistakes.length), 'Revision', 'mistakes');
+      const missing = (P.cloudMistakeIds || []).map(findQuestionById).filter(Boolean);
+      for (const question of missing) if (!P.mistakes.some(q => q.id === question.id)) P.mistakes.push(question);
+      _srsPool = Object.entries(P.srs || {}).filter(([,entry]) => entry?.due <= todayStr()).sort((a,b) => a[1].due.localeCompare(b[1].due)).map(([id]) => findQuestionById(id)).filter(Boolean);
+      if (!_srsPool.length) _srsPool = P.mistakes;
+      if (!_srsPool.length) { showToast('Aucune erreur à réviser pour le moment.'); return; }
+      startQuizFlow(Math.min(10, _srsPool.length), 'Revision', 'revision');
     }
 
     // ===== MODE QUESTIONS PIÈGES (communauté) =====
@@ -4931,12 +4986,16 @@
     // (id + stats) ; le jeu les retrouve dans ses banques locales — aucun
     // contenu dupliqué. XP ×2 sur toute la session.
     async function startPiegesMode() {
+      modeStarts.cancel();
+      const stillWanted = modeStarts.checkpoint();
       showToast('⏳ Chargement des questions pièges…');
       let traps = null;
       try {
         traps = await _lbFetch('/pieges', 8000);
+        if (!stillWanted()) return false;
         try { localStorage.setItem('kq_pieges_cache', JSON.stringify({ t: Date.now(), traps: traps.traps })); } catch (_) {}
       } catch (_) {
+        if (!stillWanted()) return false;
         try {
           const c = JSON.parse(localStorage.getItem('kq_pieges_cache') || 'null');
           if (c && c.traps) { traps = { traps: c.traps }; showToast('📶 Hors-ligne — dernière liste en cache'); }
@@ -4958,25 +5017,21 @@
         return;
       }
       startSession('pieges');
-      Q = { mode: 'pieges', type: 'qcm', qs, idx: 0, correct: 0, totalXP: 0,
-            state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
-            retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
-            duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null,
-            chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'pieges', type: 'qcm', qs, chainBroken: false });
       launchQuizScreen();
     }
 
     // Chrono mode
     function startChronoMode() {
       const pool = shuffle(filterSeenQuestions(getPool('mixed'))).slice(0, 10);
-      Q = { mode: 'chrono', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'chrono', type: 'qcm', qs: pool, chainBroken: false });
       launchQuizScreen();
     }
 
     // Survie mode
     function startSurvieMode() {
       const pool = shuffle(getPool('mixed'));
-      Q = { mode: 'survie', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'survie', type: 'qcm', qs: pool, chainBroken: false });
       Q.survieForgiven = false;
       launchQuizScreen();
     }
@@ -4984,7 +5039,7 @@
     // Duel mode
     function startDuelMode() {
       const pool = shuffle(filterSeenQuestions(getPool('mixed'))).slice(0, 10);;
-      Q = { mode: 'duel', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'duel', type: 'qcm', qs: pool, chainBroken: false });
       launchQuizScreen();
     }
 
@@ -4994,7 +5049,7 @@
       // sur la banque mixte, le mode démarre avec un pool vide et est injouable.
       const src = (window.FLASH_QB && window.FLASH_QB.length > 0) ? window.FLASH_QB : getPool('mixed');
       const pool = shuffle(src).slice(0, 8);
-      Q = { mode: 'flash', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'flash', type: 'qcm', qs: pool, chainBroken: false });
       launchQuizScreen();
     }
 
@@ -5011,7 +5066,7 @@
         chain = { title: 'Chaîne du savoir', ids: [] };
         qs = shuffle(allPool).slice(0, 10);
       }
-      Q = { mode: 'chaine', type: 'qcm', qs: shuffle(filterSeenQuestions(qs)), idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: chain, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'chaine', type: 'qcm', qs: shuffle(filterSeenQuestions(qs)), chain: chain, chainBroken: false });
       launchQuizScreen();
     }
 
@@ -5019,18 +5074,29 @@
       if (P.hearts <= 0 && !['infinite', 'Revision', 'Mastery', 'chrono', 'survie', 'duel', 'flash', 'chaine', 'daily', 'scramble'].includes(modeId) && !modeId.startsWith('cat_')) {
         document.getElementById('scrNoHearts').style.display = 'flex'; updateUI(); return;
       }
-      startSession(bankKey === 'seasonal' ? 'seasonal' : 'normal'); // ← Patch Collecte v2
       let pool = [];
-      if (type === 'mistakes') pool = shuffle([...P.mistakes]).map(shuffleAnswerOrder);
+      if (type === 'revision') pool = [..._srsPool].map(shuffleAnswerOrder);
+      else if (type === 'mistakes') pool = shuffle([...P.mistakes]).map(shuffleAnswerOrder);
       else if (type === 'tf') pool = shuffle(window.TF_QB);
       else if (type === 'scramble') pool = shuffle(window.SCRAMBLE_QB);
       else if (bankKey === 'seasonal') pool = shuffle(getSeasonalQB());
-      else pool = shuffle(getDifficultyPool(bankKey));
-      Q = { mode: modeId, type: type, qs: pool.slice(0, count), idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false };
+      else pool = shuffle(modeId === 'infinite' ? filterSeenQuestions(getPool(bankKey)) : getDifficultyPool(bankKey)).map(shuffleAnswerOrder);
+      if (!pool.length) { showToast('Questions indisponibles pour le moment. Réessaie après leur chargement.'); return false; }
+      startSession(bankKey === 'seasonal' ? 'seasonal' : 'normal');
+      const storyNode = (window.ROAD || []).flatMap(chapter => chapter.nodes).find(node => node.id === modeId);
+      if (storyNode) {
+        if (type === 'tf' || type === 'scramble') { const themed = pool.filter(q => q.cat === storyNode.bank); if (themed.length >= count) pool = themed; }
+        pool = shuffle(Adventure.questionsForNode(storyNode, window.ROAD, pool));
+      }
+      Q = SessionState.create({ mode: modeId, type: type, qs: pool.slice(0, count), chainBroken: false });
       launchQuizScreen();
     }
 
     function launchQuizScreen() {
+      if (!Q.qs?.length) { showToast('Aucune question disponible pour cette partie.'); return false; }
+      modeStarts.cancel();
+      resultTasks.cancel();
+      quizTasks.cancel();
       document.getElementById('topbar').style.display = 'none';
       document.getElementById('bnav').style.display = 'none';
       document.getElementById('scrQuiz').classList.add('active');
@@ -5053,6 +5119,7 @@
 
     function renderQ() {
       renderStoryStatus();
+      document.getElementById('revisionSchedule')?.remove();
       const giftNotice = document.getElementById('storyGiftNotice');
       if (giftNotice) { giftNotice.hidden = true; giftNotice.textContent = ''; }
       Motion.reading(true);
@@ -5113,7 +5180,7 @@
       } else { combo.style.display = 'none'; }
 
       const wl = document.getElementById('wikiLink');
-      if (q.wikipedia) { wl.href = q.wikipedia; wl.style.display = 'block'; } else { wl.style.display = 'none'; }
+      if (/^https?:\/\//i.test(q.wikipedia || '')) { wl.href = q.wikipedia; wl.rel = 'noopener noreferrer'; wl.style.display = 'block'; } else { wl.style.display = 'none'; }
 
       if (Q.mode === 'survie') {
         const sh = document.getElementById('survieHeader');
@@ -5237,6 +5304,7 @@
     function handleAction() { if (Q.state === 'selecting') checkAnswer(); }
 
     function checkAnswer() {
+      if (Q.state !== 'selecting' || !Q.qs[Q.idx]) return;
       stopTimer();
       Q.state = 'checked';
       const q = Q.qs[Q.idx]; let isCorrect = false;
@@ -5305,10 +5373,10 @@
         if (atlasId && !P.atlas.includes(atlasId)) {
           P.atlas.push(atlasId); Q.newAtlasCards++;
           // Pendant un combat, les découvertes sont réunies dans le résultat.
-          if (Q.mode !== 'boss') setTimeout(() => triggerDiscovery(atlasId), 600);
+          if (Q.mode !== 'boss') quizTasks.later(() => triggerDiscovery(atlasId), 600);
         }
         P.totalCorrect++;
-        const today = new Date().toISOString().split('T')[0];
+        const today = todayStr();
         if (P.lastQuestDate !== today && P.totalCorrect % 15 === 0) { P.gems += 10; P.lastQuestDate = today; showToast('🎯 Quête quotidienne ! +10 💎'); }
         // Mission tracking
         updateMissionProgress('correct', 1);
@@ -5317,13 +5385,13 @@
         if (Q.mode === 'duel') {
           Q.duelAiHP = Math.max(0, Q.duelAiHP - 1);
           document.getElementById('duelThinking').style.display = 'block';
-          setTimeout(() => {
+          quizTasks.later(() => {
             document.getElementById('duelThinking').style.display = 'none';
             if (Math.random() < Q.duelAiDiff) {
               Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 0.5);
               showToast('🤖 Le bot contre-attaque !');
             }
-            if (Q.duelAiHP <= 0) { setTimeout(() => { document.getElementById('vBanner').querySelectorAll('button')[0].click(); }, 300); }
+            if (Q.duelAiHP <= 0) { quizTasks.later(() => { document.getElementById('vBanner').querySelectorAll('button')[0].click(); }, 300); }
           }, 1200);
         }
         if (Q.mode === 'boss') {
@@ -5366,16 +5434,16 @@
 
         if (Q.mode === 'survie') {
           if (hasTalent('t_survie_coeur') && !Q.survieForgiven) { Q.survieForgiven = true; showToast('💀 Cœur de survivant : erreur pardonnée !'); }
-          else { Q.survieErrors++; if (Q.survieErrors >= 3) { audio.playGameOver(); setTimeout(() => showResult(), 400); return; } }
+          else { Q.survieErrors++; if (Q.survieErrors >= 3) { audio.playGameOver(); quizTasks.later(() => showResult(), 400); } }
         }
-        if (Q.mode === 'duel') { Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1); if (Q.duelPlayerHP <= 0) { audio.playGameOver(); setTimeout(() => showResult(), 400); return; } }
+        if (Q.mode === 'duel') { Q.duelPlayerHP = Math.max(0, Q.duelPlayerHP - 1); if (Q.duelPlayerHP <= 0) { audio.playGameOver(); quizTasks.later(() => showResult(), 400); } }
         if (Q.mode === 'boss') {
           resolveBossTurn(false);
-          if (Q.duelPlayerHP <= 0) { audio.playGameOver(); scheduleBossResult(400); return; }
+          if (Q.duelPlayerHP <= 0) { audio.playGameOver(); scheduleBossResult(400); }
         }
         if (!P.mistakes.find(m => m.question === q.question)) P.mistakes.push(q);
         Q.retryQueue.push(q);
-        const card = document.getElementById('qCard'); card.classList.add('shake'); setTimeout(() => card.classList.remove('shake'), 400);
+        const card = document.getElementById('qCard'); card.classList.add('shake'); quizTasks.later(() => card.classList.remove('shake'), 400);
       }
       const donneesAEnvoyer = {
         idJoueur: P.idUnique || P.name,
@@ -5393,12 +5461,12 @@
       if (P.doubleXPActive) { P.doubleXPActive = false; document.getElementById('doubleXPBadge').style.display = 'none'; }
 
       if (Q.mode === 'chaine' && Q.chainBroken) {
-        setTimeout(() => { showToast('⛓️ Chaîne brisée ! Recommence depuis le début.'); showResult(); }, 800);
+        quizTasks.later(() => { showToast('⛓️ Chaîne brisée ! Recommence depuis le début.'); showResult(); }, 800);
         return;
       }
 
       if (Q.mode === 'duel' && Q.duelAiHP <= 0) {
-        setTimeout(() => showResult(), 400);
+        quizTasks.later(() => showResult(), 400);
         return;
       }
 
@@ -5410,6 +5478,7 @@
       const vs = document.getElementById('vStatus'); vs.textContent = isCorrect ? '✔️ Correct !' : '❌ Incorrect'; vs.className = 'v-status ' + (isCorrect ? 'c' : 'w');
       document.getElementById('vFact').textContent = q.explanation || '';
       if (isCorrect) revealStoryGift(q);
+      Experience.feedback(P, q);
       save();
     }
 
@@ -5422,6 +5491,9 @@
     }
 
     function exitQuiz() {
+      modeStarts.cancel();
+      resultTasks.cancel();
+      quizTasks.cancel();
       Motion.reading(false);
       stopTimer();
       document.getElementById('scrQuiz').classList.remove('active');
@@ -5442,11 +5514,11 @@
         if (filled) {
           el.classList.add('anim');
           el.style.animationDelay = (idx * 0.15) + 's';
-          setTimeout(() => audio.playStarPop(), idx * 150);
+          resultTasks.later(() => audio.playStarPop(), idx * 150);
         }
       });
       if (stars === 3) {
-        setTimeout(() => {
+        resultTasks.later(() => {
           [1, 2, 3].forEach(s => { const el = document.getElementById('resStar' + s); if (el) el.classList.add('glow'); });
           spawnConfetti();
           if (isNewBest && navigator.vibrate) navigator.vibrate([30, 40, 30]);
@@ -5455,8 +5527,10 @@
     }
 
     function showResult() {
-      if (Q.mode === 'boss' && Q.resultShown) return;
-      if (Q.mode === 'boss') Q.resultShown = true;
+      if (Q.resultShown) return;
+      Q.resultShown = true;
+      resultTasks.cancel();
+      quizTasks.cancel();
       document.getElementById('bossOutcome')?.remove();
       Motion.reading(false);
       stopTimer();
@@ -5519,7 +5593,7 @@
       }
 
       // 3. Streak Bonus (daily gems multiplier)
-      const today = new Date().toISOString().split('T')[0];
+      const today = todayStr();
       if (Q.mode !== 'boss' && P.streakDays >= 2) {
         const streakMult = getStreakGemMultiplier();
         const baseGems = 5; // base gems per session
@@ -5541,7 +5615,7 @@
         // Update streak days
         if (P.lastPlayDate !== today) {
           const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
-          const yStr = yesterday.toISOString().split('T')[0];
+          const yStr = GameRules.day(yesterday);
           if (P.lastPlayDate === yStr) { P.streakDays = (P.streakDays || 0) + 1; }
           else if (consumeStreakFreezeIfApplicable(today)) { P.streakDays = (P.streakDays || 0) + 1; }
           else { P.streakDays = 1; }
@@ -5565,10 +5639,10 @@
         bonusRow.style.display = 'flex';
         // Show popup for big bonuses (perfect run or daily)
         if (isPerfect) {
-          setTimeout(() => showBonusPopup('✨', 'Perfect Run !', 'Aucune erreur — Tu es imbattable !',
+          resultTasks.later(() => showBonusPopup('✨', 'Perfect Run !', 'Aucune erreur — Tu es imbattable !',
             bonusChips.map(c => c.label)), 600);
         } else if (Q.mode === 'daily') {
-          setTimeout(() => showBonusPopup('🌍', 'Défi Quotidien !', `Précision : ${acc}% — Classement mondial !`,
+          resultTasks.later(() => showBonusPopup('🌍', 'Défi Quotidien !', `Précision : ${acc}% — Classement mondial !`,
             bonusChips.map(c => c.label)), 600);
         }
       } else {
@@ -5655,7 +5729,7 @@
       // parties lancées par catégorie (avant : les cat_ n'actualisaient rien).
       if (P.lastPlayDate !== today) {
         const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
-        const yStr = yesterday.toISOString().split('T')[0];
+        const yStr = GameRules.day(yesterday);
         if (P.lastPlayDate === yStr) { P.streakDays = (P.streakDays || 0) + 1; }
         else if (consumeStreakFreezeIfApplicable(today)) { P.streakDays = (P.streakDays || 0) + 1; }
         else if (P.lastPlayDate !== today) { P.streakDays = 1; }
@@ -5668,9 +5742,9 @@
       save();
     }
 
-    function finishQuiz() { document.getElementById('bossOutcome')?.remove(); document.getElementById('scrResult').style.display = 'none'; startApp(); }
+    function finishQuiz() { resultTasks.cancel(); modeStarts.cancel(); document.getElementById('bossOutcome')?.remove(); document.getElementById('scrResult').style.display = 'none'; startApp(); accountSync?.sync(); }
     function goHomeFromHearts() { document.getElementById('scrNoHearts').style.display = 'none'; startApp(); }
-    function resetData() { if (confirm('Tout effacer ?')) { localStorage.clear(); location.reload(); } }
+    function resetData() { if (confirm('Tout effacer ?')) { accountSync?.logout(); localStorage.clear(); location.reload(); } }
 
     // ===== SAUVEGARDE : EXPORT / IMPORT =====
     // Toute la progression vit dans localStorage : un export JSON permet de la
@@ -5679,7 +5753,7 @@
       try {
         const blob = new Blob([JSON.stringify(P, null, 2)], { type: 'application/json' });
         const a = document.createElement('a');
-        const d = new Date().toISOString().split('T')[0];
+        const d = todayStr();
         a.href = URL.createObjectURL(blob);
         a.download = `knowquest_sauvegarde_${d}.json`;
         a.click();
@@ -5699,8 +5773,13 @@
             showToast('❌ Fichier de sauvegarde invalide'); return;
           }
           if (!confirm(`Importer la sauvegarde de « ${data.name} » (niveau ${data.level || '?'}) ?\nLa progression actuelle sera remplacée.`)) return;
-          P = Object.assign(P, data);
-          save(); updateUI(); buildRoad();
+          const imported = migrateProfile(ProfileStore.normalize(data, PROFILE_DEFAULTS));
+          profileStorage.backup('import');
+          const stored = profileStorage.write(imported, {replace:true});
+          if (!stored.ok) { showSaveProblem(stored); return; }
+          P = imported; document.getElementById('saveProblem')?.remove();
+          accountSync?.markDirty();
+          updateUI(); buildRoad();
           showToast('📂 Sauvegarde importée !');
         } catch (e) { showToast('❌ Fichier illisible'); }
       };
@@ -5748,7 +5827,7 @@
     }
 
     function updateDailyChallengeUI() {
-      const today = new Date().toISOString().split('T')[0];
+      const today = todayStr();
       const done = P.dailyChallengeDate === today && P.dailyChallengeDone;
       const card = document.getElementById('dailyChallengeCard');
       const doneBadge = document.getElementById('dcDoneBadge');
@@ -5769,20 +5848,16 @@
     }
 
     function startDailyChallenge() {
-      const today = new Date().toISOString().split('T')[0];
+      const today = todayStr();
       if (P.dailyChallengeDate === today && P.dailyChallengeDone) {
         showToast('✅ Défi déjà complété aujourd\'hui !'); return;
       }
       startSession('daily_challenge'); // ← Patch Collecte v2
       const pool = getDailyChallengePool();
       if (pool.length === 0) { showToast('⏳ Questions non chargées !'); return; }
-      Q = {
-        mode: 'daily', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0,
-        state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
-        retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
-        duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false,
-        bonusXP: 0, gemsEarned: 0
-      };
+      Q = SessionState.create({
+        mode: 'daily', type: 'qcm', qs: pool, bonusXP: 0, gemsEarned: 0
+      });
       launchQuizScreen();
     }
 
@@ -6046,29 +6121,7 @@
     // ===== TALENTS (progression long terme) =====
     // 1 Point de Talent gagné par niveau à partir du niveau 5.
     // Les talents se débloquent en ordre dans leur branche.
-    const TALENT_TREE = [
-      { id: 'savant', name: 'Savant 🧠', color: 'var(--blue)', talents: [
-        { id: 't_savant_geo',   ico: '🗺️', name: 'Érudit géographie', desc: '+15 % XP en géographie', cost: 1 },
-        { id: 't_savant_hist',  ico: '🏛️', name: 'Érudit histoire',    desc: '+15 % XP en histoire', cost: 1 },
-        { id: 't_savant_sci',   ico: '🔬', name: 'Érudit sciences',    desc: '+15 % XP en sciences', cost: 1 },
-        { id: 't_savant_mixed', ico: '🧩', name: 'Esprit large',       desc: '+15 % XP en culture G', cost: 2 },
-        { id: 't_polyglotte',   ico: '🌐', name: 'Polymathe',          desc: '+5 % XP sur tout', cost: 3 },
-      ]},
-      { id: 'stratege', name: 'Stratège ⚔️', color: 'var(--red)', talents: [
-        { id: 't_survie_coeur', ico: '💀', name: 'Cœur de survivant', desc: '1 erreur pardonnée par partie de Survie', cost: 1 },
-        { id: 't_boss_hp',      ico: '⚔️', name: 'Chasseur de boss',  desc: 'Les boss ont -1 HP', cost: 1 },
-        { id: 't_pitstop',      ico: '🔧', name: 'Mécano éclair',     desc: 'Pitstops à 2 boulons seulement', cost: 2 },
-        { id: 't_drs_plus',     ico: '⚡', name: 'Double DRS',        desc: 'DRS utilisable 2 fois par course', cost: 2 },
-        { id: 't_heart_fast',   ico: '❤️', name: 'Cœur endurant',     desc: 'Régénération des cœurs 2× plus rapide', cost: 3 },
-      ]},
-      { id: 'chance', name: 'Chanceux 🍀', color: 'var(--green)', talents: [
-        { id: 't_fifty3',       ico: '✂️', name: '50/50 amélioré',   desc: 'Élimine 3 mauvaises réponses', cost: 1 },
-        { id: 't_combo_shield', ico: '🛡️', name: 'Combo protégé',    desc: '1 erreur sans casser le combo, par session', cost: 2 },
-        { id: 't_coffre',       ico: '🎁', name: 'Coffres enrichis', desc: '+50 % gemmes dans les coffres', cost: 2 },
-        { id: 't_gems_session', ico: '💎', name: 'Négociateur',      desc: '+25 % gemmes de fin de session', cost: 2 },
-        { id: 't_rallye_bonus', ico: '🌍', name: 'Explorateur né',   desc: 'Bonus expédition du Rallye doublé', cost: 3 },
-      ]},
-    ];
+    const TALENT_TREE = Economy.talents;
     const TALENT_UNLOCK_LEVEL = 5;
 
     function hasTalent(id) { return !!(P.talents && P.talents[id]); }
@@ -6270,7 +6323,7 @@
     function maybeShowLocalReminder() {
       if (!P.remindersEnabled || _reminderChecked) return;
       if (!('Notification' in window) || Notification.permission !== 'granted') return;
-      const today = new Date().toISOString().split('T')[0];
+      const today = todayStr();
       if (P.lastPlayDate === today) return; // already played today
       const hour = new Date().getHours();
       const usual = getUsualPlayHour();
@@ -6304,7 +6357,7 @@
       ]).filter(q => q.difficulty === 'hard');
       const pool = hardPool.length > 0 ? hardPool.slice(0, 1) : shuffle(getPool('mixed')).slice(0, 1);
       startSession('normal');
-      Q = { mode: 'weeklyBonus', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0, state: 'selecting', selectedIdx: null, combo: 0, userSel: [], retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0, duelPlayerHP: 5, duelAiHP: 5, duelAiDiff: 0.7, chain: null, chainIdx: 0, chainBroken: false };
+      Q = SessionState.create({ mode: 'weeklyBonus', type: 'qcm', qs: pool, chainBroken: false });
       launchQuizScreen();
     }
     function claimWeeklyBonusIfApplicable(acc) {
@@ -6361,7 +6414,7 @@
       _bossCtx = { bossId, chIdx, ch };
       const boss = bossForChapter(chIdx);
       const defeated = P.bossDefeated && P.bossDefeated[bossId];
-      document.getElementById('bossIco').textContent = defeated ? '💀' : boss.ico;
+      document.getElementById('bossIco').replaceChildren(Destinations.graphic(chIdx));
       document.getElementById('bossTitle').textContent = defeated ? 'Boss déjà vaincu !' : `Boss : ${boss.name}`;
       document.getElementById('bossSub').textContent = defeated ? 'Tu as déjà triomphé de ce gardien.' : 'Bats le boss pour débloquer la suite !';
       document.getElementById('bossRewardDesc').textContent = Bosses.rewardText(boss);
@@ -6402,16 +6455,12 @@
         const fallback = shuffle(candidates.filter(q => !selected.has(q.id))).slice(0, boss.questions);
         pool.push(...fallback.slice(0, boss.questions - pool.length));
       }
-      Q = {
-        mode: 'boss', type: 'qcm', qs: pool.slice(0, boss.questions), idx: 0, correct: 0, totalXP: 0,
-        state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
-        retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
-        duelPlayerHP: 3, duelAiHP: bossHpFor(_bossCtx.chIdx), duelAiDiff: 0, chain: null, chainIdx: 0, chainBroken: false,
-        bossId: _bossCtx.bossId, bossChIdx: _bossCtx.chIdx, gemsEarned: 0,
+      Q = SessionState.create({
+        mode: 'boss', type: 'qcm', qs: pool.slice(0, boss.questions), duelPlayerHP: 3, duelAiHP: bossHpFor(_bossCtx.chIdx), duelAiDiff: 0, bossId: _bossCtx.bossId, bossChIdx: _bossCtx.chIdx, gemsEarned: 0,
         bossMaxHP: bossHpFor(_bossCtx.chIdx), bossPower: boss.power, bossTimerSec: boss.timerSec,
         bossPhase:1, bossColor:boss.color,
         bossIco: boss.ico, bossName: boss.name,
-      };
+      });
       launchQuizScreen();
     }
 
@@ -6579,7 +6628,7 @@
       if (already) { showToast('⚠️ Objectif déjà en cours pour cette catégorie !'); return; }
       const tpl = OBJECTIVE_TEMPLATES.find(t => t.cat === cat);
       if (!tpl) return;
-      const startDate = new Date().toISOString().split('T')[0];
+      const startDate = todayStr();
       const end = new Date(); end.setDate(end.getDate() + 9);
       const obj = { ...tpl, startDate, endDate: end.toISOString().split('T')[0], progress: {}, done: false };
       P.objectives.push(obj);
@@ -6590,7 +6639,7 @@
 
     function updateObjectiveProgress(cat) {
       if (!P.objectives) return;
-      const today = new Date().toISOString().split('T')[0];
+      const today = todayStr();
       P.objectives.forEach(obj => {
         if (obj.done || obj.cat !== cat) return;
         if (today > obj.endDate) { obj.done = true; return; }
@@ -6618,7 +6667,7 @@
         return;
       }
       el.innerHTML = P.objectives.map(obj => {
-        const today = new Date().toISOString().split('T')[0];
+        const today = todayStr();
         const progress = (obj.progress && typeof obj.progress === 'object') ? obj.progress : {};
         const donedays = Object.values(progress).filter(v => v >= obj.dailyGoal).length;
         const todayCount = progress[today] || 0;
@@ -7208,7 +7257,32 @@
 
     let TOUR = { active: false, idx: 0 };
 
+    // Une nouvelle activité du globe invalide les attentes et le chrono précédents.
+    function prepareMapActivity(mode = 'quiz') {
+      modeStarts.cancel();
+      resultTasks.cancel();
+      mapTasks.cancel();
+      stopMapChrono();
+      RALLYE.active = false;
+      TOUR.active = false;
+      ++_mapGeneration;
+      clearTimeout(_mapWaitTimer);
+      const screen = document.getElementById('scrMapQuiz');
+      screen.dataset.activity = mode;
+      screen.classList.remove('globe-unavailable');
+      const descriptions = {
+        rallye: ['🏆 Rallye du Monde', 'Choisis la bonne réponse pour conquérir chaque étape.'],
+        tour: ['🌍 Tour du Monde', 'Découvre chaque étape puis poursuis ton voyage.'],
+        atlas: ['📖 Atlas', 'Explore les pays et place tes repères sur le globe.'],
+        heatmap: ['🌡️ Carte de progression', 'Les couleurs donnent une estimation issue de tes résultats en géographie.'],
+      };
+      const [title, hint] = descriptions[mode] || ['🗺️ Carte Interactive', 'Clique sur un pays ou place un repère sur le globe.'];
+      screen.querySelector('.map-title').textContent = title;
+      screen.querySelector('.map-hint').textContent = hint;
+    }
+
     function startTourDuMonde() {
+      prepareMapActivity('tour');
       TOUR = { active: true, idx: 0 };
       GLOBE_MODE = 'tour';
       document.getElementById('mapModeModal').style.display = 'none';
@@ -7217,18 +7291,12 @@
       document.getElementById('bnav').style.display = 'none';
       MAP_Q = { questions: [], idx: 0, score: 0, answered: true, mode: 'tour' };
       buildWorldMap();
-      // Attend que les données GeoJSON soient disponibles avant d'afficher la première étape
-      const waitForGlobe = () => {
-        if (GLOBE_COUNTRIES.length > 0) {
-          renderTourEtape();
-        } else {
-          setTimeout(waitForGlobe, 200);
-        }
-      };
-      setTimeout(waitForGlobe, 400);
+      // Le récit reste consultable si le globe échoue ; aucune attente après la sortie.
+      waitForMap(renderTourEtape, true);
     }
 
     function renderTourEtape() {
+      if (!TOUR.active || MAP_Q.mode !== 'tour') return;
       if (TOUR.idx >= TOUR_ETAPES.length) { endTourDuMonde(); return; }
       const etape = TOUR_ETAPES[TOUR.idx];
       document.getElementById('mapQCurr').textContent = TOUR.idx + 1;
@@ -7249,12 +7317,15 @@
     }
 
     function tourNextEtape() {
+      if (!TOUR.active || MAP_Q.mode !== 'tour') return;
       TOUR.idx++;
       renderTourEtape();
     }
 
     function endTourDuMonde() {
-      P.gems += 100; P.xp += 300; save();
+      if (!TOUR.active || TOUR.idx < TOUR_ETAPES.length) return;
+      TOUR.active = false;
+      P.gems += 100; addXP(300); save();
       // Nettoie les marqueurs de tour avant de quitter
       if (GLOBE) {
         GLOBE.ringsData([]);
@@ -7263,7 +7334,7 @@
       }
       exitMapQuiz();
       GLOBE_MODE = 'quiz';
-      setTimeout(() => showBonusPopup('🌍', 'Tour du Monde complété !', '30 pays explorés !', ['🏆 +300 XP', '💎 +100 Gemmes', '🌍 Explorateur mondial !']), 300);
+      resultTasks.later(() => showBonusPopup('🌍', 'Tour du Monde complété !', '30 pays explorés !', ['🏆 +300 XP', '💎 +100 Gemmes', '🌍 Explorateur mondial !']), 300);
     }
 
     // ===== 🏆 RALLYE DU MONDE : 10 pays à conquérir en QCM géographie =====
@@ -7274,6 +7345,8 @@
     function startRoadTour(node) {
       const count = Math.min(node.qCount, 5);
       const geoPool = shuffle([...(window.GEO_QB || [])]);
+      if (!geoPool.length) { showToast('Les questions de géographie ne sont pas encore disponibles.'); return false; }
+      prepareMapActivity('rallye');
       const stages = shuffle(TOUR_ETAPES.map(e => e.name));
       const rounds = [];
       const used = new Set();
@@ -7301,12 +7374,13 @@
       document.getElementById('mapHintBtns').style.display = 'none';
       document.getElementById('mapQCurr').textContent = '1';
       document.getElementById('mapQTot').textContent = String(count);
-      const waitGlobe = () => GLOBE ? renderRallyeRound() : setTimeout(waitGlobe, 200);
-      setTimeout(waitGlobe, 400);
+      waitForMap(renderRallyeRound, true);
     }
 
     function startRallye() {
       const pool = shuffle([...(window.GEO_QB || [])]);
+      if (!pool.length) { showToast('Les questions de géographie ne sont pas encore disponibles. Réessaie dans un instant.'); return false; }
+      prepareMapActivity('rallye');
       const countryNames = (GLOBE_COUNTRIES.length
         ? GLOBE_COUNTRIES.map(f => f.properties?.NAME || f.properties?.name || '').filter(n => n.length > 3)
         : TOUR_ETAPES.map(e => e.name));
@@ -7349,8 +7423,7 @@
       document.getElementById('mapHintBtns').style.display = 'none';
       document.getElementById('mapQCurr').textContent = '1';
       document.getElementById('mapQTot').textContent = '10';
-      const waitGlobe = () => GLOBE ? renderRallyeRound() : setTimeout(waitGlobe, 200);
-      setTimeout(waitGlobe, 400);
+      waitForMap(renderRallyeRound, true);
     }
 
     function renderRallyeRound() {
@@ -7364,7 +7437,7 @@
       document.getElementById('mapNextBtn').style.display = 'none';
       document.getElementById('mapHintBtns').style.display = 'none';
       document.getElementById('mapQuestion').textContent =
-        `🏆 Rallye ${RALLYE.idx + 1}/10 — ${round.country}${RALLYE.streak >= 3 ? '  🔥×' + RALLYE.streak : ''}`;
+        `🏆 Rallye ${RALLYE.idx + 1}/${RALLYE.rounds.length} — ${round.country}${RALLYE.streak >= 3 ? '  🔥×' + RALLYE.streak : ''}`;
 
       // Le globe vole vers l'étape
       const feat = GLOBE_COUNTRIES.find(f => countryMatches(round.country, f.properties?.NAME || f.properties?.name || ''));
@@ -7401,7 +7474,7 @@
       // débloquait aussi en répondant faux)
       if (correct && q.atlasId && !P.atlas.includes(q.atlasId)) {
         P.atlas.push(q.atlasId);
-        setTimeout(() => triggerDiscovery(q.atlasId), 500);
+        mapTasks.later(() => triggerDiscovery(q.atlasId), 500);
       }
 
       // Conquête / perte du pays sur le globe
@@ -7446,6 +7519,8 @@
     }
 
     function endRallye() {
+      if (RALLYE.settled) return;
+      RALLYE.settled = true;
       RALLYE.active = false;
 
       // ── Variante nœud de route : validation de l'étape avec étoiles ──
@@ -7470,6 +7545,7 @@
         <button class="btn-action" style="max-width:150px;background:var(--bg);color:var(--text);box-shadow:0 5px 0 var(--border)" onclick="exitMapQuiz()">Retour route</button>
       </div>`;
         P.gems += RALLYE.conquered * 3;
+        save();
         return;
       }
 
@@ -7493,6 +7569,7 @@
     }
 
     function startMapQuiz(mode) {
+      prepareMapActivity(mode);
       document.getElementById('mapModeModal').style.display = 'none';
       // Mode Heatmap : affiche le globe coloré selon les stats du joueur
       if (mode === 'heatmap') {
@@ -7502,7 +7579,9 @@
         document.getElementById('bnav').style.display = 'none';
         MAP_Q = { questions: [], idx: 0, score: 0, answered: true, mode: 'heatmap' };
         buildWorldMap();
+        const generation = _mapGeneration;
         setTimeout(() => {
+          if (generation !== _mapGeneration) return;
           document.getElementById('mapQuestion').textContent = '🌡️ Heatmap — tes pays maîtrisés';
           document.getElementById('mapFeedback').textContent = '🟢 Maîtrisé  🟡 En progression  🟠 À travailler  ⚫ Non exploré';
           document.getElementById('mapFeedback').className = 'map-feedback';
@@ -7537,8 +7616,7 @@
         document.getElementById('mapQTot').textContent = '∞';
       } else {
         // Attend que le globe soit initialisé avant de lancer la première question
-        const waitGlobe = () => GLOBE ? renderMapQuestion() : setTimeout(waitGlobe, 100);
-        setTimeout(waitGlobe, 100);
+        waitForMap(renderMapQuestion);
       }
     }
 
@@ -7573,28 +7651,60 @@
         _globeLibPromise = new Promise((resolve, reject) => {
           const s = document.createElement('script');
           s.src = 'js/vendor/globe.gl.min.js';
-          s.onload = resolve;
-          s.onerror = () => { _globeLibPromise = null; reject(new Error('globe.gl indisponible')); };
+          const timeout = setTimeout(() => { s.remove(); _globeLibPromise = null; reject(new Error('Chargement du globe expiré')); }, 7500);
+          s.onload = () => { clearTimeout(timeout); resolve(); };
+          s.onerror = () => { clearTimeout(timeout); _globeLibPromise = null; reject(new Error('globe.gl indisponible')); };
           document.head.appendChild(s);
         });
       }
       return _globeLibPromise;
     }
 
+    let _mapGeneration = 0, _mapWaitTimer = null, _mapLoadFailed = false;
+    function waitForMap(ready, allowWithoutGlobe = false) {
+      clearTimeout(_mapWaitTimer);
+      const generation = _mapGeneration, deadline = Date.now() + 8000;
+      const poll = () => {
+        if (generation !== _mapGeneration || !document.getElementById('scrMapQuiz').classList.contains('active')) return;
+        if (GLOBE) { ready(); return; }
+        if (_mapLoadFailed || Date.now() >= deadline) {
+          if (allowWithoutGlobe) ready();
+          else document.getElementById('mapFeedback').textContent = 'Le globe ne peut pas être chargé. Reviens au menu puis réessaie avec une connexion.';
+          return;
+        }
+        _mapWaitTimer = setTimeout(poll, 150);
+      };
+      poll();
+    }
+    function disposeGlobe() {
+      const globe = GLOBE;
+      GLOBE = null;
+      try { globe?._destructor?.(); } catch (_) { /* Déjà détruit : poursuivre la sortie. */ }
+    }
+
     function buildWorldMap() {
+      mapTasks.cancel();
+      const generation = ++_mapGeneration;
+      _mapLoadFailed = false;
       const el = document.getElementById('globeViz');
       // Détruit l'ancienne instance pour éviter fuites mémoire + double handlers
-      if (GLOBE) {
-        try { GLOBE._destructor && GLOBE._destructor(); } catch (_) { }
-        GLOBE = null;
-      }
+      disposeGlobe();
       el.innerHTML = '<div style="display:flex;height:100%;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-weight:800;font-size:14px">🌍 Chargement du globe…</div>';
       GLOBE_COUNTRIES = [];
-      loadGlobeLib()
-        .then(() => { el.innerHTML = ''; setTimeout(() => initGlobe(el), 50); })
-        .catch(() => {
-          el.innerHTML = '<div style="display:flex;height:100%;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-weight:800;font-size:13px;text-align:center;padding:24px">⚠️ Globe indisponible (hors-ligne au premier chargement).<br>Reconnecte-toi une fois pour l\'activer.</div>';
-        });
+      const failed = () => {
+        if (generation !== _mapGeneration) return;
+        mapTasks.cancel();
+        disposeGlobe();
+        _mapLoadFailed = true;
+        document.getElementById('scrMapQuiz').classList.add('globe-unavailable');
+        el.innerHTML = '<div style="display:flex;height:100%;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-weight:800;font-size:13px;text-align:center;padding:24px">⚠️ Globe indisponible sur cet appareil ou hors connexion.<br>Le rallye et le récit du tour restent accessibles.</div>';
+      };
+      loadGlobeLib().then(() => {
+        if (generation !== _mapGeneration) return;
+        el.innerHTML = '';
+        // Les erreurs WebGL surviennent parfois après le chargement de la bibliothèque.
+        mapTasks.later(() => { try { initGlobe(el); } catch (_) { failed(); } }, 50);
+      }).catch(failed);
     }
 
     let GLOBE_MODE = 'quiz'; // 'quiz' | 'heatmap' | 'tour'
@@ -7618,6 +7728,7 @@
     }
 
     function initGlobe(el) {
+      const stillCurrent = mapTasks.checkpoint();
       const w = el.clientWidth || window.innerWidth;
       const h = el.clientHeight || window.innerHeight - 220;
 
@@ -7675,21 +7786,27 @@
         .ringPropagationSpeed(2)
         .ringRepeatPeriod(800);
 
+      // La requête appartient à cette instance : une ancienne réponse ne touche pas le nouveau globe.
+      const controller = new AbortController();
+      const releaseRequest = mapTasks.own(() => controller.abort());
       // 📦 2. Chargement des données : GeoJSON des frontières des pays
-      fetch('https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson')
+      fetch('https://raw.githubusercontent.com/vasturiano/react-globe.gl/master/example/datasets/ne_110m_admin_0_countries.geojson', {signal: controller.signal})
         .then(r => r.json())
         .then(geo => {
+          if (!stillCurrent() || !Array.isArray(geo.features)) return;
           GLOBE_COUNTRIES = geo.features;
           GLOBE.polygonsData(GLOBE_COUNTRIES);
         })
-        .catch(() => { /* hors-ligne : on continue sans frontières détaillées */ });
+        .catch(() => { /* hors-ligne ou sortie : on continue sans frontières détaillées */ })
+        .finally(releaseRequest);
 
       // ⚙️ Gestionnaire de clic sur un PAYS : vérifie la réponse à la question (modes pays)
       GLOBE.onPolygonClick(feat => {
+        if (!stillCurrent()) return;
         if (MAP_Q.mode === 'atlas') {
           feat.__guessed = true; feat.__correct = true;
           GLOBE.polygonsData([...GLOBE_COUNTRIES]);
-          setTimeout(() => { feat.__guessed = false; GLOBE.polygonsData([...GLOBE_COUNTRIES]); }, 600);
+          mapTasks.later(() => { feat.__guessed = false; GLOBE.polygonsData([...GLOBE_COUNTRIES]); }, 600);
           return;
         }
         // 🔒 Verrou IMMÉDIAT — première ligne, bloque tout double-clic
@@ -7727,6 +7844,7 @@
 
       // ⚙️ Gestionnaire de clic sur le GLOBE (océan ou repère libre)
       GLOBE.onGlobeClick(({ lat, lng }) => {
+        if (!stillCurrent()) return;
         if (MAP_Q.mode === 'atlas') { placeCity(lat, lng); return; }
         // 🔒 Verrou identique
         if (MAP_Q.answered || !MAP_Q.questions || MAP_Q.idx >= MAP_Q.questions.length) return;
@@ -7747,7 +7865,7 @@
         handleMapGuess(lat, lng, km, correct);
       });
 
-      window.addEventListener('resize', () => {
+      mapTasks.listen(window, 'resize', () => {
         if (!GLOBE) return;
         GLOBE.width(el.clientWidth || window.innerWidth).height(el.clientHeight || window.innerHeight - 220);
       });
@@ -7843,7 +7961,7 @@
       } else {
         refreshMapMarkers([{ lat: q.lat, lng: q.lng, emoji: '🎯', size: 26 }]);
       }
-      GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
+      if (GLOBE) GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
       // Feedback texte
       const fb = document.getElementById('mapFeedback');
       if (timeout) {
@@ -7934,7 +8052,7 @@
       }
 
       if (type === 'radar') {
-        GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
+        if (GLOBE) GLOBE.ringsData([{ lat: q.lat, lng: q.lng, color: 'rgba(250,204,21,0.8)' }]);
         GLOBE.pointOfView({ lat: q.lat, lng: q.lng, altitude: 2.4 }, 1200);
         fb.textContent = `📡 Zone révélée sur le globe (−5💎) — cherche dans ce secteur !`;
       }
@@ -7947,28 +8065,38 @@
     }
 
     function endMapQuiz() {
+      if (MAP_Q.settled) return;
+      MAP_Q.settled = true;
       const score = MAP_Q.score;
       const total = MAP_Q.questions?.length || 0;
       const maxScore = total * 2000; // max théorique avec ×2 chrono
-      const pct = total > 0 ? Math.round((score / (total * 1000)) * 100) : 0;
+      const pct = total > 0 ? Math.min(100, Math.round((score / maxScore) * 100)) : 0;
       const gemsEarned = Math.max(0, Math.round(score / 200));
       P.gems += gemsEarned;
-      P.xp += Math.round(score / 100);
+      addXP(Math.round(score / 100));
       save();
       exitMapQuiz();
-      setTimeout(() => {
+      resultTasks.later(() => {
         showBonusPopup('🗺️', 'Carte Interactive !',
           `Score : ${score.toLocaleString()} pts`,
-          [`🏆 ${pct}% de précision`, `💎 +${gemsEarned} Gemmes`, `⭐ +${Math.round(score / 100)} XP`]);
+          [`🏆 ${pct}% du score maximal`, `💎 +${gemsEarned} Gemmes`, `⭐ +${Math.round(score / 100)} XP`]);
       }, 300);
     }
 
     function exitMapQuiz() {
+      modeStarts.cancel();
+      mapTasks.cancel();
+      disposeGlobe();
+      ++_mapGeneration;
+      clearTimeout(_mapWaitTimer);
+      RALLYE.active = false;
+      TOUR.active = false;
       stopMapChrono();
       document.getElementById('scrMapQuiz').classList.remove('active');
       document.getElementById('topbar').style.display = 'flex';
       document.getElementById('bnav').style.display = 'flex';
       GLOBE_MODE = 'quiz';
+      accountSync?.resume();
     }
 
     // ===== ENHANCED ATLAS ANIMATION =====
@@ -8008,7 +8136,7 @@
       if (!n) { showToast('Saisis un pseudo !'); return; }
 
       P.name = n;
-      P.lastPlayDate = new Date().toISOString().split('T')[0];
+      P.lastPlayDate = todayStr();
 
       // Génération d'un identifiant vraiment unique pour le joueur
       P.idUnique = (crypto.randomUUID ? crypto.randomUUID() : (Date.now().toString(36) + Math.random().toString(36).slice(2)));
@@ -8045,6 +8173,7 @@
       // de rappel qu'une seule fois, sinon ils s'accumulent.
       if (!startApp._reminderTimer) startApp._reminderTimer = setInterval(maybeShowLocalReminder, 15 * 60000);
       const splash = document.getElementById('bootSplash'); if (splash) splash.remove();
+      accountSync?.resume();
     }
     // ===== CACHE INDEXEDDB — FILE D'ATTENTE HORS-LIGNE =====
     const API_BASE = 'https://knowquest-api.onrender.com/api';
@@ -8229,7 +8358,7 @@
     // sans préflight CORS, réponse ignorée (fire & forget). File locale
     // (localStorage) reflushée au retour du réseau. Échec = jamais bloquant.
     // ═════════════════════════════════════════════════════════════════════════════
-    const KQ_V3_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_v4/events';
+    const KQ_V3_URL = window.KQ_EVENTS_URL || 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/admin/kq_v4/events';
     const KQ_V3_KEY = 'kq_v3_2026_collecte_max';
     const KQ_V3_VERSION = '3.0.0';
     let _kqCurrentMode = null;
@@ -8451,7 +8580,7 @@
     // GET /ords/kq_lb/rank/{limit}[/{player_id}] · /day · /skills
     // CORS autorisé pour GitHub Pages + localhost ; hors-ligne → dernier cache.
     // ═════════════════════════════════════════════════════════════════════════════
-    const KQ_LB_URL = 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/kq_lb';
+    const KQ_LB_URL = window.KQ_LB_BASE || 'https://g3238bf68f96ebf-knowquestdb.adb.eu-paris-1.oraclecloudapps.com/ords/kq_lb';
     let _lbLoading = false;
 
     function _lbEsc(s) {
@@ -8801,33 +8930,17 @@
       // Les phases émergent de l'ordre des questions : 5 faciles → 5 moyennes → 5 difficiles
       const pool = [...pick('easy', 5), ...pick('medium', 5), ...pick('hard', 5)];
       while (pool.length < 15) pool.push(...shuffle(getPool('mixed')).slice(0, 15 - pool.length));
-      Q = {
-        mode: 'boss', type: 'qcm', qs: pool, idx: 0, correct: 0, totalXP: 0,
-        state: 'selecting', selectedIdx: null, combo: 0, userSel: [],
-        retryQueue: [], newAtlasCards: 0, survieErrors: 0, survieScore: 0,
-        duelPlayerHP: 3, duelAiHP: Bosses.legendary.hp, duelAiDiff: 0, chain: null, chainIdx: 0, chainBroken: false,
-        bossId: 'legend_' + currentMonthKey(), bossChIdx: 99, gemsEarned: 0,
+      Q = SessionState.create({
+        mode: 'boss', type: 'qcm', qs: pool, duelPlayerHP: 3, duelAiHP: Bosses.legendary.hp, duelAiDiff: 0, bossId: 'legend_' + currentMonthKey(), bossChIdx: 99, gemsEarned: 0,
         bossMaxHP: Bosses.legendary.hp, bossPower: 'none', bossTimerSec: Bosses.legendary.timerSec, bossColor:'#a37612',
         bossIco: b.ico, bossName: b.name, legend: true,
-      };
+      });
       launchQuizScreen();
     }
 
     // ── Thèmes de route & tenues de Chouette : la boutique de personnalisation ──
-    const ROAD_THEMES = [
-      { id: 'classic', ico: '🛤️', name: 'Classique', desc: 'Le parcours d\'origine', cost: 0 },
-      { id: 'sakura', ico: '🌸', name: 'Sakura', desc: 'Pétales roses sur la route', cost: 120, bg: 'linear-gradient(160deg,#2b0a1c,#4a1030 55%,#2b0a1c)', c1: '#ff8fb3', c2: '#b25ce0', base: '#3a1029' },
-      { id: 'ocean', ico: '🌊', name: 'Océan', desc: 'La route des profondeurs', cost: 120, bg: 'linear-gradient(160deg,#04182e,#062c4a 55%,#04182e)', c1: '#22d3ee', c2: '#1cb0f6', base: '#0a2740' },
-      { id: 'neon', ico: '🌌', name: 'Néon', desc: 'La nuit électrique', cost: 180, bg: 'linear-gradient(160deg,#0d0d1a,#1a0a2e 55%,#0d0d1a)', c1: '#22ff88', c2: '#b429ff', base: '#1e1e2f' },
-      { id: 'royal', ico: '👑', name: 'Or royal', desc: 'Pour les fins stratèges', cost: 250, bg: 'linear-gradient(160deg,#231a02,#3d2c05 55%,#231a02)', c1: '#ffd700', c2: '#ff9d00', base: '#403005' },
-    ];
-    const OWL_OUTFITS = [
-      { id: 'none', ico: '', name: 'Nature', desc: 'Chouette, tout simplement', cost: 0 },
-      { id: 'grad', ico: '🎓', name: 'Diplômée', desc: 'La sagesse incarnée', cost: 60 },
-      { id: 'pirate', ico: '🏴‍☠️', name: 'Pirate', desc: 'Cap sur le trésor du savoir', cost: 80 },
-      { id: 'santa', ico: '🎅', name: 'Père Noël', desc: 'Ho ho ho !', cost: 80, event: 'noel' },
-      { id: 'wizard', ico: '🧙', name: 'Archimage', desc: 'Magie des connaissances', cost: 120 },
-    ];
+    const ROAD_THEMES = Economy.themes;
+    const OWL_OUTFITS = Economy.owlOutfits;
 
     function applyRoadTheme() {
       const home = document.getElementById('scrHome');
@@ -8999,11 +9112,13 @@
       if (Q.mode === 'boss' && !Q.legend && powerupBar && P.powerups.fiftyfifty <= 0 && P.powerups.doubleXP <= 0) powerupBar.style.display = 'none';
       if (qHeartsEl) qHeartsEl.style.display = HEART_BAR_HIDDEN_MODES.includes(Q.mode) ? 'none' : '';
       if (qCounterEl) qCounterEl.style.display = (Q.mode === 'infinite') ? 'none' : '';
+      Experience.accessible();
       return r;
     };
     // Remplace l'affichage XP/combo par le delta Elo en mode Infini, sans toucher au calcul XP interne
     const _origCheckAnswerElo = checkAnswer;
     checkAnswer = function () {
+      if (Q.state !== 'selecting' || !Q.qs[Q.idx]) return;
       let infiniteDelta = null;
       if (Q.mode === 'infinite') {
         const q = Q.qs[Q.idx];
@@ -9019,3 +9134,43 @@
         save();
       }
     };
+
+
+    // ===== COMPTE ORACLE — ADAPTATEUR DE LA REFONTE =====
+    // Les sauvegardes locales restent prioritaires en cas de conflit d'onglets.
+    accountSync = AccountSync.create({
+      storage: localStorage,
+      getProfile: () => P,
+      canSync: () => !profileStorage.status().blocked && !profileStorage.status().error,
+      playing: () => !!document.querySelector('#scrQuiz.active, #scrMapQuiz.active') ||
+        document.getElementById('scrResult')?.style.display === 'flex' ||
+        document.getElementById('timelineModal')?.classList.contains('show'),
+      onChange: state => AccountUI.render(state),
+      onLogin: username => {
+        if (!P.name) { P.name = username; save(); _appStarted = true; startApp(); }
+      },
+      applyProfile: (remote, username) => {
+        if (remote._schema > SCHEMA_VERSION) throw Error('Cette sauvegarde utilise une version plus récente du jeu. Actualise le jeu avant de la restaurer.');
+        const restored = migrateProfile(ProfileStore.normalize(AccountSync.unpack(remote, findQuestionById), PROFILE_DEFAULTS));
+        restored.name ||= username;
+        // Paramètres de l'appareil et données de signalement non envoyés au compte.
+        for (const key of ['discordWebhook','reports','remindersEnabled']) if (P[key] !== undefined) restored[key] = P[key];
+        if (profileStorage.status().blocked) return false;
+        profileStorage.backup('oracle-before-restore');
+        const stored = profileStorage.write(restored);
+        if (!stored.ok) { showSaveProblem(stored); return false; }
+        P = restored;
+        _appStarted = true;
+        startApp();
+        return true;
+      },
+    });
+    AccountUI.mount(accountSync);
+    let accountBooted = false;
+    const bootAccount = () => {
+      if (accountBooted) return;
+      accountBooted = true;
+      accountSync.boot();
+    };
+    window.addEventListener('kq:data-loaded', bootAccount, {once:true});
+    setTimeout(bootAccount, 3500);

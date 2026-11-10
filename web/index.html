@@ -5985,7 +5985,9 @@
   <script src="js/profile-store.js?v=6d06fe26"></script>
   <link rel="stylesheet" href="account.css?v=78dc18bd">
   <script src="js/account-sync.js?v=d4e03187"></script>
-  <script src="js/account-ui.js?v=d94fb87c"></script>
+  <script src="js/account-ui.js?v=c9525ca7"></script>
+  <link rel="stylesheet" href="onboarding.css?v=a8092da9">
+  <script src="js/onboarding.js?v=4ade7627"></script>
   <script src="js/avatar-rewards.js?v=b463924b"></script>
   <link rel="stylesheet" href="bosses.css?v=85915710">
   <script src="js/bosses.js?v=53321dff"></script>
@@ -6000,18 +6002,36 @@
 
     <!-- ONBOARDING -->
     <div class="screen active" id="scrOnboard">
-      <div class="mascot-wrap mascot-wave" id="mascotOnboard" style="width:130px;height:140px;margin:0 auto 6px"></div>
-      <div class="ob-title">KnowQuest</div>
-      <div class="ob-sub">Bienvenue🚀</div>
-      <div class="onboard-account-actions">
-        <button class="account-button onboard-create" onclick="openAuthModal('register')">Créer mon compte</button>
-        <button class="account-onboard" onclick="openAuthModal('login')">Déjà un compte ? Se connecter</button>
-        <p class="onboard-account-hint">Retrouve ta progression sur tes appareils.</p>
+      <header class="onboarding-header"><span class="onboarding-logo" aria-hidden="true">k</span>KnowQuest</header>
+      <div class="onboarding-shell">
+        <div class="mascot-wrap mascot-idle onboarding-mascot" id="mascotOnboard" aria-hidden="true"></div>
+        <section id="obWelcome">
+          <h1>Cultive ta curiosité.</h1>
+          <p class="onboarding-description">Une aventure à ton rythme.<br>Des découvertes à chaque étape.</p>
+          <button class="onboarding-primary" onclick="openAuthModal('register')">Créer mon compte</button>
+          <button class="onboarding-secondary" onclick="openAuthModal('login')">Déjà un compte ? Se connecter</button>
+          <div class="onboarding-divider">ou</div>
+          <button class="onboarding-link" onclick="OnboardingUI.showGuest()">Essayer sans compte</button>
+          <p class="onboarding-hint">Retrouve ta progression sur tes appareils.</p>
+        </section>
+        <section id="obGuestName" hidden>
+          <button class="onboarding-back" onclick="OnboardingUI.welcome()">← Retour</button>
+          <p class="onboarding-step">Premiers pas · 1 / 2</p><h2>Comment t’appelles-tu ?</h2>
+          <label class="onboarding-field" for="obName">Ton pseudo</label>
+          <input type="text" class="ob-input" id="obName" placeholder="Explorateur" maxlength="15" autocomplete="nickname" aria-describedby="obError">
+          <p id="obError" class="onboarding-error" role="alert"></p>
+          <button id="obGuestNext" class="onboarding-primary" onclick="OnboardingUI.guestAvatar()">Continuer</button>
+        </section>
+        <section id="obGuestAvatar" hidden>
+          <button class="onboarding-back" onclick="OnboardingUI.showGuest()">← Retour</button>
+          <p class="onboarding-step">Premiers pas · 2 / 2</p><h2>Choisis ton compagnon.</h2>
+          <p class="onboarding-description">Tu pourras le changer dans ton profil.</p>
+          <div class="av-grid onboarding-avatars" id="obAvGrid" aria-label="Choix de l’avatar"></div>
+          <div class="onboarding-preview"><span id="obAvatarPreview" role="img" aria-label="Lion">🦁</span><strong id="obAvatarName">Lion</strong></div>
+          <button class="ob-btn onboarding-primary" onclick="OnboardingUI.finishGuest()">Démarrer l'aventure</button>
+        </section>
       </div>
-      <p class="onboard-guest-label">Ou joue sans compte</p>
-      <input type="text" class="ob-input" id="obName" placeholder="Ton pseudo" maxlength="15">
-      <div class="av-grid" id="obAvGrid"></div>
-      <button class="ob-btn" onclick="finishOnboard()">Démarrer l'aventure</button>
+      <p class="onboarding-footer">Le monde est plein de choses à apprendre.</p>
     </div>
 
     <!-- TOPBAR -->
@@ -7039,27 +7059,45 @@
   </div><!-- .app -->
 
   <div class="modal-bg" id="authModal" role="dialog" aria-labelledby="amTitle">
-    <div class="modal-content">
+    <div class="modal-content onboarding-auth">
+      <div id="mascotAuth" class="mascot-wrap mascot-idle onboarding-mascot" aria-hidden="true"></div>
+      <div id="amRequired" class="onboarding-required" hidden>
+        <strong>Garde toutes tes découvertes.</strong>
+        <p>Crée un compte ou connecte-toi pour continuer. Tes statistiques restent conservées sur cet appareil.</p>
+        <button id="amExport" type="button" class="onboarding-link">Exporter ma sauvegarde</button>
+      </div>
+      <button id="amBack" class="onboarding-back" type="button">← Retour</button>
+      <p id="amStep" class="onboarding-step"></p>
       <h2 id="amTitle">Se connecter</h2>
-      <p>Un compte pour retrouver ta progression sur tes appareils.</p>
-      <form id="authForm">
+      <p id="amDescription" class="onboarding-description">Un compte pour retrouver ta progression sur tes appareils.</p>
+      <form id="authForm" novalidate>
+        <div id="amUserWrap">
         <label for="amUser">Pseudo du compte</label>
-        <input id="amUser" name="username" autocomplete="username" maxlength="20" required>
+        <input id="amUser" name="username" autocomplete="username" maxlength="20" aria-describedby="amErr" required>
+        </div>
+        <div id="amPassWrap" hidden>
         <label for="amPass">Mot de passe</label>
-        <input id="amPass" name="password" type="password" autocomplete="current-password" minlength="6" required>
+        <input id="amPass" name="password" type="password" autocomplete="current-password" minlength="6" aria-describedby="amErr" required>
+        </div>
         <div id="amConfirmWrap" hidden>
           <label for="amPass2">Confirmer le mot de passe</label>
-          <input id="amPass2" type="password" autocomplete="new-password">
+          <input id="amPass2" type="password" autocomplete="new-password" aria-describedby="amErr">
+        </div>
+        <div id="amAvatarWrap" hidden>
+          <div id="amAvGrid" class="av-grid onboarding-avatars" aria-label="Choix de l’avatar du compte"></div>
+          <div class="onboarding-preview"><span id="amAvatarPreview" role="img" aria-label="Lion">🦁</span><strong id="amAvatarName">Lion</strong></div>
         </div>
         <p id="amErr" role="status" aria-live="polite"></p>
         <div class="account-actions">
-          <button class="account-button" id="amBtn" type="submit">Se connecter</button>
+          <button class="onboarding-primary" id="amNext" type="button">Continuer</button>
+          <button class="onboarding-primary" id="amBtn" type="submit" hidden>Se connecter</button>
           <button class="account-button" id="amCancel" type="button">Annuler</button>
         </div>
       </form>
+      <button id="amSwitch" class="onboarding-link" type="button">Créer un compte</button>
     </div>
   </div>
-  <script src="js/game.js?v=821b7b53"></script>
+  <script src="js/game.js?v=60f1108d"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
   <script src="data_loader.js?v=4d33af32"></script>
 

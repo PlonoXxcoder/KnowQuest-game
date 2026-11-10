@@ -12,7 +12,7 @@
  * Les données (data/*.json) sont aussi mises en cache par data_loader.js
  * lui-même (Cache API côté page, 'kq-data-v3').
  */
-const CACHE = 'knowquest-v10-refonte';
+const CACHE = 'knowquest-v11-onboarding';
 const SHELL = [
   './',
   './index.html',
@@ -28,6 +28,8 @@ const SHELL = [
   './js/account-sync.js',
   './js/account-ui.js',
   './account.css',
+  './onboarding.css',
+  './js/onboarding.js',
   './js/game-rules.js',
   './js/economy.js',
   './js/task-scope.js',

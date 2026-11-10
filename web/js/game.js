@@ -8127,8 +8127,7 @@
 
     // ===== INIT ONBOARD =====
     function initOnboard() {
-      const g = document.getElementById('obAvGrid');
-      AVATARS.forEach((av, i) => { const d = document.createElement('div'); d.className = 'av-opt' + (i === 0 ? ' sel' : ''); d.textContent = av; d.onclick = () => { document.querySelectorAll('.av-opt').forEach(x => x.classList.remove('sel')); d.classList.add('sel'); P.avatar = av; }; g.appendChild(d); });
+      OnboardingUI.prepareAvatars(AVATARS);
     }
 
     function finishOnboard() {
@@ -9147,7 +9146,10 @@
         document.getElementById('timelineModal')?.classList.contains('show'),
       onChange: state => AccountUI.render(state),
       onLogin: username => {
+        const chosenAvatar = AccountUI.registrationAvatar();
+        if (chosenAvatar) P.avatar = chosenAvatar;
         if (!P.name) { P.name = username; save(); _appStarted = true; startApp(); }
+        else if (chosenAvatar) { save(); updateUI(); }
       },
       applyProfile: (remote, username) => {
         if (remote._schema > SCHEMA_VERSION) throw Error('Cette sauvegarde utilise une version plus récente du jeu. Actualise le jeu avant de la restaurer.');
@@ -9165,7 +9167,19 @@
         return true;
       },
     });
-    AccountUI.mount(accountSync);
+    OnboardingUI.mount({getProfile: () => P, finishGuest: avatar => { P.avatar = avatar; finishOnboard(); }});
+    AccountUI.mount(accountSync, {
+      getProfile: () => P,
+      showProfile: () => switchTab('Profile'),
+      exportProfile: exportSave,
+      backup: () => {
+        // Copie indépendante de la sauvegarde automatique, jamais écrasée.
+        try {
+          const key = 'kq_account_migration_backup_v1';
+          if (!localStorage.getItem(key)) localStorage.setItem(key, JSON.stringify(P));
+        } catch (_) { showToast('La copie supplémentaire est indisponible. Tu peux exporter ta sauvegarde.'); }
+      },
+    });
     let accountBooted = false;
     const bootAccount = () => {
       if (accountBooted) return;

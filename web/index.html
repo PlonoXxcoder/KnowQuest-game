@@ -3433,11 +3433,10 @@
       outline: 3px solid #fff;
     }
 
-    #reportComment,
-    #webhookUrl {
-      background: rgba(255, 255, 255, 0.08);
-      border: 2px solid rgba(255, 255, 255, 0.15);
-      color: #fff;
+    #reportComment {
+      background: var(--bg);
+      border: 2px solid var(--border);
+      color: var(--text);
     }
 
     .grid-2 {
@@ -4960,7 +4959,10 @@
 
     #companionBubble {
       position: fixed;
-      z-index: 601;
+      /* Au-dessus de l'écran de résultat (700) : la célébration de fin de
+         chapitre et les félicitations de session restent visibles pendant
+         l'affichage des récompenses. */
+      z-index: 720;
       max-width: 240px;
       min-width: 130px;
       background: var(--purple);
@@ -5966,34 +5968,40 @@
   </style>
   <!-- globe.gl est chargé à la demande (js/vendor/globe.gl.min.js) au premier
        accès au mode Carte — il ne doit plus bloquer le premier rendu. -->
-  <link rel="stylesheet" href="motion.css?v=03024ab4">
+  <link rel="stylesheet" href="motion.css?v=c1e25900">
+  <link rel="stylesheet" href="chapter-narration.css?v=8fe23d2a">
+  <link rel="stylesheet" href="integration-acr.css?v=c8248d6f">
+
   <script src="js/local-config.js?v=aeca07a4"></script>
-  <script src="js/motion.js?v=a799464e"></script>
-  <link rel="stylesheet" href="adventure.css?v=b11aa7b9">
-  <link rel="stylesheet" href="avatar-rewards.css?v=ade094ee">
-  <link rel="stylesheet" href="experience.css?v=1ddd0690">
-  <script src="js/experience.js?v=4fc48899"></script>
+  <script src="js/motion.js?v=648971f0"></script>
+  <link rel="stylesheet" href="adventure.css?v=98f3a058">
+  <link rel="stylesheet" href="avatar-rewards.css?v=307f9ae0">
+  <link rel="stylesheet" href="companion.css?v=7c48948b">
+
+  <link rel="stylesheet" href="experience.css?v=03ee5d87">
+  <script src="js/experience.js?v=679ecdd5"></script>
   <link rel="stylesheet" href="destinations.css?v=6f872995">
   <script src="js/destinations.js?v=59adaabb"></script>
   <script src="js/bank-readiness.js?v=a3ac37fe"></script>
   <script src="js/modal-focus.js?v=948dd650"></script>
   <script src="js/session-state.js?v=cc5fa095"></script>
   <script src="js/race-rules.js?v=76423a4b"></script>
-  <script src="js/task-scope.js?v=bf17da3a"></script>
-  <script src="js/economy.js?v=1f6a1359"></script>
+  <script src="js/task-scope.js?v=d8604fa0"></script>
+  <script src="js/economy.js?v=3a4d5ace"></script>
   <script src="js/game-rules.js?v=918d9d9d"></script>
-  <script src="js/profile-store.js?v=6d06fe26"></script>
+  <script src="js/profile-store.js?v=94f8a352"></script>
   <link rel="stylesheet" href="account.css?v=78dc18bd">
   <script src="js/account-sync.js?v=d4e03187"></script>
   <script src="js/account-ui.js?v=c9525ca7"></script>
   <link rel="stylesheet" href="onboarding.css?v=a8092da9">
   <script src="js/onboarding.js?v=4ade7627"></script>
-  <script src="js/avatar-rewards.js?v=b463924b"></script>
-  <link rel="stylesheet" href="bosses.css?v=85915710">
-  <script src="js/bosses.js?v=53321dff"></script>
-  <script src="js/adventure.js?v=c923624d"></script>
-  <script src="js/boot.js?v=f57b905b"></script>
-  <script src="js/story-rules.js?v=e6aca861"></script>
+  <script src="js/avatar-rewards.js?v=ff5d358c"></script>
+  <link rel="stylesheet" href="bosses.css?v=1eac3ba2">
+  <script src="js/bosses.js?v=1f1ca02b"></script>
+  <script src="js/adventure.js?v=5329d1c9"></script>
+  <script src="js/boot.js?v=e1169c01"></script>
+  <script src="js/story-rules.js?v=45d1e428"></script>
+  <script src="js/chapter-narration.js?v=8bb779a0"></script>
 </head>
 
 <body>
@@ -6098,6 +6106,11 @@
           <div class="mode-card" style="border-color:var(--red)" onclick="startRevision()">
             <div style="font-size:40px;margin-bottom:10px">📚</div>
             <div style="font-weight:900;color:var(--red)">Révision</div>
+          </div>
+          <div class="mode-card" style="border-color:var(--blue)" role="button" tabindex="0" aria-label="Révision rapide : cinq questions sur tes erreurs" onclick="RevShort?.start()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();RevShort?.start();}">
+            <div style="font-size:40px;margin-bottom:10px">⚡</div>
+            <div style="font-weight:900;color:var(--blue)">Révision rapide</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:4px">5 questions sur tes erreurs</div>
           </div>
         </div>
         <!-- QUESTIONS PIÈGES -->
@@ -6621,33 +6634,15 @@
             style="background:#8e44ad;box-shadow:0 5px 0 #6c3385;font-size:13px;padding:12px 6px"
             onclick="selectReportReason('doublon')">👯 Doublon</button>
         </div>
-        <textarea id="reportComment" rows="2" placeholder="Commentaire (optionnel)"
+        <p style="font-size:12px;color:var(--muted);line-height:1.5">Ton signalement est transmis à l’équipe KnowQuest. Aucun réglage n’est nécessaire. Évite les informations personnelles dans ton commentaire.</p>
+        <textarea id="reportComment" aria-label="Commentaire facultatif" maxlength="1024" rows="2" placeholder="Commentaire (optionnel)"
           style="width:100%;box-sizing:border-box;border-radius:12px;padding:10px;font-size:13px;resize:none"></textarea>
         <button class="modal-btn" id="reportSendBtn" style="width:100%;margin-top:10px"
           onclick="submitReport()">Envoyer le signalement</button>
         <div style="display:flex;gap:8px;margin-top:8px;">
-          <button class="modal-btn-ghost" style="flex:1" onclick="openWebhookModal()">⚙️ Discord</button>
+          <button class="modal-btn-ghost" style="flex:1" onclick="exportReports()">Exporter mon historique</button>
           <button class="modal-btn-ghost" style="flex:1" onclick="closeReportModal()">Annuler</button>
         </div>
-      </div>
-    </div>
-
-    <!-- CONFIG WEBHOOK DISCORD -->
-    <div class="modal-bg" id="webhookModal" onclick="if(event.target===this)this.classList.remove('open')">
-      <div class="modal-content">
-        <div style="font-size:20px;font-weight:900;margin-bottom:6px;">⚙️ Webhook Discord</div>
-        <div style="font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:8px;">Serveur Discord → Paramètres du
-          salon → Intégrations → Webhooks → copiez l'URL ici. Les signalements arriveront dans ce salon.</div>
-        <input id="webhookUrl" type="url" placeholder="https://discord.com/api/webhooks/…"
-          style="width:100%;box-sizing:border-box;border-radius:12px;padding:10px;font-size:13px">
-        <div style="display:flex;gap:8px;margin-top:10px;">
-          <button class="modal-btn" style="flex:1" onclick="saveWebhook()">Enregistrer</button>
-          <button class="modal-btn-ghost" style="flex:1" onclick="testWebhook()">Test</button>
-        </div>
-        <button class="modal-btn-ghost" style="width:100%;margin-top:8px" onclick="exportReports()">📥 Exporter les
-          signalements (JSON)</button>
-        <button class="modal-btn-ghost" style="width:100%;margin-top:4px"
-          onclick="document.getElementById('webhookModal').classList.remove('open')">Fermer</button>
       </div>
     </div>
 
@@ -6953,7 +6948,7 @@
       <div id="companionMascot" class="mascot-wrap mascot-idle" style="width:74px;height:84px;position:relative;z-index:1"></div>
       <div class="companion-shadow"></div>
     </div>
-    <div id="companionBubble"></div>
+    <div id="companionBubble" aria-live="polite"></div>
 
     <!-- ===== TUTORIEL (spotlight) ===== -->
     <div id="tutorialOverlay">
@@ -7097,12 +7092,19 @@
       <button id="amSwitch" class="onboarding-link" type="button">Créer un compte</button>
     </div>
   </div>
-  <script src="js/game.js?v=60f1108d"></script>
+  <script src="js/notices.js?v=81205db7"></script>
+  <script src="js/companion-events.js?v=2822e5a0"></script>
+  <script src="js/companion-catalog.js?v=4032a1ba"></script>
+  <script src="js/companion-reactions.js?v=96c895e0"></script>
+  <script src="js/companion-rewards-ui.js?v=b76945ef"></script>
+  <script src="js/question-reports.js?v=ec7c3c46"></script>
+  <script src="js/game.js?v=bfe6875e"></script>
+  <script src="js/revision-short.js?v=68601781"></script>
   <!-- CHARGEZ LE LOADER APRÈS -->
-  <script src="data_loader.js?v=4d33af32"></script>
+  <script src="data_loader.js?v=2db8ee71"></script>
 
   <!-- DÉCLENCHEUR DE SÉCURITÉ : relance startApp uniquement si les données n'étaient pas encore prêtes -->
-  <script src="js/data-ready.js?v=891365bc"></script>
+  <script src="js/data-ready.js?v=e910075b"></script>
 </body>
 
 </html>

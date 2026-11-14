@@ -1,0 +1,62 @@
+/* Narration de chapitre — styles discrets et mobile-first.
+ * L'animation de restauration respecte prefers-reduced-motion. */
+
+/* Encouragement de l'étape (dans la fenêtre de lancement existante) */
+.kq-encouragement {
+  margin: 10px 0 0;
+  padding: 8px 12px;
+  border-left: 3px solid var(--kq-enc-accent, var(--gold, #d9a441));
+  background: rgba(255, 255, 255, .04);
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--muted, #cfd3dc);
+  text-align: left;
+}
+
+/* Conclusion de chapitre : page restaurée, ajoutée à l'écran de victoire */
+.kq-restauration {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--kq-rest-accent, var(--gold, #d9a441));
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .04);
+  text-align: left;
+}
+.kq-restauration-page {
+  font-size: 34px;
+  line-height: 1;
+  animation: kq-restaure-page .9s ease-out both;
+}
+.kq-restauration-infos { display: flex; flex-direction: column; gap: 3px; }
+.kq-restauration-infos strong { font-size: 14px; font-weight: 900; color: #fff; }
+.kq-restauration-progression { font-size: 11.5px; font-weight: 800; color: var(--muted, #cfd3dc); }
+
+@keyframes kq-restaure-page {
+  0% { opacity: 0; transform: rotate(-9deg) translateY(6px) scale(.86); filter: brightness(.4); }
+  60% { opacity: 1; filter: brightness(1.25); }
+  100% { opacity: 1; transform: none; filter: brightness(1); }
+}
+
+/* Identité de chapitre sur la carte du parcours : accent narratif + badge icône */
+.chapter-card .kq-chapitre-badge {
+  margin-left: auto;
+  font-size: 20px;
+  line-height: 1;
+  opacity: .9;
+}
+
+/* Réduit les animations si l'utilisateur le demande */
+@media (prefers-reduced-motion: reduce) {
+  .kq-restauration-page { animation: none; }
+}
+
+/* Écrans étroits : le bloc reste compact, sans défilement ajouté */
+@media (max-width: 480px) {
+  .kq-restauration { gap: 9px; padding: 10px 11px; }
+  .kq-restauration-page { font-size: 26px; }
+  .kq-encouragement { font-size: 12px; padding: 7px 10px; }
+}

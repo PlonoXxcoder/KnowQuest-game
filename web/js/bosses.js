@@ -75,9 +75,16 @@
     const note=document.createElement('small');note.textContent=receipt?.awarded?'Récompense de première victoire reçue.':state.duelAiHP<=0?'Récompense déjà reçue.':'Les cœurs de l’histoire sont conservés.';
     host.append(avatar,title,text,note);
     if(receipt?.awarded&&receipt.avatar){
-      const reward=document.createElement('div');reward.className='avatar-unlocked';reward.textContent=`${receipt.avatar.ico} ${receipt.avatar.name} débloqué !`;
-      const equip=document.createElement('button');equip.className='avatar-equip';equip.textContent='Équiper sur mon avatar';
-      equip.onclick=()=>{root.buyOrEquipHat(receipt.avatar.id);equip.textContent='Équipé ✓';equip.disabled=true;};reward.append(equip);host.append(reward);
+      // Présentation du souvenir : aperçu (« Essayer ») puis équipement
+      // explicite ; l'aperçu ne modifie pas la sauvegarde. Repli sur la
+      // présentation simple si l'interface du chantier Compagnon est absente.
+      if(root.CompanionRewardsUI){
+        root.CompanionRewardsUI.presentChapterReward({item:receipt.avatar,avatar:root.kqPlayer?.()?.avatar,equip:id=>root.buyOrEquipHat(id),host});
+      }else{
+        const reward=document.createElement('div');reward.className='avatar-unlocked';reward.textContent=`${receipt.avatar.ico} ${receipt.avatar.name} débloqué !`;
+        const equip=document.createElement('button');equip.className='avatar-equip';equip.textContent='Équiper sur mon avatar';
+        equip.onclick=()=>{root.buyOrEquipHat(receipt.avatar.id);equip.textContent='Équipé ✓';equip.disabled=true;};reward.append(equip);host.append(reward);
+      }
     }
     document.getElementById('btnResContinue').before(host);
   }

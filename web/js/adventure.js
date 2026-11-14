@@ -87,6 +87,6 @@
     const dialog=document.getElementById('adventureDialog');
     chapters.forEach((story,i)=>{const row=document.createElement('button');row.className='adventure-page';const p=progress(profile,road,i);row.textContent=`${p.restored?'📖':'🔒'} ${i+1}. ${story.title} — ${p.restored?'restaurée':p.fragments+'/'+p.total+' fragments'}`;row.disabled=!p.restored;row.onclick=()=>dialogue(story.title,story.end,()=>showPages(profile,road),'Retour à l’Atlas');dialog.insertBefore(row,dialog.lastElementChild);});
   }
-  const api={chapters,themes,questionsForNode,decorate,progress,locate,start,render,showPages};
+  const api={chapters,themes,questionsForNode,decorate,progress,locate,start,render,showPages,dialogue};
   if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.Adventure=api;
 })(typeof window!=='undefined'?window:globalThis);

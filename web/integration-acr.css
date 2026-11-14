@@ -1,0 +1,11 @@
+/* Pont de thème de l'assemblage Aventure + Compagnon + Révisions (réversible).
+ *
+ * La conclusion de chapitre (chapter-narration.js/css, chantier Aventure)
+ * écrit son titre en #fff — conçu pour un fond sombre. Dans cette candidate,
+ * l'écran de résultat du gardien est clair : le titre devenait illisible
+ * (capture 03-fin-de-chapitre-celebration). Ce pont ramène le bloc aux
+ * variables réelles du jeu (les deux thèmes définissent --bg-card/--text).
+ * À retirer quand le chantier Aventure adapte ses styles à la palette.
+ */
+.kq-restauration { background: var(--bg-card, #fff); }
+.kq-restauration-infos strong { color: var(--text, #1a1a2e); }

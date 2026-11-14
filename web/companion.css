@@ -1,0 +1,40 @@
+/* Présentation des récompenses du compagnon : aperçu grand, bloc de fin de
+ * chapitre. Ne remplace aucun style existant ; s'aligne sur les variables
+ * du jeu (avatar-rewards.css, bosses.css). */
+.cq-preview { min-width: min(92vw, 380px); padding: 20px; border: 1px solid var(--border); border-radius: 20px; background: var(--bg-card); color: var(--text); }
+.cq-preview::backdrop { background: rgba(10, 12, 24, .55); }
+.cq-preview h2 { margin: 0 0 6px; font-size: 18px; }
+.cq-preview-look { display: grid; place-items: center; padding: 18px 0; border-radius: 18px; background: var(--bg); }
+/* Aperçu en grand : la même composition que la collection, agrandie. */
+.cq-preview-look .avatar-look { width: 168px; height: 168px; border-radius: 44px; font-size: 104px; margin: 8px auto; }
+.cq-preview-look .avatar-look .avatar-item { font-size: 62px; }
+.cq-preview-look .avatar-look[data-slot=badge] .avatar-item { width: 66px; height: 66px; font-size: 44px; bottom: -12px; right: -14px; }
+.cq-preview-info { margin: 10px 0 4px; }
+.cq-preview-info strong { font-size: 17px; }
+.cq-preview-condition, .cq-preview-note { margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: var(--text); }
+.cq-preview-note { color: var(--muted); }
+.cq-preview-actions { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.cq-btn { min-height: 44px; padding: 10px 18px; border: 0; border-radius: 12px; background: var(--purple); color: #fff; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer; }
+.cq-btn:disabled { background: var(--border); color: var(--text); cursor: default; }
+.cq-btn-back, .cq-btn-try { background: var(--bg); color: var(--text); border: 2px solid var(--border); }
+.cq-btn:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+.cq-preview-hint { display: block; margin-top: 10px; font-size: 11px; line-height: 1.5; color: var(--muted); }
+/* Bloc de fin de chapitre dans l'écran de résultat existant. */
+.cq-reward { margin-top: 12px; padding: 14px; border-radius: 14px; background: var(--purple-bg); color: var(--text); font-size: 14px; }
+.cq-reward strong { display: block; margin-bottom: 4px; }
+.cq-reward small { display: block; color: var(--muted); }
+.cq-reward .cq-preview-actions { margin-top: 10px; }
+.cq-reward[data-state=equipped] { outline: 2px solid var(--purple); }
+/* Le verrouillage reste lisible sans la couleur : icône + texte déjà portés
+ * par avatar-rewards.css (« 🔒 Chapitre N ») ; ce style ajoute du contraste. */
+.avatar-card[data-owned=false] .avatar-status, .cq-reward small, .cq-preview-condition { text-decoration: none; }
+@media(max-width: 480px) {
+  .cq-preview { padding: 14px; }
+  .cq-preview-look .avatar-look { width: 132px; height: 132px; font-size: 82px; }
+  .cq-preview-look .avatar-look .avatar-item { font-size: 50px; }
+  .cq-preview-look .avatar-look[data-slot=badge] .avatar-item { width: 52px; height: 52px; font-size: 34px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .cq-preview, .cq-reward { animation: none !important; transition: none !important; }
+}
+html[data-motion=reduced] .cq-preview, html[data-motion=reduced] .cq-reward { animation: none !important; transition: none !important; }

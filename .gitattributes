@@ -1,0 +1,6 @@
+# Empreintes d'assets identiques sur Windows et sur GitHub Pages.
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.svg text eol=lf

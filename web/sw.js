@@ -12,7 +12,7 @@
  * Les données (data/*.json) sont aussi mises en cache par data_loader.js
  * lui-même (Cache API côté page, 'kq-data-v3').
  */
-const CACHE = 'knowquest-v11-onboarding';
+const CACHE = 'knowquest-v14-secure-reports';
 const SHELL = [
   './',
   './index.html',
@@ -20,6 +20,9 @@ const SHELL = [
   './js/local-config.js',
   './motion.css',
   './adventure.css',
+  './chapter-narration.css',
+  './integration-acr.css',
+  './companion.css',
   './bosses.css',
   './avatar-rewards.css',
   './experience.css',
@@ -44,6 +47,14 @@ const SHELL = [
   './js/adventure.js',
   './js/motion.js',
   './js/story-rules.js',
+  './js/chapter-narration.js',
+  './js/notices.js',
+  './js/question-reports.js',
+  './js/companion-events.js',
+  './js/companion-catalog.js',
+  './js/companion-reactions.js',
+  './js/companion-rewards-ui.js',
+  './js/revision-short.js',
   './js/boot.js',
   './js/game.js',
   './js/data-ready.js',

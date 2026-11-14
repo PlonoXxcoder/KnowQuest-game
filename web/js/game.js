@@ -2422,11 +2422,7 @@
     }
 
     function showToast(msg, dur = 2500) {
-      let t = document.createElement('div');
-      t.style.cssText = 'position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#1a1a2e;color:#fff;padding:10px 20px;border-radius:20px;font-size:14px;font-weight:900;z-index:9999;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.3);';
-      t.textContent = msg;
-      document.body.appendChild(t);
-      setTimeout(() => t.remove(), dur);
+      GameNotices.show(msg, dur);
     }
 
     // Échappe les données dynamiques injectées via innerHTML (fiches atlas,
@@ -2450,9 +2446,28 @@
       doublon:   { label: '👯 Doublon',             color: 0x9B59B6 },
     };
 
+    let reportModalSession = 0, reportQuestion = null, reportSending = false;
+    // Une réception différée met aussi à jour l'historique exportable, sans
+    // attribuer de gain ni rouvrir la question après un changement d'écran.
+    function updateReportDelivery(event, delivery) {
+      const item = (Array.isArray(P.reports) ? P.reports : []).find(r => r.clientId === event.detail?.clientId);
+      if (!item) return;
+      item.delivery = delivery;
+      if (event.detail.reportId) item.reportId = event.detail.reportId;
+      save();
+    }
+    window.addEventListener('kq:report-delivered', event => updateReportDelivery(event, 'sent'));
+    window.addEventListener('kq:report-rejected', event => updateReportDelivery(event, 'rejected'));
     function openReportModal() {
+      if (!window.questionReports?.canSubmit()) {
+        showToast('Connecte-toi pour signaler une question.');
+        window.openAuthModal?.('login');
+        return;
+      }
       const q = Q._lastShown;
       if (!q) { showToast('⚠️ Aucune question à signaler'); return; }
+      reportModalSession++;
+      reportQuestion = { ...q, choices: q.choices ? [...q.choices] : undefined, reportMode: Q.mode };
       const preview = document.getElementById('reportPreview');
       let html = '<b>' + escapeHtml((q.question || '').substring(0, 220)) + '</b>';
       if (q.choices) {
@@ -2480,81 +2495,48 @@
       document.getElementById('reportModal').classList.remove('open');
     }
 
-    function submitReport() {
-      const q = Q._lastShown;
+    async function submitReport() {
+      if (reportSending) return;
+      const q = reportQuestion;
       if (!q) return;
       const reason = document.getElementById('reportSendBtn').dataset.reason;
-      if (!reason) { showToast('Choisissez d\'abord une raison'); return; }
-      // Texte lisible de la bonne réponse selon le type de question (QCM / TF / Scramble)
+      if (!reason) { showToast('Choisis d’abord un motif.'); return; }
+      const generation = reportModalSession;
       const correctText = q.choices ? String(q.choices[q.correctAnswer])
-        : (q.r !== undefined ? (q.r ? 'Vrai' : 'Faux')
-          : (Array.isArray(q.correct) ? q.correct.join(' → ') : ''));
-      const report = {
-        id: q.id || ('gen_' + (Q.idx || 0)),
-        cat: q.cat || '',
-        question: String(q.question || '').substring(0, 1024),
-        raison: reason,
-        comment: (document.getElementById('reportComment').value || '').trim().substring(0, 1024),
-        mode: Q.mode || '',
-        correct: !!Q._lastShownCorrect,
-        correctAnswer: correctText,
-        date: new Date().toISOString(),
-        joueur: P.name || P.idUnique || ''
-      };
-      // Copie locale plafonnée : rien ne se perd, même sans réseau ni webhook
-      P.reports = (P.reports || []).filter(r => r.id !== report.id);
-      P.reports.push(report);
-      if (P.reports.length > 50) P.reports = P.reports.slice(-50);
-      save();
-      closeReportModal();
-      const btn = document.getElementById('btnReportQ');
-      if (btn) btn.disabled = true;
-      sendDiscordWebhook(report);
-    }
-
-    function sendDiscordWebhook(report) {
-      const url = P.discordWebhook;
-      const meta = REPORT_REASONS[report.raison] || { label: report.raison, color: 0xE74C3C };
-      const fields = [
-        { name: 'Raison', value: meta.label, inline: true },
-        { name: 'ID', value: '`' + (report.id || '?') + '`', inline: true },
-        { name: 'Cat. / Mode', value: (report.cat || '?') + ' / ' + (report.mode || '?'), inline: true },
-        { name: 'Question', value: report.question || '—' },
-        { name: 'Réponse correcte', value: report.correctAnswer || '—', inline: true },
-        { name: 'Réponse du joueur', value: report.correct ? '✅ Correcte' : '❌ Incorrecte', inline: true }
-      ];
-      if (report.comment) fields.push({ name: 'Commentaire', value: report.comment });
-      const payload = { embeds: [{ title: '🚩 Signalement de question', color: meta.color, fields: fields, timestamp: report.date }] };
-      if (!url) { showToast('💾 Signalement gardé localement — configurez Discord (⚙️)'); return; }
-      fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
-        .then(r => showToast(r.ok ? '✅ Signalement envoyé sur Discord — merci !' : '⚠️ Discord a refusé — signalement gardé localement'))
-        .catch(() => showToast('📴 Hors-ligne : signalement gardé localement'));
-    }
-
-    function openWebhookModal() {
-      document.getElementById('webhookUrl').value = P.discordWebhook || '';
-      document.getElementById('reportModal').classList.remove('open');
-      document.getElementById('webhookModal').classList.add('open');
-    }
-
-    function saveWebhook() {
-      const v = (document.getElementById('webhookUrl').value || '').trim();
-      if (v && !/^https:\/\/(discord|discordapp)\.com\/api\/webhooks\//.test(v)) {
-        showToast('⚠️ URL invalide : doit commencer par https://discord.com/api/webhooks/');
-        return;
+        : (q.r !== undefined ? (q.r ? 'Vrai' : 'Faux') : (Array.isArray(q.correct) ? q.correct.join(' → ') : ''));
+      const report = { id:q.id || ('gen_' + (Q.idx || 0)), cat:q.cat || '',
+        bank:typeof q.r === 'boolean' ? 'tf' : Array.isArray(q.pool) ? 'scramble' : 'qcm',
+        question:String(q.question || '').slice(0,1024), choices:q.choices,
+        raison:reason, comment:(document.getElementById('reportComment').value || '').trim().slice(0,1024),
+        mode:q.reportMode || '', correctAnswer:correctText, date:new Date().toISOString() };
+      reportSending = true;
+      const send = document.getElementById('reportSendBtn'); send.disabled = true; send.textContent = 'Envoi…';
+      try {
+        const result = await questionReports.submit(report);
+        if (result.status === 'auth_required') {
+          showToast('Ta session a expiré. Reconnecte-toi pour envoyer ton signalement.');
+          window.openAuthModal?.('login');
+          return;
+        }
+        // Historique local indépendant de la file durable et de la progression cloud.
+        P.reports = [...(Array.isArray(P.reports) ? P.reports : []), { ...report, clientId:result.clientId, delivery:result.status }].slice(-50);
+        save();
+        if (generation === reportModalSession) {
+          closeReportModal();
+          const btn = document.getElementById('btnReportQ'); if (btn && result.status !== 'rejected') btn.disabled = true;
+        }
+        showToast(result.status === 'sent' ? 'Merci ! Ton signalement a été reçu par l’équipe.'
+          : result.status === 'queued' ? 'Signalement conservé. Il sera envoyé automatiquement dès que possible.'
+          : 'Signalement conservé, mais refusé par le service. Réessaie plus tard.');
+      } catch (error) {
+        if (error.message === 'reports_auth_required') {
+          showToast('Connecte-toi pour envoyer ton signalement. Ton commentaire est conservé.');
+          window.openAuthModal?.('login');
+        } else showToast('Impossible d’enregistrer le signalement. Garde ton commentaire et réessaie.');
+      } finally {
+        reportSending = false;
+        if (generation === reportModalSession) { send.disabled = false; send.textContent = 'Envoyer le signalement'; }
       }
-      P.discordWebhook = v;
-      save();
-      document.getElementById('webhookModal').classList.remove('open');
-      showToast(v ? '✅ Webhook Discord enregistré' : 'Webhook effacé');
-    }
-
-    function testWebhook() {
-      const v = (document.getElementById('webhookUrl').value || '').trim();
-      if (!v) { showToast('Collez d\'abord l\'URL du webhook'); return; }
-      fetch(v, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ content: '✅ KnowQuest : webhook configuré !' }) })
-        .then(r => showToast(r.ok ? '✅ Message de test envoyé sur Discord' : '⚠️ Discord a refusé le test'))
-        .catch(() => showToast('📴 Réseau indisponible'));
     }
 
     function exportReports() {
@@ -2663,17 +2645,35 @@
       },
       _drain() {
         if (this._busy || this._queue.length === 0) return;
+        // Une célébration passe avant une annonce ordinaire ; les textes ne se recouvrent pas.
+        if (window.GameNotices?.active() && this._queue[0]?.mood === 'celebrate') GameNotices.yieldToCompanion();
+        if (window.GameNotices?.active()) {
+          clearTimeout(this._noticeWaitTimer);
+          this._noticeWaitTimer = setTimeout(() => this._drain(), 200);
+          return;
+        }
         const item = this._queue.shift();
         this._busy = true; this._lastSay = Date.now();
         const inQuiz = this._inQuiz();
-        const anchor = this._anchor();
+        let anchor = this._anchor();
+        let containerId = inQuiz ? 'mascotQuiz' : 'companionMascot';
+        if (anchor?.classList.contains('mascot-wrap')) containerId = anchor.id;
+        // Le gardien masque la mascotte du quiz (bosses.css) et, pendant son
+        // résultat, la mascotte du résultat aussi (#bossOutcome) : la bulle
+        // se replie sur le bloc de résultat visible au lieu de perdre le
+        // message. Sans bloc visible, le message est différé comme avant.
+        if (anchor && !anchor.getClientRects().length) {
+          const visible = [document.getElementById('mascotResult'), document.getElementById('bossOutcome'), document.getElementById('resTitle')]
+            .find(el => el && el.getClientRects().length);
+          if (visible) { anchor = visible; containerId = visible.classList.contains('mascot-wrap') ? visible.id : null; }
+        }
         const bubble = document.getElementById('companionBubble');
         // NB : offsetParent vaut null pour les éléments en position:fixed
         // (companionFloat l'est) → on teste la présence de rects rendus.
         if (!anchor || !bubble || !anchor.getClientRects().length) { this._busy = false; setTimeout(() => this._drain(), 400); return; }
         // Elle ne parle pas depuis sa cachette : elle sort d'abord
         if (this._peeking && !inQuiz) { this.setPeek(false); this._scheduleRepeek(); }
-        setMascotState(inQuiz ? 'mascotQuiz' : 'companionMascot', item.mood, item.mood !== 'idle' ? 2400 : 0, 'idle');
+        if (containerId) setMascotState(containerId, item.mood, item.mood !== 'idle' ? 2400 : 0, 'idle');
         bubble.textContent = item.text;
         bubble.classList.toggle('b-quiz', inQuiz);
         bubble.classList.add('show');
@@ -2781,12 +2781,25 @@
       _setupEyes() {
         if (this._eyesBound) return;
         this._eyesBound = true;
+        // Onglet masqué ou mouvements réduits : le suivi s'arrête, les pupilles
+        // reviennent au centre. Aucun rAF ni intervalle : rien ne tourne en
+        // arrière-plan (le throttling horodaté reste le seul coût).
+        if (!this._eyesVisibilityBound) {
+          this._eyesVisibilityBound = true;
+          document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) return;
+            ['companionMascot', 'mascotQuiz'].forEach(id => {
+              document.querySelectorAll(`#${id} .m-pupil`).forEach(p => { p.style.transform = ''; });
+            });
+          });
+        }
         // Throttle horodaté (et non requestAnimationFrame) : un rAF programmé
         // dans un onglet non rendu ne s'exécute jamais et bloquerait le suivi.
         let last = 0;
         document.addEventListener('pointermove', (e) => {
           const now = performance.now();
           if (now - last < 40) return;
+          if (Motion.reduced() || document.hidden) return; // présentation statique
           last = now;
           ['companionMascot', 'mascotQuiz'].forEach(id => {
             const wrap = document.getElementById(id);
@@ -2825,6 +2838,46 @@
     function companionPoke() {
       Companion.say(pickOne(['Coucou ! 🦉', 'Je surveille tes progrès, ne t\'inquiète pas !', 'Psst : la roue de la chance t\'attend en boutique… 🎡', 'Tu vas y arriver, je le sens !', 'Bof bof ? Essaie la révision intelligente 🔄']), { mood: 'happy', force: true });
     }
+
+    // ================================================================
+    // COMPAGNON — branches d'événements (chantier Compagnon)
+    // Comportements existants conservés : bonne réponse, erreur, série,
+    // fin de session restent traités par Companion.react ci-dessus. Seule
+    // la fréquence des erreurs est limitée (encouragement discret) et les
+    // nouveaux événements (fin de chapitre, aperçu d'accessoire) arrivent
+    // par le bus CompanionEvents. Aucune annonce de plus pour les lecteurs
+    // d'écran : la bulle #companionBubble reste la seule région aria-live.
+    // ================================================================
+    const _companionReact = Companion.react.bind(Companion);
+    Companion.react = function (ev, data = {}) {
+      if (ev === 'correct' || ev === 'wrong') {
+        if (window.CompanionReactions?.gate(ev, data)) return;
+        window.CompanionEvents?.publish('quiz:answer', { correct: ev === 'correct', combo: data.combo || 0, difficulty: data.difficulty });
+      } else if (ev === 'session_end') {
+        window.CompanionEvents?.publish('quiz:session-end', { accuracy: data.acc ?? data.accuracy });
+      }
+      return _companionReact(ev, data);
+    };
+    if (window.CompanionEvents && window.CompanionReactions) {
+      CompanionReactions.install({
+        say: (text, opts) => Companion.say(text, opts),
+        drop: companionDropPending,
+        reading: () => Q && Q.state === 'selecting',
+        hidden: () => document.hidden,
+      });
+      CompanionEvents.subscribe(item => CompanionReactions.handle(item));
+    }
+    // Sortie d'écran : la réaction en cours devient obsolète, file vidée.
+    function companionDropPending() {
+      Companion._queue.length = 0;
+      clearTimeout(Companion._hideTimer);
+      clearTimeout(Companion._noticeWaitTimer);
+      Companion._busy = false;
+      document.getElementById('companionBubble')?.classList.remove('show');
+    }
+    // Accès en lecture au profil pour les modules compagnon (P est lexical,
+    // donc absent de window) ; aucune écriture possible depuis l'extérieur.
+    window.kqPlayer = () => P;
 
     function setCompanionMode(m) {
       if (!P.companion) P.companion = {};
@@ -3128,9 +3181,10 @@
     function srsOnResult(q, ok) {
       if (!q || !q.id) return;
       if (!P.srs) P.srs = {};
+      window.__revSession?.onAnswer?.(q.id); // Révisions courtes : une réponse comptabilisée une seule fois (appelé exactement une fois par réponse)
       if (ok) {
         const e = P.srs[q.id];
-        if (!e) return; // seulement les questions déjà marquées
+        if (!e) { window.__revSession?.onSuccessNoCard?.(q.id); return; } // Révisions courtes : délégué — hors session courte, comportement antérieur (rien)
         const oldBox = e.box || 1;
         e.box = Math.min(5, (e.box || 1) + 1);
         e.due = todayStr(SRS_INTERVALS[e.box - 1]);
@@ -3157,6 +3211,8 @@
     }
 
     let _srsPool = null;
+    window.setSrsPool = (pool) => { _srsPool = pool; }; // point d'extension Révisions courtes (additif, aucun comportement existant modifié)
+    window.__revSrsEngine = { srsOnResult, todayStr, SRS_INTERVALS }; // tests d'intégration du VRAI moteur (additif)
 
     function renderSrsCard() {
       const el = document.getElementById('srsCard');
@@ -3909,7 +3965,12 @@
       const acc = document.getElementById('profAccessory');
       if (acc) { acc.textContent = P.avatarStyle.hat || ''; acc.style.display = P.avatarStyle.hat ? 'block' : 'none'; }
       AvatarRewards.profile(document.getElementById('profAvCont'), P.avatar, HAT_CATALOG.find(item => item.ico === P.avatarStyle.hat));
-      if (document.getElementById('scrProfile').classList.contains('active')) AvatarRewards.render(document.getElementById('avatarWardrobe'), P, HAT_CATALOG, buyOrEquipHat);
+      if (document.getElementById('scrProfile').classList.contains('active')) AvatarRewards.render(document.getElementById('avatarWardrobe'), P, HAT_CATALOG, id => {
+        // Sélection d'une carte de la collection : réaction légère d'aperçu
+        // (limitée par la politique des réactions), sans changer la sauvegarde.
+        window.CompanionEvents?.publish('reward:accessory-preview', { itemId: id });
+        buyOrEquipHat(id);
+      });
       Experience.profilePicker(AVATARS);
 
       const al = document.getElementById('achList');
@@ -4087,9 +4148,13 @@
         P.ownedHats.push(id);
         P.avatarStyle.hat = hat.ico;
         showToast(`${hat.ico} ${hat.name} débloqué !`);
+        window.CompanionEvents?.publish('reward:accessory-equipped', { itemId: hat.id });
       } else {
-        // Déjà possédé : équiper / retirer gratuitement, à volonté
-        P.avatarStyle.hat = (P.avatarStyle.hat === hat.ico) ? null : hat.ico;
+        // Déjà possédé : équiper / retirer gratuitement, à volonté —
+        // l'accessoire porté n'est jamais remplacé sans cette action explicite.
+        const wasEquipped = P.avatarStyle.hat === hat.ico;
+        P.avatarStyle.hat = wasEquipped ? null : hat.ico;
+        if (!wasEquipped) window.CompanionEvents?.publish('reward:accessory-equipped', { itemId: hat.id });
       }
       save(); updateUI(); updateShopCounts();
     }
@@ -4323,18 +4388,22 @@
 
       roadData.forEach((ch, chIdx) => {
         const theme = getChapterTheme(ch);
+        // Identité narrative du chapitre : la couleur et la mission viennent du
+        // récit existant (Adventure.chapters), avec secours sur le thème de banque.
+        const story = Adventure.chapters?.[chIdx];
+        const accentChapitre = story?.color || theme.accent;
         const chDone = ch.nodes.filter(n => P.nodeProgress[n.id]).length;
         totalNodes += ch.nodes.length; doneNodes += chDone;
 
         const card = document.createElement('div');
         card.className = 'chapter-card';
-        card.style.setProperty('--ch-accent', theme.accent);
+        card.style.setProperty('--ch-accent', accentChapitre);
         card.style.setProperty('--ch-bg', theme.bg);
         card.innerHTML = `<div class="chapter-card-motif">${getThemeMotifSVG(theme)}</div>
-          <div class="chapter-card-ico">${theme.ico}</div>
+          <div class="chapter-card-ico">${story?.icon || theme.ico}</div>
           <div>
             <div class="chapter-card-title">${ch.name}</div>
-            <div class="chapter-card-sub">${theme.label}</div>
+            <div class="chapter-card-sub">${story?.mission || theme.label}</div>
           </div>
           <div class="chapter-card-pct">${chDone}/${ch.nodes.length}</div>`;
         c.appendChild(card);
@@ -4596,6 +4665,19 @@
     }
 
     function launchRoadLesson(node) {
+      // Narration de chapitre : intro à l'entrée d'un nouveau chapitre (une
+      // seule fois, passable) et encouragement de l'étape (réplique existante).
+      try {
+        const road = window.ROAD || [];
+        const chIdx = Adventure.locate ? Adventure.locate(node, road) : road.findIndex(c => c.nodes.some(n => n.id === node.id));
+        const story = Adventure.chapters?.[chIdx];
+        if (story && window.ChapterNarration) {
+          const stepIdx = Math.max(0, road[chIdx]?.nodes?.indexOf(node) ?? 0);
+          const conteneurEnc = document.getElementById('nmSub')?.parentElement;
+          ChapterNarration.insererEncouragement(conteneurEnc, ChapterNarration.encouragement(story, stepIdx), story.color);
+          if (road[chIdx]?.nodes?.[0]?.id === node.id && ChapterNarration.afficherIntro(P, chIdx, story, Adventure)) save();
+        }
+      } catch (_) { /* narration indisponible : l'étape reste jouable */ }
       const variant = roadNodeVariant(node);
       if (variant === 'tf') startQuizFlow(Math.min(node.qCount, 8), node.id, 'tf', node.bank);
       else if (variant === 'scramble') startQuizFlow(Math.min(node.qCount, 5), node.id, 'scramble', node.bank);
@@ -5126,6 +5208,7 @@
       document.querySelectorAll('#vBanner .motion-mastery').forEach(el => el.remove());
       Companion._queue.length = 0;
       clearTimeout(Companion._hideTimer);
+      clearTimeout(Companion._noticeWaitTimer);
       Companion._busy = false;
       if (Q.qs.length === 0) { showResult(); return; }
       renderQuizHearts();
@@ -5483,6 +5566,10 @@
     }
 
     function nextQuestion() {
+      // Une transition déjà engagée (double clic sur « Continuer », clic
+      // fantôme d'une partie remplacée) ne doit pas sauter de question ni
+      // dépasser la fin sans passer par l'écran de résultat.
+      if (Q.state !== 'checked') return;
       document.getElementById('btnCheck').style.display = '';
       const reportBtn = document.getElementById('btnReportQ');
       if (reportBtn) reportBtn.disabled = false;
@@ -5491,12 +5578,14 @@
     }
 
     function exitQuiz() {
+      window.CompanionReactions?.cancel(); // la réaction en cours devient obsolète
       modeStarts.cancel();
       resultTasks.cancel();
       quizTasks.cancel();
       Motion.reading(false);
       stopTimer();
       document.getElementById('scrQuiz').classList.remove('active');
+      window.__revSession?.abandonner?.(); // Révisions courtes : sortie sans fin de session -> pas de bilan, questions non répondues restent proposables
       document.getElementById('topbar').style.display = 'flex';
       document.getElementById('bnav').style.display = 'flex';
       startApp();
@@ -5536,6 +5625,7 @@
       stopTimer();
       document.getElementById('scrQuiz').classList.remove('active');
       document.getElementById('scrResult').style.display = 'flex';
+      window.__revSession?.onSessionEnd?.(Q.mode, Q.correct, Q.qs?.length ?? 0); // Révisions courtes : bilan réel (Q.correct = bonnes réponses du moteur)
       const resStarsRowEl = document.getElementById('resStarsRow');
       if (resStarsRowEl) {
         resStarsRowEl.classList.remove('show');
@@ -5679,6 +5769,17 @@
         document.getElementById('resGems').textContent = (Q.gemsEarned || 0) + receipt.gems;
         document.getElementById('resAtlas').textContent = (Q.newAtlasCards || 0) + receipt.card;
         if (receipt.awarded) updateMissionProgress('boss', 1);
+        // Conclusion visuelle : page restaurée animée + progression accomplie.
+        // L'annonce unique (kq:chapitre-restaure) a déjà été émise par
+        // handleBossResult au moment de la restauration.
+        try {
+          if (!Q.legend && receipt.awarded && Adventure.chapters?.[Q.bossChIdx] && window.ChapterNarration) {
+            const road = window.ROAD || [];
+            const progression = Adventure.progress(P, road, Q.bossChIdx);
+            const pages = Adventure.chapters.filter((c, i) => Adventure.progress(P, road, i).restored).length;
+            ChapterNarration.decorerRestauration(document.getElementById('bossOutcome'), Q.bossChIdx, Adventure.chapters[Q.bossChIdx], { ...progression, restaurées: pages, totalPages: Adventure.chapters.length });
+          }
+        } catch (_) { /* narration indisponible : le résultat reste complet */ }
       } else if (Q.mode === 'daily') {
         resTitle.textContent = `Défi du Jour — ${acc}% ! 🌍`;
         resTitle.style.color = 'var(--purple)';
@@ -5742,8 +5843,8 @@
       save();
     }
 
-    function finishQuiz() { resultTasks.cancel(); modeStarts.cancel(); document.getElementById('bossOutcome')?.remove(); document.getElementById('scrResult').style.display = 'none'; startApp(); accountSync?.sync(); }
-    function goHomeFromHearts() { document.getElementById('scrNoHearts').style.display = 'none'; startApp(); }
+    function finishQuiz() { window.CompanionReactions?.cancel(); resultTasks.cancel(); modeStarts.cancel(); document.getElementById('bossOutcome')?.remove(); document.getElementById('scrResult').style.display = 'none'; window.__revSession?.nettoyer?.(); startApp(); accountSync?.sync(); }
+    function goHomeFromHearts() { window.CompanionReactions?.cancel(); document.getElementById('scrNoHearts').style.display = 'none'; startApp(); }
     function resetData() { if (confirm('Tout effacer ?')) { accountSync?.logout(); localStorage.clear(); location.reload(); } }
 
     // ===== SAUVEGARDE : EXPORT / IMPORT =====
@@ -6478,6 +6579,12 @@
         if (P.bossDefeated[Q.bossId]) return { awarded:false, xp:0, gems:0, card:0 };
         P.bossDefeated[Q.bossId] = true;
         addHonor(Q.bossId, { ico:'⚔️', name:`${bossForChapter(Q.bossChIdx).name} vaincu`, cls:'boss' });
+        // Restauration d'un chapitre : annonce unique pour l'agent Compagnon
+        // (kq:chapitre-restaure) — le contrat vit dans chapter-narration.js.
+        try {
+          const story = Adventure.chapters?.[Q.bossChIdx];
+          if (story && window.ChapterNarration) ChapterNarration.annoncerRestauration(P, Q.bossChIdx, story);
+        } catch (_) { /* narration indisponible : la récompense reste acquise */ }
       }
       const avatarReward = Q.legend ? null : AvatarRewards.items[Q.bossChIdx];
       AvatarRewards.unlock(P);
@@ -6492,6 +6599,13 @@
         if (locked.length) { P.atlas.push(locked[Math.floor(Math.random()*locked.length)].id); card = 1; }
       }
       save();
+      // Fin de chapitre : un seul événement pour la célébration du compagnon
+      // (une fois par chapitre) et l'annonce du souvenir (sans rejouer les
+      // gains monétaires, déjà accordés plus haut une seule fois).
+      if (avatarReward && !Q.legend) {
+        window.CompanionEvents?.publish('adventure:chapter-completed', { chapterIndex: Q.bossChIdx, bossId: Q.bossId, accessoryId: avatarReward.id });
+        window.CompanionEvents?.publish('reward:accessory-unlocked', { itemId: avatarReward.id, chapterIndex: Q.bossChIdx });
+      }
       return { awarded:true, xp:actualXP, gems:reward.gems, card, avatar:avatarReward };
     }
 
@@ -9146,6 +9260,7 @@
         document.getElementById('timelineModal')?.classList.contains('show'),
       onChange: state => AccountUI.render(state),
       onLogin: username => {
+        window.questionReports?.flush().catch(() => {});
         const chosenAvatar = AccountUI.registrationAvatar();
         if (chosenAvatar) P.avatar = chosenAvatar;
         if (!P.name) { P.name = username; save(); _appStarted = true; startApp(); }

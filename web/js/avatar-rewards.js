@@ -47,7 +47,9 @@
     const action=document.createElement('button');action.className='avatar-equip';action.dataset.avatarEquip=selected.id;
     const owned=player.ownedHats.includes(selected.id);action.textContent=owned?(player.avatarStyle.hat===selected.ico?'Retirer':'Équiper'):'À gagner · chapitre '+(selected.chapter+1);action.disabled=!owned;action.onclick=()=>equip(selected.id);
     const hint=document.createElement('small');hint.textContent='Aperçu : ton avatar change seulement quand tu équipes un accessoire.';
-    info.append(name,description,action,hint);preview.append(info);
+    const enlarge=document.createElement('button');enlarge.type='button';enlarge.className='cq-btn cq-btn-try avatar-enlarge';enlarge.textContent='Voir en grand';
+    enlarge.onclick=()=>root.CompanionRewardsUI?.open({itemId:selected.id,avatar:player.avatar,source:'collection'});
+    info.append(name,description,action,hint,enlarge);preview.append(info);
     const grid=document.createElement('div');grid.className='avatar-collection-grid';
     available.forEach(item=>{const button=card(item,player,id=>{selection.set(host.id,id);render(host,player,catalog,equip);host.querySelector(`[data-avatar-select="${id}"]`)?.focus({preventScroll:true});});button.setAttribute('aria-pressed',String(item.id===selected.id));grid.append(button);});
     host.append(title,count,preview,grid);
